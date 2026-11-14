@@ -1,0 +1,4167 @@
+{
+ "haus": "Wellness & Spa Pirmin Zurbriggen",
+ "ort": "Saas-Almagell",
+ "fotos": [
+  {
+   "k": "haus-weit",
+   "t": {
+    "de": "Das Wellness & Spa Pirmin Zurbriggen im Lärchenwald von Saas-Almagell, Sommer"
+   },
+   "b": "haus",
+   "s": "sommer",
+   "f": "quer",
+   "w": 7118,
+   "h": 4004,
+   "art": "haus",
+   "q": "Fotos des Hauses bei Schweiz Tourismus (myswitzerland.com)",
+   "u": "https://www.myswitzerland.com/de-ch/unterkuenfte/wellness-spa-pirmin-zurbriggen/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/haus-weit-x.webp",
+   "fm": "../../assets/img/haus-weit-l.webp",
+   "fs": "../../assets/img/haus-weit-s.webp"
+  },
+  {
+   "k": "haus-lift",
+   "t": {
+    "de": "Das Haus mit dem Spa-Turm unter blauem Himmel, dahinter die Hänge des Saastals"
+   },
+   "b": "haus",
+   "s": "jahr",
+   "f": "quer",
+   "w": 5671,
+   "h": 3785,
+   "art": "haus",
+   "q": "Fotos des Hauses bei Schweiz Tourismus (myswitzerland.com)",
+   "u": "https://www.myswitzerland.com/de-ch/unterkuenfte/wellness-spa-pirmin-zurbriggen/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/haus-lift-x.webp",
+   "fm": "../../assets/img/haus-lift-l.webp",
+   "fs": "../../assets/img/haus-lift-s.webp"
+  },
+  {
+   "k": "fitnesstower",
+   "t": {
+    "de": "Aus dem verglasten Fitnesstower auf die Walliser Häuser und den Hang"
+   },
+   "b": "haus",
+   "s": "jahr",
+   "f": "quer",
+   "w": 3842,
+   "h": 2564,
+   "art": "haus",
+   "q": "Fotos des Hauses bei Schweiz Tourismus (myswitzerland.com)",
+   "u": "https://www.myswitzerland.com/de-ch/unterkuenfte/wellness-spa-pirmin-zurbriggen/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/fitnesstower-x.webp",
+   "fm": "../../assets/img/fitnesstower-l.webp",
+   "fs": "../../assets/img/fitnesstower-s.webp"
+  },
+  {
+   "k": "laerchenweg",
+   "t": {
+    "de": "Ein Weg durch Lärchen im Herbst, dahinter die verschneiten Gipfel"
+   },
+   "b": "saastal",
+   "s": "sommer",
+   "f": "quer",
+   "w": 999,
+   "h": 667,
+   "art": "haus",
+   "q": "Bildergalerie der Website des Hauses (wellnesshotel-zurbriggen.ch)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/laerchenweg-x.webp",
+   "fm": "../../assets/img/laerchenweg-l.webp",
+   "fs": "../../assets/img/laerchenweg-s.webp"
+  },
+  {
+   "k": "lounge",
+   "t": {
+    "de": "Die Lounge mit Lederbänken, Kamin und Holzscheiben an der Wand"
+   },
+   "b": "raeume",
+   "s": "jahr",
+   "f": "quer",
+   "w": 1417,
+   "h": 945,
+   "art": "haus",
+   "q": "Bildergalerie der Website des Hauses (wellnesshotel-zurbriggen.ch)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/lounge-x.webp",
+   "fm": "../../assets/img/lounge-l.webp",
+   "fs": "../../assets/img/lounge-s.webp"
+  },
+  {
+   "k": "kamin",
+   "t": {
+    "de": "Der offene Kamin vor der Wand aus Holzscheiben"
+   },
+   "b": "raeume",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1654,
+   "h": 2481,
+   "art": "haus",
+   "q": "Bildergalerie der Website des Hauses (wellnesshotel-zurbriggen.ch)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/kamin-x.webp",
+   "fm": "../../assets/img/kamin-l.webp",
+   "fs": "../../assets/img/kamin-s.webp"
+  },
+  {
+   "k": "bar",
+   "t": {
+    "de": "Die Bar mit grün beleuchteten Vitrinen und Holzdecke"
+   },
+   "b": "raeume",
+   "s": "jahr",
+   "f": "quer",
+   "w": 1417,
+   "h": 945,
+   "art": "haus",
+   "q": "Bildergalerie der Website des Hauses (wellnesshotel-zurbriggen.ch)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/bar-x.webp",
+   "fm": "../../assets/img/bar-l.webp",
+   "fs": "../../assets/img/bar-s.webp"
+  },
+  {
+   "k": "bar-tische",
+   "t": {
+    "de": "Hohe Tische in der Bar, an der Wand eine Säule aus Holzscheiben"
+   },
+   "b": "raeume",
+   "s": "jahr",
+   "f": "quer",
+   "w": 1654,
+   "h": 1103,
+   "art": "haus",
+   "q": "Bildergalerie der Website des Hauses (wellnesshotel-zurbriggen.ch)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/bar-tische-x.webp",
+   "fm": "../../assets/img/bar-tische-l.webp",
+   "fs": "../../assets/img/bar-tische-s.webp"
+  },
+  {
+   "k": "flur",
+   "t": {
+    "de": "Der Flur mit Lichtband im Boden und Bildern in Leuchtkästen"
+   },
+   "b": "raeume",
+   "s": "jahr",
+   "f": "quer",
+   "w": 2362,
+   "h": 1575,
+   "art": "haus",
+   "q": "Bildergalerie der Website des Hauses (wellnesshotel-zurbriggen.ch)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/flur-x.webp",
+   "fm": "../../assets/img/flur-l.webp",
+   "fs": "../../assets/img/flur-s.webp"
+  },
+  {
+   "k": "scheiben-tisch",
+   "t": {
+    "de": "Ein Glastisch unter dem Kristallleuchter, an der Wand Holzscheiben"
+   },
+   "b": "raeume",
+   "s": "jahr",
+   "f": "quer",
+   "w": 1491,
+   "h": 994,
+   "art": "haus",
+   "q": "Bildergalerie der Website des Hauses (wellnesshotel-zurbriggen.ch)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/scheiben-tisch-x.webp",
+   "fm": "../../assets/img/scheiben-tisch-l.webp",
+   "fs": "../../assets/img/scheiben-tisch-s.webp"
+  },
+  {
+   "k": "scheiben-wohnen",
+   "t": {
+    "de": "Ein heller Wohnraum mit Holzscheiben an der Wand"
+   },
+   "b": "raeume",
+   "s": "jahr",
+   "f": "quer",
+   "w": 1430,
+   "h": 955,
+   "art": "haus",
+   "q": "Bildergalerie der Website des Hauses (wellnesshotel-zurbriggen.ch)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/scheiben-wohnen-x.webp",
+   "fm": "../../assets/img/scheiben-wohnen-l.webp",
+   "fs": "../../assets/img/scheiben-wohnen-s.webp"
+  },
+  {
+   "k": "wappen",
+   "t": {
+    "de": "Das Wappen der Familie Zurbriggen mit Löwe, Doppelkreuz und zwei Sternen, aus dem Prospekt"
+   },
+   "b": "gastgeber",
+   "s": "jahr",
+   "f": "quer",
+   "w": 1810,
+   "h": 1278,
+   "art": "haus",
+   "q": "Aus dem Prospekt «lifestyle» des Hauses",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/wappen-x.webp",
+   "fm": "../../assets/img/wappen-l.webp",
+   "fs": "../../assets/img/wappen-s.webp"
+  },
+  {
+   "k": "tisch-z",
+   "t": {
+    "de": "Die Menümappe mit dem geprägten Z auf dem gedeckten Tisch, Kerzenlicht"
+   },
+   "b": "tisch",
+   "s": "jahr",
+   "f": "quer",
+   "w": 1654,
+   "h": 1103,
+   "art": "haus",
+   "q": "Bildergalerie der Website des Hauses (wellnesshotel-zurbriggen.ch)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/tisch-z-x.webp",
+   "fm": "../../assets/img/tisch-z-l.webp",
+   "fs": "../../assets/img/tisch-z-s.webp"
+  },
+  {
+   "k": "dessert",
+   "t": {
+    "de": "Ein Dessert mit Karamellgitter und Beeren"
+   },
+   "b": "tisch",
+   "s": "jahr",
+   "f": "quer",
+   "w": 1417,
+   "h": 945,
+   "art": "haus",
+   "q": "Bildergalerie der Website des Hauses (wellnesshotel-zurbriggen.ch)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/dessert-x.webp",
+   "fm": "../../assets/img/dessert-l.webp",
+   "fs": "../../assets/img/dessert-s.webp"
+  },
+  {
+   "k": "weinkeller",
+   "t": {
+    "de": "Zwei Gäste im Weinkeller zwischen Fässern und Flaschen"
+   },
+   "b": "tisch",
+   "s": "jahr",
+   "f": "quer",
+   "w": 2657,
+   "h": 1771,
+   "art": "haus",
+   "q": "Fotos des Hauses bei Schweiz Tourismus (myswitzerland.com)",
+   "u": "https://www.myswitzerland.com/de-ch/unterkuenfte/wellness-spa-pirmin-zurbriggen/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/weinkeller-x.webp",
+   "fm": "../../assets/img/weinkeller-l.webp",
+   "fs": "../../assets/img/weinkeller-s.webp"
+  },
+  {
+   "k": "buffet",
+   "t": {
+    "de": "Ein Buffet mit kleinen Desserts im Kerzenlicht"
+   },
+   "b": "tisch",
+   "s": "jahr",
+   "f": "quer",
+   "w": 4096,
+   "h": 2720,
+   "art": "haus",
+   "q": "Bildergalerie der Website des Hauses (wellnesshotel-zurbriggen.ch)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/buffet-x.webp",
+   "fm": "../../assets/img/buffet-l.webp",
+   "fs": "../../assets/img/buffet-s.webp"
+  },
+  {
+   "k": "ruheraum",
+   "t": {
+    "de": "Der Ruheraum mit Liegen hinter grossen Fenstern, draussen das Dorf"
+   },
+   "b": "spa",
+   "s": "jahr",
+   "f": "quer",
+   "w": 2846,
+   "h": 1898,
+   "art": "haus",
+   "q": "Fotos des Hauses bei Schweiz Tourismus (myswitzerland.com)",
+   "u": "https://www.myswitzerland.com/de-ch/unterkuenfte/wellness-spa-pirmin-zurbriggen/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/ruheraum-x.webp",
+   "fm": "../../assets/img/ruheraum-l.webp",
+   "fs": "../../assets/img/ruheraum-s.webp"
+  },
+  {
+   "k": "pool",
+   "t": {
+    "de": "Das Schwimmbad unter dem Glasdach, das Z an der Wand"
+   },
+   "b": "spa",
+   "s": "jahr",
+   "f": "quer",
+   "w": 1891,
+   "h": 1419,
+   "art": "haus",
+   "q": "Bildergalerie der Website des Hauses (wellnesshotel-zurbriggen.ch)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/pool-x.webp",
+   "fm": "../../assets/img/pool-l.webp",
+   "fs": "../../assets/img/pool-s.webp"
+  },
+  {
+   "k": "holzsauna",
+   "t": {
+    "de": "Die Holzsauna mit gestapeltem Brennholz und einem Stein in der Mitte"
+   },
+   "b": "spa",
+   "s": "jahr",
+   "f": "quer",
+   "w": 2657,
+   "h": 1771,
+   "art": "haus",
+   "q": "Fotos des Hauses bei Schweiz Tourismus (myswitzerland.com)",
+   "u": "https://www.myswitzerland.com/de-ch/unterkuenfte/wellness-spa-pirmin-zurbriggen/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/holzsauna-x.webp",
+   "fm": "../../assets/img/holzsauna-l.webp",
+   "fs": "../../assets/img/holzsauna-s.webp"
+  },
+  {
+   "k": "senseliege",
+   "t": {
+    "de": "Die Senseliege in gelbem Licht"
+   },
+   "b": "spa",
+   "s": "jahr",
+   "f": "quer",
+   "w": 1600,
+   "h": 1063,
+   "art": "haus",
+   "q": "Bildergalerie der Website des Hauses (wellnesshotel-zurbriggen.ch)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/senseliege-x.webp",
+   "fm": "../../assets/img/senseliege-l.webp",
+   "fs": "../../assets/img/senseliege-s.webp"
+  },
+  {
+   "k": "aquafit",
+   "t": {
+    "de": "Aquafitness im Schwimmbad mit dem Trainer"
+   },
+   "b": "spa",
+   "s": "jahr",
+   "f": "quer",
+   "w": 1418,
+   "h": 945,
+   "art": "haus",
+   "q": "Fotos des Hauses bei Schweiz Tourismus (myswitzerland.com)",
+   "u": "https://www.myswitzerland.com/de-ch/unterkuenfte/wellness-spa-pirmin-zurbriggen/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/aquafit-x.webp",
+   "fm": "../../assets/img/aquafit-l.webp",
+   "fs": "../../assets/img/aquafit-s.webp"
+  },
+  {
+   "k": "raum-arve",
+   "t": {
+    "de": "Ein Zimmer mit Holzdecke und Holzwänden, Sitzecke am Fenster"
+   },
+   "b": "zimmer",
+   "s": "jahr",
+   "f": "quer",
+   "w": 1467,
+   "h": 979,
+   "art": "haus",
+   "q": "Bildergalerie der Website des Hauses (wellnesshotel-zurbriggen.ch)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/raum-arve-x.webp",
+   "fm": "../../assets/img/raum-arve-l.webp",
+   "fs": "../../assets/img/raum-arve-s.webp"
+  },
+  {
+   "k": "raum-wohnen",
+   "t": {
+    "de": "Ein Wohnraum mit weissem Sofa, Esstisch und Küchenzeile"
+   },
+   "b": "zimmer",
+   "s": "jahr",
+   "f": "quer",
+   "w": 1452,
+   "h": 970,
+   "art": "haus",
+   "q": "Bildergalerie der Website des Hauses (wellnesshotel-zurbriggen.ch)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/raum-wohnen-x.webp",
+   "fm": "../../assets/img/raum-wohnen-l.webp",
+   "fs": "../../assets/img/raum-wohnen-s.webp"
+  },
+  {
+   "k": "raum-stein",
+   "t": {
+    "de": "Ein Doppelbett vor einer Wand aus Schiefer, Blick auf den Balkon"
+   },
+   "b": "zimmer",
+   "s": "jahr",
+   "f": "quer",
+   "w": 1486,
+   "h": 993,
+   "art": "haus",
+   "q": "Bildergalerie der Website des Hauses (wellnesshotel-zurbriggen.ch)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/raum-stein-x.webp",
+   "fm": "../../assets/img/raum-stein-l.webp",
+   "fs": "../../assets/img/raum-stein-s.webp"
+  },
+  {
+   "k": "raum-hell",
+   "t": {
+    "de": "Ein helles Zimmer mit Doppelbett, Sofa und Kristallleuchter"
+   },
+   "b": "zimmer",
+   "s": "jahr",
+   "f": "quer",
+   "w": 3011,
+   "h": 2011,
+   "art": "haus",
+   "q": "Bildergalerie der Website des Hauses (wellnesshotel-zurbriggen.ch)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/raum-hell-x.webp",
+   "fm": "../../assets/img/raum-hell-l.webp",
+   "fs": "../../assets/img/raum-hell-s.webp"
+  },
+  {
+   "k": "raum-z",
+   "t": {
+    "de": "Ein Doppelbett, das Z an der Glaswand zum Bad"
+   },
+   "b": "zimmer",
+   "s": "jahr",
+   "f": "quer",
+   "w": 2963,
+   "h": 1979,
+   "art": "haus",
+   "q": "Bildergalerie der Website des Hauses (wellnesshotel-zurbriggen.ch)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/raum-z-x.webp",
+   "fm": "../../assets/img/raum-z-l.webp",
+   "fs": "../../assets/img/raum-z-s.webp"
+  },
+  {
+   "k": "loft-etagen",
+   "t": {
+    "de": "Die Loft-Suite über zwei Etagen: oben die Galerie mit dem Bett, unten Whirlpool und Sauna"
+   },
+   "b": "loft",
+   "s": "jahr",
+   "f": "quer",
+   "w": 4096,
+   "h": 2737,
+   "art": "haus",
+   "q": "Website der Loft-Suite (loftsuite.ch). Mit KI auf 4K hochgerechnet, Farben korrigiert",
+   "u": "",
+   "ue": true,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/loft-etagen-x.webp",
+   "fm": "../../assets/img/loft-etagen-l.webp",
+   "fs": "../../assets/img/loft-etagen-s.webp"
+  },
+  {
+   "k": "loft-bett",
+   "t": {
+    "de": "Das Bett auf der Galerie unter dem Dachfenster"
+   },
+   "b": "loft",
+   "s": "jahr",
+   "f": "quer",
+   "w": 3000,
+   "h": 2001,
+   "art": "haus",
+   "q": "Website der Loft-Suite (loftsuite.ch)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/loft-bett-x.webp",
+   "fm": "../../assets/img/loft-bett-l.webp",
+   "fs": "../../assets/img/loft-bett-s.webp"
+  },
+  {
+   "k": "loft-kiste",
+   "t": {
+    "de": "Eine Holzkiste mit der Aufschrift «New York Loft»"
+   },
+   "b": "loft",
+   "s": "jahr",
+   "f": "quer",
+   "w": 4096,
+   "h": 2737,
+   "art": "haus",
+   "q": "Website der Loft-Suite (loftsuite.ch). Mit KI auf 4K hochgerechnet, Farben korrigiert",
+   "u": "",
+   "ue": true,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/loft-kiste-x.webp",
+   "fm": "../../assets/img/loft-kiste-l.webp",
+   "fs": "../../assets/img/loft-kiste-s.webp"
+  },
+  {
+   "k": "loft-ruhe",
+   "t": {
+    "de": "Eine Liege unter einem Bogen aus Holz, dahinter eine Steinwand"
+   },
+   "b": "loft",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 3000,
+   "h": 4501,
+   "art": "haus",
+   "q": "Website der Loft-Suite (loftsuite.ch)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/loft-ruhe-x.webp",
+   "fm": "../../assets/img/loft-ruhe-l.webp",
+   "fs": "../../assets/img/loft-ruhe-s.webp"
+  },
+  {
+   "k": "burg",
+   "t": {
+    "de": "Die Burg zum Spielen im Familienzimmer"
+   },
+   "b": "kinder",
+   "s": "jahr",
+   "f": "quer",
+   "w": 1486,
+   "h": 992,
+   "art": "haus",
+   "q": "Bildergalerie der Website des Hauses (wellnesshotel-zurbriggen.ch)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/burg-x.webp",
+   "fm": "../../assets/img/burg-l.webp",
+   "fs": "../../assets/img/burg-s.webp"
+  },
+  {
+   "k": "bowling",
+   "t": {
+    "de": "Die Bowlingbahn im Haus"
+   },
+   "b": "kinder",
+   "s": "jahr",
+   "f": "quer",
+   "w": 1417,
+   "h": 945,
+   "art": "haus",
+   "q": "Bildergalerie der Website des Hauses (wellnesshotel-zurbriggen.ch)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/bowling-x.webp",
+   "fm": "../../assets/img/bowling-l.webp",
+   "fs": "../../assets/img/bowling-s.webp"
+  },
+  {
+   "k": "kicker",
+   "t": {
+    "de": "Tischfussball und Billard im Spielraum"
+   },
+   "b": "kinder",
+   "s": "jahr",
+   "f": "quer",
+   "w": 1417,
+   "h": 945,
+   "art": "haus",
+   "q": "Bildergalerie der Website des Hauses (wellnesshotel-zurbriggen.ch)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/kicker-x.webp",
+   "fm": "../../assets/img/kicker-l.webp",
+   "fs": "../../assets/img/kicker-s.webp"
+  },
+  {
+   "k": "winternacht",
+   "t": {
+    "de": "Das Haus in einer Winternacht, alle Fenster erleuchtet"
+   },
+   "b": "haus",
+   "s": "winter",
+   "f": "quer",
+   "w": 5616,
+   "h": 3744,
+   "art": "haus",
+   "q": "Fotos des Hauses bei Schweiz Tourismus (myswitzerland.com)",
+   "u": "https://www.myswitzerland.com/de-ch/unterkuenfte/wellness-spa-pirmin-zurbriggen/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/winternacht-x.webp",
+   "fm": "../../assets/img/winternacht-l.webp",
+   "fs": "../../assets/img/winternacht-s.webp"
+  },
+  {
+   "k": "s-trotti",
+   "t": {
+    "de": "Zwei Gäste mit Trottinett-Bikes über dem Saastal"
+   },
+   "b": "saastal",
+   "s": "sommer",
+   "f": "quer",
+   "w": 1024,
+   "h": 772,
+   "art": "haus",
+   "q": "Bildergalerie der Website des Hauses (wellnesshotel-zurbriggen.ch)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/s-trotti-x.webp",
+   "fm": "../../assets/img/s-trotti-l.webp",
+   "fs": "../../assets/img/s-trotti-s.webp"
+  },
+  {
+   "k": "s-mattmark",
+   "t": {
+    "de": "Der Mattmarksee zwischen den Bergen"
+   },
+   "b": "saastal",
+   "s": "sommer",
+   "f": "quer",
+   "w": 1024,
+   "h": 772,
+   "art": "haus",
+   "q": "Bildergalerie der Website des Hauses (wellnesshotel-zurbriggen.ch)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/s-mattmark-x.webp",
+   "fm": "../../assets/img/s-mattmark-l.webp",
+   "fs": "../../assets/img/s-mattmark-s.webp"
+  },
+  {
+   "k": "s-bruecke",
+   "t": {
+    "de": "Eine Hängebrücke über dem Tal, dahinter die Gletscher"
+   },
+   "b": "saastal",
+   "s": "sommer",
+   "f": "quer",
+   "w": 1024,
+   "h": 772,
+   "art": "haus",
+   "q": "Bildergalerie der Website des Hauses (wellnesshotel-zurbriggen.ch)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/s-bruecke-x.webp",
+   "fm": "../../assets/img/s-bruecke-l.webp",
+   "fs": "../../assets/img/s-bruecke-s.webp"
+  },
+  {
+   "k": "s-klettern",
+   "t": {
+    "de": "Im Klettersteig an der Felswand"
+   },
+   "b": "saastal",
+   "s": "sommer",
+   "f": "quer",
+   "w": 1024,
+   "h": 772,
+   "art": "haus",
+   "q": "Bildergalerie der Website des Hauses (wellnesshotel-zurbriggen.ch)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/s-klettern-x.webp",
+   "fm": "../../assets/img/s-klettern-l.webp",
+   "fs": "../../assets/img/s-klettern-s.webp"
+  },
+  {
+   "k": "w-ski",
+   "t": {
+    "de": "Eine Skifahrerin im Pulverschnee vor den Viertausendern"
+   },
+   "b": "saastal",
+   "s": "winter",
+   "f": "quer",
+   "w": 1024,
+   "h": 683,
+   "art": "haus",
+   "q": "Bildergalerie der Website des Hauses (wellnesshotel-zurbriggen.ch)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/w-ski-x.webp",
+   "fm": "../../assets/img/w-ski-l.webp",
+   "fs": "../../assets/img/w-ski-s.webp"
+  },
+  {
+   "k": "w-schneeschuh",
+   "t": {
+    "de": "Mit Schneeschuhen im Tiefschnee"
+   },
+   "b": "saastal",
+   "s": "winter",
+   "f": "quer",
+   "w": 1024,
+   "h": 683,
+   "art": "haus",
+   "q": "Bildergalerie der Website des Hauses (wellnesshotel-zurbriggen.ch)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/w-schneeschuh-x.webp",
+   "fm": "../../assets/img/w-schneeschuh-l.webp",
+   "fs": "../../assets/img/w-schneeschuh-s.webp"
+  },
+  {
+   "k": "w-langlauf",
+   "t": {
+    "de": "Zwei Langläufer in der Loipe"
+   },
+   "b": "saastal",
+   "s": "winter",
+   "f": "quer",
+   "w": 1024,
+   "h": 683,
+   "art": "haus",
+   "q": "Bildergalerie der Website des Hauses (wellnesshotel-zurbriggen.ch)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/w-langlauf-x.webp",
+   "fm": "../../assets/img/w-langlauf-l.webp",
+   "fs": "../../assets/img/w-langlauf-s.webp"
+  },
+  {
+   "k": "w-fondue",
+   "t": {
+    "de": "Fondue mit Freunden in der Hütte"
+   },
+   "b": "saastal",
+   "s": "winter",
+   "f": "quer",
+   "w": 1024,
+   "h": 683,
+   "art": "haus",
+   "q": "Bildergalerie der Website des Hauses (wellnesshotel-zurbriggen.ch)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/w-fondue-x.webp",
+   "fm": "../../assets/img/w-fondue-l.webp",
+   "fs": "../../assets/img/w-fondue-s.webp"
+  },
+  {
+   "k": "a-zweit",
+   "t": {
+    "de": "Der Speisesaal am Abend mit Kerzen und Kristallleuchtern"
+   },
+   "b": "tisch",
+   "s": "jahr",
+   "f": "quer",
+   "w": 4096,
+   "h": 2720,
+   "art": "haus",
+   "q": "Bildergalerie der Website des Hauses (wellnesshotel-zurbriggen.ch)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/a-zweit-x.webp",
+   "fm": "../../assets/img/a-zweit-l.webp",
+   "fs": "../../assets/img/a-zweit-s.webp"
+  },
+  {
+   "k": "a-kinder",
+   "t": {
+    "de": "Kinder auf der Rodelbahn"
+   },
+   "b": "kinder",
+   "s": "winter",
+   "f": "quer",
+   "w": 1024,
+   "h": 683,
+   "art": "haus",
+   "q": "Bildergalerie der Website des Hauses (wellnesshotel-zurbriggen.ch)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/a-kinder-x.webp",
+   "fm": "../../assets/img/a-kinder-l.webp",
+   "fs": "../../assets/img/a-kinder-s.webp"
+  },
+  {
+   "k": "a-freundinnen",
+   "t": {
+    "de": "Eine Frau ruht im Bademantel an der Sonne"
+   },
+   "b": "spa",
+   "s": "sommer",
+   "f": "hoch",
+   "w": 1181,
+   "h": 1772,
+   "art": "haus",
+   "q": "Bildergalerie der Website des Hauses (wellnesshotel-zurbriggen.ch)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/a-freundinnen-x.webp",
+   "fm": "../../assets/img/a-freundinnen-l.webp",
+   "fs": "../../assets/img/a-freundinnen-s.webp"
+  },
+  {
+   "k": "a-alle",
+   "t": {
+    "de": "Ein Gang aus dem Abendmenü"
+   },
+   "b": "tisch",
+   "s": "jahr",
+   "f": "quer",
+   "w": 1024,
+   "h": 682,
+   "art": "haus",
+   "q": "Bildergalerie der Website des Hauses (wellnesshotel-zurbriggen.ch)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/a-alle-x.webp",
+   "fm": "../../assets/img/a-alle-l.webp",
+   "fs": "../../assets/img/a-alle-s.webp"
+  },
+  {
+   "k": "a-gutschein",
+   "t": {
+    "de": "Ein Geschenk mit roter Schnur unter Tannenzweigen"
+   },
+   "b": "haus",
+   "s": "jahr",
+   "f": "quer",
+   "w": 4096,
+   "h": 2624,
+   "art": "haus",
+   "q": "Bildergalerie der Website des Hauses (wellnesshotel-zurbriggen.ch)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/a-gutschein-x.webp",
+   "fm": "../../assets/img/a-gutschein-l.webp",
+   "fs": "../../assets/img/a-gutschein-s.webp"
+  },
+  {
+   "k": "haus-front",
+   "t": {
+    "de": "Das Haus von vorn mit der Sonnenterrasse unter den Schirmen"
+   },
+   "b": "haus",
+   "s": "sommer",
+   "f": "quer",
+   "w": 999,
+   "h": 667,
+   "art": "haus",
+   "q": "Bildergalerie der Website des Hauses (wellnesshotel-zurbriggen.ch)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/haus-front-x.webp",
+   "fm": "../../assets/img/haus-front-l.webp",
+   "fs": "../../assets/img/haus-front-s.webp"
+  },
+  {
+   "k": "haus-turm",
+   "t": {
+    "de": "Der verglaste Spa-Turm zwischen Tannen"
+   },
+   "b": "haus",
+   "s": "jahr",
+   "f": "quer",
+   "w": 999,
+   "h": 667,
+   "art": "haus",
+   "q": "Bildergalerie der Website des Hauses (wellnesshotel-zurbriggen.ch)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/haus-turm-x.webp",
+   "fm": "../../assets/img/haus-turm-l.webp",
+   "fs": "../../assets/img/haus-turm-s.webp"
+  },
+  {
+   "k": "g-paar",
+   "t": {
+    "de": "Zwei Gäste beim Abendessen im Speisesaal, Kerzenlicht"
+   },
+   "b": "tisch",
+   "s": "jahr",
+   "f": "quer",
+   "w": 1024,
+   "h": 682,
+   "art": "haus",
+   "q": "Bildergalerie der Website des Hauses (wellnesshotel-zurbriggen.ch)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/g-paar-x.webp",
+   "fm": "../../assets/img/g-paar-l.webp",
+   "fs": "../../assets/img/g-paar-s.webp"
+  },
+  {
+   "k": "g-piano",
+   "t": {
+    "de": "Eine Pianistin am Flügel im Kerzenlicht"
+   },
+   "b": "tisch",
+   "s": "jahr",
+   "f": "quer",
+   "w": 1024,
+   "h": 682,
+   "art": "haus",
+   "q": "Bildergalerie der Website des Hauses (wellnesshotel-zurbriggen.ch)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/g-piano-x.webp",
+   "fm": "../../assets/img/g-piano-l.webp",
+   "fs": "../../assets/img/g-piano-s.webp"
+  },
+  {
+   "k": "g-wein",
+   "t": {
+    "de": "Wein wird am Tisch eingeschenkt"
+   },
+   "b": "tisch",
+   "s": "jahr",
+   "f": "quer",
+   "w": 1024,
+   "h": 682,
+   "art": "haus",
+   "q": "Bildergalerie der Website des Hauses (wellnesshotel-zurbriggen.ch)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/g-wein-x.webp",
+   "fm": "../../assets/img/g-wein-l.webp",
+   "fs": "../../assets/img/g-wein-s.webp"
+  },
+  {
+   "k": "g-gastgeberin",
+   "t": {
+    "de": "Eine Gastgeberin im Dirndl im Speisesaal"
+   },
+   "b": "gastgeber",
+   "s": "jahr",
+   "f": "quer",
+   "w": 493,
+   "h": 290,
+   "art": "haus",
+   "q": "Bildergalerie der Website des Hauses (wellnesshotel-zurbriggen.ch)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/g-gastgeberin-x.webp",
+   "fm": "../../assets/img/g-gastgeberin-l.webp",
+   "fs": "../../assets/img/g-gastgeberin-s.webp"
+  },
+  {
+   "k": "t-1",
+   "t": {
+    "de": "Ein Teller aus der Küche des Hauses, angerichtet auf Schwarz"
+   },
+   "b": "tisch",
+   "s": "jahr",
+   "f": "quer",
+   "w": 1024,
+   "h": 683,
+   "art": "haus",
+   "q": "Bildergalerie der Website des Hauses (wellnesshotel-zurbriggen.ch)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/t-1-x.webp",
+   "fm": "../../assets/img/t-1-l.webp",
+   "fs": "../../assets/img/t-1-s.webp"
+  },
+  {
+   "k": "t-2",
+   "t": {
+    "de": "Ein Teller aus der Küche des Hauses mit Blüte"
+   },
+   "b": "tisch",
+   "s": "jahr",
+   "f": "quer",
+   "w": 1024,
+   "h": 683,
+   "art": "haus",
+   "q": "Bildergalerie der Website des Hauses (wellnesshotel-zurbriggen.ch)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/t-2-x.webp",
+   "fm": "../../assets/img/t-2-l.webp",
+   "fs": "../../assets/img/t-2-s.webp"
+  },
+  {
+   "k": "t-3",
+   "t": {
+    "de": "Ein Dessertteller mit Saucenpunkten"
+   },
+   "b": "tisch",
+   "s": "jahr",
+   "f": "quer",
+   "w": 1024,
+   "h": 683,
+   "art": "haus",
+   "q": "Bildergalerie der Website des Hauses (wellnesshotel-zurbriggen.ch)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/t-3-x.webp",
+   "fm": "../../assets/img/t-3-l.webp",
+   "fs": "../../assets/img/t-3-s.webp"
+  },
+  {
+   "k": "t-4",
+   "t": {
+    "de": "Ein Dessert im Glas mit Zuckerfäden"
+   },
+   "b": "tisch",
+   "s": "jahr",
+   "f": "quer",
+   "w": 1024,
+   "h": 683,
+   "art": "haus",
+   "q": "Bildergalerie der Website des Hauses (wellnesshotel-zurbriggen.ch)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/t-4-x.webp",
+   "fm": "../../assets/img/t-4-l.webp",
+   "fs": "../../assets/img/t-4-s.webp"
+  },
+  {
+   "k": "t-5",
+   "t": {
+    "de": "Ein Dessert mit Glacenocke auf dunklem Teller"
+   },
+   "b": "tisch",
+   "s": "jahr",
+   "f": "quer",
+   "w": 1024,
+   "h": 683,
+   "art": "haus",
+   "q": "Bildergalerie der Website des Hauses (wellnesshotel-zurbriggen.ch)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/t-5-x.webp",
+   "fm": "../../assets/img/t-5-l.webp",
+   "fs": "../../assets/img/t-5-s.webp"
+  },
+  {
+   "k": "t-6",
+   "t": {
+    "de": "Ein Teller mit Gemüse und Kräutern auf Glas"
+   },
+   "b": "tisch",
+   "s": "jahr",
+   "f": "quer",
+   "w": 1024,
+   "h": 682,
+   "art": "haus",
+   "q": "Bildergalerie der Website des Hauses (wellnesshotel-zurbriggen.ch)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/t-6-x.webp",
+   "fm": "../../assets/img/t-6-l.webp",
+   "fs": "../../assets/img/t-6-s.webp"
+  },
+  {
+   "k": "t-7",
+   "t": {
+    "de": "Ein Hauptgang mit Risotto und Gemüse"
+   },
+   "b": "tisch",
+   "s": "jahr",
+   "f": "quer",
+   "w": 1024,
+   "h": 682,
+   "art": "haus",
+   "q": "Bildergalerie der Website des Hauses (wellnesshotel-zurbriggen.ch)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/t-7-x.webp",
+   "fm": "../../assets/img/t-7-l.webp",
+   "fs": "../../assets/img/t-7-s.webp"
+  },
+  {
+   "k": "t-8",
+   "t": {
+    "de": "Ein Hauptgang mit Ragout, Risotto und Broccoli"
+   },
+   "b": "tisch",
+   "s": "jahr",
+   "f": "quer",
+   "w": 1024,
+   "h": 682,
+   "art": "haus",
+   "q": "Bildergalerie der Website des Hauses (wellnesshotel-zurbriggen.ch)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/t-8-x.webp",
+   "fm": "../../assets/img/t-8-l.webp",
+   "fs": "../../assets/img/t-8-s.webp"
+  },
+  {
+   "k": "k-steg",
+   "t": {
+    "de": "Eine Familie auf dem Holzsteg am Fels, mit Helmen"
+   },
+   "b": "kinder",
+   "s": "jahr",
+   "f": "quer",
+   "w": 1024,
+   "h": 683,
+   "art": "haus",
+   "q": "Bildergalerie der Website des Hauses (wellnesshotel-zurbriggen.ch)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/k-steg-x.webp",
+   "fm": "../../assets/img/k-steg-l.webp",
+   "fs": "../../assets/img/k-steg-s.webp"
+  },
+  {
+   "k": "k-wald",
+   "t": {
+    "de": "Ein Kind im Seilpark zwischen den Bäumen"
+   },
+   "b": "kinder",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 768,
+   "h": 1024,
+   "art": "haus",
+   "q": "Bildergalerie der Website des Hauses (wellnesshotel-zurbriggen.ch)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/k-wald-x.webp",
+   "fm": "../../assets/img/k-wald-l.webp",
+   "fs": "../../assets/img/k-wald-s.webp"
+  },
+  {
+   "k": "k-eis",
+   "t": {
+    "de": "Eine Familie beim Eislaufen auf der Kunsteisbahn"
+   },
+   "b": "kinder",
+   "s": "winter",
+   "f": "quer",
+   "w": 1024,
+   "h": 863,
+   "art": "haus",
+   "q": "Bildergalerie der Website des Hauses (wellnesshotel-zurbriggen.ch)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/k-eis-x.webp",
+   "fm": "../../assets/img/k-eis-l.webp",
+   "fs": "../../assets/img/k-eis-s.webp"
+  },
+  {
+   "k": "k-malen",
+   "t": {
+    "de": "Ein Mädchen malt am Basteltisch"
+   },
+   "b": "kinder",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 473,
+   "h": 709,
+   "art": "haus",
+   "q": "Bildergalerie der Website des Hauses (wellnesshotel-zurbriggen.ch)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/k-malen-x.webp",
+   "fm": "../../assets/img/k-malen-l.webp",
+   "fs": "../../assets/img/k-malen-s.webp"
+  },
+  {
+   "k": "k-tisch",
+   "t": {
+    "de": "Kinder beim gemeinsamen Abendessen, der Kellner serviert"
+   },
+   "b": "kinder",
+   "s": "jahr",
+   "f": "quer",
+   "w": 1024,
+   "h": 682,
+   "art": "haus",
+   "q": "Bildergalerie der Website des Hauses (wellnesshotel-zurbriggen.ch)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/k-tisch-x.webp",
+   "fm": "../../assets/img/k-tisch-l.webp",
+   "fs": "../../assets/img/k-tisch-s.webp"
+  },
+  {
+   "k": "k-basteln",
+   "t": {
+    "de": "Kinder mit der Kinderbetreuerin am Basteltisch"
+   },
+   "b": "kinder",
+   "s": "jahr",
+   "f": "quer",
+   "w": 1024,
+   "h": 682,
+   "art": "haus",
+   "q": "Bildergalerie der Website des Hauses (wellnesshotel-zurbriggen.ch)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/k-basteln-x.webp",
+   "fm": "../../assets/img/k-basteln-l.webp",
+   "fs": "../../assets/img/k-basteln-s.webp"
+  },
+  {
+   "k": "haus-garten",
+   "t": {
+    "de": "Das Haus mit dem verglasten Spa zwischen Bäumen und Blumen, Sommer"
+   },
+   "b": "haus",
+   "s": "sommer",
+   "f": "quer",
+   "w": 1654,
+   "h": 1103,
+   "art": "haus",
+   "q": "Bildergalerie der Website des Hauses (wellnesshotel-zurbriggen.ch)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/haus-garten-x.webp",
+   "fm": "../../assets/img/haus-garten-l.webp",
+   "fs": "../../assets/img/haus-garten-s.webp"
+  },
+  {
+   "k": "haus-nacht",
+   "t": {
+    "de": "Das Haus in einer Winternacht, alle Etagen erleuchtet"
+   },
+   "b": "haus",
+   "s": "winter",
+   "f": "hoch",
+   "w": 1546,
+   "h": 1772,
+   "art": "haus",
+   "q": "Bildergalerie der Website des Hauses (wellnesshotel-zurbriggen.ch)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/haus-nacht-x.webp",
+   "fm": "../../assets/img/haus-nacht-l.webp",
+   "fs": "../../assets/img/haus-nacht-s.webp"
+  },
+  {
+   "k": "ski-wald",
+   "t": {
+    "de": "Vier Skifahrer lachen im Lärchenwald"
+   },
+   "b": "saastal",
+   "s": "winter",
+   "f": "quer",
+   "w": 1654,
+   "h": 1103,
+   "art": "haus",
+   "q": "Bildergalerie der Website des Hauses (wellnesshotel-zurbriggen.ch)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/ski-wald-x.webp",
+   "fm": "../../assets/img/ski-wald-l.webp",
+   "fs": "../../assets/img/ski-wald-s.webp"
+  },
+  {
+   "k": "vitrinen",
+   "t": {
+    "de": "Grün beleuchtete Vitrinen, davor Tablets auf dem Tisch"
+   },
+   "b": "raeume",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1654,
+   "h": 2481,
+   "art": "haus",
+   "q": "Bildergalerie der Website des Hauses (wellnesshotel-zurbriggen.ch)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/vitrinen-x.webp",
+   "fm": "../../assets/img/vitrinen-l.webp",
+   "fs": "../../assets/img/vitrinen-s.webp"
+  },
+  {
+   "k": "leuchter",
+   "t": {
+    "de": "Ein Kristallleuchter aus Ketten, ganz nah"
+   },
+   "b": "raeume",
+   "s": "jahr",
+   "f": "quer",
+   "w": 1375,
+   "h": 918,
+   "art": "haus",
+   "q": "Bildergalerie der Website des Hauses (wellnesshotel-zurbriggen.ch)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/leuchter-x.webp",
+   "fm": "../../assets/img/leuchter-l.webp",
+   "fs": "../../assets/img/leuchter-s.webp"
+  },
+  {
+   "k": "scheiben-tv",
+   "t": {
+    "de": "Holzscheiben an der Wand neben dem Fernseher"
+   },
+   "b": "raeume",
+   "s": "jahr",
+   "f": "quer",
+   "w": 1407,
+   "h": 939,
+   "art": "haus",
+   "q": "Bildergalerie der Website des Hauses (wellnesshotel-zurbriggen.ch)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/scheiben-tv-x.webp",
+   "fm": "../../assets/img/scheiben-tv-l.webp",
+   "fs": "../../assets/img/scheiben-tv-s.webp"
+  },
+  {
+   "k": "sekt",
+   "t": {
+    "de": "Sektgläser in einer Reihe, dahinter grünes Licht"
+   },
+   "b": "tisch",
+   "s": "jahr",
+   "f": "quer",
+   "w": 1024,
+   "h": 680,
+   "art": "haus",
+   "q": "Bildergalerie der Website des Hauses (wellnesshotel-zurbriggen.ch)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/sekt-x.webp",
+   "fm": "../../assets/img/sekt-l.webp",
+   "fs": "../../assets/img/sekt-s.webp"
+  },
+  {
+   "k": "r-1",
+   "t": {
+    "de": "Ein helles Doppelzimmer mit Sofa und Blick zum Fenster"
+   },
+   "b": "zimmer",
+   "s": "jahr",
+   "f": "quer",
+   "w": 3008,
+   "h": 2008,
+   "art": "haus",
+   "q": "Bildergalerie der Website des Hauses (wellnesshotel-zurbriggen.ch)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/r-1-x.webp",
+   "fm": "../../assets/img/r-1-l.webp",
+   "fs": "../../assets/img/r-1-s.webp"
+  },
+  {
+   "k": "r-2",
+   "t": {
+    "de": "Ein Doppelbett mit Bademänteln, dahinter die Sitzecke"
+   },
+   "b": "zimmer",
+   "s": "jahr",
+   "f": "quer",
+   "w": 2912,
+   "h": 1942,
+   "art": "haus",
+   "q": "Bildergalerie der Website des Hauses (wellnesshotel-zurbriggen.ch)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/r-2-x.webp",
+   "fm": "../../assets/img/r-2-l.webp",
+   "fs": "../../assets/img/r-2-s.webp"
+  },
+  {
+   "k": "r-3",
+   "t": {
+    "de": "Ein Bett vor der Spiegelwand, dunkler Boden"
+   },
+   "b": "zimmer",
+   "s": "jahr",
+   "f": "quer",
+   "w": 1459,
+   "h": 974,
+   "art": "haus",
+   "q": "Bildergalerie der Website des Hauses (wellnesshotel-zurbriggen.ch)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/r-3-x.webp",
+   "fm": "../../assets/img/r-3-l.webp",
+   "fs": "../../assets/img/r-3-s.webp"
+  },
+  {
+   "k": "r-4",
+   "t": {
+    "de": "Ein Zimmer in Arvenholz mit Balkon und Glastisch"
+   },
+   "b": "zimmer",
+   "s": "jahr",
+   "f": "quer",
+   "w": 1484,
+   "h": 991,
+   "art": "haus",
+   "q": "Bildergalerie der Website des Hauses (wellnesshotel-zurbriggen.ch)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/r-4-x.webp",
+   "fm": "../../assets/img/r-4-l.webp",
+   "fs": "../../assets/img/r-4-s.webp"
+  },
+  {
+   "k": "r-5",
+   "t": {
+    "de": "Zwei Betten unter Holz, das Z an der Glaswand zum Bad"
+   },
+   "b": "zimmer",
+   "s": "jahr",
+   "f": "quer",
+   "w": 1436,
+   "h": 959,
+   "art": "haus",
+   "q": "Bildergalerie der Website des Hauses (wellnesshotel-zurbriggen.ch)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/r-5-x.webp",
+   "fm": "../../assets/img/r-5-l.webp",
+   "fs": "../../assets/img/r-5-s.webp"
+  },
+  {
+   "k": "r-6",
+   "t": {
+    "de": "Ein grosses Zimmer mit Schieferwand, Sofa und Balkon"
+   },
+   "b": "zimmer",
+   "s": "jahr",
+   "f": "quer",
+   "w": 1458,
+   "h": 973,
+   "art": "haus",
+   "q": "Bildergalerie der Website des Hauses (wellnesshotel-zurbriggen.ch)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/r-6-x.webp",
+   "fm": "../../assets/img/r-6-l.webp",
+   "fs": "../../assets/img/r-6-s.webp"
+  },
+  {
+   "k": "r-8",
+   "t": {
+    "de": "Kissen auf dem Bett im Lampenlicht"
+   },
+   "b": "zimmer",
+   "s": "jahr",
+   "f": "quer",
+   "w": 3009,
+   "h": 2011,
+   "art": "haus",
+   "q": "Bildergalerie der Website des Hauses (wellnesshotel-zurbriggen.ch)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/r-8-x.webp",
+   "fm": "../../assets/img/r-8-l.webp",
+   "fs": "../../assets/img/r-8-s.webp"
+  },
+  {
+   "k": "r-9",
+   "t": {
+    "de": "Getrocknete Blüten auf der Bettdecke"
+   },
+   "b": "zimmer",
+   "s": "jahr",
+   "f": "quer",
+   "w": 1310,
+   "h": 874,
+   "art": "haus",
+   "q": "Bildergalerie der Website des Hauses (wellnesshotel-zurbriggen.ch)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/r-9-x.webp",
+   "fm": "../../assets/img/r-9-l.webp",
+   "fs": "../../assets/img/r-9-s.webp"
+  },
+  {
+   "k": "r-10",
+   "t": {
+    "de": "Eine Flasche Prosecco im Kühler"
+   },
+   "b": "zimmer",
+   "s": "jahr",
+   "f": "quer",
+   "w": 1504,
+   "h": 1004,
+   "art": "haus",
+   "q": "Bildergalerie der Website des Hauses (wellnesshotel-zurbriggen.ch)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/r-10-x.webp",
+   "fm": "../../assets/img/r-10-l.webp",
+   "fs": "../../assets/img/r-10-s.webp"
+  },
+  {
+   "k": "friseur",
+   "t": {
+    "de": "Im Beauty-Raum bei der Haarpflege"
+   },
+   "b": "spa",
+   "s": "jahr",
+   "f": "quer",
+   "w": 1417,
+   "h": 945,
+   "art": "haus",
+   "q": "Bildergalerie der Website des Hauses (wellnesshotel-zurbriggen.ch)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/friseur-x.webp",
+   "fm": "../../assets/img/friseur-l.webp",
+   "fs": "../../assets/img/friseur-s.webp"
+  },
+  {
+   "k": "pool-nacht",
+   "t": {
+    "de": "Das Schwimmbad am Abend, Liegen am Rand"
+   },
+   "b": "spa",
+   "s": "jahr",
+   "f": "quadrat",
+   "w": 1417,
+   "h": 1458,
+   "art": "haus",
+   "q": "Bildergalerie der Website des Hauses (wellnesshotel-zurbriggen.ch)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/pool-nacht-x.webp",
+   "fm": "../../assets/img/pool-nacht-l.webp",
+   "fs": "../../assets/img/pool-nacht-s.webp"
+  },
+  {
+   "k": "dessertbuffet",
+   "t": {
+    "de": "Ein Dessertbuffet mit vielen kleinen Gläsern"
+   },
+   "b": "tisch",
+   "s": "jahr",
+   "f": "quer",
+   "w": 4096,
+   "h": 2720,
+   "art": "haus",
+   "q": "Bildergalerie der Website des Hauses (wellnesshotel-zurbriggen.ch)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/dessertbuffet-x.webp",
+   "fm": "../../assets/img/dessertbuffet-l.webp",
+   "fs": "../../assets/img/dessertbuffet-s.webp"
+  },
+  {
+   "k": "bietschhorn",
+   "t": {
+    "de": "Ein Gipfel im Abendrot über verschneiten Wäldern"
+   },
+   "b": "saastal",
+   "s": "jahr",
+   "f": "quer",
+   "w": 1000,
+   "h": 346,
+   "art": "haus",
+   "q": "Bildergalerie der Website des Hauses (wellnesshotel-zurbriggen.ch)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/bietschhorn-x.webp",
+   "fm": "../../assets/img/bietschhorn-l.webp",
+   "fs": "../../assets/img/bietschhorn-s.webp"
+  },
+  {
+   "k": "z-fam45-2",
+   "t": {
+    "de": "Familienzimmer Wallis 45m²: Wohnraum mit Essplatz"
+   },
+   "b": "zimmer",
+   "s": "jahr",
+   "f": "quer",
+   "w": 3000,
+   "h": 2004,
+   "art": "haus",
+   "q": "Website des Hauses (wellnesshotel-zurbriggen.ch), abgerufen am 18. Oktober 2026",
+   "u": "https://www.wellnesshotel-zurbriggen.ch/de/wohnen-buchen/zimmer-und-preise/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/z-fam45-2-x.webp",
+   "fm": "../../assets/img/z-fam45-2-l.webp",
+   "fs": "../../assets/img/z-fam45-2-s.webp"
+  },
+  {
+   "k": "z-fam75",
+   "t": {
+    "de": "Familienzimmer Wallis: Doppelbett vor der Holzscheibenwand"
+   },
+   "b": "zimmer",
+   "s": "jahr",
+   "f": "quer",
+   "w": 3000,
+   "h": 2003,
+   "art": "haus",
+   "q": "Website des Hauses (wellnesshotel-zurbriggen.ch), abgerufen am 18. Oktober 2026",
+   "u": "https://www.wellnesshotel-zurbriggen.ch/de/wohnen-buchen/zimmer-und-preise/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/z-fam75-x.webp",
+   "fm": "../../assets/img/z-fam75-l.webp",
+   "fs": "../../assets/img/z-fam75-s.webp"
+  },
+  {
+   "k": "z-suite",
+   "t": {
+    "de": "Suite: die freistehende Badewanne im Zimmer"
+   },
+   "b": "zimmer",
+   "s": "jahr",
+   "f": "quer",
+   "w": 3000,
+   "h": 1691,
+   "art": "haus",
+   "q": "Website des Hauses (wellnesshotel-zurbriggen.ch), abgerufen am 18. Oktober 2026",
+   "u": "https://www.wellnesshotel-zurbriggen.ch/de/wohnen-buchen/zimmer-und-preise/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/z-suite-x.webp",
+   "fm": "../../assets/img/z-suite-l.webp",
+   "fs": "../../assets/img/z-suite-s.webp"
+  },
+  {
+   "k": "z-senior",
+   "t": {
+    "de": "Seniorsuite: Wohnraum mit Kamin"
+   },
+   "b": "zimmer",
+   "s": "jahr",
+   "f": "quer",
+   "w": 3000,
+   "h": 1998,
+   "art": "haus",
+   "q": "Website des Hauses (wellnesshotel-zurbriggen.ch), abgerufen am 18. Oktober 2026",
+   "u": "https://www.wellnesshotel-zurbriggen.ch/de/wohnen-buchen/zimmer-und-preise/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/z-senior-x.webp",
+   "fm": "../../assets/img/z-senior-l.webp",
+   "fs": "../../assets/img/z-senior-s.webp"
+  },
+  {
+   "k": "z-senior-2",
+   "t": {
+    "de": "Seniorsuite: das Schlafzimmer"
+   },
+   "b": "zimmer",
+   "s": "jahr",
+   "f": "quer",
+   "w": 3000,
+   "h": 1998,
+   "art": "haus",
+   "q": "Website des Hauses (wellnesshotel-zurbriggen.ch), abgerufen am 18. Oktober 2026",
+   "u": "https://www.wellnesshotel-zurbriggen.ch/de/wohnen-buchen/zimmer-und-preise/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/z-senior-2-x.webp",
+   "fm": "../../assets/img/z-senior-2-l.webp",
+   "fs": "../../assets/img/z-senior-2-s.webp"
+  },
+  {
+   "k": "sp-massage",
+   "t": {
+    "de": "Eine Massage mit Kräuterstempeln"
+   },
+   "b": "spa",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 2160,
+   "h": 3232,
+   "art": "haus",
+   "q": "Website des Hauses (wellnesshotel-zurbriggen.ch). Mit KI hochgerechnet und nachgeschärft",
+   "u": "",
+   "ue": true,
+   "alt": false,
+   "vn": true,
+   "fl": "../../assets/img/sp-massage-x.webp",
+   "fm": "../../assets/img/sp-massage-l.webp",
+   "fs": "../../assets/img/sp-massage-s.webp"
+  },
+  {
+   "k": "sp-gesicht",
+   "t": {
+    "de": "Eine Gesichtsbehandlung"
+   },
+   "b": "spa",
+   "s": "jahr",
+   "f": "quadrat",
+   "w": 3000,
+   "h": 3027,
+   "art": "haus",
+   "q": "Website des Hauses (wellnesshotel-zurbriggen.ch), abgerufen am 18. Oktober 2026",
+   "u": "https://www.wellnesshotel-zurbriggen.ch/en/beauty/day-spa/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/sp-gesicht-x.webp",
+   "fm": "../../assets/img/sp-gesicht-l.webp",
+   "fs": "../../assets/img/sp-gesicht-s.webp"
+  },
+  {
+   "k": "sp-haende",
+   "t": {
+    "de": "Hände auf dem Tuch mit dem Zeichen des Hauses"
+   },
+   "b": "spa",
+   "s": "jahr",
+   "f": "quer",
+   "w": 3000,
+   "h": 1998,
+   "art": "haus",
+   "q": "Website des Hauses (wellnesshotel-zurbriggen.ch), abgerufen am 18. Oktober 2026",
+   "u": "https://www.wellnesshotel-zurbriggen.ch/en/beauty/day-spa/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/sp-haende-x.webp",
+   "fm": "../../assets/img/sp-haende-l.webp",
+   "fs": "../../assets/img/sp-haende-s.webp"
+  },
+  {
+   "k": "h-spiegel",
+   "t": {
+    "de": "Der verglaste Spa-Turm spiegelt den Himmel"
+   },
+   "b": "haus",
+   "s": "jahr",
+   "f": "quer",
+   "w": 999,
+   "h": 667,
+   "art": "haus",
+   "q": "Website des Hauses (wellnesshotel-zurbriggen.ch), abgerufen am 18. Oktober 2026",
+   "u": "https://www.wellnesshotel-zurbriggen.ch/de/hotel-pirmin/bildergalerie/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/h-spiegel-x.webp",
+   "fm": "../../assets/img/h-spiegel-l.webp",
+   "fs": "../../assets/img/h-spiegel-s.webp"
+  },
+  {
+   "k": "h-laerchen",
+   "t": {
+    "de": "Lärchen im Herbst vor den Viertausendern"
+   },
+   "b": "saastal",
+   "s": "sommer",
+   "f": "quer",
+   "w": 999,
+   "h": 667,
+   "art": "haus",
+   "q": "Website des Hauses (wellnesshotel-zurbriggen.ch), abgerufen am 18. Oktober 2026",
+   "u": "https://www.wellnesshotel-zurbriggen.ch/de/hotel-pirmin/bildergalerie/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/h-laerchen-x.webp",
+   "fm": "../../assets/img/h-laerchen-l.webp",
+   "fs": "../../assets/img/h-laerchen-s.webp"
+  },
+  {
+   "k": "h-abendrot",
+   "t": {
+    "de": "Die Viertausender im Abendrot"
+   },
+   "b": "saastal",
+   "s": "jahr",
+   "f": "quer",
+   "w": 999,
+   "h": 562,
+   "art": "haus",
+   "q": "Website des Hauses (wellnesshotel-zurbriggen.ch), abgerufen am 18. Oktober 2026",
+   "u": "https://www.wellnesshotel-zurbriggen.ch/de/hotel-pirmin/bildergalerie/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/h-abendrot-x.webp",
+   "fm": "../../assets/img/h-abendrot-l.webp",
+   "fs": "../../assets/img/h-abendrot-s.webp"
+  },
+  {
+   "k": "h-blumen",
+   "t": {
+    "de": "Blumen vor der Sonnenterrasse"
+   },
+   "b": "haus",
+   "s": "sommer",
+   "f": "quer",
+   "w": 999,
+   "h": 667,
+   "art": "haus",
+   "q": "Website des Hauses (wellnesshotel-zurbriggen.ch), abgerufen am 18. Oktober 2026",
+   "u": "https://www.wellnesshotel-zurbriggen.ch/de/hotel-pirmin/bildergalerie/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/h-blumen-x.webp",
+   "fm": "../../assets/img/h-blumen-l.webp",
+   "fs": "../../assets/img/h-blumen-s.webp"
+  },
+  {
+   "k": "b-piano",
+   "t": {
+    "de": "Der Speisesaal mit Flügel und Kerzen"
+   },
+   "b": "haus",
+   "s": "jahr",
+   "f": "quer",
+   "w": 1280,
+   "h": 853,
+   "art": "haus",
+   "q": "Unterkunftsgalerie des Hauses auf Booking.com (Fotos des Hauses, keine Gästefotos)",
+   "u": "https://www.booking.com/hotel/ch/aad-wellnesshotel-pirmin-zurbriggen.de.html",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/b-piano-x.webp",
+   "fm": "../../assets/img/b-piano-l.webp",
+   "fs": "../../assets/img/b-piano-s.webp"
+  },
+  {
+   "k": "b-terrasse",
+   "t": {
+    "de": "Auf der Sonnenterrasse unter den Schirmen"
+   },
+   "b": "haus",
+   "s": "sommer",
+   "f": "quer",
+   "w": 1280,
+   "h": 853,
+   "art": "haus",
+   "q": "Unterkunftsgalerie des Hauses auf Booking.com (Fotos des Hauses, keine Gästefotos)",
+   "u": "https://www.booking.com/hotel/ch/aad-wellnesshotel-pirmin-zurbriggen.de.html",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/b-terrasse-x.webp",
+   "fm": "../../assets/img/b-terrasse-l.webp",
+   "fs": "../../assets/img/b-terrasse-s.webp"
+  },
+  {
+   "k": "b-schaukel",
+   "t": {
+    "de": "In der Hollywoodschaukel vor dem Spa"
+   },
+   "b": "haus",
+   "s": "jahr",
+   "f": "quer",
+   "w": 1280,
+   "h": 853,
+   "art": "haus",
+   "q": "Unterkunftsgalerie des Hauses auf Booking.com (Fotos des Hauses, keine Gästefotos)",
+   "u": "https://www.booking.com/hotel/ch/aad-wellnesshotel-pirmin-zurbriggen.de.html",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/b-schaukel-x.webp",
+   "fm": "../../assets/img/b-schaukel-l.webp",
+   "fs": "../../assets/img/b-schaukel-s.webp"
+  },
+  {
+   "k": "b-liegen",
+   "t": {
+    "de": "Liegen auf der Terrasse, dahinter das Tal"
+   },
+   "b": "haus",
+   "s": "jahr",
+   "f": "quer",
+   "w": 1280,
+   "h": 853,
+   "art": "haus",
+   "q": "Unterkunftsgalerie des Hauses auf Booking.com (Fotos des Hauses, keine Gästefotos)",
+   "u": "https://www.booking.com/hotel/ch/aad-wellnesshotel-pirmin-zurbriggen.de.html",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/b-liegen-x.webp",
+   "fm": "../../assets/img/b-liegen-l.webp",
+   "fs": "../../assets/img/b-liegen-s.webp"
+  },
+  {
+   "k": "b-empfang",
+   "t": {
+    "de": "Am Empfang, das rote Z an der Theke"
+   },
+   "b": "gastgeber",
+   "s": "jahr",
+   "f": "quer",
+   "w": 1280,
+   "h": 853,
+   "art": "haus",
+   "q": "Unterkunftsgalerie des Hauses auf Booking.com (Fotos des Hauses, keine Gästefotos)",
+   "u": "https://www.booking.com/hotel/ch/aad-wellnesshotel-pirmin-zurbriggen.de.html",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/b-empfang-x.webp",
+   "fm": "../../assets/img/b-empfang-l.webp",
+   "fs": "../../assets/img/b-empfang-s.webp"
+  },
+  {
+   "k": "esther-fabian",
+   "t": {
+    "de": "Esther und Fabian Zurbriggen, «Hotelier des Jahres 2024/25»"
+   },
+   "b": "gastgeber",
+   "s": "jahr",
+   "f": "quer",
+   "w": 820,
+   "h": 513,
+   "art": "haus",
+   "q": "htr.ch, «Hotelier des Jahres 2024/25»; das Bild hat das Haus zur Verfügung gestellt",
+   "u": "https://www.htr.ch/story/hotellerie/esther-und-fabian-zurbriggen-sind-hotelier-des-jahres-40333",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/esther-fabian-x.webp",
+   "fm": "../../assets/img/esther-fabian-l.webp",
+   "fs": "../../assets/img/esther-fabian-s.webp"
+  },
+  {
+   "k": "j-eingang",
+   "t": {
+    "de": "Ein Gang zwischen Wänden aus Holzscheiben, Gäste im Bademantel, oben ein Leuchter"
+   },
+   "b": "raeume",
+   "s": "jahr",
+   "f": "quer",
+   "w": 1280,
+   "h": 853,
+   "art": "haus",
+   "q": "Unterkunftsgalerie des Hauses auf Booking.com (Fotos des Hauses, keine Gästefotos)",
+   "u": "https://www.booking.com/hotel/ch/aad-wellnesshotel-pirmin-zurbriggen.de.html",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/j-eingang-x.webp",
+   "fm": "../../assets/img/j-eingang-l.webp",
+   "fs": "../../assets/img/j-eingang-s.webp"
+  },
+  {
+   "k": "j-barkarte",
+   "t": {
+    "de": "Die Barkarte mit dem Z neben einer Glasskulptur"
+   },
+   "b": "raeume",
+   "s": "jahr",
+   "f": "quer",
+   "w": 1280,
+   "h": 853,
+   "art": "haus",
+   "q": "Unterkunftsgalerie des Hauses auf Booking.com (Fotos des Hauses, keine Gästefotos)",
+   "u": "https://www.booking.com/hotel/ch/aad-wellnesshotel-pirmin-zurbriggen.de.html",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/j-barkarte-x.webp",
+   "fm": "../../assets/img/j-barkarte-l.webp",
+   "fs": "../../assets/img/j-barkarte-s.webp"
+  },
+  {
+   "k": "f-wiese",
+   "t": {
+    "de": "Das Haus über der Sommerwiese, dahinter die Berge"
+   },
+   "b": "haus",
+   "s": "sommer",
+   "f": "hoch",
+   "w": 600,
+   "h": 900,
+   "art": "haus",
+   "q": "Unterkunftsgalerie des Hauses auf Booking.com (Fotos des Hauses, keine Gästefotos)",
+   "u": "https://www.booking.com/hotel/ch/aad-wellnesshotel-pirmin-zurbriggen.de.html",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/f-wiese-x.webp",
+   "fm": "../../assets/img/f-wiese-l.webp",
+   "fs": "../../assets/img/f-wiese-s.webp"
+  },
+  {
+   "k": "f-karte",
+   "t": {
+    "de": "Zwei Hände auf der Karte des Hauses mit dem Zeichen Pirmin Zurbriggen"
+   },
+   "b": "tisch",
+   "s": "jahr",
+   "f": "quer",
+   "w": 1280,
+   "h": 853,
+   "art": "haus",
+   "q": "Unterkunftsgalerie des Hauses auf Booking.com (Fotos des Hauses, keine Gästefotos)",
+   "u": "https://www.booking.com/hotel/ch/aad-wellnesshotel-pirmin-zurbriggen.de.html",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/f-karte-x.webp",
+   "fm": "../../assets/img/f-karte-l.webp",
+   "fs": "../../assets/img/f-karte-s.webp"
+  },
+  {
+   "k": "j-stube",
+   "t": {
+    "de": "Eine Stube mit Holztischen und Leuchten unter der Holzdecke"
+   },
+   "b": "raeume",
+   "s": "jahr",
+   "f": "quer",
+   "w": 1024,
+   "h": 678,
+   "art": "haus",
+   "q": "Bildergalerie der Website des Hauses (wellnesshotel-zurbriggen.ch)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/j-stube-x.webp",
+   "fm": "../../assets/img/j-stube-l.webp",
+   "fs": "../../assets/img/j-stube-s.webp"
+  },
+  {
+   "k": "j-flasche",
+   "t": {
+    "de": "Eine Flasche aus dem Keller vor der Steinwand"
+   },
+   "b": "raeume",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 341,
+   "h": 512,
+   "art": "haus",
+   "q": "Bildergalerie der Website des Hauses (wellnesshotel-zurbriggen.ch)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/j-flasche-x.webp",
+   "fm": "../../assets/img/j-flasche-l.webp",
+   "fs": "../../assets/img/j-flasche-s.webp"
+  },
+  {
+   "k": "j-saal",
+   "t": {
+    "de": "Gedeckte Tische unter einem Kristallleuchter"
+   },
+   "b": "raeume",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 600,
+   "h": 900,
+   "art": "haus",
+   "q": "Unterkunftsgalerie des Hauses auf Booking.com (Fotos des Hauses, keine Gästefotos)",
+   "u": "https://www.booking.com/hotel/ch/aad-wellnesshotel-pirmin-zurbriggen.de.html",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/j-saal-x.webp",
+   "fm": "../../assets/img/j-saal-l.webp",
+   "fs": "../../assets/img/j-saal-s.webp"
+  },
+  {
+   "k": "j-musikbox",
+   "t": {
+    "de": "Eine leuchtende Musikbox"
+   },
+   "b": "raeume",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 600,
+   "h": 900,
+   "art": "haus",
+   "q": "Unterkunftsgalerie des Hauses auf Booking.com (Fotos des Hauses, keine Gästefotos)",
+   "u": "https://www.booking.com/hotel/ch/aad-wellnesshotel-pirmin-zurbriggen.de.html",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/j-musikbox-x.webp",
+   "fm": "../../assets/img/j-musikbox-l.webp",
+   "fs": "../../assets/img/j-musikbox-s.webp"
+  },
+  {
+   "k": "j-wein",
+   "t": {
+    "de": "Der Wein wird am Tisch eingeschenkt"
+   },
+   "b": "tisch",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 600,
+   "h": 900,
+   "art": "haus",
+   "q": "Unterkunftsgalerie des Hauses auf Booking.com (Fotos des Hauses, keine Gästefotos)",
+   "u": "https://www.booking.com/hotel/ch/aad-wellnesshotel-pirmin-zurbriggen.de.html",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/j-wein-x.webp",
+   "fm": "../../assets/img/j-wein-l.webp",
+   "fs": "../../assets/img/j-wein-s.webp"
+  },
+  {
+   "k": "f-stube",
+   "t": {
+    "de": "Vier Gastgeber in der Holzstube, aus der Bildergalerie des Hauses"
+   },
+   "b": "gastgeber",
+   "s": "jahr",
+   "f": "quadrat",
+   "w": 935,
+   "h": 945,
+   "art": "haus",
+   "q": "Bildergalerie der Website des Hauses (wellnesshotel-zurbriggen.ch)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/f-stube-x.webp",
+   "fm": "../../assets/img/f-stube-l.webp",
+   "fs": "../../assets/img/f-stube-s.webp"
+  },
+  {
+   "k": "f-abend",
+   "t": {
+    "de": "Ein Abend am Tisch im Speisesaal"
+   },
+   "b": "tisch",
+   "s": "jahr",
+   "f": "quer",
+   "w": 1280,
+   "h": 853,
+   "art": "haus",
+   "q": "Unterkunftsgalerie des Hauses auf Booking.com (Fotos des Hauses, keine Gästefotos)",
+   "u": "https://www.booking.com/hotel/ch/aad-wellnesshotel-pirmin-zurbriggen.de.html",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/f-abend-x.webp",
+   "fm": "../../assets/img/f-abend-l.webp",
+   "fs": "../../assets/img/f-abend-s.webp"
+  },
+  {
+   "k": "sp-sense-2",
+   "t": {
+    "de": "Zwei Senseliegen im grünen Licht"
+   },
+   "b": "spa",
+   "s": "jahr",
+   "f": "quer",
+   "w": 1260,
+   "h": 649,
+   "art": "haus",
+   "q": "Bildergalerie der Website des Hauses (wellnesshotel-zurbriggen.ch)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/sp-sense-2-x.webp",
+   "fm": "../../assets/img/sp-sense-2-l.webp",
+   "fs": "../../assets/img/sp-sense-2-s.webp"
+  },
+  {
+   "k": "sp-farben",
+   "t": {
+    "de": "Liegen im Farblicht"
+   },
+   "b": "spa",
+   "s": "jahr",
+   "f": "quer",
+   "w": 1133,
+   "h": 750,
+   "art": "haus",
+   "q": "Bildergalerie der Website des Hauses (wellnesshotel-zurbriggen.ch)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/sp-farben-x.webp",
+   "fm": "../../assets/img/sp-farben-l.webp",
+   "fs": "../../assets/img/sp-farben-s.webp"
+  },
+  {
+   "k": "sp-gruen",
+   "t": {
+    "de": "Ein Bad im grünen Licht"
+   },
+   "b": "spa",
+   "s": "jahr",
+   "f": "quer",
+   "w": 1772,
+   "h": 1182,
+   "art": "haus",
+   "q": "Bildergalerie der Website des Hauses (wellnesshotel-zurbriggen.ch)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/sp-gruen-x.webp",
+   "fm": "../../assets/img/sp-gruen-l.webp",
+   "fs": "../../assets/img/sp-gruen-s.webp"
+  },
+  {
+   "k": "sp-grotte",
+   "t": {
+    "de": "In der Grotte aus Stein"
+   },
+   "b": "spa",
+   "s": "jahr",
+   "f": "quer",
+   "w": 1772,
+   "h": 1182,
+   "art": "haus",
+   "q": "Bildergalerie der Website des Hauses (wellnesshotel-zurbriggen.ch)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/sp-grotte-x.webp",
+   "fm": "../../assets/img/sp-grotte-l.webp",
+   "fs": "../../assets/img/sp-grotte-s.webp"
+  },
+  {
+   "k": "sp-oben",
+   "t": {
+    "de": "Das Schwimmbad von oben, unter dem Glasdach"
+   },
+   "b": "spa",
+   "s": "jahr",
+   "f": "quer",
+   "w": 1280,
+   "h": 853,
+   "art": "haus",
+   "q": "Unterkunftsgalerie des Hauses auf Booking.com (Fotos des Hauses, keine Gästefotos)",
+   "u": "https://www.booking.com/hotel/ch/aad-wellnesshotel-pirmin-zurbriggen.de.html",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/sp-oben-x.webp",
+   "fm": "../../assets/img/sp-oben-l.webp",
+   "fs": "../../assets/img/sp-oben-s.webp"
+  },
+  {
+   "k": "sp-scheiben",
+   "t": {
+    "de": "Die Sauna mit der Wand aus Holzscheiben"
+   },
+   "b": "spa",
+   "s": "jahr",
+   "f": "quer",
+   "w": 1280,
+   "h": 853,
+   "art": "haus",
+   "q": "Unterkunftsgalerie des Hauses auf Booking.com (Fotos des Hauses, keine Gästefotos)",
+   "u": "https://www.booking.com/hotel/ch/aad-wellnesshotel-pirmin-zurbriggen.de.html",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/sp-scheiben-x.webp",
+   "fm": "../../assets/img/sp-scheiben-l.webp",
+   "fs": "../../assets/img/sp-scheiben-s.webp"
+  },
+  {
+   "k": "sp-fenster",
+   "t": {
+    "de": "Am Fenster des Ruheraums, unter dem Leuchter"
+   },
+   "b": "spa",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 945,
+   "h": 1417,
+   "art": "haus",
+   "q": "Bildergalerie der Website des Hauses (wellnesshotel-zurbriggen.ch)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/sp-fenster-x.webp",
+   "fm": "../../assets/img/sp-fenster-l.webp",
+   "fs": "../../assets/img/sp-fenster-s.webp"
+  },
+  {
+   "k": "sp-blick",
+   "t": {
+    "de": "Ruhen mit Blick in die Berge"
+   },
+   "b": "spa",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 945,
+   "h": 1417,
+   "art": "haus",
+   "q": "Bildergalerie der Website des Hauses (wellnesshotel-zurbriggen.ch)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/sp-blick-x.webp",
+   "fm": "../../assets/img/sp-blick-l.webp",
+   "fs": "../../assets/img/sp-blick-s.webp"
+  },
+  {
+   "k": "sp-massage-2",
+   "t": {
+    "de": "Eine Rückenmassage"
+   },
+   "b": "spa",
+   "s": "jahr",
+   "f": "quer",
+   "w": 1024,
+   "h": 682,
+   "art": "haus",
+   "q": "Bildergalerie der Website des Hauses (wellnesshotel-zurbriggen.ch)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/sp-massage-2-x.webp",
+   "fm": "../../assets/img/sp-massage-2-l.webp",
+   "fs": "../../assets/img/sp-massage-2-s.webp"
+  },
+  {
+   "k": "sp-garten",
+   "t": {
+    "de": "Zwei Gäste im Bademantel im Garten"
+   },
+   "b": "spa",
+   "s": "jahr",
+   "f": "quer",
+   "w": 640,
+   "h": 427,
+   "art": "haus",
+   "q": "Instagram des Hauses (@hotelpirminzurbriggen), Beitrag vom 27. Juni 2026",
+   "u": "https://www.instagram.com/hotelpirminzurbriggen/p/DaFJhGykQ-M/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/sp-garten-x.webp",
+   "fm": "../../assets/img/sp-garten-l.webp",
+   "fs": "../../assets/img/sp-garten-s.webp"
+  },
+  {
+   "k": "g-teller-1",
+   "t": {
+    "de": "Eine Crème im Glas auf Schiefer"
+   },
+   "b": "tisch",
+   "s": "jahr",
+   "f": "quer",
+   "w": 1024,
+   "h": 683,
+   "art": "haus",
+   "q": "Bildergalerie der Website des Hauses (wellnesshotel-zurbriggen.ch)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/g-teller-1-x.webp",
+   "fm": "../../assets/img/g-teller-1-l.webp",
+   "fs": "../../assets/img/g-teller-1-s.webp"
+  },
+  {
+   "k": "g-teller-2",
+   "t": {
+    "de": "Ein Vorspeisenteller mit Blüte"
+   },
+   "b": "tisch",
+   "s": "jahr",
+   "f": "quer",
+   "w": 1024,
+   "h": 683,
+   "art": "haus",
+   "q": "Bildergalerie der Website des Hauses (wellnesshotel-zurbriggen.ch)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/g-teller-2-x.webp",
+   "fm": "../../assets/img/g-teller-2-l.webp",
+   "fs": "../../assets/img/g-teller-2-s.webp"
+  },
+  {
+   "k": "g-teller-3",
+   "t": {
+    "de": "Ein Dessert mit Gitter aus Karamell"
+   },
+   "b": "tisch",
+   "s": "jahr",
+   "f": "quer",
+   "w": 1024,
+   "h": 682,
+   "art": "haus",
+   "q": "Bildergalerie der Website des Hauses (wellnesshotel-zurbriggen.ch)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/g-teller-3-x.webp",
+   "fm": "../../assets/img/g-teller-3-l.webp",
+   "fs": "../../assets/img/g-teller-3-s.webp"
+  },
+  {
+   "k": "g-teller-4",
+   "t": {
+    "de": "Kuchen, Feige und Beeren auf Glas"
+   },
+   "b": "tisch",
+   "s": "jahr",
+   "f": "quer",
+   "w": 1024,
+   "h": 682,
+   "art": "haus",
+   "q": "Bildergalerie der Website des Hauses (wellnesshotel-zurbriggen.ch)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/g-teller-4-x.webp",
+   "fm": "../../assets/img/g-teller-4-l.webp",
+   "fs": "../../assets/img/g-teller-4-s.webp"
+  },
+  {
+   "k": "g-fleisch",
+   "t": {
+    "de": "Ein Stück Fleisch, frisch vom Grill"
+   },
+   "b": "tisch",
+   "s": "jahr",
+   "f": "quer",
+   "w": 1536,
+   "h": 1024,
+   "art": "haus",
+   "q": "Bildergalerie der Website des Hauses (wellnesshotel-zurbriggen.ch)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/g-fleisch-x.webp",
+   "fm": "../../assets/img/g-fleisch-l.webp",
+   "fs": "../../assets/img/g-fleisch-s.webp"
+  },
+  {
+   "k": "g-abend",
+   "t": {
+    "de": "Zu zweit unter dem Leuchter"
+   },
+   "b": "tisch",
+   "s": "jahr",
+   "f": "quer",
+   "w": 945,
+   "h": 801,
+   "art": "haus",
+   "q": "Bildergalerie der Website des Hauses (wellnesshotel-zurbriggen.ch)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/g-abend-x.webp",
+   "fm": "../../assets/img/g-abend-l.webp",
+   "fs": "../../assets/img/g-abend-s.webp"
+  },
+  {
+   "k": "k-lounge",
+   "t": {
+    "de": "Der Spielraum mit Licht und Holzscheiben"
+   },
+   "b": "kinder",
+   "s": "jahr",
+   "f": "quer",
+   "w": 1418,
+   "h": 559,
+   "art": "haus",
+   "q": "Bildergalerie der Website des Hauses (wellnesshotel-zurbriggen.ch)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/k-lounge-x.webp",
+   "fm": "../../assets/img/k-lounge-l.webp",
+   "fs": "../../assets/img/k-lounge-s.webp"
+  },
+  {
+   "k": "k-bowling",
+   "t": {
+    "de": "An der Bowlingbahn"
+   },
+   "b": "kinder",
+   "s": "jahr",
+   "f": "quer",
+   "w": 1417,
+   "h": 559,
+   "art": "haus",
+   "q": "Bildergalerie der Website des Hauses (wellnesshotel-zurbriggen.ch)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/k-bowling-x.webp",
+   "fm": "../../assets/img/k-bowling-l.webp",
+   "fs": "../../assets/img/k-bowling-s.webp"
+  },
+  {
+   "k": "k-wasser",
+   "t": {
+    "de": "Kinder im Schwimmbad"
+   },
+   "b": "kinder",
+   "s": "jahr",
+   "f": "quer",
+   "w": 1140,
+   "h": 400,
+   "art": "haus",
+   "q": "Bildergalerie der Website des Hauses (wellnesshotel-zurbriggen.ch)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/k-wasser-x.webp",
+   "fm": "../../assets/img/k-wasser-l.webp",
+   "fs": "../../assets/img/k-wasser-s.webp"
+  },
+  {
+   "k": "h-ausblick",
+   "t": {
+    "de": "Lärche über dem Tal, dahinter die Viertausender"
+   },
+   "b": "saastal",
+   "s": "jahr",
+   "f": "quer",
+   "w": 999,
+   "h": 667,
+   "art": "haus",
+   "q": "Bildergalerie der Website des Hauses (wellnesshotel-zurbriggen.ch)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/h-ausblick-x.webp",
+   "fm": "../../assets/img/h-ausblick-l.webp",
+   "fs": "../../assets/img/h-ausblick-s.webp"
+  },
+  {
+   "k": "h-mondnacht",
+   "t": {
+    "de": "Die Gipfel im Mondlicht"
+   },
+   "b": "saastal",
+   "s": "winter",
+   "f": "quer",
+   "w": 1000,
+   "h": 476,
+   "art": "haus",
+   "q": "Bildergalerie der Website des Hauses (wellnesshotel-zurbriggen.ch)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/h-mondnacht-x.webp",
+   "fm": "../../assets/img/h-mondnacht-l.webp",
+   "fs": "../../assets/img/h-mondnacht-s.webp"
+  },
+  {
+   "k": "h-steinbock",
+   "t": {
+    "de": "Steinböcke vor dem Gletscher"
+   },
+   "b": "saastal",
+   "s": "sommer",
+   "f": "quer",
+   "w": 1140,
+   "h": 400,
+   "art": "haus",
+   "q": "Bildergalerie der Website des Hauses (wellnesshotel-zurbriggen.ch)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/h-steinbock-x.webp",
+   "fm": "../../assets/img/h-steinbock-l.webp",
+   "fs": "../../assets/img/h-steinbock-s.webp"
+  },
+  {
+   "k": "h-mattmark",
+   "t": {
+    "de": "Der Mattmarksee unter den Gipfeln"
+   },
+   "b": "saastal",
+   "s": "sommer",
+   "f": "quer",
+   "w": 1024,
+   "h": 772,
+   "art": "haus",
+   "q": "Bildergalerie der Website des Hauses (wellnesshotel-zurbriggen.ch)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/h-mattmark-x.webp",
+   "fm": "../../assets/img/h-mattmark-l.webp",
+   "fs": "../../assets/img/h-mattmark-s.webp"
+  },
+  {
+   "k": "h-kapelle",
+   "t": {
+    "de": "Eine Kapelle zwischen Lärchen im Herbst"
+   },
+   "b": "saastal",
+   "s": "sommer",
+   "f": "quer",
+   "w": 1024,
+   "h": 683,
+   "art": "haus",
+   "q": "Bildergalerie der Website des Hauses (wellnesshotel-zurbriggen.ch)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/h-kapelle-x.webp",
+   "fm": "../../assets/img/h-kapelle-l.webp",
+   "fs": "../../assets/img/h-kapelle-s.webp"
+  },
+  {
+   "k": "w-touren",
+   "t": {
+    "de": "Zu zweit auf Tour im Schnee"
+   },
+   "b": "saastal",
+   "s": "winter",
+   "f": "quer",
+   "w": 1024,
+   "h": 683,
+   "art": "haus",
+   "q": "Bildergalerie der Website des Hauses (wellnesshotel-zurbriggen.ch)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/w-touren-x.webp",
+   "fm": "../../assets/img/w-touren-l.webp",
+   "fs": "../../assets/img/w-touren-s.webp"
+  },
+  {
+   "k": "w-bahn",
+   "t": {
+    "de": "Die Bergstation über dem Schnee"
+   },
+   "b": "saastal",
+   "s": "winter",
+   "f": "quer",
+   "w": 1140,
+   "h": 400,
+   "art": "haus",
+   "q": "Bildergalerie der Website des Hauses (wellnesshotel-zurbriggen.ch)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/w-bahn-x.webp",
+   "fm": "../../assets/img/w-bahn-l.webp",
+   "fs": "../../assets/img/w-bahn-s.webp"
+  },
+  {
+   "k": "w-mond",
+   "t": {
+    "de": "Die Bergstation in einer Mondnacht"
+   },
+   "b": "saastal",
+   "s": "winter",
+   "f": "quer",
+   "w": 1140,
+   "h": 400,
+   "art": "haus",
+   "q": "Website des Hauses (wellnesshotel-zurbriggen.ch), abgerufen am 18. Oktober 2026",
+   "u": "https://www.wellnesshotel-zurbriggen.ch/de/sport-saastal/winter/eislaufen-natureisbahn/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/w-mond-x.webp",
+   "fm": "../../assets/img/w-mond-l.webp",
+   "fs": "../../assets/img/w-mond-s.webp"
+  },
+  {
+   "k": "h-tal",
+   "t": {
+    "de": "Das Saastal im Herbst"
+   },
+   "b": "saastal",
+   "s": "sommer",
+   "f": "quer",
+   "w": 640,
+   "h": 417,
+   "art": "haus",
+   "q": "Instagram des Hauses (@hotelpirminzurbriggen), Beitrag vom 15. September 2026",
+   "u": "https://www.instagram.com/hotelpirminzurbriggen/p/DdTehe1vsBK/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/h-tal-x.webp",
+   "fm": "../../assets/img/h-tal-l.webp",
+   "fs": "../../assets/img/h-tal-s.webp"
+  },
+  {
+   "k": "h-turm-1",
+   "t": {
+    "de": "Der Spa-Turm aus Glas, im Spiegel der Wald"
+   },
+   "b": "haus",
+   "s": "jahr",
+   "f": "quer",
+   "w": 1000,
+   "h": 563,
+   "art": "haus",
+   "q": "Bildergalerie der Website des Hauses (wellnesshotel-zurbriggen.ch)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/h-turm-1-x.webp",
+   "fm": "../../assets/img/h-turm-1-l.webp",
+   "fs": "../../assets/img/h-turm-1-s.webp"
+  },
+  {
+   "k": "h-winter",
+   "t": {
+    "de": "Das Haus in der Winternacht, alle Fenster erleuchtet"
+   },
+   "b": "haus",
+   "s": "winter",
+   "f": "quer",
+   "w": 3000,
+   "h": 2001,
+   "art": "haus",
+   "q": "Website des Hauses (wellnesshotel-zurbriggen.ch), abgerufen am 18. Oktober 2026",
+   "u": "https://www.wellnesshotel-zurbriggen.ch/de/wohnen-buchen/pauschalen-fuer-singels-und-paare/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/h-winter-x.webp",
+   "fm": "../../assets/img/h-winter-l.webp",
+   "fs": "../../assets/img/h-winter-s.webp"
+  },
+  {
+   "k": "r-obst",
+   "t": {
+    "de": "Früchte auf dem Glastisch"
+   },
+   "b": "zimmer",
+   "s": "jahr",
+   "f": "quer",
+   "w": 1302,
+   "h": 869,
+   "art": "haus",
+   "q": "Bildergalerie der Website des Hauses (wellnesshotel-zurbriggen.ch)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/r-obst-x.webp",
+   "fm": "../../assets/img/r-obst-l.webp",
+   "fs": "../../assets/img/r-obst-s.webp"
+  },
+  {
+   "k": "r-kissen",
+   "t": {
+    "de": "Ein Kissen auf dem Bett"
+   },
+   "b": "zimmer",
+   "s": "jahr",
+   "f": "quer",
+   "w": 1292,
+   "h": 862,
+   "art": "haus",
+   "q": "Bildergalerie der Website des Hauses (wellnesshotel-zurbriggen.ch)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/r-kissen-x.webp",
+   "fm": "../../assets/img/r-kissen-l.webp",
+   "fs": "../../assets/img/r-kissen-s.webp"
+  },
+  {
+   "k": "r-zapfen",
+   "t": {
+    "de": "Arvenzapfen auf Fell"
+   },
+   "b": "zimmer",
+   "s": "jahr",
+   "f": "quer",
+   "w": 1504,
+   "h": 1004,
+   "art": "haus",
+   "q": "Bildergalerie der Website des Hauses (wellnesshotel-zurbriggen.ch)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/r-zapfen-x.webp",
+   "fm": "../../assets/img/r-zapfen-l.webp",
+   "fs": "../../assets/img/r-zapfen-s.webp"
+  },
+  {
+   "k": "g-kamin",
+   "t": {
+    "de": "Der Speisesaal am Abend mit Feuerstelle und Christbaum"
+   },
+   "b": "tisch",
+   "s": "winter",
+   "f": "quadrat",
+   "w": 1098,
+   "h": 1080,
+   "art": "haus",
+   "q": "Unterkunftsgalerie der Loft-Suite auf Booking.com",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/g-kamin-x.webp",
+   "fm": "../../assets/img/g-kamin-l.webp",
+   "fs": "../../assets/img/g-kamin-s.webp"
+  },
+  {
+   "k": "l-leuchter",
+   "t": {
+    "de": "Ein Kristallleuchter vor den Fenstern in der Nacht"
+   },
+   "b": "loft",
+   "s": "jahr",
+   "f": "quer",
+   "w": 4096,
+   "h": 2737,
+   "art": "haus",
+   "q": "Unterkunftsgalerie der Loft-Suite auf Booking.com. Mit KI auf 4K hochgerechnet, Farben korrigiert",
+   "u": "",
+   "ue": true,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/l-leuchter-x.webp",
+   "fm": "../../assets/img/l-leuchter-l.webp",
+   "fs": "../../assets/img/l-leuchter-s.webp"
+  },
+  {
+   "k": "l-milch",
+   "t": {
+    "de": "Die Milchstrasse über dem Stausee"
+   },
+   "b": "saastal",
+   "s": "jahr",
+   "f": "quer",
+   "w": 4096,
+   "h": 2737,
+   "art": "haus",
+   "q": "Unterkunftsgalerie der Loft-Suite auf Booking.com. Mit KI auf 4K hochgerechnet, Farben korrigiert",
+   "u": "",
+   "ue": true,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/l-milch-x.webp",
+   "fm": "../../assets/img/l-milch-l.webp",
+   "fs": "../../assets/img/l-milch-s.webp"
+  },
+  {
+   "k": "z-nice-bad",
+   "t": {
+    "de": "Nice Price: das Bad mit Dusche"
+   },
+   "b": "zimmer",
+   "s": "jahr",
+   "f": "quer",
+   "w": 3000,
+   "h": 2003,
+   "art": "haus",
+   "q": "Website des Hauses (wellnesshotel-zurbriggen.ch), abgerufen am 18. Oktober 2026",
+   "u": "https://www.wellnesshotel-zurbriggen.ch/de/wohnen-buchen/zimmer-und-preise/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/z-nice-bad-x.webp",
+   "fm": "../../assets/img/z-nice-bad-l.webp",
+   "fs": "../../assets/img/z-nice-bad-s.webp"
+  },
+  {
+   "k": "z-classic-bad",
+   "t": {
+    "de": "Wallis Classic mit Balkon: das Bad mit Dusche und WC"
+   },
+   "b": "zimmer",
+   "s": "jahr",
+   "f": "quer",
+   "w": 3000,
+   "h": 2003,
+   "art": "haus",
+   "q": "Website des Hauses (wellnesshotel-zurbriggen.ch), abgerufen am 18. Oktober 2026",
+   "u": "https://www.wellnesshotel-zurbriggen.ch/de/wohnen-buchen/zimmer-und-preise/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/z-classic-bad-x.webp",
+   "fm": "../../assets/img/z-classic-bad-l.webp",
+   "fs": "../../assets/img/z-classic-bad-s.webp"
+  },
+  {
+   "k": "z-classic-bad-2",
+   "t": {
+    "de": "Wallis Classic mit Balkon: das Bad"
+   },
+   "b": "zimmer",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 3000,
+   "h": 4497,
+   "art": "haus",
+   "q": "Website des Hauses (wellnesshotel-zurbriggen.ch), abgerufen am 18. Oktober 2026",
+   "u": "https://www.wellnesshotel-zurbriggen.ch/de/wohnen-buchen/zimmer-und-preise/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/z-classic-bad-2-x.webp",
+   "fm": "../../assets/img/z-classic-bad-2-l.webp",
+   "fs": "../../assets/img/z-classic-bad-2-s.webp"
+  },
+  {
+   "k": "z-modern-bad",
+   "t": {
+    "de": "Wallis Modern ohne Balkon: das Bad hinter der Glaswand mit dem Z"
+   },
+   "b": "zimmer",
+   "s": "jahr",
+   "f": "quer",
+   "w": 3000,
+   "h": 2003,
+   "art": "haus",
+   "q": "Website des Hauses (wellnesshotel-zurbriggen.ch), abgerufen am 18. Oktober 2026",
+   "u": "https://www.wellnesshotel-zurbriggen.ch/de/wohnen-buchen/zimmer-und-preise/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/z-modern-bad-x.webp",
+   "fm": "../../assets/img/z-modern-bad-l.webp",
+   "fs": "../../assets/img/z-modern-bad-s.webp"
+  },
+  {
+   "k": "z-fam-bad",
+   "t": {
+    "de": "Familienzimmer Wallis: das Bad mit zwei Waschbecken"
+   },
+   "b": "zimmer",
+   "s": "jahr",
+   "f": "quer",
+   "w": 3000,
+   "h": 2005,
+   "art": "haus",
+   "q": "Website des Hauses (wellnesshotel-zurbriggen.ch), abgerufen am 18. Oktober 2026",
+   "u": "https://www.wellnesshotel-zurbriggen.ch/de/wohnen-buchen/zimmer-und-preise/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/z-fam-bad-x.webp",
+   "fm": "../../assets/img/z-fam-bad-l.webp",
+   "fs": "../../assets/img/z-fam-bad-s.webp"
+  },
+  {
+   "k": "z-suite-bad",
+   "t": {
+    "de": "Suite: die Dusche mit Glaswand"
+   },
+   "b": "zimmer",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1044,
+   "h": 1691,
+   "art": "haus",
+   "q": "Zimmerseite der Website des Hauses, Ausschnitt aus dem zusammengesetzten Foto",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/z-suite-bad-x.webp",
+   "fm": "../../assets/img/z-suite-bad-l.webp",
+   "fs": "../../assets/img/z-suite-bad-s.webp"
+  },
+  {
+   "k": "z-suite-r",
+   "t": {
+    "de": "Suite: die freistehende Badewanne im Zimmer"
+   },
+   "b": "zimmer",
+   "s": "jahr",
+   "f": "quer",
+   "w": 1785,
+   "h": 1691,
+   "art": "haus",
+   "q": "Zimmerseite der Website des Hauses, Ausschnitt aus dem zusammengesetzten Foto",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/z-suite-r-x.webp",
+   "fm": "../../assets/img/z-suite-r-l.webp",
+   "fs": "../../assets/img/z-suite-r-s.webp"
+  },
+  {
+   "k": "sp-wanne",
+   "t": {
+    "de": "Ein Bad in der freistehenden Wanne"
+   },
+   "b": "spa",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 945,
+   "h": 1418,
+   "art": "haus",
+   "q": "Bildergalerie der Website des Hauses (wellnesshotel-zurbriggen.ch)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/sp-wanne-x.webp",
+   "fm": "../../assets/img/sp-wanne-l.webp",
+   "fs": "../../assets/img/sp-wanne-s.webp"
+  },
+  {
+   "k": "loft-whirlpool",
+   "t": {
+    "de": "Der private Whirlpool unter der Galerie, davor Kerzen auf dem Tisch"
+   },
+   "b": "loft",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 3291,
+   "h": 4096,
+   "art": "haus",
+   "q": "Website der Loft-Suite (loftsuite.ch). Mit KI auf 4K hochgerechnet, Farben korrigiert",
+   "u": "",
+   "ue": true,
+   "alt": false,
+   "vn": true,
+   "fl": "../../assets/img/loft-whirlpool-x.webp",
+   "fm": "../../assets/img/loft-whirlpool-l.webp",
+   "fs": "../../assets/img/loft-whirlpool-s.webp"
+  },
+  {
+   "k": "loft-sauna",
+   "t": {
+    "de": "Die private Sauna hinter Glas"
+   },
+   "b": "loft",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 3291,
+   "h": 4096,
+   "art": "haus",
+   "q": "Website der Loft-Suite (loftsuite.ch). Mit KI auf 4K hochgerechnet, Farben korrigiert",
+   "u": "",
+   "ue": true,
+   "alt": false,
+   "vn": true,
+   "fl": "../../assets/img/loft-sauna-x.webp",
+   "fm": "../../assets/img/loft-sauna-l.webp",
+   "fs": "../../assets/img/loft-sauna-s.webp"
+  },
+  {
+   "k": "loft-treppe",
+   "t": {
+    "de": "Die Holztreppe zwischen den beiden Etagen"
+   },
+   "b": "loft",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 2160,
+   "h": 5204,
+   "art": "haus",
+   "q": "Website der Loft-Suite (loftsuite.ch). Mit KI auf 4K hochgerechnet, Farben korrigiert",
+   "u": "",
+   "ue": true,
+   "alt": false,
+   "vn": true,
+   "fl": "../../assets/img/loft-treppe-x.webp",
+   "fm": "../../assets/img/loft-treppe-l.webp",
+   "fs": "../../assets/img/loft-treppe-s.webp"
+  },
+  {
+   "k": "loft-bett-nah",
+   "t": {
+    "de": "Das Kingsize-Bett auf der Galerie, davor eine Leuchte"
+   },
+   "b": "loft",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 3291,
+   "h": 4096,
+   "art": "haus",
+   "q": "Website der Loft-Suite (loftsuite.ch). Mit KI auf 4K hochgerechnet, Farben korrigiert",
+   "u": "",
+   "ue": true,
+   "alt": false,
+   "vn": true,
+   "fl": "../../assets/img/loft-bett-nah-x.webp",
+   "fm": "../../assets/img/loft-bett-nah-l.webp",
+   "fs": "../../assets/img/loft-bett-nah-s.webp"
+  },
+  {
+   "k": "loft-galerie-band",
+   "t": {
+    "de": "Die Galerie hinter dem Geländer, darauf das Bett"
+   },
+   "b": "loft",
+   "s": "jahr",
+   "f": "quer",
+   "w": 5843,
+   "h": 2160,
+   "art": "haus",
+   "q": "Website der Loft-Suite (loftsuite.ch). Mit KI auf 4K hochgerechnet, Farben korrigiert",
+   "u": "",
+   "ue": true,
+   "alt": false,
+   "vn": true,
+   "fl": "../../assets/img/loft-galerie-band-x.webp",
+   "fm": "../../assets/img/loft-galerie-band-l.webp",
+   "fs": "../../assets/img/loft-galerie-band-s.webp"
+  },
+  {
+   "k": "loft-kronleuchter",
+   "t": {
+    "de": "Der Kristallleuchter im hohen Raum"
+   },
+   "b": "loft",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 2337,
+   "h": 4096,
+   "art": "haus",
+   "q": "Website der Loft-Suite (loftsuite.ch). Mit KI auf 4K hochgerechnet, Farben korrigiert",
+   "u": "",
+   "ue": true,
+   "alt": false,
+   "vn": true,
+   "fl": "../../assets/img/loft-kronleuchter-x.webp",
+   "fm": "../../assets/img/loft-kronleuchter-l.webp",
+   "fs": "../../assets/img/loft-kronleuchter-s.webp"
+  },
+  {
+   "k": "loft-kerzen",
+   "t": {
+    "de": "Kerzen auf dem Tisch vor dem Whirlpool"
+   },
+   "b": "loft",
+   "s": "jahr",
+   "f": "quer",
+   "w": 4096,
+   "h": 3185,
+   "art": "haus",
+   "q": "Website der Loft-Suite (loftsuite.ch). Mit KI auf 4K hochgerechnet, Farben korrigiert",
+   "u": "",
+   "ue": true,
+   "alt": false,
+   "vn": true,
+   "fl": "../../assets/img/loft-kerzen-x.webp",
+   "fm": "../../assets/img/loft-kerzen-l.webp",
+   "fs": "../../assets/img/loft-kerzen-s.webp"
+  },
+  {
+   "k": "loft-unten-band",
+   "t": {
+    "de": "Der Wohnbereich unten: Sofa, Whirlpool, Sauna und Treppe"
+   },
+   "b": "loft",
+   "s": "jahr",
+   "f": "quer",
+   "w": 2760,
+   "h": 1081,
+   "art": "haus",
+   "q": "Website der Loft-Suite (loftsuite.ch), Ausschnitt",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/loft-unten-band-x.webp",
+   "fm": "../../assets/img/loft-unten-band-l.webp",
+   "fs": "../../assets/img/loft-unten-band-s.webp"
+  },
+  {
+   "k": "loft-dachfenster",
+   "t": {
+    "de": "Das Dachfenster zwischen den Holzbalken über der Galerie"
+   },
+   "b": "loft",
+   "s": "jahr",
+   "f": "quer",
+   "w": 1740,
+   "h": 757,
+   "art": "haus",
+   "q": "Website der Loft-Suite (loftsuite.ch), Ausschnitt",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/loft-dachfenster-x.webp",
+   "fm": "../../assets/img/loft-dachfenster-l.webp",
+   "fs": "../../assets/img/loft-dachfenster-s.webp"
+  },
+  {
+   "k": "sp-flieder",
+   "t": {
+    "de": "Ein Gast riecht im Garten am blühenden Flieder, dahinter die Berge"
+   },
+   "b": "spa",
+   "s": "sommer",
+   "f": "quer",
+   "w": 3000,
+   "h": 1998,
+   "art": "haus",
+   "q": "Website des Hauses (wellnesshotel-zurbriggen.ch), abgerufen am 18. Oktober 2026",
+   "u": "https://www.wellnesshotel-zurbriggen.ch/de/sport-saastal/winter/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/img/sp-flieder-x.webp",
+   "fm": "../../assets/img/sp-flieder-l.webp",
+   "fs": "../../assets/img/sp-flieder-s.webp"
+  }
+ ],
+ "dateien": [
+  {
+   "k": "zeichen",
+   "var": [
+    {
+     "k": "messing",
+     "grund": "dunkel",
+     "dateien": [
+      "zurbriggen-saas-almagell-zeichen-messing.svg",
+      "zurbriggen-saas-almagell-zeichen-messing.png"
+     ],
+     "px": [
+      1200,
+      1349
+     ]
+    },
+    {
+     "k": "weiss",
+     "grund": "dunkel",
+     "dateien": [
+      "zurbriggen-saas-almagell-zeichen-weiss.svg",
+      "zurbriggen-saas-almagell-zeichen-weiss.png"
+     ],
+     "px": [
+      1200,
+      1349
+     ]
+    },
+    {
+     "k": "nachtblau",
+     "grund": "hell",
+     "dateien": [
+      "zurbriggen-saas-almagell-zeichen-nachtblau.svg",
+      "zurbriggen-saas-almagell-zeichen-nachtblau.png"
+     ],
+     "px": [
+      1200,
+      1349
+     ]
+    },
+    {
+     "k": "schoko",
+     "grund": "hell",
+     "dateien": [
+      "zurbriggen-saas-almagell-zeichen-schoko.svg",
+      "zurbriggen-saas-almagell-zeichen-schoko.png"
+     ],
+     "px": [
+      1200,
+      1349
+     ]
+    }
+   ]
+  },
+  {
+   "k": "titel",
+   "var": [
+    {
+     "k": "messing",
+     "grund": "dunkel",
+     "dateien": [
+      "zurbriggen-saas-almagell-titel-messing.svg",
+      "zurbriggen-saas-almagell-titel-messing.png"
+     ],
+     "px": [
+      1600,
+      1941
+     ]
+    },
+    {
+     "k": "weiss",
+     "grund": "dunkel",
+     "dateien": [
+      "zurbriggen-saas-almagell-titel-weiss.svg",
+      "zurbriggen-saas-almagell-titel-weiss.png"
+     ],
+     "px": [
+      1600,
+      1941
+     ]
+    },
+    {
+     "k": "schoko",
+     "grund": "hell",
+     "dateien": [
+      "zurbriggen-saas-almagell-titel-schoko.svg",
+      "zurbriggen-saas-almagell-titel-schoko.png"
+     ],
+     "px": [
+      1600,
+      1941
+     ]
+    }
+   ]
+  },
+  {
+   "k": "namen",
+   "var": [
+    {
+     "k": "messing",
+     "grund": "dunkel",
+     "dateien": [
+      "zurbriggen-saas-almagell-namen-messing.svg",
+      "zurbriggen-saas-almagell-namen-messing.png"
+     ],
+     "px": [
+      1600,
+      509
+     ]
+    },
+    {
+     "k": "weiss",
+     "grund": "dunkel",
+     "dateien": [
+      "zurbriggen-saas-almagell-namen-weiss.svg",
+      "zurbriggen-saas-almagell-namen-weiss.png"
+     ],
+     "px": [
+      1600,
+      509
+     ]
+    },
+    {
+     "k": "schoko",
+     "grund": "hell",
+     "dateien": [
+      "zurbriggen-saas-almagell-namen-schoko.svg",
+      "zurbriggen-saas-almagell-namen-schoko.png"
+     ],
+     "px": [
+      1600,
+      509
+     ]
+    }
+   ]
+  },
+  {
+   "k": "lifestyle",
+   "var": [
+    {
+     "k": "messing",
+     "grund": "dunkel",
+     "dateien": [
+      "zurbriggen-saas-almagell-lifestyle-messing.svg",
+      "zurbriggen-saas-almagell-lifestyle-messing.png"
+     ],
+     "px": [
+      1600,
+      612
+     ]
+    },
+    {
+     "k": "weiss",
+     "grund": "dunkel",
+     "dateien": [
+      "zurbriggen-saas-almagell-lifestyle-weiss.svg",
+      "zurbriggen-saas-almagell-lifestyle-weiss.png"
+     ],
+     "px": [
+      1600,
+      612
+     ]
+    },
+    {
+     "k": "schoko",
+     "grund": "hell",
+     "dateien": [
+      "zurbriggen-saas-almagell-lifestyle-schoko.svg",
+      "zurbriggen-saas-almagell-lifestyle-schoko.png"
+     ],
+     "px": [
+      1600,
+      612
+     ]
+    }
+   ]
+  },
+  {
+   "k": "sterne",
+   "var": [
+    {
+     "k": "hotel-messing",
+     "grund": "dunkel",
+     "dateien": [
+      "zurbriggen-saas-almagell-sterne-hotel-messing.svg",
+      "zurbriggen-saas-almagell-sterne-hotel-messing.png"
+     ],
+     "px": [
+      1200,
+      171
+     ]
+    },
+    {
+     "k": "hotel-schoko",
+     "grund": "hell",
+     "dateien": [
+      "zurbriggen-saas-almagell-sterne-hotel-schoko.svg",
+      "zurbriggen-saas-almagell-sterne-hotel-schoko.png"
+     ],
+     "px": [
+      1200,
+      171
+     ]
+    },
+    {
+     "k": "loftsuite-messing",
+     "grund": "dunkel",
+     "dateien": [
+      "zurbriggen-saas-almagell-sterne-loftsuite-messing.svg",
+      "zurbriggen-saas-almagell-sterne-loftsuite-messing.png"
+     ],
+     "px": [
+      1200,
+      167
+     ]
+    },
+    {
+     "k": "loftsuite-schoko",
+     "grund": "hell",
+     "dateien": [
+      "zurbriggen-saas-almagell-sterne-loftsuite-schoko.svg",
+      "zurbriggen-saas-almagell-sterne-loftsuite-schoko.png"
+     ],
+     "px": [
+      1200,
+      167
+     ]
+    }
+   ]
+  },
+  {
+   "k": "einladung",
+   "var": [
+    {
+     "k": "naeher",
+     "grund": "dunkel",
+     "dateien": [
+      "zurbriggen-saas-almagell-einladung-naeher-messing.png",
+      "zurbriggen-saas-almagell-einladung-naeher-hell.png"
+     ],
+     "satz": "kommen Sie näher …",
+     "px": [
+      1762,
+      212
+     ]
+    },
+    {
+     "k": "eintreten",
+     "grund": "dunkel",
+     "dateien": [
+      "zurbriggen-saas-almagell-einladung-eintreten-messing.png",
+      "zurbriggen-saas-almagell-einladung-eintreten-hell.png"
+     ],
+     "satz": "treten Sie ein …",
+     "px": [
+      1415,
+      204
+     ]
+    },
+    {
+     "k": "tisch",
+     "grund": "dunkel",
+     "dateien": [
+      "zurbriggen-saas-almagell-einladung-tisch-messing.png",
+      "zurbriggen-saas-almagell-einladung-tisch-hell.png"
+     ],
+     "satz": "setzen Sie sich …",
+     "px": [
+      1523,
+      224
+     ]
+    },
+    {
+     "k": "ruhe",
+     "grund": "dunkel",
+     "dateien": [
+      "zurbriggen-saas-almagell-einladung-ruhe-messing.png",
+      "zurbriggen-saas-almagell-einladung-ruhe-hell.png"
+     ],
+     "satz": "entspannen Sie sich …",
+     "px": [
+      1896,
+      246
+     ]
+    },
+    {
+     "k": "zimmer",
+     "grund": "dunkel",
+     "dateien": [
+      "zurbriggen-saas-almagell-einladung-zimmer-messing.png",
+      "zurbriggen-saas-almagell-einladung-zimmer-hell.png"
+     ],
+     "satz": "schlafen Sie sich aus …",
+     "px": [
+      2044,
+      237
+     ]
+    },
+    {
+     "k": "winter",
+     "grund": "dunkel",
+     "dateien": [
+      "zurbriggen-saas-almagell-einladung-winter-messing.png",
+      "zurbriggen-saas-almagell-einladung-winter-hell.png"
+     ],
+     "satz": "folgen Sie uns …",
+     "px": [
+      1523,
+      243
+     ]
+    }
+   ]
+  },
+  {
+   "k": "heute",
+   "var": [
+    {
+     "k": "heute-hotel",
+     "grund": "dunkel",
+     "dateien": [
+      "zurbriggen-saas-almagell-logo-heute-hotel.png"
+     ],
+     "px": [
+      219,
+      119
+     ]
+    },
+    {
+     "k": "heute-loft",
+     "grund": "dunkel",
+     "dateien": [
+      "zurbriggen-saas-almagell-logo-heute-loft.png"
+     ],
+     "px": [
+      265,
+      134
+     ]
+    }
+   ]
+  },
+  {
+   "k": "tapete",
+   "var": [
+    {
+     "k": "dunkel",
+     "grund": "dunkel",
+     "dateien": [
+      "zurbriggen-saas-almagell-tapete-dunkel.png",
+      "zurbriggen-saas-almagell-tapete-dunkel.svg",
+      "zurbriggen-saas-almagell-tapete-dunkel.webp"
+     ],
+     "farbe": "#0A1129",
+     "px": [
+      1440,
+      1440
+     ]
+    },
+    {
+     "k": "hell",
+     "grund": "hell",
+     "dateien": [
+      "zurbriggen-saas-almagell-tapete-hell.png",
+      "zurbriggen-saas-almagell-tapete-hell.svg",
+      "zurbriggen-saas-almagell-tapete-hell.webp"
+     ],
+     "farbe": "#EEE8DE",
+     "px": [
+      1440,
+      1440
+     ]
+    }
+   ]
+  },
+  {
+   "k": "farben",
+   "var": [
+    {
+     "k": "alle",
+     "grund": "hell",
+     "dateien": [
+      "zurbriggen-saas-almagell-farben.css",
+      "zurbriggen-saas-almagell-farben.json",
+      "zurbriggen-saas-almagell-farben.ase"
+     ]
+    }
+   ]
+  },
+  {
+   "k": "schriften",
+   "var": [
+    {
+     "k": "alle",
+     "grund": "hell",
+     "dateien": [
+      "zurbriggen-saas-almagell-schriften.zip"
+     ]
+    }
+   ]
+  }
+ ],
+ "farben": [
+  {
+   "k": "nachtblau",
+   "n": "Nachtblau",
+   "h": "#0A1129",
+   "rgb": [
+    10,
+    17,
+    41
+   ],
+   "r": "der Winterabend: Grund der dunklen Flächen",
+   "g": "nacht",
+   "woher": "Wert der Website (rest-ideen.css)"
+  },
+  {
+   "k": "nachtblau-2",
+   "n": "Nachtblau zwei",
+   "h": "#0E1638",
+   "rgb": [
+    14,
+    22,
+    56
+   ],
+   "r": "zweite dunkle Fläche, Platte auf Nachtblau",
+   "g": "nacht",
+   "woher": "Wert der Website (rest-ideen.css)"
+  },
+  {
+   "k": "tinte",
+   "n": "Tinte",
+   "h": "#18213F",
+   "rgb": [
+    24,
+    33,
+    63
+   ],
+   "r": "Titel und Lesetext auf Papier, nie reines Schwarz",
+   "g": "raum",
+   "woher": "Wert der Website (rest-ideen.css)"
+  },
+  {
+   "k": "tinte-leise",
+   "n": "Tinte leise",
+   "h": "#4A536B",
+   "rgb": [
+    74,
+    83,
+    107
+   ],
+   "r": "kleine Zeilen und Nebentext auf Papier",
+   "g": "raum",
+   "woher": "Wert der Website (rest-ideen.css)"
+  },
+  {
+   "k": "papier",
+   "n": "Papier",
+   "h": "#F6F1EA",
+   "rgb": [
+    246,
+    241,
+    234
+   ],
+   "r": "Grund der hellen Seiten, warm, nie reines Weiss",
+   "g": "raum",
+   "woher": "Wert der Website (rest-ideen.css)"
+  },
+  {
+   "k": "leinen",
+   "n": "Leinen",
+   "h": "#EEE8DE",
+   "rgb": [
+    238,
+    232,
+    222
+   ],
+   "r": "Fläche auf Papier, Kachel im hellen Kapitel",
+   "g": "raum",
+   "woher": "Wert der Website (rest-ideen.css)"
+  },
+  {
+   "k": "schnee",
+   "n": "Schnee",
+   "h": "#EDF1F5",
+   "rgb": [
+    237,
+    241,
+    245
+   ],
+   "r": "kühles Hell für den Winter und das Saastal",
+   "g": "raum",
+   "woher": "Wert der Website (rest-ideen.css)"
+  },
+  {
+   "k": "messing",
+   "n": "Messing",
+   "h": "#D9B758",
+   "rgb": [
+    217,
+    183,
+    88
+   ],
+   "r": "Akzent: Haarlinie, Etikett, Knauf, Zeichen auf Nachtblau",
+   "g": "messing",
+   "woher": "Wert der Website (rest-ideen.css)"
+  },
+  {
+   "k": "messing-hell",
+   "n": "Messing hell",
+   "h": "#E9D49A",
+   "rgb": [
+    233,
+    212,
+    154
+   ],
+   "r": "Glanz im Messing, Schrift-Akzent auf Nachtblau",
+   "g": "messing",
+   "woher": "Wert der Website (rest-ideen.css)"
+  },
+  {
+   "k": "messing-tief",
+   "n": "Messing tief",
+   "h": "#8A6A2A",
+   "rgb": [
+    138,
+    106,
+    42
+   ],
+   "r": "Etikett und Zeichen auf Papier, wo Messing zu hell steht",
+   "g": "messing",
+   "woher": "Wert der Website (startseite2.css)"
+  },
+  {
+   "k": "schokolade",
+   "n": "Schokolade",
+   "h": "#22180F",
+   "rgb": [
+    34,
+    24,
+    15
+   ],
+   "r": "nur für die Loft-Suite und die Angebote",
+   "g": "loft",
+   "woher": "Wert der Website (rest-ideen.css)"
+  }
+ ],
+ "gruppen": [
+  {
+   "k": "nacht",
+   "n": "Der Winterabend",
+   "s": "Das Nachtblau des Winterabends vor dem Haus, wenn die Fenster des Pavillons leuchten. Es trägt die dunklen Flächen; darauf wird in Papier geschrieben und in Messing betont.",
+   "bild": "../../assets/img/winternacht-l.webp",
+   "bild_t": "Das Haus in einer Winternacht, alle Fenster erleuchtet: daraus kommt das Nachtblau."
+  },
+  {
+   "k": "raum",
+   "n": "Papier, Leinen, Schnee",
+   "s": "Die hellen Räume: Papier als Grund, Leinen als Fläche darauf, Schnee für den Winter und das Saastal. Geschrieben wird in Tinte, einem tiefen Blau, nie in reinem Schwarz.",
+   "bild": "listen/farbe-hell.webp",
+   "bild_t": "So stehen Papier und Tinte auf der Website."
+  },
+  {
+   "k": "messing",
+   "n": "Messing",
+   "s": "Das Messing der Kaminhaube in der Lounge: Haarlinie, Etikett, Knauf und das Zeichen. Nie als grosse Fläche, nie zwei Flächen in Messing nebeneinander.",
+   "bild": "../../assets/img/kamin-l.webp",
+   "bild_t": "Der offene Kamin vor der Wand aus Holzscheiben: aus seinem Licht kommt das Messing."
+  },
+  {
+   "k": "loft",
+   "n": "Die Loft-Suite",
+   "s": "Schokolade gehört der Loft-Suite und den Angeboten, wie das Holz unter der Galerie. Sonst steht sie nirgends.",
+   "bild": "../../assets/img/loft-etagen-l.webp",
+   "bild_t": "Die Loft-Suite über zwei Etagen: das Holz, aus dem die Schokolade kommt."
+  }
+ ],
+ "glanz": [],
+ "groessen": {
+  "zurbriggen-saas-almagell-einladung-eintreten-hell.png": 19689,
+  "zurbriggen-saas-almagell-einladung-eintreten-messing.png": 19976,
+  "zurbriggen-saas-almagell-einladung-naeher-hell.png": 27948,
+  "zurbriggen-saas-almagell-einladung-naeher-messing.png": 28147,
+  "zurbriggen-saas-almagell-einladung-ruhe-hell.png": 28294,
+  "zurbriggen-saas-almagell-einladung-ruhe-messing.png": 28404,
+  "zurbriggen-saas-almagell-einladung-tisch-hell.png": 22932,
+  "zurbriggen-saas-almagell-einladung-tisch-messing.png": 23097,
+  "zurbriggen-saas-almagell-einladung-winter-hell.png": 23199,
+  "zurbriggen-saas-almagell-einladung-winter-messing.png": 23396,
+  "zurbriggen-saas-almagell-einladung-zimmer-hell.png": 31920,
+  "zurbriggen-saas-almagell-einladung-zimmer-messing.png": 32396,
+  "zurbriggen-saas-almagell-farben.ase": 516,
+  "zurbriggen-saas-almagell-farben.css": 1067,
+  "zurbriggen-saas-almagell-farben.json": 2384,
+  "zurbriggen-saas-almagell-lifestyle-messing.png": 85903,
+  "zurbriggen-saas-almagell-lifestyle-messing.svg": 36819,
+  "zurbriggen-saas-almagell-lifestyle-schoko.png": 85797,
+  "zurbriggen-saas-almagell-lifestyle-schoko.svg": 36819,
+  "zurbriggen-saas-almagell-lifestyle-weiss.png": 64014,
+  "zurbriggen-saas-almagell-lifestyle-weiss.svg": 36819,
+  "zurbriggen-saas-almagell-logo-heute-hotel.png": 15780,
+  "zurbriggen-saas-almagell-logo-heute-loft.png": 17541,
+  "zurbriggen-saas-almagell-marke.zip": 1648112,
+  "zurbriggen-saas-almagell-namen-messing.png": 49210,
+  "zurbriggen-saas-almagell-namen-messing.svg": 22381,
+  "zurbriggen-saas-almagell-namen-schoko.png": 49096,
+  "zurbriggen-saas-almagell-namen-schoko.svg": 22381,
+  "zurbriggen-saas-almagell-namen-weiss.png": 37075,
+  "zurbriggen-saas-almagell-namen-weiss.svg": 22381,
+  "zurbriggen-saas-almagell-schriften.zip": 172808,
+  "zurbriggen-saas-almagell-sterne-hotel-messing.png": 17108,
+  "zurbriggen-saas-almagell-sterne-hotel-messing.svg": 17508,
+  "zurbriggen-saas-almagell-sterne-hotel-schoko.png": 16978,
+  "zurbriggen-saas-almagell-sterne-hotel-schoko.svg": 17508,
+  "zurbriggen-saas-almagell-sterne-loftsuite-messing.png": 15079,
+  "zurbriggen-saas-almagell-sterne-loftsuite-messing.svg": 17461,
+  "zurbriggen-saas-almagell-sterne-loftsuite-schoko.png": 15039,
+  "zurbriggen-saas-almagell-sterne-loftsuite-schoko.svg": 17461,
+  "zurbriggen-saas-almagell-tapete-dunkel.png": 43542,
+  "zurbriggen-saas-almagell-tapete-dunkel.svg": 5234,
+  "zurbriggen-saas-almagell-tapete-dunkel.webp": 28506,
+  "zurbriggen-saas-almagell-tapete-hell.png": 41041,
+  "zurbriggen-saas-almagell-tapete-hell.svg": 5216,
+  "zurbriggen-saas-almagell-tapete-hell.webp": 21886,
+  "zurbriggen-saas-almagell-titel-messing.png": 88025,
+  "zurbriggen-saas-almagell-titel-messing.svg": 30026,
+  "zurbriggen-saas-almagell-titel-schoko.png": 88219,
+  "zurbriggen-saas-almagell-titel-schoko.svg": 30026,
+  "zurbriggen-saas-almagell-titel-weiss.png": 67255,
+  "zurbriggen-saas-almagell-titel-weiss.svg": 30026,
+  "zurbriggen-saas-almagell-zeichen-messing.png": 85165,
+  "zurbriggen-saas-almagell-zeichen-messing.svg": 8008,
+  "zurbriggen-saas-almagell-zeichen-nachtblau.png": 82643,
+  "zurbriggen-saas-almagell-zeichen-nachtblau.svg": 8008,
+  "zurbriggen-saas-almagell-zeichen-schoko.png": 85111,
+  "zurbriggen-saas-almagell-zeichen-schoko.svg": 8008,
+  "zurbriggen-saas-almagell-zeichen-weiss.png": 60931,
+  "zurbriggen-saas-almagell-zeichen-weiss.svg": 8008
+ },
+ "bereiche": [
+  "haus",
+  "raeume",
+  "zimmer",
+  "loft",
+  "spa",
+  "tisch",
+  "kinder",
+  "saastal",
+  "gastgeber"
+ ],
+ "schriften": [
+  {
+   "k": "t",
+   "n": "Montserrat",
+   "d": "montserrat-300-latin.woff2",
+   "r": "Titel",
+   "e": "Leicht 300 und Regular 400, nie fett, nie kursiv",
+   "p": "Für jeden Stern eine Weltcupkugel.",
+   "w": 300,
+   "bild": "listen/schrift-t.webp"
+  },
+  {
+   "k": "s",
+   "n": "Instrument Sans",
+   "d": "InstrumentSans-normal-400_600.woff2",
+   "r": "Lesetext",
+   "e": "400, 17 px, Zeilenabstand 1,55",
+   "p": "Wohnen im Wellnesshotel Pirmin Zurbriggen und sich wohlfühlen wie zu Hause.",
+   "w": 400,
+   "bild": "listen/schrift-s.webp"
+  },
+  {
+   "k": "e",
+   "n": "DM Mono",
+   "d": "DMMono-normal-400.woff2",
+   "r": "Etiketten und kleine Zeilen",
+   "e": "400, 12 px, Versalien, 0,24 em gesperrt",
+   "p": "SAAS-ALMAGELL · SAASTAL · WALLIS",
+   "w": 400,
+   "bild": "listen/schrift-e.webp"
+  },
+  {
+   "k": "z",
+   "n": "DM Mono",
+   "d": "DMMono-normal-400.woff2",
+   "r": "Zahlen, Masse, Preise",
+   "e": "gleich breite Ziffern, wie die Zahlen des Spa auf der Website",
+   "p": "1.100 m² · 29 °C · 35 °C",
+   "w": 400,
+   "bild": "listen/schrift-z.webp"
+  }
+ ],
+ "namen": {
+  "zentrale": "Kontrollpanel",
+  "website": "Website bearbeiten",
+  "karten": "Karten & Preislisten",
+  "gaeste": "Anfragen & Chat",
+  "marke": "Das Markenbuch",
+  "besuche": "Besucher",
+  "druck": "Drucksachen & Feed"
+ },
+ "zusammen": {
+  "r-7": "scheiben-wohnen",
+  "saal-fest": "a-zweit",
+  "kam-haus": "haus-lift",
+  "h-vorne": "haus-weit",
+  "haus-berg": "haus-lift",
+  "n-weg": "laerchenweg",
+  "j-lounge": "lounge",
+  "g-mappe": "tisch-z",
+  "sp-ruhe": "ruheraum",
+  "sp-ruhe-2": "ruheraum",
+  "sauna-holz": "holzsauna",
+  "z-nice": "raum-arve",
+  "z-fam-wohnen": "raum-wohnen",
+  "z-classic": "raum-hell",
+  "loft-galerie": "loft-etagen",
+  "loft-oben": "loft-bett",
+  "z-fam45": "burg",
+  "g-saal": "a-zweit",
+  "n-haus": "haus-front",
+  "g-glaeser": "sekt",
+  "z-classic-3": "r-2",
+  "z-modern": "r-5",
+  "z-classic-2": "r-6",
+  "g-buffet": "dessertbuffet",
+  "r-wohnen": "z-fam45-2",
+  "r-scheiben": "z-fam75",
+  "h-turm-2": "h-spiegel",
+  "h-gold": "h-laerchen"
+ },
+ "ton": {
+  "eigene_worte": [
+   "kommen Sie näher …",
+   "treten Sie ein …",
+   "setzen Sie sich …",
+   "entspannen Sie sich …",
+   "schlafen Sie sich aus …",
+   "folgen Sie uns …",
+   "Für jeden Stern eine Weltcupkugel."
+  ],
+  "nicht": [
+   "du",
+   "Ausrufezeichen und «Jetzt buchen!»",
+   "Rabatt- und Schnäppchensprache",
+   "Masse, Abfertigung, Stückzahlen als Pointe",
+   "Superlative ohne Beleg",
+   "Requisiten-Wörter wie «Wellness-Tempel»"
+  ]
+ },
+ "stand": {
+  "fotos": 170,
+  "haus": 170,
+  "frei": 0,
+  "ki": 0,
+  "fremd": 0,
+  "partner": 0,
+  "ue": 12,
+  "vn": 8,
+  "original": 167,
+  "dateien": 59,
+  "datum": "08.11.2026"
+ }
+}

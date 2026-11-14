@@ -1,0 +1,29 @@
+/* Wellness & Spa · Kopf der Zimmerseite (Robert 26.10.2026: Fassung 1 «Wie die Startseite» aus _varianten/zimmerhero3, mit mehr Schatten hinter der Schrift
+   und einem schärferen Foto). Vollbild am Abend, Sterne und Krone, Titel mittig, Buchungsleiste; beim Laden fährt alles hoch. */
+.hx{--rk:clamp(14px,1.4vw,22px);position:relative;min-height:100svh;padding:0!important;overflow:hidden;background:#140F0A;color:#F4F2EC;display:block}
+.hx figure{margin:0;position:relative;overflow:hidden}
+.hx figure img{display:block;width:100%;height:100%;object-fit:cover}
+.hx-bild{position:absolute!important;inset:0}
+.hx-bild img{transform:scale(1.1);transition:transform 2.6s cubic-bezier(.2,.7,.2,1)}
+.hx.da .hx-bild img{transform:none}
+.hx-schleier{position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 46% 27% at 50% 52%,rgba(18,12,6,.7),rgba(18,12,6,.42) 52%,rgba(18,12,6,0) 86%),radial-gradient(ellipse 90% 85% at 50% 50%,rgba(18,12,6,0) 48%,rgba(18,12,6,.5) 100%),linear-gradient(180deg,rgba(18,12,6,.55) 0,rgba(18,12,6,.2) 22%,rgba(18,12,6,.2) 64%,rgba(18,12,6,.68) 100%)}
+.hx .rl{max-width:38ch;color:rgba(244,242,236,.85)}
+.hx .r-knoepfe{margin-top:28px;display:flex;gap:12px;flex-wrap:wrap}
+
+/* Titel, Sterne, Unterzeile: fährt hoch wie auf der Startseite */
+.hx-titel{text-shadow:0 1px 2px rgba(0,0,0,.25),0 6px 30px rgba(0,0,0,.45);margin:0;font-family:var(--licht);font-weight:400;font-size:clamp(46px,6vw,104px);line-height:1.02;letter-spacing:-.025em}
+.hx-z{display:block;overflow:hidden;padding-bottom:.06em}
+.hx-z>span{display:inline-block;transform:translateY(105%);transition:transform 1.5s var(--e1) .25s}
+.hx-z+.hx-z>span{transition-delay:.4s}
+.hx.da .hx-z>span{transform:none}
+.hx-sterne{display:flex;justify-content:center;align-items:center;gap:10px;margin:0 0 22px;transform:translateY(20px);transition:transform 1.2s var(--e1) .1s}
+.hx.da .hx-sterne{transform:none}
+.hx-sterne img{width:16px;height:16px;filter:drop-shadow(0 1px 6px rgba(0,0,0,.55))}.hx-sterne .hx-krone{width:22px;height:18px;margin-left:4px}
+.hx-unter{color:#F6ECD6!important;text-shadow:0 1px 2px rgba(20,12,4,.8),0 0 14px rgba(20,12,4,.7),0 0 30px rgba(20,12,4,.5);margin:18px 0 0;font-family:var(--mono);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:#E9D49A}
+.hx .rbar{margin:34px auto 0}
+
+/* Positionen */
+.hx-mitte{position:relative;z-index:3;min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:120px var(--rand,60px) 80px}
+.hx-mitte .r-knoepfe{justify-content:center}
+.hx-mitte--hoch{padding-bottom:180px}
+

@@ -1,0 +1,563 @@
+<!doctype html><html lang="de"><head><script data-wurzel>/* Wurzel-Weiche: Seite laeuft an der Wurzel einer Adresse oder in einem Unterordner (github.io/<repo>/) */(function(){var D=0,p=location.pathname.split('/');p.splice(p.length-1-D,D+1);var W=p.join('/')+'/';window.__W=W;if(W==='/')return;var O=location.origin;
+function f(u){if(typeof u!=='string')return u;if(u.indexOf(O+'/')===0)return O+f(u.slice(O.length));if(u.charAt(0)!=='/'||u.charAt(1)==='/'||u.indexOf(W)===0||u+'/'===W)return u;return W+u.slice(1)}
+function s(v){return typeof v!=='string'?v:v.replace(/(^|,)(\s*)(\S+)/g,function(m,a,b,u){return a+b+f(u)})}
+function c(v){return typeof v!=='string'?v:v.replace(/url\(\s*(['"]?)([^'")]+)/g,function(m,q,u){return 'url('+q+f(u)})}
+function h(v){return typeof v!=='string'?v:c(v.replace(/(\s(?:src|href|poster|action|data-src|data-href)\s*=\s*)(["'])([^"']*)\2/gi,function(m,a,q,u){return a+q+f(u)+q}).replace(/(\s(?:srcset|imagesrcset|data-srcset)\s*=\s*)(["'])([^"']*)\2/gi,function(m,a,q,u){return a+q+s(u)+q}))}
+function d(K,k,g){K=window[K];if(!K)return;var x=Object.getOwnPropertyDescriptor(K.prototype,k);if(!x||!x.set)return;Object.defineProperty(K.prototype,k,{configurable:true,enumerable:x.enumerable,get:x.get,set:function(v){x.set.call(this,g(v))}})}
+[['HTMLImageElement','src'],['HTMLScriptElement','src'],['HTMLLinkElement','href'],['HTMLIFrameElement','src'],['HTMLSourceElement','src'],['HTMLMediaElement','src'],['HTMLVideoElement','poster'],['HTMLAnchorElement','href'],['HTMLAreaElement','href'],['HTMLFormElement','action'],['HTMLEmbedElement','src'],['HTMLObjectElement','data']].forEach(function(z){d(z[0],z[1],f)});
+[['HTMLImageElement','srcset'],['HTMLSourceElement','srcset'],['HTMLLinkElement','imageSrcset']].forEach(function(z){d(z[0],z[1],s)});
+d('Element','innerHTML',h);d('Element','outerHTML',h);var iah=Element.prototype.insertAdjacentHTML;Element.prototype.insertAdjacentHTML=function(w,v){return iah.call(this,w,h(v))};
+var sa=Element.prototype.setAttribute;Element.prototype.setAttribute=function(n,v){var l=String(n).toLowerCase();if(/^(src|href|poster|action|data|data-src|data-href)$/.test(l))v=f(v);else if(/srcset$/.test(l))v=s(v);else if(l==='style')v=c(v);return sa.call(this,n,v)};
+var st=CSSStyleDeclaration.prototype,sp=st.setProperty;st.setProperty=function(n,v,q){return sp.call(this,n,c(v),q)};['background','backgroundImage','cssText','maskImage','webkitMaskImage','listStyleImage','borderImageSource','content'].forEach(function(k){var x=Object.getOwnPropertyDescriptor(st,k);if(x&&x.set)Object.defineProperty(st,k,{configurable:true,enumerable:x.enumerable,get:x.get,set:function(v){x.set.call(this,c(v))}})});
+var F=window.fetch;if(F)window.fetch=function(i,o){if(typeof i==='string')i=f(i);else if(i instanceof URL)i=f(i.href);return F.call(this,i,o)};
+var XO=XMLHttpRequest.prototype.open;XMLHttpRequest.prototype.open=function(){var a=[].slice.call(arguments);a[1]=f(a[1] instanceof URL?a[1].href:a[1]);return XO.apply(this,a)};
+if(navigator.sendBeacon){var B=navigator.sendBeacon;navigator.sendBeacon=function(u,x){return B.call(navigator,f(u),x)}}
+var wo=window.open;window.open=function(u){var a=[].slice.call(arguments);a[0]=f(u);return wo.apply(window,a)};
+var dw=document.write,dl=document.writeln;document.write=function(){return dw.apply(document,[].map.call(arguments,h))};document.writeln=function(){return dl.apply(document,[].map.call(arguments,h))};
+['pushState','replaceState'].forEach(function(k){var o=history[k];history[k]=function(a,b,u){return o.call(history,a,b,u==null?u:f(String(u)))}});
+function e(el){if(!el||el.nodeType!==1)return;['src','href','poster','action'].forEach(function(a){var v=el.getAttribute(a);if(v&&v.charAt(0)==='/'){var z=f(v);if(z!==v)sa.call(el,a,z)}});var t=el.getAttribute('srcset');if(t&&/(^|,)\s*\/[^\/]/.test(t)){var z=s(t);if(z!==t)sa.call(el,'srcset',z)}t=el.getAttribute('style');if(t&&/url\(\s*['"]?\/[^\/]/.test(t)){z=c(t);if(z!==t)sa.call(el,'style',z)}}
+new MutationObserver(function(ms){ms.forEach(function(m){if(m.type==='attributes')e(m.target);else m.addedNodes.forEach(function(n){if(n.nodeType!==1)return;e(n);var l=n.querySelectorAll('[src],[href],[srcset],[poster],[action],[style]');for(var i=0;i<l.length;i++)e(l[i])})})}).observe(document.documentElement,{childList:true,subtree:true,attributes:true,attributeFilter:['src','href','srcset','poster','action','style']})})();</script><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Anreise · 30 neue Entwürfe</title><meta name="robots" content="noindex,nofollow"><link rel="icon" href="assets/zeichen/z-messing.svg" type="image/svg+xml">
+<style>@font-face{font-family:'Montserrat';font-weight:300;font-display:block;src:url(assets/fonts/montserrat-300-latin.woff2) format('woff2')}
+@font-face{font-family:'Montserrat';font-weight:400;font-display:block;src:url(assets/fonts/montserrat-400-latin.woff2) format('woff2')}
+@font-face{font-family:'DM Mono';font-weight:400;font-display:block;src:url(assets/fonts/DMMono-normal-400.woff2) format('woff2')}
+:root{--n0:#0B1026;--n1:#0E1638;--n2:#0A1129;--n3:#111A3E;--ms:#D9B758;--msh:#E9D49A;--hl:#E8ECF6;--licht:'Montserrat',system-ui,sans-serif;--mono:'DM Mono',ui-monospace,monospace;
+--rand:clamp(20px,4.6vw,76px);--rund:clamp(26px,3vw,44px);--rund-m:clamp(18px,2vw,28px);--rk:clamp(14px,1.4vw,22px);--e1:cubic-bezier(.16,1,.3,1);
+--sch:0 1px 0 rgba(255,255,255,.06) inset,0 42px 70px -38px rgba(0,0,0,.75),0 10px 22px -14px rgba(0,0,0,.45);--sh:0 2px 30px rgba(5,10,40,.6)}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--n0)}
+body{color:#fff;font:300 17px/1.6 var(--licht);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;width:100%;height:100%;object-fit:cover}
+a{color:inherit}
+button{font:inherit;color:inherit}
+.ro{font-family:var(--mono);font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--msh)}
+.w2{font-family:var(--mono);font-size:max(12px,.9vw);letter-spacing:.42em;text-transform:uppercase;color:var(--msh)}
+.rt{font-family:var(--licht);font-weight:400;font-size:clamp(40px,5vw,86px);line-height:1.04;letter-spacing:-.025em;color:#fff}
+.rt.m{font-size:clamp(34px,3.4vw,58px)}
+.sh{text-shadow:var(--sh)}
+.rl{font-size:clamp(17px,1.4vw,21px);line-height:1.55;color:var(--hl)}
+.p{font-size:16px;line-height:1.6;color:var(--hl)}
+.sl{display:block;overflow:hidden;padding:0 .08em .12em}
+.sl>span{display:inline-block;transform:translateY(110%);transition:transform 1.4s var(--e1)}
+.da .sl>span{transform:none}
+.wst{display:flex;gap:clamp(10px,1.4vw,20px);align-items:flex-end;color:var(--msh);filter:drop-shadow(0 2px 14px rgba(233,212,154,.35))}
+.wst svg{width:clamp(14px,1.4vw,22px);height:clamp(14px,1.4vw,22px)} .wst .kr{width:clamp(19px,1.9vw,30px);height:clamp(12px,1.2vw,19px)}
+.zg{color:var(--msh);filter:drop-shadow(0 0 18px rgba(233,212,154,.4))} .zg svg{display:block;width:100%;height:auto}
+.platte{background:rgba(9,14,36,.84);box-shadow:inset 0 0 0 1px rgba(233,212,154,.32),inset 0 1px 0 rgba(255,255,255,.1),0 24px 50px -20px rgba(0,0,0,.6);border-radius:var(--rk)}
+.k{display:inline-flex;align-items:center;gap:14px;height:52px;padding:0 6px 0 22px;border-radius:999px;text-decoration:none;white-space:nowrap;border:0;cursor:pointer;
+ background:linear-gradient(180deg,#FFFDF8,#EDE6D6);color:#253338;font-family:var(--mono);font-size:11px;letter-spacing:.22em;text-transform:uppercase;
+ box-shadow:inset 0 1px 0 #fff,inset 0 -2px 0 rgba(0,0,0,.12),0 4px 14px rgba(0,0,0,.3)}
+.k em{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(180deg,#34444A,#1B262A)}
+.k svg{width:14px;height:14px;stroke:#F4F2EC;fill:none;stroke-width:1.4}
+.k.dk{color:#F4F2EC;background:linear-gradient(180deg,#1E2A55,#0E1638);box-shadow:inset 0 1px 0 rgba(255,255,255,.14),inset 0 0 0 1px rgba(217,183,88,.35)}
+.k.dk em{background:linear-gradient(180deg,#F1E2B4,#C9A54E)} .k.dk svg{stroke:#1B2440}
+.voll{position:absolute;inset:0}
+.dk-o::after{content:'';position:absolute;inset:0;background:rgba(5,9,28,.45);pointer-events:none}
+.mlinie{height:1px;background:linear-gradient(90deg,#C9A54E,#F1E2B4)}
+.wahl{all:unset;cursor:pointer}
+.wahl:focus-visible,.k:focus-visible{outline:2px solid var(--msh);outline-offset:3px}
+
+/* Seite */
+.seitenkopf{display:grid;justify-items:center;gap:20px;text-align:center;padding:110px var(--rand) 60px;max-width:980px;margin:0 auto}
+.seitenkopf .rl{max-width:46em}
+.idx{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:0 30px;padding:20px var(--rand) 70px}
+.idx a{display:flex;gap:14px;padding:12px 0;border-top:1px solid rgba(233,212,154,.18);color:var(--hl);text-decoration:none;font-size:14.5px}
+.idx a span{font-family:var(--mono);font-size:11px;color:var(--msh);padding-top:3px}
+.idx h4{grid-column:1/-1;font-family:var(--mono);font-size:10.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--msh);font-weight:400;padding:26px 0 6px}
+.meta{background:var(--n2);padding:30px var(--rand) 26px;display:grid;grid-template-columns:70px 1.1fr 1fr;gap:8px 40px;border-top:1px solid rgba(233,212,154,.14)}
+.meta .nr{font-family:var(--mono);font-size:12px;letter-spacing:.2em;color:var(--msh);padding-top:10px}
+.meta h3{font-weight:400;font-size:26px;letter-spacing:-.015em;line-height:1.2}
+.meta h3 small{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:var(--msh);margin-bottom:6px;font-weight:400}
+.meta p{font-size:14.5px;color:rgba(232,236,246,.75);margin-top:6px;max-width:44em}
+.meta dl{display:grid;grid-template-columns:96px 1fr;gap:6px 14px;font-size:13px;color:rgba(232,236,246,.7)}
+.meta dt{font-family:var(--mono);font-size:9.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--msh);padding-top:3px}
+.fuss{padding:70px var(--rand);font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:rgba(233,212,154,.5)}
+section.v{position:relative;overflow:hidden}
+section.v.lang{overflow:visible}
+.kl{position:sticky;top:0;height:100vh;overflow:hidden}
+
+/* 01 Horizontale Reise */
+.n01{height:420vh}
+.n01 .spur{position:absolute;top:0;left:0;height:100%;display:flex;width:400vw;transform:translateX(calc(var(--p,0) * -300vw));will-change:transform}
+.n01 .tafel{width:100vw;height:100%;position:relative;flex:none}
+.n01 .tafel .txt{position:absolute;left:var(--rand);bottom:16%;max-width:560px;display:grid;gap:12px}
+.n01 .tafel.typo{background:var(--n1);display:grid;place-items:center}
+.n01 .tafel.typo b{font-weight:300;font-size:clamp(60px,8vw,140px);letter-spacing:-.04em;line-height:.95;text-align:center}
+.n01 .oben{position:absolute;left:var(--rand);top:7%;z-index:3}
+.n01 .weg{position:absolute;left:var(--rand);right:var(--rand);bottom:7%;z-index:3;height:1px;background:rgba(233,212,154,.25)}
+.n01 .weg i{position:absolute;inset:0;background:var(--msh);transform-origin:0 50%;transform:scaleX(var(--p,0))}
+
+/* 02 Ziffernrolle */
+.n02{height:330vh}
+.n02 .kl{display:grid;grid-template-columns:1.1fr 1fr}
+.n02 .links{display:grid;align-content:center;padding:0 var(--rand);gap:26px;background:var(--n1)}
+.n02 .rolle{height:clamp(110px,13vw,220px);overflow:hidden}
+.n02 .rolle div{transition:transform .9s var(--e1)}
+.n02 .rolle b{display:block;height:clamp(110px,13vw,220px);font-weight:300;font-size:clamp(100px,12.5vw,210px);line-height:1;letter-spacing:-.05em;color:var(--msh)}
+.n02[data-s="1"] .rolle div{transform:translateY(-33.333%)} .n02[data-s="2"] .rolle div{transform:translateY(-66.666%)}
+.n02 .zeile{display:grid}.n02 .zeile p{grid-area:1/1;opacity:0;transition:opacity .6s}.n02[data-s="0"] .zeile p:nth-child(1),.n02[data-s="1"] .zeile p:nth-child(2),.n02[data-s="2"] .zeile p:nth-child(3){opacity:1}
+.n02 .rechts{position:relative}
+.n02 .rechts img{position:absolute;inset:0;opacity:0;transition:opacity .9s}
+.n02[data-s="0"] .rechts img:nth-child(1),.n02[data-s="1"] .rechts img:nth-child(2),.n02[data-s="2"] .rechts img:nth-child(3){opacity:1}
+
+/* 03 Doppelbelichtung */
+.n03{height:100vh;min-height:700px;background:#05081a}
+.n03 .a{position:absolute;inset:0;filter:brightness(.5)}
+.n03 .b{position:absolute;inset:0;mix-blend-mode:screen;opacity:.55;filter:brightness(.8);transform:scale(1.08);transition:transform 3s var(--e1)}
+.n03.da .b{transform:none}
+.n03 .mitte{position:absolute;inset:0;display:grid;place-content:center;justify-items:center;gap:20px;text-align:center;padding:0 var(--rand)}
+.n03 .drei{display:flex;gap:40px;margin-top:20px}
+.n03 .drei div{display:grid;gap:4px}.n03 .drei b{font-weight:300;font-size:30px}
+
+/* 04 Vorhang */
+.n04{height:240vh}
+.n04 .bild{position:absolute;inset:0}
+.n04 .vh{position:absolute;top:0;bottom:0;width:50%;background:var(--n1);display:flex;align-items:center;z-index:2;box-shadow:inset 0 0 0 1px rgba(233,212,154,.15)}
+.n04 .vh.l{left:0;justify-content:flex-end;padding-right:1.2vw;transform:translateX(calc(var(--p,0) * -100%))}
+.n04 .vh.r{right:0;justify-content:flex-start;padding-left:1.2vw;transform:translateX(calc(var(--p,0) * 100%))}
+.n04 .vh .rt{white-space:nowrap}
+.n04 .vh.l::after,.n04 .vh.r::before{content:'';position:absolute;top:0;bottom:0;width:1px;background:var(--ms)}
+.n04 .vh.l::after{right:0}.n04 .vh.r::before{left:0}
+.n04 .innen{position:absolute;left:50%;bottom:9%;transform:translateX(-50%);width:min(860px,92vw);padding:26px 32px;display:grid;grid-template-columns:repeat(3,1fr);gap:28px;opacity:clamp(0,calc((var(--p,0) - .55) * 3),1)}
+.n04 .innen b{display:block;font-weight:300;font-size:26px;margin:4px 0}
+
+/* 05 Ihr Plan */
+.n05{display:grid;grid-template-columns:1fr 1.05fr;min-height:100vh;background:var(--n1)}
+.n05 .l{padding:clamp(80px,9vw,140px) var(--rand);display:grid;align-content:center;gap:28px}
+.n05 .feld{display:inline-flex;align-items:center;gap:6px;padding:6px;border-radius:999px}
+.n05 .feld .wahl{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;color:var(--msh);font-size:20px}
+.n05 .feld .wahl:hover{background:rgba(233,212,154,.1)}
+.n05 .feld div{display:grid;gap:2px;padding:0 14px;min-width:190px;text-align:center}
+.n05 .feld b{font-weight:400;font-size:16px}
+.n05 .felder{display:flex;gap:12px;flex-wrap:wrap}
+.n05 .plan{display:grid;gap:0;border-top:1px solid rgba(233,212,154,.25)}
+.n05 .plan div{display:grid;grid-template-columns:210px 1fr;gap:20px;padding:18px 0;border-bottom:1px solid rgba(233,212,154,.25)}
+.n05 .plan b{font-weight:400;font-size:19px;color:#fff}
+.n05 .plan span.ro{display:block;margin-top:4px}
+.n05 .r{position:relative;margin:24px 24px 24px 0;border-radius:var(--rund);overflow:hidden}
+
+/* 06 Von wo */
+.n06{min-height:100vh}
+.n06 .in{position:relative;padding:clamp(90px,10vw,150px) var(--rand);display:grid;gap:34px;max-width:1300px}
+.n06 .orte{display:flex;flex-wrap:wrap;gap:4px 30px}
+.n06 .orte .wahl{font-weight:300;font-size:clamp(30px,3.6vw,60px);letter-spacing:-.02em;color:rgba(255,255,255,.38);transition:color .4s;padding-bottom:4px;border-bottom:1px solid transparent}
+.n06 .orte .wahl[aria-selected="true"]{color:#fff;border-color:var(--ms)}
+.n06 .aus{display:grid;grid-template-columns:repeat(3,1fr);gap:0;padding:8px 0}
+.n06 .aus div{padding:14px 28px 14px 0;border-top:1px solid rgba(233,212,154,.3)}
+.n06 .aus b{display:block;font-weight:300;font-size:clamp(26px,2.4vw,40px);margin:6px 0}
+
+/* 07 Koffer ziehen */
+.n07{height:100vh;min-height:720px}
+.n07 .bs img{position:absolute;inset:0;opacity:0;transition:opacity .7s}
+.n07 .bs img.an{opacity:1}
+.n07 .oben{position:absolute;left:0;right:0;top:10%;display:grid;justify-items:center;gap:14px;text-align:center}
+.n07 .unten{position:absolute;left:var(--rand);right:var(--rand);bottom:8%;display:grid;gap:22px}
+.n07 .halte{display:flex;justify-content:space-between}
+.n07 .halte span{font-family:var(--mono);font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:rgba(233,212,154,.6);transition:color .3s}
+.n07 .halte span.an{color:var(--msh)}
+.n07 input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:30px;background:transparent;cursor:grab}
+.n07 input[type=range]::-webkit-slider-runnable-track{height:1px;background:linear-gradient(90deg,#C9A54E,#F1E2B4)}
+.n07 input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:54px;height:54px;margin-top:-27px;border-radius:50%;background:linear-gradient(180deg,#F1E2B4,#C9A54E) center/26px no-repeat;box-shadow:0 6px 18px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.6)}
+.n07 input[type=range]::-moz-range-thumb{width:54px;height:54px;border-radius:50%;border:0;background:linear-gradient(180deg,#F1E2B4,#C9A54E)}
+.n07 .txt{display:grid}.n07 .txt p{grid-area:1/1;opacity:0;transition:opacity .4s;max-width:42em;font-size:18px;text-shadow:0 1px 16px rgba(5,10,40,.9)}.n07 .txt p.an{opacity:1}
+
+/* 08 Karte umdrehen */
+.n08{padding:clamp(90px,10vw,150px) var(--rand);display:grid;justify-items:center;gap:40px;perspective:1800px}
+.n08 .karte{position:relative;width:min(980px,100%);aspect-ratio:16/9;transform-style:preserve-3d;transition:transform 1.2s var(--e1)}
+.n08 .karte.um{transform:rotateY(180deg)}
+.n08 .seite{position:absolute;inset:0;border-radius:var(--rund);overflow:hidden;-webkit-backface-visibility:hidden;backface-visibility:hidden;box-shadow:var(--sch)}
+.n08 .vorn .txt{position:absolute;left:40px;bottom:36px;display:grid;gap:10px}
+.n08 .hinten{transform:rotateY(180deg);background:linear-gradient(180deg,#16215A,#0E1638);box-shadow:inset 0 0 0 1px rgba(233,212,154,.32),var(--sch);padding:clamp(28px,4vw,60px);display:grid;grid-template-columns:1fr 1fr;gap:28px 50px;align-content:center}
+.n08 .hinten b{display:block;font-weight:300;font-size:clamp(24px,2.2vw,36px);margin:4px 0 6px}
+
+/* 09 Zeitschieber */
+.n09{height:100vh;min-height:720px}
+.n09 .bs img{position:absolute;inset:0;opacity:0;transition:opacity .8s}.n09 .bs img.an{opacity:1}
+.n09 .in{position:absolute;left:50%;bottom:8%;transform:translateX(-50%);width:min(980px,92vw);display:grid;gap:18px;padding:30px 36px}
+.n09 .kopfz{display:flex;justify-content:space-between;align-items:end;gap:20px}
+.n09 .zeit{font-weight:300;font-size:clamp(56px,6vw,96px);line-height:.9;letter-spacing:-.04em;color:var(--msh);font-variant-numeric:tabular-nums}
+.n09 .skala{position:relative;height:18px}
+.n09 .skala i{position:absolute;top:0;width:1px;height:12px;background:rgba(233,212,154,.5)}
+.n09 .skala span{position:absolute;top:14px;transform:translateX(-50%);font-family:var(--mono);font-size:10px;letter-spacing:.14em;color:var(--msh)}
+.n09 input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:30px;background:transparent;cursor:grab}
+.n09 input[type=range]::-webkit-slider-runnable-track{height:1px;background:rgba(233,212,154,.6)}
+.n09 input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;height:22px;margin-top:-11px;border-radius:50%;background:var(--msh);box-shadow:0 0 0 6px rgba(233,212,154,.18)}
+.n09 .txt{min-height:3.3em;font-size:17px}
+
+/* 10 Gespräch am Empfang */
+.n10{padding:clamp(100px,11vw,170px) var(--rand);background:var(--n1)}
+.n10 .kopfg{display:grid;gap:16px;justify-items:center;text-align:center;margin-bottom:clamp(50px,6vw,90px)}
+.n10 .q{display:grid;gap:6px;max-width:640px;margin:0 0 44px;transform:translateY(30px);transition:transform 1.2s var(--e1)}
+.n10 .q.da{transform:none}
+.n10 .q.gast{margin-left:auto;text-align:right}
+.n10 .q.gast b{font-weight:300;font-size:clamp(22px,2vw,30px);color:rgba(255,255,255,.62)}
+.n10 .q.haus b{font-weight:400;font-size:clamp(22px,2vw,30px);color:#fff}
+.n10 .wrap{max-width:1100px;margin:0 auto;position:relative}
+.n10 .wrap::before{content:'';position:absolute;left:50%;top:0;bottom:0;width:1px;background:rgba(233,212,154,.2)}
+
+/* 11 Bilder im Satz */
+.n11{padding:clamp(100px,11vw,170px) var(--rand)}
+.n11 h2{font-weight:400;font-size:clamp(52px,8.4vw,150px);line-height:1.08;letter-spacing:-.035em}
+.n11 h2 .bp{display:inline-block;height:.78em;width:1.9em;vertical-align:-.06em;border-radius:999px;overflow:hidden;transform:scaleX(0);transform-origin:0 50%;transition:transform 1.2s var(--e1)}
+.n11 h2 .bp.s{width:1.2em}
+.n11.da h2 .bp{transform:none}
+.n11 h2 .bp:nth-of-type(2){transition-delay:.25s}.n11 h2 .bp:nth-of-type(3){transition-delay:.5s}
+.n11 .drei{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-top:clamp(50px,6vw,90px)}
+.n11 .drei div{border-top:1px solid rgba(233,212,154,.3);padding-top:16px}
+.drei b{display:block;font-weight:300;font-size:clamp(24px,2.2vw,34px);margin:6px 0}
+
+/* 12 Laufband */
+.n12{padding:clamp(90px,10vw,140px) 0;background:var(--n1)}
+.n12 .band{overflow:hidden;white-space:nowrap;padding:10px 0}
+.n12 .band div{display:inline-block;animation:lauf 38s linear infinite}
+.n12 .band span{font-weight:300;font-size:clamp(60px,8vw,140px);letter-spacing:-.03em;padding-right:.4em}
+.n12 .band span i{font-style:normal;color:var(--msh)}
+@keyframes lauf{to{transform:translateX(-50%)}}
+.n12 .streifen{height:min(46vh,440px);margin:30px 0}
+.n12 .drei{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;padding:0 var(--rand)}
+.n12 .drei b{display:block;font-weight:300;font-size:32px;margin:6px 0}
+
+/* 13 Bild in der Schrift */
+.n13{padding:clamp(90px,10vw,150px) var(--rand);text-align:center}
+.n13 .zahl{font-weight:400;font-size:clamp(110px,17vw,300px);line-height:.86;letter-spacing:-.06em;-webkit-background-clip:text;background-clip:text;color:transparent;background-size:cover;background-position:50% calc(30% + var(--p,0) * 40%)}
+.n13 .paar{display:grid;grid-template-columns:1fr 1fr;gap:4vw;align-items:end;margin-top:30px}
+.n13 .paar div{display:grid;gap:12px;justify-items:center}
+
+/* 14 Brief */
+.n14{padding:clamp(100px,11vw,170px) var(--rand);display:grid;grid-template-columns:1.2fr .8fr;gap:clamp(40px,5vw,90px);align-items:center}
+.n14 .brief{background:var(--n3);border-radius:var(--rk);box-shadow:inset 0 0 0 1px rgba(233,212,154,.25),var(--sch);padding:clamp(36px,4.6vw,76px)}
+.n14 .brief .zg{width:56px;margin-bottom:30px}
+.n14 .brief p{font-size:clamp(18px,1.45vw,22px);line-height:1.7;color:var(--hl);margin-bottom:18px}
+.n14 .brief p span{display:inline;background:linear-gradient(transparent 92%,rgba(233,212,154,.0) 92%)}
+.n14 .brief .zeile{display:block;overflow:hidden}
+.n14 .brief .zeile>span{display:block;transform:translateY(105%);transition:transform 1s var(--e1)}
+.n14.da .brief .zeile>span{transform:none}
+.n14 .brief .zeile:nth-child(2)>span{transition-delay:.15s}.n14 .brief .zeile:nth-child(3)>span{transition-delay:.3s}.n14 .brief .zeile:nth-child(4)>span{transition-delay:.45s}.n14 .brief .zeile:nth-child(5)>span{transition-delay:.6s}.n14 .brief .zeile:nth-child(6)>span{transition-delay:.75s}
+.n14 .unterschrift{margin-top:30px;font-weight:400;font-size:20px}
+.n14 .foto{height:min(80vh,760px);border-radius:var(--rund);overflow:hidden;box-shadow:var(--sch)}
+
+/* 15 Das Zimmer im Haus */
+.n15{height:260vh}
+.n15 .aussen{position:absolute;inset:0}
+.n15 .fenster{position:absolute;left:44%;top:40%;width:12%;height:14%;border-radius:8px;overflow:hidden;box-shadow:0 0 0 2px var(--msh),0 0 40px rgba(233,212,154,.5);transform-origin:50% 50%;
+ transform:scale(calc(1 + var(--p,0) * var(--p,0) * 9))}
+.n15 .fenster img{transform:scale(calc(2.2 - var(--p,0) * 1.2))}
+.n15 .oben{position:absolute;left:0;right:0;top:9%;display:grid;justify-items:center;gap:14px;text-align:center;opacity:clamp(0,calc(1 - var(--p,0) * 3),1)}
+.n15 .ende{position:absolute;left:50%;bottom:9%;transform:translateX(-50%);width:min(820px,92vw);padding:26px 32px;opacity:clamp(0,calc((var(--p,0) - .75) * 5),1);display:grid;grid-template-columns:1fr 1fr 1fr;gap:26px}
+.n15 .ende b{display:block;font-weight:300;font-size:24px;margin:4px 0}
+
+/* 16 Gegenläufig */
+.n16{height:300vh}
+.n16 .kl{display:grid;grid-template-columns:1fr 1fr;gap:3vw;padding:0 var(--rand)}
+.n16 .sp{display:grid;gap:3vh;align-content:start}
+.n16 .sp.b{transform:translateY(calc(10vh - var(--p,0) * 200vh))}
+.n16 .sp.t{transform:translateY(calc(-180vh + var(--p,0) * 200vh))}
+.n16 .sp.b figure{height:80vh;border-radius:var(--rund-m);overflow:hidden}
+.n16 .sp.t>div{height:80vh;display:grid;align-content:center;gap:16px}
+.n16 .sp.t b{font-weight:300;font-size:clamp(40px,4.4vw,74px);letter-spacing:-.03em;line-height:1}
+
+/* 17 Klebendes Bild */
+.n17{display:grid;grid-template-columns:1.1fr 1fr}
+.n17 .bild{position:sticky;top:0;height:100vh}
+.n17 .bild img{position:absolute;inset:0;opacity:0;transition:opacity .9s}
+.n17 .bild img.an{opacity:1}
+.n17 .txt{padding:0 var(--rand)}
+.n17 .blk{min-height:100vh;display:grid;align-content:center;gap:16px;opacity:.28;transition:opacity .6s}
+.n17 .blk.an{opacity:1}
+.n17 .blk b{font-weight:300;font-size:clamp(40px,4.2vw,72px);letter-spacing:-.03em;line-height:1}
+
+/* 18 Die Tür */
+.n18{height:260vh}
+.n18 .kl{perspective:1600px}
+.n18 .tuer{position:absolute;top:0;bottom:0;width:50%;background:linear-gradient(180deg,#16215A,#0B1026);z-index:2;display:grid;place-items:center;box-shadow:inset 0 0 0 1px rgba(233,212,154,.3)}
+.n18 .tuer.l{left:0;transform-origin:0 50%;transform:rotateY(calc(var(--p,0) * 100deg))}
+.n18 .tuer.r{right:0;transform-origin:100% 50%;transform:rotateY(calc(var(--p,0) * -100deg))}
+.n18 .tuer.l::after{content:'';position:absolute;right:28px;top:46%;width:3px;height:110px;border-radius:2px;background:linear-gradient(180deg,#F1E2B4,#C9A54E)}
+.n18 .tuer.r::after{content:'';position:absolute;left:28px;top:46%;width:3px;height:110px;border-radius:2px;background:linear-gradient(180deg,#F1E2B4,#C9A54E)}
+.n18 .nahtz{position:absolute;left:50%;top:50%;width:min(300px,26vw);transform:translate(-50%,-50%);z-index:3;opacity:clamp(0,calc(1 - var(--p,0) * 5),1)}
+.n18 .schild{position:absolute;left:0;right:0;top:8%;z-index:3;display:grid;justify-items:center;gap:12px;opacity:clamp(0,calc(1 - var(--p,0) * 4),1)}
+.n18 .ende{position:absolute;left:var(--rand);bottom:9%;display:grid;gap:16px;max-width:620px;opacity:clamp(0,calc((var(--p,0) - .6) * 4),1)}
+
+/* 19 Lichtschalter */
+.n19{height:100vh;min-height:700px}
+.n19 .nacht{position:absolute;inset:0;background:#02040f;opacity:.9;transition:opacity 1.4s ease}
+.n19.hell .nacht{opacity:.25}
+.n19 .mitte{position:absolute;left:var(--rand);top:50%;transform:translateY(-50%);display:grid;gap:24px;max-width:560px}
+.n19 .schalter{all:unset;cursor:pointer;width:84px;height:150px;border-radius:16px;background:linear-gradient(180deg,#F7F2E6,#E2D8C2);box-shadow:inset 0 0 0 1px rgba(0,0,0,.08),0 12px 30px rgba(0,0,0,.5);position:relative;display:grid;place-items:center}
+.n19 .schalter i{width:38px;height:92px;border-radius:10px;background:linear-gradient(180deg,#FFFDF8,#E6DCC6);box-shadow:0 6px 0 #C9BFA8,0 8px 14px rgba(0,0,0,.25);transition:transform .35s var(--e1),box-shadow .35s}
+.n19.hell .schalter i{transform:translateY(6px) rotateX(18deg);box-shadow:0 -6px 0 #C9BFA8,0 2px 6px rgba(0,0,0,.25)}
+.n19 .schalter:focus-visible{outline:2px solid var(--msh);outline-offset:4px}
+.n19 .txt{opacity:.15;transition:opacity 1.2s ease .3s}
+.n19.hell .txt{opacity:1}
+
+/* 20 Was zu Hause bleiben darf */
+.n20{display:grid;grid-template-columns:1.25fr 1fr;min-height:100vh}
+.n20 .l{padding:clamp(90px,10vw,150px) var(--rand);display:grid;align-content:center;gap:26px}
+.n20 ul{list-style:none}
+.n20 li{position:relative;width:max-content;max-width:100%;font-weight:300;font-size:clamp(28px,3vw,50px);line-height:1.25;letter-spacing:-.02em;color:rgba(255,255,255,.55)}
+.n20 li::after{content:'';position:absolute;left:-4px;right:-4px;top:55%;height:2px;background:var(--ms);transform:scaleX(0);transform-origin:0 50%;transition:transform .8s var(--e1) calc(var(--n)*.18s + .4s)}
+.n20.da li::after{transform:none}
+.n20 .r{position:relative}
+
+/* 21 Diashow */
+.n21{height:100vh;min-height:700px}
+.n21 .dia img{position:absolute;inset:0;opacity:0;transform:scale(1.12);transition:opacity 1.6s ease,transform 7s linear}
+.n21 .dia img.an{opacity:1;transform:scale(1)}
+.n21 .balken{position:absolute;left:var(--rand);right:var(--rand);top:6%;display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.n21 .balken i{height:2px;background:rgba(233,212,154,.25);overflow:hidden;position:relative}
+.n21 .balken i b{position:absolute;inset:0;background:var(--msh);transform:scaleX(0);transform-origin:0 50%}
+.n21 .balken i.an b{animation:fuell 6s linear forwards}.n21 .balken i.voll b{transform:none}
+@keyframes fuell{to{transform:scaleX(1)}}
+.n21 .mitte{position:absolute;left:var(--rand);bottom:9%;display:grid;gap:14px;max-width:760px}
+.n21 .cap{display:grid}.n21 .cap p{grid-area:1/1;opacity:0;transition:opacity .8s;font-size:19px;text-shadow:0 1px 16px rgba(5,10,40,.9)}.n21 .cap p.an{opacity:1}
+
+/* 22 Vorher Nachher */
+.n22{height:100vh;min-height:700px;cursor:ew-resize;touch-action:pan-y;user-select:none}
+.n22 .unten{position:absolute;inset:0}
+.n22 .ob{position:absolute;inset:0;overflow:hidden;transform:translateX(calc(var(--x,50%) - 100%))}
+.n22 .ob .inner{position:absolute;inset:0;transform:translateX(calc(100% - var(--x,50%)));background:var(--n1);display:grid;align-content:center;padding:0 var(--rand)}
+.n22 .ob .inner div{max-width:36vw;display:grid;gap:16px}
+.n22 .griff{position:absolute;top:0;bottom:0;left:var(--x,50%);width:2px;margin-left:-1px;background:var(--msh)}
+.n22 .griff i{position:absolute;top:50%;left:50%;width:58px;height:58px;margin:-29px 0 0 -29px;border-radius:50%;background:linear-gradient(180deg,#F1E2B4,#C9A54E);box-shadow:0 6px 18px rgba(0,0,0,.45);display:grid;place-items:center;font-style:normal;color:#1B2440;font-size:18px}
+.n22 .rechts{position:absolute;right:var(--rand);bottom:9%;max-width:520px;display:grid;gap:12px;text-align:right;justify-items:end}
+
+/* 23 Karussell */
+.n23{padding:clamp(90px,10vw,150px) 0;display:grid;justify-items:center;gap:40px}
+.n23 .buehne3{perspective:1800px;width:100%;height:min(60vh,520px);display:grid;place-items:center}
+.n23 .ring{position:relative;width:min(460px,70vw);height:100%;transform-style:preserve-3d;transition:transform 1.2s var(--e1);transform:translateZ(calc(var(--r) * -1)) rotateY(var(--w,0deg))}
+.n23 .fl{position:absolute;inset:0;border-radius:var(--rk);overflow:hidden;-webkit-backface-visibility:hidden;backface-visibility:hidden;box-shadow:var(--sch);transition:opacity .8s}
+.n23 .buehne3{overflow:hidden}
+.n23 .fl .cap{position:absolute;left:14px;right:14px;bottom:14px;padding:16px 20px}
+.n23 .fl .cap b{display:block;font-weight:400;font-size:19px}
+.n23 .knoepfe{display:flex;gap:14px}
+
+/* 24 Gestapelte Karten */
+.n24{padding:clamp(90px,10vw,150px) var(--rand) 20vh}
+.n24 .kk{position:sticky;top:calc(12vh + var(--i) * 26px);height:70vh;margin-bottom:12vh;border-radius:var(--rund);overflow:hidden;box-shadow:0 -20px 60px rgba(0,0,0,.45);display:grid;grid-template-columns:1.2fr 1fr;background:var(--n1)}
+.n24 .kk .t{padding:clamp(30px,4vw,64px);display:grid;align-content:center;gap:14px;box-shadow:inset 0 1px 0 rgba(233,212,154,.3)}
+.n24 .kk b{font-weight:300;font-size:clamp(40px,4.4vw,74px);letter-spacing:-.03em;line-height:1}
+
+/* 25 Das Z als Fenster */
+.n25{height:280vh}
+.n25 .kl{background:var(--n1)}
+.n25 .maske{position:absolute;inset:0;-webkit-mask:url(assets/zeichen/z-weiss.svg) 50% 50%/34vmin no-repeat;mask:url(assets/zeichen/z-weiss.svg) 50% 50%/34vmin no-repeat;transform:scale(calc(1 + var(--p,0) * var(--p,0) * 28));transform-origin:50% 50%}
+.n25 .oben{position:absolute;left:0;right:0;top:8%;display:grid;justify-items:center;gap:12px;opacity:clamp(0,calc(1 - var(--p,0) * 3),1)}
+.n25 .ende{position:absolute;left:50%;bottom:9%;transform:translateX(-50%);width:min(820px,92vw);padding:26px 32px;opacity:clamp(0,calc((var(--p,0) - .7) * 5),1)}
+
+/* 26 Sternbild */
+.n26{height:100vh;min-height:720px}
+.n26 svg.linien{position:absolute;inset:0;width:100%;height:100%}
+.n26 .lin{stroke:rgba(233,212,154,.45);stroke-width:1;fill:none}
+.n26 .st-p{position:absolute;transform:translate(-50%,-50%);display:grid;justify-items:center;gap:8px}
+.n26 .st-p .wahl{width:52px;height:52px;display:grid;place-items:center;color:var(--msh);opacity:.5;transition:opacity .5s,filter .5s}
+.n26 .st-p .wahl svg{width:28px;height:28px}.n26 .st-p .wahl svg.kr{width:38px;height:24px}
+.n26 .st-p .wahl[aria-selected="true"]{opacity:1;filter:drop-shadow(0 0 14px rgba(233,212,154,.8))}
+.n26 .st-p span{font-family:var(--mono);font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--msh);text-shadow:0 1px 8px #000}
+.n26 .oben{position:absolute;left:var(--rand);top:9%;display:grid;gap:12px}
+.n26 .info{position:absolute;right:var(--rand);bottom:9%;width:min(480px,86vw);padding:26px 30px;display:grid}
+.n26 .info div{grid-area:1/1;opacity:0;transition:opacity .5s}.n26 .info div.an{opacity:1}
+.n26 .info b{display:block;font-weight:300;font-size:30px;margin:4px 0 6px}
+
+/* 27 Glasschichten */
+.n27{height:240vh}
+.n27 .schicht{position:absolute;width:min(440px,40vw);padding:28px 30px;display:grid;gap:8px}
+.n27 .schicht b{font-weight:300;font-size:clamp(28px,2.6vw,42px)}
+.n27 .s1{left:8vw;top:20%;transform:translateY(calc(30vh - var(--p,0) * 50vh))}
+.n27 .s2{left:36vw;top:36%;transform:translateY(calc(50vh - var(--p,0) * 90vh));z-index:2}
+.n27 .s3{right:7vw;top:50%;transform:translateY(calc(80vh - var(--p,0) * 130vh));z-index:3}
+.n27 .oben{position:absolute;left:var(--rand);top:7%;z-index:4}
+
+/* 28 Abspann */
+.n28{height:340vh}
+.n28 .kl::after{content:'';position:absolute;inset:0;background:rgba(3,6,20,.72)}
+.n28 .rolle{position:absolute;left:0;right:0;top:0;z-index:2;display:grid;justify-items:center;gap:46px;text-align:center;transform:translateY(calc(100vh - var(--p,0) * (100vh + 100%)))}
+.n28 .rolle .z{width:90px}
+.n28 .rolle div{display:grid;gap:8px}
+.n28 .rolle b{font-weight:300;font-size:clamp(24px,2.2vw,36px)}
+.n28 .rolle .gross{font-weight:400;font-size:clamp(44px,5vw,86px);letter-spacing:-.025em}
+
+/* 29 Der Abreisetag */
+.n29{padding:clamp(100px,11vw,170px) var(--rand);display:grid;gap:clamp(40px,5vw,70px)}
+.n29 .leiste{position:relative;height:1px;background:rgba(233,212,154,.25);margin-top:70px}
+.n29 .leiste .f{position:absolute;left:0;right:0;top:-4px;height:9px;border-radius:5px;background:linear-gradient(90deg,#C9A54E,#F1E2B4);transform:scaleX(0);transform-origin:0 50%;transition:transform 2.6s var(--e1) .4s}
+.n29.da .leiste .f{transform:none}
+.n29 .leiste span{position:absolute;bottom:20px;transform:translateX(-50%);display:grid;justify-items:center;gap:4px;white-space:nowrap}
+.n29 .leiste span b{font-weight:300;font-size:clamp(34px,3.4vw,58px);letter-spacing:-.03em;line-height:1}
+.n29 .bilder{display:grid;grid-template-columns:2fr 1fr 1fr;gap:10px;height:min(52vh,480px)}
+.n29 .bilder figure{border-radius:var(--rk);overflow:hidden}
+.n29 .unter{display:grid;grid-template-columns:1fr 1fr;gap:50px}
+
+/* 30 Prospekt */
+.n30{padding:clamp(90px,10vw,150px) var(--rand);display:grid;justify-items:center;gap:36px}
+.n30 .buch{position:relative;width:min(1100px,100%);aspect-ratio:2/1.15;perspective:2400px;display:grid;grid-template-columns:1fr 1fr}
+.n30 .links-s{border-radius:var(--rk) 0 0 var(--rk);overflow:hidden;position:relative}
+.n30 .links-s img{position:absolute;inset:0;opacity:0;transition:opacity .9s}.n30 .links-s img.an{opacity:1}
+.n30 .rechts-s{position:relative;transform-style:preserve-3d}
+.n30 .blatt{position:absolute;inset:0;transform-origin:0 50%;transform-style:preserve-3d;transition:transform 1.3s var(--e1)}
+.n30 .blatt.um{transform:rotateY(-180deg)}
+.n30 .blatt>div{position:absolute;inset:0;-webkit-backface-visibility:hidden;backface-visibility:hidden;background:linear-gradient(90deg,#0E1638,#16215A);box-shadow:inset 0 0 0 1px rgba(233,212,154,.22);border-radius:0 var(--rk) var(--rk) 0;padding:clamp(28px,4vw,64px);display:grid;align-content:center;gap:16px}
+.n30 .blatt>div.rueck{transform:rotateY(180deg);border-radius:var(--rk) 0 0 var(--rk);padding:0;overflow:hidden}
+.n30 .knoepfe{display:flex;gap:14px}
+
+@media(max-width:860px){
+ .meta{grid-template-columns:1fr}
+ .n02 .kl,.n05,.n14,.n17,.n20,.n24 .kk{grid-template-columns:1fr}
+ .n02 .rechts{height:40vh}.n05 .r{height:50vh;margin:0}.n14 .foto{height:50vh}
+ .n06 .aus,.n11 .drei,.n12 .drei,.n15 .ende,.n04 .innen,.n08 .hinten,.n13 .paar,.n29 .unter{grid-template-columns:1fr}
+ .n17 .bild{height:50vh;top:0;z-index:2}
+ .n16 .kl{grid-template-columns:1fr 1fr;gap:12px;padding:0 12px}.n16 .sp.t b{font-size:28px}
+ .n22 .ob .inner div{max-width:70vw}
+ .n27 .schicht{width:80vw;left:10vw!important;right:auto}
+ .n29 .bilder{grid-template-columns:1fr;height:auto}.n29 .bilder figure{height:30vh}
+ .n30 .buch{grid-template-columns:1fr;aspect-ratio:auto}.n30 .links-s{height:40vh;border-radius:var(--rk) var(--rk) 0 0}.n30 .rechts-s{height:60vh}
+ .n08 .karte{aspect-ratio:3/4}
+ .n10 .wrap::before{display:none}
+ .n24 .kk{height:auto;min-height:70vh}
+ .n05 .plan div{grid-template-columns:1fr;gap:4px}
+ .n08 .vorn .txt{left:20px;right:20px;bottom:22px}.n08 .vorn .rt{font-size:32px}.n08 .hinten{overflow:auto;padding:22px;gap:16px}.n08>div:last-child{flex-wrap:wrap;justify-content:center}
+ .n20 .l{min-width:0}.n20 li{width:auto;font-size:26px}
+ .n30 .knoepfe,.n23 .knoepfe{flex-wrap:wrap;justify-content:center}
+ .k{max-width:100%}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style></head><body><svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><symbol id="z" viewBox="265.40 38.70 65.40 59.50"><path d="M 301.648438 46.269531 C 302.550781 47.542969 303.324219 49.132812 303.011719 50.832031 C 304.117188 50.550781 305.125 49.558594 306.246094 49.0625 C 306.207031 49.109375 306.136719 49.207031 306.148438 49.289062 C 306.371094 49.34375 306.628906 49.09375 306.589844 48.800781 L 306.617188 49.007812 L 306.953125 48.964844 L 306.910156 48.671875 L 310.28125 46.671875 C 310.566406 47.183594 310.976562 46.488281 311.03125 46.269531 L 311.269531 46.445312 C 311.296875 46.0625 311.816406 45.816406 312.179688 45.679688 L 312.113281 45.816406 C 312.554688 45.925781 312.53125 45.164062 312.957031 45.488281 C 313.261719 45.230469 314.042969 44.441406 314.785156 44.59375 L 314.953125 44.273438 L 314.847656 44.414062 C 315.226562 44.40625 315.75 44.203125 316.089844 43.902344 C 316.171875 43.59375 316.746094 43.425781 317.140625 43.246094 C 317.265625 43.226562 317.378906 43.421875 317.535156 43.316406 C 317.578125 43.011719 317.382812 43.125 317.828125 42.976562 L 317.714844 43.078125 L 317.847656 43.144531 L 318.101562 42.8125 L 317.996094 42.957031 C 318.273438 43.128906 318.492188 42.882812 318.683594 42.730469 L 318.589844 42.660156 C 319.714844 42.203125 320.949219 41.648438 322.351562 41.324219 C 322.664062 40.855469 323.5625 41.195312 323.902344 40.59375 L 325.082031 40.21875 L 325.09375 40.300781 L 325.691406 40.34375 C 323.878906 42.550781 321.085938 44.132812 318.480469 45.519531 C 311.957031 49.832031 305.152344 53.972656 298.839844 58.890625 C 294.746094 64.816406 290.394531 69.796875 285.984375 75.257812 C 285.996094 75.339844 285.976562 75.511719 286.105469 75.535156 C 290.722656 73.019531 295.246094 69.585938 299.402344 67.128906 C 299.371094 67.21875 299.296875 67.273438 299.347656 67.351562 C 299.40625 67.472656 299.53125 67.453125 299.65625 67.433594 C 299.722656 67.296875 299.882812 67.234375 299.820312 67.074219 L 299.679688 67.007812 L 300.527344 66.378906 L 300.652344 66.660156 C 305.1875 63.898438 309.785156 61.257812 314.4375 58.734375 C 314.65625 58.492188 313.933594 58.464844 314.460938 58.308594 L 314.671875 58.277344 L 314.410156 58.527344 C 315.316406 58.355469 316.292969 57.753906 317.152344 57.210938 L 316.570312 57.289062 C 316.875 57.035156 317.320312 56.886719 317.726562 56.746094 C 317.503906 56.691406 317.445312 56.871094 317.332031 56.96875 L 318.125 56.859375 C 320.628906 55.363281 323.519531 54.488281 326.179688 53.179688 C 326.121094 53.0625 325.960938 53.125 325.875 53.140625 C 325.910156 53.046875 326.09375 52.851562 326.347656 52.859375 L 326.167969 53.097656 C 327.167969 52.957031 328.191406 52.386719 329.316406 52.230469 C 328.191406 55.699219 324.722656 56.398438 322.570312 58.613281 C 321.101562 59.625 319.277344 60.261719 317.734375 61.328125 C 316.339844 63.519531 313.453125 63.796875 311.460938 65.351562 C 308.257812 67.328125 305.578125 70.296875 302.101562 71.84375 C 297.6875 75.777344 292.550781 78.496094 288.339844 82.652344 C 282.144531 85.6875 278.589844 92.726562 272.730469 96.347656 C 271.558594 96.769531 269.960938 96.867188 268.832031 96.089844 C 267.882812 95.375 267.277344 94.398438 266.914062 93.304688 C 267.058594 91.332031 268.496094 89.472656 270.109375 88.566406 C 274.796875 85.359375 278.5 80.597656 283.238281 77.46875 C 284.148438 75.175781 285.273438 72.9375 286.671875 70.789062 L 286.625 70.457031 L 288.980469 66.984375 C 287.710938 67.628906 286.28125 67.703125 284.914062 67.042969 C 284.511719 66.890625 284.214844 66.292969 284.246094 65.90625 C 289.113281 60.679688 296.515625 58.070312 299.238281 50.855469 C 299.632812 49.738281 300.003906 48.453125 299.441406 47.175781 C 298.984375 46.644531 298.839844 45.902344 298.109375 45.539062 C 291.675781 47.796875 287.890625 54.699219 282.648438 58.789062 C 280.558594 60.230469 278.59375 62.246094 275.859375 62.121094 C 274.59375 61.574219 274.132812 60.410156 273.566406 59.386719 C 273.632812 58.949219 273.65625 58.226562 274.339844 58.554688 C 275.070312 58.324219 275.847656 59.023438 276.472656 58.339844 C 275.449219 57.382812 274.898438 56.183594 274.734375 54.722656 C 274.910156 53.253906 275.730469 51.226562 277.242188 50.804688 C 278.542969 51.300781 279.355469 49.234375 280.695312 50.023438 C 281.789062 50.25 282.882812 50.476562 283.886719 50.972656 C 287.996094 47.296875 292.148438 40.898438 298.660156 43.71875 C 299.917969 44.222656 300.757812 45.375 301.648438 46.269531 "/><path d="M 306.246094 49.0625 L 306.589844 48.800781 L 306.910156 48.671875 L 310.277344 46.671875 L 311.03125 46.269531 L 311.347656 46.050781 L 312.179688 45.679688 L 312.601562 45.398438 L 313.253906 45.097656 L 314.953125 44.273438 L 316.164062 43.640625 L 317.46875 42.988281 L 318.574219 42.535156 L 320.179688 41.9375 L 321.132812 41.582031 L 322.484375 41.082031 L 323.902344 40.59375 L 325.082031 40.21875 L 325.347656 40.179688 L 325.691406 40.34375 L 324.34375 41.683594 "/><path d="M 326.347656 52.859375 C 326.347656 52.859375 326.394531 52.742188 326.347656 52.859375 "/><path d="M 316.570312 57.289062 L 314.355469 58.292969 L 300.527344 66.378906 L 299.25 67.175781 L 299.578125 67.855469 L 319.453125 55.886719 Z M 316.570312 57.289062 "/><path d="M 319.449219 55.886719 L 319.601562 56.714844 L 317.792969 57.089844 L 317.621094 56.738281 L 321.28125 55.082031 L 324.195312 53.828125 L 326.347656 52.859375 L 328.105469 52.421875 L 329.316406 52.230469 "/><path d="M 319.601562 56.714844 L 326 52.875 L 319.148438 55.960938 Z M 319.601562 56.714844 "/><path d="M 307.03125 48.507812 L 305.976562 49.109375 L 306.148438 49.289062 L 306.953125 48.964844 Z M 307.03125 48.507812 "/><path d="M 327.128906 55.285156 L 322.386719 58.671875 L 316.589844 62.511719 L 306.128906 69.359375 L 298.601562 74.554688 L 288.339844 82.652344 L 288.210938 81.855469 L 326.679688 54.605469 Z M 327.128906 55.285156 "/><path d="M 279.859375 49.789062 L 278.953125 49.941406 L 278.050781 50.238281 L 277.523438 50.46875 L 276.996094 50.691406 L 276.542969 50.992188 L 277.148438 51.066406 L 278.277344 50.992188 L 279.179688 50.238281 Z M 279.859375 49.789062 "/></symbol><symbol id="stern" viewBox="259.70 219.80 11.20 10.80"><path d="M 266.527344 223.980469 L 270.539062 223.980469 L 267.308594 226.402344 L 268.5625 230.246094 L 265.34375 227.878906 L 262.128906 230.246094 L 263.394531 226.402344 L 260.136719 223.980469 L 264.132812 223.980469 L 265.34375 220.234375 Z M 266.527344 223.980469 "/></symbol><symbol id="krone" viewBox="327.10 219.80 9.70 5.50"><path d="M 328.867188 224.914062 C 330.789062 223.976562 332.902344 223.976562 334.890625 224.914062 C 334.890625 224.914062 336.378906 220.773438 336.378906 220.617188 L 333.332031 222.988281 L 332.070312 220.203125 L 330.480469 223.007812 L 327.464844 220.667969 Z M 328.867188 224.914062 "/></symbol></defs></svg>
+<header class="seitenkopf"><div class="zg" style="width:90px"><svg viewBox="0 0 65.40 59.50" fill="currentColor" aria-hidden="true"><use href="#z" width="65.40" height="59.50"/></svg></div><div class="wst"><svg class="st" viewBox="0 0 11.20 10.80" fill="currentColor" aria-hidden="true"><use href="#stern" width="11.20" height="10.80"/></svg><svg class="st" viewBox="0 0 11.20 10.80" fill="currentColor" aria-hidden="true"><use href="#stern" width="11.20" height="10.80"/></svg><svg class="st" viewBox="0 0 11.20 10.80" fill="currentColor" aria-hidden="true"><use href="#stern" width="11.20" height="10.80"/></svg><svg class="st" viewBox="0 0 11.20 10.80" fill="currentColor" aria-hidden="true"><use href="#stern" width="11.20" height="10.80"/></svg><svg class="kr" viewBox="0 0 9.70 5.50" fill="currentColor" aria-hidden="true"><use href="#krone" width="9.70" height="5.50"/></svg></div><p class="w2">Vor Ihrer Anreise · Runde 4</p><h1 class="rt">30 neue Entwürfe</h1>
+<p class="rl">Keine Abwandlungen mehr: 30 grundverschiedene Ansätze, sortiert nach Art. Scroll erzählt, Werkzeug, Gespräch, Typografie, Bild, Bewegung, Inhalt, Marke. Alle im Stil des Heros, mit eigenen Fotos, nie dem Hero-Foto, Wortlaut aus den Daten des Hauses. Alles, was «Bedienung» hat, lässt sich anfassen.</p></header>
+<nav class="idx"><h4>Scroll erzählt</h4><a href="#m1"><span>01</span>Die horizontale Reise</a><a href="#m2"><span>02</span>Die Ziffernrolle</a><a href="#m4"><span>04</span>Vorhang auf</a><a href="#m16"><span>16</span>Gegenläufige Spalten</a><a href="#m17"><span>17</span>Bild steht, Text wandert</a><a href="#m18"><span>18</span>Die Tür geht auf</a><a href="#m24"><span>24</span>Gestapelte Karten</a><h4>Bild</h4><a href="#m3"><span>03</span>Doppelbelichtung</a><a href="#m15"><span>15</span>Das Zimmer im Haus</a><h4>Werkzeug</h4><a href="#m5"><span>05</span>Ihr persönlicher Plan</a><a href="#m6"><span>06</span>Von wo reisen Sie an?</a><a href="#m7"><span>07</span>Den Koffer schieben</a><a href="#m8"><span>08</span>Die Karte zum Umdrehen</a><a href="#m9"><span>09</span>Ihr Anreisetag als Schieber</a><a href="#m19"><span>19</span>Der Lichtschalter</a><a href="#m22"><span>22</span>Vorher, nachher</a><h4>Gespräch</h4><a href="#m10"><span>10</span>Am Empfang gefragt</a><h4>Typografie</h4><a href="#m11"><span>11</span>Bilder im Satz</a><a href="#m12"><span>12</span>Laufband</a><a href="#m13"><span>13</span>Bild in der Schrift</a><a href="#m14"><span>14</span>Brief der Gastgeber</a><h4>Inhalt</h4><a href="#m20"><span>20</span>Was zu Hause bleiben darf</a><a href="#m29"><span>29</span>Der Abreisetag dauert bis 17 Uhr</a><h4>Bewegung</h4><a href="#m21"><span>21</span>Diashow mit Fortschritt</a><a href="#m23"><span>23</span>Karussell</a><a href="#m27"><span>27</span>Glasschichten in der Tiefe</a><a href="#m28"><span>28</span>Abspann</a><h4>Marke</h4><a href="#m25"><span>25</span>Das Z als Fenster</a><a href="#m26"><span>26</span>Sternbild</a><a href="#m30"><span>30</span>Der Prospekt zum Blättern</a></nav><div class="meta" id="m1"><div class="nr">01</div><div><h3><small>Scroll erzählt</small>Die horizontale Reise</h3><p>Man scrollt nach unten, die Seite fährt seitwärts: vom Bahnschalter zu Hause durch das Saastal zum Postschalter bis ins Zimmer. Eine Messinglinie unten zeigt, wie weit die Reise ist.</p></div><dl><dt>Bewegung</dt><dd>Spur seitwärts (translateX am Scroll), Linie füllt sich (scaleX).</dd><dt>Bedienung</dt><dd>Keine, nur Scroll.</dd><dt>Handy</dt><dd>Gleich, Tafeln hochkant.</dd><dt>Fotos</dt><dd>h-kapelle · haus-lift · raum-z</dd></dl></div><section class="v lang n01" data-sp="4"><div class="kl"><div class="spur">
+  <div class="tafel typo"><div style="display:grid;gap:22px;justify-items:center;text-align:center;padding:0 8vw"><p class="ro">Zwei Tage vorher</p><b>Bahnschalter,<br>bei Ihnen zu Hause.</b><p class="rl" style="max-width:34em">Geben Sie Ihr Gepäck 2 Tage vor Abreise zu Hause am Bahnschalter auf und wir holen es gerne am Postschalter in Saas-Almagell für Sie ab.</p></div></div>
+  <div class="tafel dk-o"><img src="assets/img/h-kapelle-x.webp" alt="" style="object-position:50% 50%"><div class="txt"><p class="ro">Unterwegs</p><p class="rt m sh">Durchs Saastal.</p><p class="rl sh">Mit dem Personenzug bitte Endstation Visp lösen – anschliessend mit dem Bus von Visp nach Saas-Grund und Saas-Almagell.</p></div></div>
+  <div class="tafel dk-o"><img src="assets/img/haus-lift-x.webp" alt="" style="object-position:50% 40%"><div class="txt"><p class="ro">Saas-Almagell</p><p class="rt m sh">Wir holen es ab.</p><p class="rl sh">Am Postschalter, für Sie.</p></div></div>
+  <div class="tafel dk-o"><img src="assets/img/raum-z-x.webp" alt="" style="object-position:50% 60%"><div class="txt"><p class="ro">Anreisetag · ab 14.00 Uhr</p><p class="rt m sh">Ihr Gepäck ist schon da.</p><p class="rl sh">Am Anreisetag ist Ihr Gepäck im Zimmer. Am Anreisetag sind die Zimmer ab 14.00 Uhr beziehbar.</p><a class="k" href="vor-ihrer-anreise.html"><span>Vor Ihrer Anreise</span><em><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></em></a></div></div>
+  </div><div class="oben"><p class="w2">Vor Ihrer Anreise</p></div><div class="weg"><i></i></div></div></section><div class="meta" id="m2"><div class="nr">02</div><div><h3><small>Scroll erzählt</small>Die Ziffernrolle</h3><p>Links rollen grosse Messingziffern wie ein Zählwerk: «2 Tage», «14.00», «10.00». Rechts wechselt das Bild dazu. Drei Bildschirme, drei Zeitpunkte.</p></div><dl><dt>Bewegung</dt><dd>Ziffern rollen (translateY), Bild blendet über, beides am Scroll.</dd><dt>Bedienung</dt><dd>Keine, nur Scroll.</dd><dt>Handy</dt><dd>Ziffer oben, Bild darunter.</dd><dt>Fotos</dt><dd>r-wohnen · z-suite · sp-blick</dd></dl></div><section class="v lang n02" data-sp="3" data-s="0"><div class="kl"><div class="links"><p class="w2">Vor Ihrer Anreise</p><div class="rolle"><div><b>2 Tage</b><b>14.00</b><b>10.00</b></div></div>
+  <div class="zeile"><p class="rl">vorher am Bahnschalter. Geben Sie Ihr Gepäck 2 Tage vor Abreise zu Hause am Bahnschalter auf und wir holen es gerne am Postschalter in Saas-Almagell für Sie ab.</p><p class="rl">Anreisetag. Am Anreisetag sind die Zimmer ab 14.00 Uhr beziehbar. Am Anreisetag ist Ihr Gepäck im Zimmer.</p><p class="rl">Abreisetag. Check out 10.00 Uhr. Sie können als Hotelgast von 10.00 Uhr bis 17.00 Uhr den Spa zum Vorzugspreis von CHF 25.00 pro Person bei Abreisetag geniessen.</p></div><a class="k" href="vor-ihrer-anreise.html"><span>Vor Ihrer Anreise</span><em><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></em></a></div>
+  <div class="rechts"><img src="assets/img/r-wohnen-x.webp" alt="" style="object-position:50% 50%"><img src="assets/img/z-suite-x.webp" alt="" style="object-position:50% 50%"><img src="assets/img/sp-blick-x.webp" alt="" style="object-position:50% 50%"></div></div></section><div class="meta" id="m3"><div class="nr">03</div><div><h3><small>Bild</small>Doppelbelichtung</h3><p>Das Saastal und das Zimmer liegen ineinander wie eine doppelt belichtete Aufnahme: Weg und Ziel in einem Bild. In der Mitte der Satz und die drei Angaben.</p></div><dl><dt>Bewegung</dt><dd>Die zweite Aufnahme setzt sich (scale 1.08 → 1).</dd><dt>Bedienung</dt><dd>Keine.</dd><dt>Handy</dt><dd>Gleich, Angaben untereinander.</dd><dt>Fotos</dt><dd>h-gold + raum-stein</dd></dl></div><section class="v n03"><div class="a"><img src="assets/img/h-gold-x.webp" alt="" style="object-position:50% 50%"></div><div class="b"><img src="assets/img/raum-stein-x.webp" alt="" style="object-position:50% 50%"></div>
+  <div class="mitte"><p class="w2">Vor Ihrer Anreise</p><h2 class="rt sh"><span class="sl"><span>Ihr Gepäck ist schon da.</span></span></h2><p class="rl sh" style="max-width:40em">Geben Sie Ihr Gepäck 2 Tage vor Abreise zu Hause am Bahnschalter auf und wir holen es gerne am Postschalter in Saas-Almagell für Sie ab.</p><div class="drei"><div><span class="ro">Anreise</span><b class="sh">ab 14.00</b></div><div><span class="ro">Abreise</span><b class="sh">bis 10.00</b></div></div><a class="k" href="vor-ihrer-anreise.html"><span>Vor Ihrer Anreise</span><em><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></em></a></div></section><div class="meta" id="m4"><div class="nr">04</div><div><h3><small>Scroll erzählt</small>Vorhang auf</h3><p>Zwei nachtblaue Flügel tragen den Titel, in der Mitte geteilt durch eine Messingnaht. Beim Scrollen gehen sie auseinander und geben das Zimmer frei, dann erscheinen die Angaben.</p></div><dl><dt>Bewegung</dt><dd>Flügel gleiten nach aussen (translateX am Scroll), Angaben blenden ein.</dd><dt>Bedienung</dt><dd>Keine, nur Scroll.</dd><dt>Handy</dt><dd>Flügel oben und unten statt links und rechts.</dd><dt>Fotos</dt><dd>raum-arve</dd></dl></div><section class="v lang n04" data-sp="1"><div class="kl"><div class="bild dk-o"><img src="assets/img/raum-arve-x.webp" alt="" style="object-position:50% 50%"></div>
+  <div class="vh l"><p class="rt">Ihr Gepäck</p></div><div class="vh r"><p class="rt">ist schon da.</p></div>
+  <div class="innen platte"><div><span class="ro">Gepäck</span><b>2 Tage vorher</b><p class="p">am Bahnschalter, Abholung am Postschalter Saas-Almagell</p></div><div><span class="ro">Anreise</span><b>ab 14.00</b><p class="p">Am Anreisetag ist Ihr Gepäck im Zimmer.</p></div><div><span class="ro">Abreise</span><b>bis 10.00</b><p class="p">Check out 10.00 Uhr</p></div></div></div></section><div class="meta" id="m5"><div class="nr">05</div><div><h3><small>Werkzeug</small>Ihr persönlicher Plan</h3><p>Der Gast stellt Anreise und Abreise ein, die Seite rechnet: an welchem Tag das Gepäck zum Bahnschalter muss, ab wann das Zimmer bereit ist, bis wann er bleiben kann. Auf der Startseite übernimmt sie die Daten aus der Buchungsleiste.</p></div><dl><dt>Bewegung</dt><dd>Zeilen tauschen den Wortlaut an Ort.</dd><dt>Bedienung</dt><dd>Daten mit Pfeilen verschieben, Plan rechnet mit.</dd><dt>Handy</dt><dd>Felder untereinander, Bild unten.</dd><dt>Fotos</dt><dd>loft-galerie</dd></dl></div><section class="v n05" id="plan"><div class="l"><p class="w2">Vor Ihrer Anreise</p><h2 class="rt"><span class="sl"><span>Ihr Plan.</span></span></h2>
+  <div class="felder"><div class="feld platte"><button class="wahl" data-d="an" data-x="-1" aria-label="Anreise früher">‹</button><div><span class="ro">Anreise</span><b data-an></b></div><button class="wahl" data-d="an" data-x="1" aria-label="Anreise später">›</button></div>
+  <div class="feld platte"><button class="wahl" data-d="ab" data-x="-1" aria-label="Abreise früher">‹</button><div><span class="ro">Abreise</span><b data-ab></b></div><button class="wahl" data-d="ab" data-x="1" aria-label="Abreise später">›</button></div></div>
+  <div class="plan"><div><div><b data-p1></b><span class="ro">Gepäck</span></div><p class="p">Am Bahnschalter bei Ihnen zu Hause aufgeben. Wir holen es am Postschalter in Saas-Almagell für Sie ab.</p></div>
+  <div><div><b data-p2></b><span class="ro">ab 14.00 Uhr</span></div><p class="p">Am Anreisetag ist Ihr Gepäck im Zimmer. Am Anreisetag sind die Zimmer ab 14.00 Uhr beziehbar.</p></div>
+  <div><div><b data-p3></b><span class="ro">10.00 bis 17.00 Uhr</span></div><p class="p">Check out 10.00 Uhr. Danach Spa zum Vorzugspreis von CHF 25.00 pro Person.</p></div></div><a class="k" href="vor-ihrer-anreise.html"><span>Vor Ihrer Anreise</span><em><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></em></a></div>
+  <div class="r"><img src="assets/img/loft-galerie-x.webp" alt="" style="object-position:50% 50%"></div></section><div class="meta" id="m6"><div class="nr">06</div><div><h3><small>Werkzeug</small>Von wo reisen Sie an?</h3><p>Der Gast tippt seinen Ort an (Bern, Basel, Zürich, Flughafen, Mailand, Genf). Gross darunter: wie lange, womit, und wann sein Koffer am eigenen Bahnschalter abgeht.</p></div><dl><dt>Bewegung</dt><dd>Ortsnamen hellen auf, Angaben tauschen an Ort.</dd><dt>Bedienung</dt><dd>Ort antippen.</dd><dt>Handy</dt><dd>Orte als zwei Zeilen, Angaben untereinander.</dd><dt>Fotos</dt><dd>bietschhorn</dd></dl></div><section class="v n06"><div class="voll dk-o"><img src="assets/img/bietschhorn-x.webp" alt="" style="object-position:50% 50%"></div><div class="in"><p class="w2">Vor Ihrer Anreise</p><h2 class="rt sh"><span class="sl"><span>Von wo reisen Sie an?</span></span></h2>
+  <div class="orte" role="tablist"><button class="wahl" data-o="0" aria-selected="true">Bern</button><button class="wahl" data-o="1" aria-selected="false">Basel</button><button class="wahl" data-o="2" aria-selected="false">Zürich</button><button class="wahl" data-o="3" aria-selected="false">Flughafen Zürich</button><button class="wahl" data-o="4" aria-selected="false">Mailand</button><button class="wahl" data-o="5" aria-selected="false">Genf</button></div>
+  <div class="aus platte" style="padding:0 30px"><div><span class="ro">Weg</span><b data-o1></b><p class="p" data-o2></p></div><div><span class="ro">Gepäck</span><b>2 Tage vorher</b><p class="p" data-o3></p></div><div><span class="ro">Ankunft</span><b>ab 14.00 Uhr</b><p class="p">Am Anreisetag ist Ihr Gepäck im Zimmer. Falls Sie nach 19.00 Uhr anreisen, bitten wir Sie, uns dies kurz davor zu melden.</p></div></div><a class="k" href="vor-ihrer-anreise.html"><span>Vor Ihrer Anreise</span><em><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></em></a></div></section><div class="meta" id="m7"><div class="nr">07</div><div><h3><small>Werkzeug</small>Den Koffer schieben</h3><p>Ein Messingknauf liegt auf einer Linie von «Zu Hause» bis «Ihr Zimmer». Der Gast schiebt ihn, Bild und Satz folgen der Station, an der er steht.</p></div><dl><dt>Bewegung</dt><dd>Bild blendet je Station über.</dd><dt>Bedienung</dt><dd>Knauf ziehen (Schieberegler).</dd><dt>Handy</dt><dd>Gleich, Linie über die Breite.</dd><dt>Fotos</dt><dd>n-weg · r-2 · senseliege</dd></dl></div><section class="v n07"><div class="bs voll dk-o"><img class="an" src="assets/img/n-weg-x.webp" alt="" style="object-position:50% 50%"><img src="assets/img/r-2-x.webp" alt="" style="object-position:50% 50%"><img src="assets/img/senseliege-x.webp" alt="" style="object-position:50% 50%"></div>
+  <div class="oben"><p class="w2">Vor Ihrer Anreise</p><h2 class="rt sh"><span class="sl"><span>Ihr Gepäck ist schon da.</span></span></h2></div>
+  <div class="unten"><div class="txt"><p class="an">Zu Hause, zwei Tage vorher: Geben Sie Ihr Gepäck 2 Tage vor Abreise zu Hause am Bahnschalter auf und wir holen es gerne am Postschalter in Saas-Almagell für Sie ab.</p><p>Anreisetag: Am Anreisetag ist Ihr Gepäck im Zimmer. Am Anreisetag sind die Zimmer ab 14.00 Uhr beziehbar.</p><p>Abreisetag: Check out 10.00 Uhr. Sie können als Hotelgast von 10.00 Uhr bis 17.00 Uhr den Spa zum Vorzugspreis von CHF 25.00 pro Person bei Abreisetag geniessen.</p></div>
+  <input type="range" min="0" max="100" value="0" aria-label="Station der Reise"><div class="halte"><span class="an">Zu Hause</span><span>Ihr Zimmer</span><span>Abreise</span></div></div></section><div class="meta" id="m8"><div class="nr">08</div><div><h3><small>Werkzeug</small>Die Karte zum Umdrehen</h3><p>Eine grosse Karte: vorne das Zimmer und der Satz, hinten auf Nachtblau alles, was man wissen muss, im Wortlaut des Hauses. Ein Tipp dreht sie um.</p></div><dl><dt>Bewegung</dt><dd>Karte dreht sich um (rotateY).</dd><dt>Bedienung</dt><dd>Antippen oder Knopf «Umdrehen».</dd><dt>Handy</dt><dd>Karte hochkant.</dd><dt>Fotos</dt><dd>r-1</dd></dl></div><section class="v n08"><p class="w2">Vor Ihrer Anreise</p><div class="karte" tabindex="0" role="button" aria-label="Karte umdrehen"><div class="seite vorn dk-o"><img src="assets/img/r-1-x.webp" alt="" style="object-position:50% 50%"><div class="txt"><h2 class="rt sh"><span class="sl"><span>Ihr Gepäck ist schon da.</span></span></h2><p class="ro">Antippen zum Umdrehen</p></div></div>
+  <div class="seite hinten"><div><span class="ro">Gepäck</span><b>2 Tage vorher</b><p class="p">Geben Sie Ihr Gepäck 2 Tage vor Abreise zu Hause am Bahnschalter auf und wir holen es gerne am Postschalter in Saas-Almagell für Sie ab.</p></div><div><span class="ro">Anreisetag</span><b>ab 14.00 Uhr</b><p class="p">Am Anreisetag ist Ihr Gepäck im Zimmer. Am Anreisetag sind die Zimmer ab 14.00 Uhr beziehbar.</p></div><div><span class="ro">Später?</span><b>nach 19.00 Uhr</b><p class="p">Falls Sie nach 19.00 Uhr anreisen, bitten wir Sie, uns dies kurz davor zu melden.</p></div><div><span class="ro">Abreisetag</span><b>bis 10.00 Uhr</b><p class="p">Check out 10.00 Uhr. Sie können als Hotelgast von 10.00 Uhr bis 17.00 Uhr den Spa zum Vorzugspreis von CHF 25.00 pro Person bei Abreisetag geniessen.</p></div></div></div>
+  <div style="display:flex;gap:14px"><button class="k" data-um><span>Umdrehen</span><em><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></em></button><a class="k dk" href="tel:+41279572301"><span>+41 27 957 23 01</span><em><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></em></a></div></section><div class="meta" id="m9"><div class="nr">09</div><div><h3><small>Werkzeug</small>Ihr Anreisetag als Schieber</h3><p>Der Gast schiebt die Uhrzeit seines Anreisetags von morgens bis spät. Vor 14 Uhr, zwischen 14 und 19 Uhr und nach 19 Uhr sagt die Seite jeweils, was gilt, und das Bild wechselt vom Tag in den Abend.</p></div><dl><dt>Bewegung</dt><dd>Uhrzeit zählt mit, Bild blendet über.</dd><dt>Bedienung</dt><dd>Schieberegler 8 bis 23 Uhr.</dd><dt>Handy</dt><dd>Gleich.</dd><dt>Fotos</dt><dd>h-blumen · raum-hell · lounge</dd></dl></div><section class="v n09"><div class="bs voll dk-o"><img class="an" src="assets/img/h-blumen-x.webp" alt="" style="object-position:50% 50%"><img src="assets/img/raum-hell-x.webp" alt="" style="object-position:50% 50%"><img src="assets/img/lounge-x.webp" alt="" style="object-position:50% 50%"></div>
+  <div class="in platte"><div class="kopfz"><div style="display:grid;gap:8px"><p class="w2">Vor Ihrer Anreise</p><p class="rt m" style="font-size:clamp(28px,2.4vw,40px)">Wann kommen Sie an?</p></div><b class="zeit">12.00</b></div>
+  <input type="range" min="8" max="23" value="12" aria-label="Ankunftszeit"><div class="skala"><i style="left:40%"></i><span style="left:40%">14.00</span><i style="left:73.33%"></i><span style="left:73.33%">19.00</span></div>
+  <p class="txt p"></p></div></section><div class="meta" id="m10"><div class="nr">10</div><div><h3><small>Gespräch</small>Am Empfang gefragt</h3><p>Gast und Haus im Gespräch, Zeile um Zeile: rechts fragt der Gast, links antwortet das Haus im eigenen Wortlaut. Eine feine Messinglinie trennt die beiden Seiten.</p></div><dl><dt>Bewegung</dt><dd>Jede Zeile setzt sich beim Hereinkommen (translateY).</dd><dt>Bedienung</dt><dd>Keine.</dd><dt>Handy</dt><dd>Fragen und Antworten untereinander.</dd><dt>Fotos</dt><dd>keins (Z)</dd></dl></div><section class="v n10"><div class="kopfg"><div class="zg" style="width:60px"><svg viewBox="0 0 65.40 59.50" fill="currentColor" aria-hidden="true"><use href="#z" width="65.40" height="59.50"/></svg></div><p class="w2">Vor Ihrer Anreise</p><h2 class="rt"><span class="sl"><span>Am Empfang gefragt.</span></span></h2></div><div class="wrap">
+  <div class="q gast"><span class="ro">Sie</span><b>Muss ich meinen Koffer selbst mitnehmen?</b></div>
+  <div class="q haus"><span class="ro">Das Haus</span><b>Geben Sie Ihr Gepäck 2 Tage vor Abreise zu Hause am Bahnschalter auf und wir holen es gerne am Postschalter in Saas-Almagell für Sie ab.</b></div>
+  <div class="q gast"><span class="ro">Sie</span><b>Und wann ist er da?</b></div>
+  <div class="q haus"><span class="ro">Das Haus</span><b>Am Anreisetag ist Ihr Gepäck im Zimmer. Am Anreisetag sind die Zimmer ab 14.00 Uhr beziehbar.</b></div>
+  <div class="q gast"><span class="ro">Sie</span><b>Wir kommen erst am Abend.</b></div>
+  <div class="q haus"><span class="ro">Das Haus</span><b>Falls Sie nach 19.00 Uhr anreisen, bitten wir Sie, uns dies kurz davor zu melden.</b></div>
+  <div class="q gast"><span class="ro">Sie</span><b>Und am letzten Tag?</b></div>
+  <div class="q haus"><span class="ro">Das Haus</span><b>Check out 10.00 Uhr. Sie können als Hotelgast von 10.00 Uhr bis 17.00 Uhr den Spa zum Vorzugspreis von CHF 25.00 pro Person bei Abreisetag geniessen.</b></div>
+  <div class="q haus"><a class="k dk" href="tel:+41279572301"><span>+41 27 957 23 01</span><em><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></em></a></div></div></section><div class="meta" id="m11"><div class="nr">11</div><div><h3><small>Typografie</small>Bilder im Satz</h3><p>Der Satz steht riesig über die ganze Breite, zwischen den Wörtern sitzen kleine gerundete Bilder: der Weg, das Kissen, das Spa. Darunter ruhig die drei Angaben.</p></div><dl><dt>Bewegung</dt><dd>Bildfenster öffnen sich im Satz (scaleX), versetzt.</dd><dt>Bedienung</dt><dd>Keine.</dd><dt>Handy</dt><dd>Satz kleiner, Bilder bleiben im Satz.</dd><dt>Fotos</dt><dd>h-ausblick · r-kissen · sp-farben</dd></dl></div><section class="v n11"><p class="w2">Vor Ihrer Anreise</p><h2 style="margin-top:20px">Ihr <span class="bp"><img src="assets/img/h-ausblick-x.webp" alt="" style="object-position:50% 50%"></span> Gepäck ist <span class="bp s"><img src="assets/img/r-kissen-x.webp" alt="" style="object-position:50% 50%"></span> schon <span class="bp"><img src="assets/img/sp-farben-x.webp" alt="" style="object-position:50% 50%"></span> da.</h2><div class="drei"><div><span class="ro">Gepäck</span><b>2 Tage vorher</b><p class="p">Geben Sie Ihr Gepäck 2 Tage vor Abreise zu Hause am Bahnschalter auf und wir holen es gerne am Postschalter in Saas-Almagell für Sie ab.</p></div><div><span class="ro">Anreisetag</span><b>ab 14.00 Uhr</b><p class="p">Am Anreisetag ist Ihr Gepäck im Zimmer. Am Anreisetag sind die Zimmer ab 14.00 Uhr beziehbar.</p></div><div><span class="ro">Abreisetag</span><b>bis 10.00 Uhr</b><p class="p">Check out 10.00 Uhr.</p></div></div><div style="margin-top:44px;display:flex;gap:14px;flex-wrap:wrap"><a class="k" href="vor-ihrer-anreise.html"><span>Vor Ihrer Anreise</span><em><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></em></a><a class="k dk" href="tel:+41279572301"><span>+41 27 957 23 01</span><em><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></em></a></div></section><div class="meta" id="m12"><div class="nr">12</div><div><h3><small>Typografie</small>Laufband</h3><p>Der Satz läuft gross und langsam durch, immer wieder, mit den Uhrzeiten in Messing. Darunter ein breiter Streifen der Bergstation im Mondlicht und die Angaben.</p></div><dl><dt>Bewegung</dt><dd>Laufband (translateX, endlos, langsam).</dd><dt>Bedienung</dt><dd>Keine.</dd><dt>Handy</dt><dd>Gleich, Schrift kleiner.</dd><dt>Fotos</dt><dd>w-mond</dd></dl></div><section class="v n12"><div class="band"><div><span>Ihr Gepäck ist schon da <i>·</i> ab 14.00 <i>·</i> bis 10.00 <i>·</i></span><span>Ihr Gepäck ist schon da <i>·</i> ab 14.00 <i>·</i> bis 10.00 <i>·</i></span><span>Ihr Gepäck ist schon da <i>·</i> ab 14.00 <i>·</i> bis 10.00 <i>·</i></span><span>Ihr Gepäck ist schon da <i>·</i> ab 14.00 <i>·</i> bis 10.00 <i>·</i></span></div></div>
+  <div class="streifen"><img src="assets/img/w-mond-x.webp" alt="" style="object-position:50% 50%"></div><div class="drei"><div><span class="ro">Gepäck</span><b>2 Tage vorher</b><p class="p">Geben Sie Ihr Gepäck 2 Tage vor Abreise zu Hause am Bahnschalter auf und wir holen es gerne am Postschalter in Saas-Almagell für Sie ab.</p></div><div><span class="ro">Anreisetag</span><b>ab 14.00 Uhr</b><p class="p">Am Anreisetag ist Ihr Gepäck im Zimmer. Am Anreisetag sind die Zimmer ab 14.00 Uhr beziehbar.</p></div><div><span class="ro">Abreisetag</span><b>bis 10.00 Uhr</b><p class="p">Check out 10.00 Uhr.</p></div></div></section><div class="meta" id="m13"><div class="nr">13</div><div><h3><small>Typografie</small>Bild in der Schrift</h3><p>Die zwei Uhrzeiten stehen riesig da, und durch die Ziffern sieht man die Bilder: das Zimmer in «14.00», das Bad unter dem Glasdach in «10.00». Beim Scrollen gleitet das Bild in der Schrift.</p></div><dl><dt>Bewegung</dt><dd>Bild gleitet in den Ziffern (Hintergrundlage am Scroll).</dd><dt>Bedienung</dt><dd>Keine.</dd><dt>Handy</dt><dd>Ziffern untereinander.</dd><dt>Fotos</dt><dd>loft-oben · sp-oben</dd></dl></div><section class="v n13" data-sp2><p class="w2">Vor Ihrer Anreise</p><h2 class="rt"><span class="sl"><span>Ihr Gepäck ist schon da.</span></span></h2><div class="paar">
+  <div><p class="zahl" style="background-image:url(assets/img/loft-oben-x.webp)">14.00</p><span class="ro">Anreisetag</span><p class="p" style="max-width:26em">Am Anreisetag ist Ihr Gepäck im Zimmer. Am Anreisetag sind die Zimmer ab 14.00 Uhr beziehbar.</p></div>
+  <div><p class="zahl" style="background-image:url(assets/img/sp-oben-x.webp)">10.00</p><span class="ro">Abreisetag</span><p class="p" style="max-width:26em">Check out 10.00 Uhr. Sie können als Hotelgast von 10.00 Uhr bis 17.00 Uhr den Spa zum Vorzugspreis von CHF 25.00 pro Person bei Abreisetag geniessen.</p></div></div>
+  <p class="rl" style="max-width:40em;margin:50px auto 0">Geben Sie Ihr Gepäck 2 Tage vor Abreise zu Hause am Bahnschalter auf und wir holen es gerne am Postschalter in Saas-Almagell für Sie ab.</p></section><div class="meta" id="m14"><div class="nr">14</div><div><h3><small>Typografie</small>Brief der Gastgeber</h3><p>Ein Brief auf Nachtblau mit dem Z im Kopf: «Liebe Gäste», dann alles in ganzen Sätzen des Hauses, unterschrieben von Esther und Fabian. Daneben der gedeckte Tisch.</p></div><dl><dt>Bewegung</dt><dd>Zeilen steigen nacheinander aus der Maske.</dd><dt>Bedienung</dt><dd>Keine.</dd><dt>Handy</dt><dd>Brief oben, Bild darunter.</dd><dt>Fotos</dt><dd>tisch-z</dd></dl></div><section class="v n14"><div class="brief"><div class="zg"><svg viewBox="0 0 65.40 59.50" fill="currentColor" aria-hidden="true"><use href="#z" width="65.40" height="59.50"/></svg></div>
+  <p class="zeile"><span>Liebe Gäste,</span></p><p class="zeile"><span>Geben Sie Ihr Gepäck 2 Tage vor Abreise zu Hause am Bahnschalter auf und wir holen es gerne am Postschalter in Saas-Almagell für Sie ab.</span></p><p class="zeile"><span>Am Anreisetag ist Ihr Gepäck im Zimmer. Am Anreisetag sind die Zimmer ab 14.00 Uhr beziehbar. Falls Sie nach 19.00 Uhr anreisen, bitten wir Sie, uns dies kurz davor zu melden.</span></p>
+  <p class="zeile"><span>Check out 10.00 Uhr. Sie können als Hotelgast von 10.00 Uhr bis 17.00 Uhr den Spa zum Vorzugspreis von CHF 25.00 pro Person bei Abreisetag geniessen.</span></p><p class="zeile"><span class="ro">Wir freuen uns auf Sie</span></p><p class="zeile unterschrift"><span>Esther und Fabian Zurbriggen</span></p>
+  <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:24px"><a class="k dk" href="tel:+41279572301"><span>+41 27 957 23 01</span><em><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></em></a></div></div><div class="foto"><img src="assets/img/tisch-z-x.webp" alt="" style="object-position:50% 50%"></div></section><div class="meta" id="m15"><div class="nr">15</div><div><h3><small>Bild</small>Das Zimmer im Haus</h3><p>Man sieht das Haus von aussen, ein Fenster leuchtet in Messing. Darin ist schon das Zimmer zu sehen. Beim Scrollen wächst das Fenster, bis man im Zimmer steht.</p></div><dl><dt>Bewegung</dt><dd>Fenster wächst am Scroll (scale), Bild darin zoomt zurück.</dd><dt>Bedienung</dt><dd>Keine, nur Scroll.</dd><dt>Handy</dt><dd>Gleich.</dd><dt>Fotos</dt><dd>h-vorne → scheiben-tisch</dd></dl></div><section class="v lang n15" data-sp="1"><div class="kl"><div class="aussen"><img src="assets/img/h-vorne-x.webp" alt="" style="object-position:50% 60%"></div><div class="fenster"><img src="assets/img/scheiben-tisch-x.webp" alt="" style="object-position:50% 50%"></div>
+  <div class="oben"><p class="w2">Vor Ihrer Anreise</p><h2 class="rt sh"><span class="sl"><span>Ihr Gepäck ist schon da.</span></span></h2></div><div class="ende platte"><div><span class="ro">Gepäck</span><b>2 Tage vorher</b><p class="p">am Bahnschalter</p></div><div><span class="ro">Anreise</span><b>ab 14.00</b><p class="p">Am Anreisetag ist Ihr Gepäck im Zimmer.</p></div><div><span class="ro">Abreise</span><b>bis 10.00</b><p class="p">Check out 10.00 Uhr</p></div></div></div></section><div class="meta" id="m16"><div class="nr">16</div><div><h3><small>Scroll erzählt</small>Gegenläufige Spalten</h3><p>Zwei Spalten laufen gegeneinander: links steigen die Bilder hoch, rechts kommen die Sätze von oben. An jeder Stelle treffen sich Bild und Satz einer Station.</p></div><dl><dt>Bewegung</dt><dd>Spalten gegenläufig (translateY am Scroll).</dd><dt>Bedienung</dt><dd>Keine, nur Scroll.</dd><dt>Handy</dt><dd>Zwei schmale Spalten, Schrift kleiner.</dd><dt>Fotos</dt><dd>h-turm-1 · raum-wohnen · aquafit</dd></dl></div><section class="v lang n16" data-sp="1"><div class="kl"><div class="sp b"><figure><img src="assets/img/h-turm-1-x.webp" alt="" style="object-position:50% 50%"></figure><figure><img src="assets/img/raum-wohnen-x.webp" alt="" style="object-position:50% 50%"></figure><figure><img src="assets/img/aquafit-x.webp" alt="" style="object-position:50% 50%"></figure></div>
+  <div class="sp t"><div><span class="ro">Abreisetag</span><b>bis 10.00</b><p class="rl">Check out 10.00 Uhr. Sie können als Hotelgast von 10.00 Uhr bis 17.00 Uhr den Spa zum Vorzugspreis von CHF 25.00 pro Person bei Abreisetag geniessen.</p></div><div><span class="ro">Anreisetag</span><b>ab 14.00</b><p class="rl">Am Anreisetag ist Ihr Gepäck im Zimmer. Am Anreisetag sind die Zimmer ab 14.00 Uhr beziehbar.</p></div><div><p class="w2">Vor Ihrer Anreise</p><b>Ihr Gepäck ist schon da.</b><p class="rl">Geben Sie Ihr Gepäck 2 Tage vor Abreise zu Hause am Bahnschalter auf und wir holen es gerne am Postschalter in Saas-Almagell für Sie ab.</p></div></div></div></section><div class="meta" id="m17"><div class="nr">17</div><div><h3><small>Scroll erzählt</small>Bild steht, Text wandert</h3><p>Links steht ein Bild fest, rechts ziehen drei Absätze vorbei. Jeder Absatz holt sein Bild nach vorn: Haus, Wohnraum, Bad am Abend.</p></div><dl><dt>Bewegung</dt><dd>Bild blendet je Absatz über, Absatz hellt auf.</dd><dt>Bedienung</dt><dd>Keine, nur Scroll.</dd><dt>Handy</dt><dd>Bild oben fest, Text darunter.</dd><dt>Fotos</dt><dd>haus-front · scheiben-wohnen · pool-nacht</dd></dl></div><section class="v lang n17"><div class="bild"><img class="an" src="assets/img/haus-front-x.webp" alt="" style="object-position:50% 50%"><img src="assets/img/scheiben-wohnen-x.webp" alt="" style="object-position:50% 50%"><img src="assets/img/pool-nacht-x.webp" alt="" style="object-position:50% 50%"></div><div class="txt">
+  <div class="blk an" data-i="0"><p class="w2">Vor Ihrer Anreise</p><b>Ihr Gepäck ist schon da.</b><p class="rl">Geben Sie Ihr Gepäck 2 Tage vor Abreise zu Hause am Bahnschalter auf und wir holen es gerne am Postschalter in Saas-Almagell für Sie ab.</p></div>
+  <div class="blk" data-i="1"><span class="ro">Anreisetag</span><b>ab 14.00 Uhr</b><p class="rl">Am Anreisetag ist Ihr Gepäck im Zimmer. Am Anreisetag sind die Zimmer ab 14.00 Uhr beziehbar. Falls Sie nach 19.00 Uhr anreisen, bitten wir Sie, uns dies kurz davor zu melden.</p></div>
+  <div class="blk" data-i="2"><span class="ro">Abreisetag</span><b>bis 10.00 Uhr</b><p class="rl">Check out 10.00 Uhr. Sie können als Hotelgast von 10.00 Uhr bis 17.00 Uhr den Spa zum Vorzugspreis von CHF 25.00 pro Person bei Abreisetag geniessen.</p><a class="k" href="vor-ihrer-anreise.html"><span>Vor Ihrer Anreise</span><em><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></em></a></div></div></section><div class="meta" id="m18"><div class="nr">18</div><div><h3><small>Scroll erzählt</small>Die Tür geht auf</h3><p>Zwei nachtblaue Türflügel mit Messinggriffen, das Z liegt über der Mitte. Beim Scrollen schwingen sie in den Raum auf, dahinter das Zimmer.</p></div><dl><dt>Bewegung</dt><dd>Türflügel drehen auf (rotateY am Scroll).</dd><dt>Bedienung</dt><dd>Keine, nur Scroll.</dd><dt>Handy</dt><dd>Gleich.</dd><dt>Fotos</dt><dd>r-scheiben</dd></dl></div><section class="v lang n18" data-sp="1"><div class="kl"><div class="voll dk-o"><img src="assets/img/r-scheiben-x.webp" alt="" style="object-position:50% 50%"></div>
+  <div class="tuer l"></div><div class="tuer r"></div><div class="nahtz zg"><svg viewBox="0 0 65.40 59.50" fill="currentColor" aria-hidden="true"><use href="#z" width="65.40" height="59.50"/></svg></div>
+  <div class="schild"><p class="w2">Vor Ihrer Anreise</p></div><div class="ende"><h2 class="rt sh"><span class="sl"><span>Ihr Gepäck ist schon da.</span></span></h2><p class="rl sh">Am Anreisetag ist Ihr Gepäck im Zimmer. Am Anreisetag sind die Zimmer ab 14.00 Uhr beziehbar.</p><p class="p sh">Geben Sie Ihr Gepäck 2 Tage vor Abreise zu Hause am Bahnschalter auf und wir holen es gerne am Postschalter in Saas-Almagell für Sie ab.</p></div></div></section><div class="meta" id="m19"><div class="nr">19</div><div><h3><small>Werkzeug</small>Der Lichtschalter</h3><p>Das Zimmer liegt im Dunkeln, daneben ein heller Schalter. Der Gast schaltet das Licht ein: Das Zimmer erscheint und mit ihm der Satz.</p></div><dl><dt>Bewegung</dt><dd>Dunkle Schicht weicht (opacity), Schalter kippt.</dd><dt>Bedienung</dt><dd>Schalter antippen.</dd><dt>Handy</dt><dd>Schalter unter dem Satz.</dd><dt>Fotos</dt><dd>raum-stein</dd></dl></div><section class="v n19"><div class="voll"><img src="assets/img/raum-stein-x.webp" alt="" style="object-position:50% 50%"></div><div class="nacht"></div>
+  <div class="mitte"><button class="schalter" aria-label="Licht einschalten" aria-pressed="false"><i></i></button><p class="w2">Vor Ihrer Anreise</p><div class="txt"><h2 class="rt sh"><span class="sl"><span>Ihr Gepäck ist schon da.</span></span></h2><p class="rl sh" style="margin-top:14px">Am Anreisetag ist Ihr Gepäck im Zimmer. Am Anreisetag sind die Zimmer ab 14.00 Uhr beziehbar.</p><p class="p sh" style="margin-top:10px">Geben Sie Ihr Gepäck 2 Tage vor Abreise zu Hause am Bahnschalter auf und wir holen es gerne am Postschalter in Saas-Almagell für Sie ab.</p></div></div></section><div class="meta" id="m20"><div class="nr">20</div><div><h3><small>Inhalt</small>Was zu Hause bleiben darf</h3><p>Ein anderer Blick auf dasselbe: Was der Gast nicht einpacken muss, weil das Haus es leiht. Bademantel, Rucksack, Stöcke, ein Wort nach dem anderen wird mit Messing durchgestrichen. Und der Koffer selbst reist voraus.</p></div><dl><dt>Bewegung</dt><dd>Messingstriche ziehen nacheinander durch (scaleX).</dd><dt>Bedienung</dt><dd>Keine.</dd><dt>Handy</dt><dd>Liste oben, Bild darunter.</dd><dt>Fotos</dt><dd>ruheraum</dd></dl></div><section class="v n20"><div class="l"><p class="w2">Vor Ihrer Anreise</p><h2 class="rt"><span class="sl"><span>Das bleibt zu Hause.</span></span></h2><ul><li style="--n:0">Mountainbikes</li><li style="--n:1">Wander- und Nordic-Walking-Stöcke</li><li style="--n:2">Rucksäcke</li><li style="--n:3">Wanderkarte der Region</li><li style="--n:4">Bademantel</li><li style="--n:5">Badeschuhe</li><li style="--n:6">Badetücher</li><li style="--n:7">Regenschirme</li><li style="--n:8">Taschen</li></ul>
+  <p class="rl">Und Ihr Koffer? Geben Sie Ihr Gepäck 2 Tage vor Abreise zu Hause am Bahnschalter auf und wir holen es gerne am Postschalter in Saas-Almagell für Sie ab. Am Anreisetag ist Ihr Gepäck im Zimmer.</p><a class="k" href="vor-ihrer-anreise.html"><span>Vor Ihrer Anreise</span><em><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></em></a></div><div class="r"><img src="assets/img/ruheraum-x.webp" alt="" style="object-position:50% 50%"></div></section><div class="meta" id="m21"><div class="nr">21</div><div><h3><small>Bewegung</small>Diashow mit Fortschritt</h3><p>Drei Bilder wechseln von allein, jedes zoomt langsam zurück, oben füllen sich drei feine Messingbalken. Unten wechselt der Satz zur Station. Ruhig wie ein Film.</p></div><dl><dt>Bewegung</dt><dd>Langsamer Bildwechsel mit Zoom, Balken füllen sich.</dd><dt>Bedienung</dt><dd>Antippen springt zum nächsten Bild.</dd><dt>Handy</dt><dd>Gleich.</dd><dt>Fotos</dt><dd>h-gold · raum-arve · sp-wanne</dd></dl></div><section class="v n21"><div class="dia voll dk-o"><img class="an" src="assets/img/h-gold-x.webp" alt="" style="object-position:50% 50%"><img src="assets/img/raum-arve-x.webp" alt="" style="object-position:50% 50%"><img src="assets/img/sp-wanne-x.webp" alt="" style="object-position:50% 50%"></div><div class="balken"><i class="an"><b></b></i><i><b></b></i><i><b></b></i></div>
+  <div class="mitte"><p class="w2">Vor Ihrer Anreise</p><h2 class="rt sh"><span class="sl"><span>Ihr Gepäck ist schon da.</span></span></h2><div class="cap"><p class="an">Geben Sie Ihr Gepäck 2 Tage vor Abreise zu Hause am Bahnschalter auf und wir holen es gerne am Postschalter in Saas-Almagell für Sie ab.</p><p>Am Anreisetag ist Ihr Gepäck im Zimmer. Am Anreisetag sind die Zimmer ab 14.00 Uhr beziehbar.</p><p>Check out 10.00 Uhr. Sie können als Hotelgast von 10.00 Uhr bis 17.00 Uhr den Spa zum Vorzugspreis von CHF 25.00 pro Person bei Abreisetag geniessen.</p></div></div></section><div class="meta" id="m22"><div class="nr">22</div><div><h3><small>Werkzeug</small>Vorher, nachher</h3><p>Links Nachtblau mit dem, was der Gast zu Hause tut, rechts das Zimmer, in dem der Koffer schon steht. Eine Messingnaht mit Knauf lässt sich hin und her ziehen.</p></div><dl><dt>Bewegung</dt><dd>Naht folgt dem Finger (nur transform).</dd><dt>Bedienung</dt><dd>Naht ziehen.</dd><dt>Handy</dt><dd>Gleich, Text kleiner.</dd><dt>Fotos</dt><dd>raum-hell</dd></dl></div><section class="v n22"><div class="unten dk-o"><img src="assets/img/raum-hell-x.webp" alt="" style="object-position:50% 50%"></div><div class="rechts"><p class="w2">Vor Ihrer Anreise</p><p class="rt m sh">Ihr Gepäck ist schon da.</p><p class="rl sh">Am Anreisetag ist Ihr Gepäck im Zimmer. Am Anreisetag sind die Zimmer ab 14.00 Uhr beziehbar.</p></div>
+  <div class="ob"><div class="inner"><div><span class="ro">Zwei Tage vorher, bei Ihnen zu Hause</span><p class="rt m">Am Bahnschalter.</p><p class="rl">Geben Sie Ihr Gepäck 2 Tage vor Abreise zu Hause am Bahnschalter auf und wir holen es gerne am Postschalter in Saas-Almagell für Sie ab.</p></div></div></div><div class="griff"><i>↔</i></div></section><div class="meta" id="m23"><div class="nr">23</div><div><h3><small>Bewegung</small>Karussell</h3><p>Vier Bilder stehen im Kreis im Raum, jedes eine Station. Mit den Knöpfen dreht man weiter, vorne steht immer die aktuelle Station mit ihrem Glasschild.</p></div><dl><dt>Bewegung</dt><dd>Kreis dreht sich (rotateY).</dd><dt>Bedienung</dt><dd>Weiter, zurück.</dd><dt>Handy</dt><dd>Gleich, schmaler.</dd><dt>Fotos</dt><dd>n-weg · haus-turm · r-1 · sp-scheiben</dd></dl></div><section class="v n23"><p class="w2">Vor Ihrer Anreise</p><h2 class="rt"><span class="sl"><span>Ihr Gepäck ist schon da.</span></span></h2><div class="buehne3"><div class="ring" style="--r:calc(min(460px,70vw) * 1.45)"><div class="fl" style="transform:rotateY(0deg) translateZ(calc(min(460px,70vw) * 1.45))"><img src="assets/img/n-weg-x.webp" alt="" style="object-position:50% 50%"><div class="cap platte"><span class="ro">Zwei Tage vorher</span><b>Gepäck am Bahnschalter aufgeben</b></div></div><div class="fl" style="transform:rotateY(40deg) translateZ(calc(min(460px,70vw) * 1.45))"><img src="assets/img/haus-turm-x.webp" alt="" style="object-position:50% 50%"><div class="cap platte"><span class="ro">Saas-Almagell</span><b>Wir holen es am Postschalter ab</b></div></div><div class="fl" style="transform:rotateY(80deg) translateZ(calc(min(460px,70vw) * 1.45))"><img src="assets/img/r-1-x.webp" alt="" style="object-position:50% 50%"><div class="cap platte"><span class="ro">Anreisetag · ab 14.00</span><b>Ihr Gepäck ist im Zimmer</b></div></div><div class="fl" style="transform:rotateY(120deg) translateZ(calc(min(460px,70vw) * 1.45))"><img src="assets/img/sp-scheiben-x.webp" alt="" style="object-position:50% 50%"><div class="cap platte"><span class="ro">Abreisetag · bis 10.00</span><b>Danach Spa bis 17.00, CHF 25.00</b></div></div></div></div>
+  <div class="knoepfe"><button class="k dk" data-dreh="-1"><span>Zurück</span><em style="transform:scaleX(-1)"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></em></button><button class="k" data-dreh="1"><span>Weiter</span><em><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></em></button></div></section><div class="meta" id="m24"><div class="nr">24</div><div><h3><small>Scroll erzählt</small>Gestapelte Karten</h3><p>Vier grosse Karten legen sich beim Scrollen übereinander, jede eine Station mit Bild und Satz. Am Ende liegt der ganze Weg als Stapel da.</p></div><dl><dt>Bewegung</dt><dd>Karten bleiben kleben und schieben sich darüber (sticky).</dd><dt>Bedienung</dt><dd>Keine, nur Scroll.</dd><dt>Handy</dt><dd>Karten hochkant, Bild oben.</dd><dt>Fotos</dt><dd>kam-haus · r-2 · sp-grotte · j-stube</dd></dl></div><section class="v lang n24"><p class="w2">Vor Ihrer Anreise</p><div style="margin:14px 0 50px"><h2 class="rt"><span class="sl"><span>Ihr Gepäck ist schon da.</span></span></h2></div><div class="kk" style="--i:0"><div class="t"><span class="ro">Zwei Tage vorher</span><b>Bahnschalter</b><p class="rl">Geben Sie Ihr Gepäck 2 Tage vor Abreise zu Hause am Bahnschalter auf und wir holen es gerne am Postschalter in Saas-Almagell für Sie ab.</p></div><figure><img src="assets/img/kam-haus-x.webp" alt="" style="object-position:50% 50%"></figure></div><div class="kk" style="--i:1"><div class="t"><span class="ro">Anreisetag</span><b>ab 14.00 Uhr</b><p class="rl">Am Anreisetag ist Ihr Gepäck im Zimmer. Am Anreisetag sind die Zimmer ab 14.00 Uhr beziehbar.</p></div><figure><img src="assets/img/r-2-x.webp" alt="" style="object-position:50% 50%"></figure></div><div class="kk" style="--i:2"><div class="t"><span class="ro">Später am Abend</span><b>nach 19.00 Uhr</b><p class="rl">Falls Sie nach 19.00 Uhr anreisen, bitten wir Sie, uns dies kurz davor zu melden.</p></div><figure><img src="assets/img/sp-grotte-x.webp" alt="" style="object-position:50% 50%"></figure></div><div class="kk" style="--i:3"><div class="t"><span class="ro">Abreisetag</span><b>bis 10.00 Uhr</b><p class="rl">Check out 10.00 Uhr. Sie können als Hotelgast von 10.00 Uhr bis 17.00 Uhr den Spa zum Vorzugspreis von CHF 25.00 pro Person bei Abreisetag geniessen.</p></div><figure><img src="assets/img/j-stube-x.webp" alt="" style="object-position:50% 50%"></figure></div></section><div class="meta" id="m25"><div class="nr">25</div><div><h3><small>Marke</small>Das Z als Fenster</h3><p>Auf Nachtblau steht nur das gepinselte Z, und durch das Z sieht man die Suite. Beim Scrollen wird das Z so gross, dass man hindurch ins Zimmer tritt.</p></div><dl><dt>Bewegung</dt><dd>Z wächst am Scroll (scale), bis das Bild den Schirm füllt.</dd><dt>Bedienung</dt><dd>Keine, nur Scroll.</dd><dt>Handy</dt><dd>Gleich.</dd><dt>Fotos</dt><dd>z-suite</dd></dl></div><section class="v lang n25" data-sp="1"><div class="kl"><div class="maske"><img src="assets/img/z-suite-x.webp" alt="" style="object-position:50% 50%"></div><div class="oben"><p class="w2">Vor Ihrer Anreise</p><h2 class="rt sh"><span class="sl"><span>Ihr Gepäck ist schon da.</span></span></h2></div>
+  <div class="ende platte"><div class="drei"><div><span class="ro">Gepäck</span><b>2 Tage vorher</b><p class="p">Geben Sie Ihr Gepäck 2 Tage vor Abreise zu Hause am Bahnschalter auf und wir holen es gerne am Postschalter in Saas-Almagell für Sie ab.</p></div><div><span class="ro">Anreisetag</span><b>ab 14.00 Uhr</b><p class="p">Am Anreisetag ist Ihr Gepäck im Zimmer. Am Anreisetag sind die Zimmer ab 14.00 Uhr beziehbar.</p></div><div><span class="ro">Abreisetag</span><b>bis 10.00 Uhr</b><p class="p">Check out 10.00 Uhr.</p></div></div></div></div></section><div class="meta" id="m26"><div class="nr">26</div><div><h3><small>Marke</small>Sternbild</h3><p>Über dem Saastal bei Nacht stehen die vier Sterne und die Krone als Sternbild, verbunden mit feinen Linien. Jeder Stern ist eine Station, antippen zeigt sie.</p></div><dl><dt>Bewegung</dt><dd>Sterne leuchten auf, Tafel tauscht.</dd><dt>Bedienung</dt><dd>Stern antippen.</dd><dt>Handy</dt><dd>Sterne enger, Tafel unten.</dd><dt>Fotos</dt><dd>h-mondnacht</dd></dl></div><section class="v n26"><div class="voll dk-o"><img src="assets/img/h-mondnacht-x.webp" alt="" style="object-position:50% 70%"></div>
+  <svg class="linien" viewBox="0 0 100 100" preserveAspectRatio="none"><polyline class="lin" vector-effect="non-scaling-stroke" points="16,54 32,40 49,48 64,34 82,44"/></svg><div class="st-p" style="left:16%;top:54%"><button class="wahl" data-st="0" aria-selected="true" aria-label="Bahnschalter"><svg class="st" viewBox="0 0 11.20 10.80" fill="currentColor" aria-hidden="true"><use href="#stern" width="11.20" height="10.80"/></svg></button><span>Bahnschalter</span></div><div class="st-p" style="left:32%;top:40%"><button class="wahl" data-st="1" aria-selected="false" aria-label="Postschalter"><svg class="st" viewBox="0 0 11.20 10.80" fill="currentColor" aria-hidden="true"><use href="#stern" width="11.20" height="10.80"/></svg></button><span>Postschalter</span></div><div class="st-p" style="left:49%;top:48%"><button class="wahl" data-st="2" aria-selected="false" aria-label="Ihr Zimmer"><svg class="st" viewBox="0 0 11.20 10.80" fill="currentColor" aria-hidden="true"><use href="#stern" width="11.20" height="10.80"/></svg></button><span>Ihr Zimmer</span></div><div class="st-p" style="left:64%;top:34%"><button class="wahl" data-st="3" aria-selected="false" aria-label="14.00"><svg class="st" viewBox="0 0 11.20 10.80" fill="currentColor" aria-hidden="true"><use href="#stern" width="11.20" height="10.80"/></svg></button><span>14.00</span></div><div class="st-p" style="left:82%;top:44%"><button class="wahl" data-st="4" aria-selected="false" aria-label="10.00"><svg class="kr" viewBox="0 0 9.70 5.50" fill="currentColor" aria-hidden="true"><use href="#krone" width="9.70" height="5.50"/></svg></button><span>10.00</span></div>
+  <div class="oben"><p class="w2">Vor Ihrer Anreise</p><h2 class="rt sh"><span class="sl"><span>Ihr Gepäck ist schon da.</span></span></h2></div><div class="info platte"><div class="an"><span class="ro">Zwei Tage vorher</span><b>Bahnschalter</b><p class="p">Geben Sie Ihr Gepäck 2 Tage vor Abreise zu Hause am Bahnschalter auf und wir holen es gerne am Postschalter in Saas-Almagell für Sie ab.</p></div><div class=""><span class="ro">Saas-Almagell</span><b>Postschalter</b><p class="p">Dort holen wir Ihr Gepäck für Sie ab.</p></div><div class=""><span class="ro">Anreisetag</span><b>Im Zimmer</b><p class="p">Am Anreisetag ist Ihr Gepäck im Zimmer.</p></div><div class=""><span class="ro">Anreisetag</span><b>ab 14.00 Uhr</b><p class="p">Am Anreisetag sind die Zimmer ab 14.00 Uhr beziehbar. Falls Sie nach 19.00 Uhr anreisen, bitten wir Sie, uns dies kurz davor zu melden.</p></div><div class=""><span class="ro">Abreisetag</span><b>bis 10.00 Uhr</b><p class="p">Check out 10.00 Uhr. Sie können als Hotelgast von 10.00 Uhr bis 17.00 Uhr den Spa zum Vorzugspreis von CHF 25.00 pro Person bei Abreisetag geniessen.</p></div></div></section><div class="meta" id="m27"><div class="nr">27</div><div><h3><small>Bewegung</small>Glasschichten in der Tiefe</h3><p>Drei Glastafeln schweben in verschiedener Tiefe über der Bar: hinten das Gepäck, in der Mitte die Anreise, vorne die Abreise. Beim Scrollen ziehen sie verschieden schnell vorbei.</p></div><dl><dt>Bewegung</dt><dd>Tafeln mit verschiedener Geschwindigkeit (translateY am Scroll).</dd><dt>Bedienung</dt><dd>Keine, nur Scroll.</dd><dt>Handy</dt><dd>Tafeln untereinander.</dd><dt>Fotos</dt><dd>bar</dd></dl></div><section class="v lang n27" data-sp="1"><div class="kl"><div class="voll dk-o"><img src="assets/img/bar-x.webp" alt="" style="object-position:50% 50%"></div><div class="oben"><p class="w2">Vor Ihrer Anreise</p><h2 class="rt sh"><span class="sl"><span>Ihr Gepäck ist schon da.</span></span></h2></div>
+  <div class="schicht platte s1"><span class="ro">Gepäck · 2 Tage vorher</span><b>Bahnschalter</b><p class="p">Geben Sie Ihr Gepäck 2 Tage vor Abreise zu Hause am Bahnschalter auf und wir holen es gerne am Postschalter in Saas-Almagell für Sie ab.</p></div>
+  <div class="schicht platte s2"><span class="ro">Anreisetag</span><b>ab 14.00 Uhr</b><p class="p">Am Anreisetag ist Ihr Gepäck im Zimmer. Am Anreisetag sind die Zimmer ab 14.00 Uhr beziehbar.</p></div>
+  <div class="schicht platte s3"><span class="ro">Abreisetag</span><b>bis 10.00 Uhr</b><p class="p">Check out 10.00 Uhr. Sie können als Hotelgast von 10.00 Uhr bis 17.00 Uhr den Spa zum Vorzugspreis von CHF 25.00 pro Person bei Abreisetag geniessen.</p></div></div></section><div class="meta" id="m28"><div class="nr">28</div><div><h3><small>Bewegung</small>Abspann</h3><p>Wie am Ende eines Films: Über dem Bad bei Nacht laufen die Angaben als Abspann nach oben, Rolle und Name, zuletzt die Gastgeber und das Telefon.</p></div><dl><dt>Bewegung</dt><dd>Abspann rollt am Scroll nach oben (translateY).</dd><dt>Bedienung</dt><dd>Keine, nur Scroll.</dd><dt>Handy</dt><dd>Gleich.</dd><dt>Fotos</dt><dd>pool-nacht</dd></dl></div><section class="v lang n28" data-sp="1"><div class="kl"><img class="voll" src="assets/img/pool-nacht-x.webp" alt="" style="object-position:50% 50%"><div class="rolle"><div class="z zg"><svg viewBox="0 0 65.40 59.50" fill="currentColor" aria-hidden="true"><use href="#z" width="65.40" height="59.50"/></svg></div><p class="w2">Vor Ihrer Anreise</p><p class="gross">Ihr Gepäck ist schon da.</p><div><span class="ro">Gepäck</span><b>Bahnschalter, 2 Tage vor Abreise</b></div><div><span class="ro">Abholung</span><b>Postschalter Saas-Almagell</b></div><div><span class="ro">Im Zimmer</span><b>am Anreisetag</b></div><div><span class="ro">Zimmer</span><b>ab 14.00 Uhr</b></div><div><span class="ro">Ankunft nach 19.00 Uhr</span><b>bitte kurz melden</b></div><div><span class="ro">Check out</span><b>10.00 Uhr</b></div><div><span class="ro">Spa am Abreisetag</span><b>bis 17.00 Uhr, CHF 25.00</b></div><div><span class="ro">Gastgeber</span><b>Esther und Fabian Zurbriggen</b></div><div><span class="ro">Telefon</span><b>+41 27 957 23 01</b></div><div><div class="wst"><svg class="st" viewBox="0 0 11.20 10.80" fill="currentColor" aria-hidden="true"><use href="#stern" width="11.20" height="10.80"/></svg><svg class="st" viewBox="0 0 11.20 10.80" fill="currentColor" aria-hidden="true"><use href="#stern" width="11.20" height="10.80"/></svg><svg class="st" viewBox="0 0 11.20 10.80" fill="currentColor" aria-hidden="true"><use href="#stern" width="11.20" height="10.80"/></svg><svg class="st" viewBox="0 0 11.20 10.80" fill="currentColor" aria-hidden="true"><use href="#stern" width="11.20" height="10.80"/></svg><svg class="kr" viewBox="0 0 9.70 5.50" fill="currentColor" aria-hidden="true"><use href="#krone" width="9.70" height="5.50"/></svg></div></div></div></div></section><div class="meta" id="m29"><div class="nr">29</div><div><h3><small>Inhalt</small>Der Abreisetag dauert bis 17 Uhr</h3><p>Statt der Ankunft der Abschied: Check out ist um 10 Uhr, aber das Spa bleibt bis 17 Uhr offen für CHF 25.00. Ein Messingbalken füllt die Stunden von 10 bis 17, darunter drei Spa-Bilder. Das Gepäck steht als kleiner Satz am Schluss.</p></div><dl><dt>Bewegung</dt><dd>Balken füllt sich (scaleX).</dd><dt>Bedienung</dt><dd>Keine.</dd><dt>Handy</dt><dd>Balken schmal, Bilder untereinander.</dd><dt>Fotos</dt><dd>senseliege · sp-sense-2 · aquafit</dd></dl></div><section class="v n29"><div><p class="w2">Vor Ihrer Anreise</p><div style="margin-top:14px"><h2 class="rt"><span class="sl"><span>Der letzte Tag dauert bis 17 Uhr.</span></span></h2></div></div>
+  <div class="leiste"><div class="f"></div><span style="left:0;transform:none;justify-items:start"><span class="ro">Check out</span><b>10.00</b></span><span style="left:100%;transform:translateX(-100%);justify-items:end"><span class="ro">Spa bis</span><b>17.00</b></span></div>
+  <div class="bilder"><figure><img src="assets/img/senseliege-x.webp" alt="" style="object-position:50% 50%"></figure><figure><img src="assets/img/sp-sense-2-x.webp" alt="" style="object-position:50% 50%"></figure><figure><img src="assets/img/aquafit-x.webp" alt="" style="object-position:50% 50%"></figure></div>
+  <div class="unter"><p class="rl">Sie können als Hotelgast von 10.00 Uhr bis 17.00 Uhr den Spa zum Vorzugspreis von CHF 25.00 pro Person bei Abreisetag geniessen.</p><p class="p">Und bei der Anreise: Geben Sie Ihr Gepäck 2 Tage vor Abreise zu Hause am Bahnschalter auf und wir holen es gerne am Postschalter in Saas-Almagell für Sie ab. Am Anreisetag ist Ihr Gepäck im Zimmer.</p></div></section><div class="meta" id="m30"><div class="nr">30</div><div><h3><small>Marke</small>Der Prospekt zum Blättern</h3><p>Ein aufgeschlagener Prospekt im Takt des Hauses: «kommen Sie näher …». Links das Bild, rechts die Seite. Weiterblättern dreht das Blatt um, Seite für Seite die Anreise.</p></div><dl><dt>Bewegung</dt><dd>Blatt dreht um die Kante (rotateY), Bild links blendet über.</dd><dt>Bedienung</dt><dd>Weiter, zurück.</dd><dt>Handy</dt><dd>Bild oben, Seite darunter.</dd><dt>Fotos</dt><dd>haus-turm · r-wohnen · r-zapfen</dd></dl></div><section class="v n30"><div class="buch"><div class="links-s"><img class="an" src="assets/img/haus-turm-x.webp" alt="" style="object-position:50% 50%"></div><div class="rechts-s">
+  <div class="blatt" style="z-index:3"><div><div class="zg" style="width:44px"><svg viewBox="0 0 65.40 59.50" fill="currentColor" aria-hidden="true"><use href="#z" width="65.40" height="59.50"/></svg></div><p class="rt m">kommen Sie näher&nbsp;…</p><p class="rl">… Ihr Gepäck ist schon da.</p><p class="p">Geben Sie Ihr Gepäck 2 Tage vor Abreise zu Hause am Bahnschalter auf und wir holen es gerne am Postschalter in Saas-Almagell für Sie ab.</p></div><div class="rueck"><img src="assets/img/r-wohnen-x.webp" alt="" style="object-position:50% 50%"></div></div>
+  <div class="blatt" style="z-index:2"><div><span class="ro">Anreisetag</span><p class="rt m">ab 14.00 Uhr</p><p class="rl">Am Anreisetag ist Ihr Gepäck im Zimmer. Am Anreisetag sind die Zimmer ab 14.00 Uhr beziehbar.</p><p class="p">Falls Sie nach 19.00 Uhr anreisen, bitten wir Sie, uns dies kurz davor zu melden.</p></div><div class="rueck"><img src="assets/img/r-zapfen-x.webp" alt="" style="object-position:50% 50%"></div></div>
+  <div class="blatt" style="z-index:1"><div><span class="ro">Abreisetag</span><p class="rt m">bis 10.00 Uhr</p><p class="rl">Check out 10.00 Uhr.</p><p class="p">Sie können als Hotelgast von 10.00 Uhr bis 17.00 Uhr den Spa zum Vorzugspreis von CHF 25.00 pro Person bei Abreisetag geniessen.</p><a class="k dk" href="tel:+41279572301"><span>+41 27 957 23 01</span><em><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></em></a></div><div class="rueck"></div></div>
+  </div></div><div class="knoepfe"><button class="k dk" data-bl="-1"><span>Zurück</span><em style="transform:scaleX(-1)"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></em></button><button class="k" data-bl="1"><span>Weiterblättern</span><em><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></em></button></div></section><p class="fuss">Skizzen · Entwurfs-Maschine · 24.10.2026 · nur lokal</p>
+<script>(function(){
+var $=function(s,r){return (r||document).querySelector(s)},$$=function(s,r){return [].slice.call((r||document).querySelectorAll(s))};
+// Auftritt einmal
+var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('da');io.unobserve(x.target)}})},{threshold:.2});
+$$('section.v,.n10 .q').forEach(function(s){io.observe(s)});
+// Scroll-Fortschritt für lange Teile
+var lang=$$('[data-sp]'),n13=$('.n13'),n17=$('.n17'),r=0;
+function tick(){r=0;var h=innerHeight;
+ lang.forEach(function(s){var b=s.getBoundingClientRect();if(b.bottom<-h||b.top>h*2)return;var p=Math.min(1,Math.max(0,-b.top/(b.height-h)));s.style.setProperty('--p',p.toFixed(4));
+  var n=+s.dataset.sp;if(n>1)s.dataset.s=Math.min(n-1,Math.floor(p*n))});
+ if(n13){var b=n13.getBoundingClientRect();n13.style.setProperty('--p',Math.min(1,Math.max(0,(h-b.top)/(h+b.height))).toFixed(3))}
+ if(n17){var bl=$$('.blk',n17),im=$$('.bild img',n17),a=0;bl.forEach(function(x,i){if(x.getBoundingClientRect().top<h*.55)a=i});bl.forEach(function(x,i){x.classList.toggle('an',i===a)});im.forEach(function(x,i){x.classList.toggle('an',i===a)})}
+}
+addEventListener('scroll',function(){if(!r)r=requestAnimationFrame(tick)},{passive:true});addEventListener('resize',tick);tick();
+
+// 05 Ihr Plan
+var pl=$('#plan');if(pl){var an=new Date(2026,9,25),ab=new Date(2026,9,28);
+ var f=new Intl.DateTimeFormat('de-CH',{weekday:'long',day:'numeric',month:'long'}),k=new Intl.DateTimeFormat('de-CH',{day:'numeric',month:'short',year:'numeric'});
+ function tag(d,x){var n=new Date(d);n.setDate(n.getDate()+x);return n}
+ function zeig(){$('[data-an]',pl).textContent=k.format(an);$('[data-ab]',pl).textContent=k.format(ab);
+  $('[data-p1]',pl).textContent=f.format(tag(an,-2));$('[data-p2]',pl).textContent=f.format(an);$('[data-p3]',pl).textContent=f.format(ab)}
+ $$('.wahl',pl).forEach(function(b){b.onclick=function(){var x=+b.dataset.x;if(b.dataset.d==='an'){an=tag(an,x);if(ab<=an)ab=tag(an,1)}else{var n=tag(ab,x);if(n>an)ab=n}zeig()}});zeig()}
+
+// 06 Von wo
+var vw=$('.n06');if(vw){var O=[['Bern','bis Visp 55 Min','Bern'],['Basel','bis Visp 2 h','Basel'],['Zürich','nach Visp 2 h','Zürich'],['Flughafen Zürich','Entfernung 2 Stunden','Ihrem Bahnhof'],['Mailand','Auto 2,5 Stunden','Ihrem Bahnhof'],['Genf','Auto 3 Stunden','Ihrem Bahnhof']];
+ var B='Mit dem Personenzug bitte Endstation Visp lösen – anschliessend mit dem Bus von Visp nach Saas-Grund und Saas-Almagell.';
+ function ow(i){$$('.orte .wahl',vw).forEach(function(x,j){x.setAttribute('aria-selected',j==i)});var o=O[i];
+  var W2=[B,B,B,'Flughafen Zürich · Entfernung: 2 Stunden','Flughafen Aeroporti di Milano (Italien) · Entfernung: Auto 2,5 Stunden','Flughafen Genf · Entfernung: Auto 3 Stunden'];
+  $('[data-o1]',vw).textContent=o[1];$('[data-o2]',vw).textContent=W2[i];
+  $('[data-o3]',vw).textContent=(i<3?'Am Bahnschalter in '+o[2]:'Am Bahnschalter bei Ihnen zu Hause')+' aufgeben. Wir holen es am Postschalter in Saas-Almagell für Sie ab.'}
+ $$('.orte .wahl',vw).forEach(function(x,i){x.onclick=function(){ow(i)}});ow(0)}
+
+// 07 Koffer schieben
+var ko=$('.n07');if(ko){var rg=$('input',ko),im=$$('.bs img',ko),tx=$$('.txt p',ko),hs=$$('.halte span',ko);
+ rg.oninput=function(){var i=rg.value<34?0:rg.value<75?1:2;[im,tx,hs].forEach(function(l){l.forEach(function(x,j){x.classList.toggle('an',j===i)})})}}
+
+// 08 Karte
+var ka=$('.n08');if(ka){var kt=$('.karte',ka);function um(){kt.classList.toggle('um')}kt.onclick=um;kt.onkeydown=function(ev){if(ev.key==='Enter'||ev.key===' '){ev.preventDefault();um()}};$('[data-um]',ka).onclick=um}
+
+// 09 Anreisetag
+var zs=$('.n09');if(zs){var rz=$('input',zs),zi=$('.zeit',zs),zt=$('.txt',zs),zb=$$('.bs img',zs);
+ var T=['Am Anreisetag sind die Zimmer ab 14.00 Uhr beziehbar. Ihr Gepäck wartet schon im Zimmer.','Ihr Zimmer ist bereit, und Ihr Gepäck ist schon da. Am Anreisetag ist Ihr Gepäck im Zimmer.','Falls Sie nach 19.00 Uhr anreisen, bitten wir Sie, uns dies kurz davor zu melden: +41 27 957 23 01.'];
+ function z(){var h=+rz.value,i=h<14?0:h<19?1:2;zi.textContent=(h<10?'0':'')+h+'.00';zt.textContent=T[i];zb.forEach(function(x,j){x.classList.toggle('an',j===i)})}rz.oninput=z;z()}
+
+// 19 Lichtschalter
+var li=$('.n19');if(li){var sw=$('.schalter',li);sw.onclick=function(){var an=li.classList.toggle('hell');sw.setAttribute('aria-pressed',an);sw.setAttribute('aria-label',an?'Licht ausschalten':'Licht einschalten')}}
+
+// 21 Diashow
+var di=$('.n21');if(di){var dI=$$('.dia img',di),dB=$$('.balken i',di),dC=$$('.cap p',di),dn=0,dt;
+ function zeig(i){dn=i;dI.forEach(function(x,j){x.classList.toggle('an',j===i)});dC.forEach(function(x,j){x.classList.toggle('an',j===i)});
+  dB.forEach(function(x,j){x.classList.remove('an','voll');void x.offsetWidth;if(j<i)x.classList.add('voll');if(j===i)x.classList.add('an')});clearTimeout(dt);dt=setTimeout(function(){zeig((dn+1)%3)},6000)}
+ di.onclick=function(){zeig((dn+1)%3)};zeig(0)}
+
+// 22 Vorher, nachher
+var vn=$('.n22');if(vn){var zieh=false;function set(ev){var b=vn.getBoundingClientRect(),x=Math.min(.92,Math.max(.08,(ev.clientX-b.left)/b.width));vn.style.setProperty('--x',(x*100).toFixed(2)+'%')}
+ vn.addEventListener('pointerdown',function(ev){zieh=true;set(ev)});addEventListener('pointermove',function(ev){if(zieh)set(ev)});addEventListener('pointerup',function(){zieh=false})}
+
+// 23 Karussell
+var kr=$('.n23');if(kr){var w=0,ai=0,ring=$('.ring',kr),fl=$$('.fl',kr);function dim(){fl.forEach(function(x,j){x.style.opacity=j===ai?1:.45})}dim();$$('[data-dreh]',kr).forEach(function(b){b.onclick=function(){var n=Math.min(fl.length-1,Math.max(0,ai+ +b.dataset.dreh));if(n===ai)return;ai=n;w=-40*ai;ring.style.setProperty('--w',w+'deg');dim()}})}
+
+// 26 Sternbild
+var sb=$('.n26');if(sb){var sB=$$('[data-st]',sb),sI=$$('.info>div',sb);sB.forEach(function(b,i){b.onclick=function(){sB.forEach(function(x,j){x.setAttribute('aria-selected',j===i)});sI.forEach(function(x,j){x.classList.toggle('an',j===i)})}})}
+
+// 30 Prospekt
+var pr=$('.n30');if(pr){var bl=$$('.blatt',pr),bi=$$('.links-s img',pr),sei=0;
+ $$('[data-bl]',pr).forEach(function(b){b.onclick=function(){var n=Math.min(bl.length-1,Math.max(0,sei+ +b.dataset.bl));if(n===sei)return;
+  if(n>sei)bl[sei].classList.add('um');else bl[n].classList.remove('um');sei=n;
+  bl.forEach(function(x,j){x.style.zIndex=x.classList.contains('um')?10+j:bl.length-j})}})}
+})();
+</script></body></html>

@@ -1,0 +1,103 @@
+/* 15 Leitideen (23.10.2026). Bausteine wie bisher: 3D-Kachel (runde Ecke, weich auslaufender Schatten), Knöpfe mit Knauf, Foto zoomt im Rahmen,
+   Kachel schwebt deckend herauf, Titel aus dem Schlitz. Neu je Fassung: Komposition und Geschichte. Nur transform und opacity. */
+.k15{--u:clamp(30px,3.6vw,52px);--g:12px;padding-top:clamp(70px,7vw,110px);padding-bottom:clamp(70px,7vw,110px)}
+.k15 .gr{position:relative;z-index:1;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));grid-auto-rows:var(--u);gap:var(--g)}
+.k15 .tw{position:relative;display:grid;grid-template-rows:minmax(0,1fr) auto;min-width:0;min-height:0}
+.k15 .t{position:relative;margin:0;min-height:0;overflow:hidden;border-radius:clamp(14px,1.4vw,22px);box-shadow:0 1px 0 rgba(255,255,255,.06) inset,0 42px 70px -38px rgba(0,0,0,.75),0 10px 22px -14px rgba(0,0,0,.45)}
+.ri-hell .k15 .t,.k15.ri-hell .t,.k15.ri-leinen .t,.k15.ri-schnee .t{box-shadow:0 40px 64px -38px rgba(24,33,63,.5),0 10px 20px -14px rgba(24,33,63,.3)}
+.k15 .t img{display:block;width:100%;height:100%;object-fit:cover;scale:1.12;transition:scale 2.4s var(--e1)}
+.k15 .sw-da .t img,.k15 .tw.sw-da img{scale:1}
+@media (hover:hover){.k15 .tw.sw-da .t:hover img{scale:1.02;transition:scale 2.6s var(--e1)}}
+.k15 .cap{margin:12px 2px 0;display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.k15 .cap b{font-family:var(--licht);font-weight:400;font-size:clamp(16px,1.25vw,19px);line-height:1.25}
+.k15 .cap span{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;opacity:.7;white-space:nowrap}
+.k15 .tx{min-width:0;display:flex;flex-direction:column;justify-content:flex-start}
+.k15 .tx.unten{justify-content:flex-end}
+.k15 .tx.mitte{justify-content:center;padding:0 clamp(6px,1vw,20px)}
+.k15 .tx.gross{justify-content:center;padding-left:clamp(10px,2vw,36px)}
+.k15 .tx.gross .rt{font-size:clamp(44px,4.6vw,78px)}
+.k15 .tx .rt{font-size:clamp(38px,3.9vw,66px)}
+.k15 .tx .rl{max-width:38ch}
+.k15 .kk-n{font-family:var(--licht);font-size:clamp(20px,1.6vw,26px);opacity:1;margin-top:24px}
+.k15 .r-knoepfe{margin-top:26px}
+.k15 .kz{display:flex;gap:clamp(18px,2.4vw,40px);margin-top:26px}
+.k15 .kz p{margin:0;display:grid;gap:6px}
+.k15 .kz b{font-family:var(--licht);font-weight:300;font-size:clamp(30px,2.8vw,46px);letter-spacing:-.02em;color:var(--ms-h);line-height:1}
+.k15.ri-hell .kz b,.k15.ri-leinen .kz b,.k15.ri-schnee .kz b{color:#8A6A2A}
+.k15 .kz span{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;opacity:.72;max-width:20ch;line-height:1.5}
+.k15 .kz-spalte{flex-direction:column;gap:18px}
+
+/* 1 · Einladungen: die sechs Sätze des Prospekts als Reihe über jedem Kapitel */
+.k-steps{display:flex;flex-wrap:wrap;gap:8px 26px;margin:0 0 clamp(30px,3vw,46px);padding-bottom:16px;border-bottom:1px solid rgba(217,183,88,.28);font-family:var(--licht);font-size:clamp(15px,1.2vw,18px);opacity:.55}
+.k-steps span.an{opacity:1;color:var(--ms-h)}
+.ri-hell .k-steps span.an{color:#8A6A2A}
+.k-steps span.an::before{content:'';display:inline-block;width:22px;height:1px;background:currentColor;vertical-align:middle;margin-right:10px}
+
+/* 2 · Sterne: je Kapitel ein Stern mehr */
+.k-sterne{display:flex;align-items:center;gap:14px;margin:0 0 clamp(30px,3vw,44px);color:rgba(217,183,88,.28)}
+.k-sterne svg{width:26px;height:26px;transform:scale(.7);transition:transform 1s var(--feder)}
+.k-sterne svg.an{color:var(--ms)}
+.k-sterne .kr{width:34px}
+.ri.da .k-sterne svg{transform:none}
+.k-sterne span{margin-left:14px;font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--ms-h)}
+.ri-hell .k-sterne span{color:#8A6A2A}
+
+/* 3 · Julen: tiefes Dunkel, Licht aus den Bildern, Karte liegt in Tiefe darüber */
+.ri-julen{background:#0C0907;color:#F4EDE3}
+.k15 .kk{height:100%;padding:clamp(24px,2.6vw,42px);border-radius:clamp(16px,1.6vw,24px);background:linear-gradient(180deg,#1F1813,#16110D);box-shadow:inset 0 0 0 1px rgba(217,183,88,.32),0 60px 90px -40px rgba(0,0,0,.95);overflow:hidden}
+.k15 .kk .rt{font-size:clamp(34px,3.2vw,54px)}
+.k15 .kk.hell{background:linear-gradient(180deg,#FFFDF8,#F1EADD);color:var(--ink);box-shadow:inset 0 1px 0 #fff,inset 0 0 0 1px rgba(168,138,58,.3),0 46px 80px -40px rgba(0,0,0,.8)}
+.k15 .kk.hell .ro{color:#8A6A2A}
+.k15 .kk.hell .kz b{color:#8A6A2A}
+
+/* 4 · Doppelseite */
+.k-zitat{margin:26px 0 0;font-family:var(--licht);font-weight:300;font-size:clamp(20px,1.7vw,27px);line-height:1.4;color:#8A6A2A}
+
+/* 5 · Schnee bis Bernstein */
+.ri-bernstein{background:#24170C;color:#F6EBDD}
+
+/* 6 · Fenster gehen an */
+.k15 .kl8{position:absolute;inset:0;background:#030614;opacity:.62;transition:opacity 1s ease;transition-delay:calc(var(--n,0)*0.16s + .25s);pointer-events:none}
+.k15 .sw-da .kl8{opacity:0}
+.k15 .t.licht img{scale:1}
+.k15 .tx.fenster{border-radius:clamp(14px,1.4vw,22px);background:linear-gradient(180deg,#152052,#0E1638);box-shadow:inset 0 0 0 1px rgba(233,212,154,.3),0 42px 70px -38px rgba(0,0,0,.75);padding:clamp(22px,2.4vw,38px);justify-content:center}
+.k15 .tx.fenster .rt{font-size:clamp(32px,3vw,50px)}
+
+/* 8 · Pirmins Spur */
+.k15 .spur{position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
+.k15 .spur path{fill:none;stroke:#C9A54E;stroke-width:1.4;opacity:.55;vector-effect:non-scaling-stroke;stroke-dasharray:3 9}
+
+/* 9 · Zwei Welten: Grund halb Nacht, halb Schokolade */
+.ri-zwei{background:linear-gradient(90deg,#0E1638 0 50%,#22180F 50% 100%);color:#F4EDE3}
+.k15 .tx.rechts{padding-left:clamp(10px,2vw,30px)}
+.k15 .tw:nth-child(n){}
+.ri-zwei .gr>.tx.rechts:first-of-type{}
+
+/* 11 · Der Satz trägt die Bilder */
+.k-satz{margin:18px 0 0;font-family:var(--licht);font-weight:300;font-size:clamp(40px,5.2vw,88px);line-height:1.22;letter-spacing:-.02em}
+.k-satz .sw{display:inline}
+.k-satz .ib{display:inline-block;vertical-align:-.12em;width:2.1em;height:.92em;margin:0 .14em;border-radius:.2em;overflow:hidden;box-shadow:0 22px 40px -20px rgba(0,0,0,.7)}
+.ri-hell .k-satz .ib{box-shadow:0 20px 36px -20px rgba(24,33,63,.5)}
+.k-satz .ib img{display:block;width:100%;height:100%;object-fit:cover;scale:1.15;transition:scale 2s var(--e1)}
+.k-satz .ib.sw-da img{scale:1}
+.k-satz-rs{margin-top:clamp(30px,3vw,46px)!important;max-width:60ch}
+.k-namen{display:flex;flex-wrap:wrap;gap:10px 34px;margin:clamp(36px,3.4vw,54px) 0 0}
+.k-namen a{display:grid;gap:4px;padding-top:12px;border-top:1px solid rgba(138,106,42,.35);text-decoration:none}
+.k-namen b{font-family:var(--licht);font-weight:400;font-size:19px}
+.k-namen span{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;color:#8A6A2A}
+
+/* Auswahl-Leiste unten */
+.vnr{position:fixed;z-index:90;left:50%;bottom:18px;transform:translateX(-50%);display:flex;align-items:center;gap:6px;padding:6px;border-radius:999px;background:#0A1129;box-shadow:0 18px 40px -12px rgba(0,0,0,.6),inset 0 0 0 1px rgba(233,212,154,.3);font-family:var(--mono);font-size:11px;letter-spacing:.1em;color:#F4F2EC}
+.vnr a{display:grid;place-items:center;min-width:38px;height:38px;padding:0 12px;border-radius:999px;color:#F4F2EC;text-decoration:none;background:rgba(255,255,255,.07)}
+.vnr b{font-weight:400;padding:0 14px;white-space:nowrap}
+
+@media (max-width:760px){
+ .k15 .gr{grid-template-columns:1fr 1fr;grid-auto-rows:auto}
+ .k15 .gr>*{grid-area:auto!important}
+ .k15 .gr>.tx{grid-column:1/-1}
+ .k15 .tw .t{aspect-ratio:4/5}
+ .k-satz{font-size:34px}
+ .ri-zwei{background:#0E1638}
+}
+
+.k15 .gr>:nth-child(1) .kl8{--n:1}.k15 .gr>:nth-child(2) .kl8{--n:2}.k15 .gr>:nth-child(3) .kl8{--n:3}.k15 .gr>:nth-child(4) .kl8{--n:4}.k15 .gr>:nth-child(5) .kl8{--n:5}.k15 .gr>:nth-child(6) .kl8{--n:6}.k15 .gr>:nth-child(7) .kl8{--n:7}.k15 .gr>:nth-child(8) .kl8{--n:8}.k15 .gr>:nth-child(9) .kl8{--n:9}

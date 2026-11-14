@@ -1,0 +1,201 @@
+/* Wellness & Spa · Zimmerseite, 15 Darstellungen der Zimmerabschnitte (25.10.2026). Alle Fotos 3:2, Hochformate ganz gezeigt, keine Miniaturen. */
+.zav{--gold:#8A6A2A}
+.za{--rk:clamp(14px,1.4vw,22px)}
+.za img.hoch{object-fit:contain!important;background:#EEE8DE}
+.za .zd-z{margin-top:clamp(50px,5vw,80px)}
+.za .zd-z img{width:34px;height:auto}
+.za .ul2{margin-top:18px}
+.za .r-knoepfe{margin-top:26px}
+.za-in{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(30px,4.5vw,80px);align-items:center;transform:translateY(40px);transition:transform 1.4s var(--e1)}
+.za-in.sw-da,.za-in:not([data-sw]){transform:none}
+.za--r .za-in{grid-template-columns:minmax(0,7fr) minmax(0,5fr)}
+.za--r .za-in>.za-t,.za--r .za-in>.za-stick{order:2}
+.za .zd-n{font-size:clamp(32px,3.2vw,54px)}
+.za figure{margin:0}
+.za-sch{box-shadow:0 1px 0 rgba(255,255,255,.5) inset,0 40px 70px -40px rgba(24,33,63,.55),0 10px 22px -14px rgba(24,33,63,.3)}
+
+/* Rahmen mit Knäufen */
+.za-wx{min-width:0}
+.za-r{position:relative;aspect-ratio:3/2;border-radius:var(--rk);overflow:hidden;box-shadow:0 1px 0 rgba(255,255,255,.5) inset,0 40px 70px -40px rgba(24,33,63,.55),0 10px 22px -14px rgba(24,33,63,.3)}
+.za-f{position:absolute!important;inset:0;border-radius:0!important;opacity:0;transition:opacity .7s ease}
+.za-f.an{opacity:1}
+.za-f img{transform:scale(1.04);transition:transform 1.6s var(--e1)}
+.za-f.an img{transform:none}
+.za-st{display:flex;align-items:center;gap:12px;margin-top:16px;min-width:0}
+.za-k{flex:none;width:46px;height:46px;border:0;border-radius:50%;cursor:pointer;display:grid;place-items:center;background:linear-gradient(180deg,#F1E2B4,#C9A54E);box-shadow:inset 0 1px 0 rgba(255,255,255,.6),0 8px 18px -8px rgba(0,0,0,.45);transition:transform .35s var(--e1)}
+.za-k:active{transform:scale(.92)}
+.za-k svg{width:15px;height:15px;stroke:#1B2440;fill:none;stroke-width:1.5}
+.za-z{flex:none;margin:0;min-width:3.4em;text-align:center;font-family:var(--mono);font-size:11px;letter-spacing:.14em}
+.za-z b{font-weight:400}
+.za-cap{margin:0 0 0 8px;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+
+/* Alle Fotos */
+.za-lbw{min-width:0}
+.za-alle{display:inline-flex;align-items:center;gap:12px;height:50px;margin-top:16px;padding:0 6px 0 20px;border:0;border-radius:999px;cursor:pointer;background:#FFFDF8;color:var(--ink);
+ font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;box-shadow:0 14px 30px -14px rgba(24,33,63,.5),0 0 0 1px rgba(24,33,63,.06)}
+.za-alle b{font-weight:400;color:var(--gold)}
+.za-alle em{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(180deg,#F1E2B4,#C9A54E)}
+.za-alle svg{width:14px;height:14px;stroke:#1B2440;fill:none;stroke-width:1.5}
+.za-lb{position:fixed;inset:0;z-index:115;pointer-events:none}
+.za-lbhg{position:absolute;inset:0;background:#0A1129;opacity:0;transition:opacity .45s}
+.za-lbin{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;padding:40px 24px 90px;opacity:0;transform:translateY(24px);transition:opacity .45s,transform .7s var(--e1)}
+.za-lb.offen{pointer-events:auto}.za-lb.offen .za-lbhg{opacity:.96}.za-lb.offen .za-lbin{opacity:1;transform:none}
+.za-lbr{position:relative;width:min(1200px,92vw);aspect-ratio:3/2;max-height:72vh}
+.za-lbr img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;opacity:0;transition:opacity .5s;background:none!important}
+.za-lbr img.an{opacity:1}
+.za-st--lb{color:#F4F2EC}.za-st--lb .za-cap{color:#D9B758}
+.za-lbzu{margin-left:18px;height:44px;padding:0 20px;border:0;border-radius:999px;cursor:pointer;background:#FFFDF8;color:#18213F;font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase}
+html.za-still{overflow:hidden}
+
+/* Kopf in zwei Spalten (02, 10) */
+.za-kopf2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0 clamp(30px,5vw,90px);align-items:start;margin-bottom:clamp(24px,2.6vw,40px);transform:translateY(40px);transition:transform 1.4s var(--e1)}
+.za-kopf2.sw-da{transform:none}
+.za-kopf2 .ul2{margin-top:6px}
+
+/* 02 Seitwärts */
+.za-bandw{position:relative}
+.za-bpf{position:absolute;z-index:3;right:0;top:-66px;display:flex;gap:10px}
+.za-band{display:flex;gap:clamp(14px,1.6vw,22px);overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding-bottom:6px;margin-right:calc(-1 * var(--rand,40px))}
+.za-band::-webkit-scrollbar{display:none}
+.za-bf{flex:none;width:min(44vw,640px);scroll-snap-align:start}
+.za-bf img{aspect-ratio:3/2;height:auto!important;border-radius:var(--rk);box-shadow:0 30px 60px -36px rgba(24,33,63,.55)}
+.za-bf figcaption{margin-top:12px;font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.za-v02 figure{overflow:visible!important;border-radius:0!important}
+
+/* 03 Text bleibt stehen */
+.za-v03{overflow:visible!important}
+.za-in--st{align-items:start}
+.za-stick{position:sticky;top:130px}
+.za-spalte{display:grid;gap:clamp(16px,1.8vw,26px)}
+.za-spalte .za-g{aspect-ratio:3/2;box-shadow:0 40px 70px -40px rgba(24,33,63,.55);transform:translateY(40px);transition:transform 1.3s var(--e1)}
+.za-spalte .za-g.sw-da{transform:none}
+.za-spalte .za-lbw{display:grid;gap:clamp(16px,1.8vw,26px)}
+
+/* 04 Karte auf dem Foto */
+.za-in--karte{grid-template-columns:repeat(12,minmax(0,1fr))!important;gap:0}
+.za-in--karte>.za-wx{grid-column:1/9;grid-row:1}
+.za-in--karte>.za-karte{grid-column:8/13;grid-row:1;z-index:2;align-self:center;order:0!important;padding:clamp(26px,2.6vw,42px);border-radius:calc(var(--rk) + 6px);background:#FFFDF8;box-shadow:0 40px 80px -40px rgba(24,33,63,.6),0 10px 24px -14px rgba(24,33,63,.3)}
+.za--r .za-in--karte>.za-wx{grid-column:5/13}
+.za--r .za-in--karte>.za-karte{grid-column:1/6}
+.za-v04 .za-st{padding-left:4px}
+
+/* 05 Vier Fenster, 11 Fenster gehen an */
+.za-raster{display:grid;grid-template-columns:1fr 1fr;gap:clamp(12px,1.4vw,20px)}
+.za-raster .za-g{aspect-ratio:3/2;box-shadow:0 30px 60px -36px rgba(24,33,63,.55)}
+.za-raster1{grid-template-columns:1fr}
+.za-raster3 .za-g:last-child{grid-column:1/-1}
+.za-v11 .zd-n,.za-v11 .zd-eck span{color:#F4F2EC}
+.za-v11 .zd-ro,.za-v11 .zd-eck i{color:#D9B758}
+.za-v11 .zd-eck,.za-v11 .zd-eck span+span,.za-v11 .ul2 li{border-color:rgba(233,212,154,.2)!important}
+.za-v11 .ul2 li{color:rgba(244,242,236,.85)}
+.za-fenster .za-g{position:relative;box-shadow:0 0 0 1px rgba(233,212,154,.16),0 30px 80px -30px rgba(233,190,110,.35)}
+.za-fenster .za-g::after{content:"";position:absolute;inset:0;background:#0A1129;opacity:.72;transition:opacity 1.1s ease;pointer-events:none}
+.za-in.sw-da .za-fenster .za-g::after{opacity:0}
+.za-in.sw-da .za-fenster .za-g:nth-child(2)::after{transition-delay:.4s}
+.za-in.sw-da .za-fenster .za-g:nth-child(3)::after{transition-delay:.8s}
+.za-in.sw-da .za-fenster .za-g:nth-child(4)::after{transition-delay:1.2s}
+.za-v11 .za-alle{background:#18214A;color:#F4F2EC}
+
+/* 06 Grosser Name */
+.za-band6{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;padding-bottom:clamp(16px,1.8vw,26px);margin-bottom:clamp(22px,2.6vw,40px);border-bottom:1px solid rgba(24,33,63,.16)}
+.za-gross{margin:0;overflow:hidden;font-family:var(--licht);font-weight:300;font-size:clamp(44px,6vw,104px);line-height:1.02;letter-spacing:-.035em}
+.za-gross span{display:inline-block;transform:translateY(105%);transition:transform 1.3s var(--e1)}
+.za-band6.sw-da .za-gross span{transform:none}
+.za-m2{margin:0 0 10px;font-family:var(--mono);font-size:12px;letter-spacing:.18em;color:var(--gold);white-space:nowrap}
+.za-reihe{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(12px,1.4vw,20px)}
+.za-reihe2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.za-reihe1{grid-template-columns:minmax(0,2fr) minmax(0,1fr)}
+.za-reihe .za-g{aspect-ratio:3/2;box-shadow:0 30px 60px -36px rgba(24,33,63,.55)}
+.za-unten{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1.2fr) minmax(0,.8fr);gap:clamp(24px,3vw,50px);margin-top:clamp(26px,3vw,44px);align-items:start}
+.za-unten .zd-ro{grid-column:1;margin:0}
+.za-unten .zd-eck{grid-column:1;grid-row:2;margin-top:16px}
+.za-unten .ul2{grid-column:2;grid-row:1/3;margin:0}
+.za-unten .r-knoepfe{grid-column:3;grid-row:1;margin:0;flex-direction:column;align-items:flex-start}
+
+/* 07 Reiter */
+.za-reiter{display:flex;gap:26px;margin-bottom:14px}
+.za-reiter button{padding:6px 0;border:0;background:none;cursor:pointer;font-family:var(--licht);font-size:clamp(17px,1.4vw,22px);color:#9AA0B2;border-bottom:2px solid transparent;transition:color .3s,border-color .3s}
+.za-reiter button.an{color:var(--ink);border-color:#C9A54E}
+
+/* 08 Zahlen */
+.za-zz{display:grid;grid-template-columns:1.25fr 1fr 1fr;margin:22px 0 0;border-top:1px solid rgba(24,33,63,.16);border-bottom:1px solid rgba(24,33,63,.16)}
+.za-zz p{margin:0;padding:14px 14px 12px 0}
+.za-zz p+p{padding-left:14px;border-left:1px solid rgba(24,33,63,.16)}
+.za-zz b{display:block;font-family:var(--licht);font-weight:200;font-size:clamp(38px,3.8vw,66px);line-height:1;letter-spacing:-.04em;white-space:nowrap}
+.za-zz span{display:block;margin-top:8px;font-family:var(--mono);font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+
+/* 09 Stapel */
+.za-stapel .za-r{overflow:visible;box-shadow:none;border-radius:0}
+.za-stapel .za-f{opacity:1;padding:12px;background:#FFFDF8;border-radius:8px!important;box-shadow:0 26px 50px -30px rgba(24,33,63,.6),0 2px 6px -3px rgba(24,33,63,.25);
+ transform:translate(calc(var(--p,0) * 6px),calc(var(--p,0) * 6px)) rotate(var(--rot,0deg));z-index:calc(20 - var(--p,0));transition:transform .8s var(--e1)}
+.za-stapel .za-f img{border-radius:3px;transform:none}
+.za-stapel .za-f:nth-child(odd){--rot:-1.6deg}.za-stapel .za-f:nth-child(even){--rot:1.3deg}
+.za-stapel .za-f[data-p="0"]{--rot:0deg}
+.za-stapel .za-f.weg{transform:translate(105%,6%) rotate(8deg)}
+.za-stapel .za-f[data-p]:not([data-p="0"]):not([data-p="1"]):not([data-p="2"]){opacity:0}
+
+/* 10 Immer zwei */
+.za-paar .za-f{display:grid;grid-template-columns:1fr 1fr;gap:clamp(12px,1.4vw,20px);background:transparent}
+.za-paar .za-r{aspect-ratio:3/1;overflow:visible;box-shadow:none;border-radius:0}
+.za-paar .za-f figure{border-radius:var(--rk);overflow:hidden;box-shadow:0 30px 60px -36px rgba(24,33,63,.55)}
+
+/* 12 Doppelseite */
+.za-buch{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);background:#FFFDF8;border-radius:calc(var(--rk) + 4px);box-shadow:0 50px 90px -50px rgba(24,33,63,.55),0 2px 0 #E7DFD0,0 4px 0 #EFE8DB,0 6px 0 #E7DFD0;
+ position:relative;transform:translateY(40px);transition:transform 1.4s var(--e1)}
+.za-buch.sw-da{transform:none}
+.za-buch::after{content:"";position:absolute;top:24px;bottom:24px;left:53.5%;width:1px;background:rgba(24,33,63,.12)}
+.za-buch>.za-wx{padding:clamp(18px,2vw,30px)}
+.za-buch>.za-t{padding:clamp(26px,3vw,52px)}
+.za-blatt .za-r{perspective:1800px;overflow:visible;box-shadow:none}
+.za-blatt .za-f{border-radius:var(--rk)!important;overflow:hidden;transition:none;transform-origin:0 50%}
+.za-blatt .za-f.an{z-index:1}
+.za-blatt .za-f.weg{opacity:1;z-index:2;animation:zablatt .85s var(--e1) forwards;box-shadow:20px 0 40px -20px rgba(24,33,63,.5)}
+@keyframes zablatt{to{transform:rotateY(-96deg)}}
+.za--r .za-buch{grid-template-columns:minmax(0,1fr) minmax(0,1.15fr)}
+.za--r .za-buch>.za-wx{order:2}
+.za--r .za-buch::after{left:46.5%}
+
+/* 13 Detail zuerst */
+.za-zoom{aspect-ratio:3/2;box-shadow:0 40px 70px -40px rgba(24,33,63,.55)}
+.za-zoom img{transform-origin:var(--o);transform:scale(var(--z,1));will-change:transform}
+
+/* 14 Zwei nebeneinander */
+.za-paare{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,4vw,70px);align-items:start}
+.za-paare--1{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+.za-sp{scroll-margin-top:110px;transform:translateY(40px);transition:transform 1.4s var(--e1)}
+.za-sp.sw-da{transform:none}
+.za-sp+.za-sp.sw-da{transition-delay:.12s}
+.za-sp .za-t{margin-top:22px}
+.za-v14 .zd-n{font-size:clamp(28px,2.6vw,44px)}
+
+/* 15 Bühne und Liste */
+.za-v15{overflow:visible!important}
+.za-bzin{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(30px,4.5vw,80px);align-items:start}
+.za-buehne{position:sticky;top:16vh}
+.za-bz{position:absolute;inset:0 0 auto;opacity:0;pointer-events:none;transition:opacity .6s}
+.za-bz.an{position:relative;opacity:1;pointer-events:auto}
+.za-be{min-height:84vh;display:flex;flex-direction:column;justify-content:center;border-top:1px solid rgba(24,33,63,.12);scroll-margin-top:90px}
+.za-be .zd-n{color:#9AA0B2;transition:color .5s}
+.za-be.an .zd-n{color:var(--ink)}
+.za-mob{display:none}
+
+@media (max-width:900px){
+ .za-in,.za--r .za-in,.za-kopf2,.za-paare,.za-bzin,.za-buch,.za--r .za-buch{grid-template-columns:1fr!important}
+ .za--r .za-in>.za-t,.za--r .za-in>.za-stick,.za--r .za-buch>.za-wx{order:0}
+ .za-in--karte>.za-wx,.za--r .za-in--karte>.za-wx,.za-in--karte>.za-karte,.za--r .za-in--karte>.za-karte{grid-column:1!important;grid-row:auto!important}
+ .za-in--karte>.za-karte{margin:-40px 12px 0}
+ .za-stick{position:static}
+ .za-bf{width:82vw}.za-bpf{display:none}
+ .za-band6{flex-direction:column;align-items:flex-start;gap:6px}
+ .za-reihe,.za-reihe2,.za-reihe1{grid-template-columns:1fr}
+ .za-unten{grid-template-columns:1fr}.za-unten>*{grid-column:1!important;grid-row:auto!important}
+ .za-paar .za-r{aspect-ratio:3/4}.za-paar .za-f{grid-template-columns:1fr}
+ .za-buch::after{display:none}
+ .za-buehne{display:none}.za-mob{display:block;margin-bottom:20px}.za-be{min-height:0;padding:30px 0}.za-be .zd-n{color:var(--ink)}
+ .za-cap{display:none}
+ .za-zz b{font-size:30px}
+}
+.za-v05 .za-in,.za-v11 .za-in{grid-template-columns:minmax(0,4fr) minmax(0,8fr)}
+.za-v05.za--r .za-in,.za-v11.za--r .za-in{grid-template-columns:minmax(0,8fr) minmax(0,4fr)}
+@media (max-width:900px){.za-v05 .za-in,.za-v11 .za-in,.za-v05.za--r .za-in,.za-v11.za--r .za-in{grid-template-columns:1fr}}
+@media (max-width:900px){.za-raster{grid-template-columns:1fr}.za-raster3 .za-g:last-child{grid-column:auto}}

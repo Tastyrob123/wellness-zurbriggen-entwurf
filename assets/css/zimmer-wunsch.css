@@ -1,0 +1,48 @@
+/* Wellness & Spa · Zimmerseite «Der Wunschzettel» (24.10.2026). Nur transform/opacity; Karten treten zurück statt zu verschwinden, nichts springt. */
+.zw{--gold:#8A6A2A}
+
+/* 1 · Wunschzettel */
+.zw-zettel{position:relative;margin:0 0 clamp(30px,3vw,48px);padding:clamp(26px,2.8vw,44px) clamp(24px,3vw,52px);border-radius:calc(var(--rk,18px) + 10px);background:#FFFDF8;
+ box-shadow:0 1px 0 #fff inset,0 34px 60px -40px rgba(24,33,63,.5),0 8px 18px -12px rgba(24,33,63,.2)}
+.zw-zettel::before{content:"";position:absolute;left:clamp(24px,3vw,52px);right:clamp(24px,3vw,52px);top:0;height:3px;border-radius:0 0 3px 3px;background:#C9A54E}
+.zw-satz{margin:10px 0 0;font-family:var(--licht);font-weight:300;font-size:clamp(24px,2.5vw,40px);line-height:1.62;letter-spacing:-.01em;color:#5D667E}
+.zw-w{position:relative;display:inline;padding:0!important;border:0;background:none;cursor:pointer;font:inherit;color:var(--ink);
+ text-decoration:underline;text-decoration-style:dotted;text-decoration-color:#C9A54E;text-decoration-thickness:1.5px;text-underline-offset:.22em;transition:color .3s}
+.zw-w:hover{color:#000}
+.zw-w[aria-pressed="true"]{text-decoration-style:solid;text-decoration-thickness:3px}
+.zw .zw-w .zw-stern{position:absolute;left:-.5em;top:.02em;width:.5em;height:.5em;object-fit:contain;opacity:0;transform:scale(.3) rotate(-40deg);transition:transform .6s cubic-bezier(.3,1.6,.4,1),opacity .25s}
+.zw .zw-w[aria-pressed="true"] .zw-stern{opacity:1;transform:none}
+.zw-stand{margin:20px 0 0;display:flex;flex-wrap:wrap;gap:8px 22px;align-items:baseline;font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+.zw-leer{padding:0!important;border:0;background:none;cursor:pointer;font:inherit;letter-spacing:inherit;text-transform:inherit;color:#7A8196;text-decoration:underline;text-underline-offset:3px}
+
+/* Karten antworten */
+.zw .zk{transition:transform 1.4s var(--e1),opacity .55s ease}
+.zw .zk.zw-teil{opacity:.6}
+.zw .zk.zw-aus{opacity:.28}
+.zk-passt{position:absolute;z-index:3;left:12px;top:12px;display:flex;align-items:center;gap:8px;padding:8px 12px;border-radius:10px;background:#0E1638;color:#E9D49A;
+ font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;opacity:0;transform:translateY(-8px);transition:opacity .35s,transform .6s var(--e1);pointer-events:none}
+.zw .zk-passt img{width:11px;height:11px;display:block;object-fit:contain}
+.zk.zw-passt .zk-passt{opacity:1;transform:none}
+
+/* 2 · Zimmerleiste */
+.zw-leiste{position:fixed;z-index:60;left:50%;top:0;transform:translate(-50%,var(--y,-120px));transition:transform .6s var(--e1);max-width:calc(100vw - 32px)}
+.zw-leiste-in{position:relative;display:flex;gap:4px;padding:6px 10px;border-radius:999px;background:#FFFDF8;box-shadow:0 18px 40px -20px rgba(24,33,63,.55),0 0 0 1px rgba(24,33,63,.06);overflow-x:auto;scrollbar-width:none}
+.zw-leiste-in::-webkit-scrollbar{display:none}
+.zw-leiste a{flex:none;padding:10px 12px 12px;font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#7A8196;text-decoration:none;white-space:nowrap;transition:color .35s}
+.zw-leiste a.an,.zw-leiste a:hover{color:var(--ink)}
+.zw-strich{position:absolute;left:0;bottom:7px;width:1px;height:1.5px;background:#C9A54E;transform-origin:0 0;transform:translateX(var(--sx,0)) scaleX(var(--sw,0));transition:transform .6s var(--e1)}
+.zw .zd,.zw .zl{scroll-margin-top:150px}
+
+/* 3 · Die Fenster gehen an: Fotos stehen im Abendlicht und gehen eins nach dem anderen an */
+.zw .zd-b img{transform:none!important;transition:none!important}
+.zw .zd-b figure::after{content:"";position:absolute;inset:0;background:#0A1129;opacity:.66;transition:opacity 1.2s ease;pointer-events:none}
+.zw .zd-in.sw-da .zd-b figure::after{opacity:0}
+.zw .zd-in.sw-da .zd-b .zd-f2::after{transition-delay:.45s}
+.zw .zd-in.sw-da .zd-b .zd-f3::after{transition-delay:.9s}
+
+@media (max-width:900px){
+ .zw-satz{line-height:1.7}
+ .zw-strich{display:none}
+ .zw-leiste a.an{color:var(--ink);text-decoration:underline;text-decoration-color:#C9A54E;text-underline-offset:5px}
+}
+@media (prefers-reduced-motion:reduce){.zw .zd-b figure::after{display:none}}

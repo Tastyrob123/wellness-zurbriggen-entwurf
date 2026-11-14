@@ -1,0 +1,80 @@
+/* Wellness & Spa Pirmin Zurbriggen · Startseite nach dem Gerüst der abgenommenen Häuser (20.10.2026). Kleid aus dem Haus. Alles deckend, nur transform. */
+.wz-seite main{background:var(--papier)}
+.wz{position:relative;padding:clamp(100px,10vw,150px) 0 clamp(50px,5vw,80px);overflow:hidden}
+.wz--hell{background:var(--papier) var(--tap-hell) 50% 0/240px auto}
+.wz--dunkel{background:var(--schoko) var(--tap-dunkel) 50% 0/240px auto;color:var(--papier)}
+.wz-ort{font-family:var(--mono);font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--karamell)}
+.wz--dunkel .wz-ort{color:var(--messing)}
+.wz-h{font-family:var(--serif);font-weight:400;font-size:clamp(2.8rem,5.4vw,5.4rem);line-height:1.02;color:var(--schoko);margin:14px 0 22px}
+.wz-h em{font-style:normal;color:var(--karamell)}.wz--dunkel .wz-h{color:var(--papier)}.wz--dunkel .wz-h em{color:var(--messing)}
+.wz-lauf{max-width:44ch;font-size:1.03rem;line-height:1.75;color:var(--grau)}.wz--dunkel .wz-lauf{color:rgba(246,241,234,.82)}
+.wz-lauf--klein{margin-top:14px;font-size:.92rem;color:rgba(246,241,234,.62)}
+/* Bildgruppe: gross bis an den Rand, zwei kleinere versetzt darauf */
+.wz-f{position:absolute;margin:0}
+.wz-f__b{position:relative;display:block;overflow:hidden;width:100%;height:100%;border-radius:4px;box-shadow:0 2px 4px rgba(42,30,21,.08),0 34px 54px -26px rgba(42,30,21,.55)}
+.wz--dunkel .wz-f__b{box-shadow:0 34px 60px -26px rgba(0,0,0,.75)}
+.wz-f__b img{width:100%;height:100%;object-fit:cover}
+.wz-f figcaption{position:absolute;left:14px;bottom:12px;z-index:2;font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:#fff;text-shadow:0 1px 8px rgba(0,0,0,.65)}
+@media (prefers-reduced-motion:no-preference){
+  .js .wz-f[data-r="wz"]{translate:none;transform:translateY(clamp(70px,9vw,130px));transition:transform 1.5s cubic-bezier(.19,1,.22,1);transition-delay:calc(var(--i)*.16s)}
+  .js .wz-f[data-r="wz"] img{transform:scale(1.14);transition:transform 2.6s cubic-bezier(.16,1,.3,1);transition-delay:calc(var(--i)*.16s)}
+  .js .wz-f[data-r="wz"].da,.js .wz-f[data-r="wz"].da img{transform:none}
+}
+/* Überleitung: Satz zwischen zwei Linien, die Linien wachsen von der Mitte */
+.wz-ueber{display:flex;align-items:center;justify-content:center;gap:24px;margin:clamp(70px,8vw,120px) auto 0;padding:0 var(--rand);text-align:center;font-family:var(--serif);font-size:clamp(1.3rem,2vw,1.8rem);color:var(--schoko)}
+.wz-ueber i{flex:0 0 auto;width:clamp(40px,6vw,90px);height:1px;background:var(--karamell);scale:0 1;transition:scale 1.3s cubic-bezier(.16,1,.3,1) .4s}
+.wz-ueber i:first-child{transform-origin:100% 50%}.wz-ueber i:last-child{transform-origin:0 50%}
+.wz-ueber.da i,html:not(.js) .wz-ueber i{scale:1 1}
+.wz-ueber--d{color:var(--papier)}.wz-ueber--d i{background:var(--messing)}
+/* Trenner mit den vier Sternen des Hauses statt der Bergkante von Monte-Moro */
+.wz-trenner{display:flex;align-items:center;gap:18px;margin:clamp(50px,5vw,80px) 0 0}
+.wz-trenner i{flex:1;height:1px;background:rgba(146,101,69,.35)}
+.wz-trenner span{display:flex;gap:10px;color:var(--karamell)}.wz-trenner svg{width:12px;height:auto}
+.wz-trenner--d i{background:rgba(217,183,88,.3)}.wz-trenner--d span{color:var(--messing)}
+
+/* ---------- 1 Auftakt: das Haus im Lärchenwald, der Schleier hebt sich, die Sterne setzen sich einzeln ---------- */
+.wz-auf{position:relative;height:100svh;min-height:680px;max-height:1100px;padding:12px;background:var(--papier)}
+.wz-auf__bild{position:absolute;inset:12px;overflow:hidden;border-radius:30px;background:var(--leinen-tief)}
+.wz-auf__bild img{width:100%;height:100%;object-fit:cover;transform:scale(1.12);transition:transform 3.6s cubic-bezier(.16,1,.3,1)}
+.wz-auf__bild::before{content:'';position:absolute;inset:0;z-index:1;background:#FBF8F3;transition:opacity 1.8s ease .1s}
+.wz-auf__bild::after{content:'';position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(30,21,14,.5) 0%,rgba(30,21,14,.08) 34%,rgba(30,21,14,0) 50%,rgba(30,21,14,.55) 100%)}
+.wz-auf.da .wz-auf__bild img{transform:none}.wz-auf.da .wz-auf__bild::before,html:not(.js) .wz-auf__bild::before{opacity:0}
+.wz-auf__t{position:absolute;z-index:2;left:0;right:0;top:15vh;display:grid;justify-items:center;gap:12px;text-align:center;color:var(--papier)}
+.wz-auf__z{color:var(--messing)}.wz-auf__z svg{width:58px;height:auto;filter:drop-shadow(0 2px 12px rgba(0,0,0,.4))}
+.wz-auf__sterne{display:flex;align-items:flex-end;gap:10px}
+.wz-auf__s{color:var(--messing);transform:translateY(14px) scale(.6);opacity:.001;transition:transform .9s cubic-bezier(.3,1.5,.4,1),opacity .5s ease;transition-delay:calc(.9s + var(--n)*.14s)}
+.wz-auf__s svg{display:block;width:17px;height:auto;filter:drop-shadow(0 1px 8px rgba(0,0,0,.5))}.wz-auf__s--k svg{width:24px}
+.wz-auf.da .wz-auf__s,html:not(.js) .wz-auf__s{transform:none;opacity:1}
+.wz-auf__ort{font-family:var(--serif);font-size:13px;letter-spacing:.32em;text-transform:uppercase;color:var(--messing-hell);text-shadow:0 1px 10px rgba(0,0,0,.5)}
+.wz-auf__h{font-family:var(--serif);font-weight:400;font-size:clamp(3rem,7vw,7.4rem);line-height:1;color:var(--papier);text-shadow:0 2px 34px rgba(20,14,9,.45)}
+.wz-auf__h em{font-style:normal;color:var(--messing-hell)}
+.wz-auf .z>span{transition-delay:.55s}.wz-auf .z:nth-child(2)>span{transition-delay:.67s}
+.wz-auf__leiste{position:absolute;z-index:3;left:50%;bottom:40px;width:min(1040px,calc(100% - 60px));translate:-50% 0;padding:8px;border-radius:999px;background:var(--papier);box-shadow:0 30px 60px -30px rgba(0,0,0,.6)}
+@media (max-width:800px){.wz-auf__leiste{bottom:22px;border-radius:28px}.wz-auf__t{top:14vh;padding:0 18px}}
+
+/* ---------- 2 Gastgeber: Text links mit der grossen Zahl, rechts der Empfang bis an den Rand, darauf Porträt und Haus ---------- */
+.wz-gast{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(30px,5vw,80px);align-items:center}
+.wz-zahl{display:flex;align-items:baseline;flex-wrap:wrap;gap:4px 6px;margin-top:30px}
+.wz-zahl b{font-family:var(--serif);font-weight:400;font-size:clamp(4rem,7vw,6.6rem);line-height:1;color:var(--karamell)}
+.wz-zahl span{font-family:var(--serif);font-size:clamp(1.6rem,2.6vw,2.4rem);color:var(--karamell)}
+.wz-zahl small{flex-basis:100%;font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--grau)}
+.wz-gast__b{position:relative;height:clamp(520px,50vw,720px);margin-right:calc(-1 * var(--rand))}
+.wz-gast__1{right:0;top:0;width:88%;height:66%}
+.wz-gast__2{left:0;top:48%;width:40%;aspect-ratio:4/3;z-index:2}
+.wz-gast__3{right:8%;bottom:0;width:26%;aspect-ratio:4/5;z-index:3}
+@media (max-width:800px){.wz-gast{grid-template-columns:1fr}.wz-gast__b{height:118vw;margin-right:0}.wz-gast__2{width:56%}.wz-gast__3{width:36%;right:2%}}
+
+/* ---------- 3 Heinz Julen, dunkel: die Holzscheiben bis an den linken Rand, darauf Kamin und Vitrinen; in jedem Bild geht das Licht an ---------- */
+.wz-jul{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:clamp(30px,5vw,80px);align-items:center}
+.wz-jul__b{position:relative;height:clamp(540px,52vw,760px);margin-left:calc(-1 * var(--rand))}
+.wz-jul__1{left:0;top:0;width:84%;height:70%}
+.wz-jul__2{right:4%;top:34%;width:32%;aspect-ratio:3/4;z-index:2}
+.wz-jul__3{left:14%;bottom:0;width:40%;aspect-ratio:4/3;z-index:3}
+.wz-julen .wz-f__b::after{content:'';position:absolute;inset:0;background:#0c0806;opacity:.8;transition:opacity 1.8s ease;transition-delay:calc(.9s + var(--i)*.55s)}
+.wz-julen .wz-f.da .wz-f__b::after,html:not(.js) .wz-julen .wz-f__b::after{opacity:0}
+@media (prefers-reduced-motion:reduce){.wz-julen .wz-f__b::after{opacity:0}}
+.wz-jul .kn-reihe{margin-top:28px}
+@media (max-width:800px){.wz-jul{grid-template-columns:1fr}.wz-jul__b{order:2;height:118vw;margin-left:0}.wz-jul__2{width:42%}.wz-jul__3{width:52%;left:4%}}
+.wz-auf__bild::after{background:linear-gradient(180deg,rgba(30,21,14,.72) 0%,rgba(30,21,14,.5) 30%,rgba(30,21,14,.12) 56%,rgba(30,21,14,.5) 100%)}
+.wz-auf__t{top:12vh}
+.wz-h.d2{font-size:clamp(2.8rem,5.4vw,5.4rem);line-height:1.02}

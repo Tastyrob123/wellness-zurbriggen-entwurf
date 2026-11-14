@@ -1,0 +1,3 @@
+# Designstudie Tasty Studios, nicht die offizielle Seite des Hauses: keine Aufnahme in Suchmaschinen
+User-agent: *
+Disallow: /

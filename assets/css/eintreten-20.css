@@ -1,0 +1,242 @@
+/* «treten Sie ein» · vierte Runde (25.10.2026): 20 Fassungen, je eine eigene Darstellung und ein eigener Effekt.
+   Massstab Monte-Moro: grosse Bilder bis an den Rand, Tiefe, starke Typografie. Nur transform und opacity. */
+.ri.h20{overflow:clip}
+.h20{--mg:#D9B758;--mh:#E9D49A;--ink:#18213F;--mt:#A88A3A}
+.h20 .h-in{width:min(100%,1308px);margin:0 auto}
+.h20 figure{margin:0}
+.h20 .rt{font-size:clamp(38px,3.8vw,64px)}
+.h20 .rl{max-width:40ch}
+.h20 .r-knoepfe{margin-top:30px}
+.h-zwei em{font-style:normal;color:var(--mh)}
+.ri-hell .h-zwei em,.ri-leinen .h-zwei em,.ri-schnee .h-zwei em{color:var(--mt)}
+.h-pin{position:relative}
+.h-klebt{position:sticky;top:0;height:100vh;display:grid;align-items:center;overflow:hidden}
+
+/* Leiste zum Blättern */
+.vnr{position:fixed;z-index:95;left:50%;bottom:18px;transform:translateX(-50%);display:flex;align-items:center;gap:6px;padding:6px;border-radius:999px;background:#0A1129;box-shadow:0 18px 40px -12px rgba(0,0,0,.6),inset 0 0 0 1px rgba(233,212,154,.3);font-family:var(--mono);font-size:11px;letter-spacing:.1em;color:#F4F2EC;max-width:calc(100vw - 24px)}
+.vnr a{display:grid;place-items:center;min-width:40px;height:40px;padding:0 12px;border-radius:999px;color:#F4F2EC;text-decoration:none;background:rgba(255,255,255,.07)}
+.vnr a.vnr-n{display:flex;gap:12px;background:none;padding:0 14px;white-space:nowrap;overflow:hidden}
+.vnr-n b{font-weight:400;color:#E9D49A}
+.vnr-n span{overflow:hidden;text-overflow:ellipsis}
+
+/* 1 · Collage bis zum Rand */
+.h01-c{position:relative;height:clamp(680px,60vw,820px)}
+.h20 .h01-a,.h20 .h01-b,.h20 .h01-d{position:absolute}
+.h01-a{left:calc((100% - 100vw) / 2);top:30px;width:calc(62% + (100vw - 100%) / 2);height:62%;border-radius:0 var(--rk) var(--rk) 0 !important;transform:translateY(calc((var(--p,.5) - .5) * 40px))}
+.h01-b{left:43%;top:44%;width:23%;height:54%;z-index:3;transform:translateY(calc((var(--p,.5) - .5) * -150px))}
+.h01-d{left:70%;top:64%;width:30%;height:34%;z-index:2;transform:translateY(calc((var(--p,.5) - .5) * -80px))}
+.h01-text{position:absolute;left:68%;top:0;width:32%;padding-left:clamp(10px,1.4vw,24px)}
+.h01-text .rs{font-size:14px}
+
+/* 2 · Das Bild schiebt sich über den Titel */
+.h02-titel{margin:0;font-size:clamp(64px,8.4vw,146px) !important;line-height:.98;letter-spacing:-.045em;color:var(--ink)}
+.h02-titel em{font-style:normal;color:var(--mt)}
+.h02-bild{position:relative;z-index:2;height:clamp(380px,40vw,560px);margin-top:calc(-1 * clamp(30px,4vw,80px)) !important;transform:translateY(calc((.55 - var(--p,.5)) * 220px));will-change:transform}
+.h02-unten{display:grid;grid-template-columns:5fr 7fr;gap:clamp(30px,5vw,90px);margin-top:clamp(36px,4vw,60px)}
+.h02-unten .rl,.h02-unten .rs{margin-top:0}
+
+/* 3 · Seitwärts durchs Haus */
+.h03-pin .h-klebt{align-items:center}
+.h03-spur{display:flex;align-items:center;gap:24px;width:max-content;will-change:transform}
+.h03-text{flex:0 0 min(420px,34vw);padding-right:30px}
+.h03-text .rs{font-size:14.5px}
+.h20 .h03-b{flex:0 0 min(54vw,760px);height:min(66vh,560px)}
+.h03-b figcaption{position:absolute;left:20px;bottom:20px;display:grid;gap:4px;padding:14px 18px;border-radius:12px;background:#0E1638;box-shadow:inset 0 0 0 1px rgba(233,212,154,.3)}
+.h03-b figcaption b{font-family:var(--licht);font-weight:300;font-size:clamp(26px,2.4vw,38px);letter-spacing:-.02em;line-height:1}
+.h03-b figcaption span{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--mh)}
+
+/* 4 · Galerie mit Messingwisch */
+.h04-gr{display:grid;grid-template-columns:8fr 4fr;gap:clamp(30px,4vw,60px);align-items:center}
+.h04-bilder{position:relative;height:clamp(420px,42vw,580px);border-radius:var(--rk);overflow:hidden;box-shadow:var(--sch-h)}
+.h20 .h04-b{position:absolute;inset:0;border-radius:0 !important;box-shadow:none !important;opacity:0}
+.h04-b.an{opacity:1}
+.h04-b img{animation:none}
+.h04-b.an img{animation:h04kb 9s ease-out both}
+@keyframes h04kb{from{transform:scale(1.07)}to{transform:scale(1)}}
+.h04-wisch{position:absolute;inset:0;z-index:3;background:linear-gradient(90deg,#B8913C,#E9D49A 55%,#C9A54E);transform:scaleX(0);transform-origin:0 50%;pointer-events:none}
+.h04-wisch.rein{transform:scaleX(1);transition:transform .42s cubic-bezier(.7,0,.3,1)}
+.h04-wisch.raus{transform:scaleX(0);transform-origin:100% 50%;transition:transform .48s cubic-bezier(.7,0,.3,1)}
+.h04-leiste{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;margin-top:10px}
+.h04-leiste button{all:unset;box-sizing:border-box;height:clamp(56px,5.4vw,78px);border-radius:10px;overflow:hidden;cursor:pointer;opacity:.5;transition:opacity .3s ease}
+.h04-leiste button img{display:block;width:100%;height:100%;object-fit:cover}
+.h04-leiste button[aria-pressed=true]{opacity:1;box-shadow:0 0 0 2px var(--mt)}
+.h04-leiste button:hover,.h04-leiste button:focus-visible{opacity:1}
+
+/* 5 · Der Satz zeigt */
+.h05-gr{display:grid;grid-template-columns:6fr 6fr;gap:clamp(30px,4vw,70px);align-items:center}
+.h05-satz{margin:26px 0 0;font-family:var(--licht);font-weight:300;font-size:clamp(24px,2.3vw,36px);line-height:1.42;letter-spacing:-.01em;max-width:30ch}
+.h05-satz button{all:unset;cursor:pointer;color:var(--mh);border-bottom:1px solid rgba(233,212,154,.6);transition:color .3s ease}
+.h05-satz button:hover,.h05-satz button:focus-visible{color:#FFF6DC;border-bottom-color:#FFF6DC}
+.h05-stapel{position:relative;height:clamp(440px,42vw,580px);perspective:1400px}
+.h20 .h05-k{position:absolute;inset:9% 4% 0;transform:translate3d(0,-40px,-180px) rotate(var(--r,0deg));opacity:.85;transition:transform .8s cubic-bezier(.22,1,.36,1),opacity .5s ease;box-shadow:0 40px 70px -30px rgba(0,0,0,.95) !important}
+.h05-k:nth-child(1){--r:-3deg}.h05-k:nth-child(2){--r:2deg}.h05-k:nth-child(3){--r:-1.5deg}.h05-k:nth-child(4){--r:3deg}
+.h05-gr[data-an="0"] .h05-k[data-i="0"],.h05-gr[data-an="1"] .h05-k[data-i="1"],.h05-gr[data-an="2"] .h05-k[data-i="2"],.h05-gr[data-an="3"] .h05-k[data-i="3"]{transform:none;opacity:1;z-index:5}
+.h05-k figcaption{position:absolute;left:18px;bottom:18px;padding:8px 14px;border-radius:8px;background:#0E1638;font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--mh)}
+
+/* 6 · Die Wand richtet sich auf */
+.h06-gr{display:grid;grid-template-columns:4fr 8fr;gap:clamp(30px,4vw,70px);align-items:center;--q:clamp(0, calc(var(--p,0) * 2.9 - .75), 1)}
+.h06-raum{height:clamp(480px,46vw,620px);perspective:1300px;perspective-origin:50% 0}
+.h06-wand{display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(3,1fr);gap:8px;height:100%;transform-origin:50% 100%;transform:rotateX(calc((1 - var(--q)) * 60deg)) scale(calc(.86 + var(--q) * .14));will-change:transform}
+.h06-wand figure{border-radius:10px !important}
+
+/* 7 · Der Raum teilt sich */
+.h07-gr{display:grid;grid-template-columns:4fr 8fr;gap:clamp(30px,4vw,70px);align-items:center;--q:clamp(0, calc(var(--p,0) * 1.7 - .25), 1)}
+.h07-buehne{position:relative;height:min(70vh,620px);border-radius:var(--rk);overflow:hidden;box-shadow:var(--sch)}
+.h07-unten{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(calc(1.12 - var(--q) * .12))}
+.h07-q{position:absolute;width:50%;height:50%;background:url(../img/lounge-l.webp) no-repeat;background-size:200% 200%;will-change:transform}
+.h07-q0{left:0;top:0;background-position:0 0;transform:translate(calc(var(--q) * -102%),calc(var(--q) * -102%))}
+.h07-q1{left:50%;top:0;background-position:100% 0;transform:translate(calc(var(--q) * 102%),calc(var(--q) * -102%))}
+.h07-q2{left:0;top:50%;background-position:0 100%;transform:translate(calc(var(--q) * -102%),calc(var(--q) * 102%))}
+.h07-q3{left:50%;top:50%;background-position:100% 100%;transform:translate(calc(var(--q) * 102%),calc(var(--q) * 102%))}
+
+/* 8 · Wärme oder Licht */
+.h08-gr{display:grid;grid-template-columns:8fr 4fr;gap:clamp(30px,4vw,60px);align-items:center}
+.h08-vergleich{position:relative;height:clamp(420px,42vw,580px);border-radius:var(--rk);overflow:hidden;box-shadow:var(--sch);cursor:ew-resize;touch-action:pan-y;user-select:none}
+.h08-a{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.h08-deckel{position:absolute;inset:0;overflow:hidden;transform:translateX(calc((var(--x) - 1) * 100%))}
+.h08-innen{position:absolute;inset:0;transform:translateX(calc((1 - var(--x)) * 100%))}
+.h08-innen img{width:100%;height:100%;object-fit:cover}
+.h08-griff{position:absolute;z-index:3;top:0;bottom:0;left:0;width:2px;margin-left:-1px;background:var(--mh);transform:translateX(calc(var(--x) * var(--w, 900px)));box-shadow:0 0 18px rgba(0,0,0,.5)}
+.h08-griff i{position:absolute;left:50%;top:50%;width:52px;height:52px;margin:-26px 0 0 -26px;border-radius:50%;background:linear-gradient(180deg,#F1E2B4,#C9A54E);box-shadow:inset 0 1px 0 rgba(255,255,255,.6),0 8px 20px rgba(0,0,0,.5)}
+.h08-griff i::before,.h08-griff i::after{content:'';position:absolute;top:50%;width:0;height:0;margin-top:-6px;border:6px solid transparent}
+.h08-griff i::before{left:9px;border-right-color:#1B2440}.h08-griff i::after{right:9px;border-left-color:#1B2440}
+.h08-griff:focus-visible{outline:2px solid #fff}
+.h08-l,.h08-r{position:absolute;z-index:2;bottom:20px;padding:8px 16px;border-radius:10px;background:#0E1638;font-family:var(--licht);font-weight:300;font-size:clamp(22px,2vw,32px);letter-spacing:-.01em;pointer-events:none}
+.h08-l{left:20px}.h08-r{right:20px}
+
+/* 9 · Mit Anmerkungen */
+.h09-kopf{margin-bottom:clamp(26px,3vw,44px)}
+.h09-gr{display:grid;grid-template-columns:8fr 4fr;gap:clamp(30px,3vw,50px);height:clamp(420px,42vw,580px)}
+.h09-bild{position:relative}
+.h09-bild img{display:block;width:100%;height:100%;object-fit:cover;border-radius:var(--rk);box-shadow:var(--sch-h)}
+.h09-l{position:absolute;left:var(--x);top:var(--y);width:calc(100% - var(--x) + clamp(30px,3vw,50px) - 8px);height:1px;background:var(--mt);box-shadow:0 0 0 .5px rgba(255,255,255,.6);transform:scaleX(0);transform-origin:0 50%;transition:transform 1s cubic-bezier(.22,1,.36,1) calc(var(--n) * .25s + .2s)}
+.h09-l::before{content:'';position:absolute;left:0;top:-8px;width:1px;height:17px;background:var(--mt)}
+.h09-gr.da .h09-l{transform:none}
+.h09-namen{position:relative;list-style:none;margin:0;padding:0}
+.h09-namen li{position:absolute;left:0;top:var(--y);transform:translateY(-50%);display:grid;gap:3px;opacity:.15;transition:opacity .6s ease calc(var(--n) * .25s + .8s)}
+.h09-gr.da .h09-namen li{opacity:1}
+.h09-namen b{font-family:var(--licht);font-weight:300;font-size:clamp(24px,2.2vw,36px);letter-spacing:-.02em;line-height:1;color:var(--ink)}
+.h09-namen span{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--mt)}
+.h09-unten{display:grid;grid-template-columns:1fr 1fr auto;gap:40px;align-items:end;margin-top:clamp(30px,3vw,46px)}
+.h09-unten .rl,.h09-unten .rs,.h09-unten .r-knoepfe{margin:0}
+
+/* 10 · Ein Abend in drei Räumen */
+.h10-kopf{display:grid;grid-template-columns:5fr 7fr;gap:clamp(30px,5vw,90px);align-items:end;margin-bottom:clamp(36px,4vw,56px)}
+.h10-kopf .rl{margin-top:0}
+.h10-abend{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,2vw,28px);padding-top:46px;--q:clamp(0, calc(var(--p,0) * 1.9 - .35), 1)}
+.h10-linie{position:absolute;left:0;right:0;top:14px;height:1px;background:var(--mt);transform:scaleX(var(--q));transform-origin:0 50%}
+.h10-z p{margin:0 0 16px;display:grid;gap:2px}
+.h10-z span{font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--mt)}
+.h10-z b{font-family:var(--licht);font-weight:300;font-size:clamp(28px,2.6vw,42px);letter-spacing:-.02em;line-height:1.05;color:var(--ink)}
+.h10-z figure{height:clamp(360px,34vw,480px)}
+.h10-jul{margin-top:24px}
+
+/* 11 · Hängende Rahmen */
+.h11-gr{display:grid;grid-template-columns:4fr 8fr;gap:clamp(30px,4vw,70px);align-items:start}
+.h11-text{padding-top:60px}
+.h11-decke{position:relative;height:clamp(560px,52vw,700px)}
+.h11-h{position:absolute;top:calc(-1 * clamp(90px,10vw,160px));left:calc(var(--n) * 20%);width:19%;transform-origin:50% 0;will-change:transform}
+.h11-h i{display:block;width:1px;height:calc(var(--l) + clamp(90px,10vw,160px));margin:0 auto;background:linear-gradient(rgba(233,212,154,.2),var(--mh))}
+.h11-h figure{height:clamp(220px,22vw,300px);border:6px solid #F6F1EA;border-radius:8px !important}
+.h11-h:nth-child(2) figure,.h11-h:nth-child(4) figure{height:clamp(170px,16vw,220px)}
+
+/* 12 · Der Blick wandert */
+.h12-gr{display:grid;grid-template-columns:4fr 8fr;gap:clamp(30px,4vw,70px);align-items:center}
+.h12-bild{position:relative;height:min(72vh,640px);border-radius:var(--rk);overflow:hidden;box-shadow:var(--sch)}
+.h12-bild>img{display:block;width:100%;height:100%;object-fit:cover}
+.h12-sucher{position:absolute;left:0;top:0;width:30%;height:34%;will-change:transform}
+.h12-sucher i{position:absolute;width:30px;height:30px;border:2px solid var(--mh);filter:drop-shadow(0 0 6px rgba(0,0,0,.6))}
+.h12-sucher i:nth-child(1){left:0;top:0;border-right:0;border-bottom:0}.h12-sucher i:nth-child(2){right:0;top:0;border-left:0;border-bottom:0}
+.h12-sucher i:nth-child(3){left:0;bottom:0;border-right:0;border-top:0}.h12-sucher i:nth-child(4){right:0;bottom:0;border-left:0;border-top:0}
+.h12-zeile{position:absolute;left:20px;bottom:20px;margin:0;width:min(340px,60%);height:52px;border-radius:12px;background:#1A130D;box-shadow:inset 0 0 0 1px rgba(233,212,154,.3)}
+.h12-zeile span{position:absolute;inset:0;display:flex;align-items:center;padding:0 18px;font-family:var(--licht);font-size:18px;opacity:0;transition:opacity .35s ease}
+.h12-zeile span.an{opacity:1}
+
+/* 13 · Vom Raster ins Bild */
+.h13-pin .h-klebt{place-items:center}
+.h13-buehne{width:min(100%,1308px);height:78vh}
+.h13-raster{display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(3,1fr);gap:10px;height:100%;--q:clamp(0, calc(var(--p,0) * 1.35 - .1), 1);transform:scale(calc(1 + var(--q) * var(--q) * 2.08));transform-origin:50% 50%;will-change:transform}
+.h13-raster figure{border-radius:10px !important}
+.h13-nach{display:grid;grid-template-columns:5fr 7fr;gap:clamp(30px,5vw,90px);align-items:end;margin-top:clamp(40px,4vw,70px)}
+.h13-nach .rl{margin-top:0}
+
+/* 14 · Der Satz schreibt sich */
+.h14-satz{margin:clamp(24px,2.6vw,40px) 0 0;font-family:var(--licht);font-weight:300;font-size:clamp(34px,4.4vw,76px);line-height:1.14;letter-spacing:-.025em;color:var(--ink);max-width:28ch}
+.h14-satz span{opacity:.14;transition:opacity .35s ease}
+.h14-satz span.an{opacity:1}
+.h14-reihe{display:grid;grid-template-columns:5fr 3fr 3fr;gap:10px;height:clamp(260px,24vw,340px);margin-top:clamp(36px,4vw,56px)}
+.h14-unten{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:end;margin-top:28px;max-width:1000px}
+.h14-unten .rs,.h14-unten .r-knoepfe{margin:0}
+
+/* 15 · Kacheln auf dem Boden */
+.h15-gr{display:grid;grid-template-columns:4fr 8fr;gap:clamp(30px,4vw,70px);align-items:center}
+.h15-raum{height:clamp(520px,50vw,660px);display:grid;place-items:center;perspective:2200px}
+.h15-boden{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;width:clamp(380px,38vw,540px);aspect-ratio:1;transform:rotateX(55deg) rotateZ(-38deg);transform-style:preserve-3d}
+.h15-k{all:unset;position:relative;cursor:pointer;border-radius:18px;overflow:hidden;background:#fff;box-shadow:0 2px 0 rgba(255,255,255,.7) inset,0 26px 30px -14px rgba(24,33,63,.55);transform:translateZ(-50px);transition:transform .7s cubic-bezier(.22,1,.36,1) calc(var(--n) * .07s),box-shadow .7s ease}
+.h15-k img{display:block;width:100%;height:100%;object-fit:cover}
+.h15-boden.da .h15-k{transform:translateZ(0)}
+.h15-boden.da .h15-k:hover,.h15-boden.da .h15-k.hoch,.h15-k:focus-visible{transform:translateZ(70px);box-shadow:0 2px 0 rgba(255,255,255,.7) inset,0 70px 60px -30px rgba(24,33,63,.6);transition-delay:0s}
+
+/* 16 · Die Collage folgt der Maus */
+.h16-gr{display:grid;grid-template-columns:4fr 8fr;gap:clamp(30px,4vw,70px);align-items:center}
+.h16-c{position:relative;height:clamp(520px,50vw,680px)}
+.h20 .h16-c figure{position:absolute;transform:translate(calc(var(--mx,0) * var(--d) * -1px),calc(var(--my,0) * var(--d) * -1px));will-change:transform}
+.h16-a{left:0;top:8%;width:64%;height:64%}
+.h16-b{left:54%;top:0;width:30%;height:28%;z-index:2}
+.h16-c1{left:40%;top:42%;width:26%;height:54%;z-index:3}
+.h16-d{left:72%;top:34%;width:28%;height:40%;z-index:2}
+.h16-e{left:5%;top:62%;width:22%;height:36%;z-index:4}
+
+/* 17 · Die Zeilen öffnen sich */
+.h17-pin .h-klebt{display:block;--q:clamp(0, calc(var(--p,0) * 1.7 - .2), 1)}
+.h17-z{position:absolute;left:0;right:0;margin:0;text-align:center;font-family:var(--licht);font-weight:300;font-size:min(14vh,12vw);line-height:1;letter-spacing:-.045em;color:#F4F2EC;will-change:transform}
+.h17-z1{top:calc(50vh - 21vh);transform:translateY(calc(var(--q) * -26vh))}
+.h17-z2{top:calc(50vh - 7vh)}
+.h17-z3{top:calc(50vh + 7vh);transform:translateY(calc(var(--q) * 26vh))}
+.h20 .h17-b{position:absolute;left:12%;width:76%;height:24vh;transform:scaleY(var(--q));will-change:transform}
+.h17-b1{top:calc(50vh - 7vh - 24vh);transform-origin:50% 100%}
+.h17-b2{top:calc(50vh + 7vh);transform-origin:50% 0}
+.h17-nach{display:grid;grid-template-columns:5fr 7fr;gap:clamp(30px,5vw,90px);align-items:end;margin-top:clamp(30px,3vw,50px)}
+.h17-nach .rl{margin-top:0}
+
+/* 18 · Die Jalousie dreht: Streifen der Lounge drehen sich auf die Kante und geben die Bar dahinter frei */
+.h18-gr{display:grid;grid-template-columns:4fr 8fr;gap:clamp(30px,4vw,70px);align-items:center}
+.h18-bild{position:relative;height:66vh;perspective:1800px;border-radius:var(--rk);overflow:hidden;box-shadow:var(--sch)}
+.h18-hinten{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.h18-s{position:absolute;left:0;right:0;top:var(--y);height:calc(12.5% + 1px);background:url(../img/lounge-l.webp) no-repeat;background-size:100% 800%;background-position:0 calc(var(--i) * 100% / 7);
+  transform:rotateX(calc(clamp(0, var(--p,0) * 1.9 - var(--i) * .09 - .15, 1) * -90deg));will-change:transform}
+/* 19 · Der Bogen */
+.h19-pin .h-klebt{grid-template-columns:4fr 8fr;gap:clamp(30px,4vw,70px)}
+.h19-bogen{position:relative;height:100vh;overflow:hidden}
+.h20 .h19-b{position:absolute;left:50%;top:26vh;width:clamp(200px,16vw,250px);aspect-ratio:3/4;transform-origin:50% 0;will-change:transform}
+
+/* 20 · Treten Sie ein in … */
+.h20-gr{display:grid;grid-template-columns:6fr 6fr;gap:clamp(30px,4vw,70px);align-items:center;cursor:pointer}
+.h20-satz{font-size:clamp(44px,5vw,84px) !important;line-height:1.1}
+.h20-fenster{display:block;height:1.1em;overflow:hidden}
+.h20-band{display:flex;flex-direction:column;transition:transform .9s cubic-bezier(.7,0,.2,1);will-change:transform}
+.h20-band span{display:block;height:1.1em;line-height:1.1em;color:var(--mh);white-space:nowrap}
+.h20-bild{height:clamp(440px,44vw,600px);border-radius:var(--rk);overflow:hidden;box-shadow:var(--sch)}
+.h20-bband{display:flex;flex-direction:column;height:500%;transition:transform .9s cubic-bezier(.7,0,.2,1);will-change:transform}
+.h20 .h20-bband figure{flex:0 0 20%;border-radius:0 !important;box-shadow:none !important}
+
+/* Handy */
+@media (max-width:760px){
+  .h20 .rt{font-size:clamp(34px,9vw,46px)}
+  .h04-gr,.h05-gr,.h06-gr,.h07-gr,.h08-gr,.h11-gr,.h12-gr,.h15-gr,.h16-gr,.h20-gr,.h02-unten,.h10-kopf,.h13-nach,.h17-nach{grid-template-columns:1fr;gap:14px}
+  .h01-c{height:auto;display:flex;flex-direction:column;gap:12px}.h20 .h01-a,.h20 .h01-b,.h20 .h01-d{position:relative;left:auto;top:auto;width:auto;transform:none}.h01-a{height:60vw;margin-left:calc(-1 * var(--rand)) !important}.h01-b,.h01-d{height:56vw}.h01-text{position:static;width:auto;padding:0;order:-1}
+  .h02-titel{font-size:clamp(44px,12vw,64px) !important}.h02-bild{height:64vw}
+  .h03-text{flex-basis:78vw}.h20 .h03-b{flex-basis:80vw;height:60vh}.h03-text .rs,.h03-text .rl{display:none}
+  .h04-bilder,.h05-stapel,.h08-vergleich,.h16-c,.h20-bild{height:80vw}
+  .h06-raum{height:90vw}
+  .h07-gr .h07-text,.h12-gr .h12-text,.h18-gr .h18-text{padding-top:90px}.h07-text .rs,.h12-text .rs,.h18-text .rs,.h07-text .rl,.h12-text .rl,.h18-text .rl{display:none}.h07-buehne,.h12-bild{height:56vh}
+  .h09-gr{grid-template-columns:1fr;height:auto}.h09-bild{height:62vw}.h09-l{display:none}.h09-namen{display:grid;grid-template-columns:1fr 1fr;gap:12px}.h09-namen li{position:static;transform:none;opacity:1}.h09-unten{grid-template-columns:1fr;gap:12px}
+  .h10-abend{grid-template-columns:1fr}.h10-z figure{height:60vw}
+  .h11-decke{height:120vw}.h11-h{width:30%;left:calc(var(--n) * 17.5%)}
+  .h13-buehne{height:60vh}
+  .h14-reihe{grid-template-columns:1fr 1fr;height:auto}.h14-reihe figure{height:40vw}.h14-reihe figure:first-child{grid-column:1/-1}.h14-unten{grid-template-columns:1fr}
+  .h15-boden{width:76vw}.h15-raum{height:100vw}
+  .h18-gr{grid-template-columns:1fr}.h18-bild{height:50vh}
+  .h19-pin .h-klebt{grid-template-columns:1fr}.h19-text{position:absolute;z-index:5;top:90px;left:0;right:0}.h19-text .rs,.h19-text .rl{display:none}.h20 .h19-b{top:44vh;width:38vw}
+}
+@media (prefers-reduced-motion:reduce){.h20 *{transition:none !important;animation:none !important}}

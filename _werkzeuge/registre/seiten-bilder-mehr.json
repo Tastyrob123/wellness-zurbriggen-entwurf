@@ -1,0 +1,132 @@
+{
+ "index.html": [
+  "assets/img/bar-s.webp",
+  "assets/img/kamin-s.webp",
+  "assets/img/sp-oben-s.webp",
+  "assets/img/holzsauna-s.webp",
+  "assets/img/z-nice-s.webp",
+  "assets/img/z-classic-s.webp",
+  "assets/img/z-modern-s.webp",
+  "assets/img/z-fam45-s.webp",
+  "assets/img/z-suite-r-s.webp",
+  "assets/img/z-senior-s.webp",
+  "assets/img/z-fam75-s.webp",
+  "assets/img/loft-kerzen-s.webp",
+  "assets/img/loft-galerie-band-s.webp",
+  "assets/img/loft-treppe-s.webp",
+  "assets/img/l-leuchter-s.webp",
+  "assets/img/loft-unten-band-s.webp",
+  "assets/img/loft-kiste-s.webp",
+  "assets/img/g-saal-s.webp",
+  "assets/img/g-wein-s.webp",
+  "assets/img/t-2-s.webp",
+  "assets/img/t-1-s.webp",
+  "assets/img/g-teller-1-s.webp",
+  "assets/img/t-4-s.webp",
+  "assets/img/t-5-s.webp",
+  "assets/img/h-laerchen-s.webp",
+  "assets/img/w-touren-s.webp",
+  "assets/img/h-abendrot-s.webp",
+  "assets/img/ski-wald-s.webp",
+  "assets/img/haus-lift-s.webp",
+  "assets/img/loft-oben-s.webp"
+ ],
+ "zimmer.html": [
+  "assets/img/z-nice-bad-s.webp",
+  "assets/img/z-classic-3-s.webp",
+  "assets/img/z-classic-bad-s.webp",
+  "assets/img/z-classic-bad-2-s.webp",
+  "assets/img/raum-z-s.webp",
+  "assets/img/z-modern-bad-s.webp",
+  "assets/img/z-fam45-2-s.webp",
+  "assets/img/z-fam-wohnen-s.webp",
+  "assets/img/z-fam-bad-s.webp",
+  "assets/img/z-suite-bad-s.webp",
+  "assets/img/z-senior-2-s.webp",
+  "assets/img/loft-bett-s.webp",
+  "assets/img/g-teller-3-s.webp",
+  "assets/img/g-kamin-s.webp",
+  "assets/img/s-bruecke-s.webp"
+ ],
+ "loft-suite.html": [
+  "assets/img/loft-bett-nah-s.webp",
+  "assets/img/loft-kronleuchter-s.webp",
+  "assets/img/loft-whirlpool-s.webp",
+  "assets/img/loft-sauna-s.webp"
+ ],
+ "spa.html": [
+  "assets/img/sp-grotte-s.webp",
+  "assets/img/sp-scheiben-s.webp",
+  "assets/img/sp-gruen-s.webp",
+  "assets/img/sp-farben-s.webp",
+  "assets/img/b-schaukel-s.webp",
+  "assets/img/sp-garten-s.webp",
+  "assets/img/b-liegen-s.webp",
+  "assets/img/sp-massage-s.webp",
+  "assets/img/sp-massage-2-s.webp",
+  "assets/img/ruheraum-s.webp",
+  "assets/img/sp-flieder-s.webp",
+  "assets/img/sp-fenster-s.webp",
+  "assets/img/sp-blick-s.webp",
+  "assets/img/sauna-holz-s.webp",
+  "assets/img/sp-sense-2-s.webp",
+  "assets/img/tisch-z-s.webp"
+ ],
+ "gourmet.html": [
+  "assets/img/g-teller-2-s.webp",
+  "assets/img/g-buffet-s.webp",
+  "assets/img/sekt-s.webp",
+  "assets/img/g-paar-s.webp",
+  "assets/img/g-piano-s.webp",
+  "assets/img/j-wein-s.webp",
+  "assets/img/dessert-s.webp"
+ ],
+ "familie.html": [
+  "assets/img/burg-s.webp",
+  "assets/img/k-wasser-s.webp",
+  "assets/img/k-basteln-s.webp",
+  "assets/img/k-lounge-s.webp",
+  "assets/img/k-bowling-s.webp",
+  "assets/img/kicker-s.webp",
+  "assets/img/k-wald-s.webp",
+  "assets/img/a-kinder-s.webp",
+  "assets/img/k-eis-s.webp"
+ ],
+ "saastal.html": [
+  "assets/img/h-steinbock-s.webp",
+  "assets/img/s-mattmark-s.webp",
+  "assets/img/s-klettern-s.webp",
+  "assets/img/h-kapelle-s.webp",
+  "assets/img/s-trotti-s.webp",
+  "assets/img/w-ski-s.webp",
+  "assets/img/w-schneeschuh-s.webp",
+  "assets/img/bietschhorn-s.webp",
+  "assets/img/w-mond-s.webp"
+ ],
+ "angebote.html": [
+  "assets/img/g-abend-s.webp",
+  "assets/img/sp-gesicht-s.webp",
+  "assets/img/k-steg-s.webp",
+  "assets/img/a-freundinnen-s.webp",
+  "assets/img/sp-ruhe-s.webp",
+  "assets/img/sp-wanne-s.webp",
+  "assets/img/w-fondue-s.webp",
+  "assets/img/a-gutschein-s.webp"
+ ],
+ "haus.html": [
+  "assets/img/f-stube-s.webp",
+  "assets/img/h-blumen-s.webp",
+  "assets/img/j-barkarte-s.webp",
+  "assets/img/j-stube-s.webp",
+  "assets/img/j-musikbox-s.webp",
+  "assets/img/haus-garten-s.webp",
+  "assets/img/h-turm-2-s.webp"
+ ],
+ "vor-ihrer-anreise.html": [
+  "assets/img/sp-ruhe-2-s.webp",
+  "assets/img/b-terrasse-s.webp"
+ ],
+ "kontakt.html": [
+  "assets/img/n-haus-s.webp"
+ ]
+}

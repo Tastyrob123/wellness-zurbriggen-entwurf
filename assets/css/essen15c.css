@@ -1,0 +1,206 @@
+/* Wellness & Spa · «setzen Sie sich», dritte Runde (25.10.2026): 15 Fassungen im Stil der übrigen Startseite. Nur auf _varianten/essen-15c/NN.html.
+   Bilder tragen die Hausform der Seite (.s2 figure: runde Ecken, weicher Schatten). Je Fassung ein eigener Moment, nur transform/opacity. */
+.vnr{position:fixed;z-index:90;left:50%;bottom:18px;transform:translateX(-50%);display:flex;align-items:center;gap:6px;padding:6px;border-radius:999px;background:#0A1129;box-shadow:0 18px 40px -12px rgba(0,0,0,.6),inset 0 0 0 1px rgba(233,212,154,.3);font-family:var(--mono);font-size:11px;letter-spacing:.1em;color:#F4F2EC}
+.vnr a{display:grid;place-items:center;min-width:38px;height:38px;padding:0 12px;border-radius:999px;color:#F4F2EC;text-decoration:none;background:rgba(255,255,255,.07)}
+.vnr b{font-weight:400;padding:0 14px;white-space:nowrap}
+@media(max-width:600px){.vnr b{max-width:58vw;overflow:hidden;text-overflow:ellipsis;padding:0 6px}}
+
+/* ---------- gemeinsam: Kopf, Zeilen, Menü (wie Zimmer, Loft und Angebote) */
+.ec{--gold:#8A6A2A;--linie:rgba(24,33,63,.13)}
+.ec .rt{font-size:clamp(40px,4vw,66px)}
+.ec .rl{max-width:38ch}
+.ec .r-knoepfe{margin-top:clamp(30px,3vw,44px)}
+.ec .rs-k{margin-top:16px}
+.ec a:where(:not(.rk)){color:inherit}
+.ec button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer}
+.ec i{font-style:normal;font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin:0 .25em}
+.ec figure{background:#000}
+.ec-z,.ec-mk,.ec-m{list-style:none;margin:28px 0 0;padding:0}
+.ec-z li,.ec-mk li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:baseline;padding:13px 0;border-top:1px solid var(--linie)}
+.ec-z li:last-child,.ec-mk li:last-child{border-bottom:1px solid var(--linie)}
+.ec-z b,.ec-mk b{font-family:var(--licht);font-weight:400;font-size:clamp(17px,1.3vw,20px);line-height:1.3}
+.ec-z span,.ec-mk span{font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);white-space:nowrap}
+.ec-m li{padding:13px 0;border-top:1px solid var(--linie)}
+.ec-m li:last-child{border-bottom:1px solid var(--linie)}
+.ec-m .ro,.sx2-g .ro,.sx10-k .ro,.sx13-block .ro,.sx15-z .ro{margin:0 0 3px;font-size:10px}
+.ec-g{margin:0;font-family:var(--licht);font-size:clamp(17px,1.3vw,20px);line-height:1.3}
+.ec-w{margin:5px 0 0;font-size:13.5px;line-height:1.55;opacity:.72}
+
+/* ---------- 01 Teller landen im Saal */
+.sx1{max-width:1320px;margin:0 auto;display:grid;grid-template-columns:minmax(0,.82fr) minmax(0,1.5fr);gap:clamp(40px,5vw,90px);align-items:center}
+.sx1-buehne{position:relative;height:min(76vh,720px)}
+.sx1 .sx1-saal{position:absolute;left:0;top:0;width:80%;height:80%}
+.sx1 .sx1-t{position:absolute;width:34%;aspect-ratio:3/2;transform:translateY(-70px) scale(1.06);transition:transform 1.25s var(--e1) calc(.4s + var(--n)*.45s)}
+.sx1-a{right:0;top:7%}.sx1-b{right:7%;top:47%}.sx1-c{left:24%;bottom:0}
+.cs01.da .sx1-t{transform:none}
+@media(max-width:900px){.sx1{grid-template-columns:1fr}.sx1-buehne{height:112vw}.sx1 .sx1-saal{width:90%;height:66%}.sx1 .sx1-t{width:48%}}
+
+/* ---------- 02 Gang für Gang */
+.sx2{max-width:1320px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.08fr);gap:clamp(40px,5vw,96px);align-items:start}
+.sx2-kopf{padding-bottom:clamp(30px,4vh,50px)}
+.sx2-g{min-height:40vh;display:flex;flex-direction:column;justify-content:center;padding:34px 0;border-top:1px solid var(--linie)}
+.sx2-gericht{margin:4px 0 0;font-family:var(--licht);font-weight:300;font-size:clamp(28px,2.7vw,46px);line-height:1.1;letter-spacing:-.018em;transition:opacity .6s}
+.sx2-g:not(.an) .sx2-gericht{opacity:.38}
+.sx2-g .ec-w{font-size:15px;max-width:46ch;margin-top:12px}
+.sx2-buehne{position:sticky;top:11vh;height:78vh;display:flex;flex-direction:column}
+.sx2-rahmen{position:relative;flex:1;border-radius:var(--rk);overflow:hidden;background:#000;box-shadow:var(--sch-h)}
+.sx2 .sx2-f{position:absolute;inset:0;border-radius:0;box-shadow:none;transform:translateY(101%);transition:transform 1.15s var(--e1)}
+.sx2-f:nth-child(2){z-index:2}.sx2-f:nth-child(3){z-index:3}.sx2-f:nth-child(4){z-index:4}.sx2-f:nth-child(5){z-index:5}
+.sx2 .sx2-f.an{transform:none}
+.sx2-zahl{margin:14px 0 0;font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+.sx2-mob{display:none}
+@media(max-width:900px){.sx2{grid-template-columns:1fr}.sx2-buehne{display:none}.sx2 .sx2-mob{display:block;aspect-ratio:3/2;margin-bottom:18px}.sx2-g{min-height:0;padding:28px 0}.sx2-g:not(.an) .sx2-gericht{opacity:1}}
+
+/* ---------- 03 Die Mappe öffnet sich */
+.sx3{max-width:1320px;margin:0 auto}
+.sx3-kopf{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,420px);gap:60px;align-items:end;margin-bottom:clamp(40px,5vw,70px)}
+.sx3-kopf .ec-z{margin:0}
+.sx3-mappe{display:grid;grid-template-columns:1fr 1fr;perspective:2400px}
+.sx3 .sx3-aussen{border-radius:var(--rk) 0 0 var(--rk);min-height:640px}
+.sx3-blatt{position:relative;background:#FBF8F3;border-radius:0 var(--rk) var(--rk) 0;padding:clamp(30px,3.4vw,56px) clamp(28px,3.4vw,60px);box-shadow:var(--sch-h),inset 22px 0 26px -24px rgba(24,33,63,.45);
+ transform-origin:0 50%;transform:rotateY(-62deg);transition:transform 1.9s var(--e1) .2s}
+.cs03.da .sx3-blatt{transform:none}
+.sx3-z{margin:0 0 16px;color:#C9A54E}.sx3-z svg{display:block;width:56px;height:auto}
+.sx3-menu{margin-top:10px}
+@media(max-width:900px){.sx3-kopf{grid-template-columns:1fr;gap:30px}.sx3-mappe{grid-template-columns:1fr}.sx3 .sx3-aussen{border-radius:var(--rk) var(--rk) 0 0;min-height:0;aspect-ratio:4/3}.sx3-blatt{border-radius:0 0 var(--rk) var(--rk);transform-origin:50% 0;transform:rotateX(50deg)}}
+
+/* ---------- 04 Zwischen zwei Wänden */
+.sx4{max-width:1400px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr) minmax(0,1fr);gap:clamp(20px,2.6vw,40px);align-items:start}
+.sx4-wand{display:grid;gap:14px;will-change:transform}
+.sx4-wand figure{aspect-ratio:4/5}
+.sx4-wand:first-child{margin-top:-4vh}.sx4-r{margin-top:16vh}
+.sx4-mitte{padding-top:clamp(20px,4vh,50px)}
+@media(max-width:900px){.sx4{grid-template-columns:1fr}.sx4-wand{grid-template-columns:repeat(3,1fr);margin:0!important;transform:none!important}.sx4-wand figure{aspect-ratio:1}}
+
+/* ---------- 05 Die Karte liegt auf dem Saal */
+.sx5{max-width:1320px;margin:0 auto;display:grid;grid-template-columns:repeat(12,minmax(0,1fr))}
+.sx5 .sx5-saal{grid-column:1/9;grid-row:1;align-self:stretch;min-height:min(78vh,760px);margin-bottom:clamp(50px,7vh,90px)}
+.sx05 .sx5-saal img{transform:scale(1.12);transition:transform 2.6s var(--e1)}
+.cs05.da .sx5-saal img{transform:none}
+.sx5-karte{grid-column:7/13;grid-row:1;margin-top:clamp(50px,9vh,110px);z-index:2;position:relative;background:#FBF8F3;border-radius:var(--rk);padding:clamp(30px,3vw,50px) clamp(26px,2.8vw,46px);
+ box-shadow:0 60px 90px -44px rgba(24,33,63,.55),0 14px 26px -16px rgba(24,33,63,.3);transform:translateY(22vh);transition:transform 1.9s var(--e1) .15s}
+.cs05.da .sx5-karte{transform:none}
+.sx5-karte .rt{font-size:clamp(36px,3vw,52px)}
+@media(max-width:900px){.sx5{grid-template-columns:1fr}.sx5 .sx5-saal{grid-column:1;min-height:0;aspect-ratio:4/3;margin:0}.sx5-karte{grid-column:1;grid-row:2;margin:-70px 10px 0;transform:translateY(80px)}}
+
+/* ---------- 06 Der Tag am Tisch */
+.sx6{max-width:1320px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:clamp(40px,5vw,90px);align-items:center}
+.sx6-buehne{position:relative;height:min(76vh,700px);border-radius:var(--rk);overflow:hidden;box-shadow:var(--sch-h);background:#000}
+.sx6 .sx6-f{position:absolute;inset:0;border-radius:0;box-shadow:none;transform:translateY(101%);transition:transform 1.1s var(--e1)}
+.sx6 .sx6-f.war{transform:none;z-index:1}.sx6 .sx6-f.an{transform:none;z-index:2}
+.sx6-linie{position:relative;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin-top:34px;border-top:1px solid rgba(138,106,42,.45)}
+.sx6-marke{position:absolute;left:0;top:-3px;width:25%;height:5px;display:block;margin:0;transition:transform .8s var(--e1)}
+.sx6-marke::before{content:"";position:absolute;left:0;top:0;width:34px;height:5px;border-radius:3px;background:linear-gradient(180deg,#F1E2B4,#C9A54E)}
+.sx6-p{display:flex;flex-direction:column;gap:6px;text-align:left;padding:16px 10px 0 0!important}
+.sx6-p span{font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.sx6-p b{font-family:var(--licht);font-weight:400;font-size:clamp(16px,1.3vw,20px);opacity:.5;transition:opacity .4s}
+.sx6-p.an b,.sx6-p:hover b{opacity:1}
+.sx6-saetze{display:grid;margin-top:22px}
+.sx6-s{grid-area:1/1;margin:0;font-size:16px;line-height:1.6;max-width:42ch;opacity:0;transition:opacity .5s}
+.sx6-s.an{opacity:.85}
+@media(max-width:900px){.sx6{grid-template-columns:1fr}.sx6-buehne{height:auto;aspect-ratio:4/3}}
+
+/* ---------- 07 Gezeichnet in Messing */
+.sx7{max-width:1320px;margin:0 auto;display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.5fr);gap:clamp(40px,5vw,90px);align-items:center}
+.sx7-buehne{position:relative;height:min(76vh,700px)}
+.sx7-z{position:absolute;left:6%;top:2%;width:80%;margin:0;color:#E6D39B;transform:scale(1.14) rotate(-7deg);transform-origin:40% 60%;transition:transform 2.6s var(--e1)}
+.sx7-z svg{display:block;width:100%;height:auto}
+.cs07.da .sx7-z{transform:none}
+.sx7 .sx7-a{position:absolute;left:0;top:26%;width:58%;aspect-ratio:3/2;z-index:2}
+.sx7 .sx7-b{position:absolute;right:0;top:0;width:44%;aspect-ratio:3/2;z-index:1}
+.sx7 .sx7-c{position:absolute;right:9%;bottom:0;width:23%;aspect-ratio:2/3;z-index:3}
+@media(max-width:900px){.sx7{grid-template-columns:1fr}.sx7-buehne{height:100vw}}
+
+/* ---------- 08 Hoch und quer */
+.sx8{max-width:1320px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1.45fr) minmax(0,1fr);gap:clamp(40px,5vw,90px);align-items:center}
+.sx8-buehne{position:relative;height:min(76vh,680px)}
+.sx8 .sx8-hoch{position:absolute;left:0;top:0;width:36%;height:100%;z-index:2;transform:translateY(90px);transition:transform 1.8s var(--e1)}
+.sx8 .sx8-quer{position:absolute;left:27%;top:15%;width:73%;height:56%;z-index:1;transform:translateY(-70px);transition:transform 1.8s var(--e1)}
+.sx8 .sx8-t{position:absolute;right:3%;bottom:0;width:36%;aspect-ratio:3/2;z-index:3}
+.cs08.da .sx8-hoch,.cs08.da .sx8-quer{transform:none}
+@media(max-width:900px){.sx8{grid-template-columns:1fr}.sx8-buehne{height:110vw}}
+
+/* ---------- 09 Saal im Breitformat */
+.sx9{max-width:1320px;margin:0 auto}
+.sx9 .sx9-saal{aspect-ratio:21/9}
+.sx09 .sx9-saal img{transform:scale(1.16);transition:transform 2.8s var(--e1)}
+.cs09.da .sx9-saal img{transform:none}
+.sx9-unten{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(40px,5vw,90px);align-items:start}
+.sx9-karte{position:relative;z-index:2;margin:-150px 0 0 clamp(20px,3vw,48px);background:#FBF8F3;border-radius:var(--rk);padding:clamp(30px,3vw,50px) clamp(26px,2.8vw,46px);
+ box-shadow:0 60px 90px -44px rgba(24,33,63,.55),0 14px 26px -16px rgba(24,33,63,.3);transform:translateY(80px);transition:transform 1.8s var(--e1) .3s}
+.cs09.da .sx9-karte{transform:none}
+.sx9-rechts{padding-top:clamp(30px,4vw,60px)}
+.sx9-rechts .ec-z{margin-top:0}
+@media(max-width:900px){.sx9 .sx9-saal{aspect-ratio:4/3}.sx9-unten{grid-template-columns:1fr;gap:20px}.sx9-karte{margin:-60px 10px 0}}
+
+/* ---------- 10 Fünf Gänge nebeneinander */
+.sx10{max-width:1320px;margin:0 auto}
+.sx10-kopf{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,440px);gap:60px;align-items:end;margin-bottom:clamp(44px,5vw,72px)}
+.sx10-kopf .ec-z{margin-top:0}
+.sx10-reihe{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px}
+.sx10-k figure{aspect-ratio:4/5;margin-bottom:16px;transform:translateY(80px);transition:transform 1.3s var(--e1) calc(.2s + var(--n)*.22s)}
+.sx10-k figure img{transform:scale(1.22);transition:transform 2.2s var(--e1) calc(.2s + var(--n)*.22s)}
+.cs10.da .sx10-k figure,.sx10-k figure img{transform:none}
+.sx10 .sx10-k figure img{transform:scale(1.22)}
+.cs10.da .sx10-k figure img,.cs10.da .sx10-k figure{transform:none}
+.sx10-g{margin:0;font-family:var(--licht);font-size:clamp(16px,1.2vw,19px);line-height:1.3}
+@media(max-width:900px){.sx10-kopf{grid-template-columns:1fr;gap:30px}.sx10-reihe{grid-template-columns:1fr 1fr}.sx10-k:first-child{grid-column:1/-1}}
+
+/* ---------- 11 Gross und klein */
+.sx11{max-width:1320px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:clamp(40px,5vw,90px);align-items:center}
+.sx11-buehne{position:relative;padding-bottom:12%}
+.sx11 .sx11-gross{width:86%;aspect-ratio:945/801}
+.sx11 .sx11-klein{position:absolute;right:0;bottom:0;width:46%;aspect-ratio:3/2;z-index:2;transform:translateY(90px) scale(.92);transition:transform 1.6s var(--e1) .45s}
+.cs11.da .sx11-klein{transform:none}
+@media(max-width:900px){.sx11{grid-template-columns:1fr}}
+
+/* ---------- 12 Oben der Saal, unten der Teller */
+.sx12{max-width:1320px;margin:0 auto}
+.sx12-oben{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(0,1fr);gap:clamp(40px,5vw,90px);align-items:end}
+.sx12 .sx12-saal{aspect-ratio:16/9;position:relative;z-index:2}
+.sx12-unten{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(0,1fr);gap:clamp(40px,5vw,90px);align-items:start;margin-top:-80px;position:relative;z-index:1;transform:translateY(-120px);transition:transform 1.9s var(--e1) .35s}
+.cs12.da .sx12-unten{transform:none}
+.sx12-tag{padding-top:120px}
+.sx12-paar{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-left:12%}
+.sx12-paar figure{aspect-ratio:4/5}
+@media(max-width:900px){.sx12-oben,.sx12-unten{grid-template-columns:1fr}.sx12-unten{margin-top:20px;transform:translateY(40px)}.sx12-tag{padding-top:0}.sx12-paar{margin:0}}
+
+/* ---------- 13 Das süsse Ende */
+.sx13{max-width:1320px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.35fr);gap:clamp(40px,5vw,90px);align-items:center}
+.sx13-block{margin-top:24px;padding-top:16px;border-top:1px solid var(--linie)}
+.sx13-g{margin:0;font-family:var(--licht);font-size:clamp(20px,1.7vw,26px);line-height:1.25}
+.sx13-wand{display:grid;grid-template-columns:1.3fr 1fr;grid-template-rows:repeat(3,minmax(0,1fr));gap:14px;height:min(80vh,760px)}
+.sx13-buffet{grid-row:1/4}
+.sx13-schwenk{position:absolute;left:0;right:0;top:0;height:150%;display:block;transition:transform 3.4s cubic-bezier(.45,.05,.25,1) .4s}
+.cs13.da .sx13-schwenk{transform:translateY(-33.333%)}
+@media(max-width:900px){.sx13{grid-template-columns:1fr}.sx13-wand{height:120vw;order:-1}}
+
+/* ---------- 14 Auf nichts verzichten */
+.sx14{max-width:1320px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:clamp(40px,5vw,90px);align-items:center}
+.sx14-buehne{position:relative;height:min(64vh,600px)}
+.sx14 .sx14-a{position:absolute;left:0;top:0;width:78%;aspect-ratio:3/2}
+.sx14 .sx14-b{position:absolute;right:0;top:38%;width:42%;aspect-ratio:3/2;z-index:2}
+.sx14 .sx14-c{position:absolute;left:8%;top:50%;width:40%;aspect-ratio:3/2;z-index:3}
+.sx14-arten{list-style:none;margin:24px 0 0;padding:0}
+.sx14-arten li{position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.9fr);gap:20px;align-items:baseline;padding:13px 0}
+.sx14-arten li::before{content:"";position:absolute;left:0;right:0;top:0;height:1px;background:rgba(138,106,42,.45);transform:scaleX(0);transform-origin:left;transition:transform 1.2s var(--e1) calc(.3s + var(--n)*.18s)}
+.cs14.da .sx14-arten li::before{transform:none}
+.sx14-arten b{font-family:var(--licht);font-weight:400;font-size:clamp(18px,1.45vw,23px);line-height:1.25}
+.sx14-arten span{font-size:13px;line-height:1.45;opacity:.7}
+@media(max-width:900px){.sx14{grid-template-columns:1fr}.sx14-buehne{height:100vw}.sx14-arten li{grid-template-columns:1fr;gap:2px}}
+
+/* ---------- 15 Die Karte in grosser Schrift */
+.sx15{max-width:1320px;margin:0 auto}
+.sx15-kopf{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,420px);gap:60px;align-items:end;margin-bottom:clamp(40px,5vw,70px)}
+.sx15-kopf .ec-z{margin:0}
+.sx15-z{display:grid;grid-template-columns:140px minmax(0,1fr) minmax(0,25%);gap:clamp(20px,3vw,48px);align-items:center;padding:20px 0;border-top:1px solid var(--linie);outline:none}
+.sx15-z:last-child{border-bottom:1px solid var(--linie)}
+.sx15-t{transition:opacity .6s}
+.sx15-z:not(.an) .sx15-t{opacity:.4}
+.sx15-g{margin:0;font-family:var(--licht);font-weight:300;font-size:clamp(30px,3.4vw,58px);line-height:1.05;letter-spacing:-.022em}
+.sx15 .sx15-f.sx15-f{aspect-ratio:3/2;background:transparent;box-shadow:none}
+.sx15-f span{display:block;height:100%;background:#000;border-radius:var(--rk);overflow:hidden;box-shadow:var(--sch-h);transform:translateY(105%);transition:transform 1s var(--e1)}
+.sx15-f{overflow:hidden}
+.sx15-z.an .sx15-f span{transform:none}
+.sx15-fuss{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px}
+@media(max-width:900px){.sx15-kopf{grid-template-columns:1fr;gap:30px}.sx15-z{grid-template-columns:minmax(0,1fr) 36%;gap:14px}.sx15-z>.ro{grid-column:1/-1}.sx15-g{font-size:26px}.sx15-z .ec-w{display:none}}

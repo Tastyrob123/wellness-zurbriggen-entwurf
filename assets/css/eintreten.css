@@ -1,0 +1,47 @@
+/* Abschnitt «treten Sie ein …» (20.10.2026), drei Fassungen. Warmes Licht aus dem Haus nach dem Winterabend. Auftritt einmal beim Berühren des Rands. */
+.ez{position:relative;background:#0E1638;color:#F4F2EC;padding:clamp(80px,10vw,150px) var(--rand)}
+.ez-o{margin:0 0 18px;font-family:var(--mono);font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:#E9D49A}
+.ez-t{margin:0;font-family:var(--licht);font-weight:400;font-size:clamp(44px,5.4vw,92px);line-height:1.02;letter-spacing:-.02em;color:#fff}
+.ez-t .sl{display:block;overflow:hidden;padding:0 0 .1em}
+.ez-t .sl>span{display:inline-block;transform:translateY(110%);transition:transform 1.5s var(--e1)}
+.ez.da .ez-t .sl>span{transform:none}
+.ez-l{margin:22px 0 0;max-width:40ch;font-family:var(--sans);font-size:18px;line-height:1.6;color:#D9DEEA}
+.ez img{display:block;width:100%;height:100%;object-fit:cover}
+/* 1 Die Fensterfront: vier Fenster verschiedener Breite, wie die erleuchteten Scheiben des Pavillons */
+.ez1 .ez-k{display:grid;grid-template-columns:1fr 1fr;gap:5vw;align-items:end;margin-bottom:clamp(40px,5vw,72px)}
+.ez1 .ez-l{margin:0}
+.ez1-front{display:flex;gap:14px;height:min(62vh,600px);padding:14px;border-radius:30px;background:#1A1410;box-shadow:inset 0 0 0 1px rgba(233,212,154,.25),0 40px 80px -40px rgba(0,0,0,.8)}
+.ez1 .sch{position:relative;margin:0;overflow:hidden;border-radius:18px;transform:translateY(60px);opacity:0;transition:transform 1.5s var(--e1),opacity 1s ease}
+.ez1.da .sch{transform:none;opacity:1}
+.ez1 .sch img{transform:scale(1.14);transition:transform 2.6s cubic-bezier(.2,.7,.2,1)}
+.ez1.da .sch img{transform:none}
+.ez1 .sch figcaption{position:absolute;left:0;right:0;bottom:0;padding:44px 18px 16px;font-family:var(--mono);font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:#fff;background:linear-gradient(transparent,rgba(10,8,6,.55))}
+/* 2 Ein Raum, ganz: die Lounge gross, rechts Text und die Wahl der Räume */
+.ez2{display:grid;grid-template-columns:62% 1fr;gap:5vw;align-items:center;min-height:100vh}
+.ez2-bild{height:min(78vh,760px);border-radius:var(--rund);overflow:hidden;box-shadow:0 50px 90px -40px rgba(0,0,0,.8)}
+.ez2-bild img{transform:scale(1.12);transition:transform 2.6s cubic-bezier(.2,.7,.2,1)}
+.ez2.da .ez2-bild img{transform:none}
+.ez2-wahl{display:flex;gap:28px;margin-top:40px;padding-top:22px;border-top:1px solid rgba(233,212,154,.3);font-family:var(--licht);font-size:22px;color:#9AA3BD}
+.ez2-wahl .an{color:#fff;position:relative} .ez2-wahl .an::after{content:'';position:absolute;left:0;right:0;top:-23px;height:2px;background:#E9D49A}
+/* 3 Drinnen am Winterabend: die Stube mit Weihnachtsbaum über die ganze Breite, Text auf einer warmen Karte, die Menümappe dazu */
+.ez3{padding-bottom:clamp(80px,9vw,140px)}
+.ez3-bild{height:min(88vh,820px);border-radius:var(--rund);overflow:hidden}
+.ez3-bild img{transform:scale(1.1);transition:transform 2.8s cubic-bezier(.2,.7,.2,1)}
+.ez3.da .ez3-bild img{transform:none}
+.ez3-karte{position:relative;z-index:2;width:min(620px,88vw);margin:calc(-1 * clamp(160px,18vw,260px)) 0 0 clamp(20px,4vw,64px);padding:clamp(30px,3.4vw,52px);border-radius:var(--rund-m);background:#F4F2EC;color:#253338;box-shadow:0 40px 80px -30px rgba(0,0,0,.6);transform:translateY(80px);transition:transform 1.5s var(--e1) .15s}
+.ez3.da .ez3-karte{transform:none}
+.ez3-karte .ez-o{color:#7A5A2E} .ez3-karte .ez-t{color:#253338} .ez3-karte .ez-l{color:#3F4A4B}
+.ez3-klein{position:absolute;right:calc(var(--rand) + clamp(20px,4vw,64px));bottom:clamp(60px,7vw,110px);width:24vw;aspect-ratio:3/2;border-radius:var(--rund-m);overflow:hidden;box-shadow:0 40px 80px -30px rgba(0,0,0,.7);transform:translateY(80px);transition:transform 1.5s var(--e1) .25s}
+.ez3.da .ez3-klein{transform:none}
+@media (max-width:760px){
+ .ez1 .ez-k{grid-template-columns:1fr}.ez1-front{height:auto;flex-wrap:wrap}.ez1 .sch{flex:1 1 40%!important;height:200px}
+ .ez2{grid-template-columns:1fr}.ez2-bild{height:52vh}
+ .ez3-bild{height:60vh}.ez3-klein{position:relative;right:auto;bottom:auto;width:70%;margin:20px 0 0 auto}
+}
+.ez1 .ez-k{align-items:end}
+.ez1 .ez-k .ez-l{justify-self:end}
+.ez3-karte{width:min(760px,90vw)}
+.ez3-karte .ez-t{font-size:clamp(40px,4.4vw,76px)}
+.ez2-wahl button{all:unset;cursor:pointer;transition:color .4s ease} .ez2-wahl button:hover{color:#fff}
+.ez2-wahl .an{color:#fff;position:relative} .ez2-wahl .an::after{content:'';position:absolute;left:0;right:0;top:-23px;height:2px;background:#E9D49A}
+.ez2-bild img{transition:transform 2.6s cubic-bezier(.2,.7,.2,1)}

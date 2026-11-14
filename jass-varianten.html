@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="de">
+<head><script data-wurzel>/* Wurzel-Weiche: Seite laeuft an der Wurzel einer Adresse oder in einem Unterordner (github.io/<repo>/) */(function(){var D=0,p=location.pathname.split('/');p.splice(p.length-1-D,D+1);var W=p.join('/')+'/';window.__W=W;if(W==='/')return;var O=location.origin;
+function f(u){if(typeof u!=='string')return u;if(u.indexOf(O+'/')===0)return O+f(u.slice(O.length));if(u.charAt(0)!=='/'||u.charAt(1)==='/'||u.indexOf(W)===0||u+'/'===W)return u;return W+u.slice(1)}
+function s(v){return typeof v!=='string'?v:v.replace(/(^|,)(\s*)(\S+)/g,function(m,a,b,u){return a+b+f(u)})}
+function c(v){return typeof v!=='string'?v:v.replace(/url\(\s*(['"]?)([^'")]+)/g,function(m,q,u){return 'url('+q+f(u)})}
+function h(v){return typeof v!=='string'?v:c(v.replace(/(\s(?:src|href|poster|action|data-src|data-href)\s*=\s*)(["'])([^"']*)\2/gi,function(m,a,q,u){return a+q+f(u)+q}).replace(/(\s(?:srcset|imagesrcset|data-srcset)\s*=\s*)(["'])([^"']*)\2/gi,function(m,a,q,u){return a+q+s(u)+q}))}
+function d(K,k,g){K=window[K];if(!K)return;var x=Object.getOwnPropertyDescriptor(K.prototype,k);if(!x||!x.set)return;Object.defineProperty(K.prototype,k,{configurable:true,enumerable:x.enumerable,get:x.get,set:function(v){x.set.call(this,g(v))}})}
+[['HTMLImageElement','src'],['HTMLScriptElement','src'],['HTMLLinkElement','href'],['HTMLIFrameElement','src'],['HTMLSourceElement','src'],['HTMLMediaElement','src'],['HTMLVideoElement','poster'],['HTMLAnchorElement','href'],['HTMLAreaElement','href'],['HTMLFormElement','action'],['HTMLEmbedElement','src'],['HTMLObjectElement','data']].forEach(function(z){d(z[0],z[1],f)});
+[['HTMLImageElement','srcset'],['HTMLSourceElement','srcset'],['HTMLLinkElement','imageSrcset']].forEach(function(z){d(z[0],z[1],s)});
+d('Element','innerHTML',h);d('Element','outerHTML',h);var iah=Element.prototype.insertAdjacentHTML;Element.prototype.insertAdjacentHTML=function(w,v){return iah.call(this,w,h(v))};
+var sa=Element.prototype.setAttribute;Element.prototype.setAttribute=function(n,v){var l=String(n).toLowerCase();if(/^(src|href|poster|action|data|data-src|data-href)$/.test(l))v=f(v);else if(/srcset$/.test(l))v=s(v);else if(l==='style')v=c(v);return sa.call(this,n,v)};
+var st=CSSStyleDeclaration.prototype,sp=st.setProperty;st.setProperty=function(n,v,q){return sp.call(this,n,c(v),q)};['background','backgroundImage','cssText','maskImage','webkitMaskImage','listStyleImage','borderImageSource','content'].forEach(function(k){var x=Object.getOwnPropertyDescriptor(st,k);if(x&&x.set)Object.defineProperty(st,k,{configurable:true,enumerable:x.enumerable,get:x.get,set:function(v){x.set.call(this,c(v))}})});
+var F=window.fetch;if(F)window.fetch=function(i,o){if(typeof i==='string')i=f(i);else if(i instanceof URL)i=f(i.href);return F.call(this,i,o)};
+var XO=XMLHttpRequest.prototype.open;XMLHttpRequest.prototype.open=function(){var a=[].slice.call(arguments);a[1]=f(a[1] instanceof URL?a[1].href:a[1]);return XO.apply(this,a)};
+if(navigator.sendBeacon){var B=navigator.sendBeacon;navigator.sendBeacon=function(u,x){return B.call(navigator,f(u),x)}}
+var wo=window.open;window.open=function(u){var a=[].slice.call(arguments);a[0]=f(u);return wo.apply(window,a)};
+var dw=document.write,dl=document.writeln;document.write=function(){return dw.apply(document,[].map.call(arguments,h))};document.writeln=function(){return dl.apply(document,[].map.call(arguments,h))};
+['pushState','replaceState'].forEach(function(k){var o=history[k];history[k]=function(a,b,u){return o.call(history,a,b,u==null?u:f(String(u)))}});
+function e(el){if(!el||el.nodeType!==1)return;['src','href','poster','action'].forEach(function(a){var v=el.getAttribute(a);if(v&&v.charAt(0)==='/'){var z=f(v);if(z!==v)sa.call(el,a,z)}});var t=el.getAttribute('srcset');if(t&&/(^|,)\s*\/[^\/]/.test(t)){var z=s(t);if(z!==t)sa.call(el,'srcset',z)}t=el.getAttribute('style');if(t&&/url\(\s*['"]?\/[^\/]/.test(t)){z=c(t);if(z!==t)sa.call(el,'style',z)}}
+new MutationObserver(function(ms){ms.forEach(function(m){if(m.type==='attributes')e(m.target);else m.addedNodes.forEach(function(n){if(n.nodeType!==1)return;e(n);var l=n.querySelectorAll('[src],[href],[srcset],[poster],[action],[style]');for(var i=0;i<l.length;i++)e(l[i])})})}).observe(document.documentElement,{childList:true,subtree:true,attributes:true,attributeFilter:['src','href','srcset','poster','action','style']})})();</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Jasswochen · 15 Fassungen</title>
+<link rel="stylesheet" href="assets/css/haus.css?v=13">
+<link rel="stylesheet" href="assets/css/rest-ideen.css?v=6">
+<link rel="stylesheet" href="assets/css/feinschliff.css?v=4">
+<link rel="stylesheet" href="assets/css/startseite2.css?v=7">
+<style>
+/* Jasswochen · 15 Fassungen im Stil der Startseite (24.10.2026). Nur Bausteine der Seite: .ro .rt .rl, Listen mit Messingstrich, Fotos mit --rk, Knöpfe .rk. */
+.jv-nr{position:sticky;top:0;z-index:50;margin:0;padding:12px var(--rand);background:#0A0805;font-family:var(--mono);font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--ms-h);border-top:1px solid rgba(217,183,88,.25)}
+.jv-nr b{color:#F4EDE3;font-weight:400;margin-right:14px}
+.ri.da .rt .sl>span{transform:none}
+.jv .rt{font-size:clamp(40px,4vw,68px)}
+.jv .rl b{font-weight:400;color:var(--ms-h)}
+.ri-hell .rl b{color:#8A6A2A}
+/* Liste wie «Vor Ihrer Anreise» */
+.jv-f{margin:clamp(24px,2.6vw,36px) 0 0;padding:0;list-style:none}
+.jv-f li{display:grid;grid-template-columns:150px 1fr;gap:16px;padding:14px 0;border-top:1px solid rgba(201,165,78,.55)}
+.jv-f b{font-family:var(--licht);font-weight:400;font-size:18px;color:var(--ms-h)}
+.ri-hell .jv-f b{color:#8A6A2A}
+.jv-f span{font-size:15px;line-height:1.55;opacity:.88}
+.jv-f span em{font-style:normal;color:var(--ms-h)}
+.jv-zeile{margin:22px 0 0;font-family:var(--mono);font-size:11px;letter-spacing:.17em;line-height:1.9;text-transform:uppercase;color:var(--ms-h)}
+.ri-hell .jv-zeile{color:#8A6A2A}
+.jv .r-knoepfe{margin-top:clamp(28px,3vw,40px)}
+.jv-preis{font-family:var(--licht);font-weight:300;font-size:clamp(34px,3.4vw,54px);line-height:1;letter-spacing:-.02em;color:var(--ms-h)}
+/* feine Messinglinie */
+.jv-linie{stroke:#C9A54E;stroke-width:1;fill:none;vector-effect:non-scaling-stroke}
+.jv-mono{font-family:var(--mono);font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;fill:#E9D49A}
+
+/* 01 Wie die Anreise */
+.v01{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:clamp(36px,5vw,96px);align-items:center}
+.v01 figure{aspect-ratio:4/5}
+/* 02 Wie der Gourmet-Abend */
+.v02{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(36px,5vw,96px);align-items:start}
+.v02-b{display:grid;grid-template-columns:1fr 1fr;gap:clamp(14px,1.4vw,22px)}
+.v02-b figure:first-child{grid-column:1/-1;aspect-ratio:16/10}
+.v02-b figure{aspect-ratio:4/3}
+.v02 ol{margin:30px 0 0;padding:0;list-style:none}
+.v02 li{padding:16px 0;border-top:1px solid rgba(217,183,88,.3)}
+.v02 li .ro{font-size:10px;margin:0 0 6px}
+.v02 li p:last-child{margin:0;font-family:var(--licht);font-size:clamp(16px,1.3vw,20px);line-height:1.45}
+/* 03 Wie das Saastal: eine Linie durch den Winter */
+.v03-kopf{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end}
+.v03-kopf .rl{justify-self:end;margin:0}
+.v03-linie{position:relative;margin:clamp(50px,5vw,80px) 0 0}
+.v03-linie svg{display:block;width:100%;height:auto;overflow:visible}
+.v03-linie text{font-family:var(--licht);font-size:15px;fill:#F4EDE3}
+.v03-unten{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(36px,5vw,96px);margin-top:clamp(40px,4vw,64px);align-items:start}
+.v03-bilder{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.v03-bilder figure{aspect-ratio:4/5}
+/* 04 Wie die Zimmer: sechs Wochen als Karten */
+.v04{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:clamp(36px,4vw,72px);align-items:start}
+.v04-g{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,1.6vw,26px) clamp(14px,1.4vw,22px)}
+.v04-g figure{aspect-ratio:4/3}
+.v04-k p{margin:0}
+.v04-k .n{margin:14px 0 0;font-family:var(--licht);font-size:clamp(17px,1.35vw,21px)}
+.v04-k .d{margin:4px 0 0;font-size:13.5px;opacity:.8}
+.v04-k .p{margin:8px 0 0;font-family:var(--mono);font-size:11px;letter-spacing:.14em;color:#8A6A2A}
+/* 05 Wie das Spa: der Tag an einer Linie */
+.v05{display:grid;grid-template-columns:minmax(0,4fr) 60px minmax(0,4fr) minmax(0,4fr);gap:clamp(20px,2.4vw,40px);align-items:start}
+.v05-l{position:relative;align-self:stretch}
+.v05-l::before{content:'';position:absolute;left:50%;top:0;bottom:0;width:1px;background:rgba(217,183,88,.45)}
+.v05-st{display:grid;gap:clamp(30px,3vw,48px)}
+.v05-st div{position:relative}
+.v05-st div::before{content:'';position:absolute;left:calc(-1 * clamp(20px,2.4vw,40px) - 34px);top:8px;width:9px;height:9px;border-radius:50%;background:#C9A54E;box-shadow:0 0 0 5px rgba(201,165,78,.18)}
+.v05-st .ro{margin:0 0 6px}
+.v05-st p:last-child{margin:0;font-family:var(--licht);font-size:clamp(20px,1.7vw,26px);line-height:1.3}
+.v05 figure{aspect-ratio:3/4}
+/* 06 Grosse Zahl */
+.v06{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(36px,5vw,96px);align-items:center}
+.v06-z{margin:0;font-family:var(--licht);font-weight:200;font-size:clamp(200px,24vw,400px);line-height:.8;letter-spacing:-.06em;color:#B08B3A}
+.v06-zl{margin:18px 0 0;font-family:var(--licht);font-weight:400;font-size:clamp(26px,2.4vw,38px)}
+/* 07 Der Satz */
+.v07{text-align:center}
+.v07 blockquote{margin:24px auto 0;max-width:22ch;font-family:var(--licht);font-weight:300;font-size:clamp(34px,3.6vw,60px);line-height:1.15;letter-spacing:-.015em}
+.v07 blockquote em{font-style:normal;color:var(--ms-h)}
+.v07-z{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;max-width:1000px;margin:clamp(50px,5vw,80px) auto 0;text-align:left}
+.v07-z div{border-top:1px solid rgba(217,183,88,.4);padding-top:16px}
+.v07-z b{display:block;font-family:var(--licht);font-weight:300;font-size:clamp(34px,3.6vw,58px);letter-spacing:-.02em;color:var(--ms-h)}
+.v07-z span{display:block;margin-top:8px;font-size:15px;line-height:1.55;opacity:.85}
+.v07 .r-knoepfe{justify-content:center}
+/* 08 Fenster */
+.v08{padding:0!important}
+.v08 figure{border-radius:0!important;box-shadow:none!important;height:min(92vh,900px)}
+.v08 figure::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(34,24,15,.92),rgba(34,24,15,.55) 45%,rgba(34,24,15,0) 75%)}
+.v08-t{position:absolute;left:var(--rand);top:50%;transform:translateY(-50%);z-index:2;max-width:560px}
+/* 09 Blatt Papier auf dunklem Grund */
+.v09{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(36px,5vw,96px);align-items:center}
+.v09-blatt{background:#FBF7F0;color:#18213F;border-radius:6px;padding:clamp(34px,3.4vw,56px);box-shadow:0 1px 0 #fff inset,0 50px 80px -40px rgba(0,0,0,.85);position:relative}
+.v09-blatt::before{content:'';position:absolute;inset:12px;border:1px solid rgba(168,138,58,.4);border-radius:3px;pointer-events:none}
+.v09-blatt h3{margin:6px 0 0;text-align:center;font-family:var(--licht);font-weight:400;font-size:clamp(26px,2.2vw,34px)}
+.v09-blatt .ro{text-align:center;color:#8A6A2A}
+.v09-blatt ul{margin:26px 0 0;padding:0;list-style:none}
+.v09-blatt li{display:flex;justify-content:space-between;gap:20px;padding:10px 0;border-bottom:1px dotted rgba(24,33,63,.25);font-family:var(--licht);font-size:17px}
+.v09-blatt li span{font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;color:#8A6A2A;white-space:nowrap;align-self:center}
+.v09-tot{display:flex;justify-content:space-between;align-items:baseline;margin-top:22px}
+.v09-tot b{font-family:var(--licht);font-weight:300;font-size:46px;letter-spacing:-.02em}
+.v09-klein{margin:6px 0 0;text-align:right;font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;color:#8A6A2A}
+/* 10 Zwei Häuser */
+.v10-kopf{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end}
+.v10-kopf .rl{justify-self:end;margin:0}
+.v10-h{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,3vw,56px);margin-top:clamp(40px,4vw,64px)}
+.v10-h figure{aspect-ratio:16/10}
+.v10-h h3{margin:22px 0 0;font-family:var(--licht);font-weight:400;font-size:clamp(24px,2vw,32px)}
+/* 11 Die Wochen als Zeilen */
+.v11{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(36px,5vw,96px);align-items:start}
+.v11-w{margin:0;padding:0;list-style:none}
+.v11-w a{display:flex;justify-content:space-between;align-items:center;padding:16px 0;border-top:1px solid rgba(217,183,88,.3);color:#F4EDE3;text-decoration:none;font-family:var(--licht);font-weight:300;font-size:clamp(26px,2.5vw,40px);letter-spacing:-.01em}
+.v11-w a span{font-family:var(--mono);font-size:11px;letter-spacing:.16em;color:var(--ms-h)}
+.v11-w li:last-child a{border-bottom:1px solid rgba(217,183,88,.3)}
+/* 12 Feine Linie: der Tisch */
+.v12{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:clamp(36px,5vw,96px);align-items:center}
+.v12 svg{width:100%;height:auto;max-width:560px;justify-self:center}
+/* 13 Gastgeber */
+.v13{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(36px,5vw,96px);align-items:center}
+.v13 figure{aspect-ratio:4/5}
+.v13 blockquote{margin:26px 0 0;font-family:var(--licht);font-weight:300;font-size:clamp(24px,2.2vw,34px);line-height:1.32;letter-spacing:-.01em}
+.v13 cite{display:block;margin-top:14px;font-style:normal;font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--ms-h)}
+.offen{outline:1px dashed rgba(233,212,154,.55);outline-offset:6px}
+/* 14 Am Tag, am Abend */
+.v14-kopf{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end}
+.v14-kopf .rl{justify-self:end;margin:0}
+.v14-p{display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,2.4vw,40px);margin-top:clamp(40px,4vw,64px)}
+.v14-p figure{aspect-ratio:4/3}
+.v14-p figcaption{position:absolute;left:0;right:0;bottom:0;padding:clamp(22px,2.4vw,36px);background:linear-gradient(transparent,rgba(20,14,8,.85));color:#fff}
+.v14-p figcaption .ro{color:var(--ms-h)}
+.v14-p figcaption p:last-child{margin:0;font-family:var(--licht);font-weight:300;font-size:clamp(18px,1.6vw,24px);line-height:1.4}
+.v14-u{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(36px,5vw,96px);margin-top:clamp(36px,3.6vw,56px);align-items:end}
+/* 15 Drei Spalten wie die Loft-Suite */
+.v15{display:grid;grid-template-columns:minmax(0,4.2fr) minmax(0,5fr) minmax(0,2.8fr);gap:clamp(20px,2.6vw,44px);align-items:center}
+.v15-m figure{aspect-ratio:4/5}
+.v15-s{display:grid;gap:clamp(14px,1.4vw,22px)}
+.v15-s figure{aspect-ratio:4/3}
+@media (max-width:900px){
+  .v01,.v02,.v03-unten,.v04,.v05,.v06,.v09,.v11,.v12,.v13,.v14-u,.v15,.v03-kopf,.v10-kopf,.v14-kopf{grid-template-columns:1fr}
+  .v04-g,.v03-bilder{grid-template-columns:1fr 1fr}
+  .v10-h,.v14-p,.v07-z{grid-template-columns:1fr}
+  .v05-l{display:none}
+  .jv-f li{grid-template-columns:1fr;gap:4px}
+}
+</style>
+</head>
+<body class="rest wstart s2seite">
+<main id="jv"></main>
+<script>
+const P=n=>`assets/img/${n}-l.webp`;
+const fig=(n,alt,st='')=>`<figure${st?` style="${st}"`:''}><img src="${P(n)}" alt="${alt}" loading="lazy" decoding="async"></figure>`;
+const pfeil='<em><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></em>';
+const knoepfe=(a='Platz anfragen',b='Alle Angebote')=>`<div class="r-knoepfe r-knoepfe--l"><a class="rk rk--h" href="#"><span>${a}</span>${pfeil}</a><a class="rk rk--h" href="angebote.html"><span>${b}</span>${pfeil}</a></div>`;
+const titel=t=>`<h2 class="rt">${t.split('|').map(z=>`<span class="sl"><span>${z}</span></span>`).join('')}</h2>`;
+const W=[['1.–7.','November 2026','Nov'],['13.–18.','Dezember 2026','Dez'],['10.–15.','Januar 2027','Jan'],['24.–29.','Januar 2027','Jan'],['21.–26.','März 2027','Mär'],['4.–9.','April 2027','Apr']];
+const termine=W.map(w=>`${w[0]} ${w[1]}`).join(' · ');
+const KO='Angebote · Jasswochen 2026/2027';
+/* Was Jass ist, in einem Satz, auf jeder Fassung */
+const JASS='Jass ist das Kartenspiel der Schweiz: Man spielt zu viert, zwei gegen zwei.';
+const WOCHE='In der Jasswoche sitzen Sie an vier Abenden mit den anderen Gästen am Kartentisch, am Ende gibt es Preise.';
+const PREIS=`<em>Fr. 750.–</em> pro Person für die ganze Woche. Darin sind 5 Nächte im Doppelzimmer, Frühstück, 5-Gang-Abendessen, Suppe und Kuchen am Nachmittag, die 4 Jassabende und das Spa. Das sind Fr. 150.– pro Nacht.`;
+const KLEIN='Einzelzimmer Fr. 850.– · Loft-Suite + Fr. 150.– · Hotel Monte-Moro ab Fr. 650.– · Kurtaxe nicht inbegriffen';
+const liste=(rows)=>`<ul class="jv-f">${rows.map(r=>`<li><b>${r[0]}</b><span>${r[1]}</span></li>`).join('')}</ul>`;
+const STD=[['Was ist Jass?',JASS],['Die Woche','5 Nächte. '+WOCHE+' Tagsüber Spa, Hüttengaudi mit Fabian und ein Rundgang durchs Dorf.'],['Der Preis',PREIS],['Die Termine',termine]];
+/* feine Messinglinie: eine Karte */
+const kartenLinie=`<svg viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" style="display:block;margin:0 0 18px"><g class="jv-linie"><rect x="14" y="12" width="40" height="58" rx="4" transform="rotate(-12 34 41)"/><rect x="40" y="8" width="40" height="58" rx="4"/><rect x="66" y="12" width="40" height="58" rx="4" transform="rotate(12 86 41)"/><path d="M60 30c-3-4-9-2-9 2 0 5 9 10 9 10s9-5 9-10c0-4-6-6-9-2z"/></g></svg>`;
+const F=[];
+
+/* 01 */
+F.push(['Wie «Vor Ihrer Anreise»','schoko',`<div class="v01">${fig('w-fondue','Gäste am Tisch in der Stube')}<div>${kartenLinie}<p class="ro">${KO}</p>${titel('jassen Sie mit&nbsp;…')}<p class="rl">… an vier Abenden, mit den anderen Gästen und um Preise.</p>${liste(STD)}<p class="jv-zeile">${KLEIN}</p>${knoepfe()}</div></div>`]);
+
+/* 02 */
+F.push(['Wie der Gourmet-Abend','hell',`<div class="v02"><div><p class="ro">${KO}</p>${titel('mischen Sie mit&nbsp;…')}<p class="rl">${JASS} ${WOCHE}</p>
+<ol>${[['Am Morgen','Frühstücksbuffet'],['Am Tag','Spa und Bad, Hüttengaudi mit Fabian, Rundgang durchs Dorf'],['Am Nachmittag','Suppe und Kuchenbuffet, Tee und Kaffee bis 17.30 Uhr'],['Am Abend','5-Gang-Abendessen, danach Jass, «Schieber» D und F'],['Am Schluss','Preise für die Besten']].map(r=>`<li><p class="ro">${r[0]}</p><p>${r[1]}</p></li>`).join('')}</ol>
+<p class="at2-tag" style="margin-top:22px">${PREIS.replace('<em>','<b style="font-weight:400;color:#8A6A2A">').replace('</em>','</b>')}</p></div>
+<div class="v02-b">${fig('j-saal','Der Speisesaal am Abend')}${fig('w-fondue','Am Tisch in der Stube')}${fig('g-abend','Abendessen am Kamin')}<div class="r-knoepfe r-knoepfe--l" style="grid-column:1/-1;margin-top:10px"><a class="rk" href="#"><span>Platz anfragen</span>${pfeil}</a></div></div></div>`]);
+
+/* 03 */
+const L=[[0,'1.–7. Nov'],[23.2,'13.–18. Dez'],[38.7,'10.–15. Jan'],[46.4,'24.–29. Jan'],[77.4,'21.–26. Mär'],[85.1,'4.–9. Apr']];
+const MO=[[0,'November'],[16.6,'Dezember'],[33.7,'Januar'],[50.8,'Februar'],[66.3,'März'],[83.4,'April']];
+F.push(['Wie das Saastal: eine Linie durch den Winter','schoko',`<div class="v03-kopf"><div><p class="ro">${KO}</p>${titel('spielen Sie den Winter durch&nbsp;…')}</div><p class="rl">${JASS} Sechs Wochen im Winter, je fünf Nächte, an vier Abenden wird gespielt.</p></div>
+<div class="v03-linie"><svg viewBox="0 0 1400 130" aria-label="Die sechs Jasswochen von November bis April">
+<line class="jv-linie" x1="20" y1="70" x2="1380" y2="70"/>
+${MO.map(m=>{const x=20+m[0]*13.6;return `<line class="jv-linie" x1="${x}" y1="64" x2="${x}" y2="76" style="opacity:.6"/><text class="jv-mono" x="${x}" y="110">${m[1]}</text>`}).join('')}
+${L.map((l,i)=>{const x=20+l[0]*13.6+18;return `<circle cx="${x}" cy="70" r="${i===0?7:4.5}" fill="#C9A54E"/><text x="${x}" y="${i%2?36:50}" text-anchor="middle">${l[1]}</text>`}).join('')}
+</svg></div>
+<div class="v03-unten"><div>${liste([['Der Preis',PREIS],['Monte-Moro','Fr. 650.– pro Person, wohnen nebenan im Hotel Monte-Moro, Essen und Spa im Pirmin.']])}${knoepfe()}</div><div class="v03-bilder">${fig('w-mond','Mondnacht über dem Tal')}${fig('w-fondue','Am Tisch in der Stube')}${fig('winternacht','Das Hotel in der Winternacht')}</div></div>`]);
+
+/* 04 */
+const WB=['h-winter','winternacht','w-mond','w-ski','w-schneeschuh','w-langlauf'];
+F.push(['Wie die Zimmer: sechs Wochen, sechs Karten','hell',`<div class="v04"><div><p class="ro">${KO}</p>${titel('wählen Sie Ihre|Woche&nbsp;…')}<p class="rl">${JASS} ${WOCHE}</p>${liste([['Der Preis',PREIS]])}<p class="jv-zeile">${KLEIN}</p>${knoepfe('Alle Termine','Gutschein schenken')}</div>
+<div class="v04-g">${W.map((w,i)=>`<div class="v04-k">${fig(WB[i],'Winter im Saastal')}<p class="n">${w[0]} ${w[1]}</p><p class="d">5 Nächte · 4 Jassabende</p><p class="p">FR. 750.-- PRO PERSON, GANZE WOCHE</p></div>`).join('')}</div></div>`]);
+
+/* 05 */
+F.push(['Wie das Spa: ein Tag an der Linie','schoko',`<div class="v05"><div><p class="ro">${KO}</p>${titel('bleiben Sie|sitzen&nbsp;…')}<p class="rl">… nach dem Essen. ${JASS}</p>${liste([['Der Preis',PREIS]])}${knoepfe()}</div><div class="v05-l"></div>
+<div class="v05-st">${[['Am Morgen','Frühstücksbuffet'],['Am Tag','Spa auf 1’100 m², Hüttengaudi mit Fabian, Rundgang durchs Dorf'],['Am Nachmittag','Suppe und Kuchen'],['Am Abend','Fünf Gänge, dann wird gejasst'],['Nach vier Abenden','Preise für die Besten']].map(r=>`<div><p class="ro">${r[0]}</p><p>${r[1]}</p></div>`).join('')}</div>
+${fig('j-stube','Die Stube mit den Holztischen')}</div>`]);
+
+/* 06 */
+F.push(['Eine grosse Zahl','schoko',`<div class="v06"><div><p class="v06-z">4</p><p class="v06-zl">Abende am Kartentisch</p></div><div><p class="ro">${KO}</p>${titel('spielen Sie|eine Runde&nbsp;…')}<p class="rl">${JASS} ${WOCHE}</p>${liste([['Die Woche','5 Nächte, Frühstück und 5-Gang-Abendessen, Spa, Hüttengaudi mit Fabian, Rundgang durchs Dorf'],['Der Preis',PREIS],['Die Termine',termine]])}${knoepfe()}</div></div>`]);
+
+/* 07 */
+F.push(['Ein Satz','schoko',`<div class="v07"><p class="ro">${KO}</p><blockquote>Jass ist das Kartenspiel der Schweiz. <em>Eine Woche lang spielen Sie es mit uns.</em></blockquote>
+<div class="v07-z"><div><b>5 Nächte</b><span>im Doppelzimmer, mit Frühstück und 5-Gang-Abendessen, Spa inbegriffen</span></div><div><b>4 Abende</b><span>am Kartentisch, zu viert, zwei gegen zwei, mit Preisen am Schluss</span></div><div><b>Fr. 750.–</b><span>pro Person für die ganze Woche, also Fr. 150.– pro Nacht</span></div></div>
+<p class="jv-zeile" style="text-align:center;margin-top:40px">${termine}</p>${knoepfe().replace('r-knoepfe--l','')}</div>`]);
+
+/* 08 */
+F.push(['Fenster','schoko v08',`<div style="position:relative">${fig('j-saal','Der Speisesaal am Abend')}<div class="v08-t"><p class="ro">${KO}</p>${titel('jassen Sie mit&nbsp;…')}<p class="rl">${JASS} ${WOCHE}</p>${liste([['Der Preis',PREIS],['Die Termine',termine]])}${knoepfe()}</div></div>`]);
+
+/* 09 */
+F.push(['Blatt Papier auf dunklem Grund','schoko',`<div class="v09"><div><p class="ro">${KO}</p>${titel('legen Sie die|Karten auf den Tisch&nbsp;…')}<p class="rl">${JASS} ${WOCHE}</p><p class="jv-zeile">${termine}</p>${knoepfe()}</div>
+<div class="v09-blatt"><p class="ro">Hotel Pirmin Zurbriggen</p><h3>Ihre Jasswoche</h3><ul>${[['5 Nächte im Doppelzimmer Standard','INBEGRIFFEN'],['Frühstücksbuffet','INBEGRIFFEN'],['5-Gang-Abendessen','INBEGRIFFEN'],['Suppe und Kuchen am Nachmittag','INBEGRIFFEN'],['4 Jassabende, «Schieber» D und F','INBEGRIFFEN'],['Spa und Bad, 1’100 m²','INBEGRIFFEN'],['Hüttengaudi mit Fabian, Dorfrundgang','INBEGRIFFEN'],['Parkplatz','INBEGRIFFEN']].map(r=>`<li>${r[0]}<span>${r[1]}</span></li>`).join('')}</ul>
+<div class="v09-tot"><span class="ro" style="margin:0;color:#8A6A2A">Pro Person, ganze Woche</span><b>Fr. 750.–</b></div><p class="v09-klein">= FR. 150.– PRO NACHT · KURTAXE NICHT INBEGRIFFEN</p></div></div>`]);
+
+/* 10 */
+F.push(['Zwei Häuser','hell',`<div class="v10-kopf"><div><p class="ro">${KO}</p>${titel('wohnen Sie hier,|jassen Sie mit&nbsp;…')}</div><p class="rl">${JASS} ${WOCHE} Gegessen, gebadet und gespielt wird im Pirmin.</p></div>
+<div class="v10-h"><div>${fig('haus-nacht','Das Hotel Pirmin in der Winternacht')}<h3>Hotel Pirmin ★★★★ superior</h3>${liste([['Doppelzimmer','<em>Fr. 750.–</em> pro Person für die ganze Woche, Fr. 150.– pro Nacht'],['Einzelzimmer','Fr. 850.– pro Person für die ganze Woche'],['Loft-Suite','Aufpreis Fr. 150.– pro Person']])}</div>
+<div>${fig('f-monte','Das Hotel Monte-Moro')}<h3>Hotel Monte-Moro ★★★</h3>${liste([['Doppelzimmer','<em>Fr. 650.–</em> pro Person für die ganze Woche, Fr. 130.– pro Nacht'],['Einzelzimmer','Fr. 750.– pro Person für die ganze Woche'],['Essen und Spa','im Hotel Pirmin, inbegriffen']])}</div></div>
+<p class="jv-zeile">Immer dabei: Frühstück, 5-Gang-Abendessen, 4 Jassabende, Spa · ${termine}</p>${knoepfe()}`]);
+
+/* 11 */
+F.push(['Die Wochen als Zeilen','schoko',`<div class="v11"><div><p class="ro">${KO}</p>${titel('wählen Sie|Ihren Tisch&nbsp;…')}<p class="rl">${JASS} ${WOCHE}</p>${liste([['Der Preis',PREIS]])}<p class="jv-zeile">${KLEIN}</p></div>
+<ul class="v11-w">${W.map(w=>`<li><a href="#">${w[0]} ${w[1]}<span>5 NÄCHTE · FR. 750.– &nbsp;→</span></a></li>`).join('')}</ul></div>`]);
+
+/* 12 */
+const tisch=`<svg viewBox="0 0 520 520" aria-label="Ein Jasstisch von oben: vier Plätze, Sie und Ihr Partner sitzen sich gegenüber">
+<g class="jv-linie"><rect x="130" y="130" width="260" height="260" rx="10"/><rect x="142" y="142" width="236" height="236" rx="6" style="opacity:.5"/>
+<rect x="215" y="40" width="90" height="56" rx="8"/><rect x="215" y="424" width="90" height="56" rx="8"/><rect x="40" y="215" width="56" height="90" rx="8"/><rect x="424" y="215" width="56" height="90" rx="8"/>
+<rect x="232" y="225" width="34" height="50" rx="3" transform="rotate(-10 249 250)"/><rect x="256" y="230" width="34" height="50" rx="3" transform="rotate(14 273 255)"/>
+<path d="M260 405 C 470 380, 470 140, 260 115" stroke-dasharray="3 6"/><path d="M268 122l-9-7 3 11"/></g>
+<text class="jv-mono" x="260" y="458" text-anchor="middle">Sie</text><text class="jv-mono" x="260" y="73" text-anchor="middle">Partner</text>
+<text class="jv-mono" x="68" y="264" text-anchor="middle" transform="rotate(-90 68 260)">Gegner</text><text class="jv-mono" x="452" y="264" text-anchor="middle" transform="rotate(90 452 260)">Gegner</text>
+<text x="452" y="140" style="font-family:var(--licht);font-size:16px;fill:#E9D49A">schieben</text></svg>`;
+F.push(['Feine Linie: der Tisch','schoko',`<div class="v12">${tisch}<div><p class="ro">${KO}</p>${titel('nehmen Sie|Platz&nbsp;…')}<p class="rl">… am Jasstisch. ${JASS} Ihr Partner sitzt Ihnen gegenüber. Wer die Trumpffarbe nicht bestimmen will, «schiebt» sie dem Partner zu, daher der Name «Schieber».</p>${liste([['Die Woche',WOCHE],['Der Preis',PREIS],['Die Termine',termine]])}${knoepfe()}</div></div>`]);
+
+/* 13 */
+F.push(['Die Gastgeber','schoko',`<div class="v13">${fig('esther-fabian','Esther und Fabian Zurbriggen')}<div><p class="ro">${KO}</p>${titel('spielen Sie|mit uns&nbsp;…')}<blockquote class="offen">«Jass ist unser Kartenspiel. Eine Woche lang sitzen wir jeden Abend mit unseren Gästen am Tisch.»<cite>Esther und Fabian Zurbriggen · Text vom Haus einholen</cite></blockquote>${liste([['Was ist Jass?',JASS],['Der Preis',PREIS],['Die Termine',termine]])}${knoepfe()}</div></div>`]);
+
+/* 14 */
+F.push(['Am Tag, am Abend','schoko',`<div class="v14-kopf"><div><p class="ro">${KO}</p>${titel('ruhen Sie am Tag,|jassen Sie am Abend&nbsp;…')}</div><p class="rl">${JASS} ${WOCHE}</p></div>
+<div class="v14-p"><figure><img src="${P('sp-ruhe')}" alt="Liegen im Ruheraum mit Blick ins Grüne" loading="lazy"><figcaption><p class="ro">Am Tag</p><p>Spa auf 1’100 m², Hüttengaudi mit Fabian, Rundgang durchs Dorf, Suppe und Kuchen</p></figcaption></figure><figure><img src="${P('w-fondue')}" alt="Am Tisch in der Stube" loading="lazy"><figcaption><p class="ro">Am Abend</p><p>Fünf Gänge, danach Jass zu viert. An vier Abenden, mit Preisen am Schluss.</p></figcaption></figure></div>
+<div class="v14-u">${liste([['Der Preis',PREIS],['Die Termine',termine]])}<div>${knoepfe()}</div></div>`]);
+
+/* 15 */
+F.push(['Drei Spalten wie die Loft-Suite','schoko',`<div class="v15"><div>${kartenLinie}<p class="ro">${KO}</p>${titel('jassen Sie|mit&nbsp;…')}<p class="rl">${JASS} ${WOCHE}</p>${liste([['Der Preis',PREIS]])}<p class="jv-zeile">${termine}</p>${knoepfe()}</div>
+<div class="v15-m">${fig('w-fondue','Am Tisch in der Stube')}</div><div class="v15-s">${fig('kamin','Das Feuer im Kamin')}${fig('j-stube','Die Stube mit den Holztischen')}${fig('w-mond','Mondnacht über dem Tal')}</div></div>`]);
+
+document.getElementById('jv').innerHTML=F.map((f,i)=>{const [name,farbe,inhalt]=f;const cls=farbe.split(' ');return `<p class="jv-nr"><b>${String(i+1).padStart(2,'0')}</b>${name}</p><section class="ri ri-${cls[0]} s2 da jv ${cls.slice(1).join(' ')}">${inhalt}</section>`}).join('');
+</script>
+</body>
+</html>

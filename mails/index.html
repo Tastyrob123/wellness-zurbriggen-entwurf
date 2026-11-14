@@ -1,0 +1,498 @@
+<!doctype html>
+<html lang="de-CH"><head><script data-wurzel>/* Wurzel-Weiche: Seite laeuft an der Wurzel einer Adresse oder in einem Unterordner (github.io/<repo>/) */(function(){var D=1,p=location.pathname.split('/');p.splice(p.length-1-D,D+1);var W=p.join('/')+'/';window.__W=W;if(W==='/')return;var O=location.origin;
+function f(u){if(typeof u!=='string')return u;if(u.indexOf(O+'/')===0)return O+f(u.slice(O.length));if(u.charAt(0)!=='/'||u.charAt(1)==='/'||u.indexOf(W)===0||u+'/'===W)return u;return W+u.slice(1)}
+function s(v){return typeof v!=='string'?v:v.replace(/(^|,)(\s*)(\S+)/g,function(m,a,b,u){return a+b+f(u)})}
+function c(v){return typeof v!=='string'?v:v.replace(/url\(\s*(['"]?)([^'")]+)/g,function(m,q,u){return 'url('+q+f(u)})}
+function h(v){return typeof v!=='string'?v:c(v.replace(/(\s(?:src|href|poster|action|data-src|data-href)\s*=\s*)(["'])([^"']*)\2/gi,function(m,a,q,u){return a+q+f(u)+q}).replace(/(\s(?:srcset|imagesrcset|data-srcset)\s*=\s*)(["'])([^"']*)\2/gi,function(m,a,q,u){return a+q+s(u)+q}))}
+function d(K,k,g){K=window[K];if(!K)return;var x=Object.getOwnPropertyDescriptor(K.prototype,k);if(!x||!x.set)return;Object.defineProperty(K.prototype,k,{configurable:true,enumerable:x.enumerable,get:x.get,set:function(v){x.set.call(this,g(v))}})}
+[['HTMLImageElement','src'],['HTMLScriptElement','src'],['HTMLLinkElement','href'],['HTMLIFrameElement','src'],['HTMLSourceElement','src'],['HTMLMediaElement','src'],['HTMLVideoElement','poster'],['HTMLAnchorElement','href'],['HTMLAreaElement','href'],['HTMLFormElement','action'],['HTMLEmbedElement','src'],['HTMLObjectElement','data']].forEach(function(z){d(z[0],z[1],f)});
+[['HTMLImageElement','srcset'],['HTMLSourceElement','srcset'],['HTMLLinkElement','imageSrcset']].forEach(function(z){d(z[0],z[1],s)});
+d('Element','innerHTML',h);d('Element','outerHTML',h);var iah=Element.prototype.insertAdjacentHTML;Element.prototype.insertAdjacentHTML=function(w,v){return iah.call(this,w,h(v))};
+var sa=Element.prototype.setAttribute;Element.prototype.setAttribute=function(n,v){var l=String(n).toLowerCase();if(/^(src|href|poster|action|data|data-src|data-href)$/.test(l))v=f(v);else if(/srcset$/.test(l))v=s(v);else if(l==='style')v=c(v);return sa.call(this,n,v)};
+var st=CSSStyleDeclaration.prototype,sp=st.setProperty;st.setProperty=function(n,v,q){return sp.call(this,n,c(v),q)};['background','backgroundImage','cssText','maskImage','webkitMaskImage','listStyleImage','borderImageSource','content'].forEach(function(k){var x=Object.getOwnPropertyDescriptor(st,k);if(x&&x.set)Object.defineProperty(st,k,{configurable:true,enumerable:x.enumerable,get:x.get,set:function(v){x.set.call(this,c(v))}})});
+var F=window.fetch;if(F)window.fetch=function(i,o){if(typeof i==='string')i=f(i);else if(i instanceof URL)i=f(i.href);return F.call(this,i,o)};
+var XO=XMLHttpRequest.prototype.open;XMLHttpRequest.prototype.open=function(){var a=[].slice.call(arguments);a[1]=f(a[1] instanceof URL?a[1].href:a[1]);return XO.apply(this,a)};
+if(navigator.sendBeacon){var B=navigator.sendBeacon;navigator.sendBeacon=function(u,x){return B.call(navigator,f(u),x)}}
+var wo=window.open;window.open=function(u){var a=[].slice.call(arguments);a[0]=f(u);return wo.apply(window,a)};
+var dw=document.write,dl=document.writeln;document.write=function(){return dw.apply(document,[].map.call(arguments,h))};document.writeln=function(){return dl.apply(document,[].map.call(arguments,h))};
+['pushState','replaceState'].forEach(function(k){var o=history[k];history[k]=function(a,b,u){return o.call(history,a,b,u==null?u:f(String(u)))}});
+function e(el){if(!el||el.nodeType!==1)return;['src','href','poster','action'].forEach(function(a){var v=el.getAttribute(a);if(v&&v.charAt(0)==='/'){var z=f(v);if(z!==v)sa.call(el,a,z)}});var t=el.getAttribute('srcset');if(t&&/(^|,)\s*\/[^\/]/.test(t)){var z=s(t);if(z!==t)sa.call(el,'srcset',z)}t=el.getAttribute('style');if(t&&/url\(\s*['"]?\/[^\/]/.test(t)){z=c(t);if(z!==t)sa.call(el,'style',z)}}
+new MutationObserver(function(ms){ms.forEach(function(m){if(m.type==='attributes')e(m.target);else m.addedNodes.forEach(function(n){if(n.nodeType!==1)return;e(n);var l=n.querySelectorAll('[src],[href],[srcset],[poster],[action],[style]');for(var i=0;i<l.length;i++)e(l[i])})})}).observe(document.documentElement,{childList:true,subtree:true,attributes:true,attributeFilter:['src','href','srcset','poster','action','style']})})();</script><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex, nofollow">
+<title>Elf Mails · Pirmin Zurbriggen</title>
+<style>
+@font-face{font-family:'Petrona';font-weight:300;font-display:swap;src:url('../assets/fonts/montserrat-300-latin.woff2') format('woff2')}
+@font-face{font-family:'Instrument Sans';font-weight:400 600;font-display:swap;src:url('../assets/fonts/InstrumentSans-normal-400_600.woff2') format('woff2')}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;background:#0a1129;color:#fbf8f3;font:400 17px/1.6 'Instrument Sans',system-ui,sans-serif;--rand:clamp(20px,4.6vw,76px)}
+header.kopf{padding:clamp(56px,8vw,120px) var(--rand) clamp(30px,4vw,60px);text-align:center}
+header.kopf img{width:clamp(50px,5.9vw,92px);height:auto}
+h1{margin:clamp(14px,1.6vw,24px) 0 0;font:300 clamp(2rem,4.6vw,4.2rem)/1.08 'Petrona',Arial,sans-serif}h1 em{font-style:normal;color:#e9d49a}
+header.kopf p{max-width:60ch;margin:clamp(18px,2.1vw,32px) auto 0;color:rgba(246,241,234,.86)}
+main{padding:0 0 clamp(60px,8vw,120px)}
+.band{display:flex;gap:clamp(20px,2.4vw,40px);align-items:flex-start;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;scroll-padding-inline:var(--rand);padding:4px var(--rand) 34px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.band::-webkit-scrollbar{display:none}
+.band:focus-visible{outline:2px solid #e9d49a;outline-offset:-2px}
+.mb{flex:0 0 clamp(300px,34vw,520px);scroll-snap-align:start}
+.mb:last-child{margin-inline-end:var(--rand)}
+.mb-ueber{display:flex;gap:16px;align-items:flex-start;margin:0 4px 18px}
+.mb-nrt{flex:none;display:flex;align-items:center;justify-content:center;width:64px;height:64px;border-radius:18px;background:rgba(217,183,88,.1);box-shadow:inset 0 0 0 1px rgba(217,183,88,.5)}   /* Nummer in der Tafel, nicht lose (09.11.2026) */
+.mb-nr{font:300 1.9rem/1 'Petrona',Arial,sans-serif;color:#e9d49a}
+.mb-ueber__t{display:flex;flex-direction:column;gap:5px;min-width:0}
+.mb-ueber__t b{font:300 1.3rem/1.2 'Petrona',Arial,sans-serif}
+.mb-ueber__t small{font-size:.86rem;line-height:1.4;color:rgba(246,241,234,.74)}
+.mb-ueber__t small span{display:inline-block;min-width:5.4em;font:400 13px/1.4 ui-monospace,Menlo,monospace;letter-spacing:.1em;text-transform:uppercase;color:#e9d49a}
+.mb-blatt{position:relative;height:640px;border-radius:20px;overflow:hidden;background:#eee8de;box-shadow:0 0 0 1px rgba(217,183,88,.3),0 40px 50px -30px rgba(0,0,0,.9);-webkit-mask-image:linear-gradient(#000000 68%,transparent);mask-image:linear-gradient(#000000 68%,transparent)}
+.mb.auf .mb-blatt{-webkit-mask-image:none;mask-image:none}
+.mb-in{position:relative}.mb-in table{max-width:100%}
+.mb-ganz{position:relative;margin:18px 0 0;text-align:center}
+.mb.auf .mb-ganz{margin-top:22px}
+.mb-kn{display:inline-flex;align-items:center;gap:12px;padding:8px 8px 8px 22px;border:0;border-radius:999px;cursor:pointer;font:400 13px/1 ui-monospace,Menlo,monospace;letter-spacing:.12em;text-transform:uppercase;color:#fbf8f3;
+  background:linear-gradient(180deg,#1d2a50,#16203f 60%,#060b1c);box-shadow:inset 0 1px 0 rgba(255,255,255,.16),0 0 0 1px rgba(217,183,88,.38),0 14px 22px -12px rgba(0,0,0,.8)}
+.mb-kn i{display:grid;place-items:center;width:30px;height:30px;border-radius:50%;color:#0a1129;background:linear-gradient(180deg,#f6f1ea,#e9d49a 55%,#d9b758);box-shadow:inset 0 1px 0 rgba(255,255,255,.6)}
+.mb-kn svg{width:14px;height:14px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.mb-kn .z,.mb.auf .mb-kn .a{display:none}.mb.auf .mb-kn .z{display:inline}.mb.auf .mb-kn svg{transform:rotate(180deg)}
+.mb-kn:focus-visible{outline:2px solid #c4c8d3;outline-offset:3px}
+.pfeile{display:flex;justify-content:center;gap:14px;margin-top:4px}
+.pf{width:52px;height:52px;border:0;border-radius:50%;cursor:pointer;display:grid;place-items:center;color:#0a1129;background:linear-gradient(180deg,#f6f1ea,#e9d49a 55%,#d9b758);box-shadow:inset 0 1px 0 rgba(255,255,255,.7),0 12px 20px -10px rgba(0,0,0,.7)}
+.pf svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.pf:disabled{opacity:.35;cursor:default}
+footer{padding:26px var(--rand) 40px;text-align:center;font-size:.92rem;color:rgba(246,241,234,.6);border-top:1px solid rgba(217,183,88,.2)}
+footer a{color:#c4c8d3}
+/* Hereinkommen wie auf den anderen Werkbank-Seiten: heben, nur transform und opacity, bei reduced-motion sofort da */
+html.js .hr{opacity:0;transform:translate3d(0,34px,0) scale(.985)}
+html.js .hr.da{opacity:1;transform:none;transition:opacity .9s cubic-bezier(.2,.7,.2,1) calc(var(--i,0) * 110ms),transform 1.2s cubic-bezier(.16,1,.3,1) calc(var(--i,0) * 110ms)}
+@media (prefers-reduced-motion:reduce){html.js .hr{opacity:1;transform:none;transition:none}}
+@media (max-width:760px){.mb{flex-basis:calc(100vw - 2 * var(--rand))}.pfeile{display:none}}
+@media (hover:none){.pfeile{display:none}}
+</style><style id="zeile-ganz">h1,h2,h3,h4,.z>span{text-wrap:balance}h1 br+em,h2 br+em{display:inline-block;text-wrap:balance}.stapel .fen__k{position:relative}.stapel .fen__k span{position:absolute;left:50%;transform:translateX(-50%);margin:0;overflow:visible}@media(max-width:860px){.stapel .fen__k span{display:none}}@media(max-width:480px){.etk{grid-template-columns:minmax(0,1fr)!important}}@media(max-width:480px){.stueck__t .t2{font-size:clamp(1.6rem,7vw,2rem)}}@media(min-width:900px) and (max-width:1279px){.brett-p{grid-template-columns:300px minmax(0,1fr)}.brett-p__k{grid-column:1/-1}}@media(max-width:1279px){.brett-p p{text-wrap:balance}}.da:not([data-drift]){will-change:auto!important}.mb-ueber__t small{display:grid;grid-template-columns:82px minmax(0,1fr);align-items:baseline}.mb-ueber__t small span{min-width:0}.mb-blatt{container-type:inline-size}@container (max-width:440px){.mb-in table[style*="table-layout:fixed"] tr{display:block;padding:11px 0;border-top:1px solid #2b3a66}.mb-in table[style*="table-layout:fixed"] td{display:block;width:auto!important;padding:0!important;border-top:0!important}.mb-in table[style*="table-layout:fixed"] td+td{padding-top:5px!important}}@media(max-width:480px){.mn-titel{font-size:clamp(1.5rem,8vw,2.2rem);letter-spacing:.03em}.mn-ende{gap:10px}.mn-ende i{width:18px}.mn-ende span{letter-spacing:.12em;white-space:nowrap}a.kn[href="../index.html#geprueft"]{letter-spacing:.04em;font-size:9.5px;white-space:nowrap;padding-left:14px}.stapel .tel{width:21%;right:-2%}}@media(max-width:480px){.wege__t,figcaption,.mb-ueber__t small{text-wrap:balance}.sag-h{font-size:1.32rem;letter-spacing:.03em;gap:10px}.hs2-her{grid-template-columns:repeat(2,minmax(0,1fr))!important}.hs2-her figcaption small{font-size:9px;letter-spacing:0}.ki-knoepfe{flex-direction:column;align-items:stretch}.ki-knoepfe .kn{white-space:nowrap;letter-spacing:.04em;font-size:10px}#sag-aufbau[data-a="heben"]:not(.da){transform:translateY(56px) scale(.98)!important}.faecher--2 .blattk span{flex-direction:column;gap:3px;font-size:9.5px;letter-spacing:.08em}}.stage>.aside h1{font-size:clamp(2rem,3.6vw,3.3rem);white-space:nowrap}.stage>.aside h1 em{display:inline}</style></head>
+<body>
+<script>if (!matchMedia('(prefers-reduced-motion:reduce)').matches && 'IntersectionObserver' in window) document.documentElement.classList.add('js');</script>
+<header class="kopf"><img class="hr" style="--i:0" src="img/zeichen.png" alt="" width="72"><h1 class="hr" style="--i:1">Elf Mails,<br><em>so persönlich wie das Haus.</em></h1>
+<p class="hr" style="--i:2">Was ein Gast nach seiner Anfrage, vor der Anreise, nach einem Termin im Spa und nach seinem Aufenthalt von Ihnen bekommt, kommt im Kleid der neuen Seite. Elf Fälle als Idee. Namen, Daten und Nummern sind Beispielwerte; Preise, Zeiten und Leistungen stehen so auf Ihrer Seite.</p></header>
+<main><div class="band" id="mband" tabindex="0" aria-label="Die elf Mails, zum Blättern"><article class="mb hr" style="--i:0">
+  <header class="mb-ueber"><span class="mb-nrt"><span class="mb-nr">01</span></span><span class="mb-ueber__t"><b>Ihre Anfrage ist da</b><small><span>Von</span>Pirmin Zurbriggen</small><small><span>Wann</span>Gleich nach einer Anfrage</small><small><span>Betreff</span>Ihre Anfrage bei uns</small></span></header>
+  <div class="mb-blatt"><div class="mb-in">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#eee8de"><tr><td align="center" style="padding:24px 12px">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="width:100%;max-width:600px;background:#fbf8f3;border-radius:22px;overflow:hidden">
+  <tr><td align="center" style="background:#16203f;padding:34px 30px 30px">
+    <img src="img/logo.png" width="240" alt="Wellness & Spa Pirmin Zurbriggen" style="display:block;border:0;width:240px;max-width:72%;height:auto;margin:0 auto">
+    <h1 style="margin:28px 0 0;font:400 clamp(28px,7.4vw,36px)/1.15 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#fbf8f3">Schön, dass Sie<br><span style="color:#e9d49a">zu uns kommen möchten.</span></h1>
+  </td></tr>
+  <tr><td style="padding:34px clamp(22px,6vw,40px) 8px"><p style="margin:0 0 14px;font:400 20px/1.3 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#0a1129">Grüezi Frau Meier</p><p style="margin:0 0 14px;font:400 16px/1.62 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#1d2a56">Danke für Ihre Anfrage. Wir haben sie erhalten und melden uns persönlich bei Ihnen, sobald wir Ihre Tage geprüft haben.</p><p style="margin:0 0 14px;font:400 16px/1.62 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#1d2a56">Im Preis inbegriffen ist die Gourmet-Halbpension mit 5-Gang-Wahlmenü, das Frühstück mit Sekt, Kuchen am Nachmittag und das Spa mit 1.100 m².</p></td></tr>
+  <tr><td style="padding:6px 28px 6px"><img src="img/z-classic.jpg" width="544" alt="Ein Zimmer Wallis Classic mit Balkon" style="display:block;border:0;width:100%;height:auto;border-radius:16px"></td></tr>
+  <tr><td style="padding:10px 28px 6px"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#16203f;border-radius:16px">
+    <tr><td style="padding:22px 26px 12px"><div style="font:400 13px/1.25 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#e9d49a;padding-bottom:12px">Ihre Anfrage · Beispielwerte</div>
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="table-layout:fixed"><tr><td style="padding:11px 0;border-top:1px solid #1d3174;font:400 13px/1.3 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.04em;text-transform:uppercase;color:#c4c8d3;width:44%;padding-right:10px;overflow-wrap:anywhere"><span>Anreise</span></td><td style="padding:11px 0;border-top:1px solid #1d3174;font:400 16px/1.35 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#fbf8f3"><span>Sonntag, 13. Dezember 2026</span></td></tr><tr><td style="padding:11px 0;border-top:1px solid #1d3174;font:400 13px/1.3 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.04em;text-transform:uppercase;color:#c4c8d3;width:44%;padding-right:10px;overflow-wrap:anywhere"><span>Abreise</span></td><td style="padding:11px 0;border-top:1px solid #1d3174;font:400 16px/1.35 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#fbf8f3"><span>Freitag, 18. Dezember 2026</span></td></tr><tr><td style="padding:11px 0;border-top:1px solid #1d3174;font:400 13px/1.3 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.04em;text-transform:uppercase;color:#c4c8d3;width:44%;padding-right:10px;overflow-wrap:anywhere"><span>Zimmer</span></td><td style="padding:11px 0;border-top:1px solid #1d3174;font:400 16px/1.35 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#fbf8f3"><span>Wallis Classic mit Balkon</span></td></tr><tr><td style="padding:11px 0;border-top:1px solid #1d3174;font:400 13px/1.3 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.04em;text-transform:uppercase;color:#c4c8d3;width:44%;padding-right:10px;overflow-wrap:anywhere"><span>Preis</span></td><td style="padding:11px 0;border-top:1px solid #1d3174;font:400 16px/1.35 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#fbf8f3"><span>ab CHF 195,-- Preis pro Person inkl. Gourmet-Halbpension</span></td></tr></table></td></tr></table></td></tr>
+  <tr><td align="center" style="padding:26px 40px 8px"><a href="../zimmer.html" style="display:inline-block;padding:16px 30px;border-radius:999px;background:#16203f;font:400 13px/1 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#fbf8f3;text-decoration:none">Zimmer und Preise &nbsp;↗</a></td></tr>
+  <tr><td style="padding:14px 40px 30px"><p style="margin:0;font:400 15px/1.6 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#4e5568;text-align:center">Name und Daten sind Beispielwerte, der Preis steht so auf Ihrer Zimmerseite.</p>
+    <img src="img/esther-fabian.jpg" width="520" alt="Esther und Fabian Zurbriggen" style="display:block;border:0;width:100%;max-width:520px;height:auto;margin:26px auto 0;border-radius:16px">
+    <p style="margin:16px 0 0;font:400 17px/1.4 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#0a1129;text-align:center">Herzlich, Esther und Fabian Zurbriggen</p></td></tr>
+  <tr><td align="center" style="background:#0a1129;padding:26px 30px"><div style="font:400 13px/1.6 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#c4c8d3">Wellness &amp; Spa Pirmin Zurbriggen · 3905 Saas-Almagell · +41 27 957 23 01<br>info@wellnesshotel-zurbriggen.ch</div></td></tr>
+</table>
+</td></tr></table>
+</div></div>
+  <p class="mb-ganz"><button type="button" class="mb-kn" aria-expanded="false"><span class="a">Ganze Mail</span><span class="z">Weniger zeigen</span><i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 6l4 4 4-4"/></svg></i></button></p>
+</article><article class="mb hr" style="--i:1">
+  <header class="mb-ueber"><span class="mb-nrt"><span class="mb-nr">02</span></span><span class="mb-ueber__t"><b>Vor Ihrer Anreise</b><small><span>Von</span>Pirmin Zurbriggen</small><small><span>Wann</span>Eine Woche vor der Anreise</small><small><span>Betreff</span>In einer Woche sind Sie bei uns</small></span></header>
+  <div class="mb-blatt"><div class="mb-in">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#eee8de"><tr><td align="center" style="padding:24px 12px">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="width:100%;max-width:600px;background:#fbf8f3;border-radius:22px;overflow:hidden">
+  <tr><td align="center" style="background:#16203f;padding:34px 30px 30px">
+    <img src="img/logo.png" width="240" alt="Wellness & Spa Pirmin Zurbriggen" style="display:block;border:0;width:240px;max-width:72%;height:auto;margin:0 auto">
+    <h1 style="margin:28px 0 0;font:400 clamp(28px,7.4vw,36px)/1.15 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#fbf8f3">Ihr Gepäck<br><span style="color:#e9d49a">ist schon da.</span></h1>
+  </td></tr>
+  <tr><td style="padding:34px clamp(22px,6vw,40px) 8px"><p style="margin:0 0 14px;font:400 20px/1.3 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#0a1129">Grüezi Herr Keller</p><p style="margin:0 0 14px;font:400 16px/1.62 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#1d2a56">In einer Woche sind Sie bei uns. Geben Sie Ihr Gepäck 2 Tage vor Abreise zu Hause am Bahnschalter auf und wir holen es gerne am Postschalter in Saas-Almagell für Sie ab. Am Anreisetag ist Ihr Gepäck im Zimmer.</p><p style="margin:0 0 14px;font:400 16px/1.62 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#1d2a56">Am Anreisetag sind die Zimmer ab 14.00 Uhr beziehbar. Falls Sie nach 19.00 Uhr anreisen, bitten wir Sie, uns dies kurz davor zu melden.</p></td></tr>
+  <tr><td style="padding:6px 28px 6px"><img src="img/h-vorne.jpg" width="544" alt="Das Haus von vorne, im Sommer" style="display:block;border:0;width:100%;height:auto;border-radius:16px"></td></tr>
+  <tr><td style="padding:10px 28px 6px"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#16203f;border-radius:16px">
+    <tr><td style="padding:22px 26px 12px"><div style="font:400 13px/1.25 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#e9d49a;padding-bottom:12px">Ihr Aufenthalt · Beispielwerte</div>
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="table-layout:fixed"><tr><td style="padding:11px 0;border-top:1px solid #1d3174;font:400 13px/1.3 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.04em;text-transform:uppercase;color:#c4c8d3;width:44%;padding-right:10px;overflow-wrap:anywhere"><span>Anreise</span></td><td style="padding:11px 0;border-top:1px solid #1d3174;font:400 16px/1.35 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#fbf8f3"><span>Samstag, 19. Dezember 2026</span></td></tr><tr><td style="padding:11px 0;border-top:1px solid #1d3174;font:400 13px/1.3 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.04em;text-transform:uppercase;color:#c4c8d3;width:44%;padding-right:10px;overflow-wrap:anywhere"><span>Zimmer ab</span></td><td style="padding:11px 0;border-top:1px solid #1d3174;font:400 16px/1.35 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#fbf8f3"><span>14.00 Uhr</span></td></tr><tr><td style="padding:11px 0;border-top:1px solid #1d3174;font:400 13px/1.3 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.04em;text-transform:uppercase;color:#c4c8d3;width:44%;padding-right:10px;overflow-wrap:anywhere"><span>Check-out</span></td><td style="padding:11px 0;border-top:1px solid #1d3174;font:400 16px/1.35 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#fbf8f3"><span>10.00 Uhr</span></td></tr><tr><td style="padding:11px 0;border-top:1px solid #1d3174;font:400 13px/1.3 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.04em;text-transform:uppercase;color:#c4c8d3;width:44%;padding-right:10px;overflow-wrap:anywhere"><span>Bahn</span></td><td style="padding:11px 0;border-top:1px solid #1d3174;font:400 16px/1.35 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#fbf8f3"><span>Von Zürich nach Visp (2h)</span></td></tr></table></td></tr></table></td></tr>
+  <tr><td align="center" style="padding:26px 40px 8px"><a href="../vor-ihrer-anreise.html" style="display:inline-block;padding:16px 30px;border-radius:999px;background:#16203f;font:400 13px/1 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#fbf8f3;text-decoration:none">Vor Ihrer Anreise &nbsp;↗</a></td></tr>
+  <tr><td style="padding:14px 40px 30px"><p style="margin:0;font:400 15px/1.6 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#4e5568;text-align:center">Mit dem Personenzug bitte Endstation Visp lösen – anschliessend mit dem Bus von Visp nach Saas-Grund und Saas-Almagell.</p>
+    <img src="img/esther-fabian.jpg" width="520" alt="Esther und Fabian Zurbriggen" style="display:block;border:0;width:100%;max-width:520px;height:auto;margin:26px auto 0;border-radius:16px">
+    <p style="margin:16px 0 0;font:400 17px/1.4 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#0a1129;text-align:center">Herzlich, Esther und Fabian Zurbriggen</p></td></tr>
+  <tr><td align="center" style="background:#0a1129;padding:26px 30px"><div style="font:400 13px/1.6 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#c4c8d3">Wellness &amp; Spa Pirmin Zurbriggen · 3905 Saas-Almagell · +41 27 957 23 01<br>info@wellnesshotel-zurbriggen.ch</div></td></tr>
+</table>
+</td></tr></table>
+</div></div>
+  <p class="mb-ganz"><button type="button" class="mb-kn" aria-expanded="false"><span class="a">Ganze Mail</span><span class="z">Weniger zeigen</span><i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 6l4 4 4-4"/></svg></i></button></p>
+</article><article class="mb hr" style="--i:2">
+  <header class="mb-ueber"><span class="mb-nrt"><span class="mb-nr">03</span></span><span class="mb-ueber__t"><b>Ihr Termin im Spa</b><small><span>Von</span>Pirmin Zurbriggen</small><small><span>Wann</span>Nach der Buchung einer Anwendung</small><small><span>Betreff</span>Ihr Termin im Spa</small></span></header>
+  <div class="mb-blatt"><div class="mb-in">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#eee8de"><tr><td align="center" style="padding:24px 12px">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="width:100%;max-width:600px;background:#fbf8f3;border-radius:22px;overflow:hidden">
+  <tr><td align="center" style="background:#16203f;padding:34px 30px 30px">
+    <img src="img/logo.png" width="240" alt="Wellness & Spa Pirmin Zurbriggen" style="display:block;border:0;width:240px;max-width:72%;height:auto;margin:0 auto">
+    <h1 style="margin:28px 0 0;font:400 clamp(28px,7.4vw,36px)/1.15 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#fbf8f3">entspannen<br><span style="color:#e9d49a">Sie sich …</span></h1>
+  </td></tr>
+  <tr><td style="padding:34px clamp(22px,6vw,40px) 8px"><p style="margin:0 0 14px;font:400 20px/1.3 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#0a1129">Grüezi Frau Meier</p><p style="margin:0 0 14px;font:400 16px/1.62 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#1d2a56">Ihr Termin im Spa ist eingetragen. Im Wellnesshotel Zurbriggen erwartet Sie eine exklusive 1.100 m² grosse Spa-Landschaft, inspiriert von der traditionellen chinesischen Medizin (TCM).</p><p style="margin:0 0 14px;font:400 16px/1.62 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#1d2a56">Schwimmbad 29 °C, Whirlpool 35 °C, Kräutersauna, Dampfbad und Holzsauna gehören zu Ihrem Aufenthalt. Info für Allergiker: Unser Badewasser ist chlorfrei und wird mit Ozon aufbereitet.</p></td></tr>
+  <tr><td style="padding:6px 28px 6px"><img src="img/sp-massage-2.jpg" width="544" alt="Eine Rückenmassage" style="display:block;border:0;width:100%;height:auto;border-radius:16px"></td></tr>
+  <tr><td style="padding:10px 28px 6px"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#16203f;border-radius:16px">
+    <tr><td style="padding:22px 26px 12px"><div style="font:400 13px/1.25 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#e9d49a;padding-bottom:12px">Ihr Termin · Beispielwerte</div>
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="table-layout:fixed"><tr><td style="padding:11px 0;border-top:1px solid #1d3174;font:400 13px/1.3 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.04em;text-transform:uppercase;color:#c4c8d3;width:44%;padding-right:10px;overflow-wrap:anywhere"><span>Anwendung</span></td><td style="padding:11px 0;border-top:1px solid #1d3174;font:400 16px/1.35 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#fbf8f3"><span>Klassische Ganzkörpermassage</span></td></tr><tr><td style="padding:11px 0;border-top:1px solid #1d3174;font:400 13px/1.3 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.04em;text-transform:uppercase;color:#c4c8d3;width:44%;padding-right:10px;overflow-wrap:anywhere"><span>Tag</span></td><td style="padding:11px 0;border-top:1px solid #1d3174;font:400 16px/1.35 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#fbf8f3"><span>Dienstag, 15. Dezember 2026</span></td></tr><tr><td style="padding:11px 0;border-top:1px solid #1d3174;font:400 13px/1.3 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.04em;text-transform:uppercase;color:#c4c8d3;width:44%;padding-right:10px;overflow-wrap:anywhere"><span>Uhrzeit</span></td><td style="padding:11px 0;border-top:1px solid #1d3174;font:400 16px/1.35 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#fbf8f3"><span>16.00 Uhr</span></td></tr><tr><td style="padding:11px 0;border-top:1px solid #1d3174;font:400 13px/1.3 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.04em;text-transform:uppercase;color:#c4c8d3;width:44%;padding-right:10px;overflow-wrap:anywhere"><span>Dauer</span></td><td style="padding:11px 0;border-top:1px solid #1d3174;font:400 16px/1.35 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#fbf8f3"><span>50 Min.</span></td></tr></table></td></tr></table></td></tr>
+  <tr><td align="center" style="padding:26px 40px 8px"><a href="../spa.html" style="display:inline-block;padding:16px 30px;border-radius:999px;background:#16203f;font:400 13px/1 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#fbf8f3;text-decoration:none">Die Anwendungen &nbsp;↗</a></td></tr>
+  <tr><td style="padding:14px 40px 30px"><p style="margin:0;font:400 15px/1.6 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#4e5568;text-align:center">Anwendung, Tag und Uhrzeit sind Beispielwerte.</p>
+    <img src="img/esther-fabian.jpg" width="520" alt="Esther und Fabian Zurbriggen" style="display:block;border:0;width:100%;max-width:520px;height:auto;margin:26px auto 0;border-radius:16px">
+    <p style="margin:16px 0 0;font:400 17px/1.4 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#0a1129;text-align:center">Herzlich, Esther und Fabian Zurbriggen</p></td></tr>
+  <tr><td align="center" style="background:#0a1129;padding:26px 30px"><div style="font:400 13px/1.6 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#c4c8d3">Wellness &amp; Spa Pirmin Zurbriggen · 3905 Saas-Almagell · +41 27 957 23 01<br>info@wellnesshotel-zurbriggen.ch</div></td></tr>
+</table>
+</td></tr></table>
+</div></div>
+  <p class="mb-ganz"><button type="button" class="mb-kn" aria-expanded="false"><span class="a">Ganze Mail</span><span class="z">Weniger zeigen</span><i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 6l4 4 4-4"/></svg></i></button></p>
+</article><article class="mb hr" style="--i:3">
+  <header class="mb-ueber"><span class="mb-nrt"><span class="mb-nr">04</span></span><span class="mb-ueber__t"><b>Danke für Ihren Besuch</b><small><span>Von</span>Pirmin Zurbriggen</small><small><span>Wann</span>Am Tag nach der Abreise</small><small><span>Betreff</span>Danke, dass Sie bei uns waren</small></span></header>
+  <div class="mb-blatt"><div class="mb-in">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#eee8de"><tr><td align="center" style="padding:24px 12px">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="width:100%;max-width:600px;background:#fbf8f3;border-radius:22px;overflow:hidden">
+  <tr><td align="center" style="background:#16203f;padding:34px 30px 30px">
+    <img src="img/logo.png" width="240" alt="Wellness & Spa Pirmin Zurbriggen" style="display:block;border:0;width:240px;max-width:72%;height:auto;margin:0 auto">
+    <h1 style="margin:28px 0 0;font:400 clamp(28px,7.4vw,36px)/1.15 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#fbf8f3">Danke<br><span style="color:#e9d49a">für Ihren Besuch.</span></h1>
+  </td></tr>
+  <tr><td style="padding:34px clamp(22px,6vw,40px) 8px"><p style="margin:0 0 14px;font:400 20px/1.3 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#0a1129">Grüezi Frau Meier</p><p style="margin:0 0 14px;font:400 16px/1.62 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#1d2a56">Danke, dass Sie bei uns zu Gast waren. Wir hoffen, Sie haben sich wie zu Hause gefühlt.</p><p style="margin:0 0 14px;font:400 16px/1.62 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#1d2a56">In unserem Gästebuch finden Sie zahlreiche positive Einträge über unser Hotel und das Engagement unserer freundlichen Mitarbeiter. Wir danken unseren Gästen herzlich für die vielen netten Worte und das tolle Lob!</p></td></tr>
+  <tr><td style="padding:6px 28px 6px"><img src="img/b-liegen.jpg" width="544" alt="Liegen auf der Terrasse, dahinter das Tal" style="display:block;border:0;width:100%;height:auto;border-radius:16px"></td></tr>
+  <tr><td style="padding:10px 28px 6px"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#16203f;border-radius:16px">
+    <tr><td style="padding:22px 26px 12px"><div style="font:400 13px/1.25 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#e9d49a;padding-bottom:12px">Ihr Aufenthalt · Beispielwerte</div>
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="table-layout:fixed"><tr><td style="padding:11px 0;border-top:1px solid #1d3174;font:400 13px/1.3 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.04em;text-transform:uppercase;color:#c4c8d3;width:44%;padding-right:10px;overflow-wrap:anywhere"><span>Zeitraum</span></td><td style="padding:11px 0;border-top:1px solid #1d3174;font:400 16px/1.35 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#fbf8f3"><span>13. bis 18. Dezember 2026</span></td></tr><tr><td style="padding:11px 0;border-top:1px solid #1d3174;font:400 13px/1.3 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.04em;text-transform:uppercase;color:#c4c8d3;width:44%;padding-right:10px;overflow-wrap:anywhere"><span>Zimmer</span></td><td style="padding:11px 0;border-top:1px solid #1d3174;font:400 16px/1.35 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#fbf8f3"><span>Wallis Classic mit Balkon</span></td></tr><tr><td style="padding:11px 0;border-top:1px solid #1d3174;font:400 13px/1.3 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.04em;text-transform:uppercase;color:#c4c8d3;width:44%;padding-right:10px;overflow-wrap:anywhere"><span>Nächte</span></td><td style="padding:11px 0;border-top:1px solid #1d3174;font:400 16px/1.35 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#fbf8f3"><span>5</span></td></tr></table></td></tr></table></td></tr>
+  <tr><td align="center" style="padding:26px 40px 8px"><a href="../stammgaeste.html" style="display:inline-block;padding:16px 30px;border-radius:999px;background:#16203f;font:400 13px/1 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#fbf8f3;text-decoration:none">Ins Gästebuch &nbsp;↗</a></td></tr>
+  <tr><td style="padding:14px 40px 30px"><p style="margin:0;font:400 15px/1.6 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#4e5568;text-align:center">Wollen Sie uns etwas sagen, antworten Sie einfach auf diese Mail.</p>
+    <img src="img/esther-fabian.jpg" width="520" alt="Esther und Fabian Zurbriggen" style="display:block;border:0;width:100%;max-width:520px;height:auto;margin:26px auto 0;border-radius:16px">
+    <p style="margin:16px 0 0;font:400 17px/1.4 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#0a1129;text-align:center">Herzlich, Esther und Fabian Zurbriggen</p></td></tr>
+  <tr><td align="center" style="background:#0a1129;padding:26px 30px"><div style="font:400 13px/1.6 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#c4c8d3">Wellness &amp; Spa Pirmin Zurbriggen · 3905 Saas-Almagell · +41 27 957 23 01<br>info@wellnesshotel-zurbriggen.ch</div></td></tr>
+</table>
+</td></tr></table>
+</div></div>
+  <p class="mb-ganz"><button type="button" class="mb-kn" aria-expanded="false"><span class="a">Ganze Mail</span><span class="z">Weniger zeigen</span><i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 6l4 4 4-4"/></svg></i></button></p>
+</article><article class="mb hr" style="--i:4">
+  <header class="mb-ueber"><span class="mb-nrt"><span class="mb-nr">05</span></span><span class="mb-ueber__t"><b>Willkommen zurück</b><small><span>Von</span>Pirmin Zurbriggen</small><small><span>Wann</span>An Gäste, die schon bei uns waren</small><small><span>Betreff</span>Wir denken an Sie</small></span></header>
+  <div class="mb-blatt"><div class="mb-in">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#eee8de"><tr><td align="center" style="padding:24px 12px">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="width:100%;max-width:600px;background:#fbf8f3;border-radius:22px;overflow:hidden">
+  <tr><td align="center" style="background:#16203f;padding:34px 30px 30px">
+    <img src="img/logo.png" width="240" alt="Wellness & Spa Pirmin Zurbriggen" style="display:block;border:0;width:240px;max-width:72%;height:auto;margin:0 auto">
+    <h1 style="margin:28px 0 0;font:400 clamp(28px,7.4vw,36px)/1.15 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#fbf8f3">Wieder bei uns<br><span style="color:#e9d49a">zu Gast.</span></h1>
+  </td></tr>
+  <tr><td style="padding:34px clamp(22px,6vw,40px) 8px"><p style="margin:0 0 14px;font:400 20px/1.3 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#0a1129">Grüezi Herr Keller</p><p style="margin:0 0 14px;font:400 16px/1.62 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#1d2a56">Sie waren schon bei uns, darum ein Gruss aus Saas-Almagell: Die Lärchen werden golden, und bald liegt wieder Schnee neben dem Sessellift.</p><p style="margin:0 0 14px;font:400 16px/1.62 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#1d2a56">Sie haben uns weiterempfohlen? Bitte teilen Sie uns mit, welche Gäste Sie uns vermittelt haben. Als Vermittler erhalten Sie zum Dank bei einer Buchung von 7 Übernachtungen CHF 50 pro Person.</p></td></tr>
+  <tr><td style="padding:6px 28px 6px"><img src="img/h-gold.jpg" width="544" alt="Goldene Lärchen vor den Gletschern" style="display:block;border:0;width:100%;height:auto;border-radius:16px"></td></tr>
+  <tr><td style="padding:10px 28px 6px"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#16203f;border-radius:16px">
+    <tr><td style="padding:22px 26px 12px"><div style="font:400 13px/1.25 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#e9d49a;padding-bottom:12px">Für Sie · Beispielwerte</div>
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="table-layout:fixed"><tr><td style="padding:11px 0;border-top:1px solid #1d3174;font:400 13px/1.3 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.04em;text-transform:uppercase;color:#c4c8d3;width:44%;padding-right:10px;overflow-wrap:anywhere"><span>Vermittlung</span></td><td style="padding:11px 0;border-top:1px solid #1d3174;font:400 16px/1.35 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#fbf8f3"><span>bei 7 Übernachtungen</span></td></tr><tr><td style="padding:11px 0;border-top:1px solid #1d3174;font:400 13px/1.3 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.04em;text-transform:uppercase;color:#c4c8d3;width:44%;padding-right:10px;overflow-wrap:anywhere"><span>Dank</span></td><td style="padding:11px 0;border-top:1px solid #1d3174;font:400 16px/1.35 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#fbf8f3"><span>CHF 50 pro Person</span></td></tr></table></td></tr></table></td></tr>
+  <tr><td align="center" style="padding:26px 40px 8px"><a href="../stammgaeste.html" style="display:inline-block;padding:16px 30px;border-radius:999px;background:#16203f;font:400 13px/1 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#fbf8f3;text-decoration:none">Stammgäste &nbsp;↗</a></td></tr>
+  <tr><td style="padding:14px 40px 30px"><p style="margin:0;font:400 15px/1.6 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#4e5568;text-align:center">Name und Anlass sind Beispielwerte; der Dank steht so auf Ihrer Seite.</p>
+    <img src="img/esther-fabian.jpg" width="520" alt="Esther und Fabian Zurbriggen" style="display:block;border:0;width:100%;max-width:520px;height:auto;margin:26px auto 0;border-radius:16px">
+    <p style="margin:16px 0 0;font:400 17px/1.4 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#0a1129;text-align:center">Herzlich, Esther und Fabian Zurbriggen</p></td></tr>
+  <tr><td align="center" style="background:#0a1129;padding:26px 30px"><div style="font:400 13px/1.6 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#c4c8d3">Wellness &amp; Spa Pirmin Zurbriggen · 3905 Saas-Almagell · +41 27 957 23 01<br>info@wellnesshotel-zurbriggen.ch</div></td></tr>
+</table>
+</td></tr></table>
+</div></div>
+  <p class="mb-ganz"><button type="button" class="mb-kn" aria-expanded="false"><span class="a">Ganze Mail</span><span class="z">Weniger zeigen</span><i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 6l4 4 4-4"/></svg></i></button></p>
+</article><article class="mb hr" style="--i:4">
+  <header class="mb-ueber"><span class="mb-nrt"><span class="mb-nr">06</span></span><span class="mb-ueber__t"><b>Die Jasswochen</b><small><span>Von</span>Pirmin Zurbriggen</small><small><span>Wann</span>Wenn die Jasswochen ausgeschrieben sind</small><small><span>Betreff</span>Jasswochen 2026/2027</small></span></header>
+  <div class="mb-blatt"><div class="mb-in">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#eee8de"><tr><td align="center" style="padding:24px 12px">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="width:100%;max-width:600px;background:#fbf8f3;border-radius:22px;overflow:hidden">
+  <tr><td align="center" style="background:#16203f;padding:34px 30px 30px">
+    <img src="img/logo.png" width="240" alt="Wellness & Spa Pirmin Zurbriggen" style="display:block;border:0;width:240px;max-width:72%;height:auto;margin:0 auto">
+    <h1 style="margin:28px 0 0;font:400 clamp(28px,7.4vw,36px)/1.15 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#fbf8f3">Jasswochen<br><span style="color:#e9d49a">2026/2027.</span></h1>
+  </td></tr>
+  <tr><td style="padding:34px clamp(22px,6vw,40px) 8px"><p style="margin:0 0 14px;font:400 20px/1.3 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#0a1129">Grüezi Herr Keller</p><p style="margin:0 0 14px;font:400 16px/1.62 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#1d2a56">Die Jasswochen sind ausgeschrieben: 4 Jassabende (wir spielen an vier Abenden «Schieber» D und F).</p><p style="margin:0 0 14px;font:400 16px/1.62 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#1d2a56">5 Uebernachtungen mit Frühstücksbüffet und 5-Gang-Abendessen. Nachmittags Suppe und Kuchenbuffet. Tolle Preise zu gewinnen.</p></td></tr>
+  <tr><td style="padding:6px 28px 6px"><img src="img/w-fondue.jpg" width="544" alt="Fondue mit Freunden in der Hütte" style="display:block;border:0;width:100%;height:auto;border-radius:16px"></td></tr>
+  <tr><td style="padding:10px 28px 6px"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#16203f;border-radius:16px">
+    <tr><td style="padding:22px 26px 12px"><div style="font:400 13px/1.25 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#e9d49a;padding-bottom:12px">Die Wochen</div>
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="table-layout:fixed"><tr><td style="padding:11px 0;border-top:1px solid #1d3174;font:400 13px/1.3 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.04em;text-transform:uppercase;color:#c4c8d3;width:44%;padding-right:10px;overflow-wrap:anywhere"><span>Dezember</span></td><td style="padding:11px 0;border-top:1px solid #1d3174;font:400 16px/1.35 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#fbf8f3"><span>13-18. Dezember 2026</span></td></tr><tr><td style="padding:11px 0;border-top:1px solid #1d3174;font:400 13px/1.3 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.04em;text-transform:uppercase;color:#c4c8d3;width:44%;padding-right:10px;overflow-wrap:anywhere"><span>Januar</span></td><td style="padding:11px 0;border-top:1px solid #1d3174;font:400 16px/1.35 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#fbf8f3"><span>10-15. Januar 2027 und 24-29. Januar 2027</span></td></tr><tr><td style="padding:11px 0;border-top:1px solid #1d3174;font:400 13px/1.3 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.04em;text-transform:uppercase;color:#c4c8d3;width:44%;padding-right:10px;overflow-wrap:anywhere"><span>März</span></td><td style="padding:11px 0;border-top:1px solid #1d3174;font:400 16px/1.35 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#fbf8f3"><span>21-26. März 2027</span></td></tr><tr><td style="padding:11px 0;border-top:1px solid #1d3174;font:400 13px/1.3 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.04em;text-transform:uppercase;color:#c4c8d3;width:44%;padding-right:10px;overflow-wrap:anywhere"><span>April</span></td><td style="padding:11px 0;border-top:1px solid #1d3174;font:400 16px/1.35 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#fbf8f3"><span>4-9. April 2027</span></td></tr><tr><td style="padding:11px 0;border-top:1px solid #1d3174;font:400 13px/1.3 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.04em;text-transform:uppercase;color:#c4c8d3;width:44%;padding-right:10px;overflow-wrap:anywhere"><span>Fr. 750.-</span></td><td style="padding:11px 0;border-top:1px solid #1d3174;font:400 16px/1.35 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#fbf8f3"><span>pro Person im Doppelzimmer Standard im **** Hotel Pirmin</span></td></tr></table></td></tr></table></td></tr>
+  <tr><td align="center" style="padding:26px 40px 8px"><a href="../angebote.html#jass" style="display:inline-block;padding:16px 30px;border-radius:999px;background:#16203f;font:400 13px/1 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#fbf8f3;text-decoration:none">Die Jasswochen &nbsp;↗</a></td></tr>
+  <tr><td style="padding:14px 40px 30px"><p style="margin:0;font:400 15px/1.6 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#4e5568;text-align:center">Reservationen: Tel. 027 957 23 01 oder Tel. 079 744 68 58 Fabian Zurbriggen</p>
+    <img src="img/esther-fabian.jpg" width="520" alt="Esther und Fabian Zurbriggen" style="display:block;border:0;width:100%;max-width:520px;height:auto;margin:26px auto 0;border-radius:16px">
+    <p style="margin:16px 0 0;font:400 17px/1.4 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#0a1129;text-align:center">Herzlich, Esther und Fabian Zurbriggen</p></td></tr>
+  <tr><td align="center" style="background:#0a1129;padding:26px 30px"><div style="font:400 13px/1.6 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#c4c8d3">Wellness &amp; Spa Pirmin Zurbriggen · 3905 Saas-Almagell · +41 27 957 23 01<br>info@wellnesshotel-zurbriggen.ch</div></td></tr>
+</table>
+</td></tr></table>
+</div></div>
+  <p class="mb-ganz"><button type="button" class="mb-kn" aria-expanded="false"><span class="a">Ganze Mail</span><span class="z">Weniger zeigen</span><i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 6l4 4 4-4"/></svg></i></button></p>
+</article><article class="mb hr" style="--i:4">
+  <header class="mb-ueber"><span class="mb-nrt"><span class="mb-nr">07</span></span><span class="mb-ueber__t"><b>Die Loft-Suite</b><small><span>Von</span>Pirmin Zurbriggen</small><small><span>Wann</span>Als Antwort auf eine Anfrage zur Loft-Suite</small><small><span>Betreff</span>Ihre Anfrage zur Loft-Suite</small></span></header>
+  <div class="mb-blatt"><div class="mb-in">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#eee8de"><tr><td align="center" style="padding:24px 12px">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="width:100%;max-width:600px;background:#fbf8f3;border-radius:22px;overflow:hidden">
+  <tr><td align="center" style="background:#16203f;padding:34px 30px 30px">
+    <img src="img/logo.png" width="240" alt="Wellness & Spa Pirmin Zurbriggen" style="display:block;border:0;width:240px;max-width:72%;height:auto;margin:0 auto">
+    <h1 style="margin:28px 0 0;font:400 clamp(28px,7.4vw,36px)/1.15 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#fbf8f3">Für zwei,<br><span style="color:#e9d49a">auf zwei Etagen.</span></h1>
+  </td></tr>
+  <tr><td style="padding:34px clamp(22px,6vw,40px) 8px"><p style="margin:0 0 14px;font:400 20px/1.3 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#0a1129">Grüezi Frau Meier</p><p style="margin:0 0 14px;font:400 16px/1.62 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#1d2a56">Herzlich Willkommen bei uns im Loft-Suite-Hotel. Verbringen Sie ein paar erholsame und unbeschwerte Tage in Saas Almagell bei der Familie Esther und Fabian Zurbriggen.</p><p style="margin:0 0 14px;font:400 16px/1.62 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#1d2a56">Mit seiner exklusiven Atmosphäre der Ruhe und Entspannung erleben Sie Lifestyle und Wellness in perfekter Balance.</p></td></tr>
+  <tr><td style="padding:6px 28px 6px"><img src="img/loft-kronleuchter.jpg" width="544" alt="Der Kristallleuchter im hohen Raum der Loft-Suite" style="display:block;border:0;width:100%;height:auto;border-radius:16px"></td></tr>
+  <tr><td style="padding:10px 28px 6px"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#16203f;border-radius:16px">
+    <tr><td style="padding:22px 26px 12px"><div style="font:400 13px/1.25 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#e9d49a;padding-bottom:12px">Die Loft-Suite</div>
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="table-layout:fixed"><tr><td style="padding:11px 0;border-top:1px solid #1d3174;font:400 13px/1.3 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.04em;text-transform:uppercase;color:#c4c8d3;width:44%;padding-right:10px;overflow-wrap:anywhere"><span>Oben</span></td><td style="padding:11px 0;border-top:1px solid #1d3174;font:400 16px/1.35 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#fbf8f3"><span>Kingsize-Bett (200x200 cm)</span></td></tr><tr><td style="padding:11px 0;border-top:1px solid #1d3174;font:400 13px/1.3 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.04em;text-transform:uppercase;color:#c4c8d3;width:44%;padding-right:10px;overflow-wrap:anywhere"><span>Unten</span></td><td style="padding:11px 0;border-top:1px solid #1d3174;font:400 16px/1.35 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#fbf8f3"><span>Wohnbereich mit Sofa, Privater Whirlpool und Private Sauna</span></td></tr><tr><td style="padding:11px 0;border-top:1px solid #1d3174;font:400 13px/1.3 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.04em;text-transform:uppercase;color:#c4c8d3;width:44%;padding-right:10px;overflow-wrap:anywhere"><span>Fläche</span></td><td style="padding:11px 0;border-top:1px solid #1d3174;font:400 16px/1.35 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#fbf8f3"><span>55 m²</span></td></tr><tr><td style="padding:11px 0;border-top:1px solid #1d3174;font:400 13px/1.3 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.04em;text-transform:uppercase;color:#c4c8d3;width:44%;padding-right:10px;overflow-wrap:anywhere"><span>Preis</span></td><td style="padding:11px 0;border-top:1px solid #1d3174;font:400 16px/1.35 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#fbf8f3"><span>ab CHF 315,-- Preis pro Person</span></td></tr></table></td></tr></table></td></tr>
+  <tr><td align="center" style="padding:26px 40px 8px"><a href="../loft-suite.html" style="display:inline-block;padding:16px 30px;border-radius:999px;background:#16203f;font:400 13px/1 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#fbf8f3;text-decoration:none">Zur Loft-Suite &nbsp;↗</a></td></tr>
+  <tr><td style="padding:14px 40px 30px"><p style="margin:0;font:400 15px/1.6 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#4e5568;text-align:center">5-Sterne-Service (Gepäck, Auto).</p>
+    <img src="img/esther-fabian.jpg" width="520" alt="Esther und Fabian Zurbriggen" style="display:block;border:0;width:100%;max-width:520px;height:auto;margin:26px auto 0;border-radius:16px">
+    <p style="margin:16px 0 0;font:400 17px/1.4 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#0a1129;text-align:center">Herzlich, Esther und Fabian Zurbriggen</p></td></tr>
+  <tr><td align="center" style="background:#0a1129;padding:26px 30px"><div style="font:400 13px/1.6 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#c4c8d3">Wellness &amp; Spa Pirmin Zurbriggen · 3905 Saas-Almagell · +41 27 957 23 01<br>info@wellnesshotel-zurbriggen.ch</div></td></tr>
+</table>
+</td></tr></table>
+</div></div>
+  <p class="mb-ganz"><button type="button" class="mb-kn" aria-expanded="false"><span class="a">Ganze Mail</span><span class="z">Weniger zeigen</span><i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 6l4 4 4-4"/></svg></i></button></p>
+</article><article class="mb hr" style="--i:4">
+  <header class="mb-ueber"><span class="mb-nrt"><span class="mb-nr">08</span></span><span class="mb-ueber__t"><b>Ferien mit Kindern</b><small><span>Von</span>Pirmin Zurbriggen</small><small><span>Wann</span>Als Antwort auf eine Anfrage mit Kindern</small><small><span>Betreff</span>Ihre Familienferien bei uns</small></span></header>
+  <div class="mb-blatt"><div class="mb-in">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#eee8de"><tr><td align="center" style="padding:24px 12px">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="width:100%;max-width:600px;background:#fbf8f3;border-radius:22px;overflow:hidden">
+  <tr><td align="center" style="background:#16203f;padding:34px 30px 30px">
+    <img src="img/logo.png" width="240" alt="Wellness & Spa Pirmin Zurbriggen" style="display:block;border:0;width:240px;max-width:72%;height:auto;margin:0 auto">
+    <h1 style="margin:28px 0 0;font:400 clamp(28px,7.4vw,36px)/1.15 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#fbf8f3">Langeweile?<br><span style="color:#e9d49a">Keine Chance!</span></h1>
+  </td></tr>
+  <tr><td style="padding:34px clamp(22px,6vw,40px) 8px"><p style="margin:0 0 14px;font:400 20px/1.3 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#0a1129">Grüezi Familie Keller</p><p style="margin:0 0 14px;font:400 16px/1.62 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#1d2a56">Bei uns können Kinder von 4-12 Jahre was erleben: 1 Spiel- und Bastelraum (ausgestattet mit verschiedenen Spielen). Unsere ausgebildete Kinderbetreuerin lässt sich immer wieder Neues einfallen, um Ihren Kindern den Tag interessant zu machen.</p><p style="margin:0 0 14px;font:400 16px/1.62 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#1d2a56">Das Kinderprogramm findet nur in der Hauptsaison statt.</p></td></tr>
+  <tr><td style="padding:6px 28px 6px"><img src="img/k-malen.jpg" width="544" alt="Ein Mädchen malt am Basteltisch" style="display:block;border:0;width:100%;height:auto;border-radius:16px"></td></tr>
+  <tr><td style="padding:10px 28px 6px"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#16203f;border-radius:16px">
+    <tr><td style="padding:22px 26px 12px"><div style="font:400 13px/1.25 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#e9d49a;padding-bottom:12px">Kinderermässigungen</div>
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="table-layout:fixed"><tr><td style="padding:11px 0;border-top:1px solid #1d3174;font:400 13px/1.3 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.04em;text-transform:uppercase;color:#c4c8d3;width:44%;padding-right:10px;overflow-wrap:anywhere"><span>0-2 Jahre</span></td><td style="padding:11px 0;border-top:1px solid #1d3174;font:400 16px/1.35 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#fbf8f3"><span>70%</span></td></tr><tr><td style="padding:11px 0;border-top:1px solid #1d3174;font:400 13px/1.3 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.04em;text-transform:uppercase;color:#c4c8d3;width:44%;padding-right:10px;overflow-wrap:anywhere"><span>3-6 Jahre</span></td><td style="padding:11px 0;border-top:1px solid #1d3174;font:400 16px/1.35 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#fbf8f3"><span>50%</span></td></tr><tr><td style="padding:11px 0;border-top:1px solid #1d3174;font:400 13px/1.3 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.04em;text-transform:uppercase;color:#c4c8d3;width:44%;padding-right:10px;overflow-wrap:anywhere"><span>7-12 Jahre</span></td><td style="padding:11px 0;border-top:1px solid #1d3174;font:400 16px/1.35 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#fbf8f3"><span>30%</span></td></tr><tr><td style="padding:11px 0;border-top:1px solid #1d3174;font:400 13px/1.3 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.04em;text-transform:uppercase;color:#c4c8d3;width:44%;padding-right:10px;overflow-wrap:anywhere"><span>13-15.9 Jahre</span></td><td style="padding:11px 0;border-top:1px solid #1d3174;font:400 16px/1.35 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#fbf8f3"><span>10%</span></td></tr></table></td></tr></table></td></tr>
+  <tr><td align="center" style="padding:26px 40px 8px"><a href="../familie.html" style="display:inline-block;padding:16px 30px;border-radius:999px;background:#16203f;font:400 13px/1 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#fbf8f3;text-decoration:none">Kinder und Familie &nbsp;↗</a></td></tr>
+  <tr><td style="padding:14px 40px 30px"><p style="margin:0;font:400 15px/1.6 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#4e5568;text-align:center">Name ist ein Beispielwert, die Ermässigungen stehen so auf Ihrer Seite.</p>
+    <img src="img/esther-fabian.jpg" width="520" alt="Esther und Fabian Zurbriggen" style="display:block;border:0;width:100%;max-width:520px;height:auto;margin:26px auto 0;border-radius:16px">
+    <p style="margin:16px 0 0;font:400 17px/1.4 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#0a1129;text-align:center">Herzlich, Esther und Fabian Zurbriggen</p></td></tr>
+  <tr><td align="center" style="background:#0a1129;padding:26px 30px"><div style="font:400 13px/1.6 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#c4c8d3">Wellness &amp; Spa Pirmin Zurbriggen · 3905 Saas-Almagell · +41 27 957 23 01<br>info@wellnesshotel-zurbriggen.ch</div></td></tr>
+</table>
+</td></tr></table>
+</div></div>
+  <p class="mb-ganz"><button type="button" class="mb-kn" aria-expanded="false"><span class="a">Ganze Mail</span><span class="z">Weniger zeigen</span><i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 6l4 4 4-4"/></svg></i></button></p>
+</article><article class="mb hr" style="--i:4">
+  <header class="mb-ueber"><span class="mb-nrt"><span class="mb-nr">09</span></span><span class="mb-ueber__t"><b>Spezial-Kost</b><small><span>Von</span>Pirmin Zurbriggen</small><small><span>Wann</span>Wenn ein Gast eine Unverträglichkeit nennt</small><small><span>Betreff</span>Ihre Hinweise an die Küche</small></span></header>
+  <div class="mb-blatt"><div class="mb-in">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#eee8de"><tr><td align="center" style="padding:24px 12px">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="width:100%;max-width:600px;background:#fbf8f3;border-radius:22px;overflow:hidden">
+  <tr><td align="center" style="background:#16203f;padding:34px 30px 30px">
+    <img src="img/logo.png" width="240" alt="Wellness & Spa Pirmin Zurbriggen" style="display:block;border:0;width:240px;max-width:72%;height:auto;margin:0 auto">
+    <h1 style="margin:28px 0 0;font:400 clamp(28px,7.4vw,36px)/1.15 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#fbf8f3">Bei uns müssen Sie<br><span style="color:#e9d49a">auf nichts verzichten.</span></h1>
+  </td></tr>
+  <tr><td style="padding:34px clamp(22px,6vw,40px) 8px"><p style="margin:0 0 14px;font:400 20px/1.3 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#0a1129">Grüezi Herr Keller</p><p style="margin:0 0 14px;font:400 16px/1.62 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#1d2a56">Danke für Ihren Hinweis, wir haben ihn an die Küche weitergegeben. Leiden Sie unter einer Lebensmittelunverträglichkeit, einer Nahrungsmittelallergie oder legen Wert auf eine gesunde Ernährung? Bei uns müssen Sie auf nichts verzichten!</p><p style="margin:0 0 14px;font:400 16px/1.62 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#1d2a56">Sprechen Sie uns gerne an.</p></td></tr>
+  <tr><td style="padding:6px 28px 6px"><img src="img/g-teller-3.jpg" width="544" alt="Ein Dessert mit Gitter aus Karamell" style="display:block;border:0;width:100%;height:auto;border-radius:16px"></td></tr>
+  <tr><td style="padding:10px 28px 6px"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#16203f;border-radius:16px">
+    <tr><td style="padding:22px 26px 12px"><div style="font:400 13px/1.25 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#e9d49a;padding-bottom:12px">Die Küche bietet · Beispielwerte</div>
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="table-layout:fixed"><tr><td style="padding:11px 0;border-top:1px solid #1d3174;font:400 13px/1.3 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.04em;text-transform:uppercase;color:#c4c8d3;width:44%;padding-right:10px;overflow-wrap:anywhere"><span>Vegetarische Gerichte</span></td><td style="padding:11px 0;border-top:1px solid #1d3174;font:400 16px/1.35 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#fbf8f3"><span>Frisch, nahrhaft und abwechslungsreich</span></td></tr><tr><td style="padding:11px 0;border-top:1px solid #1d3174;font:400 13px/1.3 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.04em;text-transform:uppercase;color:#c4c8d3;width:44%;padding-right:10px;overflow-wrap:anywhere"><span>Vollwertkost</span></td><td style="padding:11px 0;border-top:1px solid #1d3174;font:400 16px/1.35 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#fbf8f3"><span>Gesund und nährstoffreich für eine bewusste Ernährung</span></td></tr><tr><td style="padding:11px 0;border-top:1px solid #1d3174;font:400 13px/1.3 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.04em;text-transform:uppercase;color:#c4c8d3;width:44%;padding-right:10px;overflow-wrap:anywhere"><span>Allergiker&shy;freundliche Speisen</span></td><td style="padding:11px 0;border-top:1px solid #1d3174;font:400 16px/1.35 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#fbf8f3"><span>Sicher geniessen ohne Sorgen</span></td></tr><tr><td style="padding:11px 0;border-top:1px solid #1d3174;font:400 13px/1.3 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.04em;text-transform:uppercase;color:#c4c8d3;width:44%;padding-right:10px;overflow-wrap:anywhere"><span>Glutenfreie Ernährung</span></td><td style="padding:11px 0;border-top:1px solid #1d3174;font:400 16px/1.35 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#fbf8f3"><span>Für Menschen mit Zöliakie oder Glutenintoleranz</span></td></tr></table></td></tr></table></td></tr>
+  <tr><td align="center" style="padding:26px 40px 8px"><a href="../gourmet.html" style="display:inline-block;padding:16px 30px;border-radius:999px;background:#16203f;font:400 13px/1 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#fbf8f3;text-decoration:none">Gourmet &nbsp;↗</a></td></tr>
+  <tr><td style="padding:14px 40px 30px"><p style="margin:0;font:400 15px/1.6 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#4e5568;text-align:center">Name ist ein Beispielwert.</p>
+    <img src="img/esther-fabian.jpg" width="520" alt="Esther und Fabian Zurbriggen" style="display:block;border:0;width:100%;max-width:520px;height:auto;margin:26px auto 0;border-radius:16px">
+    <p style="margin:16px 0 0;font:400 17px/1.4 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#0a1129;text-align:center">Herzlich, Esther und Fabian Zurbriggen</p></td></tr>
+  <tr><td align="center" style="background:#0a1129;padding:26px 30px"><div style="font:400 13px/1.6 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#c4c8d3">Wellness &amp; Spa Pirmin Zurbriggen · 3905 Saas-Almagell · +41 27 957 23 01<br>info@wellnesshotel-zurbriggen.ch</div></td></tr>
+</table>
+</td></tr></table>
+</div></div>
+  <p class="mb-ganz"><button type="button" class="mb-kn" aria-expanded="false"><span class="a">Ganze Mail</span><span class="z">Weniger zeigen</span><i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 6l4 4 4-4"/></svg></i></button></p>
+</article><article class="mb hr" style="--i:4">
+  <header class="mb-ueber"><span class="mb-nrt"><span class="mb-nr">10</span></span><span class="mb-ueber__t"><b>Tage im Haus als Geschenk</b><small><span>Von</span>Pirmin Zurbriggen</small><small><span>Wann</span>Wenn jemand Tage im Haus verschenkt</small><small><span>Betreff</span>Ein Gutschein für Tage im Haus</small></span></header>
+  <div class="mb-blatt"><div class="mb-in">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#eee8de"><tr><td align="center" style="padding:24px 12px">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="width:100%;max-width:600px;background:#fbf8f3;border-radius:22px;overflow:hidden">
+  <tr><td align="center" style="background:#16203f;padding:34px 30px 30px">
+    <img src="img/logo.png" width="240" alt="Wellness & Spa Pirmin Zurbriggen" style="display:block;border:0;width:240px;max-width:72%;height:auto;margin:0 auto">
+    <h1 style="margin:28px 0 0;font:400 clamp(28px,7.4vw,36px)/1.15 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#fbf8f3">Tage im Haus,<br><span style="color:#e9d49a">für Sie.</span></h1>
+  </td></tr>
+  <tr><td style="padding:34px clamp(22px,6vw,40px) 8px"><p style="margin:0 0 14px;font:400 20px/1.3 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#0a1129">Grüezi Frau Meier</p><p style="margin:0 0 14px;font:400 16px/1.62 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#1d2a56">Herr Keller schenkt Ihnen Tage bei uns in Saas-Almagell. Den Gutschein finden Sie im Anhang.</p><p style="margin:0 0 14px;font:400 16px/1.62 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#1d2a56">Suchen Sie sich Ihre Tage aus und schreiben Sie uns, dann halten wir Ihr Zimmer frei.</p></td></tr>
+  <tr><td style="padding:6px 28px 6px"><img src="img/a-gutschein.jpg" width="544" alt="Ein Geschenk mit roter Schnur unter Tannenzweigen" style="display:block;border:0;width:100%;height:auto;border-radius:16px"></td></tr>
+  <tr><td style="padding:10px 28px 6px"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#16203f;border-radius:16px">
+    <tr><td style="padding:22px 26px 12px"><div style="font:400 13px/1.25 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#e9d49a;padding-bottom:12px">Ihr Gutschein · Beispielwerte</div>
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="table-layout:fixed"><tr><td style="padding:11px 0;border-top:1px solid #1d3174;font:400 13px/1.3 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.04em;text-transform:uppercase;color:#c4c8d3;width:44%;padding-right:10px;overflow-wrap:anywhere"><span>Von</span></td><td style="padding:11px 0;border-top:1px solid #1d3174;font:400 16px/1.35 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#fbf8f3"><span>Thomas Keller</span></td></tr><tr><td style="padding:11px 0;border-top:1px solid #1d3174;font:400 13px/1.3 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.04em;text-transform:uppercase;color:#c4c8d3;width:44%;padding-right:10px;overflow-wrap:anywhere"><span>Für</span></td><td style="padding:11px 0;border-top:1px solid #1d3174;font:400 16px/1.35 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#fbf8f3"><span>Anna Meier</span></td></tr><tr><td style="padding:11px 0;border-top:1px solid #1d3174;font:400 13px/1.3 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.04em;text-transform:uppercase;color:#c4c8d3;width:44%;padding-right:10px;overflow-wrap:anywhere"><span>Nummer</span></td><td style="padding:11px 0;border-top:1px solid #1d3174;font:400 16px/1.35 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#fbf8f3"><span>G-2026-118</span></td></tr></table></td></tr></table></td></tr>
+  <tr><td align="center" style="padding:26px 40px 8px"><a href="../angebote.html#gutschein" style="display:inline-block;padding:16px 30px;border-radius:999px;background:#16203f;font:400 13px/1 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#fbf8f3;text-decoration:none">Die Angebote &nbsp;↗</a></td></tr>
+  <tr><td style="padding:14px 40px 30px"><p style="margin:0;font:400 15px/1.6 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#4e5568;text-align:center">Namen und Nummer sind Beispielwerte.</p>
+    <img src="img/esther-fabian.jpg" width="520" alt="Esther und Fabian Zurbriggen" style="display:block;border:0;width:100%;max-width:520px;height:auto;margin:26px auto 0;border-radius:16px">
+    <p style="margin:16px 0 0;font:400 17px/1.4 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#0a1129;text-align:center">Herzlich, Esther und Fabian Zurbriggen</p></td></tr>
+  <tr><td align="center" style="background:#0a1129;padding:26px 30px"><div style="font:400 13px/1.6 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#c4c8d3">Wellness &amp; Spa Pirmin Zurbriggen · 3905 Saas-Almagell · +41 27 957 23 01<br>info@wellnesshotel-zurbriggen.ch</div></td></tr>
+</table>
+</td></tr></table>
+</div></div>
+  <p class="mb-ganz"><button type="button" class="mb-kn" aria-expanded="false"><span class="a">Ganze Mail</span><span class="z">Weniger zeigen</span><i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 6l4 4 4-4"/></svg></i></button></p>
+</article><article class="mb hr" style="--i:4">
+  <header class="mb-ueber"><span class="mb-nrt"><span class="mb-nr">11</span></span><span class="mb-ueber__t"><b>Ihre Tagung</b><small><span>Von</span>Pirmin Zurbriggen</small><small><span>Wann</span>Als Antwort auf eine Anfrage für eine Tagung</small><small><span>Betreff</span>Ihre Tagung bei uns</small></span></header>
+  <div class="mb-blatt"><div class="mb-in">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#eee8de"><tr><td align="center" style="padding:24px 12px">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="width:100%;max-width:600px;background:#fbf8f3;border-radius:22px;overflow:hidden">
+  <tr><td align="center" style="background:#16203f;padding:34px 30px 30px">
+    <img src="img/logo.png" width="240" alt="Wellness & Spa Pirmin Zurbriggen" style="display:block;border:0;width:240px;max-width:72%;height:auto;margin:0 auto">
+    <h1 style="margin:28px 0 0;font:400 clamp(28px,7.4vw,36px)/1.15 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#fbf8f3">Kreativ<br><span style="color:#e9d49a">in der Bergluft.</span></h1>
+  </td></tr>
+  <tr><td style="padding:34px clamp(22px,6vw,40px) 8px"><p style="margin:0 0 14px;font:400 20px/1.3 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#0a1129">Grüezi Herr Keller</p><p style="margin:0 0 14px;font:400 16px/1.62 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#1d2a56">Danke für Ihre Anfrage. Unser Seminarraum für max. 30 Personen ist bestens ausgestattet.</p><p style="margin:0 0 14px;font:400 16px/1.62 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#1d2a56">Ergänzen Sie Ihre Tagungen und Seminare mit ein paar Tagen Erholung – durch abwechslungsreiche Aktivitäten in unserer schönen Bergwelt wie Wandern, Mountainbike, Tennis.</p></td></tr>
+  <tr><td style="padding:6px 28px 6px"><img src="img/fitnesstower.jpg" width="544" alt="Aus dem verglasten Fitnesstower auf die Walliser Häuser" style="display:block;border:0;width:100%;height:auto;border-radius:16px"></td></tr>
+  <tr><td style="padding:10px 28px 6px"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#16203f;border-radius:16px">
+    <tr><td style="padding:22px 26px 12px"><div style="font:400 13px/1.25 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#e9d49a;padding-bottom:12px">Der Seminarraum</div>
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="table-layout:fixed"><tr><td style="padding:11px 0;border-top:1px solid #1d3174;font:400 13px/1.3 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.04em;text-transform:uppercase;color:#c4c8d3;width:44%;padding-right:10px;overflow-wrap:anywhere"><span>Personen</span></td><td style="padding:11px 0;border-top:1px solid #1d3174;font:400 16px/1.35 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#fbf8f3"><span>max. 30</span></td></tr><tr><td style="padding:11px 0;border-top:1px solid #1d3174;font:400 13px/1.3 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.04em;text-transform:uppercase;color:#c4c8d3;width:44%;padding-right:10px;overflow-wrap:anywhere"><span>Ausstattung</span></td><td style="padding:11px 0;border-top:1px solid #1d3174;font:400 16px/1.35 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#fbf8f3"><span>Flipchart, Hellraumprojektor, Leinwand, Tischrednerpult, CD- …</span></td></tr></table></td></tr></table></td></tr>
+  <tr><td align="center" style="padding:26px 40px 8px"><a href="../tagen.html" style="display:inline-block;padding:16px 30px;border-radius:999px;background:#16203f;font:400 13px/1 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#fbf8f3;text-decoration:none">Tagen &nbsp;↗</a></td></tr>
+  <tr><td style="padding:14px 40px 30px"><p style="margin:0;font:400 15px/1.6 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#4e5568;text-align:center">Sie werden sehen: In exklusivem Ambiente und bei guter Bergluft ist man kreativ und motiviert. Da kommen viele Ideen ganz wie von selbst!</p>
+    <img src="img/esther-fabian.jpg" width="520" alt="Esther und Fabian Zurbriggen" style="display:block;border:0;width:100%;max-width:520px;height:auto;margin:26px auto 0;border-radius:16px">
+    <p style="margin:16px 0 0;font:400 17px/1.4 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#0a1129;text-align:center">Herzlich, Esther und Fabian Zurbriggen</p></td></tr>
+  <tr><td align="center" style="background:#0a1129;padding:26px 30px"><div style="font:400 13px/1.6 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#c4c8d3">Wellness &amp; Spa Pirmin Zurbriggen · 3905 Saas-Almagell · +41 27 957 23 01<br>info@wellnesshotel-zurbriggen.ch</div></td></tr>
+</table>
+</td></tr></table>
+</div></div>
+  <p class="mb-ganz"><button type="button" class="mb-kn" aria-expanded="false"><span class="a">Ganze Mail</span><span class="z">Weniger zeigen</span><i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 6l4 4 4-4"/></svg></i></button></p>
+</article></div>
+<div class="pfeile hr" style="--i:2"><button type="button" class="pf" data-r="-1" aria-label="Vorige Mail"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M10 3 5 8l5 5"/></svg></button><button type="button" class="pf" data-r="1" aria-label="Nächste Mail"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="m6 3 5 5-5 5"/></svg></button></div></main>
+<footer class="hr">Entwurf von Robert Reff, Tasty Studios. Stand 08.11.2026. <a href="../werkbank/index.html#papier">Zurück zu «Alles auf einen Blick»</a></footer>
+<script>
+(function () {
+  /* Hereinkommen: Kopf, Band und Fuss heben sich, sobald sie ins Bild kommen; die Mails im Band kommen zusammen mit dem Band */
+  if (document.documentElement.classList.contains('js')) {
+    var io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (!e.isIntersecting) return; io.unobserve(e.target);
+      (e.target.id === 'mband' ? [].slice.call(e.target.querySelectorAll('.hr')) : [e.target]).forEach(function (x) { x.classList.add('da'); }); }); }, { rootMargin: '0px 0px -8% 0px', threshold: 0 });
+    [].forEach.call(document.querySelectorAll('header.kopf .hr,.pfeile,footer'), function (x) { io.observe(x); }); io.observe(document.getElementById('mband'));
+  }
+})();
+(function () {
+  /* die Mail steht in der Seite; zu sieht man den oberen Teil, auf die ganze Mail, sofort */
+  var ms = [].slice.call(document.querySelectorAll('.mb'));
+  function lage(m) { var bl = m.querySelector('.mb-blatt'), i = bl.querySelector('.mb-in'); bl.style.height = (m.classList.contains('auf') ? i.scrollHeight : Math.min(640, i.scrollHeight)) + 'px'; }
+  ms.forEach(function (m) {
+    var k = m.querySelector('.mb-kn');
+    [].forEach.call(m.querySelectorAll('img'), function (im) { if (!im.complete) im.addEventListener('load', function () { lage(m); }, { once: true }); });
+    lage(m);
+    k.addEventListener('click', function () { var auf = m.classList.toggle('auf'); k.setAttribute('aria-expanded', auf); lage(m); if (!auf) m.scrollIntoView({ block: 'nearest' }); });
+  });
+  var rt = 0; addEventListener('resize', function () { clearTimeout(rt); rt = setTimeout(function () { ms.forEach(lage); kl(); }, 120); });
+  /* Pfeile am Laptop blättern das Band um eine Mail */
+  var b = document.getElementById('mband'), p = document.querySelectorAll('.pf');
+  function schritt() { return ms[0].getBoundingClientRect().width + parseFloat(getComputedStyle(b).columnGap || 0); }
+  function kl() { p[0].disabled = b.scrollLeft < 4; p[1].disabled = b.scrollLeft > b.scrollWidth - b.clientWidth - 4; }
+  [].forEach.call(p, function (x) { x.addEventListener('click', function () { b.scrollBy({ left: +x.dataset.r * schritt(), behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' }); }); });
+  b.addEventListener('scroll', kl, { passive: true }); kl();
+})();
+</script>
+<style id="knopf-mitte">/* knopf-mitte (Werkbank Papier, 31.10.2026): Beschriftung optisch mittig in Knöpfen, in Chromium und WebKit gleich, ohne Ausgleich je Engine.
+   Senkrecht: statt .tm{top:.7px} nur für Chromium (text_mitte.py) wird die Beschriftung auf Versalhöhe und Grundlinie beschnitten
+   (text-box: trim-both cap alphabetic); der Knopf zentriert dann genau die Versalien, unabhängig von Zeilenhöhe und Metrik der Engine.
+   Waagrecht: Chromium setzt die Sperrung auch hinter den letzten Buchstaben, WebKit nicht. knopf_mitte.js stellt den letzten Buchstaben
+   in <span class="tm-l"> ohne Sperrung, damit gibt es in keiner Engine einen Abstand am Ende.
+   Wird nach dem Block von text_mitte.py eingefügt und hebt dessen Verschiebungen auf. */
+a.kn>.tm,button.kn>.tm,.uwahl button>.tm,.uschalter button>.tm,.wahl button>.tm,.vh-wahl button>.tm,.sbf-z>.tm,.rgc-p>.tm,.ins-m>.tm{
+  top:0!important;left:0!important;text-box:trim-both cap alphabetic}
+.uwahl button,.uschalter button,.wahl button,.vh-wahl button,.sbf-z,.rgc-p,.ins-m{display:inline-flex;align-items:center;justify-content:center}
+.tm-l{letter-spacing:0}
+.rgc-p>.tm{display:inline-block}
+.ins-mini .ins-m{padding:8px 16px}
+</style><script id="knopf-mitte-js">(function(){function m(){document.querySelectorAll('.kn,.sbf-z,.wahl button,.vh-wahl button,.uwahl button,.uschalter button,.rgc-p,.ins-m').forEach(function(k){var t=k.firstChild;if(t&&t.nodeType===3&&t.textContent.trim()){var s=document.createElement('span');s.className='tm';s.textContent=t.textContent;k.replaceChild(s,t);t=s}if(!t||t.nodeType!==1||!t.classList.contains('tm')||t.querySelector('.tm-l'))return;var x=t.textContent.replace(/\s+$/,'');if(x.length<2)return;var l=document.createElement('span');l.className='tm-l';l.textContent=x.slice(-1);t.textContent=x.slice(0,-1);t.appendChild(l)});
+/* Römische Ziffern der Kapitelpunkte: die Tinte von «VI», «VII», «IV» liegt nicht mittig in ihrer Laufweite (V ohne, I mit Vorbreite); um die halbe Differenz schieben, gemessen an den Glyphen selbst (Tor 08.11.2026) */
+var c=document.createElement('canvas').getContext('2d');document.querySelectorAll('.rgc-p>.tm').forEach(function(t){var s=getComputedStyle(t);c.font=s.fontStyle+' '+s.fontWeight+' '+s.fontSize+' '+s.fontFamily;var q=c.measureText(t.textContent),v=q.width/2-(q.actualBoundingBoxRight-q.actualBoundingBoxLeft)/2;t.style.transform=Math.abs(v)>.2?'translateX('+v.toFixed(2)+'px)':''})}
+m();addEventListener('load',m);if(document.fonts)document.fonts.ready.then(m)})();</script><script id="ruecksprung">/* Rücksprung (Robert 1.11.2026): Zurück/Vor im Browser landet auf der alten Höhe der Seite, nie ganz oben.
+   Merkt je Seite in sessionStorage (rs:<Pfad>) die Höhe und das Inhaltsstück am oberen Fensterrand (beim Scrollen, beim Klick auf einen Link, bei pagehide).
+   Kommt man mit Zurück/Vor wieder (Navigation «back_forward»), richtet sich die Seite nach dem Aufbau an diesem Stück aus, nicht nur an der Pixelzahl:
+   Abschnitte mit content-visibility:auto stehen nach dem Laden als 1400-px-Platzhalter da, dieselbe Pixelhöhe zeigt sonst anderen Inhalt.
+   Für den Moment des Sprungs: alles einmal gezeichnet, keine Übergänge, keine Auftakt-Bewegung (rs-sofort); alles bis zum Fensterrand gilt als gezeigt (.da).
+   Aus dem bfcache stellt der Browser die Höhe selbst her. Keine unload-Handler. Seiten mit eigenem Rückweg (#rh-zurueck, «wb-y») und Rahmen bleiben unberührt, ausser der Rückweg trägt data-rs (dann führt er nur ?y= aus, Zurück/Vor macht der Rücksprung).
+   Merkpunkt: das nächste feststehende Stück auf einem Drittel der Höhe; liegt dort eine mitlaufende Bühne (sticky), gilt der Abschnitt, der sie trägt (Robert 1.11.2026, Werkbänke mit Handy-/Laptop-Bühnen). */
+(function () {
+  var RH = document.getElementById('rh-zurueck');   /* eigener Rückweg: nur wenn er Zurück/Vor ausdrücklich dem Rücksprung überlässt (data-rs) */
+  if (RH && !RH.hasAttribute('data-rs')) return;
+  try { if (window.top !== window) return; } catch (e) { return; }
+  var K = 'rs:' + location.pathname, H = document.documentElement, sperre = false, t = 0;
+  var SEL = 'h1,h2,h3,h4,h5,p,li,figure,img,picture,video,blockquote,table,tr,section,article,header,footer,div';
+  function festAb(e) {   /* das äusserste mitlaufende (fixed/sticky) Element über e, sonst null */
+    var f = null; for (; e && e !== document.body && e !== H; e = e.parentElement) { var p = getComputedStyle(e).position; if (p === 'fixed' || p === 'sticky') f = e; } return f;
+  }
+  function stand(e) {   /* das nächste feststehende Inhaltsstück: in einer mitlaufenden Bühne (sticky) gilt der Abschnitt, der sie trägt; schwebende Leisten (fixed) nie */
+    for (var n = 0; e && n < 30; n++) {
+      var c = e.closest && e.closest(SEL); if (!c || c === document.body || c === H) return null;
+      var f = festAb(c); if (!f) return c;
+      if (getComputedStyle(f).position === 'fixed') return null;
+      e = f.parentElement;
+    }
+    return null;
+  }
+  function text(e) { return (e.textContent || e.getAttribute('src') || '').replace(/\s+/g, ' ').trim().slice(0, 40); }
+  function anker() {   /* das Inhaltsstück auf einem Drittel der Fensterhöhe (nicht die schwebende Leiste) */
+    if (!document.elementsFromPoint) return null;
+    var l = null, xs = [.5, .25, .75];
+    for (var k = 0; k < xs.length; k++) {
+      var st = document.elementsFromPoint(innerWidth * xs[k], innerHeight * .3);
+      for (var j = 0; j < st.length; j++) { var c = stand(st[j]); if (c) { l = c; break; } }
+      if (l) break;
+    }
+    if (!l) return null;
+    /* lieber der Abschnitt drumherum (section, article, Kopf, Fuss, Stück mit id): bewegte Teile darin (Chat, Film, Bühne) verrutschen, der Abschnitt nicht */
+    var g = l.closest('section,article,header,footer,[id]');
+    if (g && g !== document.body && g !== H && g.tagName !== 'MAIN' && g.matches(SEL) && !festAb(g) && g.getBoundingClientRect().height <= innerHeight * 4) l = g;
+    var alle = document.querySelectorAll(SEL), i = [].indexOf.call(alle, l);
+    return i < 0 ? null : { i: i, d: l.id || '', n: l.tagName, t: text(l), o: Math.round(l.getBoundingClientRect().top) };
+  }
+  function merk(mitAnker) {
+    if (sperre) return;
+    var w = { y: Math.round(window.scrollY || 0) };
+    if (mitAnker) { try { var a = anker(); if (a) w.a = a; } catch (e) {} }
+    else { try { var alt = JSON.parse(sessionStorage.getItem(K) || '{}'); if (alt.a && Math.abs(alt.y - w.y) < 2) w.a = alt.a; } catch (e) {} }
+    try { sessionStorage.setItem(K, JSON.stringify(w)); } catch (e) {}
+  }
+  addEventListener('scroll', function () { if (!t) t = setTimeout(function () { t = 0; merk(false); }, 150); }, { passive: true });
+  document.addEventListener('click', function (ev) { if (ev.target.closest && ev.target.closest('a[href]')) merk(true); }, true);
+  addEventListener('pagehide', function () {   /* beim Verlassen übernimmt der Rücksprung die Höhe ganz: sonst setzt Chrome beim Zurück die alte Pixelhöhe noch mehrmals nach */
+    try { history.scrollRestoration = 'manual'; } catch (e) {}
+    merk(true);
+  });
+
+  /* Zurück aus dem Speicher des Browsers (bfcache, Safari): pageshow mit persisted. Steht die Seite dann nicht an der gemerkten Stelle
+     (Safari setzt nach scrollRestoration «manual» oder nach Nachladen oft oben an), dorthin wie beim Zurück ohne Speicher (Prüfpunkt 12, 09.11.2026). */
+  addEventListener('pageshow', function (ev) {
+    if (!ev.persisted) return;
+    var w2; try { w2 = JSON.parse(sessionStorage.getItem(K)); } catch (e) {}
+    if (!w2 || typeof w2.y !== 'number' || w2.y < 2) return;
+    setTimeout(function () { if (Math.abs(window.scrollY - w2.y) > 40) start(w2); }, 0);
+  });
+  var nav; try { nav = performance.getEntriesByType('navigation')[0]; } catch (e) {}
+  if (!nav || (nav.type !== 'back_forward' && nav.type !== 'reload')) return;   /* Zurück/Vor und Neuladen landen an der alten Stelle */
+  var w0; try { w0 = JSON.parse(sessionStorage.getItem(K)); } catch (e) {}
+  if (!w0 || typeof w0.y !== 'number' || w0.y < 2) return;
+  start(w0);
+  addEventListener('load', function () { if (sperre) geh(); });
+  return;
+
+  var w, weg = false, st;
+  function start(wx) {
+    w = wx; weg = false; stueck.e = null; sperre = true;
+    try { history.scrollRestoration = 'manual'; } catch (e) {}
+    if (!st) {
+      st = document.createElement('style');
+      st.textContent = 'html.rs-sofort,html.rs-sofort *{transition:none!important;animation-duration:0s!important;animation-delay:0s!important;scroll-behavior:auto!important}'
+        + 'html.rs-ganz *{content-visibility:visible!important}';
+      (document.head || H).appendChild(st);
+    }
+    H.classList.add('rs-sofort', 'rs-ganz');
+    ['wheel', 'touchstart', 'keydown', 'mousedown'].forEach(function (k) { addEventListener(k, function () { weg = true; fertig(); }, { once: true, passive: true }); });
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', los); else los();
+  }
+  function fertig() { sperre = false; H.classList.remove('rs-ganz'); }
+  function stueck() {   /* das gemerkte Stück wiederfinden: über seine id, sonst gleiche Stelle, sonst gleiche Art mit gleichem Anfang, die nächste zur alten Stelle
+                           (Seiten bauen nach dem Laden noch Teile dazu, z. B. Chat-Vorführungen: die Stelle im Aufbau verschiebt sich) */
+    var a = w.a; if (!a) return null;
+    if (stueck.e && stueck.e.isConnected) return stueck.e;
+    var e = a.d && document.getElementById(a.d);
+    if (e && e.tagName === a.n) return e;
+    var alle = document.querySelectorAll(SEL); e = alle[a.i];
+    if (e && e.tagName === a.n && text(e) === a.t) return e;
+    var best = null, bd = 1e9;
+    for (var k = 0; k < alle.length; k++) { var x = alle[k]; if (x.tagName === a.n && Math.abs(k - a.i) < bd && text(x) === a.t) { best = x; bd = Math.abs(k - a.i); } }
+    return (stueck.e = best);
+  }
+  function ziel() { var e = stueck(); return e ? Math.max(0, Math.round(window.scrollY + e.getBoundingClientRect().top - w.a.o)) : w.y; }
+  function zeig() {
+    var g = window.scrollY + innerHeight;
+    [].forEach.call(document.querySelectorAll('[data-a],.odo,.zt,.roll,img.ld'), function (e) {
+      if (!e.classList.contains('da') && e.getBoundingClientRect().top + window.scrollY < g) e.classList.add('da');
+    });
+  }
+  function geh() { if (weg) return; var y = ziel(); if (Math.abs(window.scrollY - y) > 2) window.scrollTo(0, y); zeig(); }
+  function los() {
+    geh();
+    requestAnimationFrame(function () { geh(); requestAnimationFrame(function () { geh(); H.classList.remove('rs-sofort'); }); });
+    var n = 0, iv = setInterval(function () {
+      n++; geh();
+      if (n >= 16 || weg) { clearInterval(iv); geh(); fertig(); requestAnimationFrame(function () { geh(); merk(true); }); }
+    }, 150);
+  }
+})();</script>
+<style id="schrift-13">/* Schrift mindestens 13 px (Prüfpunkt 17, schrift_13.py) */.insel__m span,.glanz,.kap--z>span:not(.kap__geist),.kap__nr,.kn--klein .tm,.kn--klein .tm-l,.gpf .kn .tm,.gpf .kn .tm-l,.bf-name span,.vt-r__k,.vt-feld__l small,.sbf-wo b,.sbf-sinn dt,.bfs-wo b,.bfs dl dt,.hs2-tafel small,.hs2-z dl dt,.hs2-z>.hs2-etik span,.hs2-schrift small,.hs2-chip small,.hs2-gr p,.hs2-z figcaption small,.vh-wahl button .tm,.vh-wahl button .tm-l,.wahl button .tm,.wahl button .tm-l,.vgl__e,.vh-was__k,button .hd small,.brett-f,.wechsel .k,.faecher--5 .blattk span,.faecher--5 .blattk span b,.ins-r small,.ins-t__r,.fb__w small,.fbs__k small,.fb-hin,.gb-blatt header p,.gb-blatt footer span,.gb-f figcaption,.sag-reg a span,.mn-gang span,.mn-ende span,.mn-haus,.rh-gruss__n span,.ki-k__r dt,.ki-k__ohne-t,.ip-k,.ublatt figcaption,.uwahl button .tm,.uwahl button .tm-l,.sch figcaption,.stueck__f,.etk small,.fw .seg button,.fw .nrk,.grid .band,.grid .band b,.grid .t .nr,.aside dl dt,.hl .h{font-size:13px!important}.insel__m span,.kap__nr,.vt-feld__l small,.hs2-chip small,.hs2-z>.hs2-etik span,button .hd small,.ins-r small,.fb__w small,.sch figcaption,.etk small,.stueck__f,.ki-k__r dt,.bfs dl dt,.sbf-sinn dt{letter-spacing:.1em!important}.faecher--5 .blattk span{letter-spacing:.04em!important;white-space:normal!important;line-height:1.2!important}@media(max-width:760px){.uschalter button .tm,.uschalter button .tm-l{font-size:13px!important}}@media(max-width:620px){.faecher--5 .blattk span{padding:7px 8px!important;letter-spacing:0!important}}#seiten .wahl>button:nth-child(6){padding-right:21px}</style><style id="text-mitte">.tm{position:relative}
+@supports not (font:-apple-system-body){
+  .kn>.tm{top:.7px}.kn.kn--klein>.tm{top:0}
+  .wahl button>.tm,.vh-wahl button>.tm,.uwahl button>.tm,.uschalter button>.tm{top:1px;left:.065em}
+  .mb-kn>span{position:relative;top:.9px}
+  .sbf-z>.tm{top:.6px}
+}
+.rund[aria-label^="Zur"] svg,.rund[aria-label^="Vorig"] svg,.pf[aria-label^="Vorig"] svg{position:relative;left:.5px}
+.rund[aria-label^="Weiter"] svg,.rund[aria-label^="Nächst"] svg,.pf[aria-label^="Nächst"] svg{position:relative;left:-.5px}
+@supports (font:-apple-system-body){.pf[aria-label^="Vorig"] svg{left:.6px;top:.5px}.pf[aria-label^="Nächst"] svg{left:-.6px;top:.5px}}
+@supports not (font:-apple-system-body){.pf[aria-label^="Vorig"] svg{left:.6px}.pf[aria-label^="Nächst"] svg{left:-.6px}}
+.rund[disabled],.pf[disabled]{transition:none}</style><script id="text-mitte-js">(function(){function t(){document.querySelectorAll('.kn,.sbf-z,.wahl button,.vh-wahl button,.uwahl button,.uschalter button').forEach(function(k){var n=k.firstChild;if(n&&n.nodeType===3&&n.textContent.trim()){var s=document.createElement('span');s.className='tm';s.textContent=n.textContent;k.replaceChild(s,n)}})}t();addEventListener('load',t)})();</script><script src="../besuch.js" defer></script>
+</body></html>

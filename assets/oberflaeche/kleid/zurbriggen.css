@@ -1,0 +1,212 @@
+/* kleid/zurbriggen.css · Wellness & Spa Pirmin Zurbriggen mit dem Loft-Suite Hotel, Saas-Almagell · Der Winterabend (Tresen, 08.11.2026).
+   Werte aus der gebauten Website (website/assets/css/haus.css, auftakt-20.css, rest-ideen.css › .rk) und CHARAKTER.md Abschnitt 4:
+   Nachtblau #0A1129 (Winterabend) als dunkle Fläche; Papier #F6F1EA, Leinen #EEE8DE, Schnee #EDF1F5 als Raum; Messing #D9B758 / hell #E9D49A als Akzent
+   (Haarlinie, Etikett, Knauf, Hauptknopf); Schokolade #22180F nur für Loft-Suite und Angebote (Klasse .wo-loft). Signal: keins. Kein Pink.
+   Schrift wie verbaut: Titel Montserrat Leicht (300) und Regular (400), Lauf Instrument Sans 400, kleine Zeilen DM Mono gesperrt. Nie fett, nie kursiv.
+   Form: ruhige Platten mit Messing-Haarlinie innen und weichem Schatten, Knöpfe mit rundem Pfeil-Knauf (wie die Knöpfe «rk» der Website). Rahmen: Die Bühne. */
+@font-face{font-family:'Montserrat';font-weight:300;font-display:swap;src:url('../../fonts/montserrat-300-latin.woff2') format('woff2')}
+@font-face{font-family:'Montserrat';font-weight:400;font-display:swap;src:url('../../fonts/montserrat-400-latin.woff2') format('woff2')}
+@font-face{font-family:'Montserrat';font-weight:500;font-display:swap;src:url('../../fonts/montserrat-500-latin.woff2') format('woff2')}
+@font-face{font-family:'Instrument Sans';font-weight:400 600;font-display:swap;src:url('../../fonts/InstrumentSans-normal-400_600.woff2') format('woff2')}
+@font-face{font-family:'DM Mono';font-weight:400;font-display:swap;src:url('../../fonts/DMMono-normal-400.woff2') format('woff2')}
+:root{
+  --wo-sans:'Instrument Sans','Helvetica Neue',Arial,system-ui,sans-serif; --wo-mono:'DM Mono',ui-monospace,Menlo,monospace;
+  --wo-etikett:'DM Mono',ui-monospace,Menlo,monospace;
+  --wo-e1:cubic-bezier(.16,1,.3,1); --wo-e2:cubic-bezier(.32,.72,0,1);
+  /* Winterabend */
+  --wo-nacht:#0A1129; --wo-nacht2:#16203F; --wo-tief:#060B1C;
+  /* Messing: g1 Glanz, g2 hell, g3 Messing (Verlauf des Hauptknopfs und der Knäufe) */
+  --wo-g1:#F1E2B4; --wo-g2:#E9D49A; --wo-g3:#D9B758; --wo-g4:#C9A54E;
+  /* Akzent: auf Dunkel Messing, auf Hell Messing tief (lesbar auf Papier, 4,9:1); Signal gibt es keins.
+     Die Namen --wo-kerze/--wo-rot/--wo-dc/--wo-dj bleiben für die Werkzeuge des Stamms, tragen hier aber nur Messing bzw. Schokolade. */
+  --wo-gold:#D9B758; --wo-akzent:#7A5F1E; --wo-kerze:#D9B758; --wo-rot:#D9B758; --wo-loft:#22180F; --wo-dc:#22180F; --wo-dj:#22180F;
+  /* Raum */
+  --wo-papier:#F6F1EA; --wo-papier2:#EEE8DE; --wo-schnee:#EDF1F5; --wo-blatt:#FBF8F3; --wo-weiss:#FFFDF9;
+  --wo-tinte:#0A1129; --wo-leise:#4E5568; --wo-linie:rgba(10,17,41,.14); --wo-linie-d:rgba(217,183,88,.32);
+  --wo-punkt:#D9B758; --wo-gut:#4F7A5C;
+  --wo-titel:'Montserrat','Instrument Sans',system-ui,sans-serif; --wo-titel-g:300; --wo-titel-ls:0;
+  --wo-r1:18px; --wo-r2:14px; --wo-r3:14px; --wo-rk:999px;
+  --wo-tapete:#060B1C;
+  --wo-tapete-fein:var(--wo-tapete);
+}
+
+
+/* ================= Titel und Etiketten ================= */
+/* Titel in Montserrat wie die Website: Leicht für grosse Titel, Regular für Zwischentitel; Betonung über die Farbe (auf Hell Messing tief), nie fett, nie kursiv */
+.wo-sb__h{font-family:var(--wo-titel);font-weight:300;letter-spacing:-.005em}
+.wo-zw{font-family:var(--wo-titel);font-weight:400;letter-spacing:0}
+.wo-zw em{font-style:normal;color:var(--wo-akzent)}
+/* Fehlerbuch 10a: auf dunkler Fläche ist jede Titelzeile hell, die Betonung Messing */
+.wo-sb .wo-sb__h em,[data-wo-rahmen] .wo-sb .wo-sb__h em,#ansicht .wo-sb .wo-sb__h em,body .wo-sb .wo-sb__h em{font-style:normal;color:var(--wo-gold);font-weight:inherit}
+/* Frühere Klasse des Stamms für Menüzeilen: hier als Etikett (DM Mono, gesperrt, Versalien) */
+.wo-rudi{font-family:var(--wo-etikett);font-weight:400;text-transform:uppercase;letter-spacing:.12em}
+/* Etiketten in DM Mono gesperrt wie die Website, Zahlen mit gleich breiten Ziffern */
+.wo-bk__t small,.wo-mk,.wo-sb__zier span{font-family:var(--wo-etikett);font-weight:400;letter-spacing:.18em}
+.wo-zahl{font-family:var(--wo-mono);font-variant-numeric:tabular-nums lining-nums}
+/* Loft-Suite und Angebote: Schokolade als Fläche, Messing als Akzent (CHARAKTER.md 4) */
+.wo-loft,.wo-dj,.wo-dc{--wo-nacht:#22180F;--wo-nacht2:#3A2B1E;--wo-tief:#150E08}
+
+/* ================= Platten ================= */
+/* Ruhige Platten: Messing-Haarlinie innen, weicher Schatten (18 px, Kacheln 14 px) */
+.wo-lage,.wo-ag,.wo-det__kopf{box-shadow:inset 0 0 0 1px rgba(217,183,88,.42),0 18px 40px -26px rgba(6,11,28,.45)}
+[data-wo-rahmen="buehne"] .wo-kopf{border-bottom:1px solid rgba(217,183,88,.30)}
+/* Die Bühne: eine Messing-Haarlinie innen, wie der Rahmen um die Bilder der Website */
+[data-wo-rahmen="buehne"] .wo-sb{border-bottom:0;box-shadow:inset 0 0 0 1px rgba(217,183,88,.55),inset 0 0 0 6px #060B1C,0 40px 60px -40px rgba(6,11,28,.8)}
+/* Über den Abschnittstiteln: eine kurze Messing-Haarlinie, sonst kein Schmuck */
+.wo-zw::before{content:'';display:block;width:56px;height:1px;margin-bottom:14px;background:var(--wo-gold)}
+.cu-x{font-family:var(--wo-titel);font-style:normal;font-weight:400;letter-spacing:0;text-transform:none;color:var(--wo-gold)}
+/* Foto des Startbilds: unten leicht in den Winterabend */
+.wo-sb__foto::after{background:linear-gradient(0deg,rgba(6,11,28,.55),transparent 55%)}
+.wo-lg__z,.wo-ag__z{border-radius:50%}
+.wo-bk__t small,.wo-mk{color:var(--wo-akzent)}
+.wo-re.wo-an,.wo-re[aria-current="true"],.wo-re[aria-current="page"]{background:linear-gradient(180deg,#16203F,#060B1C);box-shadow:inset 0 0 0 1px rgba(217,183,88,.55)}
+.wo-re.wo-an,.wo-re[aria-current="true"],.wo-re[aria-current="page"],.wo-re.wo-an *,.wo-re[aria-current] *{color:#F6F1EA}
+.wo-re.wo-an .wo-zahl,.wo-re[aria-current="true"] .wo-zahl,.wo-re[aria-current="page"] .wo-zahl{color:var(--wo-tief)}
+
+/* ================= Knöpfe wie «rk» der Website ================= */
+/* Hauptweg: Messing mit Nachtblau-Schrift (9,3:1), Knauf Nachtblau mit Messing-Pfeil. Nebenweg dunkel: Nachtblau mit Messing-Haarlinie und Messing-Knauf.
+   Nebenweg hell: Papier mit Messing-Haarlinie und Messing-Knauf. Alle rund wie auf der Website (999 px). */
+.wo-kn--gold{color:#0A1129;text-shadow:none;background:linear-gradient(180deg,#F1E2B4 0%,#E2C673 48%,#C9A54E 100%);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.55),inset 0 -1px 0 rgba(90,66,16,.35),0 14px 26px -14px rgba(6,11,28,.7),0 3px 8px -3px rgba(6,11,28,.3)}
+.wo-kn--gold i{background:linear-gradient(180deg,#1E2A55,#0A1129);color:#E9D49A;box-shadow:inset 0 1px 0 rgba(255,255,255,.16),0 3px 8px -2px rgba(6,11,28,.5)}
+.wo-kn--dunkel{color:#F6F1EA;background:linear-gradient(180deg,#1E2A55 0%,#0E1638 100%);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.14),inset 0 0 0 1px rgba(217,183,88,.42),0 14px 30px -14px rgba(10,17,41,.7)}
+.wo-kn--dunkel i,.wo-kn--hell i{background:linear-gradient(180deg,#F1E2B4,#C9A54E);color:#0A1129;box-shadow:inset 0 1px 0 rgba(255,255,255,.6),0 3px 8px rgba(6,11,28,.3)}
+.wo-kn--hell{color:#0A1129;background:linear-gradient(180deg,#FFFDF8,#EDE6D9);box-shadow:inset 0 1px 0 #fff,inset 0 0 0 1px rgba(168,138,58,.38),0 12px 24px -14px rgba(6,11,28,.45)}
+.wo-kn--glas i{background:rgba(255,255,255,.08);color:#E9D49A}
+[data-wo-rahmen="buehne"] .wo-leiste{border-radius:18px}
+
+/* Ecke oben links in allen Werkzeugen gleich (M24): das Z mit vier Sternen und Krone frei in Messing, ohne Ring und ohne runde Fläche
+   (CHARAKTER.md 3 «Nicht verwenden: Kreise, Siegel»; Oberchef 08.11.2026), daneben Bereich · Haus. Platz wie vorher (46 px), der Kopf bleibt gleich hoch. */
+.wo-marke-w{position:relative;padding-left:52px!important;min-height:46px}
+.wo-marke-w::before{content:none}
+.wo-marke-w .wo-zeichen{position:absolute;left:2px;top:50%;width:36px;height:40.5px;max-width:none;margin-top:-20.5px;color:#D9B758}
+.wo-marke-w b{font-family:var(--wo-titel);font-weight:400}
+.wo-marke-w small{color:rgba(217,183,88,.95)!important}
+
+/* Auftritt der Bühne (Fehlerbuch 10a): Foto schwebt 40 px von unten und zoomt ein, Zier, Titel, Satz und Knöpfe folgen gestaffelt. Nur transform, deckend. */
+@keyframes woAufFoto{from{translate:0 40px;scale:1.06}}
+@keyframes woAuf{from{translate:0 40px}}
+/* Im Ton des Winterabends ruhig und lang: das Foto zoomt 2,6 s langsam ein (von 1,12), der Titel kommt 1,15 s aus der Tiefe, die Kurve läuft weich aus.
+   Läuft ab dem ersten Bild, wartet auf kein Skript. Das Foto zieht beim Scrollen etwas langsamer mit (Scroll-Zeitachse, nur wo der Browser sie kann). */
+@keyframes woZoom{from{scale:1.12}}
+@keyframes woHoch{from{translate:0 34px}}
+@media screen and (prefers-reduced-motion:no-preference){
+  html:not(.still) .wo-sb__foto{animation:woAufFoto 1.1s cubic-bezier(.19,1,.22,1) both}
+  html:not(.still) .wo-sb__foto{overflow:hidden}
+  html:not(.still) .wo-sb__foto img{animation:woZoom 2.6s cubic-bezier(.19,1,.22,1) both}
+  html:not(.still) :is(.wo-sb__zier,.wo-sb__h,.wo-sb__satz,.wo-sb__kn){animation:woHoch 1.15s cubic-bezier(.19,1,.22,1) both}
+  html:not(.still) .wo-sb__zier{animation-delay:.1s}
+  html:not(.still) .wo-sb__h{animation-delay:.18s}
+  html:not(.still) .wo-sb__satz{animation-delay:.3s}
+  html:not(.still) .wo-sb__kn{animation-delay:.42s}
+  /* Titel zeilenweise (Kriterium 37): kleid/zurbriggen.js teilt ihn in Wörter mit Zeilennummer --z; jede Zeile steigt 0,11 s nach der vorigen */
+  html:not(.still) .wo-sb__h.wo-zl{animation:none}
+  html:not(.still) .wo-sb__h.wo-zl .wo-w{display:inline-block;animation:woHoch 1.15s cubic-bezier(.19,1,.22,1) both;animation-delay:calc(.18s + var(--z,0) * .11s)}
+  @supports (animation-timeline:view()){
+    @keyframes woZug{from{translate:0 -6%}to{translate:0 0}}   /* das Foto ist 12 % höher als sein Rahmen: beim Ziehen entsteht nie ein Spalt */
+    html:not(.still) .wo-sb__foto img{height:112%;animation:woZoom 2.6s cubic-bezier(.19,1,.22,1) both,woZug linear both;animation-timeline:auto,view();animation-range:normal,exit 0% exit 100%}
+  }
+  /* Knöpfe geben beim Drücken nach (nur beim Drücken, die Übergänge der Werkzeuge bleiben) */
+  :is(.wo-kn,.wo-rund,.wo-ag,.wo-bk,.kn,button):active{scale:.975;transition:scale .12s ease-out}
+}
+
+/* Untere Leiste (Fehlerbuch 10a): der Titel bricht nie um; wird es eng, verschwindet erst der Satz, dann die Beschriftung der Knöpfe */
+.wo-leiste__t b{white-space:nowrap}
+
+/* Kopf bei wenig Breite (Fehlerbuch 10a): der Titel in der Mitte nimmt nur den freien Platz, wird kleiner und kürzt notfalls mit «…»; er überdeckt nie einen Knopf */
+@media (min-width:901px){
+  .wo-kopf{grid-template-columns:auto minmax(0,1fr) auto}
+  .wo-kopf__mitte{min-width:0;max-width:100%}
+  .wo-kopf__mitte b,.wo-kopf__mitte small{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}
+}
+@media (min-width:901px) and (max-width:1240px){
+  .wo-kopf__mitte b{font-size:18px}
+  .wo-kopf .wo-kn--gold.wo-kn--klein>span{position:absolute;left:50%;top:50%;width:1px;height:1px;margin:0;padding:0;overflow:hidden;clip-path:inset(50%);white-space:nowrap;font-size:13px;line-height:1px;letter-spacing:0;color:transparent;text-box:none}   /* Beschriftung bleibt für Vorleser, sichtbar nur der Knauf; sie liegt in der Mitte des Knaufs (Tor-Regel «randlos») */
+  .wo-kopf .wo-kn--gold.wo-kn--klein{padding:0;gap:0;width:42px;height:42px;min-height:0;min-width:0;border-radius:50%;justify-content:center;align-items:center}   /* nur noch der runde Knauf, nie eine Kachel */
+}
+
+/* Zierzeile im Startbild: bricht um, wenn der Platz nicht reicht; die Linie daneben gibt unter 1240 px ihren Platz dem Text */
+.wo-sb__zier{min-width:0;max-width:100%}
+.wo-sb__zier span{min-width:0;white-space:normal;overflow:visible;line-height:1.6}
+@media (max-width:1240px){.wo-sb__zier i{display:none}}
+
+/* Luft unter der Bühne (Fehlerbuch 10a): mindestens 30 px bis zu den ersten Kacheln, am Handy 24 px */
+.wo-sb{margin-bottom:34px}
+@media (max-width:760px){.wo-sb{margin-bottom:24px}}
+
+/* Fehlerbuch 10a: auf jeder dunklen Fläche ist die Schrift hell, auch auf Knöpfen und Einträgen, die immer dunkel sind */
+.wo-kopf,.wo-kopf a:not(.wo-kn--gold):not(.wo-kn--hell),.wo-sb,.wo-sb a:not(.wo-kn){color:#F6F1EA}
+
+/* Nie kursiv (CHARAKTER.md 4): die Stamm-Bausteine Brief und Blatt setzen Georgia kursiv; hier aufrecht in Montserrat, Hervorhebung über die Farbe */
+.wo-brief em,.wo-brief i,.wo-bl em,.wo-bl i{font-style:normal}
+.wo-bl__rub span,.wo-bl__g span,.wo-bl__h{font-family:var(--wo-titel);font-style:normal;font-weight:400}
+.wo-brief mark,.wo-brief em{background:none;color:var(--wo-akzent)}
+.wo-lu{font-style:normal;background:linear-gradient(180deg,transparent 55%,rgba(217,183,88,.38) 55%)}
+
+/* Nie fett (CHARAKTER.md 4): der Stamm setzt im Blatt Namen fett (.wo-bl__g b 700); hier Montserrat Regular */
+.wo-bl__g b{font-family:var(--wo-titel);font-weight:400;letter-spacing:.01em}
+b,strong{font-weight:500}
+
+/* Schrift optisch mittig in Knöpfen und Pillen (Kriterium 35; Messlauf-Regel text-mitte).
+   text-box schneidet die Zeile auf Versalhöhe und Grundlinie zu, dann zentriert der Knopf genau die Buchstaben. Ohne text-box ein kleiner gemessener Ausgleich. */
+.wo-kn>span,.wo-re>span,.wo-kopf__ber>span{text-box:trim-both cap alphabetic}
+.wo-re .wo-zahl{display:block;height:auto;padding:7px;line-height:1;text-align:center;text-box:trim-both cap alphabetic}
+@supports not (text-box:trim-both cap alphabetic){.wo-kn>span,.wo-re>span,.wo-kopf__ber>span{position:relative;top:.05em}}
+
+/* Kriterium 7 (Regel einzelwort): kein einzelnes Wort allein in der letzten Titelzeile */
+h1,h2,h3,h4,figcaption{text-wrap:balance}
+.rdg-karte h3,.wo-zw,.wo-sb__h{text-wrap:balance}
+/* Kriterium 3 (Regel reihe): wo die Kacheltitel neben dem Pfeil umbrechen (schmale Spalten), reserviert jeder Titel zwei Zeilen, damit die Reihe auf einer Linie steht */
+@media (min-width:901px) and (max-width:1365px){.wo-ber .wo-bk__t b{min-height:2.4em}}
+
+/* Handy: der Knopf «Bereiche» im dunklen Kopf ist ein Nebenweg (Nachtblau mit Messing-Haarlinie, rund wie die Knöpfe der Website), keine Messing-Pille */
+@media (max-width:900px){
+  [data-wo-rahmen] .wo-kopf__ber{border-radius:999px;font-family:var(--wo-etikett);font-weight:400;color:#F6F1EA;
+    background:linear-gradient(180deg,#1E2A55 0%,#0E1638 100%);box-shadow:inset 0 0 0 1px rgba(217,183,88,.55),inset 0 1px 0 rgba(255,255,255,.12),0 8px 18px -10px rgba(0,0,0,.8)}
+  [data-wo-rahmen] .wo-kopf__ber .wo-ic{color:#D9B758}
+}
+
+/* Kopfmitte: Montserrat braucht mehr Zeilenhöhe (Schriftkasten 1,22 em); bei 1,1 schnitt «overflow:hidden» die Unterlängen ab. Zeile 1,42, Unterzeile näher heran. */
+.wo-kopf__mitte b{font-family:var(--wo-titel);font-weight:400;line-height:1.42}
+.wo-kopf__mitte small{margin-top:0}
+/* Leiste unten am Handy: grund.css färbt den Hauptknopf dort Messing; das Zeichen darin Nachtblau */
+@media (max-width:900px){
+  .wo-leiste .wo-kn--gold{background:linear-gradient(180deg,#F1E2B4,#E2C673 48%,#C9A54E);box-shadow:inset 0 1px 0 rgba(255,255,255,.5),0 8px 18px -10px rgba(6,11,28,.6)}
+  .wo-leiste .wo-kn--gold i{color:#0A1129}
+}
+
+/* Sperrabstand optisch mittig (Messlauf «text-mitte» in WebKit). Gesperrte Versalien: Chromium hängt den Sperrabstand auch nach dem letzten Buchstaben an
+   (die Schrift sitzt dann um den halben Abstand links), WebKit nicht. Grundfall ist darum symmetrisch (richtig in WebKit, ohne Ausgleich);
+   nur Chromium bekommt den Ausgleich, erkannt an interpolate-size (gibt es nur dort).
+   Für eigene Knöpfe der Werkzeuge: --wo-sperr = der Sperrabstand des Knopfs (in em, wie letter-spacing), Klasse .wo-sperr-mitte an den Knopf
+   (Text direkt im Knopf oder in einem Kind ohne eigene Breite; Zeichen in <i>, <svg>, <img> rücken nicht mit). Bei span-Beschriftungen geht auch
+   margin-right:calc(-1 * var(--wo-sperr)) am span (so die Bausteine unten). */
+:root{--wo-sperr:.16em}
+.wo-kn,.wo-kopf__ber,.wo-marke{--wo-sperr:.16em}
+.wo-sp{--wo-sperr:.08em}
+.wo-an__st em{--wo-sperr:.12em}
+.rdg-karte .rdg-zu{--wo-sperr:.14em}
+@supports (interpolate-size:allow-keywords){
+  .wo-kn>span,.wo-kopf__ber>span{margin-right:calc(-1 * var(--wo-sperr))}
+  .wo-marke,.wo-sp,.wo-an__st em,.rdg-karte .rdg-zu,.wo-sperr-mitte{text-indent:var(--wo-sperr)}
+  :is(.wo-marke,.wo-sp,.wo-an__st em,.wo-sperr-mitte) :is(i,svg,img){text-indent:0}
+}
+
+/* Marke «Entwurf» (em.wo-marke) und Wahlknöpfe (.wo-wahl button) optisch mittig (Kriterium 35, Oberchef 08.11.2026, gemessen mit Messlauf text-mitte an der Musterseite):
+   WebKit sitzt mit dem Grundpolster genau (0 Funde); Chromium setzt DM Mono 9,5 px um 1,3 px und Instrument Sans 13,5 px um 0,8 px zu hoch. Nur Chromium
+   (erkannt an interpolate-size, wie --wo-sperr) bekommt den Ausgleich, gleiche Gesamthöhe. Werkzeuge brauchen dafür keinen eigenen Ausgleich mehr. */
+@supports (interpolate-size:allow-keywords){
+  .wo-marke{padding-top:7.3px;padding-bottom:4.7px}
+  .wo-wahl button{padding-top:11.8px;padding-bottom:10.2px}
+}
+
+/* Schrift mindestens 13 px (Roberts Prüfpunkt 17, 09.11.2026: «solchen kleinen Schriften … mit denen keiner was anfangen kann»).
+   Gemeinsame Teile aller sieben Werkzeuge: Etiketten, Kopfzeile, Knöpfe, Zähler. Sperrung etwas enger, damit die Zeilen gleich lang bleiben. */
+.wo-mk,.wo-sb__zier,.wo-sb__zier span,.wo-bk__t small{font-size:13px;letter-spacing:.14em}
+.wo-kn,.wo-kn>span,.wo-kn--klein,.wo-kopf__ber,.wo-kopf__ber>span{font-size:13px}
+.wo-kn,.wo-kopf__ber{--wo-sperr:.12em}
+.wo-kopf__mitte small,.wo-marke-w span small{font-size:13px}
+.wo-re .wo-zahl{font-size:13px;letter-spacing:0}   /* Tor 09.11.2026: ohne Sperrung steht jede Ziffer mittig (0,1–0,4 px) */
+.wo-an__st small,.wo-rk__t small,.wo-ke__m{font-size:13px}
+.wo-ag__t>span{font-size:13px}   /* Kurzsatz der Karten auch am Handy 13 px (grund.css setzt dort 12 px) */

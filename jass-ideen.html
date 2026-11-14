@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="de">
+<head><script data-wurzel>/* Wurzel-Weiche: Seite laeuft an der Wurzel einer Adresse oder in einem Unterordner (github.io/<repo>/) */(function(){var D=0,p=location.pathname.split('/');p.splice(p.length-1-D,D+1);var W=p.join('/')+'/';window.__W=W;if(W==='/')return;var O=location.origin;
+function f(u){if(typeof u!=='string')return u;if(u.indexOf(O+'/')===0)return O+f(u.slice(O.length));if(u.charAt(0)!=='/'||u.charAt(1)==='/'||u.indexOf(W)===0||u+'/'===W)return u;return W+u.slice(1)}
+function s(v){return typeof v!=='string'?v:v.replace(/(^|,)(\s*)(\S+)/g,function(m,a,b,u){return a+b+f(u)})}
+function c(v){return typeof v!=='string'?v:v.replace(/url\(\s*(['"]?)([^'")]+)/g,function(m,q,u){return 'url('+q+f(u)})}
+function h(v){return typeof v!=='string'?v:c(v.replace(/(\s(?:src|href|poster|action|data-src|data-href)\s*=\s*)(["'])([^"']*)\2/gi,function(m,a,q,u){return a+q+f(u)+q}).replace(/(\s(?:srcset|imagesrcset|data-srcset)\s*=\s*)(["'])([^"']*)\2/gi,function(m,a,q,u){return a+q+s(u)+q}))}
+function d(K,k,g){K=window[K];if(!K)return;var x=Object.getOwnPropertyDescriptor(K.prototype,k);if(!x||!x.set)return;Object.defineProperty(K.prototype,k,{configurable:true,enumerable:x.enumerable,get:x.get,set:function(v){x.set.call(this,g(v))}})}
+[['HTMLImageElement','src'],['HTMLScriptElement','src'],['HTMLLinkElement','href'],['HTMLIFrameElement','src'],['HTMLSourceElement','src'],['HTMLMediaElement','src'],['HTMLVideoElement','poster'],['HTMLAnchorElement','href'],['HTMLAreaElement','href'],['HTMLFormElement','action'],['HTMLEmbedElement','src'],['HTMLObjectElement','data']].forEach(function(z){d(z[0],z[1],f)});
+[['HTMLImageElement','srcset'],['HTMLSourceElement','srcset'],['HTMLLinkElement','imageSrcset']].forEach(function(z){d(z[0],z[1],s)});
+d('Element','innerHTML',h);d('Element','outerHTML',h);var iah=Element.prototype.insertAdjacentHTML;Element.prototype.insertAdjacentHTML=function(w,v){return iah.call(this,w,h(v))};
+var sa=Element.prototype.setAttribute;Element.prototype.setAttribute=function(n,v){var l=String(n).toLowerCase();if(/^(src|href|poster|action|data|data-src|data-href)$/.test(l))v=f(v);else if(/srcset$/.test(l))v=s(v);else if(l==='style')v=c(v);return sa.call(this,n,v)};
+var st=CSSStyleDeclaration.prototype,sp=st.setProperty;st.setProperty=function(n,v,q){return sp.call(this,n,c(v),q)};['background','backgroundImage','cssText','maskImage','webkitMaskImage','listStyleImage','borderImageSource','content'].forEach(function(k){var x=Object.getOwnPropertyDescriptor(st,k);if(x&&x.set)Object.defineProperty(st,k,{configurable:true,enumerable:x.enumerable,get:x.get,set:function(v){x.set.call(this,c(v))}})});
+var F=window.fetch;if(F)window.fetch=function(i,o){if(typeof i==='string')i=f(i);else if(i instanceof URL)i=f(i.href);return F.call(this,i,o)};
+var XO=XMLHttpRequest.prototype.open;XMLHttpRequest.prototype.open=function(){var a=[].slice.call(arguments);a[1]=f(a[1] instanceof URL?a[1].href:a[1]);return XO.apply(this,a)};
+if(navigator.sendBeacon){var B=navigator.sendBeacon;navigator.sendBeacon=function(u,x){return B.call(navigator,f(u),x)}}
+var wo=window.open;window.open=function(u){var a=[].slice.call(arguments);a[0]=f(u);return wo.apply(window,a)};
+var dw=document.write,dl=document.writeln;document.write=function(){return dw.apply(document,[].map.call(arguments,h))};document.writeln=function(){return dl.apply(document,[].map.call(arguments,h))};
+['pushState','replaceState'].forEach(function(k){var o=history[k];history[k]=function(a,b,u){return o.call(history,a,b,u==null?u:f(String(u)))}});
+function e(el){if(!el||el.nodeType!==1)return;['src','href','poster','action'].forEach(function(a){var v=el.getAttribute(a);if(v&&v.charAt(0)==='/'){var z=f(v);if(z!==v)sa.call(el,a,z)}});var t=el.getAttribute('srcset');if(t&&/(^|,)\s*\/[^\/]/.test(t)){var z=s(t);if(z!==t)sa.call(el,'srcset',z)}t=el.getAttribute('style');if(t&&/url\(\s*['"]?\/[^\/]/.test(t)){z=c(t);if(z!==t)sa.call(el,'style',z)}}
+new MutationObserver(function(ms){ms.forEach(function(m){if(m.type==='attributes')e(m.target);else m.addedNodes.forEach(function(n){if(n.nodeType!==1)return;e(n);var l=n.querySelectorAll('[src],[href],[srcset],[poster],[action],[style]');for(var i=0;i<l.length;i++)e(l[i])})})}).observe(document.documentElement,{childList:true,subtree:true,attributes:true,attributeFilter:['src','href','srcset','poster','action','style']})})();</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Jasswochen · 15 Bildideen</title>
+<link rel="stylesheet" href="assets/css/haus.css?v=13">
+<link rel="stylesheet" href="assets/css/rest-ideen.css?v=6">
+<link rel="stylesheet" href="assets/css/feinschliff.css?v=4">
+<link rel="stylesheet" href="assets/css/startseite2.css?v=7">
+<style>
+/* Jasswochen · 15 Bildideen (25.10.2026). Bausteine der Startseite, je Fassung eine eigene Bildidee, wenig Text. */
+.jv-nr{position:sticky;top:0;z-index:50;margin:0;padding:12px var(--rand);background:#0A0805;font-family:var(--mono);font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--ms-h);border-top:1px solid rgba(217,183,88,.25)}
+.jv-nr b{color:#F4EDE3;font-weight:400;margin-right:14px}
+.ri.da .rt .sl>span{transform:none}
+.jv .rt{font-size:clamp(40px,4vw,68px)}
+.jv .rl{max-width:46ch}
+.mitte{text-align:center}.mitte .rl{margin-left:auto;margin-right:auto}
+.ri-hell .ro{color:#8A6A2A}
+.pz{margin:20px 0 0;font-family:var(--mono);font-size:11.5px;letter-spacing:.17em;line-height:1.9;text-transform:uppercase;color:var(--ms-h)}
+.ri-hell .pz{color:#8A6A2A}
+.pz b{font-family:var(--licht);font-weight:300;font-size:30px;letter-spacing:-.02em;text-transform:none;margin-right:10px;vertical-align:-3px}
+.jv .r-knoepfe{margin-top:clamp(26px,2.8vw,38px)}
+.lin{stroke:#C9A54E;stroke-width:1;fill:none;vector-effect:non-scaling-stroke}
+.ic{width:22px;height:22px;stroke:#C9A54E;stroke-width:1.1;fill:none}
+svg text.m{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;fill:#E9D49A}
+svg text.l{font-family:var(--licht);font-size:16px;fill:#F4EDE3}
+
+/* 01 Ein Blatt aus Fotos */
+.v01-f{position:relative;height:clamp(400px,38vw,580px);margin:clamp(40px,4vw,60px) auto 70px;max-width:1100px}
+.v01-f figure{position:absolute;left:50%;bottom:0;width:clamp(170px,15vw,240px);aspect-ratio:3/4.3;margin-left:calc(clamp(170px,15vw,240px) / -2);transform-origin:50% 260%}
+.v01-f figcaption{position:absolute;left:0;right:0;bottom:0;padding:40px 16px 16px;background:linear-gradient(transparent,rgba(20,14,8,.85));font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:#F1E2B4}
+/* 02 Das Z */
+.v02{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(36px,5vw,90px);align-items:center}
+.v02-t{position:relative;aspect-ratio:7/5;border-radius:var(--rk);background:linear-gradient(160deg,#1B2549,#0E1638);box-shadow:var(--sch),inset 0 0 0 1px rgba(217,183,88,.3)}
+.v02-t svg{position:absolute;inset:0;width:100%;height:100%}
+.v02-t img{position:absolute;right:26px;top:22px;width:54px}
+/* 03 Winterlineal mit Bildern */
+.v03-k{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end}.v03-k .rl{justify-self:end;margin:0}
+.v03-l{position:relative;height:480px;margin-top:clamp(40px,4vw,60px)}
+.v03-l .ach{position:absolute;left:0;right:0;bottom:60px;height:1px;background:rgba(217,183,88,.5)}
+.v03-l .mo{position:absolute;bottom:30px;font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:rgba(244,237,227,.55)}
+.v03-l .p{position:absolute;bottom:60px;width:0}
+.v03-l .p i{position:absolute;left:-5px;bottom:-5px;width:10px;height:10px;border-radius:50%;background:#C9A54E;box-shadow:0 0 0 6px rgba(201,165,78,.18)}
+.v03-l .p s{position:absolute;left:0;bottom:6px;width:1px;background:rgba(217,183,88,.5)}
+.v03-l .p figure{position:absolute;left:-60px;width:120px;aspect-ratio:4/5}
+.v03-l .p b{position:absolute;left:-70px;width:140px;text-align:center;font-family:var(--licht);font-weight:400;font-size:15px;color:#F4EDE3}
+.v03-u{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-top:20px;flex-wrap:wrap}
+/* 04 Der Tisch von oben */
+.v04{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,5fr) minmax(0,3fr);gap:clamp(30px,4vw,70px);align-items:center}
+.v04 svg{width:100%;height:auto}
+.v04-w{margin:0;padding:0;list-style:none}
+.v04-w li{padding:13px 0;border-top:1px solid rgba(217,183,88,.3);font-family:var(--licht);font-size:clamp(18px,1.5vw,23px)}
+.v04-w li span{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.18em;color:var(--ms-h);margin-top:3px}
+/* 05 Sechs Karten */
+.v05-k{display:flex;justify-content:center;margin-top:clamp(44px,4.4vw,70px);padding:0 20px}
+.v05-c{position:relative;width:clamp(150px,13vw,210px);aspect-ratio:5/7.4;margin:0 -10px;border-radius:14px;background:#FBF7F0;color:#18213F;box-shadow:0 1px 0 #fff inset,0 40px 60px -34px rgba(0,0,0,.9);display:flex;flex-direction:column;justify-content:space-between;padding:20px 18px}
+.v05-c::before{content:'';position:absolute;inset:8px;border:1px solid rgba(168,138,58,.45);border-radius:9px}
+.v05-c .o{display:flex;justify-content:space-between;align-items:center;font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:#8A6A2A}
+.v05-c b{font-family:var(--licht);font-weight:300;font-size:clamp(30px,2.6vw,44px);white-space:nowrap;display:block;line-height:1;letter-spacing:-.04em;text-align:center}
+.v05-c p{margin:0;text-align:center;font-family:var(--licht);font-size:15px}
+.v05-c .u{text-align:center;font-family:var(--mono);font-size:10px;letter-spacing:.18em;color:#8A6A2A}
+.v05-c .ic{stroke:#A88A3A}
+/* 06 Jass im Bild */
+.v06-w{margin:0;font-family:var(--licht);font-weight:400;font-size:clamp(180px,27vw,440px);line-height:.82;letter-spacing:-.05em;background:url(assets/img/w-fondue-l.webp) 50% 45%/cover;-webkit-background-clip:text;background-clip:text;color:transparent}
+.v06-u{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:clamp(36px,5vw,90px);margin-top:clamp(20px,2vw,30px);align-items:end}
+.v06-u .rl{margin:0;font-size:22px;font-family:var(--licht);font-weight:300;line-height:1.4;max-width:30ch;opacity:1}
+/* 07 Tag und Abend */
+.v07{padding:0!important;display:grid;grid-template-columns:1fr 1fr}
+.v07>div{padding:clamp(80px,8vw,130px) var(--rand)}
+.v07-t{background:#F6F1EA;color:#18213F}.v07-a{background:#0E1638;color:#F4F2EC}
+.v07 figure{aspect-ratio:16/11;margin-top:30px}
+.v07 .ro{color:#8A6A2A}.v07-a .ro{color:var(--ms)}
+.v07 h3{margin:0;font-family:var(--licht);font-weight:400;font-size:clamp(40px,4vw,68px);letter-spacing:-.02em;line-height:1.04}
+.v07 .zeile{margin:22px 0 0;font-family:var(--licht);font-weight:300;font-size:clamp(18px,1.5vw,23px);line-height:1.45}
+.v07-f{grid-column:1/-1;display:flex;justify-content:space-between;align-items:center;gap:30px;flex-wrap:wrap;padding:30px var(--rand)!important;background:#22180F;color:#F4EDE3}
+.v07-f .pz,.v07-f .r-knoepfe{margin:0}
+/* 08 Fenster mit drei Tafeln */
+.v08{padding:0!important}
+.v08-b{position:relative;height:min(86vh,820px)}
+.v08-b figure{position:absolute;inset:0;border-radius:0!important;box-shadow:none!important}
+.v08-b figure::after{content:'';position:absolute;inset:0;background:linear-gradient(rgba(20,14,8,.55),rgba(20,14,8,.1) 40%,rgba(20,14,8,.7))}
+.v08-k{position:absolute;left:var(--rand);top:clamp(70px,7vw,110px);z-index:2;max-width:640px}
+.v08-tf{position:relative;z-index:3;display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(14px,1.6vw,24px);margin:-130px var(--rand) 0;padding-bottom:clamp(80px,8vw,120px)}
+.v08-tf div{background:#2C2016;border-radius:var(--rk);padding:clamp(24px,2.4vw,36px);box-shadow:var(--sch),inset 0 0 0 1px rgba(217,183,88,.25)}
+.v08-tf p:last-child{margin:0;font-family:var(--licht);font-weight:300;font-size:clamp(18px,1.5vw,22px);line-height:1.45}
+/* 09 Die Woche steigt */
+.v09 svg{display:block;width:100%;height:auto;margin-top:clamp(30px,3vw,50px);overflow:visible}
+.v09-b{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;margin-top:16px}
+.v09-b figure{aspect-ratio:4/3}
+.v09-b p{margin:10px 0 0;font-size:14px;opacity:.8}
+/* 10 Die Anzeigetafel */
+.v10-t{margin-top:clamp(36px,3.6vw,56px);background:#0B0806;border-radius:var(--rk);padding:clamp(20px,2.4vw,36px);box-shadow:var(--sch),inset 0 0 0 1px rgba(217,183,88,.22)}
+.v10-r{display:grid;grid-template-columns:2.2fr 1fr 1fr 1.3fr 40px;gap:14px;align-items:center;padding:14px 4px;border-top:1px solid rgba(217,183,88,.14)}
+.v10-r:first-child{border-top:0;font-family:var(--mono);font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:rgba(233,212,154,.65)}
+.v10-r span.f{display:inline-flex;gap:3px}
+.v10-r span.f i{font-style:normal;display:inline-grid;place-items:center;min-width:.78em;padding:.08em .06em;background:#1A130D;border-radius:3px;box-shadow:inset 0 -1px 0 rgba(0,0,0,.6),inset 0 1px 0 rgba(255,255,255,.04);font-family:var(--mono);font-size:clamp(20px,1.9vw,28px);color:#F1E2B4}
+.v10-r .t{font-family:var(--mono);font-size:clamp(14px,1.2vw,17px);letter-spacing:.08em;color:#F4EDE3}
+.v10-r .ic{justify-self:end}
+.v10-u{display:flex;justify-content:space-between;align-items:center;gap:30px;flex-wrap:wrap;margin-top:24px}
+.v10-u .r-knoepfe{margin:0}
+/* 11 Rund wie der Tisch */
+.v11{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,5fr) minmax(0,3fr);gap:clamp(60px,6vw,110px);align-items:center}
+.v11-r{position:relative;aspect-ratio:1}
+.v11-r svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.v11-r figure{position:absolute;inset:22%;border-radius:50%!important}
+/* 12 Die Rechnung */
+.v12-g{display:flex;justify-content:center;align-items:flex-start;gap:clamp(18px,2.4vw,44px);margin-top:clamp(40px,4vw,64px);flex-wrap:wrap}
+.v12-g div{text-align:center}
+.v12-g b{display:block;font-family:var(--licht);font-weight:200;font-size:clamp(90px,10vw,170px);line-height:.9;letter-spacing:-.05em;color:var(--ms-h)}
+.v12-g div.op b{color:rgba(233,212,154,.45);font-weight:200}
+.v12-g span{display:block;margin-top:14px;font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#E8DFD2}
+.v12-i{display:flex;justify-content:center;gap:clamp(18px,2.6vw,46px);flex-wrap:wrap;margin:clamp(40px,4vw,60px) auto 0;padding-top:26px;border-top:1px solid rgba(217,183,88,.3);max-width:1000px}
+.v12-i div{display:flex;align-items:center;gap:10px;font-family:var(--licht);font-size:17px}
+/* 13 Die Einladung */
+.v13{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(36px,5vw,90px);align-items:center}
+.v13-u{position:relative;aspect-ratio:7/5.4}
+.v13-karte{position:absolute;left:9%;right:9%;top:0;height:78%;background:#FBF7F0;color:#18213F;border-radius:8px;padding:clamp(24px,2.6vw,40px);text-align:center;box-shadow:0 20px 40px -20px rgba(0,0,0,.6)}
+.v13-karte::before{content:'';position:absolute;inset:10px;border:1px solid rgba(168,138,58,.45);border-radius:4px}
+.v13-karte h3{margin:6px 0 0;font-family:var(--licht);font-weight:400;font-size:clamp(26px,2.4vw,38px)}
+.v13-karte p{margin:10px 0 0;font-family:var(--licht);font-size:16px;line-height:1.5}
+.v13-karte .d{font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;color:#8A6A2A;line-height:2}
+.v13-hinten{position:absolute;left:0;right:0;bottom:0;height:62%;background:#E7DDCB;border-radius:10px;box-shadow:0 50px 80px -40px rgba(0,0,0,.9)}
+.v13-vorne{position:absolute;left:0;right:0;bottom:0;height:62%;background:linear-gradient(#EFE6D6,#E4D8C3);border-radius:10px;clip-path:polygon(0 0,50% 46%,100% 0,100% 100%,0 100%)}
+.v13-siegel{position:absolute;left:50%;top:calc(38% + 18%);width:74px;height:74px;margin-left:-37px;border-radius:50%;background:radial-gradient(circle at 40% 35%,#24306A,#0E1638);box-shadow:0 6px 14px rgba(0,0,0,.45),inset 0 0 0 4px rgba(233,212,154,.25);display:grid;place-items:center}
+.v13-siegel img{width:38px}
+/* 14 Laufband über dem Bild */
+.v14{padding:0!important}
+.v14-b{position:relative;height:min(90vh,860px)}
+.v14-b figure{position:absolute;inset:0;border-radius:0!important;box-shadow:none!important}
+.v14-b figure::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 40% at 50% 34%,rgba(8,12,30,.7),transparent 75%),linear-gradient(rgba(10,14,32,.35),rgba(10,14,32,.15) 40%,rgba(20,14,8,.92))}
+.v14-t{position:absolute;left:0;right:0;top:22%;z-index:2;text-align:center}
+.v14-t .rt{font-size:clamp(48px,5.4vw,96px);text-shadow:0 2px 28px rgba(5,10,40,.6)}
+.v14-t .rl{margin:18px auto 0;color:#fff;opacity:.92}
+.v14-band{position:absolute;left:0;right:0;bottom:120px;z-index:2;overflow:hidden;white-space:nowrap;border-top:1px solid rgba(217,183,88,.35);border-bottom:1px solid rgba(217,183,88,.35);padding:18px 0}
+.v14-band div{display:inline-flex;align-items:center;gap:36px;transform:translateX(-4%);font-family:var(--licht);font-weight:300;font-size:clamp(30px,3vw,48px);color:#F4EDE3}
+.v14-band .ic{width:26px;height:26px}
+.v14-f{position:absolute;left:var(--rand);right:var(--rand);bottom:34px;z-index:2;display:flex;justify-content:space-between;align-items:center}
+.v14-f .pz,.v14-f .r-knoepfe{margin:0}
+/* 15 Drei Abzüge */
+.v15{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(36px,5vw,90px);align-items:center}
+.v15-a{position:relative;height:clamp(420px,40vw,600px)}
+.v15-a div{position:absolute;width:52%;background:#FBF7F0;padding:12px 12px 0;border-radius:4px;box-shadow:0 40px 60px -30px rgba(0,0,0,.85)}
+.v15-a div figure{aspect-ratio:4/3;border-radius:2px!important;box-shadow:none!important}
+.v15-a div p{margin:0;padding:14px 4px 16px;font-family:var(--licht);font-size:16px;color:#18213F}
+.v15-a div p span{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:#8A6A2A;margin-bottom:4px}
+@media (max-width:900px){
+  .v02,.v04,.v11,.v13,.v15,.v06-u,.v03-k,.v07{grid-template-columns:1fr}
+  .v08-tf,.v09-b{grid-template-columns:1fr}
+  .v05-k{flex-wrap:wrap;gap:14px}.v05-c{margin:0}
+}
+</style>
+</head>
+<body class="rest wstart s2seite">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <symbol id="schellen" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5"/><path d="M2.6 10h18.8M2.6 13.4h18.8"/><circle cx="12" cy="17.3" r="1.3"/></symbol>
+  <symbol id="rosen" viewBox="0 0 24 24"><circle cx="12" cy="5.6" r="3.7"/><circle cx="18" cy="10" r="3.7"/><circle cx="15.7" cy="17.2" r="3.7"/><circle cx="8.3" cy="17.2" r="3.7"/><circle cx="6" cy="10" r="3.7"/><circle cx="12" cy="12" r="2.6"/></symbol>
+  <symbol id="schilten" viewBox="0 0 24 24"><path d="M3.5 3h17v8c0 6-4 9-8.5 11C7.5 20 3.5 17 3.5 11z"/><path d="M12 3v19M3.5 9h17"/></symbol>
+  <symbol id="eicheln" viewBox="0 0 24 24"><path d="M6 11.2c0 6 2.5 10.6 6 10.6s6-4.6 6-10.6"/><path d="M5.4 11.2c0-4.6 3-7.2 6.6-7.2s6.6 2.6 6.6 7.2z"/><path d="M12 4V1.4"/></symbol>
+  <symbol id="herz" viewBox="0 0 24 24"><path d="M12 20.5S2.5 14.4 2.5 8.4C2.5 5.3 4.8 3.5 7.2 3.5c2 0 3.6 1.2 4.8 2.9 1.2-1.7 2.8-2.9 4.8-2.9 2.4 0 4.7 1.8 4.7 4.9 0 6-9.5 12.1-9.5 12.1z"/></symbol>
+  <symbol id="pik" viewBox="0 0 24 24"><path d="M12 2.5S2.5 9 2.5 14c0 2.7 1.9 4.6 4.3 4.6 1.9 0 3.2-1 4.2-2.4L9.6 21.5h4.8L13 16.2c1 1.4 2.3 2.4 4.2 2.4 2.4 0 4.3-1.9 4.3-4.6 0-5-9.5-11.5-9.5-11.5z"/></symbol>
+  <symbol id="i-bett" viewBox="0 0 24 24"><path d="M2 18V7M2 14h20v4M22 14v-2a3 3 0 0 0-3-3h-8v5"/><circle cx="6.5" cy="11" r="2"/></symbol>
+  <symbol id="i-teller" viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><circle cx="12" cy="12" r="4"/><path d="M2 4v6M2 7h1.5M22 4v16"/></symbol>
+  <symbol id="i-karten" viewBox="0 0 24 24"><rect x="3" y="5" width="11" height="15" rx="1.5" transform="rotate(-10 8.5 12.5)"/><rect x="10" y="4" width="11" height="15" rx="1.5" transform="rotate(8 15.5 11.5)"/></symbol>
+  <symbol id="i-spa" viewBox="0 0 24 24"><path d="M2 16c2.5 2 5 2 7.5 0s5-2 7.5 0 3.5 1.5 5 0M2 20c2.5 2 5 2 7.5 0s5-2 7.5 0 3.5 1.5 5 0"/><path d="M8 12c-1-2 1-3 0-5M12 12c-1-2 1-3 0-5M16 12c-1-2 1-3 0-5"/></symbol>
+  <symbol id="i-kuchen" viewBox="0 0 24 24"><path d="M3 20h18M4 20v-7h16v7M4 15c2 1.5 4-1 6 0s4 1.5 6 0 3-1 4 0"/><path d="M12 13V9"/></symbol>
+</defs></svg>
+<main id="jv"></main>
+<script>
+const P=n=>`assets/img/${n}-l.webp`;
+const fig=(n,alt,st='',cap='')=>`<figure${st?` style="${st}"`:''}><img src="${P(n)}" alt="${alt}" decoding="async">${cap?`<figcaption>${cap}</figcaption>`:''}</figure>`;
+const pf='<em><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></em>';
+const kn=(a='Platz anfragen',dunkel=false,mitte=false)=>`<div class="r-knoepfe${mitte?'':' r-knoepfe--l'}"><a class="rk${dunkel?'':' rk--h'}" href="#"><span>${a}</span>${pf}</a></div>`;
+const tt=t=>`<h2 class="rt">${t.split('|').map(z=>`<span class="sl"><span>${z}</span></span>`).join('')}</h2>`;
+const ic=(id,st='')=>`<svg class="ic" style="${st}" viewBox="0 0 24 24"><use href="#${id}"/></svg>`;
+const W=[['1.–7.','November','2026','Nov','schellen'],['13.–18.','Dezember','2026','Dez','rosen'],['10.–15.','Januar','2027','Jan','schilten'],['24.–29.','Januar','2027','Jan','eicheln'],['21.–26.','März','2027','Mär','herz'],['4.–9.','April','2027','Apr','pik']];
+const KO='Angebote · Jasswochen 2026/2027';
+const JASS='Jass ist das Kartenspiel der Schweiz, zu viert, zwei gegen zwei.';
+const PZ=`<p class="pz"><b>Fr. 750.–</b>pro Person für 5 Nächte · Fr. 150.– pro Nacht<br>mit Frühstück, 5-Gang-Abendessen, 4 Jassabenden und Spa</p>`;
+const F=[];
+
+/* 01 Ein Blatt aus Fotos: die Woche als Fächer in der Hand */
+const blatt=[['sp-ruhe','Ruheraum','Am Tag · Spa'],['dessertbuffet','Kuchenbuffet','Nachmittags · Kuchen'],['g-abend','Abendessen am Kamin','Abends · 5 Gänge'],['w-fondue','Gäste am Tisch','Danach · Jass'],['w-schneeschuh','Draussen im Schnee','Einmal · Hüttengaudi']];
+F.push(['Ein Blatt aus Fotos','schoko',`<div class="mitte"><p class="ro">${KO}</p>${tt('nehmen Sie Ihre Karten auf&nbsp;…')}<p class="rl">${JASS} Fünf Tage bei uns, an vier Abenden wird gespielt.</p></div>
+<div class="v01-f">${blatt.map((b,i)=>fig(b[0],b[1],`transform:rotate(${(i-2)*9}deg);z-index:${i===3?6:5-Math.abs(i-2)}`,b[2])).join('')}</div>
+<div class="mitte">${PZ}${kn('Platz anfragen',false,true)}</div>`]);
+
+/* 02 Das Z: Zurbriggen-Z und Jasstafel */
+const zTafel=`<svg viewBox="0 0 700 500" aria-label="Eine Jasstafel mit dem Z, auf dessen Strichen die sechs Termine stehen">
+<path class="lin" d="M90 110 L610 110 L90 390 L610 390"/><path class="lin" d="M90 118 L598 118 M102 390 L610 390" style="opacity:.4"/>
+<text class="l" x="110" y="96">1.–7. November</text><text class="l" x="420" y="96">13.–18. Dezember</text>
+<text class="l" x="365" y="236" transform="rotate(-28 365 236)">10.–15. Januar</text><text class="l" x="185" y="330" transform="rotate(-28 185 330)">24.–29. Januar</text>
+<text class="l" x="110" y="424">21.–26. März</text><text class="l" x="440" y="424">4.–9. April</text>
+<text class="m" x="90" y="470">2026/2027 · je 5 Nächte</text></svg>`;
+F.push(['Das Z','nacht',`<div class="v02"><div class="v02-t">${zTafel}<img src="assets/zeichen/z-messing.svg" alt=""></div>
+<div><p class="ro">${KO}</p>${tt('Z wie Zurbriggen,|Z wie Jasstafel&nbsp;…')}<p class="rl">… denn beim Jassen schreibt man die Punkte auf eine Tafel, in ein grosses Z. ${JASS} An vier Abenden spielen Sie mit den anderen Gästen, am Schluss gibt es Preise.</p>${PZ}${kn()}</div></div>`]);
+
+/* 03 Winterlineal mit Bildern an den Daten */
+const POS=[2,24,39,47,78,90];const MP=[[0,'November'],[16.6,'Dezember'],[33.7,'Januar'],[50.8,'Februar'],[66.3,'März'],[83.4,'April']];
+const BL=['h-winter','winternacht','w-mond','w-fondue','w-touren','sp-ruhe'];
+F.push(['Winterlineal mit Bildern','schoko',`<div class="v03-k"><div><p class="ro">${KO}</p>${tt('spielen Sie|durch den Winter&nbsp;…')}</div><p class="rl">${JASS} Sechs Wochen, je fünf Nächte, an vier Abenden wird gespielt.</p></div>
+<div class="v03-l"><div class="ach"></div>${MP.map(m=>`<span class="mo" style="left:${m[0]}%">${m[1]}</span>`).join('')}
+${W.map((w,i)=>{const h=[250,130,300,110,250,130][i];return `<div class="p" style="left:${POS[i]}%"><s style="height:${h-120}px"></s>${fig(BL[i],'Winter im Saastal',`bottom:${h}px`)}<b style="bottom:${h-28}px">${w[0]} ${w[3]}</b><i></i></div>`}).join('')}</div>
+<div class="v03-u">${PZ}${kn()}</div>`]);
+
+/* 04 Der Tisch von oben */
+const tisch=`<svg viewBox="0 0 520 520" aria-label="Ein Jasstisch von oben: Sie und Ihr Partner sitzen sich gegenüber, die Gegner links und rechts">
+<rect class="lin" x="110" y="110" width="300" height="300" rx="14"/><rect class="lin" x="124" y="124" width="272" height="272" rx="8" style="opacity:.45"/>
+<g class="lin"><rect x="205" y="30" width="110" height="56" rx="10"/><rect x="205" y="434" width="110" height="56" rx="10"/><rect x="30" y="205" width="56" height="110" rx="10"/><rect x="434" y="205" width="56" height="110" rx="10"/></g>
+<text class="m" x="260" y="466" text-anchor="middle">Sie</text><text class="m" x="260" y="62" text-anchor="middle">Partner</text>
+<text class="m" x="62" y="260" text-anchor="middle" transform="rotate(-90 62 260)">Gegner</text><text class="m" x="458" y="260" text-anchor="middle" transform="rotate(90 458 260)">Gegner</text>
+<text x="260" y="248" text-anchor="middle" style="font-family:var(--licht);font-weight:300;font-size:46px;fill:#E9D49A;letter-spacing:-1px">Fr. 750.–</text>
+<text class="m" x="260" y="282" text-anchor="middle">pro Person, 5 Nächte</text><text class="m" x="260" y="302" text-anchor="middle">Fr. 150.– pro Nacht</text></svg>`;
+F.push(['Der Tisch von oben','schoko',`<div class="v04"><div><p class="ro">${KO}</p>${tt('nehmen Sie|Platz&nbsp;…')}<p class="rl">… am Jasstisch. ${JASS} Ihr Partner sitzt Ihnen gegenüber. Vier Abende lang, nach dem 5-Gang-Abendessen.</p>${kn()}</div>${tisch}
+<ul class="v04-w">${W.map(w=>`<li>${w[0]} ${w[1]}<span>${w[2]} · 5 NÄCHTE</span></li>`).join('')}</ul></div>`]);
+
+/* 05 Sechs Karten, sechs Wochen */
+F.push(['Sechs Karten, sechs Wochen','schoko',`<div class="mitte"><p class="ro">${KO}</p>${tt('ziehen Sie eine Karte&nbsp;…')}<p class="rl">… jede ist eine Woche. ${JASS}</p></div>
+<div class="v05-k">${W.map((w,i)=>`<div class="v05-c" style="transform:rotate(${[-6,-3,-1,1,3,6][i]}deg) translateY(${[14,4,0,0,4,14][i]}px)"><div class="o"><span>${w[3]}</span>${ic(w[4])}</div><div><b>${w[0]}</b><p>${w[1]} ${w[2]}</p></div><div class="u">5 NÄCHTE · FR. 750.–</div></div>`).join('')}</div>
+<div class="mitte">${PZ}${kn('Karte ziehen',false,true)}</div>`]);
+
+/* 06 Das Wort Jass, gefüllt mit dem Bild */
+F.push(['Jass im Bild','hell',`<p class="ro">${KO}</p><p class="v06-w">Jass</p>
+<div class="v06-u"><p class="rl">… das Kartenspiel der Schweiz. Zu viert, zwei gegen zwei, eine Woche lang an vier Abenden.</p><div>${PZ}${kn('Platz anfragen',true)}</div></div>`]);
+
+/* 07 Tag und Abend als zwei Flächen */
+F.push(['Am Tag hell, am Abend dunkel','schoko v07',`<div class="v07-t"><p class="ro">Jasswochen · am Tag</p><h3>ruhen Sie&nbsp;…</h3><p class="zeile">Spa auf 1’100 m², Hüttengaudi mit Fabian, Rundgang durchs Dorf, nachmittags Suppe und Kuchen.</p>${fig('sp-ruhe','Ruheraum mit Liegen')}</div>
+<div class="v07-a"><p class="ro">Jasswochen · am Abend</p><h3>… und jassen Sie</h3><p class="zeile">Fünf Gänge, dann Karten auf den Tisch. ${JASS} An vier Abenden, mit Preisen am Schluss.</p>${fig('w-fondue','Gäste am Tisch in der Stube')}</div>
+<div class="v07-f">${PZ}<p class="pz" style="margin:0">${W.map(w=>w[0]+' '+w[3]).join(' · ')}</p>${kn()}</div>`]);
+
+/* 08 Fenster mit drei Tafeln */
+F.push(['Fenster mit drei Tafeln','schoko v08',`<div class="v08-b">${fig('j-saal','Der Speisesaal am Abend')}<div class="v08-k"><p class="ro">${KO}</p>${tt('jassen Sie|mit uns&nbsp;…')}</div></div>
+<div class="v08-tf"><div><p class="ro">Was ist Jass?</p><p>Das Kartenspiel der Schweiz. Zu viert, zwei gegen zwei.</p></div><div><p class="ro">Die Woche</p><p>5 Nächte. An 4 Abenden spielen alle Gäste, am Schluss gibt es Preise.</p></div><div><p class="ro">Der Preis</p><p><b style="font-weight:400;color:#E9D49A">Fr. 750.–</b> pro Person für die ganze Woche, Fr. 150.– pro Nacht, mit Halbpension und Spa.</p></div></div>`]);
+
+/* 09 Die Woche steigt bis zur Preisverteilung */
+const ST=[['Tag 1','Ankommen',60,300],['Tag 2','Erster Jassabend',340,250],['Tag 3','Hüttengaudi',620,200],['Tag 4','Dorfrundgang',900,150],['Tag 5','Preisverteilung',1180,90]];
+F.push(['Die Woche steigt','schoko v09',`<div class="v03-k"><div><p class="ro">${KO}</p>${tt('spielen Sie sich|nach oben&nbsp;…')}</div><p class="rl">${JASS} Vier Abende, eine Rangliste, am Schluss Preise.</p></div>
+<svg viewBox="0 0 1300 340" aria-label="Fünf Stufen der Woche bis zur Preisverteilung"><path class="lin" d="${ST.map((s,i)=>`${i?'L':'M'}${s[2]} ${s[3]} L${s[2]+280} ${s[3]}`).join(' ')}"/>
+${ST.map((s,i)=>`<circle cx="${s[2]}" cy="${s[3]}" r="${i===4?7:4.5}" fill="#C9A54E"/><text class="m" x="${s[2]}" y="${s[3]-44}">${s[0]}</text><text class="l" x="${s[2]}" y="${s[3]-20}">${s[1]}</text>`).join('')}</svg>
+<div class="v09-b">${[['haus-nacht','Ankunft am Abend'],['w-fondue','Am Tisch'],['w-schneeschuh','Draussen im Schnee'],['h-kapelle','Die Kapelle im Dorf'],['j-saal','Der Saal am letzten Abend']].map(b=>`<div>${fig(b[0],b[1])}</div>`).join('')}</div>
+<div class="v03-u">${PZ}${kn()}</div>`]);
+
+/* 10 Die Anzeigetafel */
+const fl=t=>`<span class="f">${[...t].map(c=>`<i>${c===' '?'&nbsp;':c}</i>`).join('')}</span>`;
+F.push(['Die Anzeigetafel','schoko',`<div class="v03-k"><div><p class="ro">${KO}</p>${tt('wählen Sie|Ihre Runde&nbsp;…')}</div><p class="rl">${JASS} Sechs Wochen im Winter, an vier Abenden wird gespielt.</p></div>
+<div class="v10-t"><div class="v10-r"><span>Termin</span><span>Nächte</span><span>Jassabende</span><span>Preis p. P.</span><span></span></div>
+${W.map(w=>`<div class="v10-r"><span class="t">${(w[0]+' '+w[1]+' '+w[2]).toUpperCase()}</span>${fl('5')}${fl('4')}${fl('750.-')}${ic(w[4])}</div>`).join('')}</div>
+<div class="v10-u"><p class="pz" style="margin:0">Fr. 750.– für die ganze Woche = Fr. 150.– pro Nacht · mit Frühstück, 5-Gang-Abendessen und Spa</p>${kn()}</div>`]);
+
+/* 11 Rund wie der Tisch */
+const kreis=()=>{const r=46;return W.map((w,i)=>{const a=(-90+i*60)*Math.PI/180;const x=50+r*Math.cos(a),y=50+r*Math.sin(a);const tx=50+(r+5)*Math.cos(a),ty=50+(r+5)*Math.sin(a);return `<circle cx="${x}" cy="${y}" r="1.1" fill="#C9A54E"/><text class="l" x="${tx}" y="${ty}" text-anchor="${Math.abs(Math.cos(a))<.2?'middle':Math.cos(a)>0?'start':'end'}" dominant-baseline="middle" style="font-size:3.3px">${w[0]} ${w[3]}</text>`}).join('')};
+F.push(['Rund wie der Tisch','schoko',`<div class="v11"><div><p class="ro">${KO}</p>${tt('setzen Sie sich|in die Runde&nbsp;…')}<p class="rl">${JASS} Sechs Wochen im Winter, je fünf Nächte, vier Abende am Tisch.</p></div>
+<div class="v11-r"><svg viewBox="0 0 100 100"><circle class="lin" cx="50" cy="50" r="46"/><circle class="lin" cx="50" cy="50" r="30" style="opacity:.35"/>${kreis()}</svg>${fig('w-fondue','Gäste am runden Tisch')}</div>
+<div>${PZ}${kn()}</div></div>`]);
+
+/* 12 Die Rechnung */
+F.push(['Die Rechnung','schoko',`<div class="mitte"><p class="ro">${KO}</p>${tt('rechnen Sie mit&nbsp;…')}<p class="rl">${JASS} So setzt sich der Preis Ihrer Jasswoche zusammen.</p></div>
+<div class="v12-g"><div><b>5</b><span>Nächte</span></div><div class="op"><b>×</b></div><div><b>150</b><span>Franken pro Nacht</span></div><div class="op"><b>=</b></div><div><b>750</b><span>Franken pro Person</span></div></div>
+<div class="v12-i">${[['i-bett','Doppelzimmer'],['i-teller','Frühstück und 5 Gänge'],['i-kuchen','Suppe und Kuchen'],['i-karten','4 Jassabende'],['i-spa','Spa 1’100 m²']].map(x=>`<div>${ic(x[0])}${x[1]}</div>`).join('')}</div>
+<div class="mitte"><p class="pz">${W.map(w=>w[0]+' '+w[1]).join(' · ')}</p>${kn('Platz anfragen',false,true)}</div>`]);
+
+/* 13 Die Einladung */
+F.push(['Die Einladung','schoko',`<div class="v13"><div><p class="ro">${KO}</p>${tt('folgen Sie|der Einladung&nbsp;…')}<p class="rl">… an unseren Jasstisch. ${JASS}</p>${PZ}${kn()}</div>
+<div class="v13-u"><div class="v13-hinten"></div><div class="v13-karte"><p class="d">EINLADUNG</p><h3>zur Jasswoche</h3><p>Fünf Nächte, vier Abende am Kartentisch,<br>Preise für die Besten.</p><p class="d" style="margin-top:14px">${W.slice(0,3).map(w=>w[0]+' '+w[3]).join(' · ')}<br>${W.slice(3).map(w=>w[0]+' '+w[3]).join(' · ')}</p></div><div class="v13-vorne"></div><div class="v13-siegel"><img src="assets/zeichen/z-messing.svg" alt=""></div></div></div>`]);
+
+/* 14 Laufband über dem Bild */
+const band=W.map(w=>`<span>${w[0]} ${w[1]}</span>${ic(w[4])}`).join('');
+F.push(['Laufband über dem Bild','schoko v14',`<div class="v14-b">${fig('winternacht','Das Hotel in der Winternacht')}
+<div class="v14-t"><p class="ro" style="color:#F1E2B4">${KO}</p>${tt('kommen Sie|an den Tisch&nbsp;…')}<p class="rl">${JASS} Eine Woche lang, an vier Abenden.</p></div>
+<div class="v14-band"><div>${band}${band}</div></div>
+<div class="v14-f">${PZ}${kn()}</div></div>`]);
+
+/* 15 Drei Abzüge */
+F.push(['Drei Abzüge','schoko',`<div class="v15"><div class="v15-a">
+<div style="left:0;top:6%;transform:rotate(-5deg)">${fig('dessertbuffet','Das Kuchenbuffet')}<p><span>Am Nachmittag</span>Suppe und Kuchen</p></div>
+<div style="left:42%;top:0;transform:rotate(4deg);z-index:2">${fig('w-fondue','Am Tisch in der Stube')}<p><span>Am Abend</span>Jass zu viert</p></div>
+<div style="left:20%;top:44%;transform:rotate(-1.5deg);z-index:3">${fig('j-saal','Der Saal am letzten Abend')}<p><span>Am Schluss</span>Preise für die Besten</p></div></div>
+<div><p class="ro">${KO}</p>${tt('erinnern Sie sich|an diese Woche&nbsp;…')}<p class="rl">${JASS} Bei uns fünf Nächte lang, an vier Abenden am Tisch.</p>${PZ}${kn()}</div></div>`]);
+
+document.getElementById('jv').innerHTML=F.map((f,i)=>{const [n,c,h]=f;const k=c.split(' ');return `<p class="jv-nr"><b>${String(i+1).padStart(2,'0')}</b>${n}</p><section class="ri ri-${k[0]} s2 da jv ${k.slice(1).join(' ')}">${h}</section>`}).join('');
+</script>
+</body>
+</html>

@@ -1,0 +1,253 @@
+/* Wellness & Spa · «setzen Sie sich», 15 Fassungen, zweite Runde (24.10.2026). Nur auf _varianten/essen-15b/NN.html.
+   Regel 55: je Fassung ein eigener Moment, nur transform/opacity, nativer Scroll. Master 4: alles von Anfang an sichtbar (Masken wie die Titel). */
+.vnr{position:fixed;z-index:90;left:50%;bottom:18px;transform:translateX(-50%);display:flex;align-items:center;gap:6px;padding:6px;border-radius:999px;background:#0A1129;box-shadow:0 18px 40px -12px rgba(0,0,0,.6),inset 0 0 0 1px rgba(233,212,154,.3);font-family:var(--mono);font-size:11px;letter-spacing:.1em;color:#F4F2EC}
+.vnr a{display:grid;place-items:center;min-width:38px;height:38px;padding:0 12px;border-radius:999px;color:#F4F2EC;text-decoration:none;background:rgba(255,255,255,.07)}
+.vnr b{font-weight:400;padding:0 14px;white-space:nowrap}
+@media(max-width:600px){.vnr b{max-width:58vw;overflow:hidden;text-overflow:ellipsis;padding:0 6px}}
+
+/* ---------- gemeinsam */
+.ev{--gold:#8A6A2A;--rk:clamp(14px,1.4vw,22px);--e2:cubic-bezier(.33,1,.68,1)}
+.ev .rt{font-size:clamp(38px,3.6vw,62px);white-space:normal}
+.ev .rl{max-width:38ch}
+.ev a:where(:not(.rk)){color:inherit}
+.ev button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer}
+.ev .r-knoepfe{margin-top:clamp(28px,3vw,44px)}
+.ev .rs-k{margin-top:14px}
+.ev-karte{list-style:none;margin:18px 0 0;padding:0}
+.ev-karte li{padding:12px 0;border-top:1px solid rgba(138,106,42,.28)}
+.ev-karte li .ro{margin:0 0 4px;font-size:10px}
+.ev-karte li p:last-child{margin:0;font-family:var(--licht);font-size:clamp(14.5px,1.05vw,17px);line-height:1.45}
+.ev i{font-style:normal;font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin:0 .25em}
+.ev-tag{list-style:none;margin:26px 0 0;padding:0}
+.ev-tag li{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:baseline;padding:12px 0;border-top:1px solid rgba(138,106,42,.28)}
+.ev-tag li:last-child{border-bottom:1px solid rgba(138,106,42,.28)}
+.ev-tag b{font-family:var(--licht);font-weight:400;font-size:clamp(17px,1.3vw,21px)}
+.ev-tag span{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.ri-nacht .ev-tag li,.t7-abend .ev-tag li{border-color:rgba(217,183,88,.3)}
+.ri-nacht .ev-tag b{color:#E9D49A}
+.ri-nacht .ev-tag span{color:#F4F2EC;opacity:.75}
+.ev figure img{transition:transform 2.4s var(--e1)}
+
+/* ---------- 01 Gang für Gang */
+.g1{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:clamp(40px,5vw,96px);max-width:1320px;margin:0 auto;align-items:start}
+.g1-buehne{position:sticky;top:11vh;height:78vh;display:flex;flex-direction:column}
+.g1-rahmen{position:relative;flex:1;border-radius:var(--rk);overflow:hidden;background:#000;box-shadow:var(--sch-h)}
+.ev .g1-f{position:absolute;inset:0;border-radius:0;box-shadow:none;transform:translateY(101%);transition:transform 1.15s var(--e1)}
+.g1-f:nth-child(2){z-index:2}.g1-f:nth-child(3){z-index:3}.g1-f:nth-child(4){z-index:4}.g1-f:nth-child(5){z-index:5}
+.ev .g1-f.an{transform:none}
+.g1-zahl{margin:14px 0 0;font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+.g1-kopf{padding-bottom:clamp(30px,4vh,50px)}
+.g1-g{min-height:42vh;display:flex;flex-direction:column;justify-content:center;padding:36px 0;border-top:1px solid rgba(138,106,42,.28)}
+.g1-g .ro{font-size:10.5px}
+.g1-gericht{margin:4px 0 0;font-family:var(--licht);font-weight:300;font-size:clamp(28px,2.7vw,46px);line-height:1.1;letter-spacing:-.018em}
+.g1-wahl{margin:16px 0 0;font-size:15px;line-height:1.55;opacity:.78;max-width:46ch}
+.g1-g:not(.an) .g1-gericht{opacity:.4;transition:opacity .6s}
+.g1-g.an .g1-gericht{opacity:1;transition:opacity .6s}
+.g1-ende{padding-top:10px}
+.g1-mob{display:none}
+@media(max-width:900px){
+ .g1{grid-template-columns:1fr}.g1-buehne{display:none}
+ .ev .g1-mob{display:block;aspect-ratio:3/2;margin-bottom:18px;background:#000}
+ .g1-g{min-height:0;padding:28px 0}.g1-g:not(.an) .g1-gericht{opacity:1}
+}
+
+/* ---------- 02 Die Karte liegt auf */
+.k2{max-width:1320px;margin:0 auto;display:grid;grid-template-columns:repeat(12,minmax(0,1fr))}
+.k2-saal{grid-column:1/10;grid-row:1;align-self:stretch;min-height:min(78vh,760px);margin-bottom:clamp(50px,7vh,90px)}
+.ev02 .k2-saal img{transform:scale(1.12)}
+.ev02.da .k2-saal img{transform:none}
+.k2-karte{grid-column:8/13;grid-row:1;margin-top:clamp(50px,9vh,110px);z-index:2;position:relative;background:#FBF8F3;border-radius:var(--rk);padding:clamp(28px,2.8vw,46px) clamp(24px,2.6vw,42px);
+ box-shadow:0 60px 90px -44px rgba(24,33,63,.6),0 14px 26px -16px rgba(24,33,63,.35);transform:translateY(22vh) rotate(-5deg);transform-origin:30% 100%;transition:transform 1.9s var(--e1) .15s}
+.ev02.da .k2-karte{transform:rotate(-1.6deg)}
+.k2-z{margin:0 0 14px;color:#C9A54E}.k2-z svg{display:block;width:62px;height:auto}
+.k2-karte .rt{font-size:clamp(32px,2.6vw,44px)}
+.k2-ro{margin-top:24px!important}
+.k2-menu li{padding:10px 0}
+.k2-menu li p:last-child{font-size:14.5px}
+@media(max-width:900px){
+ .k2{grid-template-columns:1fr}.k2-saal{grid-column:1;height:auto;aspect-ratio:4/3}
+ .k2-karte{grid-column:1;grid-row:2;margin:-70px 10px 0;transform:translateY(80px) rotate(-3deg)}.ev02.da .k2-karte{transform:rotate(-1deg)}
+}
+
+/* ---------- 03 Rahmen aus Bildern */
+.r3{max-width:1320px;margin:0 auto;display:grid;gap:10px}
+.ev .r3 figure{border-radius:10px;box-shadow:none}
+.r3-reihe{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.r3-reihe .r3-f{aspect-ratio:16/10}
+.r3-mitte{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2.02fr) minmax(0,1fr);gap:10px}
+.r3-seite{height:100%;min-height:200px}
+.r3-karte{background:#EEE8DE;border-radius:10px;padding:clamp(34px,4vw,64px) clamp(28px,4vw,72px)}
+.r3-oben{transform:translateY(-70px)}.r3-unten{transform:translateY(70px)}.r3-l{transform:translateY(-50px)}.r3-r{transform:translateY(50px)}
+.r3-oben,.r3-unten,.ev .r3-l,.ev .r3-r{transition:transform 1.7s var(--e1)}
+.ev03.da .r3-oben,.ev03.da .r3-unten,.ev03.da .r3-l,.ev03.da .r3-r{transform:none}
+.r3-menu li p:last-child{font-size:15px}
+@media(max-width:900px){
+ .r3-reihe{grid-template-columns:1fr 1fr}.r3-mitte{grid-template-columns:1fr 1fr}.r3-karte{grid-column:1/-1;order:-1;padding:30px 22px}.r3-seite{aspect-ratio:1;height:auto}
+}
+
+/* ---------- 04 Teller landen im Saal */
+.p4{max-width:1320px;margin:0 auto;display:grid;grid-template-columns:minmax(0,.78fr) minmax(0,1.5fr);gap:clamp(40px,5vw,90px);align-items:center}
+.p4-buehne{position:relative;height:min(76vh,720px)}
+.ev .p4-saal{position:absolute;left:0;top:0;width:78%;height:80%}
+.ev .p4-t{position:absolute;width:34%;aspect-ratio:3/2;background:#000;box-shadow:0 40px 60px -30px rgba(0,0,0,.7),0 0 0 6px #F6F1EA;transform:translateY(90px) rotate(var(--r));transition:transform 1.3s var(--e1) calc(.35s + var(--n)*.4s)}
+.p4-a{right:0;top:5%;--r:5deg}.p4-b{right:9%;top:44%;--r:-4deg}.p4-c{left:26%;bottom:0;--r:3deg}
+.ev04.da .p4-t{transform:none}
+@media(max-width:900px){.p4{grid-template-columns:1fr}.p4-buehne{height:112vw}.ev .p4-saal{width:88%;height:66%}.ev .p4-t{width:48%}}
+
+/* ---------- 05 Zwischen zwei Wänden */
+.w5{max-width:1400px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr) minmax(0,1fr);gap:clamp(18px,2.4vw,36px);align-items:start}
+.w5-wand{display:grid;gap:12px;will-change:transform}
+.w5-wand figure{aspect-ratio:4/5}
+.w5-l{margin-top:-4vh}.w5-r{margin-top:16vh}
+.w5-karte{padding:clamp(20px,4vh,50px) clamp(0px,1vw,18px) 0}
+@media(max-width:900px){.w5{grid-template-columns:1fr}.w5-wand{grid-template-columns:repeat(3,1fr);margin:0!important;transform:none!important}.w5-wand figure{aspect-ratio:1}.w5-karte{padding:10px 0}}
+
+/* ---------- 06 Die Karte in grosser Schrift */
+.z6{max-width:1320px;margin:0 auto}
+.z6-kopf{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,400px);gap:60px;align-items:end;margin-bottom:clamp(40px,5vw,70px)}
+.z6-kopf .ev-tag{margin:0}
+.z6-z{display:grid;grid-template-columns:150px minmax(0,1fr) minmax(0,25%);gap:clamp(20px,3vw,48px);align-items:center;padding:20px 0;border-top:1px solid rgba(138,106,42,.3);outline:none}
+.z6-z:last-child{border-bottom:1px solid rgba(138,106,42,.3)}
+.z6-ro{margin:0;font-size:10.5px}
+.z6-t{transition:opacity .6s}
+.z6-z:not(.an) .z6-t{opacity:.4}
+.z6-gericht{margin:0;font-family:var(--licht);font-weight:300;font-size:clamp(30px,3.4vw,58px);line-height:1.05;letter-spacing:-.022em}
+.z6-wahl{margin:10px 0 0;font-size:14.5px;line-height:1.5;opacity:.75;max-width:60ch}
+.ev .z6-f.z6-f{aspect-ratio:3/2;border-radius:12px;box-shadow:none;overflow:hidden}
+.z6-z.an .z6-f{box-shadow:var(--sch-h)}
+.z6-i{display:block;height:100%;background:#000;transform:translateY(101%);transition:transform 1s var(--e1)}
+.z6-z.an .z6-i{transform:none}
+.z6-fuss{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px}
+@media(max-width:900px){.z6-kopf{grid-template-columns:1fr;gap:30px}.z6-z{grid-template-columns:minmax(0,1fr) 34%;gap:14px}.z6-ro{grid-column:1/-1}.z6-gericht{font-size:26px}.z6-wahl{display:none}}
+
+/* ---------- 07 Vom Tag in den Abend */
+.ev07{padding:0!important}
+.t7{display:grid;grid-template-columns:1fr 1fr}
+.t7-tag,.t7-abend{display:flex;flex-direction:column;justify-content:space-between;gap:40px;padding:clamp(90px,9vw,140px) clamp(24px,3.6vw,64px)}
+.t7-tag{padding-left:var(--rand)}
+.t7-abend{padding-right:var(--rand);background:#0A1129;color:#F4F2EC;transform:translateY(90px);transition:transform 1.8s var(--e1) .25s}
+.ev07.da .t7-abend{transform:none}
+.t7-z{margin:0;color:#D9B758}.t7-z svg{display:block;width:clamp(90px,8vw,140px);height:auto}
+.t7-paar{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.t7-f{aspect-ratio:4/5;margin-bottom:18px!important}
+.t7-m .ro{font-size:10px;margin-bottom:4px}
+.t7-abend .ro{color:#D9B758}
+.t7-m h3{margin:0;font-family:var(--licht);font-weight:400;font-size:clamp(22px,1.9vw,30px);line-height:1.15}
+.t7-s{margin:8px 0 0;font-size:14.5px;line-height:1.55;opacity:.8}
+.t7-abend .r-knoepfe{margin-top:0}
+@media(max-width:900px){.t7{grid-template-columns:1fr}.t7-tag,.t7-abend{padding:70px 16px}.t7-abend{transform:translateY(40px)}}
+
+/* ---------- 08 Vom Teller in den Saal */
+.n8{max-width:1320px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:clamp(40px,5vw,80px);align-items:center}
+.n8-rahmen{position:relative;aspect-ratio:4/3;border-radius:var(--rk);overflow:hidden;box-shadow:var(--sch-h);background:#000}
+.ev .n8-rahmen figure{position:absolute;inset:0;border-radius:0;box-shadow:none}
+.ev08 .n8-saal img{transform:scale(1.3);transition:transform 2.6s var(--e1) .6s}
+.ev .n8-teller{background:#000;transform-origin:0 100%;transition:transform 2.4s var(--e1) .6s,border-radius 2.4s var(--e1) .6s}
+.ev08.da .n8-saal img{transform:none}
+.ev08.da .n8-teller{transform:translate(4%,-5%) scale(.3);border-radius:40px}
+.n8-menu{list-style:none;margin:26px 0 0;padding:0}
+.n8-menu li{padding:11px 0;border-top:1px solid rgba(138,106,42,.28)}
+.n8-menu li:last-child{border-bottom:1px solid rgba(138,106,42,.28)}
+.n8-menu .ro{margin:0 0 2px;font-size:10px}
+.n8-menu p:last-child{margin:0;font-family:var(--licht);font-size:clamp(16px,1.25vw,20px);line-height:1.3}
+@media(max-width:900px){.n8{grid-template-columns:1fr}}
+
+/* ---------- 09 Zu zweit am Tisch */
+.d9{max-width:1320px;margin:0 auto;display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,2fr);gap:clamp(40px,5vw,80px);align-items:center}
+.d9-tri{display:grid;grid-template-columns:1fr 1.5fr 1.1fr;gap:10px;height:min(62vh,560px)}
+.ev .d9-f{height:100%;transition:transform 1.8s var(--e1)}
+.ev .d9-a{transform:translateY(-70px)}.ev .d9-c{transform:translateY(70px)}
+.ev09 .d9-b img{transform:scale(1.18)}
+.ev09.da .d9-a,.ev09.da .d9-c{transform:none}.ev09.da .d9-b img{transform:none}
+.d9-s{margin:22px 0 0;font-size:16px;line-height:1.6;opacity:.85;max-width:40ch}
+@media(max-width:900px){.d9{grid-template-columns:1fr}.d9-tri{height:84vw;order:-1}}
+
+/* ---------- 10 Auf nichts verzichten */
+.v10{max-width:1320px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(40px,5vw,90px);align-items:center}
+.v10-wand{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.v10-a{grid-column:1/-1;aspect-ratio:16/10}
+.v10-b,.v10-c,.v10-d{aspect-ratio:1}
+.v10-frage{margin:24px 0 0;font-size:17px;line-height:1.6;max-width:44ch}
+.v10-arten{list-style:none;margin:22px 0 0;padding:0}
+.v10-arten li{overflow:hidden;border-top:1px solid rgba(138,106,42,.3)}
+.v10-arten li:last-child{border-bottom:1px solid rgba(138,106,42,.3)}
+.v10-sl{display:flex;justify-content:space-between;align-items:baseline;gap:20px;padding:13px 0;transform:translateY(105%);transition:transform 1.15s var(--e1) calc(.35s + var(--n)*.13s)}
+.ev10.da .v10-sl{transform:none}
+.v10-sl b{font-family:var(--licht);font-weight:400;font-size:clamp(19px,1.6vw,26px);line-height:1.2}
+.v10-sl span{font-size:13px;opacity:.7;text-align:right;max-width:24ch}
+@media(max-width:900px){.v10{grid-template-columns:1fr}.v10-sl{flex-direction:column;gap:2px}.v10-sl span{text-align:left}}
+
+/* ---------- 11 Ihr Wahlmenü */
+.m11{max-width:1320px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:clamp(40px,5vw,90px);align-items:start}
+.m11-ro{margin-top:30px!important}
+.m11-g{padding:16px 0;border-top:1px solid rgba(138,106,42,.28)}
+.m11-g .ro{font-size:10px}
+.m11-w{display:flex;flex-direction:column}
+.m11-o{position:relative;display:block;text-align:left;padding:6px 0 6px 30px!important;font-family:var(--licht)!important;font-size:clamp(16px,1.25vw,20px)!important;line-height:1.35;opacity:.5;transition:opacity .4s}
+.m11-o::before{content:"";position:absolute;left:0;top:.95em;width:16px;height:1.5px;background:#8A6A2A;transform:scaleX(.35);transform-origin:left;transition:transform .5s var(--e1)}
+.m11-o.an{opacity:1}.m11-o.an::before{transform:none}
+.m11-o:hover{opacity:.85}
+.m11-karte{position:sticky;top:10vh;background:#FBF8F3;border-radius:var(--rk);box-shadow:var(--sch-h);overflow:hidden}
+.m11-bild{position:relative;aspect-ratio:3/2;background:#000;overflow:hidden}
+.ev .m11-f{position:absolute;inset:0;border-radius:0;box-shadow:none;transform:translateY(101%);transition:transform 1s var(--e1)}
+.ev .m11-f.war{transform:none;z-index:1}
+.ev .m11-f.an{transform:none;z-index:2}
+.m11-blatt{padding:26px clamp(22px,2.4vw,36px) 32px}
+.m11-z{margin:0;color:#C9A54E}.m11-z svg{display:block;width:44px;height:auto}
+.m11-kopf{margin:12px 0 8px;font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase}
+.m11-blatt ol{list-style:none;margin:0;padding:0}
+.m11-blatt li{padding:9px 0;border-top:1px solid rgba(138,106,42,.25);overflow:hidden}
+.m11-blatt li .ro{margin:0 0 2px;font-size:9.5px}
+.m11-blatt li p:last-child{margin:0;font-family:var(--licht);font-size:16px;line-height:1.3}
+.m11-blatt li p.neu{animation:m11neu .7s var(--e1)}
+@keyframes m11neu{from{transform:translateY(.9em)}to{transform:none}}
+.m11-blatt .r-knoepfe{margin-top:22px}
+@media(max-width:900px){.m11{grid-template-columns:1fr}.m11-karte{position:relative;top:0}}
+
+/* ---------- 12 Art by Heinz Julen */
+.h12{max-width:1320px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:clamp(40px,5vw,90px);align-items:center}
+.h12-gross{aspect-ratio:4/3;position:relative;z-index:2}
+.h12-leiste{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:10px;position:relative;z-index:1;transform:translateY(-70%);transition:transform 1.7s var(--e1) .45s}
+.ev12.da .h12-leiste{transform:none}
+.h12-k{aspect-ratio:4/3}
+.h12-satz{margin:24px 0 0;font-family:var(--licht);font-weight:300;font-size:clamp(20px,1.6vw,26px);line-height:1.5;max-width:30ch}
+@media(max-width:900px){.h12{grid-template-columns:1fr}}
+
+/* ---------- 13 Fotos im Satz */
+.s13{max-width:1320px;margin:0 auto}
+.s13-satz{margin:0;font-family:var(--licht);font-weight:300;font-size:clamp(36px,5.4vw,90px);line-height:1.14;letter-spacing:-.026em;max-width:16em}
+.s13-l{opacity:.5}
+.s13-c{display:inline-block;vertical-align:-.08em;width:1.7em;height:.9em;border-radius:.14em;overflow:hidden;margin:0 .04em;background:#0A1129}
+.s13-c img{display:block;width:100%;height:100%;object-fit:cover;transform:translateY(101%);transition:transform 1.3s var(--e1) calc(.5s + var(--n)*.28s)}
+.ev13.da .s13-c img{transform:none}
+.s13-unten{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:clamp(40px,5vw,90px);margin-top:clamp(50px,6vw,90px);align-items:start}
+.s13-menu{columns:2;column-gap:40px;margin:0}
+.s13-menu li{break-inside:avoid}
+.s13-tag{margin-top:0}
+@media(max-width:900px){.s13-unten{grid-template-columns:1fr}.s13-menu{columns:1}}
+
+/* ---------- 14 Mit dem Dessert beginnen */
+.d14{max-width:1320px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.35fr);gap:clamp(40px,5vw,90px);align-items:center}
+.d14-block{margin-top:24px;padding-top:16px;border-top:1px solid rgba(138,106,42,.28)}
+.d14-block .ro{font-size:10px;margin-bottom:4px}
+.d14-block h3{margin:0;font-family:var(--licht);font-weight:400;font-size:clamp(22px,1.8vw,28px)}
+.d14-block p:last-child{margin:6px 0 0;font-size:15px;line-height:1.55;opacity:.85}
+.d14-tag{margin-top:24px}
+.d14-wand{display:grid;grid-template-columns:1.3fr 1fr;grid-template-rows:repeat(3,minmax(0,1fr));gap:10px;height:min(80vh,760px)}
+.d14-buffet{grid-row:1/4}
+.d14-schwenk{position:absolute;left:0;right:0;top:0;height:150%;display:block;transition:transform 3.4s cubic-bezier(.45,.05,.25,1) .4s}
+.ev14.da .d14-schwenk{transform:translateY(-33.333%)}
+@media(max-width:900px){.d14{grid-template-columns:1fr}.d14-wand{height:120vw;order:-1}}
+
+/* ---------- 15 Die Lichter gehen an */
+.ev15{background:#0A1129}
+.l15{max-width:1320px;margin:0 auto;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-template-rows:repeat(3,minmax(0,1fr));grid-template-areas:"a a b t" "a a c t" "d e g t";gap:10px;height:min(92vh,880px)}
+.l15-a{grid-area:a}.l15-b{grid-area:b}.l15-c{grid-area:c}.l15-d{grid-area:d}.l15-e{grid-area:e}.l15-g{grid-area:g}
+.ev .l15-f{border-radius:12px}
+.l15-f::after{content:"";position:absolute;inset:0;background:#0A1129;opacity:.8;transition:opacity 1.6s ease calc(.3s + var(--n)*.38s)}
+.ev15.da .l15-f::after{opacity:0}
+.l15-text{grid-area:t;display:flex;flex-direction:column;justify-content:flex-end;padding:clamp(24px,2.4vw,40px) clamp(20px,2vw,34px);border-radius:12px;background:#121B3F;box-shadow:inset 0 0 0 1px rgba(217,183,88,.18)}
+.l15-z{margin:0 0 auto;color:#D9B758}.l15-z svg{display:block;width:clamp(70px,6vw,110px);height:auto}
+.l15-text .rt{font-size:clamp(32px,2.5vw,44px);white-space:normal}
+.l15-text .rl{font-size:16px}
+@media(max-width:900px){.l15{height:auto;grid-template-columns:1fr 1fr;grid-template-rows:none;grid-template-areas:"t t" "a a" "b c" "d e" "g g"}.l15-f{aspect-ratio:1}.l15-a,.l15-g{aspect-ratio:16/10}.l15-text{min-height:0}}

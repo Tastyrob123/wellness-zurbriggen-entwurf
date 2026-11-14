@@ -1,0 +1,51 @@
+/* 8 · Schluss «Leiste zum Aufklappen» (Robert 24.10.2026, Fassung 12 aus v-anreise-15.html). Stil des Heros (Glasleiste, Messing-Mono,
+   heller Knopf mit Knauf), eigenes Foto. Kein Weichzeichner, weil die Bilder darunter wechseln (Regel 55); nur transform und opacity. */
+.al{padding:0 0 clamp(70px,8vw,120px)}
+.al-buehne{position:relative;height:100vh;min-height:700px;max-height:1100px;overflow:hidden}
+.al-buehne::after{content:'';position:absolute;inset:0;z-index:1;background:rgba(5,9,28,.42);pointer-events:none}
+.al-b{position:absolute;inset:0;opacity:0;transition:opacity .9s ease}
+.al-b.an{opacity:1}
+.al-b img{width:100%;height:100%;object-fit:cover;transform:scale(1.05);transition:transform 2.6s var(--e1)}
+.al-b.an img{transform:none}
+.al-kopf{position:absolute;z-index:2;left:0;right:0;top:12%;display:grid;justify-items:center;gap:16px;text-align:center;padding:0 16px}
+.al-kopf .ro{margin:0;font-size:max(12px,.95vw);letter-spacing:.42em;padding-left:.42em;color:var(--ms-h);text-shadow:0 2px 20px rgba(5,10,40,.6)}
+.al .rt{font-size:clamp(44px,5.6vw,96px);color:#fff;text-shadow:0 2px 34px rgba(5,10,40,.55)}
+.al-unten{position:absolute;z-index:2;left:50%;bottom:9%;width:min(900px,calc(100% - 32px));display:grid;justify-items:center;gap:14px;
+  transform:translate(-50%,46px);transition:transform 1.4s var(--e1) .3s}
+.al.da .al-unten{transform:translate(-50%,0)}
+.al-tafel,.al-leiste{background:rgba(9,14,36,.84);box-shadow:inset 0 0 0 1px rgba(233,212,154,.32),inset 0 1px 0 rgba(255,255,255,.1),0 24px 50px -20px rgba(0,0,0,.6)}
+.al-tafel{display:grid;width:100%;border-radius:var(--rk,22px);padding:24px 30px}
+.al-t{grid-area:1/1;display:grid;grid-template-columns:270px 1fr;gap:24px;align-items:center;opacity:0;transition:opacity .5s ease;visibility:hidden}
+.al-t.an{opacity:1;visibility:visible}
+.al-t b{font-family:var(--licht);font-weight:300;font-size:clamp(28px,2.6vw,42px);line-height:1.05;letter-spacing:-.02em;color:#fff}
+.al-t p{margin:0;font-family:var(--licht);font-size:16px;line-height:1.55;color:#E8ECF6}
+.al-leiste{display:inline-flex;align-items:center;height:64px;padding:6px 6px 6px 10px;border-radius:999px}
+.al-f{all:unset;box-sizing:border-box;cursor:pointer;display:grid;gap:3px;padding:8px 22px;border-radius:999px;white-space:nowrap;transition:box-shadow .4s ease}
+.al-f span{font-family:var(--mono);font-size:9.5px;letter-spacing:.28em;text-transform:uppercase;color:var(--ms-h)}
+.al-f b{font-family:var(--licht);font-weight:400;font-size:15px;color:#fff}
+.al-f[aria-selected="true"]{box-shadow:inset 0 0 0 1px rgba(233,212,154,.55)}
+.al-f:focus-visible,.al-k:focus-visible{outline:2px solid var(--ms-h);outline-offset:3px}
+.al-trenn{width:1px;height:28px;background:rgba(233,212,154,.28)}
+.al-k{margin-left:12px;height:100%;display:inline-flex;align-items:center;gap:14px;padding:0 6px 0 22px;border-radius:999px;text-decoration:none;white-space:nowrap;
+  background:linear-gradient(180deg,#FFFDF8,#EDE6D6);color:#253338;font-family:var(--mono);font-size:11px;letter-spacing:.22em;text-transform:uppercase;
+  box-shadow:inset 0 1px 0 #fff,inset 0 -2px 0 rgba(0,0,0,.12),0 4px 14px rgba(0,0,0,.3);transition:transform .5s var(--e1)}
+.al-k:hover{transform:translateY(-1px)}
+.al-k em{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(180deg,#34444A,#1B262A);box-shadow:inset 0 1px 0 rgba(255,255,255,.2),0 3px 6px rgba(0,0,0,.35)}
+.al-k svg{width:14px;height:14px;stroke:#F4F2EC;fill:none;stroke-width:1.4}
+.al-tel{margin:2px 0 0;font-family:var(--mono);font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:#fff;text-shadow:0 1px 3px rgba(5,10,40,.9),0 1px 18px rgba(5,10,40,.9)}
+.al-tel a{color:var(--ms-h);text-decoration:none;margin-left:.6em}
+.al .rbar{margin-top:clamp(44px,4.4vw,72px)}
+@media (max-width:760px){
+  .al-buehne{height:auto;min-height:100svh;max-height:none}
+  .al-kopf{top:9%}
+  .al-unten{bottom:4%}
+  .al-tafel{padding:20px 22px}
+  .al-t{grid-template-columns:1fr;gap:6px}
+  .al-leiste{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));height:auto;width:100%;border-radius:28px;padding:8px;gap:8px 4px}
+  .al-trenn{display:none}
+  .al-f{padding:8px 4px;justify-items:center;text-align:center;border-radius:18px}
+  .al-f span{font-size:9px;letter-spacing:.2em}
+  .al-f b{font-size:13.5px}
+  .al-k{grid-column:1/-1;margin:0;width:100%;height:52px;justify-content:space-between}
+}
+@media (prefers-reduced-motion:reduce){.al-unten,.al-b,.al-b img,.al-t{transition:none}}

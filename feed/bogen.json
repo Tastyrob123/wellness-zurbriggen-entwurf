@@ -1,0 +1,329 @@
+{
+ "reihen": 12,
+ "stuecke": [
+  {
+   "id": "011-FilmSaasAlmage",
+   "r": 1,
+   "c": 1,
+   "w": 1,
+   "h": 1,
+   "art": "html",
+   "bild": ""
+  },
+  {
+   "id": "012-dessertbuffet",
+   "r": 1,
+   "c": 2,
+   "w": 1,
+   "h": 1,
+   "art": "foto",
+   "bild": "/home/user/haus-wellness-zurbriggen/Zurbriggen Wellnesshotel Saas-Almagell/website/assets/img/dessertbuffet-x.webp"
+  },
+  {
+   "id": "013-folgenSieunsWe",
+   "r": 1,
+   "c": 3,
+   "w": 1,
+   "h": 1,
+   "art": "html",
+   "bild": ""
+  },
+  {
+   "id": "021-2027Jasswochen",
+   "r": 2,
+   "c": 1,
+   "w": 1,
+   "h": 1,
+   "art": "html",
+   "bild": ""
+  },
+  {
+   "id": "022-15GourmetHalbp",
+   "r": 2,
+   "c": 2,
+   "w": 1,
+   "h": 1,
+   "art": "html",
+   "bild": ""
+  },
+  {
+   "id": "023-w-ski",
+   "r": 2,
+   "c": 3,
+   "w": 1,
+   "h": 1,
+   "art": "foto",
+   "bild": "/home/user/haus-wellness-zurbriggen/Zurbriggen Wellnesshotel Saas-Almagell/website/assets/img/w-ski-x.webp"
+  },
+  {
+   "id": "031-sp-flieder",
+   "r": 3,
+   "c": 1,
+   "w": 1,
+   "h": 1,
+   "art": "foto",
+   "bild": "/home/user/haus-wellness-zurbriggen/Zurbriggen Wellnesshotel Saas-Almagell/website/assets/img/sp-flieder-x.webp"
+  },
+  {
+   "id": "032-b-schaukel",
+   "r": 3,
+   "c": 2,
+   "w": 1,
+   "h": 1,
+   "art": "foto",
+   "bild": "/home/user/haus-wellness-zurbriggen/Zurbriggen Wellnesshotel Saas-Almagell/website/assets/img/b-schaukel-x.webp"
+  },
+  {
+   "id": "033-loft-whirlpool",
+   "r": 3,
+   "c": 3,
+   "w": 1,
+   "h": 1,
+   "art": "foto",
+   "bild": "/home/user/haus-wellness-zurbriggen/Zurbriggen Wellnesshotel Saas-Almagell/website/assets/img/loft-whirlpool-x.webp"
+  },
+  {
+   "id": "041-InbegriffenFrü",
+   "r": 4,
+   "c": 1,
+   "w": 1,
+   "h": 1,
+   "art": "html",
+   "bild": ""
+  },
+  {
+   "id": "042-sp-grotte",
+   "r": 4,
+   "c": 2,
+   "w": 1,
+   "h": 1,
+   "art": "foto",
+   "bild": "/home/user/haus-wellness-zurbriggen/Zurbriggen Wellnesshotel Saas-Almagell/website/assets/img/sp-grotte-x.webp"
+  },
+  {
+   "id": "043-w-langlauf",
+   "r": 4,
+   "c": 3,
+   "w": 1,
+   "h": 1,
+   "art": "foto",
+   "bild": "/home/user/haus-wellness-zurbriggen/Zurbriggen Wellnesshotel Saas-Almagell/website/assets/img/w-langlauf-x.webp"
+  },
+  {
+   "id": "051-g-wein",
+   "r": 5,
+   "c": 1,
+   "w": 1,
+   "h": 1,
+   "art": "foto",
+   "bild": "/home/user/haus-wellness-zurbriggen/Zurbriggen Wellnesshotel Saas-Almagell/website/assets/img/g-wein-x.webp"
+  },
+  {
+   "id": "052-a-zweit",
+   "r": 5,
+   "c": 2,
+   "w": 1,
+   "h": 1,
+   "art": "foto",
+   "bild": "/home/user/haus-wellness-zurbriggen/Zurbriggen Wellnesshotel Saas-Almagell/website/assets/img/a-zweit-x.webp"
+  },
+  {
+   "id": "053-schlafenSiesic",
+   "r": 5,
+   "c": 3,
+   "w": 1,
+   "h": 1,
+   "art": "html",
+   "bild": ""
+  },
+  {
+   "id": "061-KarlWildHotelr",
+   "r": 6,
+   "c": 1,
+   "w": 1,
+   "h": 1,
+   "art": "html",
+   "bild": ""
+  },
+  {
+   "id": "062-haus-weit",
+   "r": 6,
+   "c": 2,
+   "w": 1,
+   "h": 1,
+   "art": "foto",
+   "bild": "/home/user/haus-wellness-zurbriggen/Zurbriggen Wellnesshotel Saas-Almagell/website/assets/img/haus-weit-x.webp"
+  },
+  {
+   "id": "063-w-fondue",
+   "r": 6,
+   "c": 3,
+   "w": 1,
+   "h": 1,
+   "art": "foto",
+   "bild": "/home/user/haus-wellness-zurbriggen/Zurbriggen Wellnesshotel Saas-Almagell/website/assets/img/w-fondue-x.webp"
+  },
+  {
+   "id": "071-sp-sense-2",
+   "r": 7,
+   "c": 1,
+   "w": 1,
+   "h": 1,
+   "art": "foto",
+   "bild": "/home/user/haus-wellness-zurbriggen/Zurbriggen Wellnesshotel Saas-Almagell/website/assets/img/sp-sense-2-x.webp"
+  },
+  {
+   "id": "072-k-eis",
+   "r": 7,
+   "c": 2,
+   "w": 1,
+   "h": 1,
+   "art": "foto",
+   "bild": "/home/user/haus-wellness-zurbriggen/Zurbriggen Wellnesshotel Saas-Almagell/website/assets/img/k-eis-x.webp"
+  },
+  {
+   "id": "073-r-4",
+   "r": 7,
+   "c": 3,
+   "w": 1,
+   "h": 1,
+   "art": "foto",
+   "bild": "/home/user/haus-wellness-zurbriggen/Zurbriggen Wellnesshotel Saas-Almagell/website/assets/img/r-4-x.webp"
+  },
+  {
+   "id": "081-FürjedenSterne",
+   "r": 8,
+   "c": 1,
+   "w": 1,
+   "h": 1,
+   "art": "html",
+   "bild": ""
+  },
+  {
+   "id": "082-sp-oben",
+   "r": 8,
+   "c": 2,
+   "w": 1,
+   "h": 1,
+   "art": "foto",
+   "bild": "/home/user/haus-wellness-zurbriggen/Zurbriggen Wellnesshotel Saas-Almagell/website/assets/img/sp-oben-x.webp"
+  },
+  {
+   "id": "083-20262027Jasswo",
+   "r": 8,
+   "c": 3,
+   "w": 1,
+   "h": 1,
+   "art": "html",
+   "bild": ""
+  },
+  {
+   "id": "091-15LoftSuiteHot",
+   "r": 9,
+   "c": 1,
+   "w": 1,
+   "h": 1,
+   "art": "html",
+   "bild": ""
+  },
+  {
+   "id": "092-t-2",
+   "r": 9,
+   "c": 2,
+   "w": 1,
+   "h": 1,
+   "art": "foto",
+   "bild": "/home/user/haus-wellness-zurbriggen/Zurbriggen Wellnesshotel Saas-Almagell/website/assets/img/t-2-x.webp"
+  },
+  {
+   "id": "093-w-schneeschuh",
+   "r": 9,
+   "c": 3,
+   "w": 1,
+   "h": 1,
+   "art": "foto",
+   "bild": "/home/user/haus-wellness-zurbriggen/Zurbriggen Wellnesshotel Saas-Almagell/website/assets/img/w-schneeschuh-x.webp"
+  },
+  {
+   "id": "101-kamin",
+   "r": 10,
+   "c": 1,
+   "w": 1,
+   "h": 1,
+   "art": "foto",
+   "bild": "/home/user/haus-wellness-zurbriggen/Zurbriggen Wellnesshotel Saas-Almagell/website/assets/img/kamin-x.webp"
+  },
+  {
+   "id": "102-sp-massage",
+   "r": 10,
+   "c": 2,
+   "w": 1,
+   "h": 1,
+   "art": "foto",
+   "bild": "/home/user/haus-wellness-zurbriggen/Zurbriggen Wellnesshotel Saas-Almagell/website/assets/img/sp-massage-x.webp"
+  },
+  {
+   "id": "103-entspannenSies",
+   "r": 10,
+   "c": 3,
+   "w": 1,
+   "h": 1,
+   "art": "html",
+   "bild": ""
+  },
+  {
+   "id": "111-b-empfang",
+   "r": 11,
+   "c": 1,
+   "w": 1,
+   "h": 1,
+   "art": "foto",
+   "bild": "/home/user/haus-wellness-zurbriggen/Zurbriggen Wellnesshotel Saas-Almagell/website/assets/img/b-empfang-x.webp"
+  },
+  {
+   "id": "112-setzenSiesichW",
+   "r": 11,
+   "c": 2,
+   "w": 1,
+   "h": 1,
+   "art": "html",
+   "bild": ""
+  },
+  {
+   "id": "113-16ArtbyHeinzJu",
+   "r": 11,
+   "c": 3,
+   "w": 1,
+   "h": 1,
+   "art": "html",
+   "bild": ""
+  },
+  {
+   "id": "121-IhrGepäckistsc",
+   "r": 12,
+   "c": 1,
+   "w": 1,
+   "h": 1,
+   "art": "html",
+   "bild": ""
+  },
+  {
+   "id": "122-h-winter",
+   "r": 12,
+   "c": 2,
+   "w": 1,
+   "h": 1,
+   "art": "foto",
+   "bild": "/home/user/haus-wellness-zurbriggen/Zurbriggen Wellnesshotel Saas-Almagell/website/assets/img/h-winter-x.webp"
+  },
+  {
+   "id": "123-kommenSienäher",
+   "r": 12,
+   "c": 3,
+   "w": 1,
+   "h": 1,
+   "art": "html",
+   "bild": ""
+  }
+ ]
+}

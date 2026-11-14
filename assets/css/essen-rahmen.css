@@ -1,0 +1,23 @@
+/* Wellness & Spa · «setzen Sie sich», Fassung 3 «Rahmen aus Bildern» (Robert 25.10.2026, aus _varianten/essen-15b). Die Karte in der Mitte,
+   rundum zehn Bilder Kante an Kante, Knopf mittig. Bewegung: der Rahmen schliesst sich um die Karte (nur transform, von Anfang an sichtbar). */
+.er-w{max-width:1320px;margin:0 auto;display:grid;gap:10px}
+.er .er-f{border-radius:10px;box-shadow:none}
+.er-reihe{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.er-reihe .er-f{aspect-ratio:16/10}
+.er-mitte{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2.02fr) minmax(0,1fr);gap:10px}
+.er-seite{height:100%;min-height:200px}
+.er-karte{background:#EEE8DE;border-radius:10px;padding:clamp(34px,4vw,64px) clamp(28px,4vw,72px)}
+.er .rt{font-size:clamp(38px,3.6vw,62px)}
+.er .rl{max-width:38ch}
+.er-menu{list-style:none;margin:18px 0 0;padding:0}
+.er-menu li{padding:12px 0;border-top:1px solid rgba(138,106,42,.28)}
+.er-menu li .ro{margin:0 0 4px;font-size:10px}
+.er-menu li p:last-child{margin:0;font-family:var(--licht);font-size:clamp(14.5px,1.05vw,16px);line-height:1.45}
+.er-menu i{font-style:normal;font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#8A6A2A;margin:0 .25em}
+.er-karte .r-knoepfe{justify-content:center;margin-top:clamp(28px,3vw,44px)}
+.er-oben{transform:translateY(-70px)}.er-unten{transform:translateY(70px)}.er .er-l{transform:translateY(-50px)}.er .er-r{transform:translateY(50px)}
+.er-oben,.er-unten,.er .er-l,.er .er-r{transition:transform 1.7s var(--e1)}
+.er.da .er-oben,.er.da .er-unten,.er.da .er-l,.er.da .er-r{transform:none}
+@media(max-width:900px){
+ .er-reihe{grid-template-columns:1fr 1fr}.er-mitte{grid-template-columns:1fr 1fr}.er-karte{grid-column:1/-1;order:-1;padding:30px 22px}.er-seite{aspect-ratio:1;height:auto}
+}

@@ -1,0 +1,226 @@
+/* Wellness & Spa · Zimmerseite, 15 Fassungen im Carlton-Rahmen (24.10.2026). Je Fassung eine Idee, nur transform/opacity (Kanten mit clip-path). */
+.zsv{--gold:#8A6A2A;--rk:clamp(14px,1.4vw,22px)}
+.zsv .ri img{max-width:none}
+.zsv .stz,.zsv .gk img,.zsv .pk-marke img{width:auto;height:auto}
+
+/* 02 So gross wie das Zimmer */
+.zs02 .flt-ro{margin:0 0 18px}
+.zs02 .flt{display:flex;flex-direction:column;gap:12px;height:min(90vh,860px);transform:translateY(46px);transition:transform 1.4s var(--e1)}
+.zs02 .flt.sw-da{transform:none}
+.zs02 .flt-r{display:flex;gap:12px;flex:var(--s) 1 0;min-height:0}
+.zs02 .flt-k{position:relative;flex:var(--qm) 1 0;min-width:0;text-decoration:none;color:var(--ink)}
+.zs02 .flt-k figure{height:100%;margin:0;border-radius:var(--rk);overflow:hidden;box-shadow:0 30px 60px -36px rgba(24,33,63,.55)}
+.zs02 .flt-k img{width:100%;height:100%;object-fit:cover;transform:scale(1.08);transition:transform 1.8s var(--e1)}
+.zs02 .flt.sw-da .flt-k img{transform:none}
+@media (hover:hover){.zs02 .flt.sw-da .flt-k:hover img{transform:scale(1.03);transition-duration:.9s}}
+.zs02 .flt-schild{position:absolute;left:12px;bottom:12px;margin:0;padding:10px 14px;border-radius:12px;background:#FFFDF8;box-shadow:0 10px 22px -12px rgba(24,33,63,.5)}
+.zs02 .flt-schild b{display:block;font-family:var(--licht);font-weight:400;font-size:clamp(14px,1.2vw,19px)}
+.zs02 .flt-schild span{display:block;margin-top:3px;font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;color:var(--gold)}
+
+/* 03 Drei Gruppen */
+.zs03 .gp{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:end;gap:14px clamp(24px,3vw,50px);padding:clamp(26px,3vw,46px) 0;border-top:1px solid rgba(24,33,63,.14)}
+.zs03 .gp:first-of-type{border-top:0;padding-top:0}
+.zs03 .gp-w{display:contents}
+.zs03 .gp-w .rs{margin:0 0 8px;justify-self:end;text-align:right}
+.zs03 .gp-k{grid-column:1/-1;margin-top:clamp(10px,1.2vw,18px)}
+.zs03 .gp-wort{margin:0;overflow:hidden;font-family:var(--licht);font-weight:300;font-size:clamp(40px,4.2vw,72px);line-height:1.02;letter-spacing:-.03em}
+.zs03 .gp-wort span{display:inline-block;transform:translateY(105%);transition:transform 1.3s var(--e1)}
+.zs03 .zueber.da .gp-wort span{transform:none}
+.zs03 .gp-k{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(16px,1.8vw,26px)}
+.zs03 .gp--2 .gp-k{grid-template-columns:repeat(2,minmax(0,1fr))}
+.zs03 .gp--2 .zk figure{aspect-ratio:16/10}
+
+/* 04 Ansichtskarten */
+.zs04 .pk-tipp{margin:0 0 18px}
+.zs04 .pk{position:relative;display:grid;perspective:1800px}
+.zs04 .pk>.zk,.zs04 .pk-h{grid-area:1/1;backface-visibility:hidden;-webkit-backface-visibility:hidden}
+.zs04 .pk>.zk.sw-da{transition:transform .9s var(--e1)}
+.zs04 .pk-h{display:grid;grid-template-columns:1.25fr 1fr;padding:clamp(20px,2vw,30px);border-radius:calc(var(--rk) + 8px);background:#FFFDF8;color:var(--ink);
+ box-shadow:0 34px 60px -40px rgba(24,33,63,.55),0 8px 18px -12px rgba(24,33,63,.25);transform:rotateY(180deg);transition:transform .9s var(--e1)}
+.zs04 .pk.dreh>.zk{transform:rotateY(-180deg)}
+.zs04 .pk.dreh .pk-h{transform:none}
+@media (hover:hover){.zs04 .pk:hover>.zk.sw-da{transform:rotateY(-180deg)}.zs04 .pk:hover .pk-h{transform:none}}
+.zs04 .pk-hl{padding-right:20px;border-right:1px solid rgba(24,33,63,.15);overflow:hidden}
+.zs04 .pk-n{margin:0;font-family:var(--licht);font-size:clamp(20px,1.6vw,26px);line-height:1.2}
+.zs04 .pk-m{margin:8px 0 0;font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);line-height:1.6}
+.zs04 .pk-hl ul{list-style:none;margin:14px 0 0;padding:0}
+.zs04 .pk-hl li{padding:7px 0;border-top:1px dashed rgba(24,33,63,.2);font-size:13px;line-height:1.45}
+.zs04 .pk-hr{padding-left:20px;display:flex;flex-direction:column}
+.zs04 .pk-marke{align-self:flex-end;display:flex;flex-direction:column;align-items:center;gap:5px;margin:0;padding:10px;border:1px dashed rgba(138,106,42,.6);font-family:var(--mono);font-size:8px;letter-spacing:.14em;color:var(--gold)}
+.zs04 .pk-marke img{width:40px}
+.zs04 .pk-preis{margin:auto 0 0;padding:10px 0;border-bottom:1px solid rgba(24,33,63,.25);font-family:var(--mono);font-size:12px;letter-spacing:.1em}
+.zs04 .pk-hr a{margin-top:12px;font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);text-decoration:none}
+
+/* 05 Aufenthaltsrechner */
+.zs05 .ar{margin:0 0 clamp(26px,2.6vw,40px);padding:clamp(20px,2vw,30px) clamp(22px,2.6vw,40px);border-radius:calc(var(--rk) + 10px);background:#0E1638;color:#F4F2EC;box-shadow:0 40px 70px -40px rgba(10,17,41,.8)}
+.zs05 .ar .ro{color:#D9B758}
+.zs05 .ar-zeile{display:flex;flex-wrap:wrap;align-items:center;gap:18px clamp(20px,3vw,48px);margin-top:12px}
+.zs05 .ar-zeile>i{width:1px;height:46px;background:rgba(233,212,154,.25)}
+.zs05 .ar-zeile .rk{margin:0 0 0 auto}
+.zs05 .ar-st{display:flex;align-items:center;gap:16px}
+.zs05 .ar-st button{width:44px;height:44px;border-radius:50%;border:0;cursor:pointer;display:grid;place-items:center;font:400 22px/1 var(--licht);color:#1B2440;
+ background:linear-gradient(180deg,#F1E2B4,#C9A54E);box-shadow:inset 0 1px 0 rgba(255,255,255,.6),0 6px 14px -6px rgba(0,0,0,.6);transition:transform .3s var(--e1)}
+.zs05 .ar-st button:active{transform:scale(.92)}
+.zs05 .ar-st p{margin:0;min-width:7.5em;text-align:center}
+.zs05 .ar-st b{display:block;font-family:var(--licht);font-weight:300;font-size:clamp(34px,3vw,48px);line-height:1;font-variant-numeric:tabular-nums}
+.zs05 .ar-st span{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;opacity:.75}
+.zs05 .ar-h{margin:16px 0 0;font-size:13px;opacity:.65}
+.zs05 .zk-fuss b{font-variant-numeric:tabular-nums}
+.zs05 .zk-fuss small{display:block;margin-top:4px;font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;color:var(--gold)}
+
+/* 06 Zwei vergleichen */
+.zs06 .vg-tipp{margin:0 0 18px}
+.zs06 .vg-w{position:relative;display:grid;transform:translateY(46px);transition:transform 1.4s var(--e1)}
+.zs06 .vg-w.sw-da{transform:none}
+.zs06 .vg-w>.zk{transform:none}
+.zs06 .vg-b{position:absolute;z-index:4;right:22px;top:22px;display:flex;align-items:center;gap:8px;padding:6px 14px 6px 6px;border:0;border-radius:999px;cursor:pointer;background:#FFFDF8;color:var(--ink);
+ font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;box-shadow:0 10px 22px -12px rgba(24,33,63,.6)}
+.zs06 .vg-b i{width:26px;height:26px;border-radius:50%;display:grid;place-items:center;font-style:normal;font-size:16px;background:linear-gradient(180deg,#F1E2B4,#C9A54E);transition:transform .4s var(--e1)}
+.zs06 .vg-b[aria-pressed="true"]{background:#0E1638;color:#E9D49A}
+.zs06 .vg-b[aria-pressed="true"] i{transform:rotate(45deg)}
+.zs06 .vg-p{position:fixed;z-index:110;left:0;right:0;bottom:0;padding:0 16px 84px;transform:translateY(105%);transition:transform .8s var(--e1);pointer-events:none}
+.zs06 .vg-p.halb{transform:translateY(calc(100% - 150px))}
+.zs06 .vg-p.offen{transform:none}
+.zs06 .vg-in{max-width:1180px;margin:0 auto;padding:22px clamp(18px,2.4vw,36px) 26px;border-radius:26px;background:#FFFDF8;box-shadow:0 -20px 80px -20px rgba(10,17,41,.55);pointer-events:auto;max-height:76vh;overflow:auto}
+.zs06 .vg-kopf{display:flex;justify-content:space-between;align-items:center}
+.zs06 .vg-zu{border:0;background:none;cursor:pointer;font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:#7A8196;text-decoration:underline;text-underline-offset:3px}
+.zs06 .vg-spalten{display:grid;grid-template-columns:1fr 1fr;gap:clamp(18px,3vw,48px);margin-top:14px}
+.zs06 .vg-s figure{margin:0;aspect-ratio:16/10;border-radius:var(--rk);overflow:hidden}
+.zs06 .vg-s img{width:100%;height:100%;object-fit:cover}
+.zs06 .vg-s h3{margin:14px 0 0;font-family:var(--licht);font-weight:400;font-size:clamp(22px,2vw,32px)}
+.zs06 .vg-s dl{margin:12px 0 0}
+.zs06 .vg-s dl div{display:grid;grid-template-columns:90px 1fr;gap:12px;padding:9px 0;border-top:1px solid rgba(24,33,63,.12);font-size:14px;line-height:1.45}
+.zs06 .vg-s dt{font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);padding-top:3px}
+.zs06 .vg-s dd{margin:0}
+
+/* 07 Zimmerkarte öffnet sich */
+.zs07 .zk7{position:fixed;inset:0;z-index:110;pointer-events:none}
+.zs07 .zk7-hg{position:absolute;inset:0;background:#0A1129;opacity:0;transition:opacity .5s}
+.zs07 .zk7-blatt{color:var(--ink,#18213F);position:absolute;left:clamp(12px,4vw,64px);right:clamp(12px,4vw,64px);top:clamp(70px,8vh,100px);bottom:84px;border-radius:28px;background:#FFFDF8;overflow:auto;
+ padding:20px clamp(18px,3vw,48px) 40px;transform:translateY(110%);transition:transform .8s var(--e1);box-shadow:0 -30px 80px -30px rgba(0,0,0,.6)}
+.zs07 .zk7.offen{pointer-events:auto}
+.zs07 .zk7.offen .zk7-hg{opacity:.78}
+.zs07 .zk7.offen .zk7-blatt{transform:none}
+.zs07 .zk7-kopf{position:sticky;top:-20px;z-index:3;display:flex;align-items:center;gap:10px;padding:14px 0;background:#FFFDF8}
+.zs07 .zk7-kopf .ro{margin:0 auto 0 8px}
+.zs07 .zk7-pf{width:44px;height:44px;border:0;border-radius:50%;cursor:pointer;display:grid;place-items:center;background:linear-gradient(180deg,#F1E2B4,#C9A54E)}
+.zs07 .zk7-pf svg{width:15px;height:15px;stroke:#1B2440;fill:none;stroke-width:1.5}
+.zs07 .zk7-zu{border:0;background:#0E1638;color:#F4F2EC;border-radius:999px;height:44px;padding:0 20px;cursor:pointer;font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase}
+.zs07 .zk7-inhalt .zd-in{transform:none!important;margin-top:10px}
+.zs07 .zk7-inhalt .zd-b img{transform:none!important}
+.zs07 .zk7-inhalt.wechsel{animation:zk7w .6s var(--e1)}
+@keyframes zk7w{from{transform:translateX(30px)}to{transform:none}}
+html.zk7-zu-scroll{overflow:hidden}
+
+/* 08 Kartenstapel */
+.zs08 .zd{position:sticky;top:calc(70px + var(--i) * 14px);border-radius:32px 32px 0 0;box-shadow:0 -24px 50px -34px rgba(24,33,63,.55);padding-top:clamp(40px,4vw,60px);padding-bottom:clamp(40px,4vw,60px)}
+.zs08 .zd .zd-b{height:min(56vh,520px)}
+.zs08 .zd-z{display:none}
+.zs08 .zl{position:relative;z-index:2}
+
+/* 09 Bühne und Zimmerliste */
+.zs09 .bz{overflow:visible}
+.zs09 .bz-in{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(30px,4.5vw,80px);align-items:start}
+.zs09 .bz-buehne{position:sticky;top:14vh;height:min(70vh,640px)}
+.zs09 .bz-f{position:absolute;inset:0;opacity:0;transition:opacity .7s ease}
+.zs09 .bz-f.an{opacity:1}
+.zs09 .bz-f .zd-b{height:100%}
+.zs09 .bz-f img{transform:scale(1.04);transition:transform 1.6s var(--e1)}
+.zs09 .bz-f.an img{transform:none}
+.zs09 .bz-e{min-height:86vh;display:flex;flex-direction:column;justify-content:center;border-top:1px solid rgba(24,33,63,.12);scroll-margin-top:90px}
+.zs09 .bz-e .zd-n{color:#9AA0B2;transition:color .5s}
+.zs09 .bz-e.an .zd-n{color:var(--ink)}
+.zs09 .bz-mob{display:none}
+
+/* 10 Detail zuerst */
+.zs10 .zd-f1 img{transform-origin:var(--o);transform:scale(var(--z,1))!important;transition:none!important;will-change:transform}
+
+/* 11 Grosse Namen */
+.zs11 .gn{padding-top:clamp(70px,7vw,110px);padding-bottom:clamp(60px,6vw,96px)}
+.zs11 .gn-band{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;padding-bottom:clamp(18px,2vw,28px);margin-bottom:clamp(26px,3vw,44px);border-bottom:1px solid rgba(24,33,63,.16)}
+.zs11 .gn-n{margin:0;overflow:hidden;font-family:var(--licht);font-weight:300;font-size:clamp(44px,6.2vw,108px);line-height:1;letter-spacing:-.035em}
+.zs11 .gn-n span{display:inline-block;transform:translateY(105%);transition:transform 1.3s var(--e1)}
+.zs11 .gn-band.sw-da .gn-n span{transform:none}
+.zs11 .gn-m{margin:0 0 10px;font-family:var(--mono);font-size:12px;letter-spacing:.18em;color:var(--gold);white-space:nowrap}
+.zs11 .gn-in{display:grid;grid-template-columns:minmax(0,8fr) minmax(0,4fr);gap:clamp(26px,3.5vw,60px);align-items:start}
+.zs11 .gn-in .zd-b{height:min(56vh,520px)}
+.zs11 .gn-in .zd-b img{transform:none}
+.zs11 .gn-in .zd-ro{margin-top:0}
+
+/* 12 Ihr Gepäck ist schon da */
+.zs12 .gk-tipp{margin:clamp(20px,2vw,30px) 0 0;max-width:60ch}
+.zs12 .gk-w{position:relative}
+.zs12 .gk{position:absolute;z-index:3;top:-24px;right:clamp(14px,2vw,30px);width:clamp(180px,14vw,220px);padding:30px 18px 16px;border-radius:12px;background:#FFFDF8;color:var(--ink);
+ box-shadow:0 26px 40px -22px rgba(24,33,63,.6);transform-origin:50% 0;transform:rotate(-12deg);transition:transform 1.8s cubic-bezier(.3,1.6,.4,1) .2s}
+.zs12 .zd--r .gk{right:auto;left:clamp(14px,2vw,30px);transform:rotate(12deg)}
+.zs12 .zd-in.sw-da .gk{transform:rotate(-3deg)}
+.zs12 .zd--r .zd-in.sw-da .gk{transform:rotate(3deg)}
+.zs12 .gk-loch{position:absolute;top:11px;left:50%;width:24px;height:7px;margin-left:-12px;border-radius:4px;background:var(--pa);box-shadow:inset 0 0 0 1.5px #C9A54E}
+.zs12 .gk-k,.zs12 .gk-f{margin:0;font-family:var(--mono);font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+.zs12 .gk-f{margin-top:10px;color:#7A8196;line-height:1.5}
+.zs12 .gk-n{margin:6px 0 10px;font-family:var(--licht);font-size:19px;line-height:1.2}
+.zs12 .gk-z{margin:0;padding:7px 0;border-top:1px dashed rgba(24,33,63,.22);display:grid;grid-template-columns:48px 1fr;gap:8px;font-size:12.5px}
+.zs12 .gk-z span{font-family:var(--mono);font-size:8.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);padding-top:2px}
+.zs12 .gk-z b{font-weight:400}
+
+/* 13 Zimmerbuch */
+.zs13 .zb-buch{position:relative;padding-right:56px}
+.zs13 .zb-seiten{position:relative;height:min(76vh,700px);border-radius:var(--rk);background:#FFFDF8;perspective:2400px;
+ box-shadow:0 50px 90px -50px rgba(24,33,63,.55),0 2px 0 #E7DFD0,0 4px 0 #EFE8DB,0 6px 0 #E7DFD0}
+.zs13 .zb-seiten::after{content:"";position:absolute;top:22px;bottom:22px;left:52%;width:1px;background:rgba(24,33,63,.12)}
+.zs13 .zb-dop{position:absolute;inset:0;display:grid;grid-template-columns:52fr 48fr;opacity:0;pointer-events:none;transition:opacity .2s;scroll-margin-top:120px}
+.zs13 .zb-dop.an{opacity:1;pointer-events:auto;transition:opacity .5s .18s}
+.zs13 .zb-l{padding:clamp(18px,2vw,28px)}
+.zs13 .zb-l .zd-b{height:100%}
+.zs13 .zb-l .zd-b img{transform:none}
+.zs13 .zb-r{padding:clamp(26px,3vw,50px);overflow:auto;transform-origin:0 50%}
+.zs13 .zb-dop.an .zb-r{animation:zbblatt .9s var(--e1)}
+@keyframes zbblatt{from{transform:rotateY(-22deg)}to{transform:none}}
+.zs13 .zb-reiterleiste{position:absolute;right:0;top:22px;bottom:22px;display:flex;flex-direction:column;gap:5px}
+.zs13 .zb-reiter{flex:1;min-height:0;width:52px;border:0;border-radius:0 8px 8px 0;background:#EEE8DE;color:#5D667E;cursor:pointer;writing-mode:vertical-rl;overflow:hidden;white-space:nowrap;
+ font-family:var(--mono);font-size:9px;letter-spacing:.08em;text-transform:uppercase;transition:transform .4s var(--e1)}
+.zs13 .zb-reiter.an{background:#0E1638;color:#E9D49A;transform:translateX(-6px)}
+.zs13 .zb-reiter:hover{transform:translateX(-4px)}
+.zs13 .zb-unten{display:flex;align-items:center;gap:10px;margin-top:24px}
+.zs13 .zb-unten .ro{margin:0 0 0 12px}
+.zs13 .zb-pf{width:54px;height:54px;border:0;border-radius:50%;cursor:pointer;display:grid;place-items:center;background:linear-gradient(180deg,#F1E2B4,#C9A54E);box-shadow:inset 0 1px 0 rgba(255,255,255,.6),0 8px 18px -8px rgba(0,0,0,.4)}
+.zs13 .zb-pf svg{width:16px;height:16px;stroke:#1B2440;fill:none;stroke-width:1.5}
+
+/* 14 Die Zahlen des Zimmers */
+.zs14 .zzn{display:grid;grid-template-columns:1.25fr 1fr 1fr;margin:26px 0 0;border-top:1px solid rgba(24,33,63,.16);border-bottom:1px solid rgba(24,33,63,.16)}
+.zs14 .zzn p{margin:0;padding:16px 16px 14px 0}
+.zs14 .zzn p+p{padding-left:16px;border-left:1px solid rgba(24,33,63,.16)}
+.zs14 .zzn b{display:block;font-family:var(--licht);font-weight:200;font-size:clamp(40px,4.2vw,72px);line-height:1;letter-spacing:-.04em;white-space:nowrap}
+.zs14 .zzn span{display:block;margin-top:8px;font-family:var(--mono);font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+.zs14 .zzn b{transform:translateY(30px);transition:transform 1.3s var(--e1)}
+.zs14 .zzn p:nth-child(2) b{transition-delay:.08s}.zs14 .zzn p:nth-child(3) b{transition-delay:.16s}
+.zs14 .zzn{overflow:hidden}
+.zs14 .zd-in.sw-da .zzn b{transform:none}
+
+/* 15 Winterabend */
+.zs15 .zueber,.zs15 .zd,.zs15 .upreis{background:#0E1638;color:#F4F2EC}
+.zs15 .zd.ri-leinen{background:#0A1129}
+.zs15 .upreis{background:#141C42}
+.zs15 .zk{background:#18214A;color:#F4F2EC;box-shadow:0 1px 0 rgba(255,255,255,.06) inset,0 40px 70px -40px rgba(0,0,0,.85)}
+.zs15 .zk-schild{background:#0A1129;color:#F4F2EC;box-shadow:0 10px 22px -12px rgba(0,0,0,.7)}
+.zs15 .zk-eck,.zs15 .zk-fuss span,.zs15 .zd-ro,.zs15 .zd-eck i{color:#D9B758}
+.zs15 .zk-hinweis,.zs15 .zd-eck,.zs15 .zd-eck span+span,.zs15 .ul2 li,.zs15 .us-kopf{border-color:rgba(233,212,154,.2)!important}
+.zs15 .zd-b figure,.zs15 .zk figure{box-shadow:0 0 0 1px rgba(233,212,154,.18),0 30px 80px -30px rgba(233,190,110,.35),0 40px 70px -40px rgba(0,0,0,.9)}
+.zs15 .zd-b img{filter:none}
+.zs15 .zd .rk--h,.zs15 .upreis .rk--h{color:#18213F}
+
+@media (max-width:900px){
+ .zs03 .gp,.zs11 .gn-in{grid-template-columns:1fr}
+ .zs03 .gp-k,.zs03 .gp--2 .gp-k{grid-template-columns:1fr}
+ .zs02 .flt{height:auto}.zs02 .flt-r{flex-direction:column;flex:none}.zs02 .flt-k{flex:none;height:calc(var(--qm) * 5px)}
+ .zs04 .pk-h{grid-template-columns:1fr}.zs04 .pk-hl{border:0;padding:0}.zs04 .pk-marke{display:none}.zs04 .pk-hr{padding:12px 0 0}
+ .zs05 .ar-zeile .rk{margin-left:0}.zs05 .ar-zeile>i{display:none}
+ .zs06 .vg-spalten{grid-template-columns:1fr 1fr;gap:12px}.zs06 .vg-s dl div{grid-template-columns:1fr;gap:2px}
+ .zs08 .zd{position:relative;top:auto;border-radius:0}
+ .zs09 .bz-in{grid-template-columns:1fr}.zs09 .bz-buehne{display:none}.zs09 .bz-mob{display:block;margin-bottom:18px}.zs09 .bz-mob .zd-b{height:auto}.zs09 .bz-e{min-height:0;padding:30px 0}.zs09 .bz-e .zd-n{color:var(--ink)}
+ .zs11 .gn-band{flex-direction:column;align-items:flex-start;gap:8px}.zs11 .gn-in .zd-b{height:auto}
+ .zs12 .gk{position:relative;top:auto;right:auto!important;left:auto!important;margin:-30px 16px 0 auto}
+ .zs13 .zb-buch{padding-right:0}.zs13 .zb-seiten{height:auto}.zs13 .zb-seiten::after{display:none}.zs13 .zb-dop{position:relative;display:none;grid-template-columns:1fr}.zs13 .zb-dop.an{display:grid}
+ .zs13 .zb-l .zd-b{height:auto}.zs13 .zb-reiterleiste{position:static;flex-direction:row;overflow-x:auto;margin-top:12px}.zs13 .zb-reiter{writing-mode:horizontal-tb;width:auto;flex:none;padding:10px 14px;border-radius:8px}
+ .zs14 .zzn{grid-template-columns:1fr 1fr 1fr}.zs14 .zzn b{font-size:30px}
+}

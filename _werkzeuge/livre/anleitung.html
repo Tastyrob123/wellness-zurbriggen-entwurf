@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="de">
+<head><script data-wurzel>/* Wurzel-Weiche: Seite laeuft an der Wurzel einer Adresse oder in einem Unterordner (github.io/<repo>/) */(function(){var D=2,p=location.pathname.split('/');p.splice(p.length-1-D,D+1);var W=p.join('/')+'/';window.__W=W;if(W==='/')return;var O=location.origin;
+function f(u){if(typeof u!=='string')return u;if(u.indexOf(O+'/')===0)return O+f(u.slice(O.length));if(u.charAt(0)!=='/'||u.charAt(1)==='/'||u.indexOf(W)===0||u+'/'===W)return u;return W+u.slice(1)}
+function s(v){return typeof v!=='string'?v:v.replace(/(^|,)(\s*)(\S+)/g,function(m,a,b,u){return a+b+f(u)})}
+function c(v){return typeof v!=='string'?v:v.replace(/url\(\s*(['"]?)([^'")]+)/g,function(m,q,u){return 'url('+q+f(u)})}
+function h(v){return typeof v!=='string'?v:c(v.replace(/(\s(?:src|href|poster|action|data-src|data-href)\s*=\s*)(["'])([^"']*)\2/gi,function(m,a,q,u){return a+q+f(u)+q}).replace(/(\s(?:srcset|imagesrcset|data-srcset)\s*=\s*)(["'])([^"']*)\2/gi,function(m,a,q,u){return a+q+s(u)+q}))}
+function d(K,k,g){K=window[K];if(!K)return;var x=Object.getOwnPropertyDescriptor(K.prototype,k);if(!x||!x.set)return;Object.defineProperty(K.prototype,k,{configurable:true,enumerable:x.enumerable,get:x.get,set:function(v){x.set.call(this,g(v))}})}
+[['HTMLImageElement','src'],['HTMLScriptElement','src'],['HTMLLinkElement','href'],['HTMLIFrameElement','src'],['HTMLSourceElement','src'],['HTMLMediaElement','src'],['HTMLVideoElement','poster'],['HTMLAnchorElement','href'],['HTMLAreaElement','href'],['HTMLFormElement','action'],['HTMLEmbedElement','src'],['HTMLObjectElement','data']].forEach(function(z){d(z[0],z[1],f)});
+[['HTMLImageElement','srcset'],['HTMLSourceElement','srcset'],['HTMLLinkElement','imageSrcset']].forEach(function(z){d(z[0],z[1],s)});
+d('Element','innerHTML',h);d('Element','outerHTML',h);var iah=Element.prototype.insertAdjacentHTML;Element.prototype.insertAdjacentHTML=function(w,v){return iah.call(this,w,h(v))};
+var sa=Element.prototype.setAttribute;Element.prototype.setAttribute=function(n,v){var l=String(n).toLowerCase();if(/^(src|href|poster|action|data|data-src|data-href)$/.test(l))v=f(v);else if(/srcset$/.test(l))v=s(v);else if(l==='style')v=c(v);return sa.call(this,n,v)};
+var st=CSSStyleDeclaration.prototype,sp=st.setProperty;st.setProperty=function(n,v,q){return sp.call(this,n,c(v),q)};['background','backgroundImage','cssText','maskImage','webkitMaskImage','listStyleImage','borderImageSource','content'].forEach(function(k){var x=Object.getOwnPropertyDescriptor(st,k);if(x&&x.set)Object.defineProperty(st,k,{configurable:true,enumerable:x.enumerable,get:x.get,set:function(v){x.set.call(this,c(v))}})});
+var F=window.fetch;if(F)window.fetch=function(i,o){if(typeof i==='string')i=f(i);else if(i instanceof URL)i=f(i.href);return F.call(this,i,o)};
+var XO=XMLHttpRequest.prototype.open;XMLHttpRequest.prototype.open=function(){var a=[].slice.call(arguments);a[1]=f(a[1] instanceof URL?a[1].href:a[1]);return XO.apply(this,a)};
+if(navigator.sendBeacon){var B=navigator.sendBeacon;navigator.sendBeacon=function(u,x){return B.call(navigator,f(u),x)}}
+var wo=window.open;window.open=function(u){var a=[].slice.call(arguments);a[0]=f(u);return wo.apply(window,a)};
+var dw=document.write,dl=document.writeln;document.write=function(){return dw.apply(document,[].map.call(arguments,h))};document.writeln=function(){return dl.apply(document,[].map.call(arguments,h))};
+['pushState','replaceState'].forEach(function(k){var o=history[k];history[k]=function(a,b,u){return o.call(history,a,b,u==null?u:f(String(u)))}});
+function e(el){if(!el||el.nodeType!==1)return;['src','href','poster','action'].forEach(function(a){var v=el.getAttribute(a);if(v&&v.charAt(0)==='/'){var z=f(v);if(z!==v)sa.call(el,a,z)}});var t=el.getAttribute('srcset');if(t&&/(^|,)\s*\/[^\/]/.test(t)){var z=s(t);if(z!==t)sa.call(el,'srcset',z)}t=el.getAttribute('style');if(t&&/url\(\s*['"]?\/[^\/]/.test(t)){z=c(t);if(z!==t)sa.call(el,'style',z)}}
+new MutationObserver(function(ms){ms.forEach(function(m){if(m.type==='attributes')e(m.target);else m.addedNodes.forEach(function(n){if(n.nodeType!==1)return;e(n);var l=n.querySelectorAll('[src],[href],[srcset],[poster],[action],[style]');for(var i=0;i<l.length;i++)e(l[i])})})}).observe(document.documentElement,{childList:true,subtree:true,attributes:true,attributeFilter:['src','href','srcset','poster','action','style']})})();</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Anleitung · Das Markenbuch · Wellness &amp; Spa Pirmin Zurbriggen</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0A1129">
+<link rel="icon" href="../../assets/oberflaeche/kleid/zurbriggen-zeichen.svg" type="image/svg+xml">
+<script src="../../assets/oberflaeche/kleid/zurbriggen.js"></script>
+<link rel="preload" href="../../assets/fonts/montserrat-300-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:Montserrat;font-style:normal;font-weight:100 900;font-display:block;src:url('../../assets/fonts/montserrat-300-latin.woff2') format('woff2')}
+@font-face{font-family:'Instrument Sans';font-style:normal;font-weight:400 700;font-display:swap;src:url('../../assets/fonts/InstrumentSans-normal-400_600.woff2') format('woff2')}
+@font-face{font-family:'DM Mono';font-style:normal;font-weight:400;font-display:swap;src:url('../../assets/fonts/DMMono-normal-400.woff2') format('woff2')}
+:root{--nacht:#0A1129;--navy:#0A1129;--blau:#0E1638;--papier:#F6F1EA;--weiss:#F4F2EC;--gold:#D9B758;--taupe:#8A6A2A;--tinte:#18213F;--blatt:#FBF8F3;--linie:rgba(24,33,63,.12);--leise:rgba(24,33,63,.68);
+  --serif:Montserrat,'Instrument Sans',system-ui,sans-serif;--sans:'Instrument Sans','Helvetica Neue',Arial,sans-serif;--mono:'DM Mono',ui-monospace,Menlo,monospace;--e1:cubic-bezier(.16,1,.3,1);--e2:cubic-bezier(.32,.72,0,1)}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--papier);color:var(--tinte);font:16px/1.6 var(--sans);-webkit-font-smoothing:antialiased}
+h1,h2,h3,p,ol,ul,figure{margin:0;padding:0}ol,ul{list-style:none}a{color:inherit;text-decoration:none}button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer}
+h1,h2,h3,.thema a span{font-family:var(--serif);font-weight:300;letter-spacing:-.005em}
+:focus-visible{outline:1.5px solid var(--taupe);outline-offset:3px;border-radius:6px}
+.mono{font-family:var(--mono);font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--taupe)}
+.kn{position:relative;display:inline-flex;align-items:center;gap:12px;height:48px;padding:0 6px 0 22px;border-radius:999px;font:400 13px var(--mono);letter-spacing:.16em;text-transform:uppercase;color:#0A1129;background:linear-gradient(180deg,#F1E2B4,#D9B758 60%,#C9A54E);box-shadow:inset 0 1px 0 rgba(255,255,255,.55),inset 0 0 0 1px rgba(138,106,42,.45),0 14px 22px -14px rgba(6,11,28,.6);transition:transform .5s var(--e2)}
+.kn:hover{transform:translateY(-2px)}
+.kn i{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(180deg,#1E2A55,#0A1129);color:#E9D49A;box-shadow:inset 0 1px 0 rgba(255,255,255,.16),0 3px 8px -2px rgba(6,11,28,.5)}
+.kn svg{width:13px;height:13px;stroke:currentColor;fill:none;stroke-width:1.3}
+.kn--hell{background:linear-gradient(180deg,#1E2846,#0A1129);color:#F4F2EC;box-shadow:inset 0 0 0 1px rgba(217,183,88,.42),0 14px 22px -14px rgba(6,11,28,.6)}
+.kn--hell i{background:linear-gradient(180deg,#F1E2B4,#C9A54E);color:#0A1129}
+/* Kopf */
+.kopf{position:relative;isolation:isolate;color:var(--weiss);background-color:var(--navy);background-image:linear-gradient(rgba(10,17,41,.86),rgba(10,17,41,.86)),url(dateien/zurbriggen-saas-almagell-tapete-dunkel.svg);background-size:auto,720px 720px;background-position:0 0;border-radius:0 0 18px 18px;overflow:hidden}
+.kopf::after{content:'';position:absolute;inset:auto 0 0 0;height:60%;z-index:-1;background:linear-gradient(0deg,rgba(10,17,41,.8),transparent)}
+.kopf__in{max-width:1180px;margin:0 auto;padding:36px 28px 74px}
+.kopf nav{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:56px;font:13px var(--mono);letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+.kopf nav a:hover{color:#fff}
+.kopf h1{font-size:clamp(2.6rem,6vw,5.2rem);line-height:1.02;max-width:14ch}.kopf h1 em{font-style:normal;color:var(--gold)}
+.kopf p{margin-top:22px;max-width:56ch;font-size:1.08rem;color:rgba(244,242,236,.82)}
+/* Tor 3 (31.10.2026): Knöpfe als Gruppe, beim Umbruch bündig links und mit normalem Abstand */
+.kopf__kn{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+/* Inhalt */
+main{max-width:1180px;margin:0 auto;padding:0 28px 120px}
+.inhalt{margin:58px 0 70px}
+.inhalt h2{font-size:clamp(2rem,3.6vw,3rem);line-height:1.08;margin:8px 0 8px}.inhalt h2 em{font-style:normal;color:var(--taupe)}
+.inhalt>p{max-width:60ch;color:var(--leise)}
+.themen{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:30px}.themen>.thema:last-child:nth-child(odd){grid-column:1/-1}
+.thema{background:var(--blatt);border-radius:18px;box-shadow:inset 0 0 0 1px var(--linie);padding:22px 24px}
+.thema h3{font-size:1.35rem;line-height:1.15;display:grid;gap:3px}.thema h3 small{font:13px var(--mono);letter-spacing:.2em;text-transform:uppercase;color:var(--taupe)}.thema h3 em{font:13px var(--mono);font-style:normal;color:var(--leise)}
+.thema ol{margin-top:12px;display:grid;gap:2px}
+.thema{display:flex;flex-direction:column}.thema ol{flex:1;align-content:space-around}   /* Oberflächenprüfung 09.11.2026 (Punkt 10): die Einträge verteilen sich über die Höhe der Reihe, keine Leerfläche unter der kürzeren Tafel */
+.thema a{display:grid;grid-template-columns:34px minmax(0,1fr) auto;gap:10px;align-items:baseline;padding:9px 6px;border-radius:12px;transition:background-color .3s}
+.thema a:hover{background:rgba(255,255,255,.7)}.thema a b{font:13px var(--mono);color:var(--taupe)}.thema a span{font-family:var(--serif)}.thema a i{font:13px var(--mono);font-style:normal;letter-spacing:.14em;text-transform:uppercase;color:var(--leise)}
+/* Kapitel */
+.kap{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(24px,4vw,60px);align-items:start;padding:54px 0;border-top:1px solid var(--linie);scroll-margin-top:20px}
+.kap:nth-of-type(even) .kap__t{order:2}
+.kap h2{font-size:clamp(1.9rem,3.2vw,2.8rem);line-height:1.08;margin:12px 0 14px;text-wrap:balance}
+.einl{color:rgba(24,33,63,.78);max-width:54ch}
+.schritte{display:grid;gap:12px;margin:22px 0}
+.schritte li{display:grid;grid-template-columns:30px minmax(0,1fr);gap:14px;align-items:start}
+.schritte li span{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:var(--navy);color:var(--gold);font:13px var(--mono)}
+.schritte p{padding-top:3px}
+.wissen{padding:16px 18px;border-radius:16px;background:rgba(217,183,88,.24);font-size:14.5px;box-shadow:inset 0 0 0 1px rgba(138,106,42,.3);color:var(--tinte)}.wissen b{display:block;margin-bottom:3px;font:13px var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--tinte)}
+.kap__b{position:sticky;top:20px}
+.bild{display:block;width:100%;border-radius:18px;overflow:hidden;background:var(--navy);box-shadow:0 30px 50px -28px rgba(24,33,63,.6),inset 0 0 0 1px rgba(217,183,88,.3);cursor:zoom-in;transition:transform .6s var(--e2)}
+.bild:hover{transform:translateY(-3px)}.bild img{display:block;width:100%;height:auto}
+figcaption{display:flex;justify-content:space-between;gap:12px;margin-top:10px;font:13px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--leise)}
+/* Bild gross */
+.gross{position:fixed;inset:0;z-index:50;display:grid;place-items:center;padding:3vmin;background:rgba(10,17,41,.92);cursor:zoom-out;animation:auf .35s var(--e1) both}
+.gross[hidden]{display:none}.gross img{max-width:100%;max-height:100%;border-radius:14px;box-shadow:0 40px 80px -30px #000}.gross small{position:absolute;bottom:14px;left:0;right:0;text-align:center;font:13px var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+@keyframes auf{from{opacity:0}}
+.fuss{margin-top:20px;padding:34px 0 0;border-top:1px solid var(--linie);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;color:var(--leise);font-size:14px}
+@media (max-width:900px){.themen{grid-template-columns:1fr}.kap{grid-template-columns:1fr;padding:40px 0}.kap:nth-of-type(even) .kap__t{order:0}.kap__b{position:static}.kopf__in{padding:26px 18px 54px}.kopf nav{margin-bottom:36px}main{padding:0 18px 80px}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+.zurueck{border-bottom:1px solid currentColor}
+/* Messlauf 29.10.2026 (Regel einzelwort): kein einzelnes Wort allein in der letzten Titelzeile */
+h1,h2,h3,h4,figcaption{text-wrap:balance}
+.kn{padding-top:2px}
+.kopf nav{flex-wrap:wrap;row-gap:8px}.kopf nav a{white-space:nowrap}
+</style>
+<style id="auftritte-seite">html.as-an .as-k{opacity:0;transform:translateY(38px)}html.as-an .as-k.as-da{opacity:1;transform:none;transition:opacity 1s cubic-bezier(.16,1,.3,1),transform 1.1s cubic-bezier(.16,1,.3,1);transition-delay:var(--as-v,0s)}@media print{html.as-an .as-k{opacity:1!important;transform:none!important}}</style></head>
+<body>
+<!-- Anleitung Das Markenbuch · Wellness & Spa Pirmin Zurbriggen: gebaut von anleitung_bau.py aus dieser Vorlage (Aufbau wie die Anleitung im Stamm) -->
+<header class="kopf"><div class="kopf__in">
+  <nav><span>Anleitung · Wellness &amp; Spa Pirmin Zurbriggen</span><a href="./">Das Markenbuch öffnen</a></nav>
+  <h1>Fotos, Zeichen <em>und die Prüfung.</em></h1>
+  <p>9 kurze Kapitel. Wie Sie ein Foto in der richtigen Grösse laden, wo Zeichen und Farben für die Agentur liegen und wie das Markenbuch einen Entwurf prüft.</p>
+  <div class="kopf__kn"><a class="kn" href="./">Das Markenbuch öffnen<i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M5.5 4H12v6.5"/></svg></i></a><a class="kn kn--hell" href="#inhalt">Zu den Kapiteln<i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 3v10M4 9l4 4 4-4"/></svg></i></a></div>
+</div></header>
+<main>
+  <section class="inhalt" id="inhalt"><span class="mono">00 · Inhalt</span><h2>9 Kapitel, <em>fünf Themen.</em></h2><p>Jedes Kapitel zeigt den Bereich und nennt die Schritte. Ein Klick macht das Bild gross, ein zweiter oder Esc bringt es zurück.</p>
+    <div class="themen"><section class="thema"><h3><small>Grundlagen</small>So geht das Markenbuch<em>1 Kapitel</em></h3><ol><li><a href="#k01"><b>01</b><span>So ist das Markenbuch aufgebaut.</span><i>Übersicht</i></a></li></ol></section><section class="thema"><h3><small>Fotos</small>Finden, laden, Herkunft<em>3 Kapitel</em></h3><ol><li><a href="#k02"><b>02</b><span>Ein Foto finden.</span><i>Fotos</i></a></li><li><a href="#k03"><b>03</b><span>In der richtigen Grösse laden.</span><i>Fotos</i></a></li><li><a href="#k04"><b>04</b><span>Woher ein Foto kommt.</span><i>Fotos</i></a></li></ol></section><section class="thema"><h3><small>Zeichen &amp; Dateien</small>Dateien und Farben<em>2 Kapitel</em></h3><ol><li><a href="#k05"><b>05</b><span>Das Zeichen für die Agentur.</span><i>Zeichen &amp; Dateien</i></a></li><li><a href="#k06"><b>06</b><span>Farbwerte kopieren.</span><i>Zeichen &amp; Dateien</i></a></li></ol></section><section class="thema"><h3><small>Markenprüfung</small>Prüfen und lesen<em>2 Kapitel</em></h3><ol><li><a href="#k07"><b>07</b><span>Einen Entwurf prüfen.</span><i>Markenprüfung</i></a></li><li><a href="#k08"><b>08</b><span>Die Rückmeldung lesen.</span><i>Markenprüfung</i></a></li></ol></section><section class="thema"><h3><small>Nachschlagen</small>Die Hausregeln<em>1 Kapitel</em></h3><ol><li><a href="#k09"><b>09</b><span>In den Hausregeln lesen.</span><i>Hausregeln</i></a></li></ol></section></div></section>
+<article class="kap" id="k01">
+  <div class="kap__t"><span class="mono">01 · Übersicht</span><h2>So ist das <span style="white-space:nowrap">Markenbuch&nbsp;aufgebaut.</span></h2><p class="einl">Das Markenbuch ist die Marke des Wellness &amp; Spa Pirmin Zurbriggen zum Arbeiten. Drei Teile für den Alltag, dazu die Hausregeln zum Nachschlagen.</p>
+    <ol class="schritte"><li><span>1</span><p>Links die Teile: «Fotos», «Zeichen &amp; Dateien» und «Markenprüfung». Darunter die Hausregeln.</p></li><li><span>2</span><p>Oben rechts stehen «Kontrollpanel», die Anleitung und «Website ansehen». Unten steht immer der Hinweis zu den Bildrechten, daneben laden Sie alle Dateien der Marke auf einmal.</p></li><li><span>3</span><p>Auf dem Handy öffnet der Knopf «Bereiche» die Teile als Menü und schliesst sich nach der Wahl.</p></li></ol>
+    <p class="wissen"><b>Gut zu wissen</b>Das Markenbuch speichert nichts. Was Sie laden, landet auf Ihrem Rechner, was Sie prüfen, ist nach der Prüfung wieder weg.</p></div>
+  <figure class="kap__b"><button type="button" class="bild" aria-label="Bild gross ansehen: So ist das Markenbuch aufgebaut."><img src="anleitung/k01.jpg?v=dcd36ce553" width="1200" height="714" alt="Das Markenbuch, Übersicht: So ist das Markenbuch aufgebaut."></button>
+    <figcaption><span>markenbuch / übersicht</span><span>Grösser ansehen</span></figcaption></figure>
+</article>
+<article class="kap" id="k02">
+  <div class="kap__t"><span class="mono">02 · Fotos</span><h2>Ein <span style="white-space:nowrap">Foto&nbsp;finden.</span></h2><p class="einl">Alle Fotos der Website liegen unter «Fotos»: das Haus, die Räume, die Zimmer, die Loft-Suite, das Spa, der Tisch, die Kinder, das Saastal und die Familie.</p>
+    <ol class="schritte"><li><span>1</span><p>Oben ins Suchfeld schreiben, zum Beispiel «Kamin», «Loft» oder «Schnee».</p></li><li><span>2</span><p>Darunter eingrenzen: Bereich, Jahreszeit (Sommer und Herbst, Winter, ganzjährig) und Hoch- oder Querformat.</p></li><li><span>3</span><p>Über der Liste steht, wie viele Fotos passen. «Filter zurücksetzen» zeigt wieder alle. Beim Scrollen kommen weitere Fotos nach.</p></li></ol>
+    <p class="wissen"><b>Gut zu wissen</b>Für einen Instagram-Beitrag eignen sich Hochformate am besten: «Hochformat» wählen, dann wird am wenigsten weggeschnitten.</p></div>
+  <figure class="kap__b"><button type="button" class="bild" aria-label="Bild gross ansehen: Ein Foto finden."><img src="anleitung/k02.jpg?v=d373ab5dc8" width="1200" height="714" alt="Das Markenbuch, Fotos: Ein Foto finden."></button>
+    <figcaption><span>markenbuch / fotos</span><span>Grösser ansehen</span></figcaption></figure>
+</article>
+<article class="kap" id="k03">
+  <div class="kap__t"><span class="mono">03 · Fotos</span><h2>In der richtigen <span style="white-space:nowrap">Grösse&nbsp;laden.</span></h2><p class="einl">Ein Klick auf ein Foto öffnet es gross. Rechts stehen vier fertige Grössen.</p>
+    <ol class="schritte"><li><span>1</span><p>«Instagram-Beitrag» (1080 auf 1350) oder «Story» (1080 auf 1920) mit der Maus berühren. Im Bild erscheint der Ausschnitt.</p></li><li><span>2</span><p>Den Rahmen im Bild an die Stelle ziehen, die zu sehen sein soll. Der Knopf «Laden» nimmt genau diesen Ausschnitt.</p></li><li><span>3</span><p>«Website» lädt das Foto mit 2000 Pixel an der längsten Seite, «Druck» in voller Auflösung. Zwei Wege öffnen das Foto direkt in Drucksachen &amp; Feed, mit demselben Ausschnitt.</p></li></ol>
+    <p class="wissen"><b>Gut zu wissen</b>Ist das Foto für eine Story etwas zu klein, steht im Dateinamen «hochgerechnet».</p></div>
+  <figure class="kap__b"><button type="button" class="bild" aria-label="Bild gross ansehen: In der richtigen Grösse laden."><img src="anleitung/k03.jpg?v=fceb9728c9" width="1200" height="714" alt="Das Markenbuch, Fotos: In der richtigen Grösse laden."></button>
+    <figcaption><span>markenbuch / fotos</span><span>Grösser ansehen</span></figcaption></figure>
+</article>
+<article class="kap" id="k04">
+  <div class="kap__t"><span class="mono">04 · Fotos</span><h2>Woher ein <span style="white-space:nowrap">Foto&nbsp;kommt.</span></h2><p class="einl">Alle Fotos hat das Haus selbst veröffentlicht: auf seiner Website, auf loftsuite.ch, auf Instagram, im Prospekt und in seinen Galerien bei Booking.com und Schweiz Tourismus.</p>
+    <ol class="schritte"><li><span>1</span><p>Unter «Quelle» steht, woher das Foto kommt, wo es geht mit dem Weg zur Seite.</p></li><li><span>2</span><p>Die Fotos der Loft-Suite und eine Massage sind mit KI hochgerechnet und nachgeschärft. Sie tragen den Hinweis, der Inhalt ist das echte Foto.</p></li><li><span>3</span><p>Wo das gelieferte Foto vorliegt, zeigen «Vorher», «Nachher» und «Schieber» den Unterschied; «Vorher laden» gibt das gelieferte Foto.</p></li></ol>
+    <p class="wissen"><b>Gut zu wissen</b>Zimmerkategorien stehen nur dort im Namen eines Fotos, wo es sicher zur Kategorie gehört.</p></div>
+  <figure class="kap__b"><button type="button" class="bild" aria-label="Bild gross ansehen: Woher ein Foto kommt."><img src="anleitung/k04.jpg?v=55a7778538" width="1200" height="714" alt="Das Markenbuch, Fotos: Woher ein Foto kommt."></button>
+    <figcaption><span>markenbuch / fotos</span><span>Grösser ansehen</span></figcaption></figure>
+</article>
+<article class="kap" id="k05">
+  <div class="kap__t"><span class="mono">05 · Zeichen &amp; Dateien</span><h2>Das Zeichen für <span style="white-space:nowrap">die&nbsp;Agentur.</span></h2><p class="einl">Unter «Zeichen &amp; Dateien» liegt alles, was eine Agentur oder eine Druckerei braucht.</p>
+    <ol class="schritte"><li><span>1</span><p>Das Z mit vier Sternen und Krone in Messing und Weiss für dunkle, in Nachtblau und Schokolade für helle Flächen.</p></li><li><span>2</span><p>Dazu der Hausname des Prospekts, die Namenzeilen, Sterne und Krone, die sechs Einladungssätze, «lifestyle» und die Tapete. «SVG» bleibt in jeder Grösse scharf, «PNG» hat einen durchsichtigen Grund.</p></li><li><span>3</span><p>«Alle Dateien (ZIP)» lädt alles auf einmal, mit den Farben und den Schriften.</p></li></ol>
+    <p class="wissen"><b>Gut zu wissen</b>Was mit dem Zeichen nie geschieht (verzerren, drehen, umfärben, Schatten, Pink), steht in den Hausregeln unter «Zeichen».</p></div>
+  <figure class="kap__b"><button type="button" class="bild" aria-label="Bild gross ansehen: Das Zeichen für die Agentur."><img src="anleitung/k05.jpg?v=8df77680a7" width="1200" height="714" alt="Das Markenbuch, Zeichen &amp; Dateien: Das Zeichen für die Agentur."></button>
+    <figcaption><span>markenbuch / zeichen &amp; dateien</span><span>Grösser ansehen</span></figcaption></figure>
+</article>
+<article class="kap" id="k06">
+  <div class="kap__t"><span class="mono">06 · Zeichen &amp; Dateien</span><h2>Farbwerte kopieren.</h2><p class="einl">Die Farben stehen mit Namen und Rolle da: der Winterabend, Papier, Leinen und Schnee, Messing und die Schokolade der Loft-Suite. Ein Klick genügt.</p>
+    <ol class="schritte"><li><span>1</span><p>Auf eine Farbe klicken: der Wert (zum Beispiel #0A1129 für Nachtblau) liegt in der Zwischenablage.</p></li><li><span>2</span><p>Ein Klick auf die RGB-Zeile kopiert die RGB-Werte.</p></li><li><span>3</span><p>Darunter laden Sie die Farben als CSS, JSON oder ASE (für InDesign und Illustrator) und die Schriften als WOFF2 oder als Paket mit TTF.</p></li></ol>
+    <p class="wissen"><b>Gut zu wissen</b>Nachtblau trägt, Messing betont nur als Linie, Etikett und Knauf. Kein Pink.</p></div>
+  <figure class="kap__b"><button type="button" class="bild" aria-label="Bild gross ansehen: Farbwerte kopieren."><img src="anleitung/k06.jpg?v=10a6ed9eaf" width="1200" height="714" alt="Das Markenbuch, Zeichen &amp; Dateien: Farbwerte kopieren."></button>
+    <figcaption><span>markenbuch / zeichen &amp; dateien</span><span>Grösser ansehen</span></figcaption></figure>
+</article>
+<article class="kap" id="k07">
+  <div class="kap__t"><span class="mono">07 · Markenprüfung</span><h2>Einen <span style="white-space:nowrap">Entwurf&nbsp;prüfen.</span></h2><p class="einl">Schickt eine Agentur einen Aushang, einen Prospekt oder einen Beitrag, prüfen Sie hier, ob er zum Haus passt.</p>
+    <ol class="schritte"><li><span>1</span><p>Den Entwurf in das Feld ziehen oder «Datei wählen». Bild (JPG, PNG, WebP) oder PDF, bis 30 MB.</p></li><li><span>2</span><p>«Prüfen» drücken. Das Markenbuch misst zuerst die Farben, dann sieht Claude sich den Entwurf an.</p></li><li><span>3</span><p>Nach etwa einer halben Minute steht die Rückmeldung da. Unter dem leeren Feld steht schon ein Beispiel.</p></li></ol>
+    <p class="wissen"><b>Gut zu wissen</b>Die Farben misst das Markenbuch direkt im Entwurf.</p></div>
+  <figure class="kap__b"><button type="button" class="bild" aria-label="Bild gross ansehen: Einen Entwurf prüfen."><img src="anleitung/k07.jpg?v=f6e366b665" width="1200" height="714" alt="Das Markenbuch, Markenprüfung: Einen Entwurf prüfen."></button>
+    <figcaption><span>markenbuch / markenprüfung</span><span>Grösser ansehen</span></figcaption></figure>
+</article>
+<article class="kap" id="k08">
+  <div class="kap__t"><span class="mono">08 · Markenprüfung</span><h2>Die <span style="white-space:nowrap">Rückmeldung&nbsp;lesen.</span></h2><p class="einl">Oben ein Satz, wie nah der Entwurf an der Marke ist. Darunter Punkt für Punkt: Farben, Schrift, Zeichen, Abstand, Bild und Ton.</p>
+    <ol class="schritte"><li><span>1</span><p>Jeder Punkt hat ein Urteil: «passt», «achten» oder «passt nicht». Was nicht passt, steht oben.</p></li><li><span>2</span><p>Links die gemessenen Farben: wie viel der Fläche in den Farben des Hauses liegt und welche Töne fremd sind. Diese Messung macht keine KI.</p></li><li><span>3</span><p>«Als Text kopieren» gibt Ihnen die Rückmeldung für die Mail an die Agentur. «Ergebnis sichern» legt sie als Datei auf Ihren Rechner, nur wenn Sie es wollen.</p></li></ol>
+    <p class="wissen"><b>Gut zu wissen</b>Das Beispiel ist eigens gezeichnet. Die Farben darin sind wirklich gemessen; die Urteile zu Schrift, Zeichen, Bild und Ton sind ein Beispiel, so wie die Prüfung antwortet.</p></div>
+  <figure class="kap__b"><button type="button" class="bild" aria-label="Bild gross ansehen: Die Rückmeldung lesen."><img src="anleitung/k08.jpg?v=03bad1fac4" width="1200" height="714" alt="Das Markenbuch, Markenprüfung: Die Rückmeldung lesen."></button>
+    <figcaption><span>markenbuch / markenprüfung</span><span>Grösser ansehen</span></figcaption></figure>
+</article>
+<article class="kap" id="k09">
+  <div class="kap__t"><span class="mono">09 · Hausregeln</span><h2>In den <span style="white-space:nowrap">Hausregeln&nbsp;lesen.</span></h2><p class="einl">Die Hausregeln erklären Blatt für Blatt, wie das Haus aussieht: Haltung, Zeichen, die sechs Einladungssätze, Farben, Schrift, Form, Bilder, Gegenstände, Ton und die Loft-Suite.</p>
+    <ol class="schritte"><li><span>1</span><p>Links «Die Hausregeln» oder auf der Übersicht «Die Hausregeln» drücken.</p></li><li><span>2</span><p>Oben in den Hausregeln springen Sie zu jedem Blatt. «Als PDF sichern» legt sie als PDF ab.</p></li></ol>
+    <p class="wissen"><b>Gut zu wissen</b>Die Markenprüfung prüft nach denselben Regeln. Ändert sich etwas an der Marke, wird beides zusammen neu gebaut.</p></div>
+  <figure class="kap__b"><button type="button" class="bild" aria-label="Bild gross ansehen: In den Hausregeln lesen."><img src="anleitung/k09.jpg?v=ca535ec668" width="1200" height="714" alt="Das Markenbuch, Hausregeln: In den Hausregeln lesen."></button>
+    <figcaption><span>markenbuch / hausregeln</span><span>Grösser ansehen</span></figcaption></figure>
+</article>
+  <div class="fuss"><span>Das Markenbuch · Wellness &amp; Spa Pirmin Zurbriggen</span><a class="zurueck" href="./">Zurück</a></div>
+</main>
+<div class="gross" id="gross" hidden role="dialog" aria-modal="true" aria-label="Bild gross"><img alt=""><small>Klick oder Esc zum Schliessen</small></div>
+<script src="anleitung.js"></script>
+<script id="auftritte-seite-js">(function(){if(!("IntersectionObserver" in window)||matchMedia("(prefers-reduced-motion: reduce)").matches)return;var d=document.documentElement;function los(){var H=innerHeight,n=0,io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("as-da");io.unobserve(e.target)}})},{rootMargin:"0px 0px -6% 0px"});[].forEach.call(document.querySelectorAll('main section>*,body>section>*,.kapitel>*,.an-schritt'),function(e){var r=e.getBoundingClientRect();if(r.top+scrollY>H*1.02&&r.height>8&&!e.hasAttribute("data-a")&&!e.closest(".as-k")){e.classList.add("as-k");e.style.setProperty("--as-v",(n++%3)*90+"ms");io.observe(e)}});d.classList.add("as-an")}if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",los);else los()})();</script></body>
+</html>

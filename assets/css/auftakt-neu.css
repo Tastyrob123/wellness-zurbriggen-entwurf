@@ -1,0 +1,96 @@
+/* Drei neue Auftakt-Proben (20.10.2026): v1 Die Lichter gehen an · v2 Die Abfahrt · v3 Zeit fühlen.
+   Bewegt wird nur transform und opacity; alles läuft einmal beim Öffnen, danach steht die Bühne still. */
+.an{background:#0B1026;margin:0}
+.an .auf{position:relative;height:100vh;height:100svh;min-height:600px;overflow:hidden;isolation:isolate}
+.an .buehne{position:absolute;inset:0;z-index:0}
+.an .buehne img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.an .txt{position:relative;z-index:2;pointer-events:none}
+.an .vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+/* Titel steigen aus dem Schlitz, deckend, Zeile für Zeile */
+.an .sl{display:block;overflow:hidden;padding:.06em 0 .1em}
+.an .sl>span{display:inline-block;transform:translateY(110%);transition:transform 1.25s var(--e1);transition-delay:var(--d,0s)}
+.an.los .sl>span{transform:none}
+/* Buchungsleiste fährt deckend vom unteren Rand herein */
+.an .an-bar{position:absolute;z-index:3;left:50%;bottom:clamp(18px,4vh,40px);width:min(100% - 28px,980px);transform:translate(-50%,calc(100% + 60px));transition:transform 1.3s var(--e1);transition-delay:var(--bd,2.4s)}
+.an.los .an-bar{transform:translate(-50%,0)}
+.an .an-bar .leiste{padding:10px;border-radius:999px;background:var(--platte-h);box-shadow:var(--platte-h-s)}
+.an .an-nav .nav{transform:translateY(-140%);transition:transform 1.1s var(--e1) 2.1s}
+.an.los .an-nav .nav{transform:none}
+.an .an-nav .nav.weg{transform:translateY(-140%);transition-delay:0s}
+
+/* ---------- v1 Die Lichter gehen an: der Winterabend, die Fenster gehen Stockwerk für Stockwerk an ---------- */
+.v1,html:has(.v1){background:#0B1026}
+.v1 .buehne img{object-position:58% 50%}
+.v1 .li{opacity:0;will-change:opacity}
+.v1.los .li{animation:licht 1.1s cubic-bezier(.4,0,.2,1) forwards;animation-delay:calc(.45s + var(--i) * .34s)}
+@keyframes licht{0%{opacity:0}35%{opacity:.75}48%{opacity:.55}100%{opacity:1}}
+.v1 .txt{position:absolute;left:0;right:0;top:clamp(92px,11.5vh,128px);text-align:center;color:#FBF8F3}
+.v1 .sterne{display:flex;justify-content:center;align-items:flex-end;gap:12px;margin-bottom:18px}
+.v1 .sterne svg{width:15px;height:15px;color:rgba(233,212,154,.22);transition:color .9s ease;transition-delay:calc(.6s + var(--i) * .34s)}
+.v1 .sterne .kr{width:20px;height:13px}
+.v1.los .sterne svg{color:var(--messing)}
+.v1 h1{margin:0;font-family:var(--serif);font-weight:400;font-size:clamp(40px,6.1vw,104px);line-height:1;letter-spacing:.14em;text-transform:uppercase;text-shadow:0 2px 30px rgba(5,10,40,.45)}
+.v1 h1 .sl>span{--d:2.05s}
+.v1 .ort{font-family:var(--mono);font-size:12px;letter-spacing:.34em;text-transform:uppercase;color:var(--messing-hell)}
+.v1 .txt>.sl:nth-of-type(1)>span{--d:2.3s}
+.v1 .satz{display:block;font-family:var(--serif);font-size:clamp(22px,2.3vw,38px);letter-spacing:.02em;text-shadow:0 2px 24px rgba(5,10,40,.55)}
+.v1 .satz em{font-style:normal;color:var(--messing-hell)}
+.v1 .txt>.sl:nth-of-type(2)>span{--d:2.5s}
+.v1 .unten{position:absolute;z-index:2;left:0;right:0;bottom:calc(clamp(18px,4vh,40px) + 104px);text-align:center;color:#FBF8F3;pointer-events:none}
+.v1 .unten .sl>span{--d:2.55s}
+.v1 .an-bar{--bd:2.6s}
+
+/* ---------- v2 Die Abfahrt: vom Fels herunter bis vor das Haus, das Z zieht die Spur ---------- */
+.v2{background:#9CC3E8}
+.v2 .fahrt{transform-origin:50% 50%;transform:scale(1.42) translate(13%,15%);will-change:transform}
+.v2.los .fahrt{transform:none;transition:transform 3.3s cubic-bezier(.42,.02,.12,1) .25s}
+.v2 .txt{position:absolute;left:0;right:0;top:clamp(96px,12vh,140px);color:var(--nacht);text-align:center}
+.v2 .spur{width:clamp(70px,6.2vw,104px);margin:0 auto 10px;color:var(--schoko);clip-path:inset(0 100% 0 0);-webkit-clip-path:inset(0 100% 0 0);transition:clip-path 1.2s cubic-bezier(.6,0,.2,1) 1.55s,-webkit-clip-path 1.2s cubic-bezier(.6,0,.2,1) 1.55s}
+.v2.los .spur{clip-path:inset(0 0 0 0);-webkit-clip-path:inset(0 0 0 0)}
+.v2 .spur svg{display:block;width:100%;height:auto}
+.v2 h1{margin:0;font-family:var(--serif);font-weight:400;font-size:clamp(36px,4.3vw,76px);line-height:1.02;letter-spacing:.01em;text-shadow:0 0 34px rgba(255,255,255,.55)}
+.v2 h1 em{font-style:normal;color:#6E4A2E}
+.v2 h1 .sl:nth-child(1)>span{--d:2.2s} .v2 h1 .sl:nth-child(2)>span{--d:2.36s}
+.v2 .ort{display:block;margin-top:14px;font-family:var(--mono);font-size:12px;letter-spacing:.26em;text-transform:uppercase;color:var(--schoko)}
+.v2 .txt>.sl{display:none}
+.v2 .an-bar{--bd:2.8s}
+
+/* ---------- v3 Zeit fühlen: der Ruheraum kommt zur Ruhe, der Satz des Hauses steigt im Atemtakt ---------- */
+.v3,html:has(.v3){background:#3A2A1C}
+.v3 .ruhe{object-position:50% 50%;transform:scale(1.09);transform-origin:62% 40%;will-change:transform}
+.v3.los .ruhe{transform:none;transition:transform 5.2s cubic-bezier(.25,.1,.2,1) .1s}
+.v3 .hauch{position:absolute;z-index:1;left:-12%;top:8%;width:68%;height:92%;background:radial-gradient(closest-side,rgba(28,18,10,.78),rgba(28,18,10,.5) 55%,rgba(28,18,10,0));pointer-events:none;opacity:0;transition:opacity 1s ease .2s}
+.v3.los .hauch{opacity:1}
+.v3 .txt{position:absolute;left:var(--rand);top:50%;transform:translateY(-58%);color:#FBF8F3}
+.v3 .kopfz{display:flex;align-items:center;gap:14px;margin-bottom:22px}
+.v3 .kopfz svg{width:46px;height:auto;color:var(--messing-hell)}
+.v3 .ort{font-family:var(--mono);font-size:13px;white-space:nowrap;letter-spacing:.28em;text-transform:uppercase;color:var(--messing-hell)}
+.v3 .kopfz .sl>span{--d:.5s}
+.v3 h1{margin:0;font-family:var(--serif);font-weight:400;font-size:clamp(38px,4.9vw,86px);line-height:1.08;text-shadow:0 2px 26px rgba(20,12,6,.5)}
+.v3 h1 em{font-style:normal;color:var(--messing-hell)}
+.v3 h1 .sl>span{transition-duration:1.6s}
+.v3 h1 .sl:nth-child(1)>span{--d:.9s} .v3 h1 .sl:nth-child(2)>span{--d:1.75s} .v3 h1 .sl:nth-child(3)>span{--d:2.6s}
+.v3 .an-bar{--bd:3.3s}
+.v3 .an-nav .nav{transition-delay:3s}
+
+@media (max-width:760px){
+  .an .an-bar .leiste{grid-template-columns:1fr 1fr;border-radius:30px}
+  .an .an-bar .leiste .lab:nth-child(3){display:none}
+  .an .an-bar .leiste .kn{grid-column:1/-1}
+  .v1 .buehne img{object-position:60% 50%}
+  .v1 .txt{top:104px}
+  .v1 .unten{bottom:196px}
+  .v1 h1{letter-spacing:.08em}
+  .v1 h1 .nm>span{display:block}
+  .v2 .fahrt{object-position:74% 50%}
+  .v3 .ruhe{object-position:58% 50%}
+  .v3 .hauch{left:-40%;width:150%;top:10%;height:70%}
+  .v3 .txt{top:40%;right:var(--rand)}
+  .v3 .ort{font-size:11px;letter-spacing:.2em}
+}
+@media (prefers-reduced-motion:reduce){
+  .an *{transition:none!important;animation:none!important}
+  .v1 .li{opacity:1}
+}
+.an .an-nav{position:absolute;top:0;left:0;right:0;height:0;z-index:50}
+.an{padding-top:0!important}

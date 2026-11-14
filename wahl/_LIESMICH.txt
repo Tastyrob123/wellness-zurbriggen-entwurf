@@ -1,0 +1,4 @@
+Gewählte Fassungen der Unterseiten (seit 01.11.2026). Je Seite ein Modul wahl/<seite>.py mit einer Funktion einbauen():
+liest die von unterseiten_neu.py eben geschriebene Seite, tauscht die gewählten Abschnitte (per Sprungmarke) gegen die neue Fassung,
+hängt deren CSS/JS (assets/css/wahl-<seite>.css, assets/js/wahl-<seite>.js) in den Kopf und schreibt die Seite zurück.
+Wortlaute nur aus inhalt/, Fotos nur aus inhalt/bilder.py. Aufgerufen am Ende von unterseiten_neu.bauen().

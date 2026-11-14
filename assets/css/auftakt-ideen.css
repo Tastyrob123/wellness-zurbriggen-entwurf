@@ -1,0 +1,60 @@
+/* Sechs Auftakt-Einfälle (20.10.2026): jeder trägt eine Idee aus der Welt des Hauses. */
+@font-face{font-family:'Montserrat';font-weight:400;font-display:block;src:url(../fonts/montserrat-400-latin.woff2) format('woff2')}
+@font-face{font-family:'Montserrat';font-weight:500;font-display:block;src:url(../fonts/montserrat-500-latin.woff2) format('woff2')}
+.v20 .b>.lage{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:56% 40%}
+/* 01 Hinter dem Berg: das Wort steht im Himmel, Berg und Haus davor */
+.i-berg{background:#0B1026;color:#fff}
+.i-berg .riesig{position:absolute;left:5vw;top:14.5%;margin:0;font-family:var(--licht);font-weight:400;font-size:23.5vw;line-height:1;letter-spacing:-.055em;color:#F4F2EC}
+.i-berg .unten{position:absolute;left:0;right:0;bottom:13%;display:grid;justify-items:center;gap:16px;text-align:center}
+.i-berg .unten .t{font-size:clamp(26px,2.4vw,40px);color:#fff;text-shadow:0 2px 24px rgba(5,10,40,.6)} .i-berg .unten .t em{color:#E9D49A}
+.i-berg .unten .m{color:#E8ECF6;text-shadow:0 1px 12px rgba(5,10,40,.8)}
+/* 02 Die Spur im Schnee: das Z des Hauses als Spur, unten rechts das Ziel */
+.i-spur{background:#EEF1F6 url(../img/auftakt-neu/grund-schnee.webp) 0 0/1024px;color:var(--schiefer)}
+.i-spur .spur{position:absolute;left:3vw;top:12%;width:62vw;aspect-ratio:65.4/59.5}
+.i-spur .spur svg{position:absolute;inset:0;width:100%;height:100%}
+.i-spur .z-schatten{color:rgba(60,80,110,.38);filter:blur(5px);transform:translate(6px,8px)}
+.i-spur .z-licht{color:#fff;transform:translate(-3px,-4px)}
+.i-spur .z-flaeche{color:#E3E8F0}
+.i-spur .ziel{position:absolute;right:4vw;bottom:7%;width:30vw;height:40vh;border-radius:var(--rund-m);overflow:hidden;box-shadow:0 40px 70px -30px rgba(20,30,60,.5)}
+.i-spur .ziel img{width:100%;height:100%;object-fit:cover}
+.i-spur .txt{position:absolute;right:4vw;top:16%;width:30vw;display:grid;gap:20px;justify-items:start}
+.i-spur .txt .t{font-size:3.9vw} .i-spur .txt .t em{color:#2F5A8A}
+/* 03 Der Name aus Bildern: Sommer im ersten Wort, Winter im zweiten */
+.i-name{background:var(--schiefer) url(../img/auftakt-neu/grund-schiefer.webp) 0 0/512px;color:var(--creme)}
+.i-name .kopf{position:absolute;left:0;right:0;top:15%;display:flex;justify-content:center;gap:16px;align-items:center}
+.i-name .worte{position:absolute;left:0;right:0;top:50%;transform:translateY(-52%);margin:0;display:grid;justify-items:center;font-family:var(--licht);font-weight:500;line-height:.9;letter-spacing:-.02em;text-transform:uppercase}
+.i-name .worte span{display:block;font-size:15.6vw;color:transparent;-webkit-background-clip:text;background-clip:text;background-size:cover}
+.i-name .w1{background-image:url(../img/auftakt-neu/wald-2000.webp);background-position:50% 55%}
+.i-name .w2{background-image:url(../img/auftakt-neu/nacht-2000.webp);background-position:58% 45%}
+.i-name .unterm{position:absolute;left:0;right:0;bottom:7%;display:grid;justify-items:center;gap:18px}
+/* 04 Die Wasserlinie: der Name steht auf dem Wasser und spiegelt sich */
+.i-wasser{background:#5D8FA6;color:var(--schiefer)}
+.i-wasser .voll{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 50%}
+.i-wasser .ueber,.i-wasser .spiegel{position:absolute;left:0;right:0;text-align:center;font-size:9.4vw;line-height:1;margin:0;white-space:nowrap}
+.i-wasser .ueber{bottom:48.4%;color:#253338}
+.i-wasser .spiegel{top:51.8%;color:#253338;opacity:.28;transform:scaleY(-1)}
+.i-wasser .unten{position:absolute;left:5vw;right:5vw;bottom:6%;display:flex;justify-content:space-between;align-items:center;color:#fff}
+.i-wasser .unten .m{color:#fff;text-shadow:0 1px 12px rgba(0,20,40,.6)}
+/* 05 Das Becken: das Wasser als Mitte, gefasst von hellen Platten */
+.i-becken{background:#D5D6D8 url(../img/auftakt-neu/grund-platten.webp) 0 0/640px;color:var(--schiefer)}
+.i-becken .becken{position:absolute;left:50%;top:53%;width:40vw;height:58vh;transform:translate(-50%,-50%);border-radius:18px;overflow:hidden;box-shadow:inset 0 0 0 1px rgba(0,0,0,.15),0 0 0 14px #E6E7E8,0 0 0 15px rgba(0,0,0,.12)}
+.i-becken .becken img{width:100%;height:100%;object-fit:cover}
+.i-becken .becken::after{content:'';position:absolute;inset:0;box-shadow:inset 0 18px 30px -10px rgba(0,30,50,.55),inset 0 -6px 18px -6px rgba(0,30,50,.3)}
+.i-becken .rand{position:absolute;left:50%;transform:translateX(-50%);margin:0;font-family:var(--mono);font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--fassade);white-space:nowrap}
+.i-becken .rand-o{top:calc(53% - 29vh - 44px)} .i-becken .rand-u{top:calc(53% + 29vh + 30px)}
+.i-becken .bl,.i-becken .br{position:absolute;top:53%;transform:translateY(-50%)}
+.i-becken .bl{right:calc(50% + 20vw + 3vw);text-align:right} .i-becken .br{left:calc(50% + 20vw + 3vw)}
+.i-becken .t{font-size:5.6vw} .i-becken .m{margin-top:14px;font-size:11px}
+.i-becken .bk{position:absolute;left:0;right:0;bottom:3%;display:flex;justify-content:center}
+/* 06 Das Schild am Turm: die Schrift des Turms wird zum Auftakt */
+.i-schild{background:#E9EAEA;color:var(--schiefer)}
+.i-schild .turmschild{position:absolute;left:0;top:0;bottom:0;width:44vw;background:#253338 url(../img/auftakt-neu/grund-schild.webp) 0 0/512px;color:#fff;padding:0 4vw;display:grid;align-content:center;gap:0}
+.i-schild .s1{font:500 3vw/1.1 var(--sans);letter-spacing:.06em;margin:0 0 1vw;display:flex;gap:1.2vw;align-items:center}
+.i-schild .s1 .sterne svg{width:1.6vw;height:1.6vw} .i-schild .s1 .sterne .kr{width:2.2vw;height:1.4vw}
+.i-schild .s2{font:500 4.5vw/1.04 var(--sans);letter-spacing:.02em;margin:0}
+.i-schild .sk{margin-top:3vw;display:grid;gap:18px;justify-items:start} .i-schild .sk .m{color:#C6CCCF}
+.i-schild .foto{position:absolute;right:0;top:0;bottom:0;left:44vw;overflow:hidden;border-radius:0}
+.i-schild .foto img{width:100%;height:100%;object-fit:cover}
+
+.v20 .b{background:inherit}
+@media (max-width:760px){.i-berg .riesig{left:4vw;top:18%;font-size:31vw}.i-berg .unten .m{font-size:10px;letter-spacing:.14em}}

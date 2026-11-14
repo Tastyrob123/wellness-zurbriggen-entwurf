@@ -1,0 +1,103 @@
+/* Auftakt-Proben «frisch» (20.10.2026): Farbwelt aus dem Hausfoto (Schiefer der Fassade, Dachplatten, Lärchen), Montserrat leicht wie die Wortmarke.
+   Bewegt wird nur transform, opacity und einmal clip-path beim Öffnen; danach steht alles still. */
+@font-face{font-family:'Montserrat';font-weight:300;font-display:block;src:url(../fonts/montserrat-300-latin.woff2) format('woff2')}
+@font-face{font-family:'Montserrat';font-weight:400;font-display:block;src:url(../fonts/montserrat-400-latin.woff2) format('woff2')}
+.fr{--schiefer:#253338;--fassade:#3F4A4B;--dach:#D5D6D8;--hell:#ECEBE6;--laerche:#435B21;--wiese:#7D9C2F;--creme:#F4F2EC;--licht:'Montserrat','Instrument Sans',system-ui,sans-serif;margin:0}
+.fr .fa{position:relative;height:100vh;height:100svh;min-height:640px;overflow:hidden;isolation:isolate}
+.fr .t{font-family:var(--licht);font-weight:300;letter-spacing:-.01em;line-height:1;margin:0}
+.fr .m{font-family:var(--mono);font-size:12px;letter-spacing:.24em;text-transform:uppercase}
+.fr .sl{display:block;overflow:hidden;padding:.08em 0 .12em}
+.fr .sl>span{display:inline-block;transform:translateY(112%);transition:transform 1.3s var(--e1);transition-delay:var(--d,0s)}
+.fr.los .sl>span{transform:none}
+.fr .rein{transform:translateY(calc(100% + 40px));transition:transform 1.3s var(--e1);transition-delay:var(--d,0s)}
+.fr.los .rein{transform:none}
+.fr .kachel{position:relative;overflow:hidden;border-radius:var(--rund-m);background:var(--fassade)}
+.fr .kachel img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.16);transition:transform 2.8s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0s)}
+.fr.los .kachel img{transform:none}
+.fr .sterne{display:inline-flex;gap:8px;align-items:flex-end;vertical-align:middle}
+.fr .sterne svg{width:11px;height:11px;color:rgba(217,183,88,.25);transition:color .8s ease;transition-delay:calc(.7s + var(--i) * .12s)}
+.fr .sterne .kr{width:15px;height:10px}
+.fr.los .sterne svg{color:var(--messing)}
+.fr .an-nav .nav{transform:translateY(-140%);transition:transform 1.1s var(--e1) 1.9s}
+.fr.los .an-nav .nav{transform:none}
+.fr .an-nav .nav.weg{transform:translateY(-140%);transition-delay:0s}
+.fr .kn--dunkel,.fr .nav .kn{--o:#4A5A60;--m:var(--fassade);--u:var(--schiefer);--t:var(--creme);--licht:rgba(255,255,255,.2);--kante:rgba(0,0,0,.5);--tf:rgba(0,0,0,.5);--ko:#FFFFFF;--ku:var(--dach);--kt:var(--schiefer)}
+.fr .kn--hell{--o:#FFFFFF;--m:var(--creme);--u:var(--dach);--t:var(--schiefer);--ko:#4A5A60;--ku:var(--schiefer);--kt:var(--creme)}
+.fr .nav__logo svg{color:var(--schiefer)}
+
+/* ---------- f1 Vier Scheiben: das Haus hinter vier Glasglasfront wie am Spa-Turm, links «Wellness», rechts «& Spa.» ---------- */
+.f1{background:var(--schiefer) url(../img/auftakt-neu/grund-schiefer.webp) 0 0/512px;color:var(--creme)}
+.f1 .mitte{position:absolute;left:50%;top:54%;width:min(34vw,560px);height:min(62vh,640px);transform:translate(-50%,-50%)}
+.f1 .oben{position:absolute;left:0;right:0;bottom:calc(100% + 22px);text-align:center;display:flex;justify-content:center;align-items:center;gap:16px;color:var(--dach)}
+.f1 .glasfront{position:absolute;inset:0;display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.f1 .glas{position:relative;overflow:hidden;border-radius:14px;background:var(--fassade);transform:translateY(calc(100% + 30vh));transition:transform 1.5s var(--e1);transition-delay:calc(var(--i) * .07s)}
+.f1.los .glas{transform:none}
+.f1 .glas img{position:absolute;top:0;height:100%;width:calc(400% + 30px);max-width:none;left:calc(var(--i) * (-100% - 10px));object-fit:cover;object-position:52% 60%;transform:scale(1.14);transform-origin:calc(50% - (var(--i) - 1.5) * 25%) 60%;transition:transform 2.9s cubic-bezier(.2,.7,.2,1) .15s}
+.f1.los .glas img{transform:none}
+.f1 .seite{position:absolute;top:50%;transform:translateY(-50%)}
+.f1 .seite--l{right:calc(100% + clamp(22px,2.6vw,44px));text-align:right}
+.f1 .seite--r{left:calc(100% + clamp(22px,2.6vw,44px));text-align:left}
+.f1 .seite .t{font-size:clamp(54px,6.2vw,112px);white-space:nowrap}
+.f1 .seite .m{display:block;margin-top:14px;color:var(--dach);font-size:11px}
+.f1 .seite--l .sl>span{--d:1.05s} .f1 .seite--r .sl>span{--d:1.15s}
+.f1 .seite .m.sl>span{--d:1.45s}
+.f1 .unten{position:absolute;left:50%;top:calc(100% + 12px);transform:translateX(-50%);overflow:hidden;padding:6px 10px 14px}
+.f1 .unten .rein{--d:1.7s}
+
+/* ---------- f2 Sommer und Winter: das Haus zweimal, dazwischen der Name ---------- */
+.f2{background:var(--hell) url(../img/auftakt-neu/grund-hell.webp) 0 0/512px;color:var(--schiefer)}
+.f2 .paar{position:absolute;inset:clamp(96px,12vh,124px) var(--rand) clamp(40px,6vh,64px);display:grid;grid-template-columns:1fr minmax(0,.95fr) 1fr;grid-template-rows:minmax(0,1fr);gap:clamp(20px,2.4vw,40px);align-items:stretch}
+.f2 .seite{display:flex;flex-direction:column;gap:14px;overflow:hidden;min-height:0}
+.f2 .seite .kachel{flex:1 1 auto;min-height:0}
+.f2 .kachel{transform:translateY(calc(100% + 30vh));transition:transform 1.5s var(--e1)}
+.f2 .seite:last-child .kachel{transition-delay:.08s}
+.f2.los .kachel{transform:none}
+.f2 .seite .m{text-align:center;color:var(--fassade)}
+.f2 .seite .m.sl>span{--d:1.5s}
+.f2 .kachel--s img{object-position:56% 62%}
+.f2 .kachel--w img{object-position:58% 55%}
+.f2 .mittig{display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center}
+.f2 .mittig .oben{display:flex;align-items:center;gap:14px;color:var(--fassade);margin-bottom:26px}
+.f2 .mittig .oben .sl>span{--d:.9s}
+.f2 .t{font-size:clamp(46px,5vw,92px);color:var(--schiefer)}
+.f2 .t em{font-style:normal;color:var(--laerche)}
+.f2 .t .sl:nth-child(1)>span{--d:1s} .f2 .t .sl:nth-child(2)>span{--d:1.12s}
+.f2 .satz{font-family:var(--sans);font-size:clamp(16px,1.2vw,19px);color:var(--fassade);margin:22px 0 30px}
+.f2 .satz.sl>span{--d:1.35s}
+.f2 .knoepfe{overflow:hidden;padding:6px 10px 14px}
+.f2 .knoepfe .rein{--d:1.6s}
+
+/* ---------- f3 Kinoformat: ein breiter Ausschnitt geht auf, der Satz steht darüber und darunter ---------- */
+.f3{background:#30401A url(../img/auftakt-neu/grund-laerche.webp) 0 0/512px;color:var(--creme)}
+.f3 .fr-rahmen{position:absolute;left:50%;top:55%;width:min(84vw,1500px);transform:translate(-50%,-50%)}
+.f3 .kino{height:min(50vh,600px);clip-path:inset(49.5% 0 49.5% 0 round 22px);-webkit-clip-path:inset(49.5% 0 49.5% 0 round 22px);transition:clip-path 1.5s cubic-bezier(.65,0,.15,1) .2s,-webkit-clip-path 1.5s cubic-bezier(.65,0,.15,1) .2s;border-radius:22px}
+.f3.los .kino{clip-path:inset(0 0 0 0 round 22px);-webkit-clip-path:inset(0 0 0 0 round 22px)}
+.f3 .kino img{object-position:50% 58%;transition-delay:.2s;transform:scale(1.12)}
+.f3 .t{font-size:clamp(44px,5.4vw,100px)}
+.f3 .t em{font-style:normal;color:#C9D98A}
+.f3 .zeile1{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:clamp(14px,2vh,24px)}
+.f3 .zeile2{display:flex;justify-content:space-between;align-items:flex-start;margin-top:clamp(14px,2vh,24px)}
+.f3 .zeile1 .t .sl>span{--d:1.15s} .f3 .zeile2 .t .sl>span{--d:1.3s}
+.f3 .m{color:var(--dach)} .f3 .m.sl>span{--d:1.55s}
+.f3 .zeile2 .links{display:grid;gap:12px;justify-items:start;padding-top:8px}
+.f3 .zeile2 .links .knoepfe{overflow:hidden;padding:6px 10px 14px 0}
+.f3 .zeile2 .links .rein{--d:1.75s}
+
+@media (max-width:760px){
+  .f1 .mitte{width:86vw;height:44vh;top:52%}
+  .f1 .seite{top:auto;transform:none;left:0;right:0;text-align:center}
+  .f1 .seite--l{bottom:calc(100% + 14px)} .f1 .seite--r{top:calc(100% + 14px)}
+  .f1 .seite .t{font-size:44px} .f1 .seite .m{display:none}
+  .f1 .oben{display:none} .f1 .unten{top:calc(100% + 86px)}
+  .f2 .paar{grid-template-columns:1fr 1fr;grid-template-rows:38vh auto;inset:96px 16px 24px}
+  .f2 .mittig{grid-column:1/-1;grid-row:2}
+  .f2 .seite:last-child{grid-column:2;grid-row:1}
+  .f2 .t{font-size:44px}
+  .f2 .mittig .oben{margin-bottom:14px} .f2 .satz{margin:14px 0 18px}
+  .f3 .fr-rahmen{width:92vw;top:50%}
+  .f3 .kino{height:34vh}
+  .f3 .t{font-size:38px}
+  .f3 .zeile1,.f3 .zeile2{flex-direction:column;align-items:flex-start;gap:10px}
+  .f3 .zeile1 .m{order:-1}
+}
+@media (prefers-reduced-motion:reduce){.fr *{transition:none!important;animation:none!important}}

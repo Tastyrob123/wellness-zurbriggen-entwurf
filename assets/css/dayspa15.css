@@ -1,0 +1,204 @@
+/* Spa-Seite, «Für einen Tag ins Spa»: 15 Fassungen (26.10.2026). Nur transform und opacity, alles von Anfang an sichtbar, ein Moment je Fassung. */
+.vnr{position:fixed;z-index:90;left:50%;bottom:18px;transform:translateX(-50%);display:flex;align-items:center;gap:6px;padding:6px;border-radius:14px;background:#0A1129;box-shadow:0 18px 40px -12px rgba(0,0,0,.6),inset 0 0 0 1px rgba(233,212,154,.3);font-family:var(--mono);font-size:11px;letter-spacing:.1em;color:#F4F2EC}
+.vnr a{display:grid;place-items:center;min-width:38px;height:38px;padding:0 12px;border-radius:10px;color:#F4F2EC;text-decoration:none;background:rgba(255,255,255,.07)}
+.vnr b{font-weight:400;padding:0 14px;white-space:nowrap}
+@media(max-width:600px){.vnr b{max-width:58vw;overflow:hidden;text-overflow:ellipsis;padding:0 6px}}
+
+/* Gemeinsam */
+.dx{--r:clamp(14px,1.4vw,22px);--sch:0 40px 70px -40px rgba(24,33,63,.55),0 10px 22px -16px rgba(24,33,63,.3);--ms-t:#8A6A2A}
+.dx .dw{max-width:var(--max,1400px);margin:0 auto}
+.dx figure{position:relative;margin:0;border-radius:var(--r);overflow:hidden;box-shadow:var(--sch);background:#DCD3C4}
+.dx figure img{display:block;width:100%;height:100%;object-fit:cover}
+.dx .rt{font-size:clamp(38px,3.8vw,64px);text-wrap:balance}
+.dx .rl{max-width:42ch}
+.dx .rs-k{margin-top:22px}
+.dx .r-knoepfe{margin-top:clamp(28px,3vw,40px)}
+.dx .ro{color:var(--ms-t)}
+.dx b{font-weight:inherit}
+
+/* 01 · Die Eintrittskarte */
+.dx1{display:grid;grid-template-columns:minmax(0,6.4fr) minmax(0,5fr);gap:clamp(36px,5vw,90px);align-items:center}
+.dx1-bild{aspect-ratio:4/5;max-height:820px;width:100%}
+.dx1-schlitz{margin-top:clamp(26px,2.6vw,36px);padding-top:6px;overflow:hidden;border-top:2px solid rgba(24,33,63,.85);max-width:420px}
+.dx1-karte{position:relative;padding:24px 26px 22px;border-radius:0 0 14px 14px;background:linear-gradient(180deg,#FFFDF8,#F4EEE3);box-shadow:inset 0 0 0 1px rgba(168,138,58,.35),0 24px 40px -26px rgba(24,33,63,.5);
+  transform:translateY(-38%);transition:transform 1.6s var(--e1) .35s}
+.dx1.da .dx1-karte,.da .dx1-karte{transform:none}
+.dx1-z{position:absolute;right:22px;top:20px;margin:0;width:40px;color:#C9A54E}
+.dx1-z svg{display:block;width:100%;height:auto}
+.dx1-preis{margin:6px 0 0;font-family:var(--licht);font-weight:300;font-size:clamp(64px,6vw,96px);line-height:1;letter-spacing:-.04em;color:var(--ink)}
+.dx1-preis span{font-size:.28em;letter-spacing:.06em;margin-right:.35em;vertical-align:.28em;color:var(--ms-t);font-family:var(--mono)}
+.dx1-bed{margin:8px 0 0;font-family:var(--licht);font-size:16px;color:var(--ink)}
+.dx1-riss{display:block;height:0;margin:18px -26px 14px;border-top:1.5px dashed rgba(168,138,58,.55)}
+.dx1-inkl{margin:0;font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink2)}
+.dx1-text>.rs{margin-top:16px}
+
+/* 02 · Die Zahl */
+.dx2{display:grid;grid-template-columns:minmax(0,4.2fr) minmax(0,4.4fr) minmax(0,3.4fr);gap:clamp(30px,4vw,70px);align-items:center}
+.dx2-zahl{align-self:center}
+.dx2-chf{margin:0;font-family:var(--mono);font-size:14px;letter-spacing:.32em;color:var(--ms-t)}
+.dx2-15{margin:-.06em 0 0 -.06em;font-family:var(--licht);font-weight:300;font-size:clamp(170px,20vw,330px);line-height:.86;letter-spacing:-.06em;color:#C9A54E;
+  background:linear-gradient(180deg,#E9D49A,#B8933D);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.dx2-u{margin:10px 0 0;font-family:var(--licht);font-size:18px;color:var(--ink)}
+.dx2-bild{aspect-ratio:3/4.4;max-height:760px}
+
+/* 03 · Behandlung und Oase, 05 Kopf */
+.dx3-kopf{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(30px,5vw,90px);align-items:end;margin-bottom:clamp(44px,5vw,76px)}
+.dx3-kopf .rl{margin-top:0}
+.dx3-paar{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:clamp(14px,2vw,30px);align-items:start}
+.dx3-f figure{aspect-ratio:4/3}
+.dx3-u{padding-top:22px}
+.dx3-u .ro{margin:0 0 4px}
+.dx3-b{margin:0;font-family:var(--licht);font-weight:300;font-size:clamp(40px,4.2vw,70px);line-height:1;letter-spacing:-.03em;color:var(--ink)}
+.dx3-u .rs{margin-top:10px}
+.dx3-und{margin:0;align-self:center;padding-bottom:110px;font-family:var(--licht);font-weight:300;font-size:clamp(22px,2vw,30px);color:var(--ms-t)}
+.dx3-f+.dx3-und+.dx3-f{transform:translateY(90px);transition:transform 1.8s var(--e1) .25s}
+.dx3.da .dx3-f+.dx3-und+.dx3-f,.da .dx3-f+.dx3-und+.dx3-f{transform:none}
+
+/* 04 · Breitbild mit Leiste */
+.dx4-kopf{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(30px,5vw,90px);align-items:end;margin-bottom:clamp(36px,4vw,60px)}
+.dx4-kopf .rl{margin:0}
+.dx4-bild{aspect-ratio:21/8.6;border-radius:var(--r) var(--r) 0 0}
+.dx4-bild img{transform:scale(1.1);transition:transform 3.2s var(--e1)}
+.da .dx4-bild img{transform:none}
+.dx4-leiste{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) minmax(0,1.5fr) minmax(0,1fr) auto;border-radius:0 0 var(--r) var(--r);background:linear-gradient(180deg,#FFFDF8,#F6F1EA);box-shadow:var(--sch),inset 0 0 0 1px rgba(168,138,58,.25)}
+.dx4-f{padding:24px clamp(16px,1.8vw,28px);border-left:1px solid rgba(168,138,58,.3)}
+.dx4-f:first-child{border-left:0}
+.dx4-f .ro{margin:0 0 6px;font-size:10.5px}
+.dx4-w{margin:0;font-family:var(--licht);font-size:clamp(19px,1.6vw,26px);line-height:1.2;letter-spacing:-.01em;color:var(--ink)}
+.dx4-s{margin:4px 0 0;font-size:14px;color:var(--ink2)}
+.dx4-k{display:flex;align-items:center}
+.dx4-k .r-knoepfe{margin:0}
+
+/* 05 · Ein Tag in vier Bildern */
+.dx5-reihe{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(10px,1.2vw,18px)}
+.dx5-s figure{aspect-ratio:3/4.3;transform:translateY(calc(30px + var(--n) * 34px));transition:transform 1.6s var(--e1) calc(.15s + var(--n) * .18s)}
+.da .dx5-s figure{transform:none}
+.dx5-s .ro{margin:20px 0 4px}
+.dx5-s .rs{margin:0;font-size:15px}
+
+/* 06 · Zwischen zwei Bildern */
+.dx6{display:grid;grid-template-columns:minmax(0,3.6fr) minmax(0,4.8fr) minmax(0,3.6fr);gap:clamp(30px,4vw,70px);align-items:center;text-align:center}
+.dx6-l,.dx6-r{aspect-ratio:3/4.5;max-height:720px}
+
+.dx6-l img,.dx6-r img{transform:scale(1.14);transition:transform 2.8s var(--e1)}
+.da .dx6-l img,.da .dx6-r img{transform:none}
+.dx6 .rl,.dx6 .rs{margin-left:auto;margin-right:auto}
+.dx6-z{margin:clamp(26px,2.6vw,36px) 0 0;display:grid;gap:6px;justify-items:center}
+.dx15 .dx6-z{justify-items:start}
+.dx6-z b{font-family:var(--licht);font-weight:300;font-size:clamp(46px,4.4vw,74px);line-height:1;letter-spacing:-.03em;color:var(--ink)}
+.dx6-z span{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--ms-t);max-width:34ch}
+
+/* 07 · Fragen und Antworten */
+.dx7{display:grid;grid-template-columns:minmax(0,5.4fr) minmax(0,6.6fr);gap:clamp(36px,5vw,90px);align-items:center}
+.dx7-bild{aspect-ratio:4/5;max-height:800px}
+.dx7-l{list-style:none;margin:clamp(26px,3vw,40px) 0 0;padding:0}
+.dx7-l li{position:relative;display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:20px;padding:16px 0}
+.dx7-l li::before{content:"";position:absolute;left:0;right:0;top:0;height:1px;background:rgba(168,138,58,.55);transform:scaleX(.18);transform-origin:left;transition:transform 1.3s var(--e1) calc(.3s + var(--n) * .14s)}
+.da .dx7-l li::before{transform:none}
+.dx7-l b{font-family:var(--licht);font-size:clamp(18px,1.4vw,22px);color:var(--ink)}
+.dx7-l span{font-family:var(--sans);font-size:16px;line-height:1.55;color:var(--ink2)}
+
+/* 08 · Karte auf dem Bild */
+.dx8{position:relative;padding-bottom:clamp(80px,8vw,140px)}
+.dx8-bild{aspect-ratio:21/10}
+.dx8-karte{position:absolute;left:clamp(24px,4vw,70px);bottom:0;width:min(620px,50%);padding:clamp(28px,3vw,46px);border-radius:var(--r);background:linear-gradient(180deg,#FFFDF8,#F6F1EA);box-shadow:0 50px 80px -40px rgba(24,33,63,.6),inset 0 0 0 1px rgba(168,138,58,.25);
+  transform:translateY(90px);transition:transform 1.8s var(--e1) .3s}
+.da .dx8-karte{transform:none}
+.dx8-karte .rt{font-size:clamp(34px,3.2vw,52px)}
+
+/* 09 · Ein hohes Bild in der Mitte */
+.dx9{display:grid;grid-template-columns:minmax(0,4.4fr) minmax(0,3.8fr) minmax(0,3.4fr);gap:clamp(30px,4vw,70px);align-items:center}
+.dx9-bild{aspect-ratio:3/4.5;max-height:800px}
+.dx9-bild img{height:116%;transform:translateY(-14%);transition:transform 3.4s var(--e1)}
+.da .dx9-bild img{transform:none}
+.dx9-z{padding:18px 0;border-top:1px solid rgba(168,138,58,.45)}
+.dx9-z:first-child{border-top:0;padding-top:0}
+.dx9-z .ro{margin:0 0 6px;font-size:10.5px}
+.dx9-w{margin:0;font-family:var(--licht);font-weight:300;font-size:clamp(28px,2.6vw,44px);line-height:1.08;letter-spacing:-.02em;color:var(--ink)}
+.dx9-z:nth-child(3) .dx9-w{font-size:clamp(20px,1.6vw,26px)}
+
+/* 10 · Erst der Satz, dann das Band */
+.dx10-text{text-align:center;max-width:880px;margin:0 auto}
+.dx10-text .rl{margin-left:auto;margin-right:auto}
+.dx10-band{margin-top:clamp(50px,6vw,90px);display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;border-radius:var(--r);overflow:hidden;box-shadow:var(--sch);transform:translateY(120px);transition:transform 1.9s var(--e1) .4s}
+.da .dx10-band{transform:none}
+.dx10-band figure{aspect-ratio:4/3.3;border-radius:0;box-shadow:none}
+.dx10>.rs-k{text-align:center;margin-left:auto;margin-right:auto}
+
+/* 11 · Schachbrett */
+.dx11{display:grid;grid-template-columns:minmax(0,4.6fr) minmax(0,7.4fr);gap:clamp(36px,5vw,90px);align-items:center}
+.dx11-brett{display:grid;grid-template-columns:1fr 1fr;gap:clamp(8px,1vw,14px)}
+.dx11-brett>*{aspect-ratio:1/1;transition:transform 1.5s var(--e1)}
+.dx11-b{transform:translateY(40px)}
+.dx11-f{transform:translateY(40px);transition-delay:.45s}
+.da .dx11-brett>*{transform:none}
+.dx11-f{display:flex;flex-direction:column;justify-content:flex-end;padding:clamp(20px,2.4vw,38px);border-radius:var(--r);box-shadow:var(--sch)}
+.dx11-f p{margin:0}
+.dx11-f>p:last-child{margin-top:8px;font-size:15px;line-height:1.45;opacity:.85}
+.dx11-w{font-family:var(--licht);font-weight:300;font-size:clamp(36px,3.6vw,62px);line-height:1;letter-spacing:-.03em}
+.dx11-nacht{background:linear-gradient(180deg,#1A2449,#0E1638);color:#F4F2EC}
+.dx11-nacht .ro{color:#E9D49A}
+.dx11-ms{background:linear-gradient(180deg,#EBD79E,#CFAE58);color:#18213F}
+.dx11-ms .ro{color:#5A4517}
+
+/* 12 · Der Satz */
+.dx12-satz{margin:clamp(18px,2vw,26px) 0 0;font-family:var(--licht);font-weight:300;font-size:clamp(40px,5.6vw,98px);line-height:1.05;letter-spacing:-.03em;color:var(--ink)}
+.dx12-satz .sl{display:block;overflow:hidden;padding-bottom:.08em}
+.dx12-satz .sl>span{display:inline-block;transform:translateY(60%);transition:transform 1.4s var(--e1)}
+.dx12-satz .sl:nth-child(2)>span{transition-delay:.14s}.dx12-satz .sl:nth-child(3)>span{transition-delay:.28s}
+.da .dx12-satz .sl>span{transform:none}
+.dx12-satz b{color:#B38F3A}
+.dx12-unten{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,3.2fr) minmax(0,3.2fr);gap:clamp(20px,2.4vw,40px);align-items:end;margin-top:clamp(44px,5vw,80px)}
+.dx12-unten .rl{margin-top:0}
+.dx12-a{aspect-ratio:3/4}
+.dx12-b{aspect-ratio:3/4}
+
+/* 13 · Wohin zuerst */
+.dx13{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(36px,5vw,90px);align-items:center}
+.dx13-bild{aspect-ratio:4/3.6}
+.dx13-wahl{margin:clamp(24px,2.6vw,36px) 0 clamp(22px,2.4vw,30px);border-top:1px solid rgba(168,138,58,.45)}
+.dx13-wahl button{display:flex;justify-content:space-between;align-items:baseline;gap:20px;width:100%;padding:14px 0;border:0;border-bottom:1px solid rgba(168,138,58,.45);background:none;cursor:pointer;text-align:left;color:var(--ink);font:inherit}
+.dx13-wahl b{font-family:var(--licht);font-weight:300;font-size:clamp(24px,2.2vw,36px);letter-spacing:-.02em;opacity:.45;transition:opacity .5s}
+.dx13-wahl span{font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--ms-t);opacity:.6;transition:opacity .5s;text-align:right}
+.dx13-wahl .an b,.dx13-wahl .an span{opacity:1}
+.dx13-wahl button:focus-visible{outline:2px solid #B38F3A;outline-offset:2px}
+
+/* 14 · Bis an den Rand */
+.ri.dxs14{padding-top:0;padding-bottom:0;padding-right:0}
+.dxs14 .dw{max-width:none}
+.dx14-w{display:grid;grid-template-columns:minmax(0,4.4fr) minmax(0,7.6fr);gap:clamp(36px,5vw,90px);align-items:center}
+.dx14-text{padding:clamp(80px,8vw,130px) 0}
+.dx14-bild{height:min(92vh,880px);border-radius:var(--r) 0 0 var(--r)!important}
+.dx14-bild img{height:112%;transform:translateY(-10%);transition:transform 3.4s var(--e1)}
+.da .dx14-bild img{transform:none}
+.dx14-l{margin:clamp(26px,3vw,38px) 0 0;max-width:460px}
+.dx14-l div{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:16px;padding:12px 0;border-top:1px solid rgba(168,138,58,.45)}
+.dx14-l dt{font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--ms-t);padding-top:4px}
+.dx14-l dd{margin:0;font-family:var(--licht);font-size:17px;color:var(--ink)}
+
+/* 15 · Die Vitrine */
+.dx15{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(36px,5vw,90px);align-items:center}
+.dx15-kasten{display:grid;gap:10px;padding:10px;border-radius:calc(var(--r) + 8px);background:linear-gradient(180deg,#E9D49A,#B8933D);box-shadow:var(--sch),inset 0 1px 0 rgba(255,255,255,.6)}
+.dx15-kasten figure{aspect-ratio:16/6.4;border-radius:var(--r);box-shadow:inset 0 0 0 1px rgba(0,0,0,.2)}
+.dx15-kasten i{position:absolute;inset:0;background:#0A1129;opacity:.62;transition:opacity 1.2s ease calc(.4s + var(--n) * .45s)}
+.da .dx15-kasten i{opacity:0}
+
+/* Handy */
+@media(max-width:900px){
+ .dx1,.dx2,.dx6,.dx7,.dx9,.dx11,.dx13,.dx15,.dx3-kopf,.dx4-kopf,.dx14-w{grid-template-columns:minmax(0,1fr)}
+ .dx12-unten{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.dx12-unten>div{grid-column:1/-1}
+ .dx1-bild,.dx7-bild{aspect-ratio:4/3.6}
+ .dx2-15{font-size:42vw}.dx2-bild{aspect-ratio:4/3.4}
+ .dx3-paar{grid-template-columns:1fr}.dx3-und{padding:0}.dx3-f+.dx3-und+.dx3-f{transform:none}
+ .dx4-bild{aspect-ratio:4/3}.dx4-leiste{grid-template-columns:1fr 1fr}.dx4-f:nth-child(3){border-left:0}.dx4-f{border-top:1px solid rgba(168,138,58,.3)}.dx4-k{grid-column:1/-1}
+ .dx5-reihe{grid-template-columns:1fr 1fr;row-gap:30px}.dx5-s figure{transform:translateY(30px)}
+ .dx6{text-align:left}.dx6-text{grid-row:1}.dx6-l,.dx6-r{display:none}.dx6 .rl,.dx6 .rs{margin-left:0}.dx6-z{justify-items:start}.dx6 .r-knoepfe{justify-content:flex-start}
+ .dx7-l li{grid-template-columns:1fr;gap:4px}
+ .dx8-bild{aspect-ratio:4/3.4}.dx8-karte{position:relative;left:auto;width:auto;margin:-60px 12px 0}.dx8{padding-bottom:0}
+ .dx9-bild{aspect-ratio:4/4.4}
+ .dx10-band{grid-template-columns:1fr 1fr}.dx10-band figure:last-child{display:none}
+ .dx13-bild{grid-row:1}
+ .dx14-w{gap:0}.dx14-text{padding:70px 16px 40px}.ri.dxs14{padding-left:0}.dx14-bild{height:70vh;border-radius:0!important;box-shadow:none}
+ .dx15-kasten figure{aspect-ratio:16/8}
+}
+@media(prefers-reduced-motion:reduce){.dx *{transition:none!important}}

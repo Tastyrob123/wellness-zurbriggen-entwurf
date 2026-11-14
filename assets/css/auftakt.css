@@ -1,0 +1,70 @@
+/* Sechs Auftakte zur Wahl (20.10.2026). Nur die Marke oben links gehört nicht zur Seite. */
+.vseite main{background:var(--papier) var(--tap-hell) 50% 0/240px auto}
+.v-marke{position:fixed;z-index:80;left:24px;bottom:24px;display:flex;align-items:center;gap:14px;padding:10px 20px 10px 10px;border-radius:99px;background:#2A1E15;color:var(--papier);font-family:var(--serif);font-size:1rem;box-shadow:0 14px 30px -12px rgba(0,0,0,.6)}
+.v-marke b{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--messing);color:#2A1E15;font-weight:400;font-size:1.5rem}
+.vseite h1{font-family:var(--serif);font-weight:400;line-height:1.02;letter-spacing:.005em}
+.vseite h1 em{font-style:normal}
+.v-z{display:flex;align-items:flex-end;gap:14px;color:var(--messing)}.v-z>svg{width:50px;height:auto}.v-z i{display:flex;gap:7px}.v-z i svg{width:15px;height:auto}.v-z .krone{width:21px}
+.v-ort{font-family:var(--serif);font-size:13px;letter-spacing:.32em;text-transform:uppercase;color:var(--karamell)}
+.vseite figure{margin:0}.vseite img{display:block;width:100%;height:100%;object-fit:cover}
+.vseite .leiste{background:var(--papier);padding:8px;border-radius:999px;box-shadow:0 26px 50px -28px rgba(42,30,21,.55)}
+@keyframes v-auf{from{transform:translateY(18vh) scale(.94)}to{transform:none}}
+@keyframes v-zoom{from{transform:scale(1.14)}to{transform:none}}
+@keyframes v-text{from{transform:translateY(40px);opacity:0}to{transform:none;opacity:1}}
+@media (prefers-reduced-motion:no-preference){.vseite h1,.vseite .v-z,.vseite .v-ort{animation:v-text 1.3s cubic-bezier(.16,1,.3,1) .5s both}}
+/* 1 Himmel über dem Haus */
+.v1{position:relative;height:100svh;min-height:680px;overflow:hidden;background:#cfe0ee}
+.v1__himmel{position:absolute;inset:0 0 45% 0}.v1__himmel img{object-position:50% 0;filter:saturate(.9)}
+.v1__t{position:absolute;z-index:2;left:0;right:0;top:15vh;display:grid;justify-items:center;gap:14px;text-align:center;color:var(--schoko)}
+.v1__t h1{font-size:clamp(3rem,6.6vw,7rem);color:var(--schoko)}.v1__t h1 em{color:var(--karamell)}
+.v1__haus{position:absolute;z-index:3;left:0;right:0;bottom:0;height:56%;-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 18%);mask-image:linear-gradient(180deg,transparent 0,#000 18%)}
+@media (prefers-reduced-motion:no-preference){.v1__haus{animation:v-auf 1.9s cubic-bezier(.19,1,.22,1) .1s both}}
+.v1__leiste{position:absolute;z-index:4;left:50%;bottom:34px;width:min(1000px,90vw);translate:-50% 0}
+.v-ueber{padding:40px 0 70px;text-align:center;font-family:var(--serif);font-size:1.5rem;color:var(--schoko)}
+/* 2 Holzscheiben */
+.v2{position:relative;height:100svh;min-height:680px;overflow:hidden;background:#2a1e15;color:var(--papier)}
+.v2__wand{position:absolute;inset:0}.v2__wand img{filter:brightness(.82)}
+@media (prefers-reduced-motion:no-preference){.v2__wand img{animation:v-zoom 3.2s cubic-bezier(.16,1,.3,1) both}}
+.v2::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 70% at 30% 70%,rgba(20,14,9,.7),rgba(20,14,9,0) 70%);pointer-events:none}
+.v2__t{position:absolute;z-index:2;left:var(--rand);bottom:22vh;display:grid;gap:16px;max-width:760px}
+.v2__t h1{font-size:clamp(2.8rem,5.8vw,6rem);color:var(--papier)}.v2__t h1 em{color:var(--messing)}.v2__t p{max-width:48ch;color:rgba(251,248,243,.9)}
+.v2__aussen{position:absolute;z-index:2;right:var(--rand);top:18vh;width:min(28vw,400px);padding:8px;border-radius:26px;background:rgba(255,252,247,.9);box-shadow:0 40px 70px -30px rgba(0,0,0,.7)}
+.v2__aussen img{border-radius:19px;aspect-ratio:4/3;height:auto}.v2__aussen figcaption{padding:10px 8px 4px;font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--schoko)}
+@media (prefers-reduced-motion:no-preference){.v2__aussen{animation:v-auf 1.6s cubic-bezier(.34,1.3,.5,1) .9s both}}
+.v2__leiste{position:absolute;z-index:3;left:var(--rand);right:var(--rand);bottom:34px;max-width:1000px}
+/* 3 halb und halb */
+.v3{display:grid;grid-template-columns:1fr 1fr;min-height:100svh}
+.v3__l{display:grid;align-content:center;gap:20px;padding:120px clamp(30px,5vw,90px) 60px var(--rand)}
+.v3__l h1{font-size:clamp(2.8rem,5.2vw,5.6rem);color:var(--schoko)}.v3__l h1 em{color:var(--karamell)}.v3__l>p{max-width:46ch;color:var(--grau)}
+.v3__r{position:relative;margin:12px;border-radius:38px;overflow:visible}
+.v3__gross{position:absolute;inset:0;overflow:hidden;border-radius:38px;box-shadow:0 40px 80px -40px rgba(42,30,21,.55)}
+@media (prefers-reduced-motion:no-preference){.v3__gross{animation:v-auf 1.8s cubic-bezier(.19,1,.22,1) .1s both}.v3__klein{animation:v-auf 1.6s cubic-bezier(.34,1.3,.5,1) .7s both}}
+.v3__klein{position:absolute;left:-12%;bottom:8%;width:46%;aspect-ratio:4/3;padding:8px;border-radius:28px;background:#FFFCF7;box-shadow:0 40px 70px -30px rgba(42,30,21,.6)}.v3__klein img{border-radius:20px}
+/* 4 Abend */
+.v4{position:relative;height:100svh;min-height:680px;overflow:hidden;background:#141018;color:var(--papier)}
+.v4__bild{position:absolute;inset:0}
+@media (prefers-reduced-motion:no-preference){.v4__bild img{animation:v-zoom 3.4s cubic-bezier(.16,1,.3,1) both}}
+.v4::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,8,14,.55),rgba(10,8,14,0) 40%);pointer-events:none}
+.v4__t{position:absolute;z-index:2;left:0;right:0;top:12vh;display:grid;justify-items:center;gap:16px;text-align:center}
+.v4__t h1{font-size:clamp(3rem,6.2vw,6.6rem);color:var(--papier)}.v4__t h1 em{color:var(--messing-hell)}.v4__t p{color:rgba(251,248,243,.9)}
+.v4__leiste{position:absolute;z-index:3;left:50%;bottom:34px;width:min(1000px,90vw);translate:-50% 0}
+/* 5 Kristall und Leuchter */
+.v5{position:relative;min-height:100svh;display:grid;grid-template-columns:1.1fr 1fr;align-items:center;gap:clamp(30px,4vw,70px);padding:110px var(--rand) 70px;background:#2A1E15 var(--tap-dunkel) 50% 0/240px auto;color:var(--papier)}
+.v5__fotos{position:relative;height:min(76svh,720px)}
+.v5__fotos figure{position:absolute;overflow:hidden;border-radius:28px;padding:7px;background:rgba(255,236,200,.08);box-shadow:inset 0 0 0 1px rgba(217,183,88,.2),0 40px 70px -30px rgba(0,0,0,.8)}.v5__fotos img{border-radius:21px}
+.v5__a{left:0;top:0;width:38%;height:62%}.v5__b{right:0;top:8%;width:58%;height:52%}.v5__c{left:18%;bottom:0;width:52%;height:40%;z-index:2}
+@media (prefers-reduced-motion:no-preference){.v5__a{animation:v-auf 1.6s cubic-bezier(.34,1.3,.5,1) .1s both}.v5__b{animation:v-auf 1.6s cubic-bezier(.34,1.3,.5,1) .25s both}.v5__c{animation:v-auf 1.6s cubic-bezier(.34,1.3,.5,1) .4s both}}
+.v5__t{display:grid;gap:20px}.v5__t h1{font-size:clamp(2.8rem,5vw,5.4rem);color:var(--papier)}.v5__t h1 em{color:var(--messing)}.v5__t p{max-width:46ch;color:rgba(246,241,234,.82)}
+.v5 .leiste{background:var(--papier)}
+/* 6 Das gepinselte Z */
+.v6{position:relative;min-height:100svh;display:grid;grid-template-columns:1.1fr 1fr;align-items:center;padding:100px var(--rand) 60px;overflow:hidden}
+.v6__z{position:absolute;left:-4vw;top:50%;width:64vw;translate:0 -50%;color:var(--messing);opacity:.92}
+.v6__zz{width:100%;height:auto}
+@media (prefers-reduced-motion:no-preference){.v6__z{animation:v-text 1.6s cubic-bezier(.16,1,.3,1) both}}
+.v6__haus{position:relative;z-index:2;grid-column:1;width:72%;margin-left:12%;aspect-ratio:4/3;padding:8px;border-radius:30px;background:#FFFCF7;box-shadow:0 40px 80px -36px rgba(42,30,21,.6)}.v6__haus img{border-radius:22px}
+@media (prefers-reduced-motion:no-preference){.v6__haus{animation:v-auf 1.7s cubic-bezier(.34,1.3,.5,1) .5s both}}
+.v6__t{position:relative;z-index:2;display:grid;gap:20px}.v6__t h1{font-size:clamp(2.8rem,5vw,5.4rem);color:var(--schoko)}.v6__t h1 em{color:var(--karamell)}.v6__t>p{max-width:46ch;color:var(--grau)}
+.v-marke{bottom:auto;top:100px}
+.v1{background:linear-gradient(180deg,#dfe8ef,#F6F1EA)}.v1__himmel{display:none}.v1__haus{height:58%}
+.v4::after{background:linear-gradient(180deg,rgba(10,8,14,.78),rgba(10,8,14,.35) 45%,rgba(10,8,14,0) 65%)}
+.v4__t h1,.v4__t p{text-shadow:0 2px 24px rgba(0,0,0,.6)}

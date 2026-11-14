@@ -1,0 +1,162 @@
+/* Wellness & Spa Pirmin Zurbriggen · Startseite «Ruhe in den Bergen» (19.10.2026). Niveau wie Carlton, Seiler, Rivage; Kleid aus dem Haus:
+   Leinen, Papier und Schokolade, Messing, Federo, das Z. Bausteine aus dem UI-Fundus, alle deckend (Master 4: nie aus 0 einblenden), nur transform. */
+.ws-seite main{background:var(--papier)}
+.ws{position:relative;padding:clamp(100px,10vw,160px) 0}
+.ws--tap{background:var(--leinen) var(--tap-hell) 50% 0/240px auto}
+.ws--hell{background:var(--papier)}
+.ws--dunkel{background:var(--schoko) var(--tap-dunkel) 50% 0/240px auto;color:var(--papier)}
+.ws--dunkel .d2,.ws--dunkel .d1{color:var(--papier)}.ws--dunkel .d2 em{color:var(--messing)}.ws--dunkel .ortz{color:var(--messing)}
+.ws .d2 em{font-style:normal;color:var(--karamell)}
+.ws-mitte{justify-content:center;margin-top:clamp(36px,4vw,56px)}
+/* Kopf: das Z, Ortzeile, Titel, Lauftext */
+.ws-kopf{display:grid;gap:14px;max-width:760px}
+.ws-kopf--mitte{justify-items:center;text-align:center;margin:0 auto}
+.ws-kopf__z{color:var(--karamell)}.ws-kopf__z svg{width:42px;height:auto}.ws--dunkel .ws-kopf__z{color:var(--messing)}
+.ws-lauf{max-width:60ch;font-size:1.04rem;line-height:1.7;color:var(--grau)}
+.ws--dunkel .ws-lauf{color:rgba(246,241,234,.8)}
+/* ---------- Bildrahmen (Fundus): doppelter Rand mit Polster, feine Innenlinie, 3D-Tiefe ---------- */
+.ws-r{position:relative;display:block;margin:0;padding:7px;border-radius:30px;background:rgba(255,252,247,.72);
+  box-shadow:inset 0 1px 0 #fff,inset 0 0 0 1px rgba(54,39,27,.08),0 2px 3px rgba(42,30,21,.06),0 22px 34px -18px rgba(42,30,21,.32),0 60px 90px -50px rgba(42,30,21,.45)}
+.ws--dunkel .ws-r{background:rgba(255,236,200,.06);box-shadow:inset 0 1px 0 rgba(255,236,200,.18),inset 0 0 0 1px rgba(217,183,88,.16),0 26px 40px -20px rgba(0,0,0,.55),0 70px 100px -50px rgba(0,0,0,.6)}
+.ws-r__k{position:relative;display:block;overflow:hidden;border-radius:23px;background:var(--leinen-tief);isolation:isolate}
+.ws-r__k img{width:100%;height:100%;object-fit:cover}
+.v-45 .ws-r__k{aspect-ratio:4/5}.v-43 .ws-r__k{aspect-ratio:4/3}.v-11 .ws-r__k{aspect-ratio:1}.v-54 .ws-r__k{aspect-ratio:5/4}.v-34 .ws-r__k{aspect-ratio:3/4}
+.ws-r figcaption{position:absolute;left:22px;bottom:20px;z-index:2;padding:6px 12px;border-radius:99px;background:rgba(251,248,243,.94);font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--schoko);box-shadow:0 6px 14px -8px rgba(42,30,21,.5)}
+/* ---------- Auftritte aus dem Fundus, deckend ---------- */
+.js [data-r="ws-edel"]{opacity:1;translate:none;transform:translateY(46px) scale(.975);transform-origin:50% 100%;transition:transform 2s cubic-bezier(.16,1,.3,1);transition-delay:calc(var(--i,0)*150ms)}
+.js [data-r="ws-schweb"]{opacity:1;translate:none;transform:translateY(clamp(90px,12vw,170px)) scale(.94);transform-origin:50% 100%;transition:transform 1.5s cubic-bezier(.19,1,.22,1);transition-delay:calc(var(--i,0)*110ms)}
+.js [data-r="ws-kachel"]{opacity:1;translate:none;transform:translateY(clamp(70px,9vw,140px)) scale(.95);transform-origin:50% 100%;transition:transform 1.5s cubic-bezier(.34,1.3,.5,1);transition-delay:calc(var(--i,0)*120ms)}
+.js [data-r="ws-bild"]{opacity:1;translate:none;transform:none}
+.js [data-r^="ws-"].da{transform:none}
+.js [data-r^="ws-"] .ws-r__k img{transform:scale(1.13);transition:transform 2.6s cubic-bezier(.16,1,.3,1);transition-delay:calc(var(--i,0)*150ms)}
+.js [data-r^="ws-"].da .ws-r__k img{transform:none}
+@media (prefers-reduced-motion:reduce){.js [data-r^="ws-"],.js [data-r^="ws-"] .ws-r__k img{transform:none!important}}
+/* Lichtstreif (Fundus) */
+.streiffeld{position:relative;overflow:hidden;isolation:isolate}
+.streif{position:absolute;z-index:3;top:-20%;bottom:-20%;left:0;width:30%;background:linear-gradient(100deg,transparent,rgba(255,244,222,.32),transparent);transform:translate3d(-170%,0,0) skewX(-14deg);pointer-events:none}
+.da>.streif,.da .streif{animation:ws-licht 2.8s cubic-bezier(.16,1,.3,1) .8s both}
+@keyframes ws-licht{to{transform:translate3d(460%,0,0) skewX(-14deg)}}
+/* Dunst (Fundus): ein Schleier hebt sich, das Bild kommt zur Ruhe */
+.dunst{position:relative;overflow:hidden;isolation:isolate;--schleier:#FBF8F3}
+.dunst--dunkel{--schleier:#1d150f}
+.dunst::after{content:'';position:absolute;inset:0;z-index:2;background:var(--schleier);opacity:1;transition:opacity 1.9s ease .15s;pointer-events:none}
+.da .dunst::after,html:not(.js) .dunst::after{opacity:0}
+.dunst img{transform:scale(1.06);transition:transform 3.2s cubic-bezier(.16,1,.3,1)}
+.da .dunst img{transform:none}
+
+/* ---------- 1 Auftakt ---------- */
+.ws-auf{position:relative;height:100svh;min-height:640px;max-height:1100px;overflow:hidden;color:var(--papier);background:var(--schoko)}
+.ws-auf__bild{position:absolute;inset:0}.ws-auf__bild img{width:100%;height:100%;object-fit:cover}
+.ws-auf::before{content:'';position:absolute;inset:0;z-index:3;pointer-events:none;background:linear-gradient(180deg,rgba(30,21,14,.5) 0%,rgba(30,21,14,0) 32%,rgba(30,21,14,0) 50%,rgba(30,21,14,.62) 100%)}
+.ws-auf__t{position:absolute;z-index:4;left:var(--rand);right:var(--rand);bottom:clamp(150px,20vh,210px);display:grid;gap:14px;justify-items:start;max-width:900px}
+.ws-auf__z{display:flex;align-items:flex-end;gap:16px;color:var(--messing)}.ws-auf__z>svg{width:52px;height:auto}.ws-auf__z span{display:flex;gap:8px}.ws-auf__z span svg{width:16px;height:auto}.ws-auf__z .krone{width:22px}
+.ws-auf__ort{font-family:var(--serif);font-size:13px;letter-spacing:.32em;text-transform:uppercase;color:var(--messing-hell)}
+.ws-auf__h{color:var(--papier);text-shadow:0 2px 30px rgba(20,14,9,.35)}.ws-auf__h em{font-style:normal;color:var(--messing-hell)}
+.ws-auf__satz{max-width:52ch;font-size:1.06rem;line-height:1.6;color:rgba(251,248,243,.92)}
+.ws-auf__leiste{position:absolute;z-index:4;left:var(--rand);right:var(--rand);bottom:clamp(28px,4vh,44px);max-width:1100px;padding:8px;border-radius:999px;background:var(--papier);box-shadow:0 30px 60px -30px rgba(0,0,0,.6)}
+@media (max-width:800px){.ws-auf__t{bottom:240px}.ws-auf__leiste{border-radius:28px}}
+
+/* ---------- 2 Willkommen ---------- */
+.ws-will{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:clamp(40px,6vw,110px);align-items:center}
+.ws-will__t{display:grid;gap:22px;justify-items:start}
+.ws-angaben{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;width:100%;border-top:1px solid var(--linie)}
+.ws-ang{display:grid;gap:4px;padding:16px 16px 0 0}.ws-ang b{font-family:var(--serif);font-weight:400;font-size:clamp(1.5rem,2.2vw,2rem);color:var(--schoko)}.ws-ang span{font-size:.86rem;line-height:1.4;color:var(--grau)}
+.ws-gast{display:flex;align-items:center;gap:16px}
+.ws-gast__b{flex:0 0 auto;width:72px;height:72px;overflow:hidden;border-radius:18px;box-shadow:0 0 0 5px #fff,0 14px 24px -12px rgba(42,30,21,.5)}.ws-gast__b img{width:100%;height:100%;object-fit:cover}
+.ws-gast p{display:grid;gap:2px;font-size:.88rem;color:var(--grau)}.ws-gast b{font-family:var(--serif);font-weight:400;font-size:1.15rem;color:var(--schoko)}
+.ws-will__b{position:relative;height:clamp(540px,52vw,780px)}
+.ws-will__1{position:absolute;right:0;top:0;width:66%}
+.ws-will__2{position:absolute;left:0;top:14%;width:44%;z-index:2}
+.ws-will__3{position:absolute;left:10%;bottom:0;width:48%;z-index:3}
+@media (max-width:800px){.ws-will{grid-template-columns:1fr}.ws-will__b{height:128vw}.ws-angaben{grid-template-columns:1fr 1fr 1fr}}
+
+/* ---------- 3 Zimmer: Kacheln mit Namensfeld und rundem Knauf; die Loft-Suite als dunkle Platte ---------- */
+.ws-zg{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(18px,2.2vw,34px);margin-top:clamp(44px,5vw,80px);perspective:1400px}
+.ws-zk{position:relative;display:grid;gap:0;padding:7px 7px 0;border-radius:30px;background:#FFFCF7;color:var(--tinte);
+  box-shadow:inset 0 1px 0 #fff,inset 0 0 0 1px rgba(54,39,27,.07),0 2px 3px rgba(42,30,21,.06),0 24px 36px -18px rgba(42,30,21,.34),0 64px 96px -52px rgba(42,30,21,.5);transform-style:preserve-3d}
+.ws-zk>.ws-r{padding:0;background:none;box-shadow:none}
+.ws-zk__t{display:grid;gap:4px;padding:18px 70px 22px 16px}
+.ws-zk__t b{font-family:var(--serif);font-weight:400;font-size:clamp(1.3rem,1.7vw,1.6rem);color:var(--schoko)}.ws-zk__t small{font-size:.88rem;color:var(--grau)}
+.ws-zk__knauf{position:absolute;right:18px;bottom:22px;display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--schoko);color:var(--papier);box-shadow:inset 0 1px 0 rgba(255,236,200,.25),0 8px 16px -8px rgba(42,30,21,.6)}
+.ws-zk__knauf i{display:contents}.ws-zk__knauf svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:1.5}
+.ws-zk .ws-r__k img{transition:transform 2.6s cubic-bezier(.16,1,.3,1),scale .9s cubic-bezier(.16,1,.3,1)}
+@media (hover:hover){.ws-zk:hover .ws-r__k img{scale:1.04}}
+.ws-zg--hoch .ws-r figcaption{bottom:22px}
+.ws-loft{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:clamp(30px,4vw,70px);align-items:center;margin-top:clamp(70px,8vw,120px);padding:clamp(14px,1.4vw,20px);border-radius:38px;
+  background:var(--schoko) var(--tap-dunkel) 50% 0/240px auto;color:var(--papier);box-shadow:inset 0 1px 0 rgba(255,236,200,.2),0 34px 60px -28px rgba(42,30,21,.6),0 90px 120px -60px rgba(42,30,21,.6)}
+.ws-loft .ws-r{background:rgba(255,236,200,.06);box-shadow:inset 0 0 0 1px rgba(217,183,88,.18)}
+.ws-loft__t{display:grid;gap:16px;justify-items:start;padding:clamp(10px,2vw,30px) clamp(10px,3vw,40px) clamp(10px,2vw,30px) 0}
+.ws-loft__t img{width:160px;height:auto}.ws-loft__t .d2{color:var(--papier)}.ws-loft__t .d2 em{color:var(--messing)}
+.ws-loft__t p{font-family:var(--serif);font-size:1.15rem;line-height:1.5;color:rgba(251,248,243,.9)}.ws-loft__t .ws-loft__zeile{font-family:var(--sans);font-size:.9rem;line-height:1.6;color:rgba(246,241,234,.72)}
+@media (max-width:800px){.ws-zg{grid-template-columns:1fr;max-width:460px;margin-inline:auto}.ws-loft{grid-template-columns:1fr}.ws-loft__t{padding:10px}}
+
+/* ---------- Fenster (Fundus): stehendes Bild, die Seite zieht darüber, der Satz steht mit dem Bild ---------- */
+.ws-fenster{position:relative;height:62svh;min-height:420px;clip-path:inset(0);display:grid;place-items:center;text-align:center;color:var(--papier);background:var(--schoko)}
+.ws-fenster__bild{position:fixed;inset:0;z-index:0}
+.ws-fenster__bild img{width:100%;height:100%;object-fit:cover}
+.ws-fenster__bild::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 50% 50%,rgba(30,21,14,.5),rgba(30,21,14,.15) 70%)}
+.ws-fenster__t{position:relative;z-index:1;display:grid;gap:14px;padding:0 var(--rand);max-width:980px}
+.ws-fenster__satz{font-family:var(--serif);font-size:clamp(1.6rem,3vw,2.8rem);line-height:1.22;text-shadow:0 2px 24px rgba(20,14,9,.55)}
+.ws-fenster__klein{font-family:var(--serif);font-size:13px;letter-spacing:.28em;text-transform:uppercase;color:var(--messing-hell);text-shadow:0 1px 10px rgba(0,0,0,.6)}
+
+/* ---------- 4 Spa ---------- */
+.ws-spa{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:clamp(40px,6vw,100px);align-items:center}
+.ws-spa__t{display:grid;gap:22px;justify-items:start}
+.ws-faecher{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;width:100%}
+.ws-fach{display:grid;gap:6px;padding:18px 18px 20px;border-radius:22px;background:rgba(0,0,0,.18);box-shadow:inset 0 2px 6px rgba(0,0,0,.4),inset 0 -1px 0 rgba(255,236,200,.08)}
+.ws-fach small{font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:rgba(246,241,234,.62)}
+.ws-fach b{font-family:var(--serif);font-weight:400;font-size:clamp(1.5rem,2.2vw,2rem);color:var(--messing)}
+.ws-reihe3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(16px,2vw,30px);margin-top:clamp(40px,5vw,70px)}
+@media (max-width:800px){.ws-spa{grid-template-columns:1fr}.ws-reihe3{grid-template-columns:1fr 1fr}.ws-reihe3>:last-child{grid-column:1/-1}}
+
+/* ---------- 5 Gourmet: Saal, die Mappe darauf, das Blatt «Inbegriffen» als Platte ---------- */
+.ws-tisch{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:clamp(16px,2vw,30px);align-items:center;margin-top:clamp(44px,5vw,80px)}
+.ws-tisch__saal{grid-column:1/8;grid-row:1}
+.ws-tisch__mappe{grid-column:6/9;grid-row:1;z-index:2;align-self:end;margin-bottom:-12%}
+.ws-blatt{grid-column:9/13;grid-row:1;display:grid;gap:12px;padding:clamp(24px,2.6vw,38px);border-radius:30px;background:#FFFCF7;
+  box-shadow:inset 0 1px 0 #fff,inset 0 0 0 1px rgba(54,39,27,.07),0 24px 36px -18px rgba(42,30,21,.34),0 64px 96px -52px rgba(42,30,21,.5)}
+.ws-blatt__z{width:30px;height:auto;color:var(--karamell)}
+.ws-blatt h3{font-family:var(--serif);font-weight:400;font-size:clamp(1.4rem,2vw,1.9rem);color:var(--schoko)}
+.ws-blatt ul{list-style:none;margin:0;padding:0;display:grid}.ws-blatt li{padding:10px 0;border-top:1px solid var(--linie);font-size:.92rem;line-height:1.45;color:var(--tinte)}
+@media (max-width:800px){.ws-tisch{grid-template-columns:1fr 1fr}.ws-tisch__saal{grid-column:1/-1}.ws-tisch__mappe{grid-column:2;grid-row:2;margin:-30% 0 0}.ws-blatt{grid-column:1/-1;grid-row:3}}
+
+/* ---------- 6 Geschichte ---------- */
+.ws-gesch{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:clamp(40px,6vw,100px);align-items:center}
+.ws-gesch__t{display:grid;gap:18px;justify-items:start}
+.ws-gesch__jahr{font-family:var(--serif);font-size:clamp(4.4rem,9vw,8.4rem);line-height:.9;color:var(--messing)}
+.ws-chronik{list-style:none;margin:0;padding:0;width:100%}
+.ws-chronik li{display:grid;grid-template-columns:5.2em 1fr;gap:16px;padding:14px 0;border-top:1px solid rgba(217,183,88,.22);font-size:.95rem;line-height:1.6;color:rgba(246,241,234,.82)}
+.ws-chronik b{font-family:var(--serif);font-weight:400;font-size:1.35rem;color:var(--messing)}
+.ws-gesch__b{position:relative;height:clamp(520px,48vw,720px)}
+.ws-gesch__1{position:absolute;left:0;top:6%;width:46%}
+.ws-gesch__2{position:absolute;right:0;top:0;width:44%;z-index:2}
+.ws-gesch__3{position:absolute;left:28%;bottom:0;width:42%;z-index:3}
+@media (max-width:800px){.ws-gesch{grid-template-columns:1fr}.ws-gesch__b{height:120vw}}
+
+/* ---------- 7 Saastal ---------- */
+.ws-pirmin{max-width:36ch;margin:clamp(44px,5vw,70px) auto 0;text-align:center;font-family:var(--serif);font-size:clamp(1.3rem,2vw,1.8rem);line-height:1.4;color:var(--schoko)}
+
+/* ---------- 8 Gäste: grosse Zahlen, still, aus einer Linie ---------- */
+.ws-noten{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;max-width:1100px;margin:clamp(44px,5vw,70px) auto 0;border-top:1px solid var(--linie)}
+.ws-note{display:grid;justify-items:center;gap:6px;padding:26px 10px 0;text-align:center}
+.ws-note+.ws-note{border-left:1px solid var(--linie)}
+.ws-note b{font-family:var(--serif);font-weight:400;font-size:clamp(2.6rem,4.6vw,4.4rem);line-height:1;color:var(--karamell)}
+.ws-note small{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--schoko)}.ws-note span{font-size:.84rem;color:var(--grau)}
+@media (max-width:800px){.ws-noten{grid-template-columns:1fr 1fr}.ws-note:nth-child(3){border-left:0}}
+
+/* ---------- 9 Schluss am Abend ---------- */
+.ws-schluss{position:relative;min-height:100svh;display:grid;place-items:center;overflow:hidden;color:var(--papier);text-align:center;background:#1d150f}
+.ws-schluss__bild{position:absolute;inset:0}.ws-schluss__bild img{width:100%;height:100%;object-fit:cover}
+.ws-schluss::before{content:'';position:absolute;inset:0;z-index:3;background:radial-gradient(ellipse 70% 60% at 50% 55%,rgba(20,14,9,.62),rgba(20,14,9,.25) 75%);pointer-events:none}
+.ws-schluss__t{position:relative;z-index:4;display:grid;justify-items:center;gap:18px;padding:120px var(--rand) 90px;max-width:1100px;width:100%}
+.ws-schluss .ws-kopf__z{color:var(--messing)}.ws-schluss .d1{color:var(--papier)}.ws-schluss .d1 em{font-style:normal;color:var(--messing-hell)}
+.ws-schluss .ws-lauf{color:rgba(251,248,243,.9)}
+.ws-schluss__leiste{width:min(100%,1000px);padding:8px;border-radius:999px;background:var(--papier);box-shadow:0 30px 60px -30px rgba(0,0,0,.7)}
+.ws-schluss .k__kontakt a{color:var(--messing-hell)}
+@media (max-width:800px){.ws-schluss__leiste{border-radius:28px}}
+.ws-will__1{width:70%}.ws-will__2{width:50%;top:8%}.ws-will__3{width:54%;left:4%}
+.ws-fach b{white-space:nowrap}
+@media (max-width:800px){.ws-auf{height:auto;min-height:0;max-height:none;display:grid}.ws-auf__bild{position:relative;height:86svh}.ws-auf::before{bottom:auto;height:86svh}
+  .ws-auf__t{bottom:auto;top:calc(86svh - 330px)}.ws-auf__leiste{position:relative;left:auto;right:auto;bottom:auto;margin:-40px var(--rand) 24px;z-index:5}
+  .ws-fach b{font-size:1.3rem}.ws-gesch__b{height:110vw}.ws-gesch__1{width:52%}.ws-gesch__2{width:46%}.ws-gesch__3{width:50%;left:24%}}
+@media (max-width:800px){.ws-auf__t{top:calc(86svh - 390px)}.ws-auf__leiste{margin-top:-20px}}

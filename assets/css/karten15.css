@@ -1,0 +1,197 @@
+/* Wellness & Spa · Behandlungskarte, 15 Alternativen in der Sprache der plastischen Speisekarte (26.10.2026).
+   Baut auf spa-karte.css auf (Karte .sk-k, Bogen, Raute, Reiter). Ein Moment je Fassung, nur transform/opacity. */
+
+.kv{--kb:clamp(240px,21vw,300px)}
+.kv .sk-k{transform:none;transition:none;margin:0}
+.kv .sk-k:first-child,.kv .sk-k:last-child{margin:0}
+.kv-kopfz{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-bottom:clamp(16px,1.8vw,26px)}
+.kv-kopfz--mitte{justify-content:center}
+.kv-pfeile{display:flex;gap:8px}
+.kv-pfeile button{appearance:none;border:0;cursor:pointer;width:54px;height:54px;border-radius:50%;display:grid;place-items:center;color:var(--tinte);
+ background:linear-gradient(180deg,var(--pap1),#F7F0E3 50%,#E8DCC3);box-shadow:inset 0 1px 0 #fff,inset 0 -2px 0 rgba(130,108,53,.26),inset 0 0 0 1px rgba(130,108,53,.16),0 10px 16px -10px rgba(0,0,0,.7);transition:transform .3s var(--e2),opacity .3s}
+.kv-pfeile button:hover{transform:translateY(-2px)}
+.kv-pfeile button:disabled{opacity:.32;pointer-events:none}
+.kv-pfeile svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:1.4}
+.kv-zaehler{margin:0;font-family:var(--mono);font-size:11px;letter-spacing:.2em;color:rgba(255,255,255,.6)}
+.kv-zaehler b{font-weight:400;color:var(--ms)}
+.kv-unten{display:flex;flex-direction:column;align-items:center;gap:12px;margin-top:10px}
+.kv .sk-t.kv-voll,.kv .kv-voll{-webkit-line-clamp:unset;display:block}
+.kv-zk-w{display:grid;place-items:center;width:100%;aspect-ratio:1/.62;border-radius:50% 50% 16px 16px / 50% 50% 16px 16px;box-shadow:inset 0 0 0 1px rgba(176,147,79,.45);background:radial-gradient(circle at 50% 40%,#232C52,#0E1638 75%)}
+.kv-zk{width:34%;height:auto;fill:var(--ms)}
+.kv-band{display:flex;align-items:stretch;gap:clamp(14px,1.6vw,24px);overflow-x:auto;overflow-y:hidden;scroll-snap-type:x proximity;scroll-padding-inline:var(--rand);scrollbar-width:none;padding:10px var(--rand) 40px;margin:0 calc(-1 * var(--rand));cursor:grab}
+.kv-band::-webkit-scrollbar{display:none}
+.kv-band.zieht{cursor:grabbing;scroll-snap-type:none}
+.kv-band.zieht>*{pointer-events:none}
+.kv-band>*{scroll-snap-align:start}
+.kv .sk-k{cursor:pointer}
+
+/* ============ 01 Der Fächer ============ */
+.kv1-f{position:relative;height:calc(var(--kb) * 1.08 + 330px);margin:20px 0 150px}
+.kv1-f .sk-k{position:absolute;left:50%;bottom:0;width:var(--kb);margin-left:calc(var(--kb) / -2);transform-origin:50% 165%;
+ transform:translateX(calc(var(--d,0) * 7%)) rotate(calc(var(--d,0) * 6deg)) translateY(calc(var(--ad,0) * 8px));z-index:calc(30 - var(--ad,0));transition:transform .9s var(--e1)}
+.kv1-f .sk-k.an{transform:translateY(-18px)}
+
+/* ============ 02 Das Deck ============ */
+.kv2{display:grid;grid-template-columns:auto minmax(0,1fr);gap:clamp(40px,6vw,110px);align-items:start}
+.kv2-deck{position:relative;width:var(--kb);height:calc(var(--kb) * 1.08 + 300px);margin-left:clamp(0px,4vw,60px)}
+.kv2-deck .sk-k{position:absolute;inset:0 0 auto 0;transform:translate(calc(var(--q,0) * 11px),calc(var(--q,0) * 12px)) rotate(calc(var(--q,0) * 1.6deg));z-index:calc(100 - var(--p,0));transition:transform .55s var(--e1)}
+.kv2-deck .sk-k.weg{transform:translateX(-118%) rotate(-11deg);z-index:200}
+.kv2-seite .sk-titel{margin-bottom:10px}
+.kv2-seite .kv-pfeile{margin:22px 0 26px}
+.kv2-namen{margin:0;padding:0;list-style:none;columns:2 220px;column-gap:30px}
+.kv2-namen li{break-inside:avoid;border-top:1px solid rgba(217,183,88,.2)}
+.kv2-namen button{all:unset;cursor:pointer;display:block;padding:9px 0;font-family:var(--licht);font-size:15px;line-height:1.3;color:#AEB5C9;transition:color .3s}
+.kv2-namen button:hover,.kv2-namen button.an{color:#fff}
+.kv2-namen button.an{box-shadow:inset 2px 0 0 var(--ms);padding-left:10px}
+
+/* ============ 03 Galerie in der Tiefe ============ */
+.kv3-buehne{position:relative;height:calc(var(--kb) * 1.08 + 320px);perspective:1500px;perspective-origin:50% 40%}
+.kv3-reihe{position:absolute;inset:0;transform-style:preserve-3d;outline:0}
+.kv3-reihe .sk-k{position:absolute;left:50%;top:10px;width:var(--kb);margin-left:calc(var(--kb) / -2);transition:transform .9s var(--e1),opacity .6s}
+
+/* ============ 04 Die Staffel ============ */
+.kv4{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,8fr);gap:clamp(24px,4vw,70px);align-items:center}
+.kv4-text .kv-pfeile{margin-top:22px}
+.kv4-text .kv-zaehler{margin-top:12px}
+.kv4-buehne{position:relative;height:calc(var(--kb) * 1.08 + 360px);perspective:1800px;perspective-origin:20% 30%}
+.kv4-reihe{position:absolute;inset:0;transform-style:preserve-3d}
+.kv4-reihe .sk-k{position:absolute;left:0;bottom:0;width:var(--kb);transition:transform 1s var(--e1),opacity .7s}
+
+/* ============ 05 Tischkarten ============ */
+.kv5-zelt{flex:0 0 var(--kb);position:relative;perspective:1300px;padding-bottom:26px}
+.kv5-dreh{all:unset;cursor:pointer;display:grid;position:relative;transform-style:preserve-3d;transform:rotateX(16deg);transform-origin:50% 100%;transition:transform .9s var(--e1)}
+.kv5-v,.kv5-h{grid-area:1/1;-webkit-backface-visibility:hidden;backface-visibility:hidden}
+.kv5-h{position:absolute;inset:0;overflow:hidden;transform:rotateY(180deg);align-content:start}
+.kv5-h .sk-t,.kv6-h .sk-t{display:-webkit-box;-webkit-line-clamp:9;-webkit-box-orient:vertical;overflow:hidden}
+.kv5-zelt.um .kv5-dreh{transform:rotateX(16deg) rotateY(180deg)}
+.kv5-v,.kv5-h{transition:visibility 0s linear .45s}
+.kv5-zelt.um .kv5-v,.kv5-zelt:not(.um) .kv5-h{visibility:hidden}
+.kv5-v::before{content:"";position:absolute;left:14px;right:14px;top:0;height:7px;border-radius:0 0 8px 8px;background:linear-gradient(180deg,rgba(130,108,53,.22),rgba(130,108,53,0))}
+.kv5-fuss{position:absolute;left:6%;right:6%;bottom:8px;height:26px;border-radius:50%;background:radial-gradient(ellipse at 50% 50%,rgba(0,0,0,.6),rgba(0,0,0,0) 70%);pointer-events:none}
+.kv5-h .kv-zk-w{aspect-ratio:1/.5}
+
+/* ============ 06 Wendekarten ============ */
+.kv6-raster{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:clamp(16px,1.8vw,26px)}
+.kv6-w{perspective:1300px}
+.kv6-dreh{all:unset;cursor:pointer;display:grid;position:relative;height:100%;transform-style:preserve-3d;transition:transform .9s var(--e1)}
+.kv6-v,.kv6-h{grid-area:1/1;-webkit-backface-visibility:hidden;backface-visibility:hidden;transition:visibility 0s linear .45s}
+.kv6-h{position:absolute;inset:0;overflow:hidden;transform:rotateY(180deg);align-content:start}
+.kv6-w.um .kv6-dreh{transform:rotateY(180deg)}
+.kv6-w.um .kv6-v,.kv6-w:not(.um) .kv6-h{visibility:hidden}
+.kv6-h .kv-zk-w{aspect-ratio:1/.45}
+.kv6-h .sk-t{font-size:13.5px}
+
+/* ============ 07 Die Vitrine ============ */
+.kv7-vitrine{position:relative;padding:clamp(16px,1.8vw,26px);border-radius:20px;background:linear-gradient(180deg,#3A2A1E,#21170F 40%,#160F09);box-shadow:inset 0 1px 0 rgba(255,255,255,.12),inset 0 0 0 1px rgba(217,183,88,.25),0 50px 90px -40px rgba(0,0,0,.9)}
+.kv7-glas{--gap:clamp(14px,1.6vw,24px);overflow:hidden;border-radius:12px;padding:26px var(--gap);background:radial-gradient(ellipse at 50% 30%,rgba(110,230,150,.42),rgba(20,80,45,.55) 45%,rgba(6,22,14,.95) 80%),#06140C;box-shadow:inset 0 0 60px rgba(0,0,0,.7)}
+.kv7-spur{display:grid;grid-auto-flow:column;grid-template-rows:repeat(2,auto);grid-auto-columns:calc((100% - 2 * var(--gap)) / 3);column-gap:var(--gap);row-gap:34px;transition:transform 1s var(--e1)}
+.kv7-fach{display:flex;justify-content:center;align-items:flex-end;padding:0 6% 14px;border-bottom:4px solid #C9A54E;box-shadow:0 18px 16px -14px rgba(0,0,0,.8);background:linear-gradient(0deg,rgba(255,255,255,.08),rgba(255,255,255,0) 30%)}
+.kv7-fach .sk-k{width:100%;max-width:260px;box-shadow:inset 0 0 0 1px rgba(230,210,162,.55),0 26px 30px -20px rgba(0,0,0,.9)}
+.kv7-fach .sk-bogen{aspect-ratio:1/.82}
+.kv7-boden{display:none}
+
+/* ============ 08 Der Kartenhalter ============ */
+.kv8-halter{position:relative}
+.kv8-band{perspective:1300px;perspective-origin:50% -20%;padding-top:30px;padding-bottom:58px}
+.kv8-band .sk-k{flex:0 0 var(--kb);transform-origin:50% 100%;transform:rotateX(26deg);transition:transform .9s var(--e1)}
+.kv8-band .sk-k.an{transform:rotateX(0) translateY(-16px)}
+.kv8-leiste{position:absolute;left:calc(-1 * var(--rand));right:calc(-1 * var(--rand));bottom:44px;height:26px;z-index:2;pointer-events:none;background:linear-gradient(180deg,#F3E3B0,#C9A54E 45%,#8E6E2A);box-shadow:inset 0 1px 0 rgba(255,255,255,.7),0 16px 22px -10px rgba(0,0,0,.8)}
+
+/* ============ 09 Die Einsteckmappe ============ */
+.kv9-mappe{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:40px clamp(16px,1.8vw,26px);padding:clamp(26px,3vw,48px);border-radius:22px;
+ background:radial-gradient(circle at 20% 10%,rgba(255,255,255,.07),rgba(255,255,255,0) 45%),repeating-radial-gradient(circle at 30% 40%,rgba(255,255,255,.018) 0 1px,rgba(0,0,0,0) 1px 3px),linear-gradient(160deg,#2A2F42,#181B27 60%,#121521);box-shadow:inset 0 0 0 1px rgba(217,183,88,.22),0 50px 90px -40px rgba(0,0,0,.9)}
+.kv9-tasche{position:relative}
+.kv9-tasche .sk-k{position:relative;z-index:1;transition:transform .8s var(--e1)}
+.kv9-tasche .sk-k.raus{transform:translateY(-40%);z-index:4}
+.kv9-lasche{position:absolute;left:-6px;right:-6px;bottom:-6px;height:30%;z-index:3;border-radius:0 0 14px 14px;pointer-events:none;clip-path:polygon(0 22%,50% 0,100% 22%,100% 100%,0 100%);
+ background:linear-gradient(180deg,#22263A,#171A26 50%);box-shadow:0 -8px 14px -6px rgba(0,0,0,.6);box-shadow:0 -10px 18px -10px rgba(0,0,0,.8),inset 0 1px 0 rgba(255,255,255,.08)}
+.kv9-lasche::before{content:"";position:absolute;left:0;right:0;top:0;height:100%;background:linear-gradient(160deg,rgba(217,183,88,.35) 0 1px,transparent 1px),linear-gradient(200deg,rgba(217,183,88,.35) 0 1px,transparent 1px);background-size:50.5% 23%;background-repeat:no-repeat;background-position:0 0,100% 0}
+.kv9-tasche:has(.raus) .kv9-lasche{z-index:3}
+
+/* ============ 10 Die Bühne ============ */
+.kv10{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(28px,4vw,70px);align-items:start}
+.kv10-gross{position:sticky;top:100px;grid-template-rows:auto 1fr;cursor:default;padding:12px 12px 28px}
+.kv10-gross .sk-bogen{aspect-ratio:1/.78}
+.kv10-gt{display:grid;justify-items:center;padding:0 16px}
+.kv10-gross .sk-n{font-size:clamp(22px,2vw,30px)}
+.kv10-gross .rk{margin-top:20px;color:#F4F2EC;background:linear-gradient(180deg,#1E2846,#0A1129)}
+.kv10-gross.neu .kv10-gt,.kv10-gross.neu .sk-f img{animation:kv10 .7s var(--e1)}
+@keyframes kv10{from{transform:translateY(12px)}}
+.kv10-r .sk-titel{margin-bottom:18px}
+.kv10-wahl{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:10px}
+.kv10-k{appearance:none;border:0;font:inherit;display:grid;grid-template-columns:62px 1fr;grid-template-rows:auto;align-items:center;justify-items:start;gap:12px;text-align:left;padding:7px 14px 7px 7px;border-radius:16px}
+.kv10-k .sk-bogen{width:62px;padding:3px}
+.kv10-k b{font-family:var(--licht);font-weight:400;font-size:14px;line-height:1.3;color:var(--tinte)}
+.kv10-k.an{box-shadow:inset 0 0 0 2px var(--ms),0 20px 30px -20px rgba(0,0,0,.8)}
+
+/* ============ 11 Das Raster ============ */
+.kv11-raster{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:clamp(14px,1.6vw,22px)}
+.kv11-raster .sk-n{font-size:17px}
+.kv11-raster .sk-t{font-size:13px;-webkit-line-clamp:2}
+.kv-feld.neu .kv11-raster .sk-k{animation:kv11 1s var(--e1) both;animation-delay:calc(min(var(--i),11) * 50ms)}
+@keyframes kv11{from{transform:translateY(46px)}}
+
+/* ============ 12 Der Karteikasten ============ */
+.kv12-kasten{position:relative;height:760px;max-width:980px;margin:0 auto;overflow:hidden}
+.kv12-karten{position:absolute;inset:0}
+.kv12-karte{position:absolute;left:6%;right:6%;top:calc(100% - 190px);height:300px;outline:0;cursor:pointer;
+ transform:translate3d(0,calc(var(--q,0) * -20px),0) scale(calc(1 - var(--q,0) * .018));z-index:calc(50 - var(--q,0));transition:transform .9s var(--e1)}
+.kv12-karte.vorbei{transform:translate3d(0,40px,0) scale(.98);z-index:1}
+.kv12-karte.an{transform:translate3d(0,-530px,0);z-index:60;cursor:default}
+.kv12-reiter{position:absolute;left:var(--r);top:-30px;margin:0;width:200px;height:32px;padding:0 16px;display:flex;align-items:center;border-radius:12px 12px 0 0;background:linear-gradient(180deg,#FDF9F1,#F1E7D4);box-shadow:inset 0 0 0 1px rgba(230,210,162,.55)}
+.kv12-reiter span{font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:#6B5A3C;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.kv12-inhalt.sk-k{position:absolute;inset:0;grid-template-rows:none;grid-template-columns:38% 1fr;align-items:start;justify-items:start;text-align:left;gap:22px;padding:14px 22px 14px 14px;border-radius:6px 18px 18px 18px;cursor:inherit}
+.kv12-inhalt .sk-bogen{height:100%;aspect-ratio:auto}
+.kv12-inhalt>div{padding-top:14px;display:grid;justify-items:start}
+.kv12-inhalt .sk-n{margin:0;padding:0;font-size:22px}
+.kv12-inhalt .sk-t{padding:0}
+.kv12-front{position:absolute;left:0;right:0;bottom:0;height:150px;z-index:70;border-radius:10px 10px 22px 22px;pointer-events:none;display:grid;place-items:center;
+ background:linear-gradient(180deg,#3A2A1E,#21170F 60%,#160F09);box-shadow:inset 0 1px 0 rgba(255,255,255,.12),inset 0 0 0 1px rgba(217,183,88,.25),0 40px 70px -30px rgba(0,0,0,.9)}
+.kv12-front span{padding:10px 26px;border:1px solid rgba(217,183,88,.45);border-radius:4px;font-family:var(--mono);font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--ms);background:rgba(0,0,0,.2)}
+
+/* ============ 13 Querkarten ============ */
+.kv13-band{display:grid;grid-auto-flow:column;grid-template-rows:repeat(2,auto);grid-auto-columns:clamp(380px,31vw,460px)}
+.kv13-q.sk-k{grid-template-rows:none;grid-template-columns:38% 1fr;align-items:center;justify-items:start;text-align:left;gap:18px;padding:9px 20px 9px 9px;border-radius:24px}
+.kv13-q .sk-bogen{height:100%;aspect-ratio:auto;min-height:220px;border-radius:999px 999px 16px 16px / 40% 40% 16px 16px}
+.kv13-q .sk-f{border-radius:999px 999px 12px 12px / 40% 40% 12px 12px}
+.kv13-q>div{display:grid;justify-items:start}
+.kv13-q .sk-n{margin:0;padding:0;font-size:18px}
+.kv13-q .sk-t{padding:0;-webkit-line-clamp:3}
+
+/* ============ 14 Die Ebenen ============ */
+.kv14{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(16px,2vw,30px);align-items:start;padding:130px 0 150px}
+.kv14-s{display:grid;gap:clamp(16px,2vw,30px);will-change:transform}
+.kv14-s:nth-child(2){margin-top:110px}.kv14-s:nth-child(4){margin-top:170px}
+.kv14 .sk-bogen{aspect-ratio:1/.9}
+
+/* ============ 15 Die Banderole ============ */
+.kv15-g.sk-k{flex:0 0 clamp(260px,22vw,320px);position:relative;display:block;padding:9px;overflow:hidden;border-radius:22px;container-type:inline-size}
+.kv15-f{margin:0;aspect-ratio:4/4.4;border-radius:14px;overflow:hidden}
+.kv15-f img{display:block;width:100%;height:100%;object-fit:cover}
+.kv15-text{display:grid;justify-items:center;padding:4px 12px 14px;min-height:200px}
+.kv15-band{position:absolute;left:-12%;right:-12%;top:calc(9px + (100cqw - 18px) * 1.1 - 26px);bottom:-40px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:0 18%;
+ background:linear-gradient(170deg,#2B3560,#1A2246 45%,#0E1638);color:#E9D49A;border-top:1px solid rgba(217,183,88,.6);border-bottom:1px solid rgba(217,183,88,.6);outline:1px solid rgba(217,183,88,.35);outline-offset:-7px;text-align:center;transform:rotate(-5deg);transform-origin:50% 50%;box-shadow:0 -14px 26px -14px rgba(0,0,0,.55),inset 0 1px 0 rgba(255,255,255,.12);transition:transform .9s var(--e1)}
+.kv15-name{font-family:var(--licht);font-size:20px;line-height:1.2;color:#fff}
+.kv15-zeit{font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase}
+.kv15-auf{margin-top:6px;padding-top:8px;border-top:1px solid rgba(217,183,88,.35);font-family:var(--mono);font-size:10px;letter-spacing:.24em;text-transform:uppercase}
+.kv15-g.auf .kv15-band{transform:translateX(105%) rotate(-5deg)}
+
+/* ============ Handy ============ */
+@media (max-width:900px){
+ .kv{--kb:68vw}
+ .kv2{grid-template-columns:1fr}.kv2-deck{margin:0 auto}.kv2-namen{columns:1}
+ .kv4{grid-template-columns:1fr}.kv4-buehne{height:calc(var(--kb) * 1.08 + 330px)}
+ .kv6-raster,.kv11-raster,.kv9-mappe{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .kv6-raster .sk-n,.kv11-raster .sk-n{font-size:15px}
+ .kv7-spur{grid-auto-columns:100%}
+ .kv10{grid-template-columns:1fr}.kv10-gross{position:relative;top:0}
+ .kv12-kasten{height:860px}.kv12-karte{left:0;right:0;height:420px;top:calc(100% - 190px)}.kv12-karte.an{transform:translate3d(0,-640px,0)}.kv12-inhalt.sk-k{grid-template-columns:1fr;grid-template-rows:150px auto}.kv12-reiter{width:150px}
+ .kv13-band{grid-auto-columns:86vw}
+ .kv14{grid-template-columns:repeat(2,minmax(0,1fr))}.kv14-s{display:contents}.kv14-s:nth-child(2),.kv14-s:nth-child(4){margin-top:0}
+ .kv9-mappe{gap:30px 12px;padding:18px}
+}
+@media (prefers-reduced-motion:reduce){.kv *{transition-duration:.01s!important;animation-duration:.01s!important}}
+
+.kv .sk-n{overflow-wrap:break-word;hyphens:auto;-webkit-hyphens:auto}
+.kv6-w,.kv11-raster>*,.kv9-tasche{min-width:0}
+.kv10-k b{overflow-wrap:break-word;hyphens:auto;-webkit-hyphens:auto;min-width:0}

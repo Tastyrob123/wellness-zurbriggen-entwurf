@@ -1,0 +1,41 @@
+.stil-marke{position:fixed;z-index:60;left:50%;bottom:16px;translate:-50% 0;padding:8px 16px;border-radius:99px;background:rgba(20,14,9,.86);color:var(--messing-hell);font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;pointer-events:none}
+.stil .bb{position:relative;display:block;overflow:hidden;width:100%;height:100%}
+.stil .bb img{width:100%;height:100%;object-fit:cover;scale:1.14;transition:scale 2.8s cubic-bezier(.16,1,.3,1)}
+.stil .da .bb img,.stil .da.bb img{scale:1}
+.stil figure{margin:0}
+/* Stil A · lifestyle: die Startseite als Magazin des Hauses. Papier, Haarlinien in Messing, Rubrik und Seitenzahl, Initiale, Bilder im Satzspiegel, nie randlos. */
+.stil--a main{background:#F7F2EA}
+.sa-auf{padding:clamp(130px,14vw,190px) 0 clamp(50px,6vw,90px);background:#F7F2EA}
+.sa-auf__g{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:clamp(40px,6vw,110px);align-items:end}
+.sa-kopf{display:flex;justify-content:space-between;padding-bottom:12px;border-bottom:1px solid var(--messing);font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--karamell)}
+.sa-life{display:block;width:clamp(180px,18vw,260px);height:auto;margin:clamp(30px,4vw,60px) 0 18px}
+.sa-h1{font-family:var(--serif);font-weight:400;font-size:clamp(2.6rem,5.2vw,5.4rem);line-height:1.02;color:var(--schoko)}
+.sa-h1 em,.sa-h2 em{font-style:normal;color:var(--karamell)}
+.sa-sterne{display:flex;gap:8px;margin:22px 0;color:var(--messing)}.sa-sterne svg{width:16px;height:auto}.sa-sterne .krone{width:22px}
+.sa-lead{max-width:40ch;font-size:1.05rem;line-height:1.65;color:var(--grau)}
+.sa-f{position:relative;display:grid;gap:12px}
+.sa-f .bb{outline:1px solid rgba(146,101,69,.35);outline-offset:10px}
+.sa-f figcaption{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--karamell);padding-top:10px}
+.sa-f--auf .bb{aspect-ratio:4/4.4}
+.sa-leiste{margin-top:clamp(40px,5vw,70px);padding-top:26px;border-top:1px solid rgba(146,101,69,.3)}
+.sa-sp{padding:clamp(90px,10vw,150px) 0;background:#F7F2EA;border-top:1px solid rgba(146,101,69,.25)}
+.sa-sp--dunkel{background:var(--schoko);color:var(--papier)}
+.sa-sp__g{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(40px,7vw,130px);align-items:center}
+.sa-folio{display:flex;gap:16px;align-items:baseline;padding-bottom:12px;border-bottom:1px solid var(--messing);font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--karamell)}
+.sa-folio span{font-family:var(--serif);font-size:1.6rem;letter-spacing:0;color:var(--messing)}
+.sa-h2{margin-top:clamp(30px,4vw,54px);font-family:var(--serif);font-weight:400;font-size:clamp(2.4rem,4.4vw,4.4rem);line-height:1.04;color:var(--schoko)}
+.sa-sp--dunkel .sa-h2{color:var(--papier)}.sa-sp--dunkel .sa-h2 em{color:var(--messing)}
+.sa-zitat{margin-top:20px;max-width:34ch;font-family:var(--serif);font-size:clamp(1.15rem,1.6vw,1.45rem);line-height:1.45;color:var(--karamell)}
+.sa-spalten{columns:2;column-gap:34px;margin-top:clamp(34px,4vw,56px);font-size:.98rem;line-height:1.7;color:var(--tinte)}
+.sa-spalten p{margin:0 0 1em}
+.sa-init{float:left;margin:.08em .1em 0 0;font-family:var(--serif);font-size:4.6em;line-height:.8;color:var(--karamell)}
+.sa-sp__r{position:relative;height:clamp(520px,50vw,760px)}
+.sa-f--hoch{position:absolute;right:0;top:0;width:68%}.sa-f--hoch .bb{aspect-ratio:3/4}
+.sa-f--klein{position:absolute;left:0;bottom:0;width:44%;z-index:2}.sa-f--klein .bb{aspect-ratio:4/3;box-shadow:0 0 0 10px #F7F2EA}
+.sa-sp__g--um{grid-template-columns:minmax(0,1.1fr) minmax(0,1fr)}
+.sa-drei{display:grid;grid-template-columns:1fr 1fr;gap:clamp(18px,2vw,28px);height:auto}
+.sa-f--a{grid-column:1/-1}.sa-f--a .bb{aspect-ratio:16/10}.sa-f--b .bb,.sa-f--c .bb{aspect-ratio:4/5}
+.sa-sp--dunkel .sa-f .bb{outline-color:rgba(217,183,88,.35)}.sa-sp--dunkel .sa-f figcaption{color:var(--messing-hell)}
+.sa-pull{margin:clamp(30px,4vw,50px) 0 0;padding-left:26px;border-left:1px solid var(--messing);font-family:var(--serif);font-size:clamp(1.3rem,2vw,1.8rem);line-height:1.42;color:var(--papier)}
+.sa-text{margin-top:26px;max-width:52ch;font-size:.98rem;line-height:1.7;color:rgba(246,241,234,.8)}.sa-text b{font-weight:400;color:var(--messing)}
+@media (max-width:800px){.sa-auf__g,.sa-sp__g,.sa-sp__g--um{grid-template-columns:1fr}.sa-spalten{columns:1}.sa-sp__r{height:118vw}.sa-drei{order:2}}

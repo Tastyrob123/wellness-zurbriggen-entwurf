@@ -1,0 +1,36 @@
+/* entspannen Sie sich · Fassung 2 «Meridian» (Robert 24.10.2026, Entwurfs-Maschine _varianten/spa-15). Eine Messinglinie läuft wie ein
+   Meridian senkrecht durch den Teil und verbindet fünf Stationen im Wechsel links und rechts. Bewegung: die Linie füllt sich mit dem Scrollen,
+   jede Station setzt sich im Rahmen (113 → 100 %), der Text steigt 40 px. Nur transform, von Anfang an sichtbar. */
+.md{--md-l:rgba(217,183,88,.22);padding-left:clamp(20px,6vw,96px);padding-right:clamp(20px,6vw,96px);padding-bottom:clamp(64px,6vw,96px)}
+.md-kopf{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(28px,5vw,90px);align-items:center;margin-bottom:clamp(70px,8vw,120px)}
+.md-text .rt{font-size:clamp(40px,4.4vw,72px)}
+.md-text .rs{max-width:470px}
+.md-tuch{aspect-ratio:3/2;transform:rotate(-1.6deg)}
+.md-tuch img,.md-st figure img{transform:scale(1.13);transition:transform 1.6s var(--e1)}
+.md.da .md-tuch img,.md-st.da figure img{transform:none}
+.md-weg{position:relative}
+.md-linie{position:absolute;left:50%;top:0;bottom:0;width:2px;margin-left:-1px;background:var(--md-l);border-radius:2px;overflow:hidden}
+.md-linie i{position:absolute;inset:0;background:linear-gradient(180deg,#F1E2B4,#C9A54E);transform-origin:50% 0;transform:scaleY(var(--p,0))}
+.md-st{position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(56px,8vw,140px);align-items:center}
+.md-st+.md-st{margin-top:clamp(56px,6vw,96px)}
+.md-st::before{content:'';position:absolute;left:50%;top:50%;width:44px;height:2px;margin-left:-22px;background:#C9A54E}
+.md-st figure{aspect-ratio:3/2}
+.md-st:nth-child(odd of .md-st) figure{order:2}
+.md-st:nth-child(odd of .md-st) .md-t{text-align:right;justify-self:end}
+.md-t{max-width:420px;transform:translateY(40px);transition:transform 1.4s var(--e1) .15s}
+.md-st.da .md-t{transform:none}
+.md-n{font-family:var(--licht);font-weight:300;font-size:clamp(34px,3.4vw,56px);line-height:1.04;color:var(--ms-h);margin:12px 0 12px}
+.md-t .rs{margin:0}
+.md-oz{text-align:center;margin:clamp(48px,5vw,72px) auto 0;max-width:640px}
+@media (max-width:900px){
+  .md-kopf{grid-template-columns:1fr;gap:34px}
+  .md-tuch{transform:none}
+  .md-linie{left:0;margin-left:0}
+  .md-weg{padding-left:26px}
+  .md-st{grid-template-columns:1fr;gap:20px}
+  .md-st::before{left:-26px;top:calc((100vw - 2 * clamp(20px,6vw,96px) - 26px) / 3);width:18px;margin-left:0}
+  .md-st:nth-child(odd of .md-st) figure{order:0}
+  .md-st:nth-child(odd of .md-st) .md-t{text-align:left;justify-self:start}
+  .md-oz{text-align:left}
+}
+@media (prefers-reduced-motion:reduce){.md-tuch img,.md-st figure img,.md-t{transform:none!important;transition:none!important}.md-linie i{transform:none}}

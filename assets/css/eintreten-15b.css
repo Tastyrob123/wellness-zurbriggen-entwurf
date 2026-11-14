@@ -1,0 +1,179 @@
+/* «treten Sie ein» · zweite Runde, 15 weitere Fassungen (25.10.2026). Gemeinsam: die Bilder werden nacheinander farbig (dunkle Scheibe weicht,
+   wie im eingebauten Stand). Je Fassung eine eigene Anordnung; Bewegung nur transform und opacity. */
+.ri.f15{overflow:clip}
+.f15{--mg:#D9B758;--mh:#E9D49A;--ink:#18213F;--anf:#030614}
+.f15.ri-hell,.f15.ri-leinen{--anf:#E4DCCD}
+.f15 .f-in{width:min(100%,1308px);margin:0 auto}
+.f15 figure{margin:0}
+.f15 .rt{font-size:clamp(38px,3.8vw,64px)}
+.f15 .rl{max-width:40ch}
+.f15 .r-knoepfe{margin-top:30px}
+.f15 .an{position:absolute;inset:0;z-index:1;background:var(--anf);opacity:.7;pointer-events:none;transition:opacity 1.1s ease calc(var(--n,0) * .22s + .2s)}
+.f15.da .an{opacity:0}
+
+/* Leiste zum Blättern */
+.vnr{position:fixed;z-index:95;left:50%;bottom:18px;transform:translateX(-50%);display:flex;align-items:center;gap:6px;padding:6px;border-radius:999px;background:#0A1129;box-shadow:0 18px 40px -12px rgba(0,0,0,.6),inset 0 0 0 1px rgba(233,212,154,.3);font-family:var(--mono);font-size:11px;letter-spacing:.1em;color:#F4F2EC;max-width:calc(100vw - 24px)}
+.vnr a{display:grid;place-items:center;min-width:40px;height:40px;padding:0 12px;border-radius:999px;color:#F4F2EC;text-decoration:none;background:rgba(255,255,255,.07)}
+.vnr a.vnr-n{display:flex;gap:12px;background:none;padding:0 14px;white-space:nowrap;overflow:hidden}
+.vnr-n b{font-weight:400;color:#E9D49A}
+.vnr-n span{overflow:hidden;text-overflow:ellipsis}
+
+/* 1 · Drei Säulen */
+.f01-gr{display:grid;grid-template-columns:4fr repeat(3,3fr);gap:14px;align-items:start}
+.f01-text{align-self:center;padding-right:clamp(10px,2vw,30px)}
+.f01-s{height:clamp(440px,44vw,620px)}
+.f01-s1{transform:translateY(calc(var(--p,.5) * -40px))}
+.f01-s2{margin-top:140px !important;transform:translateY(calc(var(--p,.5) * -110px))}
+.f01-s3{margin-top:60px !important;transform:translateY(calc(var(--p,.5) * -70px))}
+
+/* 2 · Bild im Bild */
+.f02-gr{position:relative;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:clamp(20px,3vw,50px)}
+.f02-gross{grid-column:1/9;height:clamp(440px,44vw,620px)}
+.f02-text{grid-column:9/13;align-self:start;padding-top:10px}
+.f02-ecke{position:absolute !important;z-index:3;left:calc(66.6% - clamp(200px,20vw,290px) - 70px);bottom:-70px;width:clamp(200px,20vw,290px);aspect-ratio:3/4;box-shadow:0 0 0 8px #0E1638,0 50px 80px -30px rgba(0,0,0,.9) !important}
+.f02{padding-bottom:clamp(140px,12vw,190px)}
+
+/* 3 · Der Titel geht über die Kante */
+.f03-gr{position:relative;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));grid-template-rows:auto auto;gap:12px}
+.f03-bild{grid-area:1/1/2/9;height:clamp(440px,46vw,640px)}
+.f03-titel{position:absolute;z-index:3;left:44%;top:clamp(60px,8vw,120px);margin:0;font-size:clamp(70px,8.6vw,148px) !important;line-height:.92;letter-spacing:-.04em;color:#F4F2EC;pointer-events:none;text-shadow:0 2px 30px rgba(3,6,20,.55)}
+.f03-text{grid-area:1/9/2/13;align-self:end;padding-left:clamp(16px,2vw,30px)}
+.f03-text .rl{font-size:17px}
+.f03-a{grid-area:2/1/3/6;height:280px}.f03-b{grid-area:2/6/3/9;height:280px}
+
+/* 4 · Salonhängung */
+.f04-gr{display:grid;grid-template-columns:4fr 8fr;gap:clamp(30px,4vw,70px);align-items:center}
+.f04-wand{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));grid-template-rows:repeat(12,clamp(34px,3.4vw,50px));gap:18px}
+.f04-wand figure{border:3px solid #C9A54E;border-radius:4px !important;box-shadow:inset 0 0 0 1px rgba(0,0,0,.4),0 30px 50px -24px rgba(0,0,0,.9),0 2px 0 rgba(255,236,190,.15) !important}
+.f04-a{grid-area:2/1/11/3}.f04-b{grid-area:1/3/7/7}.f04-c{grid-area:7/3/12/5}.f04-d{grid-area:7/5/13/7}.f04-e{grid-area:2/7/7/9}
+.f04-schild{grid-area:8/7/12/9;margin:0;padding:16px;background:#F3ECDF;color:#2A1E15;border-radius:3px;box-shadow:0 14px 24px -14px rgba(0,0,0,.8);font-size:12.5px;line-height:1.5;display:flex;flex-direction:column;gap:6px;overflow:hidden}
+.f04-schild b{font-family:var(--licht);font-weight:400;font-size:17px}
+.f04-schild span{font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:#8A6A2A}
+.f04-schild em{font-style:normal;opacity:.85}
+
+/* 5 · Drei Türbögen */
+.f05-gr{display:grid;grid-template-columns:4fr 8fr;gap:clamp(30px,4vw,70px);align-items:center}
+.f05-boegen{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;align-items:end}
+.f05-b{height:clamp(420px,40vw,560px);border-radius:999px 999px 18px 18px !important}
+.f05-mitte{height:clamp(470px,45vw,620px)}
+
+/* 6 · Ein Blick, vier Räume */
+.f06-gr{display:grid;grid-template-columns:4fr 8fr;gap:clamp(30px,4vw,70px);align-items:center}
+.f06-namen{list-style:none;margin:26px 0 0;padding:0;border-top:1px solid rgba(217,183,88,.25)}
+.f06-namen button{all:unset;box-sizing:border-box;width:100%;display:grid;grid-template-columns:auto 1fr;align-items:baseline;gap:16px;padding:12px 0;border-bottom:1px solid rgba(217,183,88,.25);cursor:pointer;opacity:.45;transition:opacity .4s ease}
+.f06-namen button[aria-pressed=true],.f06-namen button:hover{opacity:1}
+.f06-namen button:focus-visible{outline:1px solid var(--mg);outline-offset:4px}
+.f06-namen b{font-family:var(--licht);font-weight:300;font-size:clamp(28px,2.6vw,42px);letter-spacing:-.02em;line-height:1.05}
+.f06-namen span{font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--mh)}
+.f06-rahmen{position:relative;height:clamp(440px,46vw,640px);border-radius:var(--rk);overflow:hidden;box-shadow:var(--sch)}
+.f06-b{position:absolute !important;inset:0;border-radius:0 !important;box-shadow:none !important;transform:translateY(102%);transition:transform .95s cubic-bezier(.22,1,.36,1)}
+.f06-b.war{transform:none;z-index:1;transition:none}
+.f06-b.an-da{transform:none;z-index:2}
+
+/* 7 · Bilder im Satz */
+.f07-satz{margin:clamp(28px,3vw,44px) 0 0;font-family:var(--licht);font-weight:300;font-size:clamp(30px,4.2vw,70px);line-height:1.2;letter-spacing:-.02em;color:var(--ink);max-width:31ch}
+.f07-ib{position:relative;display:inline-block;width:2.3em;height:1em;vertical-align:-.12em;margin:0 .06em;border-radius:.24em;overflow:hidden;box-shadow:0 14px 24px -12px rgba(24,33,63,.55);transform:scale(.82);transition:transform 1.2s var(--feder) calc(var(--n) * .22s + .2s)}
+.f07.da .f07-ib{transform:none}
+.f07-ib img{display:block;width:100%;height:100%;object-fit:cover}
+.f07-unten{display:grid;grid-template-columns:1fr auto;gap:30px;align-items:end;margin-top:clamp(30px,3vw,46px);max-width:1000px}
+.f07-unten .rs{margin:0}.f07-unten .r-knoepfe{margin:0}
+
+/* 8 · Bis zum Rand */
+.f08 .f-in{width:auto;margin-left:calc(-1 * var(--rand))}
+.f08-gr{display:grid;grid-template-columns:58vw 1fr;gap:clamp(30px,4vw,64px);align-items:stretch}
+.f08-rand{height:min(82vh,720px);border-radius:0 var(--rk) var(--rk) 0 !important}
+.f08-rechts{display:flex;flex-direction:column;justify-content:space-between;gap:30px;max-width:520px;padding-top:10px}
+.f08-paar{display:grid;grid-template-columns:1fr 1fr;gap:4px;height:clamp(200px,18vw,270px);padding:4px;border-radius:calc(var(--rk) + 4px);background:var(--mg)}
+.f08-paar figure{border-radius:0 !important;box-shadow:none !important}
+.f08-paar figure:first-child{border-radius:var(--rk) 0 0 var(--rk) !important}.f08-paar figure:last-child{border-radius:0 var(--rk) var(--rk) 0 !important}
+
+/* 9 · Der Flügelaltar */
+.f09-gr{display:grid;grid-template-columns:4fr 8fr;gap:clamp(30px,4vw,70px);align-items:center}
+.f09-altar{display:grid;grid-template-columns:1fr 1.7fr 1fr;gap:10px;height:clamp(440px,44vw,600px);perspective:1600px}
+.f09-mitte{height:100%}
+.f09-fl{display:grid;grid-template-rows:1fr 1fr;gap:10px;transition:transform 1.6s var(--feder) .25s}
+.f09-l{transform-origin:100% 50%;transform:rotateY(62deg)}
+.f09-r{transform-origin:0 50%;transform:rotateY(-62deg)}
+.f09-altar.da .f09-fl{transform:none}
+
+/* 10 · Raum für Raum */
+.f10-kopf{display:grid;grid-template-columns:5fr 7fr;gap:clamp(30px,5vw,90px);align-items:end;margin-bottom:clamp(36px,4vw,56px)}
+.f10-kopf .rl{margin-top:0}
+.f10-liste{display:grid;gap:8px;max-width:1160px}
+.f10-z{display:grid;grid-template-columns:3fr 9fr;gap:8px;height:clamp(150px,14vw,210px)}
+.f10-z p{margin:0;display:flex;flex-direction:column;justify-content:center;gap:6px;padding:0 clamp(18px,2vw,30px);border-radius:var(--rk);background:#16215A;color:#F4F2EC}
+.f10-z b{font-family:var(--licht);font-weight:300;font-size:clamp(26px,2.4vw,40px);letter-spacing:-.02em;line-height:1}
+.f10-z span{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--mh)}
+
+/* 11 · Zickzack */
+.f11-z{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:clamp(20px,3vw,50px);align-items:center}
+.f11-z1 figure{grid-column:1/8;height:clamp(360px,34vw,480px)}
+.f11-z1 .f11-t{grid-column:8/13}
+.f11-z2{margin-top:-60px}
+.f11-z2 .f11-t{grid-column:1/5;grid-row:1;align-self:end;padding-bottom:20px}
+.f11-hoch{grid-column:6/10;grid-row:1;height:clamp(420px,40vw,560px);position:relative;z-index:2}
+.f11-klein{grid-column:10/13;grid-row:1;align-self:end;height:clamp(240px,22vw,320px)}
+
+/* 12 · Übereinander geschichtet */
+.f12-gr{position:relative;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));grid-template-rows:repeat(12,clamp(40px,4vw,56px));gap:0}
+.f12-a{grid-area:1/1/9/8;transform:translateY(calc(var(--p,.5) * 30px))}
+.f12-b{grid-area:3/7/10/10;z-index:2;transform:translateY(calc(var(--p,.5) * -50px))}
+.f12-c{grid-area:7/3/13/7;z-index:3;transform:translateY(calc(var(--p,.5) * -90px))}
+.f12-gr figure{box-shadow:0 0 0 6px #22180F,0 50px 80px -30px rgba(0,0,0,.95) !important}
+.f12-text{grid-area:2/10/13/13;align-self:center;padding-left:clamp(20px,2.4vw,40px)}
+.f12-text .rt{font-size:clamp(34px,3.2vw,54px)}
+
+/* 13 · Der Satz zuerst */
+.f13-gr{display:grid;grid-template-columns:8fr 4fr;gap:clamp(30px,4vw,70px);align-items:stretch}
+.f13-satz{margin:clamp(24px,2.6vw,40px) 0 0;font-family:var(--licht);font-weight:300;font-size:clamp(28px,3vw,50px);line-height:1.25;letter-spacing:-.02em;color:var(--ink);max-width:26ch}
+.f13-unten{display:grid;grid-template-columns:1fr auto;gap:30px;align-items:end;margin-top:clamp(30px,3vw,50px)}
+.f13-unten .rl{margin:0}.f13-unten .r-knoepfe{margin:0}
+.f13-spalte{display:grid;grid-template-rows:minmax(0,1fr) minmax(0,1.3fr) minmax(0,1fr);gap:6px;height:clamp(520px,50vw,680px);align-self:center}
+.f13-spalte figure{min-height:0}
+.f13-spalte figure{border-radius:6px !important}
+.f13-spalte figure:first-child{border-radius:var(--rk) var(--rk) 6px 6px !important}.f13-spalte figure:last-child{border-radius:6px 6px var(--rk) var(--rk) !important}
+
+/* 14 · Kacheln, die sich neigen */
+.f14-gr{display:grid;grid-template-columns:8fr 4fr;grid-template-rows:repeat(2,clamp(250px,24vw,320px)) auto;gap:16px}
+.f14-k{position:relative;border-radius:calc(var(--rk) + 4px);background:linear-gradient(180deg,#16215A,#0E1638);box-shadow:inset 0 1px 0 rgba(255,255,255,.08),inset 0 0 0 1px rgba(233,212,154,.22),0 50px 80px -40px rgba(0,0,0,.95),0 12px 24px -14px rgba(0,0,0,.6);padding:10px;transition:transform .5s cubic-bezier(.22,1,.36,1);will-change:transform}
+.f14-k figure{border-radius:var(--rk) !important;box-shadow:none !important}
+.f14-gross{grid-row:1/3;display:grid;grid-template-rows:minmax(0,1fr) auto}
+.f14-gross figure{min-height:0}
+.f14-fuss{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:end;padding:clamp(18px,2vw,30px) clamp(14px,1.6vw,24px) clamp(10px,1vw,16px)}
+.f14-fuss .rl{margin:0;font-size:16px}.f14-fuss .r-knoepfe{margin-top:18px}
+.f14-k2,.f14-k3{display:grid;grid-template-rows:minmax(0,1fr) auto}
+.f14-k2 figure,.f14-k3 figure{min-height:0}
+.f14-cap{margin:10px 6px 2px;font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--mh)}
+.f14-jul{grid-column:1/-1;margin:14px 0 0;max-width:70ch;font-size:15px;line-height:1.65;opacity:.8}
+
+/* 15 · Durch die Sprossen */
+.f15-gr{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));grid-template-rows:minmax(0,1fr) auto;gap:12px clamp(24px,3vw,50px)}
+.f15-fenster{grid-area:1/1/3/9;display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(2,1fr);gap:8px;height:clamp(460px,48vw,660px);padding:8px;border-radius:calc(var(--rk) + 8px);background:linear-gradient(180deg,#C9A54E,#A88A3A);box-shadow:var(--sch)}
+.f15-sch{position:relative;overflow:hidden;border-radius:4px;background:#0E1638 url(../img/lounge-l.webp) var(--x) var(--y)/300% 200% no-repeat}
+.f15-text{grid-area:1/9/2/13;align-self:center}
+.f15-text .rt{font-size:clamp(36px,3.4vw,58px)}
+.f15-a{grid-area:2/9/3/11;height:200px}.f15-b{grid-area:2/11/3/13;height:200px}
+
+/* Handy */
+@media (max-width:760px){
+  .f15 .rt{font-size:clamp(34px,9vw,46px)}
+  .f01-gr,.f04-gr,.f05-gr,.f06-gr,.f09-gr,.f13-gr,.f08-gr{grid-template-columns:1fr}
+  .f01-gr{grid-template-columns:1fr 1fr 1fr}.f01-text{grid-column:1/-1;padding:0 0 18px}.f01-s{height:60vw}.f01-s2,.f01-s3{margin-top:30px !important}
+  .f02-gr,.f03-gr,.f11-z,.f12-gr,.f14-gr,.f15-gr{display:flex;flex-direction:column;gap:12px}
+  .f02-gross{height:62vw}.f02-ecke{position:relative !important;left:auto;bottom:auto;width:60%;margin:-90px 0 0 auto !important}.f02{padding-bottom:clamp(80px,8vw,130px)}
+  .f03-bild{height:80vw}.f03-titel{position:relative;left:auto;top:auto;margin:-1.1em 0 0 12px;order:2}.f03-text{order:3;padding:0}.f03-a,.f03-b{order:4;height:52vw}
+  .f04-wand{grid-template-rows:repeat(12,8vw);gap:8px}.f04-schild{grid-area:13/1/14/9}
+  .f05-b{height:70vw}.f05-mitte{height:78vw}
+  .f06-rahmen{height:80vw;order:-1}
+  .f07-satz{font-size:clamp(26px,7.4vw,34px)}.f07-unten{grid-template-columns:1fr}
+  .f13-unten{grid-template-columns:1fr;gap:10px}.f13-satz{font-size:clamp(24px,6.6vw,30px)}
+  .f08 .f-in{margin-left:calc(-1 * var(--rand))}.f08-rand{height:70vh;width:calc(100vw - var(--rand))}.f08-rechts{padding-right:0}
+  .f09-altar{height:90vw}
+  .f10-kopf{grid-template-columns:1fr;gap:10px}.f10-z{grid-template-columns:1fr;height:auto}.f10-z p{padding:14px 18px}.f10-z figure{height:44vw}
+  .f11-z1 figure,.f11-hoch,.f11-klein{height:64vw}.f11-z2{margin-top:12px}
+  .f12-gr figure{height:56vw;transform:none}.f12-text{padding:0}
+  .f14-gr{grid-template-rows:none}.f14-fuss{grid-template-columns:1fr}.f14-gross figure{height:64vw}.f14-k2 figure,.f14-k3 figure{height:56vw}
+  .f15-fenster{height:76vw}.f15-a,.f15-b{height:44vw}
+  .f13-spalte{grid-template-columns:repeat(3,1fr);grid-template-rows:none;height:48vw}
+}
+@media (prefers-reduced-motion:reduce){.f15 *{transition:none !important}}

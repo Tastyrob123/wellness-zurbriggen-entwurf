@@ -1,0 +1,1238 @@
+{
+ "bestand": [
+  "ig-01.jpg",
+  "ig-02.jpg",
+  "ig-03.jpg",
+  "ig-04.jpg",
+  "ig-05.jpg",
+  "ig-06.jpg",
+  "ig-07.jpg",
+  "ig-08.jpg",
+  "ig-09.jpg",
+  "ig-10.jpg",
+  "ig-11.jpg",
+  "ig-12.jpg"
+ ],
+ "ausnahmen": [],
+ "fotos": {
+  "h-abendrot": {
+   "im_feed": true,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "dessertbuffet": {
+   "im_feed": true,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "t-5": {
+   "im_feed": true,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "w-ski": {
+   "im_feed": true,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "sp-flieder": {
+   "im_feed": true,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "b-schaukel": {
+   "im_feed": true,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "loft-whirlpool": {
+   "im_feed": true,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "sp-grotte": {
+   "im_feed": true,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "w-langlauf": {
+   "im_feed": true,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "g-wein": {
+   "im_feed": true,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "a-zweit": {
+   "im_feed": true,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "haus-weit": {
+   "im_feed": true,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "w-fondue": {
+   "im_feed": true,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "sp-sense-2": {
+   "im_feed": true,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "k-eis": {
+   "im_feed": true,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "r-4": {
+   "im_feed": true,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "sp-oben": {
+   "im_feed": true,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "loft-galerie": {
+   "im_feed": true,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "t-2": {
+   "im_feed": true,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "w-schneeschuh": {
+   "im_feed": true,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "kamin": {
+   "im_feed": true,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "sp-massage": {
+   "im_feed": true,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "b-empfang": {
+   "im_feed": true,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "j-eingang": {
+   "im_feed": true,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "h-winter": {
+   "im_feed": true,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "a-alle": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "a-freundinnen": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "a-gutschein": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "a-kinder": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "aquafit": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "b-liegen": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "b-piano": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "b-terrasse": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "bar": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "bar-tische": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "bietschhorn": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "bowling": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "buffet": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "burg": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "dessert": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "esther-fabian": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "f-abend": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "f-karte": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "f-monte": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "f-monte-w": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "f-rustica": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "f-stube": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "f-wiese": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "f-zermatt": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "f-zermatt-s": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "fitnesstower": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "flur": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "friseur": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "g-abend": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "g-buffet": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "g-fleisch": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "g-gastgeberin": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "g-glaeser": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "g-kamin": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "g-mappe": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "g-paar": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "g-piano": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "g-saal": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "g-teller-1": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "g-teller-2": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "g-teller-3": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "g-teller-4": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "h-ausblick": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "h-blumen": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "h-gold": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "h-kapelle": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "h-laerchen": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "h-mattmark": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "h-mondnacht": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "h-spiegel": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "h-steinbock": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "h-tal": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "ig-04.jpg",
+   "grund": "pHash 0"
+  },
+  "h-turm-1": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "h-turm-2": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "h-vorne": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "haus-berg": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "haus-front": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "haus-garten": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "haus-lift": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "haus-nacht": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "haus-turm": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "holzsauna": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "j-barkarte": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "j-flasche": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "j-lounge": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "j-musikbox": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "j-saal": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "j-stube": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "j-wein": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "k-basteln": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "k-bowling": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "k-lounge": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "k-malen": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "k-steg": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "k-tisch": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "k-wald": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "k-wasser": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "kam-haus": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "kicker": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "l-leuchter": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "l-milch": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "ig-12.jpg",
+   "grund": "pHash 0"
+  },
+  "laerchenweg": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "leuchter": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "loft-bett": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "loft-bett-nah": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "loft-dachfenster": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "loft-etagen": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "loft-galerie-band": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "loft-kerzen": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "loft-kiste": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "loft-kronleuchter": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "loft-oben": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "loft-ruhe": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "loft-sauna": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "loft-treppe": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "loft-unten-band": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "lounge": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "n-haus": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "n-weg": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "pool": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "pool-nacht": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "r-1": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "r-10": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "r-2": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "r-3": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "r-5": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "r-6": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "r-7": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "r-8": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "r-9": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "r-kissen": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "r-obst": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "r-scheiben": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "r-wohnen": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "r-zapfen": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "raum-arve": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "raum-hell": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "raum-stein": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "raum-wohnen": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "raum-z": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "ruheraum": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "s-bruecke": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "s-klettern": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "s-mattmark": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "s-trotti": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "saal-fest": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "sauna-holz": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "scheiben-tisch": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "scheiben-tv": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "scheiben-wohnen": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "sekt": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "senseliege": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "ski-wald": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "sp-blick": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "sp-farben": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "sp-fenster": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "sp-garten": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "ig-08.jpg",
+   "grund": "pHash 0"
+  },
+  "sp-gesicht": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "sp-gruen": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "sp-haende": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "sp-massage-2": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "sp-ruhe": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "sp-ruhe-2": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "sp-scheiben": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "sp-wanne": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "ig-09.jpg",
+   "grund": "pHash 4"
+  },
+  "t-1": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "t-3": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "t-4": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "t-6": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "t-7": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "t-8": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "tisch-z": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "vitrinen": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "w-bahn": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "w-mond": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "w-touren": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "wappen": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "weinkeller": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "winternacht": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "z-classic": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "z-classic-2": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "z-classic-3": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "z-classic-bad": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "z-classic-bad-2": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "z-fam-bad": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "z-fam-wohnen": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "z-fam45": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "z-fam45-2": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "z-fam75": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "z-modern": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "z-modern-bad": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "z-nice": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "z-nice-bad": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "z-senior": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "z-senior-2": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "z-suite": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "z-suite-bad": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "z-suite-r": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  }
+ },
+ "doppelt": []
+}

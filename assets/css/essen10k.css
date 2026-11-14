@@ -1,0 +1,75 @@
+/* Wellness & Spa · «setzen Sie sich», Fassung 10 mit fünf neuen Köpfen (25.10.2026). Nur auf _varianten/essen-10k/NN.html, nach essen15c.css.
+   Die Reihe der Teller bleibt; der Kopf ohne Leerfläche, gebunden an die Reihe. Nur transform/opacity. */
+.kk .sx10-kopf{display:none}
+.k-z{margin:0 0 18px;color:#C9A54E}.k-z svg{display:block;width:58px;height:auto}
+.kk .rt{font-size:clamp(44px,4.4vw,74px)}
+.kk .sx10-reihe{position:relative;z-index:3}
+.k-wahl{margin:6px 0 0;font-size:12.5px;line-height:1.5;opacity:.7}
+.k-wahl span{display:block}
+.k-wahl i{margin-left:0}
+.k-quelle{margin-top:22px!important}
+
+/* Tag in einer Zeile: vier Zeiten nebeneinander, Messing oben und unten */
+.k-zeile{list-style:none;margin:28px 0 0;padding:14px 0;display:grid;grid-template-columns:repeat(4,auto);justify-content:space-between;gap:18px;border-top:1px solid rgba(138,106,42,.4);border-bottom:1px solid rgba(138,106,42,.4)}
+.k-zeile li{display:flex;flex-direction:column;gap:3px}
+.k-zeile span{font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+.k-zeile b{font-family:var(--licht);font-weight:400;font-size:clamp(16px,1.2vw,19px)}
+
+/* ---------- 1 Der Saal als Kopf */
+.k1-kopf{position:relative}
+.k1 .k1-saal{aspect-ratio:16/9}
+.k1 .k1-saal img{transform:scale(1.14);transition:transform 2.8s var(--e1)}
+.k1.da .k1-saal img{transform:none}
+.k1-karte{position:absolute;left:clamp(20px,3vw,48px);top:clamp(20px,3vw,48px);width:min(46%,560px);background:#FBF8F3;border-radius:var(--rk);padding:clamp(28px,2.8vw,46px);
+ box-shadow:0 60px 90px -44px rgba(24,33,63,.55),0 14px 26px -16px rgba(24,33,63,.3);transform:translateY(60px);transition:transform 1.8s var(--e1) .2s}
+.k1.da .k1-karte{transform:none}
+.k1 .sx10-reihe{margin:-110px clamp(20px,3vw,48px) 0}
+.k1 .k-zeile{margin-top:22px}
+@media(max-width:900px){.k1 .k1-saal{aspect-ratio:4/3}.k1-karte{position:relative;left:auto;top:auto;width:auto;margin:-70px 10px 0}.k1 .sx10-reihe{margin:40px 0 0}}
+
+/* ---------- 2 Die Zeile des Tages */
+.k2-kopf{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:clamp(40px,5vw,90px);align-items:end}
+.k2 .rt{font-size:clamp(56px,6.4vw,108px);line-height:.98}
+.k2-rechts .rl{margin-top:0}
+.k2-tage{list-style:none;margin:clamp(40px,4vw,60px) 0 clamp(40px,4vw,64px);padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid rgba(138,106,42,.5);border-bottom:1px solid rgba(138,106,42,.5)}
+.k2-tage li{display:flex;flex-direction:column;gap:6px;padding:20px 24px;border-left:1px solid rgba(138,106,42,.28)}
+.k2-tage li:first-child{border-left:0;padding-left:0}
+.k2-tage span{font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+.k2-tage b{font-family:var(--licht);font-weight:300;font-size:clamp(22px,2vw,32px);letter-spacing:-.01em}
+@media(max-width:900px){.k2-kopf{grid-template-columns:1fr;gap:24px}.k2-tage{grid-template-columns:1fr 1fr}.k2-tage li{padding:14px 0 14px 14px}.k2-tage li:nth-child(odd){border-left:0;padding-left:0}.k2-tage li:nth-child(n+3){border-top:1px solid rgba(138,106,42,.28)}}
+
+/* ---------- 3 Die nachtblaue Karte */
+.k3-tafel{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:clamp(40px,5vw,90px);align-items:end;background:#0A1129;color:#F4F2EC;border-radius:var(--rk);box-shadow:var(--sch-h);
+ padding:clamp(40px,4.4vw,72px) clamp(32px,4.4vw,72px) calc(clamp(40px,4.4vw,72px) + 120px)}
+.k3 .k-z{color:#D9B758}
+.k3-tafel .ro{color:#D9B758}
+.k3-tafel .rl{opacity:.8}
+.k3-tage{list-style:none;margin:0;padding:0}
+.k3-tage li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:baseline;padding:13px 0;border-top:1px solid rgba(217,183,88,.3)}
+.k3-tage li:last-child{border-bottom:1px solid rgba(217,183,88,.3)}
+.k3-tage span{order:2;font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;opacity:.75}
+.k3-tage b{font-family:var(--licht);font-weight:400;font-size:clamp(17px,1.3vw,20px);color:#E9D49A}
+.k3 .sx10-reihe{margin:-120px clamp(20px,3vw,48px) 0}
+.k3 .sx10-k figure{box-shadow:0 40px 60px -30px rgba(0,0,0,.55)}
+@media(max-width:900px){.k3-tafel{grid-template-columns:1fr;gap:30px;padding:36px 22px 210px}.k3 .sx10-reihe{margin:-110px 10px 0}}
+
+/* ---------- 4 Die Menükarte */
+.k4-kopf{text-align:center;display:flex;flex-direction:column;align-items:center;margin-bottom:clamp(50px,5vw,80px)}
+.k4 .k-z svg{width:64px}
+.k4 .rl{margin-left:auto;margin-right:auto}
+.k4-tage{list-style:none;margin:36px 0 0;padding:18px 0;display:flex;justify-content:center;border-top:1px solid rgba(138,106,42,.45);border-bottom:1px solid rgba(138,106,42,.45)}
+.k4-tage li{display:flex;flex-direction:column;align-items:center;gap:5px;padding:0 clamp(18px,2.6vw,44px);border-left:1px solid rgba(138,106,42,.3)}
+.k4-tage li:first-child{border-left:0}
+.k4-tage span{font-family:var(--mono);font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+.k4-tage b{font-family:var(--licht);font-weight:400;font-size:clamp(18px,1.5vw,23px)}
+.k4 .r-knoepfe{justify-content:center}
+.k4 .sx10-k{text-align:center}
+@media(max-width:900px){.k4-tage{flex-wrap:wrap;gap:14px 0}.k4-tage li{width:50%;padding:0}.k4-tage li:nth-child(3){border-left:0}}
+
+/* ---------- 5 Titel und Bilder in Ebenen */
+.k5-kopf{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:clamp(40px,5vw,90px);align-items:center;margin-bottom:clamp(50px,5vw,80px)}
+.k5-bilder{position:relative;height:min(54vh,500px)}
+.k5 .k5-a{position:absolute;left:0;top:0;width:82%;height:84%}
+.k5 .k5-b{position:absolute;right:0;bottom:0;width:40%;aspect-ratio:3/2;z-index:2;transform:translateY(70px);transition:transform 1.6s var(--e1) .4s}
+.k5.da .k5-b{transform:none}
+@media(max-width:900px){.k5-kopf{grid-template-columns:1fr}.k5-bilder{height:76vw}.k-zeile{grid-template-columns:1fr 1fr}}

@@ -1,0 +1,149 @@
+/* Wellness & Spa · Zimmerseite, 15 Fassungen «grosses Bild, kleine Bilder, Angaben» (25.10.2026). */
+.zgv{--gold:#8A6A2A}
+/* Schild: zeigt nur an, keine Knöpfe; feste Breite, verschiebt sich nie */
+.vschild{position:fixed;z-index:120;left:16px;bottom:16px;width:300px;margin:0;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:12px;padding:10px 16px;border-radius:12px;
+ background:#0A1129;color:#F4F2EC;font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;box-shadow:0 18px 40px -16px rgba(0,0,0,.6);pointer-events:none}
+.vschild b{font-weight:400;color:#E9D49A}
+.vschild span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.vschild i{font-style:normal;opacity:.6}
+
+/* Grundaufbau */
+.zgs{--rk:clamp(14px,1.4vw,22px)}
+.zgs .zd-z img{width:34px;height:auto}
+.zgs-in{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(30px,4.5vw,80px);align-items:start;transform:translateY(40px);transition:transform 1.4s var(--e1)}
+.zgs-in.sw-da{transform:none}
+.zgs--r .zgs-in{grid-template-columns:minmax(0,7fr) minmax(0,5fr)}
+.zgs--r .zgs-in>.zg-info,.zgs--r .zgs-in>.zg-info-w{order:2}
+.zgs figure{margin:0}
+.zg-info{padding-top:clamp(4px,1vw,16px);min-width:0}
+.zg-n{margin:0;font-family:var(--licht);font-weight:400;font-size:clamp(32px,3.2vw,54px);line-height:1.06;letter-spacing:-.02em}
+.zg-lead{margin:14px 0 0;max-width:34ch;font-family:var(--licht);font-size:clamp(17px,1.35vw,20px);line-height:1.5;color:#4A536B}
+.zg-eck{margin:22px 0 0;display:grid;grid-template-columns:auto minmax(0,1fr);border-top:1px solid rgba(24,33,63,.14);border-bottom:1px solid rgba(24,33,63,.14)}
+.zg-eck span{padding:12px 18px 12px 0;font-family:var(--licht);font-size:16px;line-height:1.35}
+.zg-eck span+span{padding-left:18px;border-left:1px solid rgba(24,33,63,.14)}
+.zg-eck i,.zg-tafel dt{display:block;margin-bottom:4px;font-style:normal;font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+.zgs .ul2{margin-top:16px}
+.zg-preis{margin:24px 0 0;display:flex;flex-direction:column;gap:6px}
+.zg-preis b{font-family:var(--licht);font-weight:400;font-size:clamp(24px,2vw,32px);letter-spacing:-.01em}
+.zg-preis span{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.zgs .r-knoepfe{margin-top:24px}
+
+/* Galerie */
+.zg{min-width:0}
+.zg-gross{position:relative;aspect-ratio:3/2;border-radius:var(--rk);overflow:hidden;background:#EEE8DE;
+ box-shadow:0 1px 0 rgba(255,255,255,.5) inset,0 40px 70px -40px rgba(24,33,63,.55),0 10px 22px -14px rgba(24,33,63,.3)}
+.zg-b{position:absolute!important;inset:0;border-radius:0!important;box-shadow:none!important;opacity:0;transition:opacity .55s ease}
+.zg-b.an{opacity:1}
+.zg-b img{display:block;width:100%;height:100%;object-fit:cover;transform:scale(1.03);transition:transform 1.4s var(--e1)}
+.zg-b.an img{transform:none}
+.zg-b.hoch img{object-fit:contain}
+.zg-minis{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:10px;margin-top:12px}
+.zg-m{position:relative;padding:0;border:0;aspect-ratio:3/2;border-radius:8px;overflow:hidden;cursor:pointer;background:#EEE8DE;opacity:.55;box-shadow:0 0 0 1px rgba(24,33,63,.08);transition:opacity .3s,box-shadow .3s}
+.zg-m img{display:block;width:100%;height:100%;object-fit:cover}
+.zg-m:hover,.zg-m:focus-visible{opacity:1}
+.zg-m.an{opacity:1;box-shadow:0 0 0 2px #C9A54E}
+
+/* 02 Kleine Bilder daneben, 12 Drei Spalten */
+.zg--seite{display:grid;grid-template-columns:minmax(0,1fr) 15%;gap:12px;align-items:start}
+.zg--drei{display:grid;grid-template-columns:15% minmax(0,1fr);gap:12px;align-items:start}
+.zg-minis--senk{grid-template-columns:1fr;margin-top:0;align-content:start}
+.zgv12 .zgs-in,.zgv12 .zgs--r .zgs-in{grid-template-columns:minmax(0,8fr) minmax(0,4fr)}
+.zgv12 .zgs--r .zgs-in>.zg-info{order:0}
+
+/* 03 Bild oben */
+.zgv03 .zgs-in{grid-template-columns:1fr!important}
+.zg--breit .zg-gross{aspect-ratio:16/9;max-height:72vh}
+.zg--breit .zg-minis{grid-template-columns:repeat(10,minmax(0,1fr))}
+.zg-info--quer{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:clamp(30px,5vw,90px);order:0!important}
+.zg-info--quer>.ul2{grid-column:2;grid-row:1/4;margin-top:6px}
+.zg-info--quer>.zg-preis{grid-column:2}
+.zg-info--quer>.r-knoepfe{grid-column:2}
+
+/* 04 Karte auf dem Bild */
+.zgv04 .zgs-in,.zgv04 .zgs--r .zgs-in{grid-template-columns:repeat(12,minmax(0,1fr));gap:0;align-items:center}
+.zgv04 .zgs-in>.zg{grid-column:1/9;grid-row:1}
+.zgv04 .zgs-in>.zg-karte{grid-column:8/13;grid-row:1;z-index:2;order:0!important;padding:clamp(26px,2.6vw,42px);border-radius:calc(var(--rk) + 6px);background:#FFFDF8;box-shadow:0 40px 80px -40px rgba(24,33,63,.6),0 10px 24px -14px rgba(24,33,63,.3)}
+.zgv04 .zgs--r .zgs-in>.zg{grid-column:5/13}
+.zgv04 .zgs--r .zgs-in>.zg-karte{grid-column:1/6}
+
+/* 05 Kleine Bilder im Bild */
+.zg-minis--innen{position:absolute;z-index:2;left:14px;right:14px;bottom:14px;margin:0;padding:8px;border-radius:12px;background:#FFFDF8;box-shadow:0 14px 30px -14px rgba(24,33,63,.6);grid-template-columns:repeat(var(--n),minmax(0,64px))}
+.zg-minis--innen .zg-m{border-radius:6px}
+
+/* 06 Kleine Bilder bei den Angaben */
+.zgv06 .zgs-in{grid-template-columns:minmax(0,7fr) minmax(0,5fr)}
+.zgv06 .zgs--r .zgs-in{grid-template-columns:minmax(0,5fr) minmax(0,7fr)}
+.zg-minis--info{grid-template-columns:repeat(4,minmax(0,1fr));margin:0 0 26px}
+.zg-info-w{min-width:0}
+
+/* 07 Winterabend */
+.zgv07 .zgs{color:#F4F2EC}
+.zgv07 .zg-lead,.zgv07 .ul2 li{color:rgba(244,242,236,.82)}
+.zgv07 .zg-eck i,.zgv07 .zg-preis span{color:#D9B758}
+.zgv07 .zg-eck,.zgv07 .zg-eck span+span,.zgv07 .ul2 li{border-color:rgba(233,212,154,.2)!important}
+.zgv07 .zg-gross{background:#141C42;box-shadow:0 0 0 1px rgba(233,212,154,.18),0 30px 80px -30px rgba(233,190,110,.35)}
+.zgv07 .zg-m{background:#141C42;box-shadow:0 0 0 1px rgba(233,212,154,.3);opacity:.5}
+.zgv07 .zg-m.an{opacity:1;box-shadow:0 0 0 2px #D9B758}
+
+/* 08 Grössere kleine Bilder */
+.zg-minis--gross{grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:12px}
+.zg-minis--gross .zg-m{opacity:.75;border-radius:10px}
+
+/* 09 Zähler im Bild */
+.zg-schild{position:absolute;z-index:2;right:14px;bottom:14px;display:flex;align-items:center;gap:10px;padding:6px;border-radius:999px;background:#FFFDF8;box-shadow:0 14px 30px -14px rgba(24,33,63,.6)}
+.zg-schild p{margin:0;min-width:3.6em;text-align:center;font-family:var(--mono);font-size:11px;letter-spacing:.12em}
+.zg-schild b{font-weight:400}
+.zg-k{width:40px;height:40px;border:0;border-radius:50%;cursor:pointer;display:grid;place-items:center;background:linear-gradient(180deg,#F1E2B4,#C9A54E)}
+.zg-k svg{width:14px;height:14px;stroke:#1B2440;fill:none;stroke-width:1.5}
+
+/* 10 Bis an den Rand */
+.zgv10 .zgs:not(.zgs--r) .zg--rand .zg-gross{border-radius:var(--rk) 0 0 var(--rk)}
+.zgv10 .zgs--r .zg--rand .zg-gross{border-radius:0 var(--rk) var(--rk) 0}
+.zgv10 .zgs{overflow:hidden}
+
+/* 11 Zimmerkarte */
+.zgv11 .zgs-in{display:block}
+.zg-karte-ganz{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(30px,4vw,64px);align-items:start;padding:clamp(22px,2.6vw,40px);border-radius:calc(var(--rk) + 10px);background:#FFFDF8;
+ box-shadow:0 50px 90px -50px rgba(24,33,63,.5),0 10px 24px -14px rgba(24,33,63,.2)}
+.zgs--r .zg-karte-ganz{grid-template-columns:minmax(0,7fr) minmax(0,5fr)}
+.zgs--r .zg-karte-ganz>.zg-info{order:2}
+
+/* 13 Zentriert */
+.zgv13 .zgs-in{display:block;text-align:center}
+.zg-n--mitte{text-align:center}
+.zg--mitte{max-width:min(920px,100%);margin:clamp(20px,2vw,32px) auto 0}
+.zg--mitte .zg-minis{grid-template-columns:repeat(var(--n),minmax(0,96px));justify-content:center}
+.zg-info--drei{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr) minmax(0,1fr);gap:clamp(24px,3vw,50px);text-align:left;margin-top:clamp(26px,3vw,44px);align-items:start}
+.zg-info--drei>.zg-lead{grid-column:1;margin:0}
+.zg-info--drei>.zg-eck{grid-column:1;grid-row:2}
+.zg-info--drei>.ul2{grid-column:2;grid-row:1/3;margin:0}
+.zg-info--drei>.zg-preis{grid-column:3;grid-row:1;margin:0}
+.zg-info--drei>.r-knoepfe{grid-column:3;grid-row:2;flex-direction:column;align-items:flex-start;margin-top:12px}
+
+/* 14 Steckbrief */
+.zg-tafel{margin:22px 0 0}
+.zg-tafel div{display:grid;grid-template-columns:110px minmax(0,1fr);gap:16px;padding:13px 0;border-top:1px solid rgba(24,33,63,.14)}
+.zg-tafel div:last-child{border-bottom:1px solid rgba(24,33,63,.14)}
+.zg-tafel dt{margin:3px 0 0}
+.zg-tafel dd{margin:0;font-size:15px;line-height:1.5}
+
+/* 15 Filmstreifen */
+.zg--film{border-radius:var(--rk);overflow:hidden;background:#0E1638;box-shadow:0 40px 70px -40px rgba(24,33,63,.6)}
+.zg--film .zg-gross{border-radius:0;box-shadow:none}
+.zg-minis--film{margin:0;padding:12px;gap:8px}
+.zg-minis--film .zg-m{border-radius:4px;background:#18214A;opacity:.5;box-shadow:none}
+.zg-minis--film .zg-m.an{opacity:1;box-shadow:0 0 0 2px #D9B758}
+
+@media (max-width:900px){
+ .zgs-in,.zgs--r .zgs-in,.zg-karte-ganz,.zgs--r .zg-karte-ganz,.zg-info--quer,.zg-info--drei{grid-template-columns:1fr!important}
+ .zgs-in>.zg,.zgs-in>.zg--drei{order:-1}
+ .zgs--r .zgs-in>.zg-info,.zgs--r .zg-karte-ganz>.zg-info{order:2}
+ .zg-info--quer>*,.zg-info--drei>*{grid-column:1!important;grid-row:auto!important}
+ .zgv04 .zgs-in>.zg,.zgv04 .zgs--r .zgs-in>.zg,.zgv04 .zgs-in>.zg-karte,.zgv04 .zgs--r .zgs-in>.zg-karte{grid-column:1/-1!important;grid-row:auto!important}
+ .zgv04 .zgs-in>.zg-karte{margin:-30px 12px 0}
+ .zg-minis,.zg--breit .zg-minis,.zg-minis--gross,.zg-minis--info,.zg--mitte .zg-minis{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:74px;overflow-x:auto;scrollbar-width:none;padding:2px;justify-content:start}
+ .zg-minis--innen{grid-auto-columns:52px}
+ .zg--seite,.zg--drei{grid-template-columns:1fr}.zg-minis--senk{order:2}
+ .zgv10 .zg--rand .zg-gross{margin:0!important;border-radius:var(--rk)!important}
+ .vschild{width:auto;right:16px}
+}

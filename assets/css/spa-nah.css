@@ -1,0 +1,46 @@
+/* entspannen Sie sich · Fassung 12 «Nah dran» mit Bildkompositionen (Robert 24.10.2026: «12, aber mit mehr Bildern pro Abschnitt, so wie bei
+   Monte-Moro bei den Zimmern»; Entwurfs-Maschine _varianten/spa-15b). Vier Räume, je eine Komposition aus vier bis fünf Fotos, die sich überlappen
+   und beim Scrollen in eigener Tiefe treiben; eines davon ist ein naher Ausschnitt (Leuchter, Stein, grünes Licht, Zeichen des Hauses).
+   Bewegung: Tiefe nur über transform (spa-nah.js), Fotos setzen sich im Rahmen (113 → 100 %), Text steigt 40 px. Von Anfang an sichtbar. */
+.sn{padding-left:clamp(20px,6vw,96px);padding-right:clamp(20px,6vw,96px)}
+.sn-kopf{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(28px,5vw,90px);align-items:end}
+.sn-kopf .rt{font-size:clamp(40px,4.4vw,72px)}
+.sn-kopf .rs{max-width:520px}
+.sn-zahlen{display:flex;gap:clamp(22px,3vw,52px);justify-content:flex-end}
+.sn-zahlen p{margin:0;display:grid;gap:6px}
+.sn-zahlen b{font-family:var(--licht);font-weight:300;font-size:clamp(32px,3.6vw,60px);line-height:1;color:var(--ms-h);white-space:nowrap}
+.sn-zahlen span:not(.rz){font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;opacity:.72}
+.sn-raum{margin-top:clamp(64px,7vw,120px)}
+.sn-komp{position:relative;aspect-ratio:1/.56}
+.sn-eb{position:absolute;left:var(--l);top:var(--t);width:var(--w);z-index:var(--z);transform:translate3d(0,var(--y,0px),0)}
+.sn-raum.sp .sn-eb{left:calc(100% - var(--l) - var(--w))}
+.sn-eb figure{aspect-ratio:var(--ar)}
+/* Hochschweben: jedes Foto steigt deckend von unten herauf, sobald seine Oberkante ins Bild kommt, ohne Nachfedern; nie unsichtbar */
+.sn-eb figure{transform:translate3d(0,110px,0) scale(.96);transition:transform 1.2s cubic-bezier(.22,.61,.36,1) calc(var(--n,0) * 50ms)}
+.sn-eb.da figure{transform:none}
+.sn-eb img{transform:scale(1.12);transition:transform 1.6s cubic-bezier(.22,.61,.36,1) calc(var(--n,0) * 50ms)}
+.sn-eb.da img{transform:none}
+.sn-nah img{transform-origin:var(--o);transform:scale(calc(var(--s) * 1.12))}
+.sn-eb.da .sn-nah img{transform:scale(var(--s))}
+.sn-nah figcaption{position:absolute;left:14px;right:14px;bottom:12px;z-index:2;font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:#F6F1EA;text-shadow:0 1px 10px rgba(0,0,0,.7)}
+.sn-t{position:absolute;left:0;top:67%;width:40%;transform:translateY(60px);transition:transform 1.2s cubic-bezier(.22,.61,.36,1)}
+.sn-raum.sp .sn-t{left:60%}
+.sn-raum.da .sn-t{transform:none}
+.sn-n{font-family:var(--licht);font-weight:400;font-size:clamp(46px,5.2vw,88px);line-height:1;letter-spacing:-.01em;color:#F6F1EA;margin:12px 0 14px}
+.sn-t .ro{font-size:13px;color:var(--ms-h)}
+.sn-t .rs{font-size:clamp(16px,1.2vw,19px)}
+.sn-t .rs{margin:0}
+.sn-oz{text-align:center;margin:clamp(56px,6vw,90px) auto 0;max-width:640px}
+.s2.sn{padding-bottom:clamp(64px,6vw,96px)}
+@media (max-width:900px){
+  .sn-kopf{grid-template-columns:1fr;gap:30px}
+  .sn-zahlen{justify-content:flex-start;flex-wrap:wrap}
+  .sn-t,.sn-raum.sp .sn-t{position:relative;left:auto;top:auto;width:auto;grid-column:1/-1;order:-1;margin-bottom:8px}
+  .sn-komp{aspect-ratio:auto;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .sn-eb,.sn-raum.sp .sn-eb{position:relative;left:auto;top:auto;width:auto;transform:none}
+  .sn-eb figure{aspect-ratio:1}
+  .sn-eb:first-child{grid-column:1/-1}.sn-eb:first-child figure{aspect-ratio:3/2}
+  .sn-oz{text-align:left}
+  .sn-n{white-space:normal}
+}
+@media (prefers-reduced-motion:reduce){.sn-eb,.sn-eb figure{transform:none!important;transition:none!important}.sn-eb img,.sn-t{transition:none!important}.sn-eb img{transform:none!important}.sn-nah img{transform:scale(var(--s))!important}.sn-t{transform:none}}

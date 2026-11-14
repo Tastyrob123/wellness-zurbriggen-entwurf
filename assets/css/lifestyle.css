@@ -1,0 +1,224 @@
+/* Wellness & Spa Pirmin Zurbriggen · Identität «lifestyle» (19.10.2026). Die Startseite ist der Prospekt «lifestyle» des Hauses, lebendig:
+   schokoladenbraune Seiten mit dem Wappen als Wasserzeichen, die Einladungen in der Schreibschrift des Prospekts, die dunkle Bildleiste über den Seitenrand,
+   gegenüber die Bildseite, die sich beim Ankommen aufschlägt wie eine Prospektseite (nur rotateY). Nichts seitwärts, nichts am Scrollen. */
+.ls main{background:var(--schoko)}
+.ls-sp{--seite:#4B3624;--leiste:#36271B;position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);min-height:clamp(660px,94svh,1000px);background:var(--seite);color:var(--papier);perspective:2200px;overflow:hidden}
+.ls-sp+.ls-sp{border-top:1px solid rgba(0,0,0,.18)}
+.ls-sp--dunkel{--seite:#3E2C1E;--leiste:#2C1F15}
+.ls-sp--um .ls-sp__l{order:2}.ls-sp--um .ls-sp__r{order:1}
+.ls-sp__l{position:relative;display:flex;align-items:center;padding:clamp(110px,11vw,160px) 0 clamp(60px,7vw,100px)}
+.ls-sp__t{position:relative;z-index:1;width:100%;padding:0 clamp(28px,5vw,90px) 0 var(--rand)}
+.ls-sp--um .ls-sp__t{padding:0 var(--rand) 0 clamp(28px,5vw,90px)}
+/* das Wappen als Wasserzeichen, wie auf jeder Textseite des Prospekts */
+.ls-wappen{position:absolute;left:-12%;top:-6%;width:86%;aspect-ratio:1;background:url(../img/wappen-l.webp?v=13) 50%/contain no-repeat;opacity:.1;mix-blend-mode:screen;pointer-events:none;-webkit-mask-image:radial-gradient(closest-side,#000 55%,transparent 100%);mask-image:radial-gradient(closest-side,#000 55%,transparent 100%)}
+.ls-sp--um .ls-wappen{left:auto;right:-12%}
+/* die Einladung in der Schreibschrift des Prospekts, steigt aus dem Schlitz */
+.ls-einl{margin:0;font-size:0}
+.ls-einl__s{display:block;overflow:hidden;padding-bottom:6px}
+.ls-einl img{display:block;width:auto;height:clamp(40px,4.6vw,74px);max-width:100%;object-fit:contain;object-position:left}
+.js .ls-einl img{translate:0 110%;transition:translate 1.3s cubic-bezier(.16,1,.3,1) .25s}
+.ls-sp.da .ls-einl img{translate:0 0}
+.ls-satz{max-width:46ch;margin-top:clamp(18px,2vw,28px);font-family:var(--serif);font-size:clamp(1.12rem,1.5vw,1.42rem);line-height:1.5;color:rgba(251,248,243,.92)}
+.ls-text{max-width:54ch;margin-top:18px;font-size:.98rem;line-height:1.7;color:rgba(246,241,234,.76)}
+.ls-text b{font-weight:400;color:var(--messing)}.ls-text a{color:var(--messing-hell);border-bottom:1px solid rgba(217,183,88,.4)}
+.ls-zeilen{list-style:none;margin:clamp(22px,2.6vw,34px) 0 0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 28px;max-width:620px}
+.ls-zeilen li{padding:11px 0;border-top:1px solid rgba(217,183,88,.2);font-size:.92rem;line-height:1.45;color:rgba(246,241,234,.76)}
+.ls-zeilen b{display:block;font-family:var(--serif);font-weight:400;font-size:clamp(1.15rem,1.5vw,1.4rem);color:var(--messing)}
+/* die dunkle Bildleiste mit drei Fotos, läuft über den Seitenrand wie im Prospekt */
+.ls-leiste{margin:clamp(28px,3.4vw,48px) 0 0 calc(-1 * var(--rand));--weg:clamp(50px,6vw,90px)}
+.ls-sp--um .ls-leiste{margin:clamp(28px,3.4vw,48px) calc(-1 * var(--rand)) 0 0}
+.ls-leiste__in{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;padding:10px 10px 10px var(--rand);background:var(--leiste);box-shadow:0 20px 40px -24px rgba(0,0,0,.6)}
+.ls-sp--um .ls-leiste__in{padding:10px var(--rand) 10px 10px}
+.ls-l{margin:0;display:grid;gap:8px}
+.ls-l__b{display:block;overflow:hidden;aspect-ratio:4/3}
+.ls-l__b img{width:100%;height:100%;object-fit:cover;scale:1.14;transition:scale 2.8s cubic-bezier(.16,1,.3,1)}
+.ls-leiste.da .ls-l__b img{scale:1}
+.ls-l figcaption{font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:rgba(246,241,234,.7)}
+/* die Bildseite: schlägt sich am Bund auf */
+.ls-sp__r{position:relative}
+.ls-sp__r::before{content:'';position:absolute;z-index:2;top:0;bottom:0;left:0;width:12px;background:var(--leiste)}
+.ls-sp--um .ls-sp__r::before{left:auto;right:0}
+.ls-bs{position:absolute;inset:0 0 0 12px;perspective:2200px}
+.ls-sp--um .ls-bs{inset:0 12px 0 0}
+.ls-bs__blatt{position:absolute;inset:0;overflow:hidden;transform-origin:0 50%;backface-visibility:hidden;background:var(--leiste)}
+.ls-sp--um .ls-bs__blatt{transform-origin:100% 50%}
+.ls-bs__blatt img{width:100%;height:100%;object-fit:cover;scale:1.06;transition:scale 3.2s cubic-bezier(.16,1,.3,1) .5s}
+@media (prefers-reduced-motion:no-preference){
+  .js .ls-bs__blatt{transform:rotateY(-62deg);transition:transform 1.7s cubic-bezier(.22,.8,.2,1)}
+  .js .ls-sp--um .ls-bs__blatt{transform:rotateY(62deg)}
+  .js .ls-sp.da .ls-bs__blatt{transform:rotateY(0)}
+}
+.ls-sp.da .ls-bs__blatt img{scale:1}
+.ls-bs__blatt--wappen img{object-fit:cover}
+/* Titelseite */
+.ls-auf .ls-sp__l{align-items:center}
+.ls-cover{display:grid;justify-items:center;gap:clamp(16px,2vw,26px);text-align:center;max-width:560px;margin:0 auto}
+.ls-cover__z{color:var(--messing)}.ls-cover__z svg{width:clamp(54px,5vw,76px);height:auto}
+.ls-cover__namen{width:clamp(220px,22vw,320px);height:auto}
+.ls-cover__life{width:clamp(170px,16vw,240px);height:auto}
+.ls-cover__h{margin-top:clamp(8px,1.4vw,20px);font-family:var(--serif);font-weight:400;font-size:clamp(2.2rem,3.8vw,3.9rem);line-height:1.06;color:var(--papier)}
+.ls-cover__h em{font-style:normal;color:var(--messing)}
+.ls-cover__ort{font-family:var(--mono);font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:rgba(246,241,234,.6)}
+.ls-band{background:#36271B;padding:22px 0;border-top:1px solid rgba(217,183,88,.18)}
+.ls-band .leiste .lab span,.ls-ende .leiste .lab span{color:var(--messing-hell)}
+/* Seite mit dem Z */
+.ls-z .ls-sp__l{justify-content:center}.ls-z__mark{color:var(--papier)}.ls-z__mark svg{width:clamp(70px,6vw,96px);height:auto}
+/* Familie */
+.ls-kicker{font-family:var(--mono);font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--messing)}
+.ls-h2{margin-top:14px;font-family:var(--serif);font-weight:400;font-size:clamp(2rem,3.4vw,3.3rem);line-height:1.08;color:var(--papier)}.ls-h2 em{font-style:normal;color:var(--messing)}
+.ls-chronik{list-style:none;margin:clamp(22px,2.6vw,34px) 0 0;padding:0;max-width:620px}
+.ls-chronik li{display:grid;grid-template-columns:5.4em 1fr;gap:16px;padding:12px 0;border-top:1px solid rgba(217,183,88,.2);font-size:.94rem;line-height:1.55;color:rgba(246,241,234,.8)}
+.ls-chronik b{font-family:var(--serif);font-weight:400;font-size:1.3rem;color:var(--messing)}
+.ls-noten{margin-top:20px;font-size:.88rem;color:rgba(246,241,234,.7)}.ls-noten b{font-family:var(--serif);font-weight:400;font-size:1.1rem;color:var(--messing)}
+.ls-pirmin{max-width:34ch;margin-top:22px;font-family:var(--serif);font-size:clamp(1.25rem,1.9vw,1.75rem);line-height:1.38;color:var(--papier)}
+.ls-loft{display:grid;gap:12px;justify-items:start;margin-top:26px;padding:20px 22px;border:1px solid rgba(217,183,88,.3);border-radius:3px;max-width:560px}
+.ls-loft img{width:150px;height:auto}.ls-loft p{font-size:.92rem;line-height:1.6;color:rgba(246,241,234,.78)}
+.ls-ende{padding:clamp(70px,8vw,120px) 0;background:#36271B;color:var(--papier);text-align:center}
+.ls-ende .ls-satz{margin:0 auto 30px}.ls-ende .k__kontakt{margin-top:20px}
+.ls .ueber{display:none}
+@media (max-width:800px){
+  .ls-sp{grid-template-columns:1fr;min-height:0}
+  .ls-sp__l,.ls-sp--um .ls-sp__l{order:1;padding:110px 0 40px}.ls-sp__r,.ls-sp--um .ls-sp__r{order:2;height:118vw}
+  .ls-sp__t,.ls-sp--um .ls-sp__t{padding:0 var(--rand)}
+  .ls-leiste,.ls-sp--um .ls-leiste{margin:28px calc(-1 * var(--rand)) 0}
+  .ls-leiste__in,.ls-sp--um .ls-leiste__in{padding:8px var(--rand);gap:8px}
+  .ls-zeilen{grid-template-columns:1fr 1fr}
+  .ls-sp__r::before{top:0;left:0;right:0;bottom:auto;width:auto;height:10px}
+  .ls-bs,.ls-sp--um .ls-bs{inset:10px 0 0 0}
+  .ls-bs__blatt,.ls-sp--um .ls-bs__blatt{transform-origin:50% 0}
+  .js .ls-bs__blatt,.js .ls-sp--um .ls-bs__blatt{transform:rotateX(-50deg)}
+  .js .ls-sp.da .ls-bs__blatt{transform:none}
+  .ls-auf .ls-sp__l{padding-top:120px}.ls-z{display:none}
+}
+
+/* =====================================================================================================================
+   Szenen je Kapitel (19.10.2026 23:35). Boden «lifestyle», je Kapitel eine eigene Anordnung und ein eigener Moment.
+   ===================================================================================================================== */
+.sz{position:relative;overflow:hidden;padding:clamp(110px,11vw,170px) 0 clamp(90px,10vw,150px);background:var(--schoko);color:var(--papier)}
+.sz .ls-wappen{opacity:.08}
+.ls-kopf{position:relative;z-index:1;max-width:760px}
+.ls-kopf--mitte{margin:0 auto;text-align:center}.ls-kopf--mitte .ls-einl img{margin:0 auto;object-position:center}.ls-kopf--mitte .ls-satz{margin-inline:auto}
+.js .sz .ls-einl img{translate:0 110%;transition:translate 1.3s cubic-bezier(.16,1,.3,1) .2s}
+.sz.da .ls-einl img{translate:0 0}
+.sz-tisch .ls-satz,.sz-wahl .ls-satz{color:var(--schoko)}
+
+/* ---------- 2 kommen Sie näher: im dunklen Rahmen fährt die Kamera vom Hang zum Haus, darunter wird der Weg kürzer ---------- */
+.sz-kam__rahmen{position:relative;max-width:1180px;margin:clamp(40px,5vw,70px) auto 0;padding:12px;background:#36271B;box-shadow:0 40px 80px -40px rgba(0,0,0,.7)}
+.sz-kam__b{position:relative;overflow:hidden;aspect-ratio:21/9}
+.sz-kam__b img{width:100%;height:100%;object-fit:cover;transform-origin:68% 70%}
+@media (prefers-reduced-motion:no-preference){
+  .js .sz-kam__b img{scale:1.02;translate:0 -4%;transition:scale 7s cubic-bezier(.3,.55,.12,1),translate 7s cubic-bezier(.3,.55,.12,1)}
+  .js .sz-kam.da .sz-kam__b img{scale:1.55;translate:-6% 3%}
+}
+.sz-kam__weg{list-style:none;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:0;max-width:1180px;margin:0 auto;padding:0;border-top:1px solid rgba(217,183,88,.3)}
+.sz-kam__weg li{position:relative;display:grid;gap:4px;padding:20px 14px 0 0;font-size:.86rem;line-height:1.4;color:rgba(246,241,234,.72)}
+.sz-kam__weg li::before{content:'';position:absolute;top:-4px;left:0;width:7px;height:7px;border-radius:50%;background:var(--messing)}
+.sz-kam__weg b{font-family:var(--serif);font-weight:400;font-size:clamp(1.15rem,1.5vw,1.45rem);color:var(--messing)}
+@media (prefers-reduced-motion:no-preference){.js .sz-kam__weg li{opacity:0;translate:0 18px;transition:opacity .7s ease,translate 1s cubic-bezier(.16,1,.3,1);transition-delay:calc(.8s + var(--i) * .9s)}.sz-kam.da .sz-kam__weg li{opacity:1;translate:0 0}}
+@media (max-width:800px){.sz-kam__b{aspect-ratio:4/3.6}.sz-kam__weg{grid-template-columns:1fr 1fr;gap:0 14px}.sz-kam__weg li{padding-bottom:16px}}
+
+/* ---------- 3 treten Sie ein: Abend in Julens Räumen, das Licht geht an, Raum für Raum ---------- */
+.sz-licht{background:#24190f}
+.sz-licht__g{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(40px,6vw,100px);align-items:center}
+.sz-licht__raeume{display:grid;grid-template-columns:2.2fr 1fr;grid-template-rows:repeat(3,minmax(0,1fr));gap:12px;height:clamp(460px,44vw,640px)}
+.sz-licht__f{margin:0;position:relative;display:grid}
+.sz-licht__f--0{grid-row:1/4}
+.sz-licht__b{position:relative;display:block;overflow:hidden;height:100%;border:1px solid rgba(217,183,88,.25)}
+.sz-licht__b img{width:100%;height:100%;object-fit:cover}
+.sz-licht__nacht{position:absolute;inset:0;background:#0d0906;opacity:.82;transition:opacity 1.6s ease;transition-delay:calc(.5s + var(--i) * .75s)}
+.sz-licht.da .sz-licht__nacht{opacity:0}
+.sz-licht__f figcaption{position:absolute;left:12px;bottom:10px;font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(246,241,234,.85);text-shadow:0 1px 6px rgba(0,0,0,.6)}
+@media (prefers-reduced-motion:reduce){.sz-licht__nacht{opacity:0}}
+@media (max-width:800px){.sz-licht__g{grid-template-columns:1fr}.sz-licht__raeume{grid-template-columns:1fr 1fr;grid-template-rows:56vw 30vw 30vw;height:auto}.sz-licht__f--0{grid-column:1/-1;grid-row:auto}}
+
+/* ---------- 4 Familie: das Wappen als Seite, drei Generationen in der Bildleiste ---------- */
+.sz-fam__grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(40px,6vw,100px);align-items:center}
+.sz-fam__wappen{overflow:hidden;aspect-ratio:1;box-shadow:0 0 0 12px #36271B,0 40px 80px -40px rgba(0,0,0,.7)}
+.sz-fam__wappen img{width:100%;height:100%;object-fit:cover}
+.sz-fam__gen{display:grid;grid-template-columns:1fr 1fr 1.4fr;gap:10px;margin-top:clamp(50px,6vw,80px);padding:10px;background:#36271B}
+.sz-fam__g{margin:0;display:grid;gap:8px}.sz-fam__g .ls-l__b{aspect-ratio:4/3}.sz-fam__g--2 .ls-l__b{aspect-ratio:auto;height:100%}
+.sz-fam__g figcaption{font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:rgba(246,241,234,.7)}
+.sz-fam .ls-noten{margin-top:24px}
+@media (max-width:800px){.sz-fam__grid{grid-template-columns:1fr}.sz-fam__gen{grid-template-columns:1fr 1fr}.sz-fam__g--2{grid-column:1/-1}}
+
+/* ---------- 5 setzen Sie sich: hell wie das Tischtuch; die Menümappe schlägt sich auf und zeigt, was inbegriffen ist ---------- */
+.sz-tisch{background:var(--leinen) var(--tap-hell) 50% 0/240px auto;color:var(--tinte)}
+.sz-tisch__g{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:clamp(30px,4vw,70px);align-items:center;max-width:1180px;margin:clamp(40px,5vw,70px) auto 0}
+.sz-tisch__saal{overflow:hidden;aspect-ratio:4/3.3;box-shadow:0 40px 70px -36px rgba(42,30,21,.55)}
+.sz-tisch__saal img{width:100%;height:100%;object-fit:cover}
+.sz-mappe{position:relative;aspect-ratio:3/4;perspective:1800px}
+.sz-mappe__innen{position:absolute;inset:0;display:grid;align-content:center;gap:12px;padding:clamp(24px,3vw,44px);background:var(--papier);border-radius:2px 6px 6px 2px;box-shadow:inset 6px 0 14px -10px rgba(42,30,21,.4),0 30px 60px -30px rgba(42,30,21,.5)}
+.sz-mappe__z{width:30px;height:auto;color:var(--karamell)}
+.sz-mappe__innen h3{font-family:var(--serif);font-weight:400;font-size:clamp(1.4rem,2vw,1.9rem);color:var(--schoko)}
+.sz-mappe__innen ul{list-style:none;margin:0;padding:0;display:grid}
+.sz-mappe__innen li{padding:9px 0;border-top:1px solid var(--linie);font-size:.92rem;line-height:1.45;color:var(--tinte)}
+.sz-mappe__ang{font-size:.86rem;color:var(--grau)}.sz-mappe__ang a{color:var(--karamell);border-bottom:1px solid rgba(146,101,69,.4)}
+.sz-mappe__deckel{position:absolute;inset:0;overflow:hidden;border-radius:2px 6px 6px 2px;transform-origin:0 50%;backface-visibility:hidden;box-shadow:0 30px 60px -28px rgba(0,0,0,.6)}
+.sz-mappe__deckel img{width:100%;height:100%;object-fit:cover}
+@media (prefers-reduced-motion:no-preference){.js .sz-mappe__deckel{transition:transform 1.8s cubic-bezier(.5,.05,.2,1) .7s}.sz-tisch.da .sz-mappe__deckel{transform:rotateY(-176deg)}}
+@media (prefers-reduced-motion:reduce){.sz-mappe__deckel{display:none}}
+.sz-tisch__teller{display:flex;justify-content:center;gap:clamp(14px,1.8vw,26px);max-width:1180px;margin:clamp(40px,5vw,70px) auto 0}
+.sz-teller{margin:0;flex:0 1 15%}.sz-teller .ls-l__b{aspect-ratio:1;box-shadow:0 24px 40px -24px rgba(42,30,21,.6)}
+.sz-teller--1,.sz-teller--3{margin-top:clamp(24px,3vw,46px)}
+@media (max-width:800px){.sz-tisch__g{grid-template-columns:1fr}.sz-mappe{max-width:420px;width:100%;margin:0 auto}.sz-tisch__teller{flex-wrap:wrap}.sz-teller{flex-basis:28%}}
+
+/* ---------- 6 entspannen Sie sich: der Spa-Turm, drei Stockwerke übereinander, die Wärme steigt von unten ---------- */
+.sz-turm{background:#3a2a1c}
+.sz-turm__g{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.8fr) minmax(0,.8fr);gap:clamp(30px,4vw,70px);align-items:center}
+.sz-turm__mitte{position:relative;padding-left:26px}
+.sz-turm__linie{position:absolute;left:0;top:0;bottom:0;width:2px;background:var(--messing);transform-origin:50% 100%;scale:1 0;transition:scale 2.6s cubic-bezier(.3,.6,.2,1) .3s}
+.sz-turm.da .sz-turm__linie,html:not(.js) .sz-turm__linie{scale:1 1}
+.sz-turm__stapel{display:grid;gap:12px}
+.sz-turm__f{margin:0;display:grid;gap:6px}.sz-turm__f .ls-l__b{aspect-ratio:16/10;box-shadow:0 0 0 1px rgba(217,183,88,.2)}
+.sz-turm__f figcaption{font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(246,241,234,.72)}
+@media (prefers-reduced-motion:no-preference){.js .sz-turm__f{opacity:0;translate:0 30px;transition:opacity .9s ease,translate 1.3s cubic-bezier(.16,1,.3,1);transition-delay:calc(2.4s - var(--i) * .8s)}.sz-turm.da .sz-turm__f{opacity:1;translate:0 0}}
+.sz-turm__grad{display:grid;gap:4px;padding:16px 0;border-top:1px solid rgba(217,183,88,.25);font-size:.9rem;color:rgba(246,241,234,.72)}
+.sz-turm__grad b{font-family:var(--serif);font-weight:400;font-size:clamp(2.2rem,3.4vw,3.2rem);line-height:1;color:var(--messing)}
+.sz-turm .ls-text a{color:var(--messing-hell);border-bottom:1px solid rgba(217,183,88,.4)}
+@media (max-width:800px){.sz-turm__g{grid-template-columns:1fr}.sz-turm__mitte{max-width:420px}}
+
+/* ---------- 7 schlafen Sie sich aus: ein Zimmer wählen, das Bild tauscht an derselben Stelle; die Loft-Suite, oben und unten ---------- */
+.sz-wahl{background:var(--papier);color:var(--tinte)}
+.sz-wahl__g{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(30px,5vw,90px);align-items:center;margin-top:clamp(40px,5vw,70px)}
+.sz-wahl__namen{list-style:none;margin:0;padding:0;display:grid}
+.sz-wahl__namen button{display:grid;gap:2px;width:100%;padding:14px 0 14px 18px;border:0;border-top:1px solid var(--linie);background:none;text-align:left;cursor:pointer;color:var(--grau);position:relative;transition:color .4s}
+.sz-wahl__namen button::before{content:'';position:absolute;left:0;top:50%;width:6px;height:6px;margin-top:-3px;border-radius:50%;background:var(--karamell);scale:0;transition:scale .4s}
+.sz-wahl__namen button b{font-family:var(--serif);font-weight:400;font-size:clamp(1.2rem,1.6vw,1.5rem);color:var(--schoko)}
+.sz-wahl__namen button span{font-size:.86rem}
+.sz-wahl__namen button[aria-pressed="true"]::before{scale:1}.sz-wahl__namen button[aria-pressed="true"] b{color:var(--karamell)}
+.sz-wahl__rahmen{position:relative;aspect-ratio:4/3.2;padding:12px;background:#36271B;box-shadow:0 40px 80px -40px rgba(42,30,21,.6)}
+.sz-wahl__b{position:absolute;inset:12px;overflow:hidden;opacity:0;translate:0 26px;transition:opacity .5s ease,translate .9s cubic-bezier(.16,1,.3,1)}
+.sz-wahl__b.an{opacity:1;translate:0 0;z-index:1}
+.sz-wahl__b img{width:100%;height:100%;object-fit:cover}
+.sz-loft{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(30px,4vw,70px);align-items:center;margin-top:clamp(70px,8vw,120px);padding:clamp(24px,3vw,44px);background:var(--schoko);color:var(--papier)}
+.sz-loft__b{position:relative;overflow:hidden;aspect-ratio:4/3.6}
+.sz-loft__b img{width:100%;height:100%;object-fit:cover}
+.sz-loft__marke{position:absolute;left:14px;padding:7px 12px;background:rgba(30,21,14,.86);font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--messing-hell);opacity:0;translate:0 12px;transition:opacity .7s ease,translate 1s cubic-bezier(.16,1,.3,1)}
+.sz-loft__marke--o{top:14px;transition-delay:.9s}.sz-loft__marke--u{bottom:14px;transition-delay:1.9s}
+.sz-loft.da .sz-loft__marke{opacity:1;translate:0 0}
+.sz-loft__t{display:grid;gap:14px;justify-items:start}.sz-loft__t img{width:160px;height:auto}.sz-loft__t .ls-satz{color:rgba(251,248,243,.92);margin:0}.sz-loft__t .ls-text{margin:0}
+@media (max-width:800px){.sz-wahl__g,.sz-loft{grid-template-columns:1fr}.sz-wahl__rahmen{order:-1}}
+
+/* ---------- 8 folgen Sie uns: Winternacht, und am Ende leuchten die vier Sterne und die Krone des Hauses auf ---------- */
+.sz-nacht{background:#1b130d}
+.sz-nacht__rahmen{position:relative;overflow:hidden;max-width:980px;aspect-ratio:16/9;margin:clamp(40px,5vw,70px) auto 0;box-shadow:0 0 0 12px #2c1f15,0 50px 90px -40px rgba(0,0,0,.85)}
+.sz-nacht__rahmen img{width:100%;height:100%;object-fit:cover}
+.sz-nacht__pirmin{max-width:32ch;margin:clamp(40px,5vw,60px) auto 0;text-align:center;font-family:var(--serif);font-size:clamp(1.35rem,2.2vw,2rem);line-height:1.38;color:var(--papier)}
+.sz-nacht__mitte{margin-inline:auto;text-align:center}
+.sz-nacht__stern{display:grid;justify-items:center;gap:16px;margin-top:clamp(50px,6vw,80px)}
+.sz-nacht__reihe{display:flex;gap:14px;align-items:flex-end}
+.sz-nacht__s{color:var(--messing);opacity:.18;scale:.7;transition:opacity .8s ease,scale 1.2s cubic-bezier(.3,1.5,.4,1),filter .8s;transition-delay:calc(.6s + var(--i) * .45s)}
+.sz-nacht__s svg{width:clamp(22px,2vw,30px);height:auto;display:block}.sz-nacht__s--k svg{width:clamp(32px,2.8vw,42px)}
+.sz-nacht.da .sz-nacht__s{opacity:1;scale:1;filter:drop-shadow(0 0 12px rgba(217,183,88,.55))}
+.sz-nacht__leit{font-family:var(--serif);font-size:clamp(1.3rem,2vw,1.8rem);color:var(--papier)}.sz-nacht__leit em{font-style:normal;color:var(--messing)}
+.sz-nacht__zahlen{display:flex;flex-wrap:wrap;justify-content:center;gap:16px clamp(30px,5vw,70px);margin-top:clamp(40px,5vw,60px)}
+.sz-nacht__zahlen span{display:grid;justify-items:center;gap:4px;font-size:.88rem;color:rgba(246,241,234,.72)}
+.sz-nacht__zahlen b{font-family:var(--serif);font-weight:400;font-size:clamp(1.5rem,2.2vw,2rem);color:var(--messing)}
+.sz-nacht .ls-leiste{max-width:900px;margin:clamp(40px,5vw,60px) auto 0}.sz-nacht .ls-leiste__in{padding:10px;background:#2c1f15}
+.sz-nacht__ende{margin-top:clamp(60px,7vw,100px);text-align:center}.sz-nacht__ende .ls-satz{margin:0 auto 26px}.sz-nacht__ende .k__kontakt{margin-top:18px}
+.sz-nacht .leiste .lab span{color:var(--messing-hell)}
+.sz-mappe__deckel,.sz-mappe__deckel img{-webkit-backface-visibility:hidden;backface-visibility:hidden}
+.sz-mappe{transform-style:preserve-3d}
+.sz-tisch.da .sz-mappe__deckel{visibility:hidden;transition:transform 1.8s cubic-bezier(.5,.05,.2,1) .7s,visibility 0s 1.6s}
+.sz-nacht .leiste .wahl,.ls-band .leiste .wahl{color:var(--papier)}
+@media (max-width:800px){.sz-licht__raeume{grid-template-rows:56vw 30vw 36vw}.sz-licht__f--3{grid-column:1/-1}}

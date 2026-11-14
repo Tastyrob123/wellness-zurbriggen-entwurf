@@ -1,0 +1,155 @@
+/* Wellness & Spa · Zimmerseite, Heros dritte Runde (26.10.2026): Anker ist der Auftakt der Startseite. Vollbild am Abend, starke Schrift,
+   je Fassung ein Detail. Beim Laden fährt alles hoch (transform/opacity). */
+.hx{--rk:clamp(14px,1.4vw,22px);position:relative;min-height:100svh;padding:0!important;overflow:hidden;background:#0A1129;color:#F4F2EC;display:block}
+.hx figure{margin:0;position:relative;overflow:hidden}
+.hx figure img{display:block;width:100%;height:100%;object-fit:cover}
+.hx-bild{position:absolute!important;inset:0}
+.hx-bild img{transform:scale(1.1);transition:transform 2.6s cubic-bezier(.2,.7,.2,1)}
+.hx.da .hx-bild img{transform:none}
+.hx-schleier{position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,17,41,.55),rgba(10,17,41,.32) 40%,rgba(10,17,41,.7));pointer-events:none}
+.hx .rl{max-width:38ch;color:rgba(244,242,236,.85)}
+.hx .r-knoepfe{margin-top:28px;display:flex;gap:12px;flex-wrap:wrap}
+
+/* Titel, Sterne, Unterzeile: fährt hoch wie auf der Startseite */
+.hx-titel{margin:0;font-family:var(--licht);font-weight:400;font-size:clamp(46px,6vw,104px);line-height:1.02;letter-spacing:-.025em}
+.hx-z{display:block;overflow:hidden;padding-bottom:.06em}
+.hx-z>span{display:inline-block;transform:translateY(105%);transition:transform 1.5s var(--e1) .25s}
+.hx-z+.hx-z>span{transition-delay:.4s}
+.hx.da .hx-z>span{transform:none}
+.hx-sterne{display:flex;justify-content:center;align-items:center;gap:10px;margin:0 0 22px;transform:translateY(20px);transition:transform 1.2s var(--e1) .1s}
+.hx.da .hx-sterne{transform:none}
+.hx-sterne img{width:16px;height:16px}.hx-sterne .hx-krone{width:22px;height:18px;margin-left:4px}
+.hx-unter{margin:18px 0 0;font-family:var(--mono);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:#E9D49A}
+.hx .rbar{margin:34px auto 0}
+
+/* Positionen */
+.hx-mitte{position:relative;z-index:3;min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:120px var(--rand,60px) 80px}
+.hx-mitte .r-knoepfe{justify-content:center}
+.hx-mitte--hoch{padding-bottom:180px}
+
+/* 02 Ein Wort, ein Rahmen */
+.hx02{background:#0A1129}
+.hx-riesig{position:absolute;left:var(--rand,60px);top:20vh;margin:0;font-family:var(--licht);font-weight:300;font-size:clamp(120px,19vw,330px);line-height:.85;letter-spacing:-.05em;color:#F4F2EC;overflow:hidden}
+.hx-riesig span{display:inline-block;transform:translateY(100%);transition:transform 1.6s var(--e1) .2s}
+.hx.da .hx-riesig span{transform:none}
+.hx-rb{position:absolute;right:var(--rand,60px);top:15vh;width:44vw;height:62vh;z-index:2}
+.hx-rbild{height:100%;border-radius:var(--rk);box-shadow:0 60px 120px -40px rgba(0,0,0,.9)}
+.hx-rr{position:absolute;inset:0;border:1px solid #C9A54E;border-radius:var(--rk);transition:transform 1.8s var(--e1) .7s}
+.hx.da .hx-rr{transform:translate(-30px,30px)}
+.hx-rr span{position:absolute;left:16px;bottom:-28px;font-style:normal;font-family:var(--mono);font-size:11px;letter-spacing:.16em;color:#D9B758}
+.hx-unten-l{position:absolute;left:var(--rand,60px);bottom:9vh;width:min(560px,40vw);z-index:3}
+.hx-satz{margin:0;font-family:var(--licht);font-size:clamp(34px,3.6vw,62px);line-height:1.05;letter-spacing:-.02em}
+
+/* 03 Eingerahmtes Vollbild */
+.hx03{padding:clamp(96px,11vh,120px) 18px 18px!important}
+.hx-inset{position:relative;height:calc(100svh - clamp(96px,11vh,120px) - 18px);border-radius:calc(var(--rk) + 8px);overflow:hidden}
+.hx-inset .hx-bild{border-radius:0}
+.hx-ul{position:absolute;z-index:3;left:clamp(26px,4vw,64px);bottom:clamp(110px,14vh,150px)}
+.hx-ul .hx-unter{margin:0 0 16px}
+.hx-bar-unten{position:absolute;z-index:3;left:0;right:0;bottom:28px;display:flex;justify-content:center}
+.hx-bar-unten .rbar{margin:0}
+
+/* 04 Das Zimmer im Fenster */
+.hx-fenster{position:absolute;z-index:2;left:50%;top:56%;width:min(40vw,640px);aspect-ratio:3/2;transform:translate(-50%,-40%) scale(.9);transition:transform 1.8s var(--e1) .3s}
+.hx.da .hx-fenster{transform:translate(-50%,-50%)}
+.hx-fbild{height:100%;border-radius:6px;box-shadow:0 0 0 10px #F4E3B0,0 0 80px 10px rgba(255,214,140,.45),0 50px 100px -30px rgba(0,0,0,.9)}
+.hx-fr{position:absolute;inset:-26px;border:1px solid #C9A54E;border-radius:10px;transition:transform 1.8s var(--e1) .8s;transform:scale(.96)}
+.hx.da .hx-fr{transform:none}
+.hx-oben-m{position:relative;z-index:3;text-align:center;padding-top:clamp(110px,13vh,140px)}
+.hx-oben-m .hx-titel{font-size:clamp(40px,4.6vw,80px)}
+
+/* 05 Der Pinselzug */
+.hx-pinsel{position:absolute;z-index:2;left:4vw;top:16vh;width:min(46vw,700px);height:auto;filter:drop-shadow(0 20px 40px rgba(0,0,0,.5));clip-path:inset(0 100% 0 0);transition:clip-path 2.2s cubic-bezier(.6,.05,.3,1) .3s}
+.hx.da .hx-pinsel{clip-path:inset(0 0 0 0)}
+.hx-rechts{position:absolute;z-index:3;right:var(--rand,60px);top:50%;transform:translateY(-45%);width:min(560px,44vw)}
+.hx-rechts .hx-unter{margin:0 0 16px}
+
+/* 06 Sieben Wege */
+.hx-wege{position:absolute;z-index:3;left:var(--rand,60px);right:var(--rand,60px);bottom:28px;display:grid;grid-template-columns:repeat(7,1fr);border-radius:18px;overflow:hidden;background:#0A1129;box-shadow:0 30px 60px -30px rgba(0,0,0,.8),0 0 0 1px rgba(233,212,154,.22)}
+.hx-wege a{display:flex;flex-direction:column;gap:6px;padding:18px 16px;text-decoration:none;color:#F4F2EC;border-right:1px solid rgba(233,212,154,.16);transition:background .3s}
+.hx-wege a:last-child{border-right:0}
+.hx-wege a:hover{background:#18214A}
+.hx-wege b{font-family:var(--licht);font-weight:400;font-size:clamp(14px,1.15vw,18px)}
+.hx-wege span{font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;color:#D9B758}
+
+/* 07 Grosse Schrift */
+.hx-titel--riesig{position:absolute;z-index:3;left:var(--rand,60px);right:var(--rand,60px);top:clamp(140px,18vh,200px);font-weight:300;font-size:clamp(64px,10.5vw,190px);line-height:.92;letter-spacing:-.045em}
+.hx-ur{position:absolute;z-index:3;right:var(--rand,60px);bottom:8vh;width:min(460px,40vw)}
+.hx-ur .hx-unter{margin:0 0 14px}
+
+/* 08 Fensterkreuz */
+.hx-kreuz{position:absolute;z-index:2;inset:clamp(100px,12vh,130px) var(--rand,60px) 40px;width:calc(100% - 2 * var(--rand,60px));height:calc(100% - clamp(100px,12vh,130px) - 40px);fill:none;stroke:#C9A54E;stroke-width:1.2px;vector-effect:non-scaling-stroke}
+.hx-kreuz path,.hx-kreuz rect{vector-effect:non-scaling-stroke;stroke-dasharray:420;stroke-dashoffset:420;transition:stroke-dashoffset 2.4s ease .5s}
+.hx.da .hx-kreuz path,.hx.da .hx-kreuz rect{stroke-dashoffset:0}
+.hx08 .hx-mitte{z-index:4}
+.hx08 .hx-mitte>*{position:relative}
+.hx08 .hx-mitte::before{content:"";position:absolute;left:50%;top:50%;width:min(720px,80vw);height:min(440px,60vh);transform:translate(-50%,-50%);background:#0A1129;border-radius:calc(var(--rk) + 6px);box-shadow:0 40px 90px -30px rgba(0,0,0,.85)}
+
+/* 09 Gleich buchen */
+.hx-links{position:absolute;z-index:3;left:var(--rand,60px);top:50%;transform:translateY(-45%);width:min(560px,44vw)}
+.hx-links .hx-sterne{justify-content:flex-start}
+.hx-buchen{position:absolute;z-index:3;right:var(--rand,60px);top:50%;transform:translateY(-45%);width:min(440px,38vw);padding:clamp(24px,2.4vw,36px);border-radius:calc(var(--rk) + 6px);background:#FFFDF8;color:#18213F;
+ display:grid;grid-template-columns:1fr 1fr;gap:14px;box-shadow:0 50px 100px -40px rgba(0,0,0,.9)}
+.hx-bt{grid-column:1/-1;margin:0;font-family:var(--licht);font-size:24px}
+.hx-buchen label{display:flex;flex-direction:column;gap:6px}
+.hx-buchen .hx-breit,.hx-buchen label:nth-of-type(3){grid-column:1/-1}
+.hx-buchen label span{font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:#8A6A2A}
+.hx-buchen input,.hx-buchen select{height:46px;padding:0 12px;border:1px solid rgba(24,33,63,.18);border-radius:10px;background:#fff;font:inherit;font-size:15px;color:#18213F}
+.hx-buchen button{grid-column:1/-1;display:flex;align-items:center;justify-content:space-between;height:56px;padding:0 8px 0 22px;border:0;border-radius:999px;cursor:pointer;background:linear-gradient(180deg,#1E2A55,#0E1638);color:#F4F2EC;font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase}
+.hx-buchen button em{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(180deg,#F1E2B4,#C9A54E)}
+.hx-buchen button svg{width:14px;height:14px;stroke:#1B2440;fill:none;stroke-width:1.5}
+.hx-bk{grid-column:1/-1;margin:0;font-size:12px;opacity:.65}
+
+/* 10 Zahlen unten */
+.hx-zahlen{position:absolute;z-index:3;left:0;right:0;bottom:0;display:grid;grid-template-columns:repeat(4,1fr);background:#0A1129;border-top:1px solid rgba(233,212,154,.22)}
+.hx-zahlen p{margin:0;padding:22px var(--rand,60px) 20px;border-right:1px solid rgba(233,212,154,.16)}
+.hx-zahlen p:last-child{border-right:0}
+.hx-zahlen b{display:block;font-family:var(--licht);font-weight:200;font-size:clamp(34px,3.4vw,58px);line-height:1;color:#E9D49A;letter-spacing:-.03em}
+.hx-zahlen span{display:block;margin-top:8px;font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;opacity:.75}
+
+/* 11 Halb und halb */
+.hx11{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+.hx-hl{display:flex;flex-direction:column;justify-content:center;padding:130px clamp(30px,4vw,70px) 60px var(--rand,60px)}
+.hx-hl .hx-sterne{justify-content:flex-start}
+.hx-hr{height:100svh}
+.hx-hr img{transform:scale(1.1);transition:transform 2.6s cubic-bezier(.2,.7,.2,1)}
+.hx.da .hx-hr img{transform:none}
+
+/* 12 Die Rahmen fahren aus: Endlage ist die natürliche Grösse (Linie bleibt 1 px), am Anfang klein in der Mitte */
+.hx-ar{position:absolute;z-index:2;border:1px solid #C9A54E;border-radius:var(--rk);transform:scale(.3);transition:transform 2s var(--e1)}
+.hx-ar1{inset:clamp(100px,12vh,130px) var(--rand,60px) 40px;transition-delay:.3s}
+.hx-ar2{inset:calc(clamp(100px,12vh,130px) + 14px) calc(var(--rand,60px) + 14px) 54px;opacity:.6;transition-delay:.5s}
+.hx-ar3{inset:calc(clamp(100px,12vh,130px) + 28px) calc(var(--rand,60px) + 28px) 68px;opacity:.35;transition-delay:.7s}
+.hx.da .hx-ar{transform:none}
+
+/* 13 Das Fenster öffnet sich */
+.hx13{min-height:auto;overflow:visible!important}
+.hx-wachs{height:200vh}
+.hx-wachs-in{position:sticky;top:0;height:100svh;overflow:hidden}
+.hx-wbild{position:absolute!important;inset:0;border-radius:var(--rk);transform:scale(var(--w,.55));transform-origin:50% 56%;will-change:transform;box-shadow:0 60px 120px -40px rgba(0,0,0,.9)}
+.hx-wbild::after{content:"";position:absolute;inset:0;background:rgba(10,17,41,var(--d,.15))}
+.hx13 .hx-mitte{position:absolute;inset:0}
+
+/* 14 Schrift vor und hinter dem Bild */
+.hx-hinten{position:absolute;z-index:1;left:var(--rand,60px);top:16vh;margin:0;font-family:var(--licht);font-weight:300;font-size:clamp(70px,9.5vw,170px);line-height:.95;letter-spacing:-.045em;color:#F4F2EC}
+.hx-vorne{position:absolute!important;z-index:2;right:var(--rand,60px);top:26vh;width:52vw;height:60vh;border-radius:var(--rk);box-shadow:0 60px 120px -40px rgba(0,0,0,.9)}
+.hx-davor{position:absolute;z-index:3;right:calc(var(--rand,60px) + 4vw);bottom:12vh;margin:0;font-family:var(--licht);font-weight:300;font-size:clamp(70px,9.5vw,170px);line-height:.95;letter-spacing:-.045em;color:#E9D49A}
+.hx-ul2{position:absolute;z-index:3;left:var(--rand,60px);bottom:12vh;width:min(420px,32vw)}
+.hx-ul2 .hx-unter{margin:0 0 6px;line-height:1.8}
+
+/* 15 Abendlicht */
+.hx-licht{position:absolute;z-index:1;top:-20%;left:-60%;width:60%;height:140%;background:linear-gradient(90deg,rgba(255,200,120,0),rgba(255,200,120,.22),rgba(255,200,120,0));transform:rotate(18deg) translateX(0);animation:hxlicht 9s ease-in-out infinite;pointer-events:none}
+@keyframes hxlicht{0%{transform:rotate(18deg) translateX(0)}60%,100%{transform:rotate(18deg) translateX(330%)}}
+
+@media (prefers-reduced-motion:reduce){.hx-licht{animation:none;display:none}}
+@media (max-width:900px){
+ .hx-riesig{top:110px;left:16px;font-size:21vw}.hx-rb{left:16px;right:16px;width:auto;top:38vh;height:36vh}.hx-unten-l{left:16px;right:16px;width:auto;bottom:24px}.hx-satz{font-size:34px}.hx02 .rl{display:none}
+ .hx-fenster{width:80vw}
+ .hx-pinsel{width:80vw;top:12vh}.hx-rechts{left:16px;right:16px;width:auto;top:auto;bottom:30px;transform:none}
+ .hx-wege{grid-template-columns:repeat(2,1fr);left:12px;right:12px;bottom:12px}.hx-wege a:nth-child(n+5){display:none}
+ .hx-titel--riesig{left:16px;right:16px;font-size:15vw}.hx-ur{left:16px;right:16px;width:auto}
+ .hx-links{left:16px;right:16px;width:auto;top:120px;transform:none}.hx-buchen{left:12px;right:12px;width:auto;top:auto;bottom:12px;transform:none}
+ .hx-zahlen{grid-template-columns:1fr 1fr}.hx-zahlen p{padding:14px 16px}
+ .hx11{grid-template-columns:1fr}.hx-hr{height:50svh}
+ .hx-hinten{top:110px;font-size:16vw}.hx-vorne{left:16px;right:16px;width:auto;top:32vh;height:34vh}.hx-davor{right:16px;bottom:22vh;font-size:16vw}.hx-ul2{left:16px;right:16px;width:auto;bottom:24px}
+}

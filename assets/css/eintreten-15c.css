@@ -1,0 +1,166 @@
+/* «treten Sie ein» · dritte Runde (25.10.2026): 15 Arten, die Räume zu zeigen, jede mit eigenem Effekt. Nur transform und opacity. */
+.ri.g15{overflow:clip}
+.g15{--mg:#D9B758;--mh:#E9D49A;--ink:#18213F}
+.g15 .g-in{width:min(100%,1308px);margin:0 auto}
+.g15 figure{margin:0}
+.g15 .rt{font-size:clamp(38px,3.8vw,64px)}
+.g15 .rl{max-width:40ch}
+.g15 .r-knoepfe{margin-top:30px}
+.g-pin{position:relative}
+.g-klebt{position:sticky;top:0;height:100vh;display:grid;align-items:center}
+
+/* Leiste zum Blättern */
+.vnr{position:fixed;z-index:95;left:50%;bottom:18px;transform:translateX(-50%);display:flex;align-items:center;gap:6px;padding:6px;border-radius:999px;background:#0A1129;box-shadow:0 18px 40px -12px rgba(0,0,0,.6),inset 0 0 0 1px rgba(233,212,154,.3);font-family:var(--mono);font-size:11px;letter-spacing:.1em;color:#F4F2EC;max-width:calc(100vw - 24px)}
+.vnr a{display:grid;place-items:center;min-width:40px;height:40px;padding:0 12px;border-radius:999px;color:#F4F2EC;text-decoration:none;background:rgba(255,255,255,.07)}
+.vnr a.vnr-n{display:flex;gap:12px;background:none;padding:0 14px;white-space:nowrap;overflow:hidden}
+.vnr-n b{font-weight:400;color:#E9D49A}
+.vnr-n span{overflow:hidden;text-overflow:ellipsis}
+
+/* 1 · Vom Wort zum Raum */
+.g01{padding-top:0}
+.g01-pin .g-klebt{place-items:center;overflow:hidden}
+.g01-zeile{grid-area:1/1;margin:0;font-family:var(--licht);font-weight:300;font-size:clamp(60px,9.4vw,160px);line-height:1;letter-spacing:-.045em;white-space:nowrap;color:#F4F2EC}
+.g01-platz{display:inline-block;width:2.1em;vertical-align:-.06em;margin:0 .08em}
+.g01-raum{grid-area:1/1;z-index:2;width:min(86vw,1240px);height:min(78vh,760px);border-radius:var(--rk) !important;transform-origin:50% 50%;will-change:transform}
+.g01-nach{display:grid;grid-template-columns:5fr 7fr;gap:clamp(30px,5vw,90px);align-items:end;margin-top:clamp(40px,4vw,70px)}
+.g01-nach .rl{margin-top:0}
+
+/* 2 · Drehbühne */
+.g02-pin .g-klebt,.g02 .g-klebt{grid-template-columns:4fr 8fr;gap:clamp(20px,3vw,50px)}
+.g02-buehne{position:relative;height:min(76vh,620px);perspective:1100px;display:grid;place-items:center}
+.g02-ring{--tw:clamp(260px,25vw,360px);--r:calc(var(--tw) * 1.3);position:relative;width:var(--tw);aspect-ratio:3/4;transform-style:preserve-3d;transform:translateZ(calc(var(--r) * -1))}
+.g02-p{position:absolute !important;inset:0;transform:rotateY(var(--w)) translateZ(var(--r));backface-visibility:hidden;-webkit-backface-visibility:hidden}
+
+/* 3 · Der Stapel */
+.g03 .g-klebt{grid-template-columns:4fr 8fr;gap:clamp(30px,4vw,70px)}
+.g03-stapel{position:relative;height:min(68vh,560px)}
+.g03-k{position:absolute !important;inset:4% 6%;border:10px solid #FFFCF7;border-radius:12px !important;box-shadow:0 40px 70px -30px rgba(24,33,63,.55),0 6px 14px -6px rgba(24,33,63,.3) !important;
+  transform:translate(calc(clamp(0, var(--p,0) * 4.6 - var(--i), 1) * -40vw), calc(clamp(0, var(--p,0) * 4.6 - var(--i), 1) * -95vh)) rotate(calc(var(--r) + clamp(0, var(--p,0) * 4.6 - var(--i), 1) * -18deg));will-change:transform}
+.g03-k img{border-radius:3px}
+.g03-k figcaption{position:absolute;left:18px;bottom:16px;padding:6px 12px;border-radius:6px;background:#FFFCF7;color:var(--ink);font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase}
+
+/* 4 · Gegenläufig */
+.g04 .g-klebt{grid-template-columns:4fr 8fr;gap:clamp(30px,4vw,70px);overflow:hidden}
+.g04-spalten{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;height:100vh;overflow:hidden}
+.g04-s{display:grid;gap:12px;align-content:start;will-change:transform}
+.g04-s figure{height:clamp(260px,26vw,360px)}
+.g04-s0,.g04-s2{transform:translateY(calc(var(--p,0) * -48% + 4%))}
+.g04-s1{transform:translateY(calc(-44% + var(--p,0) * 48%))}
+
+/* 5 · Bildspur */
+.g05-gr{display:grid;grid-template-columns:4fr 8fr;gap:clamp(30px,4vw,60px);align-items:center}
+.g05-buehne{position:relative;height:min(78vh,700px);border-radius:var(--rk);background:radial-gradient(120% 90% at 70% 40%,#16215A,#0A1129 70%);box-shadow:inset 0 0 0 1px rgba(233,212,154,.18);overflow:hidden;cursor:crosshair}
+.g05-hinweis{position:absolute;z-index:200;right:28px;top:24px;margin:0;font-family:var(--mono);font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--mh);opacity:.8}
+.g05-b{position:absolute;left:0;top:0;width:clamp(180px,17vw,250px);aspect-ratio:4/3;object-fit:cover;border-radius:12px;box-shadow:0 30px 50px -20px rgba(0,0,0,.8);opacity:0;pointer-events:none;will-change:transform,opacity}
+
+/* 6 · Mit der Laterne */
+.g06-gr{display:grid;grid-template-columns:8fr 4fr;gap:clamp(30px,4vw,60px);align-items:center}
+.g06-buehne{position:relative;height:clamp(440px,44vw,620px);border-radius:var(--rk);overflow:hidden;box-shadow:var(--sch);cursor:none}
+.g06-nacht{position:absolute;left:0;top:0;width:300%;height:300%;pointer-events:none;background:radial-gradient(circle at 50% 50%,rgba(3,6,20,0) 0,rgba(3,6,20,0) 170px,rgba(3,6,20,.5) 280px,rgba(3,6,20,.93) 420px);will-change:transform}
+
+/* 7 · Der Gang in die Tiefe */
+.g07-pin .g-klebt{overflow:hidden}
+.g07-text{position:absolute;z-index:3;left:0;top:clamp(110px,14vh,150px)}
+.g07-raum{position:absolute;inset:0;perspective:900px;perspective-origin:50% 50%}
+.g07-welt{position:absolute;inset:0;transform-style:preserve-3d;transform:translateZ(calc(var(--p,0) * 3050px))}
+.g15 .g07-b,.g15 .g07-ziel{position:absolute;left:50%;top:50%;width:520px;height:360px;margin:-180px 0 0 -260px}
+.g07-l{transform:translateX(-470px) translateZ(calc(var(--z) * -560px - 120px)) rotateY(64deg)}
+.g07-r{transform:translateX(470px) translateZ(calc(var(--z) * -560px - 120px)) rotateY(-64deg)}
+.g15 .g07-ziel{width:640px;height:440px;margin:-220px 0 0 -320px;transform:translateZ(-3700px);box-shadow:0 0 120px rgba(255,170,60,.25),var(--sch) !important}
+.g07-nach{display:grid;grid-template-columns:1fr 1fr auto;gap:40px;align-items:end;margin-top:30px}
+.g07-nach .rl,.g07-nach .rs,.g07-nach .r-knoepfe{margin:0}
+
+/* 8 · Die Lamellen */
+.g08-kopf{display:grid;grid-template-columns:5fr 7fr;gap:clamp(30px,5vw,90px);align-items:end;margin-bottom:clamp(30px,3.4vw,50px)}
+.g08-kopf .rl{margin-top:0}
+.g08-lam{--b:58%;--st:calc((100% - var(--b)) / (var(--n) - 1));position:relative;height:clamp(380px,38vw,540px);border-radius:var(--rk);overflow:hidden;box-shadow:var(--sch-h)}
+.g08-l{all:unset;box-sizing:border-box;position:absolute;top:0;bottom:0;left:calc(var(--i) * var(--st));width:var(--b);cursor:pointer;overflow:hidden;box-shadow:-14px 0 30px -12px rgba(0,0,0,.55);
+  transform:translateX(calc(clamp(0, var(--i) - var(--a,1), 1) * 85.5%));transition:transform .8s cubic-bezier(.22,1,.36,1)}
+.g08-l img{display:block;width:100%;height:100%;object-fit:cover}
+.g08-l span{position:absolute;left:0;top:0;bottom:0;width:clamp(44px,5.5vw,96px);display:flex;align-items:flex-end;justify-content:center;padding-bottom:22px;writing-mode:vertical-rl;transform:rotate(180deg);font-family:var(--mono);font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:#FFFCF7;text-shadow:0 1px 10px rgba(0,0,0,.6)}
+.g08-l:focus-visible{outline:2px solid var(--mg);outline-offset:-4px}
+.g08-jul{margin-top:22px}
+
+/* 9 · Die endlosen Säulen */
+.g09-gr{display:grid;grid-template-columns:4fr 8fr;gap:clamp(30px,4vw,70px);align-items:center}
+.g09-saeulen{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;height:clamp(520px,54vw,720px);overflow:hidden;border-radius:var(--rk);-webkit-mask:linear-gradient(transparent,#000 12%,#000 88%,transparent);mask:linear-gradient(transparent,#000 12%,#000 88%,transparent)}
+.g09-lauf{display:grid;gap:12px;animation:g09 38s linear infinite;will-change:transform}
+.g09-s1 .g09-lauf{animation-duration:52s;animation-direction:reverse}
+.g09-s2 .g09-lauf{animation-duration:44s}
+.g09-lauf figure{height:clamp(220px,20vw,300px)}
+@keyframes g09{to{transform:translateY(calc(-50% - 6px))}}
+
+/* 10 · Die Namen der Räume */
+.g10-gr{display:grid;grid-template-columns:4fr 8fr;gap:clamp(30px,4vw,70px);align-items:center}
+.g10-liste{margin:0;padding:0;--hr-fg:#F4F2EC;--hr-dim:rgba(244,242,236,.24);--hr-rule:rgba(217,183,88,.28);--hr-radius:14px}
+.g10-liste .hr-item>a{align-items:center}
+.g10-liste b{font-family:var(--licht);font-weight:300;font-size:clamp(48px,6vw,104px);letter-spacing:-.04em;line-height:1}
+.g10-liste .meta{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--mh);text-align:right}
+.g10-handy{display:none}
+.g10-liste .hr-card{box-shadow:0 40px 70px -24px rgba(0,0,0,.85)}
+
+/* 11 · Das Puzzle */
+.g11-gr{display:grid;grid-template-columns:8fr 4fr;gap:clamp(30px,4vw,70px);align-items:center;--q:clamp(0, calc(var(--p,0) * 2.3 - .38), 1)}
+.g11-puzzle{display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(3,1fr);gap:2px;height:clamp(420px,42vw,580px)}
+.g11-t{background:url(../img/scheiben-tisch-l.webp) var(--x) var(--y)/300% 300% no-repeat;border-radius:3px;box-shadow:0 20px 40px -18px rgba(24,33,63,.5);
+  transform:translate(calc(var(--dx) * (1 - var(--q))), calc(var(--dy) * (1 - var(--q)))) rotate(calc(var(--dr) * (1 - var(--q))));will-change:transform}
+
+/* 12 · Mit der Lupe */
+.g12-gr{display:grid;grid-template-columns:8fr 4fr;gap:clamp(30px,4vw,60px);align-items:center}
+.g12-bild{position:relative;height:clamp(440px,44vw,620px);border-radius:var(--rk);overflow:hidden;box-shadow:var(--sch);cursor:zoom-in;touch-action:pan-y}
+.g12-bild>img{display:block;width:100%;height:100%;object-fit:cover}
+.g12-lupe{position:absolute;left:0;top:0;width:clamp(180px,16vw,240px);aspect-ratio:1;border-radius:18px;overflow:hidden;box-shadow:0 0 0 3px #E9D49A,0 30px 60px -20px rgba(0,0,0,.9);opacity:0;transition:opacity .3s ease;pointer-events:none;will-change:transform}
+.g12-bild.an .g12-lupe{opacity:1}
+.g12-lupe img{position:absolute;left:0;top:0;max-width:none;object-fit:cover;will-change:transform}
+
+/* 13 · Karten, die sich stapeln */
+.g13-kopf{display:grid;grid-template-columns:5fr 7fr;gap:clamp(30px,5vw,90px);align-items:end;margin-bottom:clamp(36px,4vw,56px)}
+.g13-kopf .rl{margin-top:0}
+.g13-karten{display:grid;gap:40px;padding-bottom:40px}
+.g13-k{position:sticky;top:calc(118px + var(--i) * 28px);display:grid;grid-template-columns:8fr 4fr;height:clamp(380px,36vw,500px);border-radius:calc(var(--rk) + 6px);background:#FFFCF7;padding:10px;gap:10px;box-shadow:0 -20px 50px -30px rgba(24,33,63,.5),0 40px 70px -40px rgba(24,33,63,.45)}
+.g13-k figure{box-shadow:none !important}
+.g13-k div{display:flex;flex-direction:column;justify-content:flex-end;padding:clamp(18px,2vw,30px)}
+.g13-k b{font-family:var(--licht);font-weight:300;font-size:clamp(40px,4.4vw,74px);letter-spacing:-.04em;line-height:1;color:var(--ink)}
+.g13-k span{margin-top:10px;font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:#8A6A2A}
+
+/* 14 · Der Würfel */
+.g14 .g-klebt{grid-template-columns:4fr 8fr;gap:clamp(30px,4vw,70px)}
+.g14-buehne{height:min(64vh,520px);perspective:1800px;display:grid;place-items:center}
+.g14-w{--h:clamp(300px,30vw,420px);position:relative;width:100%;height:var(--h);transform-style:preserve-3d;transform:translateZ(calc(var(--h) / -2)) rotateX(calc(var(--p,0) * 270deg))}
+.g14-f{position:absolute !important;inset:0;transform:rotateX(calc(var(--f) * -90deg)) translateZ(calc(var(--h) / 2));backface-visibility:hidden;-webkit-backface-visibility:hidden}
+.g14-f figcaption{position:absolute;left:22px;bottom:18px;font-family:var(--licht);font-size:clamp(28px,2.6vw,42px);letter-spacing:-.02em;color:#FFFCF7;text-shadow:0 2px 20px rgba(0,0,0,.6)}
+
+/* 15 · Gekreuzte Bänder */
+.g15-baender{position:relative;height:clamp(460px,44vw,620px);margin:0 calc(-1 * var(--rand))}
+.g15-b{position:absolute;left:-10%;right:-10%;top:50%;height:clamp(170px,15vw,220px);margin-top:calc(clamp(170px,15vw,220px) / -2);padding:10px 0;background:#18213F;overflow:hidden;box-shadow:0 30px 60px -30px rgba(24,33,63,.6)}
+.g15-b1{transform:rotate(-7deg)}
+.g15-b2{transform:rotate(6deg);background:#D9B758;z-index:1}
+.g15-lauf{display:flex;gap:10px;height:100%;width:max-content;will-change:transform}
+.g15-lauf figure{width:clamp(220px,20vw,290px);height:100%;flex:none;border-radius:8px !important;box-shadow:none !important}
+.g15-b1 .g15-lauf{transform:translateX(calc(var(--p,0) * -40%))}
+.g15-b2 .g15-lauf{transform:translateX(calc(-40% + var(--p,0) * 40%))}
+.g15-unten{display:grid;grid-template-columns:5fr 7fr;gap:clamp(30px,5vw,90px);align-items:end;margin-top:clamp(30px,3vw,50px)}
+.g15-unten .rl{margin-top:0}
+
+/* Handy */
+@media (max-width:760px){
+  .g15 .rt{font-size:clamp(34px,9vw,46px)}
+  .g01-zeile{font-size:10.5vw}.g01-raum{width:92vw;height:62vh}
+  .g02 .g-klebt,.g03 .g-klebt,.g04 .g-klebt,.g14 .g-klebt{grid-template-columns:1fr;align-content:center;gap:16px}
+  .g02-text,.g03-text,.g04-text,.g14-text{padding-top:90px}
+  .g02-text .rs,.g03-text .rs,.g04-text .rs,.g14-text .rs,.g02-text .rl,.g14-text .rl,.g04-text .rl{display:none}
+  .g02-buehne{height:52vh}.g02-ring{--r:46vw;width:44vw}
+  .g03-stapel{height:52vh}
+  .g04-spalten{height:52vh}.g04-s figure{height:34vw}
+  .g01-nach,.g08-kopf,.g13-kopf,.g15-unten,.g06-gr,.g09-gr,.g10-gr,.g11-gr,.g12-gr{grid-template-columns:1fr;gap:12px}
+  .g05-gr{grid-template-columns:1fr}.g05-buehne{height:110vw}
+  .g06-buehne,.g12-bild,.g11-puzzle{height:80vw}
+  .g15 .g07-b{width:260px;height:180px;margin:-90px 0 0 -130px}.g15 .g07-ziel{width:300px;height:210px;margin:-105px 0 0 -150px}.g07-l{transform:translateX(-190px) translateZ(calc(var(--z) * -620px - 300px)) rotateY(62deg)}.g07-r{transform:translateX(190px) translateZ(calc(var(--z) * -620px - 300px)) rotateY(-62deg)}
+  .g07-nach{grid-template-columns:1fr;gap:12px}
+  .g08-lam{height:110vw}.g08-l span{font-size:9.5px}
+  .g09-saeulen{height:120vw}.g09-lauf figure{height:40vw}
+  .g10-handy{display:block;height:52vw;margin:0 0 18px}.g10-liste .hr-item>a{flex-direction:column;align-items:flex-start;gap:6px}
+  .g13-k{grid-template-columns:1fr;height:auto;top:calc(90px + var(--i) * 16px)}.g13-k figure{height:56vw}
+  .g14-w{--h:56vw}
+}
+@media (prefers-reduced-motion:reduce){.g09-lauf{animation:none}}

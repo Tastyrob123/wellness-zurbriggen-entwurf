@@ -1,0 +1,68 @@
+[
+ [
+  "01",
+  "01-anfrage",
+  "Ihre Anfrage ist da",
+  "Kommt gleich nach einer Anfrage über die Seite: was angefragt wurde, was im Preis steckt, und dass das Haus sich persönlich meldet."
+ ],
+ [
+  "02",
+  "02-anreise",
+  "Vor Ihrer Anreise",
+  "Kommt eine Woche vor der Anreise: das Gepäck, die Zeiten am Empfang und der Weg nach Saas-Almagell."
+ ],
+ [
+  "03",
+  "03-spa",
+  "Ihr Termin im Spa",
+  "Bestätigt eine gebuchte Anwendung: welche, wann und wo, dazu was im Spa auf den Gast wartet."
+ ],
+ [
+  "04",
+  "04-danke",
+  "Danke für Ihren Besuch",
+  "Kommt am Tag nach der Abreise: ein Dank und der Weg ins Gästebuch des Hauses."
+ ],
+ [
+  "05",
+  "05-stammgaeste",
+  "Willkommen zurück",
+  "An Stammgäste: ein Gruss aus dem Haus und der Dank für jede Empfehlung, wie ihn die Seite «Stammgäste» nennt."
+ ],
+ [
+  "06",
+  "06-jass",
+  "Die Jasswochen",
+  "Lädt zu den Jasswochen ein: die Wochen, was inbegriffen ist und wie man reserviert."
+ ],
+ [
+  "07",
+  "07-loft",
+  "Die Loft-Suite",
+  "Antwort auf eine Anfrage zur Loft-Suite: zwei Etagen, privater Whirlpool und Sauna, und der Preis wie auf loftsuite.ch."
+ ],
+ [
+  "08",
+  "08-familie",
+  "Ferien mit Kindern",
+  "Antwort auf eine Anfrage einer Familie: der Kidsclub, die Ermässigungen und das Zimmer mit der Burg."
+ ],
+ [
+  "09",
+  "09-spezialkost",
+  "Spezial-Kost",
+  "Antwort, wenn ein Gast eine Unverträglichkeit oder Allergie nennt: was die Küche anbietet."
+ ],
+ [
+  "10",
+  "10-gutschein",
+  "Tage im Haus als Geschenk",
+  "Geht an den Beschenkten: wer die Tage schenkt, und der Gutschein als PDF im Anhang."
+ ],
+ [
+  "11",
+  "11-tagung",
+  "Ihre Tagung",
+  "Antwort auf eine Anfrage für ein Seminar: der Raum, seine Ausstattung und Tage in der Bergluft dazu."
+ ]
+]

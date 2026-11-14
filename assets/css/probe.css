@@ -1,0 +1,376 @@
+/* Wellness & Spa Pirmin Zurbriggen · PROBE 19.10.2026, Kapitel 1 bis 4 nach der Tasty-Sprache «Boden und Charakter».
+   Boden wie die abgenommenen Häuser: Bild zuerst, dicht, nichts steht still, jedes Foto kommt deckend in Bewegung an seinen Platz.
+   Charakter nur aus dem Haus. Die Bewegungsidee der Seite ist «Man kommt näher»: vom Fernen (klein) zum Nahen (gross), jedes Foto kommt von unten näher heran.
+   Nur transform, translate, scale und opacity. Nichts hängt an der Scrollposition (Werdegang 11 und 17); ausgelöst wird beim Berühren des Rands (Regel 55). */
+
+:root{--schwung:cubic-bezier(.25,1.1,.4,1);--gleit:cubic-bezier(.16,1,.3,1)}
+
+/* ---------- Das Foto der Probe: Rahmen mit Material (Lichtkante, auslaufender Schatten), Foto zoomt zur Ruhe und gleitet ---------- */
+.pf{position:relative;margin:0;overflow:hidden;border-radius:3px;background:var(--leinen-tief);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.35),0 34px 56px -34px rgba(42,30,21,.6),0 12px 20px -14px rgba(42,30,21,.38)}
+.pf__b{position:absolute;inset:0;overflow:hidden}
+.pf__b img{width:100%;height:100%;object-fit:cover;scale:1.2;transition:scale 2.8s var(--gleit)}
+.pf.da .pf__b img,html:not(.js) .pf__b img{scale:1.08}
+.pf::after{content:'';position:absolute;inset:auto 0 0 0;height:38%;background:linear-gradient(180deg,rgba(20,14,9,0),rgba(20,14,9,.5));pointer-events:none;opacity:0;transition:opacity .7s var(--e2)}
+.pf__n{position:absolute;z-index:2;left:clamp(12px,1.2vw,18px);right:12px;bottom:clamp(10px,1vw,14px);font-family:var(--mono);font-size:10.5px;line-height:1.4;letter-spacing:.14em;text-transform:uppercase;color:var(--papier);text-shadow:0 1px 8px rgba(0,0,0,.5);opacity:0;transform:translateY(8px);transition:opacity .7s var(--e2),transform 1s var(--gleit)}
+@media (hover:hover){.pf:hover .pf__n{opacity:1;transform:none}.pf:hover::after{opacity:1}}
+@media (prefers-reduced-motion:no-preference){
+  .js .pf[data-tritt]{translate:0 clamp(64px,8vw,124px);scale:.94;transition:translate 1.5s var(--schwung),scale 1.5s var(--schwung)}
+  .js .pf[data-tritt].da{translate:0 0;scale:1}
+}
+
+/* ---------- 1 Ankommen: das Haus im Lärchenwald, Z, vier Sterne und Krone setzen sich, der Leitsatz direkt auf dem Bild ---------- */
+.ak{position:relative;height:100svh;min-height:620px;max-height:1120px;overflow:hidden;background:var(--nacht);color:var(--papier)}
+.ak__bild{position:absolute;inset:0}
+.ak__bild img{width:100%;height:100%;object-fit:cover;object-position:50% 62%;scale:1.16;transition:scale 3.6s var(--gleit)}
+.ak.da .ak__bild img,html:not(.js) .ak__bild img{scale:1}
+.ak::after{content:'';position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:linear-gradient(180deg,rgba(30,21,14,.62) 0%,rgba(30,21,14,.12) 30%,rgba(30,21,14,0) 46%,rgba(30,21,14,.34) 66%,rgba(30,21,14,.8) 100%),
+             radial-gradient(ellipse 60% 50% at 20% 85%,rgba(30,21,14,.45),rgba(30,21,14,0) 70%)}
+.ak__zeichen{display:flex;align-items:flex-end;gap:clamp(14px,1.4vw,22px);margin-bottom:clamp(4px,.6vw,10px)}
+.ak__z{width:clamp(44px,3.6vw,58px);height:auto;color:var(--messing);filter:drop-shadow(0 2px 14px rgba(0,0,0,.45))}
+.ak__sterne{display:flex;gap:clamp(8px,.8vw,12px);align-items:flex-end}
+.ak__s{width:clamp(18px,1.6vw,24px);height:auto;color:var(--messing);filter:drop-shadow(0 1px 8px rgba(0,0,0,.5))}
+.ak__krone{width:clamp(26px,2.3vw,34px)}
+.ak__text{position:absolute;z-index:2;left:var(--rand);right:var(--rand);bottom:clamp(128px,17vh,180px);display:grid;gap:clamp(12px,1.4vw,18px);justify-items:start}
+.ak__ort{font-family:var(--serif);font-size:13px;letter-spacing:.32em;text-transform:uppercase;color:var(--messing-hell)}
+.ak__titel{font-family:var(--serif);font-weight:400;font-size:clamp(2.8rem,6.8vw,7rem);line-height:1;letter-spacing:.004em;color:var(--papier);text-shadow:0 2px 30px rgba(20,14,9,.35)}
+.ak__titel em{color:var(--messing)}
+.ak__satz{max-width:48ch;font-size:clamp(1rem,1.2vw,1.16rem);line-height:1.6;color:rgba(251,248,243,.92)}
+.ak__leiste{position:absolute;z-index:3;left:0;right:0;bottom:0;padding:clamp(12px,1.4vw,18px) var(--rand);background:rgba(30,21,14,.46);-webkit-backdrop-filter:blur(16px) saturate(1.2);backdrop-filter:blur(16px) saturate(1.2);border-top:1px solid rgba(217,183,88,.3)}
+.ak__leiste .leiste{max-width:var(--max);margin:0 auto}
+.ak .leiste .lab{border-bottom-color:rgba(246,241,234,.35)}.ak .leiste .lab>span{color:var(--messing-hell)}.ak .leiste .wahl{color:var(--papier)}
+@media (prefers-reduced-motion:no-preference){
+  .js .ak__s{opacity:0;transform:translateY(-30px) scale(.3) rotate(-50deg);transition:opacity .4s var(--e2),transform 1.2s var(--schwung);transition-delay:calc(650ms + var(--n)*170ms)}
+  .js .ak.da .ak__s{opacity:1;transform:none}
+  .js .ak__z{opacity:0;transform:translateY(20px);transition:opacity .9s var(--e2) .2s,transform 1.6s var(--gleit) .2s}
+  .js .ak.da .ak__z{opacity:1;transform:none}
+  .js .ak__ort,.js .ak__satz{opacity:0;transform:translateY(22px);transition:opacity 1.1s var(--e2),transform 1.8s var(--gleit)}
+  .js .ak__ort{transition-delay:.3s}.js .ak__satz{transition-delay:.9s}
+  .js .ak.da .ak__ort,.js .ak.da .ak__satz{opacity:1;transform:none}
+  .js .ak__titel .z>span{transition-duration:1.6s;transition-delay:.45s}.js .ak__titel .z:nth-child(2)>span{transition-delay:.6s}
+  .js .ak__leiste{transform:translateY(100%);transition:transform 1.4s var(--gleit) 1.1s}
+  .js .ak.da .ak__leiste{transform:none}
+}
+@media (max-width:800px){
+  .ak{display:grid;height:auto;min-height:0;max-height:none}
+  .ak__bild{position:relative;inset:auto;grid-area:1/1;height:86svh;min-height:540px}
+  .ak__bild img{object-position:40% 60%}
+  .ak::after{bottom:auto;height:86svh;min-height:540px}
+  .ak__text{position:relative;grid-area:1/1;align-self:end;left:auto;right:auto;bottom:auto;padding:0 var(--rand) 30px}
+  .ak__titel{font-size:clamp(2.4rem,11vw,3.4rem)}
+  .ak__leiste{position:relative;grid-row:2;padding:16px var(--rand) 20px;background:var(--nacht);-webkit-backdrop-filter:none;backdrop-filter:none}
+}
+
+/* ---------- 2 kommen Sie näher: Titel oben rechts, Satz unten links, dazwischen die Treppe der Annäherung vom Fernsten (klein, oben links)
+   zum Nächsten (gross, unten rechts); jede Zahl steht rechts neben ihrem Foto, die letzte links, nichts hängt lose ---------- */
+.nah{overflow-x:clip}
+.nah__buehne{position:relative;width:min(100% - 2*var(--rand),1640px);margin:0 auto;padding-bottom:clamp(40px,5vw,80px)}
+.nah__titel{position:absolute;z-index:9;top:0;right:0;width:42%;text-align:right}
+.nah__zitat{position:absolute;z-index:9;left:0;bottom:0;width:min(40%,560px);max-width:none}
+.nah__weg{position:relative;padding-top:clamp(10px,1.6vw,26px)}
+.nah__s{position:relative;z-index:calc(1 + var(--i));margin-left:calc(var(--i) * 9.4%);width:calc(24% + var(--i) * 5.2%)}
+.nah__s+.nah__s{margin-top:calc(-1 * clamp(34px,4.6vw,80px))}
+.nah__f{aspect-ratio:3/2}
+.nah__z{position:absolute;top:clamp(8px,1vw,16px);left:calc(100% + clamp(22px,2.4vw,40px));width:15vw;display:grid;gap:8px;justify-items:start;text-align:left}
+.nah__s:last-child .nah__z{left:auto;right:calc(100% + clamp(22px,2.4vw,40px));top:clamp(90px,9vw,150px);width:18vw;justify-items:end;text-align:right}
+.nah__z b{font-family:var(--serif);font-weight:400;font-size:clamp(1.8rem,2.7vw,3rem);line-height:1.05;color:var(--schoko)}
+.nah__z b i{font-style:normal;color:var(--karamell)}
+.nah__z span{font-size:clamp(.9rem,1vw,1rem);line-height:1.45;color:var(--grau)}
+@media (prefers-reduced-motion:no-preference){
+  .js .nah__f[data-tritt]{translate:0 clamp(60px,7vw,110px);scale:.86;transform-origin:30% 30%;transition:translate 1.5s var(--schwung),scale 1.5s var(--schwung)}
+  .js .nah__f[data-tritt].da{translate:0 0;scale:1}
+  .js .nah__z{opacity:0;transform:translateY(26px);transition:opacity 1s var(--e2),transform 1.6s var(--gleit)}
+  .js .nah__s.da .nah__z{opacity:1;transform:none}
+}
+@media (max-width:800px){
+  .nah__buehne{display:flex;flex-direction:column;width:calc(100% - 2*var(--rand))}
+  .nah__titel{position:static;width:auto;text-align:left}
+  .nah__zitat{position:static;order:1;width:auto;margin-top:16px}
+  .nah__weg{order:2;padding-top:clamp(30px,8vw,44px)}
+  .nah__s{display:flex;flex-direction:column-reverse;margin-left:auto;width:calc(64% + var(--i) * 7.2%)}
+  .nah__s+.nah__s{margin-top:clamp(34px,10vw,56px)}
+  .nah__z,.nah__s:last-child .nah__z{position:static;width:auto;justify-items:start;text-align:left;margin-bottom:12px}
+  .nah__z b{font-size:clamp(1.8rem,9vw,2.4rem)}
+}
+
+/* ---------- 3 treten Sie ein: Heinz Julens Räume als Wand in gemischten Grössen, die in einem Zug von unten hereinkommt;
+   jedes Foto zoomt im Rahmen. Nichts läuft seitwärts, nichts hängt am Scrollen (Werdegang 17) ---------- */
+.julen__satz{max-width:64ch;margin-top:clamp(20px,2.2vw,32px);font-size:clamp(1rem,1.15vw,1.12rem);line-height:1.7;color:rgba(246,241,234,.84)}
+.julen__satz b{font-family:var(--serif);font-weight:400;color:var(--messing)}
+.julen__wand{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));grid-auto-rows:clamp(64px,6.6vw,118px);gap:clamp(10px,1vw,16px);margin-top:clamp(44px,5vw,80px);
+  grid-template-areas:"a a a a a b b c c c c c" "a a a a a b b c c c c c" "a a a a a b b d d e e e" "f f f g g g g d d e e e" "f f f g g g g h h h i i" "j j k k k l l h h h i i"
+    "m m m m m n n o o p p p" "m m m m m n n o o p p p" "m m m m m n n o o p p p" "q q q q q q q r r r r r" "q q q q q q q r r r r r"}
+.jw--a{grid-area:a}.jw--b{grid-area:b}.jw--c{grid-area:c}.jw--d{grid-area:d}.jw--e{grid-area:e}.jw--f{grid-area:f}
+.jw--g{grid-area:g}.jw--h{grid-area:h}.jw--i{grid-area:i}.jw--j{grid-area:j}.jw--k{grid-area:k}.jw--l{grid-area:l}
+.jw--m{grid-area:m}.jw--n{grid-area:n}.jw--o{grid-area:o}.jw--p{grid-area:p}.jw--q{grid-area:q}.jw--r{grid-area:r}
+.julen .pf{background:#1E150E;box-shadow:inset 0 1px 0 rgba(255,236,200,.12),0 0 0 1px rgba(217,183,88,.14),0 34px 50px -30px rgba(0,0,0,.85)}
+@media (prefers-reduced-motion:no-preference){
+  .js .julen__wand{translate:0 clamp(70px,8vw,120px);transition:translate 1.5s var(--schwung)}
+  .js .julen__wand.da{translate:0 0}
+}
+@media (max-width:800px){
+  .julen__wand{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:30vw;gap:10px;
+    grid-template-areas:"a a" "a a" "b c" "b d" "e e" "f g" "f h" "i i" "j k" "l l" "m m" "m m" "n o" "n o" "p p" "q q" "r r"}
+}
+
+/* ---------- 4 Die Familie: links eine Jahreszahl, die wie ein Zählwerk rollt; rechts ziehen drei Stationen vorbei ---------- */
+.fam__raster{display:grid;grid-template-columns:minmax(0,.82fr) minmax(0,1.18fr);gap:clamp(30px,5vw,96px);margin-top:clamp(10px,2vw,30px)}
+.fam__halt{position:sticky;top:clamp(110px,17vh,170px)}
+.fam__jahr{display:flex;align-items:flex-start;font-family:var(--serif);font-size:clamp(5.4rem,12.6vw,12.6rem);line-height:1;color:var(--schoko);font-variant-numeric:tabular-nums}
+.zw{display:block;height:1.04em;overflow:hidden}
+.zw>span{display:block;transform:translateY(calc(var(--d,0) * -1.04em));transition:transform 1.5s var(--schwung);transition-delay:calc(var(--p,0) * 110ms)}
+.zw i{display:block;height:1.04em;line-height:1.04;font-style:normal;text-align:center}
+.fam__jahr .zw:nth-child(n+3) i{color:var(--karamell)}
+.fam__nach{align-self:flex-start;margin:.16em 0 0 .08em;font-size:.3em;line-height:1;color:var(--karamell);opacity:0;transform:translateY(.5em);transition:opacity .6s var(--e2),transform 1.2s var(--gleit)}
+.fam__jahr[data-akt="2"] .fam__nach{opacity:1;transform:none;transition-delay:.7s}
+.fam__saetze{display:grid;margin-top:clamp(18px,2vw,30px);max-width:40ch}
+.fam__satz{grid-area:1/1;font-family:var(--serif);font-size:clamp(1.12rem,1.55vw,1.42rem);line-height:1.42;color:var(--schoko);opacity:0;transform:translateY(26px);transition:opacity .5s var(--e2),transform 1.2s var(--gleit)}
+.fam__satz.an,html:not(.js) .fam__satz:first-child{opacity:1;transform:none;transition-delay:.3s}
+.fam__satz small{display:block;margin-top:12px;font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--karamell)}
+.fam__st{position:relative;height:clamp(560px,52vw,800px)}
+.fam__st+.fam__st{margin-top:clamp(30px,4vw,70px)}
+.fam__a{position:absolute;left:0;top:0;width:84%;aspect-ratio:4/3}
+.fam__b{position:absolute;z-index:2;right:0;bottom:2%;width:40%;aspect-ratio:4/5}
+.fam__c{position:absolute;z-index:3;left:4%;bottom:4%;width:46%;aspect-ratio:16/10}
+.fam__st--1 .fam__a{left:auto;right:0}.fam__st--1 .fam__b{right:auto;left:0}.fam__st--1 .fam__c{left:auto;right:4%}
+.fam__st--2 .fam__a{aspect-ratio:16/10}.fam__st--2 .fam__b{aspect-ratio:1}
+.fam__noten{display:flex;flex-wrap:wrap;gap:16px clamp(28px,3.4vw,56px);margin-top:clamp(60px,7vw,110px);padding-top:24px;border-top:1px solid var(--linie);font-size:.9rem;color:var(--grau)}
+.fam__ausz{flex-basis:100%;font-family:var(--serif);font-weight:400;font-size:clamp(1.05rem,1.3vw,1.2rem);color:var(--karamell)}
+.fam__noten span{display:grid;gap:4px}
+.fam__noten span b{font-family:var(--serif);font-weight:400;font-size:clamp(1.7rem,2.5vw,2.3rem);line-height:1.05;color:var(--schoko)}
+.fam__noten span b i{font-style:normal}
+.fam__noten small{font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;color:var(--karamell)}
+@media (max-width:800px){
+  .fam__raster{grid-template-columns:1fr;gap:0}
+  .fam__links{display:contents}
+  .fam__halt{top:58px;z-index:3;margin:0 calc(-1 * var(--rand));padding:10px var(--rand) 14px;background:var(--leinen-tief) var(--tap-creme) 50% 0/240px auto;box-shadow:0 18px 24px -20px rgba(42,30,21,.4)}
+  .fam__jahr{font-size:16vw}
+  .fam__saetze{margin-top:4px}
+  .fam__satz{font-size:.9rem;line-height:1.38}
+  .fam__satz small{display:none}
+  .fam__rechts{margin-top:30px}
+  .fam__st{height:150vw}
+  .fam__a{width:92%}.fam__b{width:52%}.fam__c{width:50%;bottom:0}
+}
+@media (prefers-reduced-motion:reduce){.pf__b img,.ak__bild img{scale:1.04!important}.zw>span{transition:none}}
+
+/* =====================================================================================================================
+   Kapitel 5 bis 8 (19.10.2026, Roberts «los» über die Kette). Gleicher Boden: .pf kommt deckend von unten, Gruppen in einem Zug.
+   Zwei Fenster (Ruheraum, Winternacht): der Ausschnitt geht auf (nur scale), Bild und Satz stehen fest. Nichts seitwärts.
+   ===================================================================================================================== */
+/* ---------- 5 setzen Sie sich: der Saal, darauf die Menümappe, daneben das Blatt «Inbegriffen», darunter die Gänge versetzt ---------- */
+.tsc__tisch{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));grid-template-rows:repeat(6,clamp(62px,6.4vw,112px));gap:clamp(12px,1.2vw,20px);margin-top:clamp(40px,5vw,80px)}
+.tsc__saal{grid-column:1/9;grid-row:1/6}
+.tsc__blatt{grid-column:9/13;grid-row:1/5;align-self:start;position:relative;padding:clamp(22px,2.4vw,36px);background:var(--papier);border-radius:3px;
+  box-shadow:inset 0 1px 0 #fff,0 34px 56px -34px rgba(42,30,21,.5),0 0 0 1px rgba(146,101,69,.18)}
+.tsc__z{width:30px;height:auto;color:var(--karamell)}
+.tsc__blatt h3{margin:14px 0 10px;font-family:var(--serif);font-weight:400;font-size:clamp(1.3rem,1.8vw,1.7rem);color:var(--schoko)}
+.tsc__blatt ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.tsc__blatt li{padding-top:10px;border-top:1px solid var(--linie);font-size:.95rem;line-height:1.5;color:var(--tinte)}
+.tsc__mappe{grid-column:6/9;grid-row:4/7;z-index:2;margin-left:-14%}
+.tsc__abend{grid-column:9/13;grid-row:5/7}
+.tsc__gaenge{display:flex;align-items:flex-start;gap:clamp(12px,1.4vw,22px);margin-top:clamp(40px,5vw,80px)}
+.tsc__t{flex:1 1 0;aspect-ratio:1;background:#0d0a07}
+.tsc__t--0{flex-grow:1.1}.tsc__t--1{margin-top:clamp(30px,4vw,70px)}.tsc__t--2{flex-grow:1.35}.tsc__t--3{margin-top:clamp(50px,6vw,100px)}.tsc__t--4{margin-top:clamp(16px,2vw,34px);flex-grow:1.1}
+@media (max-width:800px){
+  .tsc__tisch{grid-template-columns:1fr 1fr;grid-template-rows:auto;gap:10px}
+  .tsc__saal{grid-column:1/-1;grid-row:auto;aspect-ratio:4/3;order:-2}
+  .tsc__blatt{grid-column:1/-1;grid-row:auto;order:-1}
+  .tsc__mappe{grid-column:1;grid-row:auto;margin:0;aspect-ratio:3/4}
+  .tsc__abend{grid-column:2;grid-row:auto;height:auto;aspect-ratio:3/4;align-self:stretch}
+  .tsc__gaenge{flex-wrap:wrap;gap:10px}.tsc__t{flex:1 1 40%}.tsc__t--4{flex-basis:100%;aspect-ratio:16/10}
+  .tsc__t--1,.tsc__t--3,.tsc__t--4{margin-top:0}.tsc__t--1{translate:0 26px}
+}
+
+/* ---------- Fenster (6 Ruheraum, 8 Winternacht): Ausschnitt geht auf, Satz steht ---------- */
+.spw{padding-top:0}
+.spw__fenster,.wnt__fenster{position:relative;height:min(92svh,900px);min-height:560px;overflow:hidden}
+.spw__bild,.wnt__bild{position:absolute!important;inset:0;border-radius:0;box-shadow:none;background:var(--nacht)}
+.js .spw__bild[data-tritt],.js .wnt__bild[data-tritt]{translate:none!important;scale:none!important}
+@media (prefers-reduced-motion:no-preference){
+  .js .spw__bild .pf__b,.js .wnt__bild .pf__b{scale:.84;transition:scale 1.6s var(--schwung)}
+  .js .spw__bild.da .pf__b,.js .wnt__bild.da .pf__b{scale:1}
+}
+.spw__t,.wnt__t{position:absolute;z-index:2;left:var(--rand);right:var(--rand);bottom:clamp(50px,8vh,100px);max-width:var(--max);margin:0 auto;display:grid;gap:12px;color:var(--papier)}
+.spw__fenster::after,.wnt__fenster::after{content:'';position:absolute;inset:0;z-index:1;pointer-events:none;background:radial-gradient(ellipse 85% 70% at 20% 92%,rgba(30,21,14,.86),rgba(30,21,14,.4) 48%,rgba(30,21,14,0) 78%)}
+.spw__t .d2{color:var(--papier);max-width:18ch}.spw__t .zitat{color:rgba(251,248,243,.92);max-width:40ch}.spw__t .ortz,.wnt__t .ortz{color:var(--messing-hell)}
+.spw__satz{max-width:56ch;margin-top:clamp(50px,6vw,90px);font-family:var(--serif);font-size:clamp(1.2rem,1.7vw,1.6rem);line-height:1.42;color:var(--papier)}
+/* Wärme: Schwimmbad und Sauna Kante an Kante, dazwischen die Messinglinie, die sich von unten füllt */
+.spw__waerme{display:grid;grid-template-columns:minmax(0,1fr) clamp(120px,12vw,180px) minmax(0,1fr);gap:clamp(12px,1.4vw,22px);align-items:stretch;margin-top:clamp(36px,4vw,60px)}
+.spw__w1,.spw__w2{aspect-ratio:4/3}
+.spw__linie{position:relative;display:flex;justify-content:center}
+.spw__strich{position:absolute;top:0;bottom:0;left:50%;width:1px;background:var(--messing);transform-origin:50% 100%;scale:1 0;transition:scale 1.8s var(--gleit)}
+.spw__waerme:has(.pf.da) .spw__strich,html:not(.js) .spw__strich{scale:1 1}
+.spw__linie ol{position:relative;list-style:none;margin:0;padding:0;display:flex;flex-direction:column;justify-content:space-around;gap:30px;text-align:center}
+.spw__linie li{display:grid;gap:4px;padding:10px 0;background:var(--schoko)}
+.spw__linie b{font-family:var(--serif);font-weight:400;font-size:clamp(1.8rem,2.6vw,2.6rem);line-height:1;color:var(--messing)}
+.spw__linie b i{font-style:normal}
+.spw__linie span{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:rgba(246,241,234,.75)}
+.spw__drei{display:grid;grid-template-columns:1fr 2.1fr 1fr;gap:clamp(12px,1.4vw,22px);align-items:center;margin-top:clamp(14px,1.6vw,24px)}
+.spw__d1,.spw__d3{aspect-ratio:3/4}.spw__d2{aspect-ratio:16/10}
+.spw .pf,.wnt .pf,.zmr__loft .pf{background:#1E150E;box-shadow:inset 0 1px 0 rgba(255,236,200,.12),0 0 0 1px rgba(217,183,88,.14),0 34px 50px -30px rgba(0,0,0,.85)}
+@media (prefers-reduced-motion:no-preference){.js .spw__drei{translate:0 clamp(70px,8vw,120px);transition:translate 1.5s var(--schwung)}.js .spw__drei.da{translate:0 0}}
+@media (max-width:800px){
+  .spw__fenster,.wnt__fenster{height:120vw;min-height:0}
+  .spw__waerme{grid-template-columns:1fr}.spw__linie{padding:26px 0}.spw__linie ol{flex-direction:row;justify-content:center;gap:40px}
+  .spw__drei{grid-template-columns:1fr 1fr}.spw__d2{grid-column:1/-1;grid-row:1}
+}
+
+/* ---------- 7 schlafen Sie sich aus: drei Zimmer über die ganze Breite, je eine zweite Ansicht aufliegend; Einzelheiten; die Loft-Suite ---------- */
+.zmr__z{position:relative;margin-top:clamp(50px,6vw,100px)}
+.zmr__b{aspect-ratio:21/10}
+.zmr__k{position:absolute;z-index:2;right:-1.5%;bottom:clamp(44px,4.4vw,64px);width:28%;aspect-ratio:4/3}
+.zmr__z--1 .zmr__k,.zmr__z--2 .zmr__k{right:auto;left:-1.5%}
+.zmr__zeile{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 22px;margin-top:20px;padding-top:16px;border-top:1px solid var(--linie);color:var(--tinte)}
+.zmr__zeile b{font-family:var(--serif);font-weight:400;font-size:clamp(1.5rem,2.3vw,2.2rem);color:var(--schoko)}
+.zmr__zeile span{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--karamell)}
+.zmr__zeile em{font-style:normal;margin-left:auto;color:var(--grau)}
+.zmr__z--0 .zmr__zeile,.zmr__z--2 .zmr__zeile{padding-right:31%}.zmr__z--1 .zmr__zeile{padding-left:0}
+.zmr__z--2 .zmr__zeile{padding-left:31%;padding-right:0}
+.zmr__details{display:grid;grid-template-columns:2.2fr 1.4fr 2.6fr 1.4fr 2fr;gap:clamp(10px,1.2vw,18px);align-items:end;margin-top:clamp(60px,7vw,110px)}
+.zmr__d--0{aspect-ratio:4/5}.zmr__d--1{aspect-ratio:3/4}.zmr__d--2{aspect-ratio:4/3}.zmr__d--3{aspect-ratio:3/4}.zmr__d--4{aspect-ratio:1}
+@media (prefers-reduced-motion:no-preference){.js .zmr__details{translate:0 clamp(70px,8vw,120px);transition:translate 1.5s var(--schwung)}.js .zmr__details.da{translate:0 0}}
+.zmr__alle{margin-top:clamp(28px,3vw,44px);max-width:70ch;font-size:1rem;line-height:1.6;color:var(--grau)}
+.zmr__alle a{color:var(--karamell);border-bottom:1px solid rgba(146,101,69,.4)}
+.zmr__loft{margin-top:clamp(70px,8vw,120px);padding:clamp(80px,9vw,140px) 0;background:var(--nacht) var(--tap-dunkel) 50% 0/240px auto;color:var(--papier)}
+.zmr__lg{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(30px,5vw,90px);align-items:center}
+.zmr__lt{display:grid;gap:16px;justify-items:start}
+.zmr__lt .d2{color:var(--papier);max-width:16ch}.zmr__lt .zitat{color:rgba(251,248,243,.92)}.zmr__lt .k__satz{color:rgba(246,241,234,.8)}
+.zmr__lb{position:relative;height:clamp(460px,44vw,680px)}
+.zmr__l1{position:absolute;left:0;top:0;width:80%;aspect-ratio:4/3}
+.zmr__l2{position:absolute;z-index:2;right:0;bottom:0;width:46%;aspect-ratio:4/3}
+.zmr__l3{position:absolute;z-index:3;left:8%;bottom:-6%;width:24%;aspect-ratio:3/4}
+@media (max-width:800px){
+  .zmr__b{aspect-ratio:4/3}
+  .zmr__k{position:relative;right:auto!important;left:auto!important;top:auto;width:58%;margin:-22% 0 0 auto}
+  .zmr__z--1 .zmr__k{margin:-22% auto 0 0}
+  .zmr__zeile,.zmr__z--0 .zmr__zeile,.zmr__z--2 .zmr__zeile{padding:16px 0 0}
+  .zmr__zeile em{margin-left:0;flex-basis:100%}
+  .zmr__details{grid-template-columns:1fr 1fr}.zmr__d--2{grid-column:1/-1;grid-row:1}
+  .zmr__lg{grid-template-columns:1fr}.zmr__lb{height:118vw}.zmr__l1{width:92%}.zmr__l2{width:58%}.zmr__l3{width:32%;left:4%;bottom:-2%}
+}
+
+/* ---------- 8 folgen Sie uns: die Winternacht als Fenster mit Pirmins Satz, darunter drei Winterbilder, der Schluss ---------- */
+.wnt{padding-top:0}
+.wnt__pirmin{max-width:26ch;font-family:var(--serif);font-size:clamp(1.5rem,2.6vw,2.5rem);line-height:1.3;color:var(--papier);text-shadow:0 2px 24px rgba(20,14,9,.45)}
+.wnt__paar{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);grid-template-rows:auto auto;gap:clamp(12px,1.4vw,22px);margin-top:clamp(50px,6vw,90px)}
+.wnt__p1{aspect-ratio:2.4/1;align-self:end}
+.wnt__p2{grid-column:2;grid-row:1/3;aspect-ratio:3/4}
+.wnt__p3{grid-column:1;grid-row:2;width:62%;justify-self:end;aspect-ratio:16/10}
+.wnt .angaben{margin-top:clamp(40px,5vw,70px)}
+.wnt__ende{display:grid;justify-items:center;gap:18px;margin-top:clamp(70px,8vw,120px);text-align:center}
+.wnt__ende .zitat{color:var(--papier);margin:0 auto}
+.wnt__ende .leiste{width:min(100%,920px)}
+.wnt__leit{display:flex;align-items:center;gap:10px;margin-top:20px;font-family:var(--serif);font-size:1.05rem;color:var(--messing)}
+.wnt__leit svg{width:14px;height:auto}
+@media (max-width:800px){.wnt__paar{grid-template-columns:1fr}.wnt__p1{aspect-ratio:16/9}.wnt__p2{grid-column:1;grid-row:auto;aspect-ratio:4/5}.wnt__p3{grid-column:1;grid-row:auto;width:70%}}
+
+/* =====================================================================================================================
+   Neufassung 19.10.2026 23:05 (Robert): abgerundete Kacheln mit Tiefe überall, keine Bilder über die ganze Breite, wenige Bilder je Blick.
+   ===================================================================================================================== */
+:root{--kr:22px}
+.pf{border-radius:var(--kr);isolation:isolate;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.45),inset 0 -1px 0 rgba(42,30,21,.18),0 2px 4px rgba(42,30,21,.08),0 18px 30px -16px rgba(42,30,21,.38),0 50px 80px -46px rgba(42,30,21,.55);
+  transition:translate 1.5s var(--schwung),scale 1.5s var(--schwung),box-shadow .6s var(--e2)}
+.pf__b{border-radius:inherit}
+.pf::before{content:'';position:absolute;inset:0;z-index:3;border-radius:inherit;pointer-events:none;box-shadow:inset 0 0 0 1px rgba(255,255,255,.14),inset 0 18px 30px -24px rgba(255,255,255,.35)}
+.k--dunkel .pf,.spw .pf,.wnt .pf,.zmr__loft .pf,.julen .pf{box-shadow:inset 0 1px 0 rgba(255,236,200,.22),0 0 0 1px rgba(217,183,88,.12),0 20px 34px -18px rgba(0,0,0,.6),0 60px 90px -50px rgba(0,0,0,.85)}
+@media (hover:hover){.pf:hover{box-shadow:inset 0 1px 0 rgba(255,255,255,.45),0 4px 8px rgba(42,30,21,.1),0 26px 40px -18px rgba(42,30,21,.45),0 64px 100px -50px rgba(42,30,21,.6)}}
+.pf__n{left:18px;bottom:16px}
+
+/* ---------- 2 kommen Sie näher: Kachel mit Kamerafahrt vom Hang zum Haus, daneben sechs Zeilen ---------- */
+.kam__g{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:clamp(40px,6vw,110px);align-items:center;margin-top:clamp(10px,2vw,30px)}
+.kam__bild{aspect-ratio:4/4.6}
+.kam__bild .pf__b img{scale:1.08;transform-origin:62% 62%}
+@media (prefers-reduced-motion:no-preference){
+  .js .kam__bild .pf__b img{scale:1.06;translate:0 -6%;transition:scale 6.5s cubic-bezier(.25,.6,.15,1),translate 6.5s cubic-bezier(.25,.6,.15,1)}
+  .js .kam__bild.da .pf__b img{scale:1.42;translate:-4% 4%}
+}
+.kam__titel{margin-bottom:14px}
+.kam__zitat{font-size:clamp(1.05rem,1.35vw,1.25rem);max-width:40ch;color:var(--grau)}
+.kam__liste{list-style:none;margin:clamp(30px,3vw,46px) 0 0;padding:0;display:grid}
+.kam__liste li{padding:14px 0;border-top:1px solid var(--linie);font-size:1rem;color:var(--grau)}
+.kam__liste li:last-child{border-bottom:1px solid var(--linie)}
+.kam__liste b{font-family:var(--serif);font-weight:400;font-size:clamp(1.25rem,1.7vw,1.6rem);color:var(--schoko);margin-right:8px}
+.kam__liste .kz{display:block;overflow:hidden}.kam__liste .kz>span{display:block}
+@media (prefers-reduced-motion:no-preference){
+  .js .kam__liste .kz>span{translate:0 110%;transition:translate 1.1s var(--gleit);transition-delay:calc(.5s + var(--i) * .55s)}
+  .js .kam__g:has(.kam__bild.da) .kam__liste .kz>span{translate:0 0}
+}
+@media (max-width:800px){.kam__g{grid-template-columns:1fr;gap:30px}.kam__t{order:-1}.kam__bild{aspect-ratio:4/4.4}}
+
+/* ---------- 3 treten Sie ein: vier Kacheln, nicht grösser als nötig ---------- */
+.julen__wand{max-width:1180px;margin-inline:auto;grid-template-columns:repeat(12,minmax(0,1fr));grid-auto-rows:clamp(54px,5vw,84px);gap:clamp(16px,1.8vw,28px);
+  grid-template-areas:"a a a a a a a b b b b b" "a a a a a a a b b b b b" "a a a a a a a b b b b b" "a a a a a a a b b b b b" "c c c c c d d d d d d d" "c c c c c d d d d d d d" "c c c c c d d d d d d d" "c c c c c d d d d d d d"}
+@media (max-width:800px){.julen__wand{grid-auto-rows:30vw;grid-template-areas:"a a" "a a" "b c" "b c" "d d" "d d"}}
+
+/* ---------- 4 Familie: Chronik links, Porträt rechts, darunter zwei Kacheln und die Noten ---------- */
+.fm__g{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:clamp(40px,6vw,110px);align-items:center}
+.fm__chronik{list-style:none;margin:clamp(26px,3vw,44px) 0 0;padding:0;display:grid;gap:0}
+.fm__chronik li{display:grid;grid-template-columns:5.2em 1fr;gap:18px;padding:18px 0;border-top:1px solid var(--linie)}
+.fm__chronik b{font-family:var(--serif);font-weight:400;font-size:1.45rem;line-height:1.2;color:var(--karamell)}
+.fm__chronik span{font-size:1rem;line-height:1.6;color:var(--tinte)}
+.fm__portrait{aspect-ratio:16/11}
+.fm__unten{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) minmax(0,1.3fr);gap:clamp(18px,2vw,30px);align-items:end;margin-top:clamp(40px,5vw,80px)}
+.fm__b1{aspect-ratio:1}.fm__b2{aspect-ratio:4/5}
+.fm__noten{display:grid;grid-template-columns:1fr 1fr;gap:18px 26px;align-self:center;padding-left:clamp(0px,2vw,30px)}
+.fm__noten span{display:grid;gap:4px;font-size:.88rem;color:var(--grau)}
+.fm__noten span b{font-family:var(--serif);font-weight:400;font-size:clamp(1.5rem,2vw,1.9rem);color:var(--schoko)}
+.fm__ausz{grid-column:1/-1;font-family:var(--serif);font-size:1.1rem;color:var(--karamell)}
+@media (max-width:800px){.fm__g{grid-template-columns:1fr}.fm__unten{grid-template-columns:1fr 1fr}.fm__noten{grid-column:1/-1;padding:10px 0 0}}
+
+/* ---------- 5 setzen Sie sich: Abstände der Kacheln grösser ---------- */
+.tsc__tisch{gap:clamp(16px,1.8vw,28px)}.tsc__blatt{border-radius:var(--kr)}
+.tsc__gaenge{max-width:1180px;margin-inline:auto;gap:clamp(16px,1.8vw,28px)}
+
+/* ---------- 6 entspannen Sie sich: drei Kacheln, die mittlere höher ---------- */
+.sp3__kopf{display:grid;gap:14px;justify-items:center;text-align:center;max-width:760px;margin:0 auto}
+.sp3__kopf .zitat{margin:0 auto;text-align:center}
+.sp3__g{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr) minmax(0,1fr);gap:clamp(18px,2vw,32px);align-items:center;max-width:1180px;margin:clamp(44px,5vw,80px) auto 0}
+.sp3__a,.sp3__c{aspect-ratio:4/5}.sp3__b{aspect-ratio:4/5.8}
+@media (prefers-reduced-motion:no-preference){.js .sp3__g{translate:0 clamp(70px,8vw,120px);transition:translate 1.5s var(--schwung)}.js .sp3__g.da{translate:0 0}}
+.sp3__fuss{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:clamp(30px,5vw,80px);align-items:center;max-width:1180px;margin:clamp(40px,5vw,70px) auto 0}
+.sp3__satz{font-family:var(--serif);font-size:clamp(1.15rem,1.6vw,1.5rem);line-height:1.45;color:var(--papier)}
+.sp3__grad{display:flex;gap:clamp(24px,3vw,50px);justify-content:flex-end}
+.sp3__grad span{display:grid;gap:4px;font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:rgba(246,241,234,.72)}
+.sp3__grad b{font-family:var(--serif);font-weight:400;font-size:clamp(2rem,3vw,2.8rem);letter-spacing:0;text-transform:none;color:var(--messing)}
+.sp3 .k__ang{max-width:1180px;margin-inline:auto}
+@media (max-width:800px){.sp3__g{grid-template-columns:1fr 1fr}.sp3__b{grid-column:1/-1;grid-row:1;aspect-ratio:4/3.4}.sp3__fuss{grid-template-columns:1fr}.sp3__grad{justify-content:flex-start}}
+
+/* ---------- 7 schlafen Sie sich aus: drei Zimmerkarten nebeneinander, dann die Loft-Suite als eine dunkle Karte ---------- */
+.zm3__kopf{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:30px;align-items:end}
+.zm3__g{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(18px,2vw,32px);max-width:1180px;margin:clamp(44px,5vw,80px) auto 0;align-items:start}
+.zk3{display:grid;gap:16px;color:var(--tinte)}
+.zk3--1{margin-top:clamp(30px,4vw,70px)}
+.zk3__b{aspect-ratio:4/5}
+.zk3__t{display:grid;gap:4px;padding:0 4px}
+.zk3__t b{font-family:var(--serif);font-weight:400;font-size:clamp(1.3rem,1.8vw,1.7rem);color:var(--schoko)}
+.zk3__t span{font-size:.92rem;color:var(--grau)}
+@media (hover:hover){.zk3:hover .pf{translate:0 -6px}}
+.zm3__alle{max-width:1180px;margin:clamp(26px,3vw,40px) auto 0;font-size:1rem;color:var(--grau)}
+.zm3__alle a{color:var(--karamell);border-bottom:1px solid rgba(146,101,69,.4)}
+.lf3{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(30px,4vw,70px);align-items:center;max-width:1180px;margin:clamp(70px,8vw,120px) auto 0;padding:clamp(24px,3vw,44px);
+  border-radius:calc(var(--kr) + 10px);background:var(--nacht) var(--tap-dunkel) 50% 0/240px auto;color:var(--papier);
+  box-shadow:inset 0 1px 0 rgba(255,236,200,.18),0 30px 50px -26px rgba(42,30,21,.55),0 80px 120px -60px rgba(42,30,21,.7)}
+.lf3__f{aspect-ratio:4/3.6}
+.lf3__t{display:grid;gap:16px;justify-items:start;padding-right:clamp(0px,2vw,30px)}
+.lf3__t .d2{color:var(--papier)}
+.lf3__satz{font-family:var(--serif);font-size:clamp(1.1rem,1.5vw,1.4rem);line-height:1.45;color:rgba(251,248,243,.92)}
+.lf3__zeile{font-size:.92rem;line-height:1.6;color:rgba(246,241,234,.75)}
+@media (max-width:800px){.zm3__kopf{grid-template-columns:1fr}.zm3__g{grid-template-columns:1fr;max-width:460px}.zk3--1{margin-top:0}.lf3{grid-template-columns:1fr}}
+
+/* ---------- 8 folgen Sie uns: Pirmins Satz als Schrift, darunter drei Kacheln, die mittlere höher ---------- */
+.wn3{padding-top:clamp(90px,10vw,150px)}
+.wn3__kopf{display:grid;gap:18px;justify-items:center;text-align:center;max-width:900px;margin:0 auto}
+.wn3__pirmin{font-family:var(--serif);font-size:clamp(1.6rem,2.8vw,2.6rem);line-height:1.3;color:var(--papier)}
+.wn3__satz{max-width:52ch;font-size:1rem;line-height:1.6;color:rgba(246,241,234,.78)}
+.wn3__g{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr) minmax(0,1fr);gap:clamp(18px,2vw,32px);align-items:center;max-width:1180px;margin:clamp(50px,6vw,90px) auto 0}
+.wn3__a,.wn3__c{aspect-ratio:4/5}.wn3__b{aspect-ratio:4/4.6}
+@media (prefers-reduced-motion:no-preference){.js .wn3__g{translate:0 clamp(70px,8vw,120px);transition:translate 1.5s var(--schwung)}.js .wn3__g.da{translate:0 0}}
+.wn3__zahlen{display:flex;flex-wrap:wrap;justify-content:center;gap:16px clamp(30px,5vw,80px);margin-top:clamp(44px,5vw,70px)}
+.wn3__zahlen span{display:grid;gap:4px;justify-items:center;font-size:.9rem;color:rgba(246,241,234,.75)}
+.wn3__zahlen b{font-family:var(--serif);font-weight:400;font-size:clamp(1.6rem,2.4vw,2.2rem);color:var(--messing)}
+.wn3 .k__ang{text-align:center}
+@media (max-width:800px){.wn3__g{grid-template-columns:1fr 1fr}.wn3__b{grid-column:1/-1;grid-row:1}}
+.sp3__grad b,.wn3__zahlen b,.kam__liste b{white-space:nowrap}

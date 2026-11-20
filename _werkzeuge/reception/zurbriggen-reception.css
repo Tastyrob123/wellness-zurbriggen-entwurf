@@ -458,3 +458,10 @@ html.probe-offen{overflow:visible}
 /* In der Fläche «Zuletzt gefragt» steht der Stand unter der Frage statt in einer eigenen schmalen Spalte daneben (sonst leere Fläche unter dem Stand, Prüfpunkt 10) */
 .re-start > .re-start__sp:last-child .re-a.re-q{grid-template-columns:auto minmax(0,1fr)}
 .re-start > .re-start__sp:last-child .re-q .re-a__st{grid-column:2;flex-direction:row;align-items:baseline;justify-content:space-between;gap:12px;margin-top:2px}   /* am Handy untereinander: die Karten behalten ihre Breite */
+
+/* Prüfung 20.11.2026: volle Reihen und nichts abgeschnitten (Filter 2+2 statt 3+1, Abteilungen in zwei festen Spalten, Hinweis im Brief bricht um) */
+.re-filter{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}
+.re-abt{grid-template-columns:repeat(2,minmax(0,1fr))}
+.re-abt button span{white-space:normal;line-height:1.3}
+.gs-hinweis{flex-wrap:wrap;white-space:normal}
+.gs-hinweis>#gs-name{white-space:normal;min-width:0;flex:1 1 320px;overflow:visible;text-overflow:clip}

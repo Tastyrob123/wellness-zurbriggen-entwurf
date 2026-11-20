@@ -1,0 +1,14 @@
+/* Wellness & Spa Pirmin Zurbriggen, Saas-Almagell · Farben der Marke (08.11.2026), Werte der Website */
+:root{
+  --nachtblau:#0A1129; /* Nachtblau: der Winterabend: Grund der dunklen Flächen */
+  --nachtblau-2:#0E1638; /* Nachtblau zwei: zweite dunkle Fläche, Platte auf Nachtblau */
+  --tinte:#18213F; /* Tinte: Titel und Lesetext auf Papier, nie reines Schwarz */
+  --tinte-leise:#4A536B; /* Tinte leise: kleine Zeilen und Nebentext auf Papier */
+  --papier:#F6F1EA; /* Papier: Grund der hellen Seiten, warm, nie reines Weiss */
+  --leinen:#EEE8DE; /* Leinen: Fläche auf Papier, Kachel im hellen Kapitel */
+  --schnee:#EDF1F5; /* Schnee: kühles Hell für den Winter und das Saastal */
+  --messing:#D9B758; /* Messing: Akzent: Haarlinie, Etikett, Knauf, Zeichen auf Nachtblau */
+  --messing-hell:#E9D49A; /* Messing hell: Glanz im Messing, Schrift-Akzent auf Nachtblau */
+  --messing-tief:#8A6A2A; /* Messing tief: Etikett und Zeichen auf Papier, wo Messing zu hell steht */
+  --schokolade:#22180F; /* Schokolade: nur für die Loft-Suite und die Angebote */
+}

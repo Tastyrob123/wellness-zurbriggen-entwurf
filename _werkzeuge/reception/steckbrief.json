@@ -1,0 +1,840 @@
+{
+ "stand": 1794139588.761925,
+ "bereiche": [
+  {
+   "bereich": "Das Haus",
+   "gruppen": [
+    {
+     "gruppe": "Auf einen Blick",
+     "zeilen": [
+      {
+       "fid": "30b02e0d06",
+       "was": "Was es ist",
+       "angabe": "ein Wellnesshotel in Saas-Almagell, dazu das Loft-Suite Hotel; harmonisch, familiär, mit dem Gefühl von Ferien",
+       "beleg": "Wohnen im Wellnesshotel Pirmin Zurbriggen – und sich wohlfühlen wie zu Hause. Harmonisch, familiär, mit dem Gefühl von Ferien!",
+       "datei": "gast_wissen.txt",
+       "mehr": [
+        "Herzlich Willkommen bei uns im Loft-Suite-Hotel."
+       ]
+      },
+      {
+       "fid": "973f3bf8f7",
+       "was": "Gastgeber",
+       "angabe": "Esther und Fabian Zurbriggen",
+       "beleg": "Gastgeber: Esther und Fabian Zurbriggen.",
+       "datei": "gast_umgebung.txt",
+       "mehr": []
+      },
+      {
+       "fid": "20b60158f9",
+       "was": "Seit",
+       "angabe": "1967, erbaut von Vater Alois Zurbriggen",
+       "beleg": "Erbaut wurde unser Haus bereits im Jahre 1967 von Vater Alois Zurbriggen.",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      },
+      {
+       "fid": "82e9b4f1db",
+       "was": "Die Räume",
+       "angabe": "Art by Heinz Julen: Designerstühle, kunstvolle Leuchter, harmonische Farben",
+       "beleg": "Das stilvolle Interieur trägt die unverkennbare Handschrift von Art by Heinz Julen",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      },
+      {
+       "fid": "ffebdf5ad4",
+       "was": "Hotelier des Jahres",
+       "angabe": "2024/25, Esther und Fabian Zurbriggen (htr.ch)",
+       "beleg": "Hotelier des Jahres 2024/25 (htr.ch)",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      }
+     ]
+    },
+    {
+     "gruppe": "Gäste schreiben",
+     "zeilen": [
+      {
+       "fid": "270ebc2645",
+       "was": "Google",
+       "angabe": "4,7 von 5 aus 436 Bewertungen",
+       "beleg": "4,7 von 5",
+       "datei": "gast_wissen.txt",
+       "mehr": [
+        "Google · 436 Bewertungen"
+       ]
+      },
+      {
+       "fid": "796543f574",
+       "was": "TripAdvisor",
+       "angabe": "4,8 von 5 aus 303 Bewertungen",
+       "beleg": "4,8 von 5",
+       "datei": "gast_wissen.txt",
+       "mehr": [
+        "TripAdvisor · 303 Bewertungen"
+       ]
+      },
+      {
+       "fid": "1d370fcc1b",
+       "was": "HolidayCheck",
+       "angabe": "5,7 von 6 aus 80 Bewertungen",
+       "beleg": "5,7 von 6",
+       "datei": "gast_wissen.txt",
+       "mehr": [
+        "HolidayCheck · 80 Bewertungen"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "bereich": "Zimmer & Preise",
+   "gruppen": [
+    {
+     "gruppe": "Die Zimmerarten",
+     "zeilen": [
+      {
+       "fid": "83962f0ca7",
+       "was": "Nice Price",
+       "angabe": "24 m², für 2 Personen, ab CHF 175,-- pro Person inkl. Gourmet-Halbpension",
+       "beleg": "Nice Price: 24 m² · für 2 Personen · ab CHF 175,-- Preis pro Person inkl. Gourmet-Halbpension",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      },
+      {
+       "fid": "638153ca3e",
+       "was": "Wallis Classic mit Balkon",
+       "angabe": "27-30 m², für 2 Personen, ab CHF 195,--",
+       "beleg": "Wallis Classic mit Balkon: 27-30 m² · für 2 Personen · ab CHF 195,--",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      },
+      {
+       "fid": "b1259e6dd5",
+       "was": "Wallis Modern ohne Balkon",
+       "angabe": "27-30 m², für 2 Personen, ab CHF 195,--",
+       "beleg": "Wallis Modern ohne Balkon: 27-30 m² · für 2 Personen · ab CHF 195,--",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      },
+      {
+       "fid": "c83d47309b",
+       "was": "Familienzimmer Wallis 45m²",
+       "angabe": "für 3–4 Personen oder Familien bis 6 Personen, ab CHF 195,--",
+       "beleg": "Familienzimmer Wallis 45m²: 45 m² · für 3–4 Personen oder für Familien bis 6 Personen.",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      },
+      {
+       "fid": "0dda203cf6",
+       "was": "Suite",
+       "angabe": "50 m², freistehende Badewanne, Südbalkon, ab CHF 220,--",
+       "beleg": "Suite: 50 m² · für 2 Personen oder für Familien (2 Erwachsene und 2 Kinder) · ab CHF 220,--",
+       "datei": "gast_wissen.txt",
+       "mehr": [
+        "Ihr Komfort-Upgrade mit freistehender Badewanne und Südbalkon."
+       ]
+      },
+      {
+       "fid": "ebb83a19cf",
+       "was": "Seniorsuite",
+       "angabe": "70 m², Kamin und Sauna, für Familien bis 6 Personen, ab CHF 250,--",
+       "beleg": "Seniorsuite: 70 m² · für 2 Personen oder für Familien bis 6 Personen · ab CHF 250,--",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      },
+      {
+       "fid": "57ec6bf2f7",
+       "was": "Familienzimmer Wallis 75m²",
+       "angabe": "2 Zimmer mit Verbindungstüre, ab CHF 195,--",
+       "beleg": "Familienzimmer Wallis 75m²: 75 m² · 2 Zimmer mit Verbindungstüre für Nähe und Privatsphäre · ab CHF 195,--",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      }
+     ]
+    },
+    {
+     "gruppe": "Im Preis",
+     "zeilen": [
+      {
+       "fid": "aac7de1bc8",
+       "was": "Halbpension",
+       "angabe": "5-Gang Gourmet Wahlmenü, Frühstück mit Sekt, nachmittags Kuchen",
+       "beleg": "Inklusive: Halbpension mit 5-Gang Gourmet Wahlmenü",
+       "datei": "gast_wissen.txt",
+       "mehr": [
+        "Inklusive: Täglich herzhaftes, regionales Frühstück mit Sekt"
+       ]
+      },
+      {
+       "fid": "609204b95c",
+       "was": "Spa",
+       "angabe": "1.100 m² Spa: Schwimmbad, Whirlpool, Saunen, Dampfbad",
+       "beleg": "Spa: Schwimmbad, Whirlpool, Saunen, Dampfbad",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      },
+      {
+       "fid": "74b3a38ad4",
+       "was": "Bergbahnen",
+       "angabe": "Sommer & Herbst-Hit bis 30. November: Bergbahnen im gesamten Saastal (ausser MetroAlpin)",
+       "beleg": "Inklusive: Sommer & Herbst-Hit (bis 30. November): Bergbahnen im gesamten Saastal (ausser MetroAlpin) ab der 1. Übernachtung inklusive!",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      },
+      {
+       "fid": "a03c9152ea",
+       "was": "Parking",
+       "angabe": "Parking und W-LAN im Zimmer",
+       "beleg": "Parking · W-LAN im Zimmer (eigenes Passwort)",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      }
+     ]
+    },
+    {
+     "gruppe": "Zuschläge",
+     "zeilen": [
+      {
+       "fid": "f37af7de0f",
+       "was": "Einzelzimmer",
+       "angabe": "50 %",
+       "beleg": "Einzelzimmer 50 %",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      },
+      {
+       "fid": "88c3d90ad0",
+       "was": "1 Übernachtung",
+       "angabe": "CHF 20 pro Person",
+       "beleg": "Für 1 Übernachtung CHF 20 pro Person",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      },
+      {
+       "fid": "84007f8924",
+       "was": "Hunde",
+       "angabe": "CHF 10 pro Tag (ohne Futter); im Speisesaal nicht erlaubt",
+       "beleg": "Hunde CHF 10 pro Tag (ohne Futter); im Speisesaal sind Hunde nicht erlaubt",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      },
+      {
+       "fid": "8d7170fc2f",
+       "was": "Silvesterwoche",
+       "angabe": "Zuschlag CHF 40 pro Person und Nacht, mindestens 7 Nächte",
+       "beleg": "Silvesterwoche: Zuschlag CHF 40 pro Person / Nacht. Minimum Stay Silvesterwoche und Sportwochen im Februar 7 Nächte",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      },
+      {
+       "fid": "13f5e01441",
+       "was": "Kurtaxen",
+       "angabe": "sind exklusive",
+       "beleg": "sind exklusive!",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "bereich": "Loft-Suite",
+   "gruppen": [
+    {
+     "gruppe": "Auf zwei Etagen",
+     "zeilen": [
+      {
+       "fid": "35a4062646",
+       "was": "Die Suite",
+       "angabe": "Loft-Wellness-Suite, 55 m², Zimmer auf zwei Etagen mit Balkon",
+       "beleg": "Loft-Wellness-Suite: 55 m² · Zimmer auf zwei Etagen mit Balkon",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      },
+      {
+       "fid": "7a2cf6dbf6",
+       "was": "Oben",
+       "angabe": "die Galerie mit Kingsize-Bett (200x200 cm)",
+       "beleg": "Kingsize-Bett (200x200 cm)",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      },
+      {
+       "fid": "0efb8f945f",
+       "was": "Unten",
+       "angabe": "Wohnbereich mit Sofa, privater Whirlpool, private Sauna",
+       "beleg": "Wohnbereich mit Sofa",
+       "datei": "gast_wissen.txt",
+       "mehr": [
+        "Privater Whirlpool",
+        "Private Sauna"
+       ]
+      },
+      {
+       "fid": "5f5e27ac96",
+       "was": "Preis",
+       "angabe": "ab CHF 315,-- pro Person",
+       "beleg": "ab CHF 315,-- Preis pro Person",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      },
+      {
+       "fid": "e537f8e5a9",
+       "was": "Service",
+       "angabe": "5-Sterne-Service (Gepäck, Auto), Nespresso-Maschine und Teekocher",
+       "beleg": "5-Sterne-Service (Gepäck, Auto)",
+       "datei": "gast_wissen.txt",
+       "mehr": [
+        "Nespresso-Maschine und Teekocher"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "bereich": "Spa & Anwendungen",
+   "gruppen": [
+    {
+     "gruppe": "Wasser und Wärme",
+     "zeilen": [
+      {
+       "fid": "7c9da42224",
+       "was": "Das Spa",
+       "angabe": "1.100 m², inspiriert von der traditionellen chinesischen Medizin (TCM)",
+       "beleg": "Im Wellnesshotel Zurbriggen erwartet Sie eine exklusive 1.100 m² große Spa-Landschaft, inspiriert von der traditionellen chinesischen Medizin (TCM).",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      },
+      {
+       "fid": "071bb1690e",
+       "was": "Schwimmbad",
+       "angabe": "29 °C, chlorfrei, mit Ozon aufbereitet",
+       "beleg": "29 °C",
+       "datei": "gast_wissen.txt",
+       "mehr": [
+        "Info für Allergiker: Unser Badewasser ist chlorfrei und wird mit Ozon aufbereitet."
+       ]
+      },
+      {
+       "fid": "f8c4a01a68",
+       "was": "Whirlpool",
+       "angabe": "35 °C, im Sommer auch draussen",
+       "beleg": "35 °C",
+       "datei": "gast_wissen.txt",
+       "mehr": [
+        "Whirlpool · Aussenwhirlpool (Sommer)"
+       ]
+      },
+      {
+       "fid": "3a0b3544fb",
+       "was": "Saunen",
+       "angabe": "Kräutersauna, Dampfbad, Holzsauna",
+       "beleg": "Kräutersauna",
+       "datei": "gast_wissen.txt",
+       "mehr": [
+        "Dampfbad",
+        "Holzsauna"
+       ]
+      },
+      {
+       "fid": "bf57774fe5",
+       "was": "Fitnesstower",
+       "angabe": "Stepper, Fahrräder, Laufbänder, Vibrationstrainer und Kraftgerät",
+       "beleg": "Oder trainieren Sie auf Eigeninitiative im Fitnesstower",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      }
+     ]
+    },
+    {
+     "gruppe": "Anwendungen",
+     "zeilen": [
+      {
+       "fid": "6519c00e8e",
+       "was": "Die Karte",
+       "angabe": "Massagen, Ayurveda, Bali, Orient, Bäder in der Isha-Wanne, Beauty, Senseliege",
+       "beleg": "Massagen, Ayurveda, Bäder in der Isha-Wanne, Beauty und die Senseliege, im Wortlaut des Hauses.",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      },
+      {
+       "fid": "c9eea76e5e",
+       "was": "Klassische Massage",
+       "angabe": "25, 50 oder 80 Minuten",
+       "beleg": "Klassische Ganzkörpermassage",
+       "datei": "gast_wissen.txt",
+       "mehr": [
+        "25 Min. · 50 Min · 80 Min."
+       ]
+      },
+      {
+       "fid": "98a519c350",
+       "was": "Lomi-Lomi-Nui",
+       "angabe": "80 Minuten, Ritual, Massage, Tanz und Körperarbeit",
+       "beleg": "Lomi-Lomi-Nui",
+       "datei": "gast_wissen.txt",
+       "mehr": [
+        "Lomi-Lomi ist eine Mischung aus Ritual, Massage, Tanz und Körperarbeit."
+       ]
+      },
+      {
+       "fid": "fc3607f06a",
+       "was": "Termine",
+       "angabe": "bis 24 Stunden vorher kostenfrei annullieren",
+       "beleg": "Wir möchten Sie darauf hinweisen, dass Sie Ihre Termine bis 24 Stunden vorher kostenfrei annullieren können.",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      }
+     ]
+    },
+    {
+     "gruppe": "Ohne Übernachtung",
+     "zeilen": [
+      {
+       "fid": "6b4fd9f4f6",
+       "was": "Day Spa",
+       "angabe": "ab CHF 200 Behandlungen pro Person: Eintritt CHF 15 inkl. Bademantel, Schuhe und Tuch; bitte vorgängig reservieren",
+       "beleg": "Falls Sie Behandlungen im Mindestwert von CHF 200 pro Person buchen, bezahlen Sie für den Eintritt in die Wellness-Oase nur noch CHF 15",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      },
+      {
+       "fid": "6503714fc9",
+       "was": "Am Abreisetag",
+       "angabe": "10.00 bis 17.00 Uhr zum Vorzugspreis von CHF 25.00 pro Person",
+       "beleg": "Sie können als Hotelgast von 10.00 Uhr bis 17.00 Uhr den Spa zum Vorzugspreis von CHF 25.00 pro Person bei Abreisetag geniessen.",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "bereich": "Gourmet & Halbpension",
+   "gruppen": [
+    {
+     "gruppe": "Der Tag am Tisch",
+     "zeilen": [
+      {
+       "fid": "3e52a95371",
+       "was": "Frühstück",
+       "angabe": "vitales Frühstücksbuffet, jeden Tag Sekt",
+       "beleg": "Köstliches und gesundes zum Start in den Urlaubstag: vitales Frühstücksbuffet. Jeden Tag Sekt zum Frühstück.",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      },
+      {
+       "fid": "52561278a9",
+       "was": "Nachmittag",
+       "angabe": "13.00-17.30 Uhr hausgemachter Kuchen, Kaffee, Tee, Schokolade",
+       "beleg": "13.00-17.30 Uhr täglich hausgemachter Kuchen. 13.00-17.30 Uhr täglich Kaffee/Tee/Schokolade.",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      },
+      {
+       "fid": "01a41caffc",
+       "was": "Abend",
+       "angabe": "5-gängiges Abendessen mit Wahlmöglichkeiten",
+       "beleg": "Täglich exzellentes 5-gängiges Abendessen mit Wahlmöglichkeiten.",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      },
+      {
+       "fid": "f9ed54f520",
+       "was": "Sonntag",
+       "angabe": "Gemüse, Fleisch und Fischfondue mit 12 Saucen",
+       "beleg": "Jeden Sonntag Gemüse, Fleisch und Fischfondue mit 12 verschiedenen Saucen.",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      }
+     ]
+    },
+    {
+     "gruppe": "Spezial-Kost",
+     "zeilen": [
+      {
+       "fid": "27dee59b14",
+       "was": "Unverträglichkeiten",
+       "angabe": "Bei uns müssen Sie auf nichts verzichten: bitte ansprechen",
+       "beleg": "Leiden Sie unter einer Lebensmittelunverträglichkeit, einer Nahrungsmittelallergie oder legen Wert auf eine gesunde Ernährung? Bei uns müssen Sie auf nichts verzichten!",
+       "datei": "gast_wissen.txt",
+       "mehr": [
+        "Sprechen Sie uns gerne an."
+       ]
+      },
+      {
+       "fid": "307c5d7a69",
+       "was": "Auf Wunsch",
+       "angabe": "vegetarisch, Vollwertkost, allergikerfreundlich, glutenfrei, laktosefrei",
+       "beleg": "Vegetarische Gerichte",
+       "datei": "gast_wissen.txt",
+       "mehr": [
+        "Vollwertkost",
+        "Allergikerfreundliche Speisen",
+        "Glutenfreie Ernährung",
+        "Laktosefreie Kost"
+       ]
+      },
+      {
+       "fid": "a88ea5bd77",
+       "was": "Im Speisesaal",
+       "angabe": "«Art by Heinz Julen»",
+       "beleg": "Art by Heinz Julen",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "bereich": "Kinder & Familie",
+   "gruppen": [
+    {
+     "gruppe": "Kinder",
+     "zeilen": [
+      {
+       "fid": "311f91ef5f",
+       "was": "Kidsclub",
+       "angabe": "Kinder von 4-12 Jahre, mit ausgebildeter Kinderbetreuerin",
+       "beleg": "Bei uns können Kinder von 4-12 Jahre was erleben: Unsere ausgebildete Kinderbetreuerin lässt sich immer wieder Neues einfallen, um Ihren Kindern den Tag interessant zu machen.",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      },
+      {
+       "fid": "e4e69aaa35",
+       "was": "Wann",
+       "angabe": "das Kinderprogramm nur in der Hauptsaison",
+       "beleg": "Das Kinderprogramm findet nur in der Hauptsaison statt.",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      },
+      {
+       "fid": "c841349ad8",
+       "was": "Teenager",
+       "angabe": "Kids von 12-17 Jahre: Billard, Bowlingbahn, Klettersteig, Wellness",
+       "beleg": "Auch Ihren Teenagern wird bei uns so Einiges geboten:",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      }
+     ]
+    },
+    {
+     "gruppe": "Kinderermässigungen",
+     "zeilen": [
+      {
+       "fid": "60060ebf59",
+       "was": "0-2 Jahre",
+       "angabe": "70%",
+       "beleg": "0-2 Jahre: 70%",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      },
+      {
+       "fid": "8281a230ea",
+       "was": "3-6 Jahre",
+       "angabe": "50%",
+       "beleg": "3-6 Jahre: 50%",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      },
+      {
+       "fid": "7338361d85",
+       "was": "7-12 Jahre",
+       "angabe": "30%",
+       "beleg": "7-12 Jahre: 30%",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      },
+      {
+       "fid": "2a14557e52",
+       "was": "13-15.9 Jahre",
+       "angabe": "10%",
+       "beleg": "13-15.9 Jahre: 10%",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "bereich": "Angebote & Jasswochen",
+   "gruppen": [
+    {
+     "gruppe": "Jasswochen 2026/2027",
+     "zeilen": [
+      {
+       "fid": "76115c38ab",
+       "was": "Wochen",
+       "angabe": "1-7. November 2026, 13-18. Dezember 2026, 10-15. Januar 2027, 24-29. Januar 2027, 21-26. März 2027, 4-9. April 2027",
+       "beleg": "Jasswochen 2026/2027, mit dem Hotel Monte-Moro: 1-7. November 2026, 13-18. Dezember 2026, 10-15. Januar 2027, 24-29. Januar 2027, 21-26. März 2027, 4-9. April 2027.",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      },
+      {
+       "fid": "be1eee1854",
+       "was": "Jassen",
+       "angabe": "4 Jassabende, «Schieber» D und F",
+       "beleg": "4 Jassabende (wir spielen an vier Abenden «Schieber» D und F)",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      },
+      {
+       "fid": "e401b1a593",
+       "was": "Im Hotel Pirmin",
+       "angabe": "Fr. 750.- pro Person im Doppelzimmer, Fr. 850.- im Einzelzimmer; Loft-Suite Fr. 150.- Aufpreis",
+       "beleg": "Fr. 750.- pro Person im Doppelzimmer Standard im **** Hotel Pirmin",
+       "datei": "gast_wissen.txt",
+       "mehr": [
+        "Fr. 850.- pro Person im Einzelzimmer Standard im **** Hotel Pirmin"
+       ]
+      },
+      {
+       "fid": "4782bb7e26",
+       "was": "Reservationen",
+       "angabe": "Tel. 027 957 23 01 oder 079 744 68 58 (Fabian Zurbriggen)",
+       "beleg": "Reservationen: Tel. 027 957 23 01 oder Tel. 079 744 68 58 Fabian Zurbriggen",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      }
+     ]
+    },
+    {
+     "gruppe": "Pauschalen",
+     "zeilen": [
+      {
+       "fid": "5cfe855823",
+       "was": "Zu zweit",
+       "angabe": "Zauberhafte Wohlfühltage zu zweit: 2 Nächte, ab CHF 415,-- pro Person",
+       "beleg": "Zauberhafte Wohlfühltage zu zweit: 2 Nächte · Halbpension",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      },
+      {
+       "fid": "6c99ce948a",
+       "was": "Lomi-Lomi",
+       "angabe": "3 Nächte mit Hot-Stone, Gesichtsbehandlung und Lomi-Lomi, ab CHF 985,--",
+       "beleg": "Lomi-Lomi: 3 Nächte · Halbpension",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      },
+      {
+       "fid": "c02f16a861",
+       "was": "Anti-Stress",
+       "angabe": "3 Nächte, ab CHF 765,-- pro Person",
+       "beleg": "Anti-Stress: 3 Nächte · Halbpension",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      },
+      {
+       "fid": "67c8de3c50",
+       "was": "Senioren-Vorteilswoche",
+       "angabe": "5 Nächte, 3/4 Pension, ab CHF 849,-- pro Person",
+       "beleg": "Senioren-Vorteilswoche: 5 Nächte · 3/4 Pension",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "bereich": "Anreise & Zeiten",
+   "gruppen": [
+    {
+     "gruppe": "Am Empfang",
+     "zeilen": [
+      {
+       "fid": "491fbe1c5b",
+       "was": "Zimmer bereit",
+       "angabe": "am Anreisetag ab 14.00 Uhr",
+       "beleg": "Am Anreisetag sind die Zimmer ab 14.00 Uhr beziehbar.",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      },
+      {
+       "fid": "01612424c9",
+       "was": "Späte Anreise",
+       "angabe": "nach 19.00 Uhr bitte kurz davor melden",
+       "beleg": "Falls Sie nach 19.00 Uhr anreisen, bitten wir Sie, uns dies kurz davor zu melden.",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      },
+      {
+       "fid": "cdfe73254b",
+       "was": "Check out",
+       "angabe": "10.00 Uhr",
+       "beleg": "Check out 10.00 Uhr",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      }
+     ]
+    },
+    {
+     "gruppe": "Unterwegs",
+     "zeilen": [
+      {
+       "fid": "77177502d0",
+       "was": "Gepäck",
+       "angabe": "2 Tage vorher am Bahnschalter aufgeben, am Anreisetag ist es im Zimmer",
+       "beleg": "Geben Sie Ihr Gepäck 2 Tage vor Abreise zu Hause am Bahnschalter auf und wir holen es gerne am Postschalter in Saas-Almagell für Sie ab.",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      },
+      {
+       "fid": "2796af6e9d",
+       "was": "Bahn",
+       "angabe": "bis Visp, dann mit dem Bus nach Saas-Almagell",
+       "beleg": "Mit dem Personenzug bitte Endstation Visp lösen – anschliessend mit dem Bus von Visp nach Saas-Grund und Saas-Almagell.",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      },
+      {
+       "fid": "77557c6d0c",
+       "was": "Bahnzeiten",
+       "angabe": "Bern bis Visp 55 Min, Basel und Zürich bis Visp 2h",
+       "beleg": "Von Bern bis Visp (55 Min) · Von Basel bis Visp (2h) · Von Zürich nach Visp (2h)",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      },
+      {
+       "fid": "def8f9146b",
+       "was": "Auto",
+       "angabe": "durch das Rhonetal oder mit dem Autoverlad durch den Lötschberg",
+       "beleg": "Durch das Rhonetal über die Autobahn Bern – Lausanne – Sion – Sierre – Visp – Stalden – Saas Grund",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      }
+     ]
+    },
+    {
+     "gruppe": "Stornierung",
+     "zeilen": [
+      {
+       "fid": "9134e76c19",
+       "was": "Bis 60 Tage",
+       "angabe": "60-70 Tage vor Antritt 40 %",
+       "beleg": "60-70 Tage vor Antritt 40 % des Urlaubes",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      },
+      {
+       "fid": "b812c5ebc1",
+       "was": "Kurz vorher",
+       "angabe": "0-10 Tage vor Antritt 100%",
+       "beleg": "0-10 Tage vor Antritt 100% des Urlaubes.",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      },
+      {
+       "fid": "05e68f689e",
+       "was": "Zahlungsmittel",
+       "angabe": "Postcard, EC-Direkt, Visa, Eurocard, Euro; bar vor Ort 1,5 % Ermässigung",
+       "beleg": "Postcard, EC-Direkt, Visa, Eurocard, Euro (Tageskurs), bei Barzahlung vor Ort 1,5 % Ermässigung.",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "bereich": "Saastal",
+   "gruppen": [
+    {
+     "gruppe": "Sommer und Winter",
+     "zeilen": [
+      {
+       "fid": "49dcaeeda3",
+       "was": "Lage",
+       "angabe": "direkt neben der Bergbahn, Sessellift nebenan",
+       "beleg": "Unser Hotel liegt direkt neben der Bergbahn.",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      },
+      {
+       "fid": "9ce0389459",
+       "was": "Wandern",
+       "angabe": "350 km bestens ausgeschilderte Wanderwege",
+       "beleg": "bestens ausgeschilderte Wanderwege",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      },
+      {
+       "fid": "1ba3f8083b",
+       "was": "Pisten",
+       "angabe": "145 km präparierte Pisten, bis auf 3600 m",
+       "beleg": "145 km präparierte Pisten",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      },
+      {
+       "fid": "8d7c40ce50",
+       "was": "Schneeschuh",
+       "angabe": "jeden Mittwoch mit eidg. dipl. Schneesportlehrer",
+       "beleg": "Jeden Mittwoch Schneeschuhwanderung mit eidg. dipl. Schneesportlehrer.",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      },
+      {
+       "fid": "ec2f24595f",
+       "was": "Natureisbahn",
+       "angabe": "gratis, beleuchtet, direkt neben dem Hotel",
+       "beleg": "beleuchtete Natureisbahn direkt neben dem Hotel",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "bereich": "Kontakt",
+   "gruppen": [
+    {
+     "gruppe": "So erreichen Sie das Haus",
+     "zeilen": [
+      {
+       "fid": "3bd9d70082",
+       "was": "Telefon",
+       "angabe": "+41 27 957 23 01",
+       "beleg": "Telefon: +41 27 957 23 01.",
+       "datei": "gast_umgebung.txt",
+       "mehr": []
+      },
+      {
+       "fid": "2879f0035d",
+       "was": "E-Mail",
+       "angabe": "info@wellnesshotel-zurbriggen.ch",
+       "beleg": "E-Mail: info@wellnesshotel-zurbriggen.ch.",
+       "datei": "gast_umgebung.txt",
+       "mehr": []
+      },
+      {
+       "fid": "987cb7f94a",
+       "was": "Adresse",
+       "angabe": "Wellness & Spa Pirmin Zurbriggen, 3905 Saas-Almagell",
+       "beleg": "Adresse: Wellness & Spa Pirmin Zurbriggen, 3905 Saas-Almagell",
+       "datei": "gast_umgebung.txt",
+       "mehr": []
+      },
+      {
+       "fid": "098c2b731d",
+       "was": "Zimmer buchen",
+       "angabe": "«Zimmer buchen» auf der Website: Anreise, Abreise, Gäste",
+       "beleg": "Zimmer buchen: mit «Zimmer buchen» auf der Website (Anreise, Abreise, Gäste, dann die Buchung des Hauses).",
+       "datei": "gast_umgebung.txt",
+       "mehr": []
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

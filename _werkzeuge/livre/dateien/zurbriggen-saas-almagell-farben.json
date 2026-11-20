@@ -1,0 +1,134 @@
+[
+ {
+  "name": "Nachtblau",
+  "hex": "#0A1129",
+  "rgb": [
+   10,
+   17,
+   41
+  ],
+  "rolle": "der Winterabend: Grund der dunklen Flächen",
+  "gruppe": "nacht",
+  "woher": "Wert der Website (rest-ideen.css)"
+ },
+ {
+  "name": "Nachtblau zwei",
+  "hex": "#0E1638",
+  "rgb": [
+   14,
+   22,
+   56
+  ],
+  "rolle": "zweite dunkle Fläche, Platte auf Nachtblau",
+  "gruppe": "nacht",
+  "woher": "Wert der Website (rest-ideen.css)"
+ },
+ {
+  "name": "Tinte",
+  "hex": "#18213F",
+  "rgb": [
+   24,
+   33,
+   63
+  ],
+  "rolle": "Titel und Lesetext auf Papier, nie reines Schwarz",
+  "gruppe": "raum",
+  "woher": "Wert der Website (rest-ideen.css)"
+ },
+ {
+  "name": "Tinte leise",
+  "hex": "#4A536B",
+  "rgb": [
+   74,
+   83,
+   107
+  ],
+  "rolle": "kleine Zeilen und Nebentext auf Papier",
+  "gruppe": "raum",
+  "woher": "Wert der Website (rest-ideen.css)"
+ },
+ {
+  "name": "Papier",
+  "hex": "#F6F1EA",
+  "rgb": [
+   246,
+   241,
+   234
+  ],
+  "rolle": "Grund der hellen Seiten, warm, nie reines Weiss",
+  "gruppe": "raum",
+  "woher": "Wert der Website (rest-ideen.css)"
+ },
+ {
+  "name": "Leinen",
+  "hex": "#EEE8DE",
+  "rgb": [
+   238,
+   232,
+   222
+  ],
+  "rolle": "Fläche auf Papier, Kachel im hellen Kapitel",
+  "gruppe": "raum",
+  "woher": "Wert der Website (rest-ideen.css)"
+ },
+ {
+  "name": "Schnee",
+  "hex": "#EDF1F5",
+  "rgb": [
+   237,
+   241,
+   245
+  ],
+  "rolle": "kühles Hell für den Winter und das Saastal",
+  "gruppe": "raum",
+  "woher": "Wert der Website (rest-ideen.css)"
+ },
+ {
+  "name": "Messing",
+  "hex": "#D9B758",
+  "rgb": [
+   217,
+   183,
+   88
+  ],
+  "rolle": "Akzent: Haarlinie, Etikett, Knauf, Zeichen auf Nachtblau",
+  "gruppe": "messing",
+  "woher": "Wert der Website (rest-ideen.css)"
+ },
+ {
+  "name": "Messing hell",
+  "hex": "#E9D49A",
+  "rgb": [
+   233,
+   212,
+   154
+  ],
+  "rolle": "Glanz im Messing, Schrift-Akzent auf Nachtblau",
+  "gruppe": "messing",
+  "woher": "Wert der Website (rest-ideen.css)"
+ },
+ {
+  "name": "Messing tief",
+  "hex": "#8A6A2A",
+  "rgb": [
+   138,
+   106,
+   42
+  ],
+  "rolle": "Etikett und Zeichen auf Papier, wo Messing zu hell steht",
+  "gruppe": "messing",
+  "woher": "Wert der Website (startseite2.css)"
+ },
+ {
+  "name": "Schokolade",
+  "hex": "#22180F",
+  "rgb": [
+   34,
+   24,
+   15
+  ],
+  "rolle": "nur für die Loft-Suite und die Angebote",
+  "gruppe": "loft",
+  "woher": "Wert der Website (rest-ideen.css)"
+ }
+]

@@ -586,3 +586,6 @@ body.ma{margin:0;background:var(--raum);color:var(--tinte);font:400 17px/1.62 va
 #livre .m-schirme--zwei{padding-bottom:clamp(33px,4.17vw,75px)}
 #registre .m-schirme--zwei{padding-bottom:clamp(176px,22.22vw,400px)}}
 /* ---- Ende Spaltenhöhe je Saal ---- */
+
+/* Prüfung 20.11.2026: Titel in der Leiste der Bildschirme ganz lesbar */
+.m-schirme .m-schirm__leiste span{letter-spacing:.08em}

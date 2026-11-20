@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="de">
+<head><script data-wurzel>/* Wurzel-Weiche: Seite laeuft an der Wurzel einer Adresse oder in einem Unterordner (github.io/<repo>/) */(function(){var D=2,p=location.pathname.split('/');p.splice(p.length-1-D,D+1);var W=p.join('/')+'/';window.__W=W;if(W==='/')return;var O=location.origin;
+function f(u){if(typeof u!=='string')return u;if(u.indexOf(O+'/')===0)return O+f(u.slice(O.length));if(u.charAt(0)!=='/'||u.charAt(1)==='/'||u.indexOf(W)===0||u+'/'===W)return u;return W+u.slice(1)}
+function s(v){return typeof v!=='string'?v:v.replace(/(^|,)(\s*)(\S+)/g,function(m,a,b,u){return a+b+f(u)})}
+function c(v){return typeof v!=='string'?v:v.replace(/url\(\s*(['"]?)([^'")]+)/g,function(m,q,u){return 'url('+q+f(u)})}
+function h(v){return typeof v!=='string'?v:c(v.replace(/(\s(?:src|href|poster|action|data-src|data-href)\s*=\s*)(["'])([^"']*)\2/gi,function(m,a,q,u){return a+q+f(u)+q}).replace(/(\s(?:srcset|imagesrcset|data-srcset)\s*=\s*)(["'])([^"']*)\2/gi,function(m,a,q,u){return a+q+s(u)+q}))}
+function d(K,k,g){K=window[K];if(!K)return;var x=Object.getOwnPropertyDescriptor(K.prototype,k);if(!x||!x.set)return;Object.defineProperty(K.prototype,k,{configurable:true,enumerable:x.enumerable,get:x.get,set:function(v){x.set.call(this,g(v))}})}
+[['HTMLImageElement','src'],['HTMLScriptElement','src'],['HTMLLinkElement','href'],['HTMLIFrameElement','src'],['HTMLSourceElement','src'],['HTMLMediaElement','src'],['HTMLVideoElement','poster'],['HTMLAnchorElement','href'],['HTMLAreaElement','href'],['HTMLFormElement','action'],['HTMLEmbedElement','src'],['HTMLObjectElement','data']].forEach(function(z){d(z[0],z[1],f)});
+[['HTMLImageElement','srcset'],['HTMLSourceElement','srcset'],['HTMLLinkElement','imageSrcset']].forEach(function(z){d(z[0],z[1],s)});
+d('Element','innerHTML',h);d('Element','outerHTML',h);var iah=Element.prototype.insertAdjacentHTML;Element.prototype.insertAdjacentHTML=function(w,v){return iah.call(this,w,h(v))};
+var sa=Element.prototype.setAttribute;Element.prototype.setAttribute=function(n,v){var l=String(n).toLowerCase();if(/^(src|href|poster|action|data|data-src|data-href)$/.test(l))v=f(v);else if(/srcset$/.test(l))v=s(v);else if(l==='style')v=c(v);return sa.call(this,n,v)};
+var st=CSSStyleDeclaration.prototype,sp=st.setProperty;st.setProperty=function(n,v,q){return sp.call(this,n,c(v),q)};['background','backgroundImage','cssText','maskImage','webkitMaskImage','listStyleImage','borderImageSource','content'].forEach(function(k){var x=Object.getOwnPropertyDescriptor(st,k);if(x&&x.set)Object.defineProperty(st,k,{configurable:true,enumerable:x.enumerable,get:x.get,set:function(v){x.set.call(this,c(v))}})});
+var F=window.fetch;if(F)window.fetch=function(i,o){if(typeof i==='string')i=f(i);else if(i instanceof URL)i=f(i.href);return F.call(this,i,o)};
+var XO=XMLHttpRequest.prototype.open;XMLHttpRequest.prototype.open=function(){var a=[].slice.call(arguments);a[1]=f(a[1] instanceof URL?a[1].href:a[1]);return XO.apply(this,a)};
+if(navigator.sendBeacon){var B=navigator.sendBeacon;navigator.sendBeacon=function(u,x){return B.call(navigator,f(u),x)}}
+var wo=window.open;window.open=function(u){var a=[].slice.call(arguments);a[0]=f(u);return wo.apply(window,a)};
+var dw=document.write,dl=document.writeln;document.write=function(){return dw.apply(document,[].map.call(arguments,h))};document.writeln=function(){return dl.apply(document,[].map.call(arguments,h))};
+['pushState','replaceState'].forEach(function(k){var o=history[k];history[k]=function(a,b,u){return o.call(history,a,b,u==null?u:f(String(u)))}});
+function e(el){if(!el||el.nodeType!==1)return;['src','href','poster','action'].forEach(function(a){var v=el.getAttribute(a);if(v&&v.charAt(0)==='/'){var z=f(v);if(z!==v)sa.call(el,a,z)}});var t=el.getAttribute('srcset');if(t&&/(^|,)\s*\/[^\/]/.test(t)){var z=s(t);if(z!==t)sa.call(el,'srcset',z)}t=el.getAttribute('style');if(t&&/url\(\s*['"]?\/[^\/]/.test(t)){z=c(t);if(z!==t)sa.call(el,'style',z)}}
+new MutationObserver(function(ms){ms.forEach(function(m){if(m.type==='attributes')e(m.target);else m.addedNodes.forEach(function(n){if(n.nodeType!==1)return;e(n);var l=n.querySelectorAll('[src],[href],[srcset],[poster],[action],[style]');for(var i=0;i<l.length;i++)e(l[i])})})}).observe(document.documentElement,{childList:true,subtree:true,attributes:true,attributeFilter:['src','href','srcset','poster','action','style']})})();</script><!--demo-weiche--><script src="../../_demo/karte.js"></script><script src="../../_demo/shim.js"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Newsletter & E-Mail · Drucksachen &amp; Feed · Wellness & Spa Pirmin Zurbriggen</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230a1129'/%3E%3Cg transform='translate%285.33 4.00%29 scale%280.3235%29' fill='%23d9b758'%3E%3Cpath d='M36.248 7.57C37.151 8.843 37.924 10.433 37.612 12.132C38.717 11.851 39.725 10.859 40.846 10.362C40.807 10.409 40.737 10.507 40.748 10.589C40.971 10.644 41.229 10.394 41.19 10.101L41.217 10.308L41.553 10.265L41.51 9.972L44.881 7.972C45.166 8.484 45.577 7.788 45.631 7.57L45.87 7.745C45.897 7.362 46.416 7.116 46.78 6.98L46.713 7.116C47.155 7.226 47.131 6.464 47.557 6.788C47.862 6.53 48.643 5.741 49.385 5.894L49.553 5.573L49.448 5.714C49.827 5.706 50.35 5.503 50.69 5.202C50.772 4.894 51.346 4.726 51.741 4.546C51.866 4.527 51.979 4.722 52.135 4.616C52.178 4.312 51.983 4.425 52.428 4.277L52.315 4.378L52.448 4.445L52.702 4.112L52.596 4.257C52.873 4.429 53.092 4.183 53.284 4.03L53.19 3.96C54.315 3.503 55.549 2.948 56.952 2.624C57.264 2.155 58.163 2.495 58.502 1.894L59.682 1.519L59.694 1.601L60.291 1.644C58.479 3.851 55.686 5.433 53.08 6.82C46.557 11.132 39.752 15.273 33.44 20.191C29.346 26.116 24.995 31.097 20.584 36.558C20.596 36.64 20.577 36.812 20.705 36.835C25.323 34.32 29.846 30.886 34.002 28.429C33.971 28.519 33.897 28.573 33.948 28.652C34.006 28.773 34.131 28.753 34.256 28.734C34.323 28.597 34.483 28.534 34.42 28.374L34.28 28.308L35.127 27.679L35.252 27.96C39.788 25.198 44.385 22.558 49.038 20.034C49.256 19.792 48.534 19.765 49.061 19.609L49.272 19.577L49.01 19.827C49.916 19.655 50.893 19.054 51.752 18.511L51.17 18.589C51.475 18.335 51.92 18.187 52.327 18.046C52.104 17.991 52.045 18.171 51.932 18.269L52.725 18.159C55.229 16.663 58.12 15.788 60.78 14.48C60.721 14.362 60.561 14.425 60.475 14.441C60.51 14.347 60.694 14.152 60.948 14.159L60.768 14.398C61.768 14.257 62.791 13.687 63.916 13.53C62.791 16.999 59.323 17.698 57.17 19.913C55.702 20.925 53.877 21.562 52.334 22.628C50.94 24.82 48.053 25.097 46.061 26.652C42.858 28.628 40.178 31.597 36.702 33.144C32.288 37.077 27.151 39.796 22.94 43.952C16.745 46.987 13.19 54.027 7.33 57.648C6.159 58.07 4.561 58.167 3.432 57.39C2.483 56.675 1.877 55.698 1.514 54.605C1.659 52.632 3.096 50.773 4.709 49.866C9.397 46.659 13.1 41.898 17.838 38.769C18.748 36.476 19.873 34.237 21.272 32.089L21.225 31.757L23.58 28.284C22.311 28.929 20.881 29.003 19.514 28.343C19.112 28.191 18.815 27.593 18.846 27.206C23.713 21.98 31.116 19.37 33.838 12.155C34.233 11.038 34.604 9.753 34.041 8.476C33.584 7.945 33.44 7.202 32.709 6.839C26.276 9.097 22.491 15.999 17.248 20.089C15.159 21.53 13.194 23.546 10.459 23.421C9.194 22.874 8.733 21.71 8.166 20.687C8.233 20.249 8.256 19.527 8.94 19.855C9.67 19.624 10.448 20.323 11.073 19.64C10.049 18.683 9.498 17.484 9.334 16.023C9.51 14.554 10.33 12.527 11.842 12.105C13.143 12.601 13.955 10.534 15.295 11.323C16.389 11.55 17.483 11.777 18.487 12.273C22.596 8.597 26.748 2.198 33.26 5.019C34.518 5.523 35.358 6.675 36.248 7.57'/%3E%3Cpath d='M40.846 10.362L41.19 10.101L41.51 9.972L44.877 7.972L45.631 7.57L45.948 7.351L46.78 6.98L47.202 6.698L47.854 6.398L49.553 5.573L50.764 4.941L52.069 4.288L53.174 3.835L54.78 3.237L55.733 2.882L57.084 2.382L58.502 1.894L59.682 1.519L59.948 1.48L60.291 1.644L58.944 2.984'/%3E%3Cpath d='M60.948 14.159C60.948 14.159 60.995 14.042 60.948 14.159'/%3E%3Cpath d='M51.17 18.589L48.955 19.593L35.127 27.679L33.85 28.476L34.178 29.155L54.053 17.187ZM51.17 18.589'/%3E%3Cpath d='M54.049 17.187L54.202 18.015L52.393 18.39L52.221 18.038L55.881 16.382L58.795 15.128L60.948 14.159L62.705 13.722L63.916 13.53'/%3E%3Cpath d='M54.202 18.015L60.6 14.175L53.748 17.261ZM54.202 18.015'/%3E%3Cpath d='M41.631 9.808L40.577 10.409L40.748 10.589L41.553 10.265ZM41.631 9.808'/%3E%3Cpath d='M61.729 16.585L56.987 19.972L51.19 23.812L40.729 30.659L33.202 35.855L22.94 43.952L22.811 43.155L61.28 15.905ZM61.729 16.585'/%3E%3Cpath d='M14.459 11.089L13.553 11.241L12.651 11.538L12.123 11.769L11.596 11.991L11.143 12.292L11.748 12.366L12.877 12.292L13.78 11.538ZM14.459 11.089'/%3E%3Cpath d='M6.745 67.762L10.355 67.762L7.448 69.942L8.576 73.401L5.679 71.271L2.786 73.401L3.925 69.942L0.993 67.762L4.59 67.762L5.679 64.391ZM6.745 67.762'/%3E%3Cpath d='M19.145 67.762L22.755 67.762L19.848 69.942L20.976 73.401L18.079 71.271L15.186 73.401L16.325 69.942L13.393 67.762L16.99 67.762L18.079 64.391ZM19.145 67.762'/%3E%3Cpath d='M31.545 67.762L35.155 67.762L32.248 69.942L33.376 73.401L30.479 71.271L27.586 73.401L28.725 69.942L25.793 67.762L29.39 67.762L30.479 64.391ZM31.545 67.762'/%3E%3Cpath d='M43.945 67.762L47.555 67.762L44.648 69.942L45.776 73.401L42.879 71.271L39.986 73.401L41.125 69.942L38.193 67.762L41.79 67.762L42.879 64.391ZM43.945 67.762'/%3E%3Cpath d='M53.274 72.36C55.965 71.047 58.923 71.047 61.707 72.36C61.707 72.36 63.79 66.563 63.79 66.344L59.525 69.664L57.758 65.764L55.533 69.691L51.311 66.415ZM53.274 72.36'/%3E%3C/g%3E%3C/svg%3E">
+<link rel="stylesheet" href="lib/auswahl.css?v=35-zb1">
+<link rel="stylesheet" href="studio.css?v=91-zb1">
+<link rel="stylesheet" href="mail.css?v=26-zb1">
+<script>/* Hauseigene Stilschicht (Robert 15.10.2026: GBR hell, wie die übrigen Werkzeuge des Hauses). Ein Haus ohne Eintrag bleibt beim Kern. */
+(function(){var HAUS_STIL={zurbriggen:1},h=new URLSearchParams(location.search).get('haus')||'zurbriggen';if(!HAUS_STIL[h])return;
+document.write('<link rel="stylesheet" href="haeuser/'+h+'/hell.css?v=6-zb1"><script src="haeuser/'+h+'/buehne.js?v=3-zb1" defer><\/script>');})();</script>
+</head>
+<body class="ml-seite">
+<div class="ml">
+  <header class="ml-kopf">
+    <a class="ml-marke" href="index.html" title="Zur Übersicht Drucksachen &amp; Feed"><span class="ml-zeichen" id="mlZeichen"></span><span class="ml-marke__n"><b>Drucksachen &amp; Feed</b><small>Newsletter & E-Mail</small></span></a>
+    <input class="ml-name" id="mlName" aria-label="Name der E-Mail" spellcheck="false">
+    <span class="ml-gespeichert" id="mlGespeichert">Gespeichert</span>
+    <span class="ml-frei"></span>
+    <div class="ml-geraet" role="group" aria-label="Ansicht">
+      <button class="an" data-geraet="600" title="Bildschirm, 600 px"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="1.5"/><path d="M8 20h8M12 16v4"/></svg></button>
+      <button data-geraet="375" title="Handy, 375 px"><svg viewBox="0 0 24 24"><rect x="7" y="3" width="10" height="18" rx="2"/><path d="M11 18h2"/></svg></button>
+    </div>
+    <details class="ml-pruefen" id="mlPruefen">
+      <summary class="kn kn--klein kn--ohne"><span class="ml-pruef__zahl" id="mlPruefZahl">0</span><span>Prüfung</span></summary>
+      <div class="ml-pruef__liste" id="mlPruefListe"></div>
+    </details>
+    <button class="kn kn--klein kn--ohne" id="mlFenster" title="In einem neuen Fenster ansehen"><svg viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg><span>Ansehen</span></button>
+    <button class="kn kn--klein kn--ohne" id="mlKopieren"><svg viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V5a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h3"/></svg><span>HTML kopieren</span></button>
+    <button class="kn ms-kn-gold" id="mlDatei"><span>Als Datei speichern</span><i><svg viewBox="0 0 24 24"><path d="M12 5v12m-5-5 5 5 5-5"/></svg></i></button>
+  </header>
+
+  <aside class="ml-links">
+    <a class="ms-lnk ms-lnk--zurueck ml-zurueck" href="index.html"><svg viewBox="0 0 24 24"><path d="M19 12H5m6-6-6 6 6 6"/></svg><span>Zur Übersicht</span></a>
+    <div class="ml-kapitel"><span class="ml-kapitel__z" id="mlKapitelZeichen"></span><h1>Newsletter <span style="white-space:nowrap">&amp; E-Mail</span></h1><p>Versendbar, im Stil des Hauses</p></div>
+    <h3>Vorlagen</h3>
+    <nav class="ml-vorlagen" id="mlVorlagen"></nav>
+    <div id="mlMeineBox" hidden>
+      <h3>Meine E-Mails <em id="mlMeineZahl"></em></h3>
+      <div class="ml-meine" id="mlMeine"></div>
+    </div>
+    <h3>Teile der E-Mail</h3>
+    <nav class="ml-nav">
+      <button data-teil="mail"><svg viewBox="0 0 24 24"><path d="M4 6h16v12H4zM4 7l8 6 8-6"/></svg><span>Betreff und Versand</span></button>
+      <button data-teil="kopf"><svg viewBox="0 0 24 24"><path d="M4 4h16v7H4zM4 15h16M4 19h10"/></svg><span>Kopf und Kopfbild</span></button>
+      <button data-teil="fuss"><svg viewBox="0 0 24 24"><path d="M4 5h16M4 9h10M4 13h16v7H4z"/></svg><span>Fuss mit Adresse</span></button>
+    </nav>
+  </aside>
+
+  <main class="ml-mitte">
+    <div class="ml-buehne" id="mlBuehne">
+      <div class="ml-posteingang">
+        <span class="ml-pe__zeichen">PZ</span>
+        <div><b>Wellness & Spa Pirmin Zurbriggen</b><span class="ml-pe__betreff" id="mlBetreff"></span><span class="ml-pe__vorschau" id="mlVorschau"></span></div>
+      </div>
+      <div class="ml-blatt" id="mlBlatt"><iframe id="mlRahmen" title="Vorschau der E-Mail" scrolling="no"></iframe><span class="ml-blatt__licht"></span></div>
+      <span class="ml-boden"></span>
+    </div>
+  </main>
+
+  <aside class="ml-rechts">
+    <h3>Baustein einfügen</h3>
+    <div class="ml-einfuegen" id="mlEinfuegen"></div>
+    <div class="ml-felder" id="mlFelder"></div>
+  </aside>
+</div>
+
+<dialog class="ml-fotos" id="mlFotos">
+  <div class="ml-fotos__kopf"><h2>Fotos des Hauses</h2>
+    <label class="ms-suche"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="m20 20-4.2-4.2"/></svg><input type="search" id="mlFotoSuche" placeholder="Suchen: Spa, Winter …" aria-label="Fotos suchen"></label>
+    <button class="rund" id="mlFotoZu" aria-label="Schliessen"><svg viewBox="0 0 24 24"><path d="M9 14.5 4 9.5l5-5M4 9.5h11a5 5 0 0 1 0 10h-3"/></svg></button></div>
+  <div class="ms-chips ml-fotos__gruppen" id="mlFotoGruppen"></div>
+  <div class="ml-fotos__raster" id="mlFotoRaster"></div>
+</dialog>
+<div class="ml-hinweis" id="mlHinweis" role="status" hidden></div>
+
+<script src="lib/auswahl.js?v=35-zb1"></script>
+<script src="katalog.js?v=35-zb1"></script>
+<script src="mail-satz.js?v=5-zb2"></script>
+<script src="mail.js?v=18-zb2"></script>
+<script>/* Auftritte wie in den übrigen Werkzeugen (Robert 10.11.2026, Prüfpunkt 11, Vorlage Monte-Moro): die Teile der rechten Spalte schweben beim Hereinscrollen herauf (Kleid: oberflaeche/bewegung.js) */
+document.querySelectorAll('.ml-rechts > *').forEach(function (e) { if (!/^(DIALOG|SCRIPT)$/.test(e.tagName)) e.classList.add('mw-t'); });
+(function () { var s = document.createElement('script'); s.src = '/assets/oberflaeche/bewegung.js'; s.async = true; document.body.appendChild(s); })();</script>
+</body>
+</html>

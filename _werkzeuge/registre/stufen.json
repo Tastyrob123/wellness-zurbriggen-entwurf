@@ -1,0 +1,5 @@
+{
+ "hinweis": "Stufen des Wegs zur Buchung, wie Besucher sie zeigt (registre.js trichter). Kontrollpanel liest «maison» (bau.py STUFE) und zählt für Stufe 1 die Aufrufe der Seiten in «seiten» (statt abend.html des Stamms), höchstens die Besuche; Stufe 2 = summe.buchung, höchstens Stufe 1.",
+ "seiten": ["zimmer.html", "loft-suite.html"],
+ "maison": ["«Zimmer» oder «Loft-Suite» geöffnet", "Weiter zur Zimmersuche oder zu einer Pauschale", "gebucht", "bestätigt das Haus, nicht die Website"]
+}

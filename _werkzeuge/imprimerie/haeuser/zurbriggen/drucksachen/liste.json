@@ -1,0 +1,316 @@
+[
+ {
+  "k": "menuekarte-gourmet-abend",
+  "n": "Menükarte · Ein Abend aus der Küche",
+  "was": "Menükarte A5 am Platz: fünf Gänge mit der Wahl, Beispiel der Seite «Gourmet»",
+  "format": "A5 hoch",
+  "seiten": 1,
+  "rot": [],
+  "pdf": "menuekarte-gourmet-abend.pdf",
+  "vorschau": [
+   "menuekarte-gourmet-abend.jpg"
+  ]
+ },
+ {
+  "k": "menuekarte-schmal",
+  "n": "Menükarte · Papier, schmal",
+  "was": "Menükarte DL hoch am Platz",
+  "format": "DL hoch",
+  "seiten": 1,
+  "rot": [],
+  "pdf": "menuekarte-schmal.pdf",
+  "vorschau": [
+   "menuekarte-schmal.jpg"
+  ]
+ },
+ {
+  "k": "spa-karte-titelblatt",
+  "n": "Spa-Karte · Titelblatt",
+  "was": "Titelblatt der Spa-Karte A4",
+  "format": "A4 hoch",
+  "seiten": 1,
+  "rot": [],
+  "pdf": "spa-karte-titelblatt.pdf",
+  "vorschau": [
+   "spa-karte-titelblatt.jpg"
+  ]
+ },
+ {
+  "k": "spa-karte-massagen",
+  "n": "Spa-Karte · Massagen",
+  "was": "Spa-Karte A4: Massagen mit Dauer, Wortlaut der Spa-Seite",
+  "format": "A4 hoch",
+  "seiten": 1,
+  "rot": [],
+  "pdf": "spa-karte-massagen.pdf",
+  "vorschau": [
+   "spa-karte-massagen.jpg"
+  ]
+ },
+ {
+  "k": "spa-karte-isha-wanne",
+  "n": "Spa-Karte · Isha-Wanne",
+  "was": "Spa-Karte A5: Bäder in der Isha-Wanne",
+  "format": "A5 hoch",
+  "seiten": 1,
+  "rot": [],
+  "pdf": "spa-karte-isha-wanne.pdf",
+  "vorschau": [
+   "spa-karte-isha-wanne.jpg"
+  ]
+ },
+ {
+  "k": "spa-pauschalen",
+  "n": "Spa-Pauschalen",
+  "was": "Spa-Karte A4: Frauenpower, Reine Männersache, Vital für Ihn, Vital für Sie",
+  "format": "A4 hoch",
+  "seiten": 1,
+  "rot": [],
+  "pdf": "spa-pauschalen.pdf",
+  "vorschau": [
+   "spa-pauschalen.jpg"
+  ]
+ },
+ {
+  "k": "jass-aushang",
+  "n": "Jasswochen 2026/2027",
+  "was": "Aushang A4: die fünf kommenden Jasswochen",
+  "format": "A4 hoch",
+  "seiten": 1,
+  "rot": [],
+  "pdf": "jass-aushang.pdf",
+  "vorschau": [
+   "jass-aushang.jpg"
+  ]
+ },
+ {
+  "k": "jass-plakat-a3",
+  "n": "Jasswochen · Plakat",
+  "was": "Plakat A3 für Empfang und Lift",
+  "format": "A3 hoch",
+  "seiten": 1,
+  "rot": [],
+  "pdf": "jass-plakat-a3.pdf",
+  "vorschau": [
+   "jass-plakat-a3.jpg"
+  ]
+ },
+ {
+  "k": "jass-preise",
+  "n": "Jasswochen · Preise",
+  "was": "Preisblatt A5 mit den Preisen des Flyers",
+  "format": "A5 hoch",
+  "seiten": 1,
+  "rot": [],
+  "pdf": "jass-preise.pdf",
+  "vorschau": [
+   "jass-preise.jpg"
+  ]
+ },
+ {
+  "k": "jass-einladung",
+  "n": "Jasswochen · Einladung",
+  "was": "Einladung quadratisch 148 mm",
+  "format": "Quadrat",
+  "seiten": 1,
+  "rot": [],
+  "pdf": "jass-einladung.pdf",
+  "vorschau": [
+   "jass-einladung.jpg"
+  ]
+ },
+ {
+  "k": "aushang-schneeschuhwanderung",
+  "n": "Schneeschuhwanderung",
+  "was": "Aushang A5: jeden Mittwoch",
+  "format": "A5 hoch",
+  "seiten": 1,
+  "rot": [],
+  "pdf": "aushang-schneeschuhwanderung.pdf",
+  "vorschau": [
+   "aushang-schneeschuhwanderung.jpg"
+  ]
+ },
+ {
+  "k": "aushang-wasser-und-waerme",
+  "n": "Wasser und Wärme",
+  "was": "Aushang A4 beim Spa: Saunen, Whirlpool 35 °C, Schwimmbad 29 °C",
+  "format": "A4 hoch",
+  "seiten": 1,
+  "rot": [],
+  "pdf": "aushang-wasser-und-waerme.pdf",
+  "vorschau": [
+   "aushang-wasser-und-waerme.jpg"
+  ]
+ },
+ {
+  "k": "aushang-tag-am-tisch",
+  "n": "Der Tag am Tisch",
+  "was": "Aushang A4: Frühstück, Kuchen, fünf Gänge, Fondue am Sonntag",
+  "format": "A4 hoch",
+  "seiten": 1,
+  "rot": [],
+  "pdf": "aushang-tag-am-tisch.pdf",
+  "vorschau": [
+   "aushang-tag-am-tisch.jpg"
+  ]
+ },
+ {
+  "k": "aushang-kidsclub",
+  "n": "Kidsclub",
+  "was": "Aushang A4 beim Spielraum",
+  "format": "A4 hoch",
+  "seiten": 1,
+  "rot": [],
+  "pdf": "aushang-kidsclub.pdf",
+  "vorschau": [
+   "aushang-kidsclub.jpg"
+  ]
+ },
+ {
+  "k": "angebot-wohlfuehltage-zu-zweit",
+  "n": "Zauberhafte Wohlfühltage zu zweit",
+  "was": "Angebotsblatt A5 in Schokolade mit Preis",
+  "format": "A5 hoch",
+  "seiten": 1,
+  "rot": [],
+  "pdf": "angebot-wohlfuehltage-zu-zweit.pdf",
+  "vorschau": [
+   "angebot-wohlfuehltage-zu-zweit.jpg"
+  ]
+ },
+ {
+  "k": "angebot-zimmer-und-preise",
+  "n": "Zimmer und Preise",
+  "was": "Preisliste A4: acht Zimmerkategorien",
+  "format": "A4 hoch",
+  "seiten": 1,
+  "rot": [],
+  "pdf": "angebot-zimmer-und-preise.pdf",
+  "vorschau": [
+   "angebot-zimmer-und-preise.jpg"
+  ]
+ },
+ {
+  "k": "angebot-kinderermaessigungen",
+  "n": "Kinderermässigungen",
+  "was": "Preisblatt A5: Ermässigungen im Zimmer der Eltern",
+  "format": "A5 hoch",
+  "seiten": 1,
+  "rot": [],
+  "pdf": "angebot-kinderermaessigungen.pdf",
+  "vorschau": [
+   "angebot-kinderermaessigungen.jpg"
+  ]
+ },
+ {
+  "k": "loft-suite-flyer",
+  "n": "Loft-Suite · Flyer",
+  "was": "Flyer A5, vorne Foto, hinten die Angaben",
+  "format": "A5 hoch",
+  "seiten": 2,
+  "rot": [],
+  "pdf": "loft-suite-flyer.pdf",
+  "vorschau": [
+   "loft-suite-flyer.jpg",
+   "loft-suite-flyer-2.jpg"
+  ]
+ },
+ {
+  "k": "loft-suite-ausstattung",
+  "n": "Loft-Suite · Ausstattung",
+  "was": "Karte A5 im Zimmer",
+  "format": "A5 hoch",
+  "seiten": 1,
+  "rot": [],
+  "pdf": "loft-suite-ausstattung.pdf",
+  "vorschau": [
+   "loft-suite-ausstattung.jpg"
+  ]
+ },
+ {
+  "k": "willkommen-im-haus",
+  "n": "Willkommen im Haus",
+  "was": "Willkommenskarte A5 im Zimmer",
+  "format": "A5 hoch",
+  "seiten": 1,
+  "rot": [],
+  "pdf": "willkommen-im-haus.pdf",
+  "vorschau": [
+   "willkommen-im-haus.jpg"
+  ]
+ },
+ {
+  "k": "vor-ihrer-anreise",
+  "n": "Vor Ihrer Anreise",
+  "was": "Programm A5: Zeiten am Empfang",
+  "format": "A5 hoch",
+  "seiten": 1,
+  "rot": [],
+  "pdf": "vor-ihrer-anreise.pdf",
+  "vorschau": [
+   "vor-ihrer-anreise.jpg"
+  ]
+ },
+ {
+  "k": "gutschein-tage-im-haus",
+  "n": "Gutschein · Tage im Haus",
+  "was": "Gutschein DL quer, Vorder- und Rückseite",
+  "format": "DL quer",
+  "seiten": 2,
+  "rot": [],
+  "pdf": "gutschein-tage-im-haus.pdf",
+  "vorschau": [
+   "gutschein-tage-im-haus.jpg",
+   "gutschein-tage-im-haus-2.jpg"
+  ]
+ },
+ {
+  "k": "instagram-kommen-sie-naeher",
+  "n": "Beitrag · kommen Sie näher",
+  "was": "Instagram-Beitrag 4:5",
+  "format": "Instagram 4:5",
+  "seiten": 1,
+  "rot": [],
+  "pdf": "instagram-kommen-sie-naeher.pdf",
+  "vorschau": [
+   "instagram-kommen-sie-naeher.jpg"
+  ]
+ },
+ {
+  "k": "instagram-folgen-sie-uns",
+  "n": "Beitrag · folgen Sie uns",
+  "was": "Instagram-Beitrag 4:5",
+  "format": "Instagram 4:5",
+  "seiten": 1,
+  "rot": [],
+  "pdf": "instagram-folgen-sie-uns.pdf",
+  "vorschau": [
+   "instagram-folgen-sie-uns.jpg"
+  ]
+ },
+ {
+  "k": "instagram-hotelier-des-jahres",
+  "n": "Hotelier des Jahres",
+  "was": "Instagram-Beitrag 4:5",
+  "format": "Instagram 4:5",
+  "seiten": 1,
+  "rot": [],
+  "pdf": "instagram-hotelier-des-jahres.pdf",
+  "vorschau": [
+   "instagram-hotelier-des-jahres.jpg"
+  ]
+ },
+ {
+  "k": "hinweis-info-fuer-allergiker",
+  "n": "Info für Allergiker",
+  "was": "Hinweis A5 im Spa",
+  "format": "A5 hoch",
+  "seiten": 1,
+  "rot": [],
+  "pdf": "hinweis-info-fuer-allergiker.pdf",
+  "vorschau": [
+   "hinweis-info-fuer-allergiker.jpg"
+  ]
+ }
+]

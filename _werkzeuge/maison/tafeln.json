@@ -1,0 +1,33 @@
+{
+ "_hinweis": "Knopf-Namen der Tafeln «So geht’s» je Werkzeug, aus dem fertigen Code der Werkzeuge gelesen (M20, 08.11.2026). bau.py prüft jeden «Namen» gegen den Code des Werkzeugs und meldet, was fehlt.",
+ "bureau": [
+  ["stift", "Text oder Foto ändern", "Den Bereich wählen, in der Vorschau auf den Text oder das Foto klicken und ändern, oder «Eigenes Foto hochladen». «Speichern» legt es in den Entwurf."],
+  ["uhr", "Zimmer, Preise, Angebote", "Preise, Pauschalen und unter «Jasswochen» die Daten der Wochen stehen je an einer Stelle. Einmal ändern, jede Seite der Website folgt."],
+  ["waage", "Erst ansehen, dann online", "«Vorher, nachher» zeigt beide Stände nebeneinander, «Veröffentlichen» stellt sie auf die Website. Unter «Frühere Fassungen» lässt sich jeder Stand mit «Zurückholen» wieder holen."]
+ ],
+ "carte": [
+  ["stift", "Das Menü des Abends", "Mit «Menü des nächsten Abends» entsteht die Karte des Abends, Gang für Gang mit der Wahl; ein weiterer Gang kommt mit «Neuer Eintrag» dazu. Daneben stehen die Spa-Karte und der Tag am Tisch."],
+  ["pdf", "Erst ansehen", "«Probe-PDF» zeigt die Karte genau so, wie sie am Tisch liegt. «Vorher, nachher» vergleicht mit dem letzten Stand."],
+  ["zurueck", "Speichern und zeigen", "«Speichern» legt den Entwurf ab, «Veröffentlichen» setzt die PDF neu. Unter «Frühere Fassungen» liegt jede frühere Karte bereit."]
+ ],
+ "imprimerie": [
+  ["satz", "Den Anlass wählen", "Unter «Anlässe & Events» oder «Hinweise im Haus» den Anlass wählen, etwa eine Jasswoche oder einen Hinweis im Spa; mit «Neu erstellen» beginnt ein eigenes Blatt."],
+  ["fuenf", "Fünf Vorschläge", "Oben eintragen, was entstehen soll, und «Fünf Entwürfe» wählen: fünf Vorschläge in Nachtblau und Messing, mit dem Z, den Schriften und den Fotos des Hauses."],
+  ["druck", "Drucken", "«Druckfertig speichern» legt das Blatt als PDF für den Aushang im Haus oder die Druckerei ab, dazu Bilder für Beiträge."]
+ ],
+ "reception": [
+  ["blase", "Gäste fragen im Chat", "Auf jeder Seite der Website können Gäste fragen. Mit «Chat ausprobieren» sehen Sie, was der Chat antwortet, wenn ein Gast nach Zimmern, Spa oder Anreise fragt."],
+  ["eingang", "Anfragen beantworten", "Im «Eingang» steht jede Anfrage mit einem Brief im Ton des Hauses. «Text kopieren» oder «Als PDF speichern»: verschickt wird nur, was Sie selbst schicken."],
+  ["liste", "Lücken schliessen", "Wusste der Chat etwas nicht, steht die Frage offen. Mit «Antwort nachtragen» ergänzen Sie es einmal; unter «Das weiss der Chat» sehen Sie, woraus er antwortet."]
+ ],
+ "livre": [
+  ["foto", "Ein Foto holen", "Unter «Fotos» ein Foto anklicken und die Grösse wählen: für Instagram, die Website oder den Druck."],
+  ["datei", "Das Zeichen weitergeben", "Unter «Zeichen & Dateien» liegen das Z mit Sternen und Krone, die Farben und Schriften bereit; «Alle Dateien (ZIP)» gibt alles auf einmal, für Agentur oder Druckerei."],
+  ["farbe", "Einen Entwurf prüfen", "In der «Markenprüfung» einen Prospekt oder eine Anzeige hineinziehen. Sie sagt Punkt für Punkt, was zum Haus passt."]
+ ],
+ "registre": [
+  ["karte", "Woher die Gäste kommen", "Unter «Herkunft» Länder und Orte der Besuche, ohne Cookies und nie mit Namen."],
+  ["liste", "Was sie sich ansehen", "Unter «Seiten» steht, welche Zimmer, Angebote und Seiten gefragt sind und wie lange die Gäste bleiben."],
+  ["uhr", "Weiter zur Buchung", "«Zur Buchung» zeigt, wie oft ein Besuch weiter zur Zimmersuche oder zu einer Pauschale führt; «Als Tabelle sichern» gibt die Zahlen mit."]
+ ]
+}

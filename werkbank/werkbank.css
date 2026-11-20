@@ -1416,3 +1416,9 @@ main>.fl:not(:nth-child(5),:nth-child(10),:nth-child(13),:nth-child(17),:nth-chi
 @keyframes zt-sofort{from{transform:translateY(140%)}to{transform:none}}
 @media(prefers-reduced-motion:reduce){.auftakt .zt .z>span{animation:none;transform:none}}
 @media print{.auftakt .zt .z>span{animation:none;transform:none}}
+
+/* Prüfung 20.11.2026, Prüfpunkt 36 (Robert 16.11.2026: Sperrschrift auf der Werkbank zu klein): gesperrte Etiketten und Knöpfe 15 px, Leiste 14 px, Sperrung höchstens .12em (Vorlage Monte-Moro 20.11.2026) */
+.rh-gruss__n span,.tm,.tm-l,.wfa__zahl,.wfa__zahl span,.glanz,.runter,.auftakt__fuss span,.kap--z span{font-size:15px!important;letter-spacing:.12em!important}
+.insel__m span,.insel nav a,.fuss__u .r,.fuss__u .r a,.fuss__u .r span{font-size:14px!important;letter-spacing:.12em!important}
+/* Prüfung 20.11.2026, Prüfpunkt 36: Karussells und Bänder, die seitlich aus dem Bild laufen, enden am Rand des Abschnitts (kein Scrollbehälter, Kleben bleibt) */
+.fl{overflow-x:clip}

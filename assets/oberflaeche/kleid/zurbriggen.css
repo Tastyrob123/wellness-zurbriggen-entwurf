@@ -210,3 +210,6 @@ h1,h2,h3,h4,figcaption{text-wrap:balance}
 .wo-re .wo-zahl{font-size:13px;letter-spacing:0}   /* Tor 09.11.2026: ohne Sperrung steht jede Ziffer mittig (0,1–0,4 px) */
 .wo-an__st small,.wo-rk__t small,.wo-ke__m{font-size:13px}
 .wo-ag__t>span{font-size:13px}   /* Kurzsatz der Karten auch am Handy 13 px (grund.css setzt dort 12 px) */
+
+/* Prüfung 20.11.2026: Begrüssung im Kopf der Werkzeuge mit Luft zwischen den Zeilen (Unterlängen und Umlaute berühren sich nicht) */
+.wo-sb__h{line-height:1.2}

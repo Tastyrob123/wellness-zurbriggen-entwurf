@@ -465,3 +465,7 @@ html.probe-offen{overflow:visible}
 .re-abt button span{white-space:normal;line-height:1.3}
 .gs-hinweis{flex-wrap:wrap;white-space:normal}
 .gs-hinweis>#gs-name{white-space:normal;min-width:0;flex:1 1 320px;overflow:visible;text-overflow:clip}
+
+/* Prüfung 20.11.2026, Prüfpunkt 21: Zwischentitel schweben nur kurz herein (nicht über die Bilder darunter) */
+.wo-zw.re-auf{animation-name:re-auf-kurz}
+@keyframes re-auf-kurz{from{transform:translate3d(0,6px,0)}}

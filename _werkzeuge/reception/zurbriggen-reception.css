@@ -469,3 +469,8 @@ html.probe-offen{overflow:visible}
 /* Prüfung 20.11.2026, Prüfpunkt 21: Zwischentitel schweben nur kurz herein (nicht über die Bilder darunter) */
 .wo-zw.re-auf{animation-name:re-auf-kurz}
 @keyframes re-auf-kurz{from{transform:translate3d(0,6px,0)}}
+
+/* Prüfung 20.11.2026, Prüfpunkte 21/37: Zwischentitel nach den Karten, Fragen ganz lesbar statt nach vier Zeilen gekappt */
+.wo-zw.re-auf{animation:re-zw-auf .8s ease 1s backwards}
+@keyframes re-zw-auf{from{opacity:0;transform:translate3d(0,6px,0)}}
+.re-q .re-a__n b{display:block;-webkit-line-clamp:unset;overflow:visible}

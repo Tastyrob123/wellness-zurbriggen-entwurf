@@ -457,5 +457,5 @@ h1 em,h2 em,h3 em{font-style:normal;color:var(--gold)}
 @keyframes rg-feder-klein{from{translate:0 8px;scale:.99}}
 
 /* Prüfung 20.11.2026, Prüfpunkt 21: Zwischentitel erscheinen erst, wenn die Blätter darüber gelandet sind (keine Schrift kreuzt eine andere) */
-.zw[data-r].rg-da{animation:rg-zw-auf .9s ease 1.6s backwards}
+.zw[data-r].rg-da{animation:rg-zw-auf .9s ease 2.6s backwards}
 @keyframes rg-zw-auf{from{opacity:0;translate:0 8px}}

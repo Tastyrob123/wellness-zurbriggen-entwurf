@@ -589,3 +589,7 @@ body.ma{margin:0;background:var(--raum);color:var(--tinte);font:400 17px/1.62 va
 
 /* Prüfung 20.11.2026: Titel in der Leiste der Bildschirme ganz lesbar */
 .m-schirme .m-schirm__leiste span{letter-spacing:.08em}
+
+/* Prüfung 20.11.2026: Werkzeugnamen in den fünf Säulen mit Luft zum Rand (Prüfpunkt 37), Bildschirme und Text der Säle enden auf einer Linie (Prüfpunkt 35) */
+@media (min-width:801px){.m-f5__t b{font-size:min(clamp(1.5rem,2.1vw,2.15rem),calc((20vw - 3px - 2 * clamp(16px,1.8vw,26px)) / 10.6))}}
+.m-buehne{align-items:end!important}

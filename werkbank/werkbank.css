@@ -1420,3 +1420,6 @@ main>.fl:not(:nth-child(5),:nth-child(10),:nth-child(13),:nth-child(17),:nth-chi
 /* Prüfung 20.11.2026, Prüfpunkt 36 (Robert 16.11.2026: Sperrschrift auf der Werkbank zu klein): gesperrte Etiketten und Knöpfe 15 px, Leiste 14 px, Sperrung höchstens .12em (Vorlage Monte-Moro 20.11.2026) */
 .rh-gruss__n span,.tm,.tm-l,.wfa__zahl,.wfa__zahl span,.glanz,.runter,.auftakt__fuss span,.kap--z span{font-size:15px!important;letter-spacing:.12em!important}
 .insel__m span,.insel nav a,.fuss__u .r,.fuss__u .r a,.fuss__u .r span{font-size:14px!important;letter-spacing:.12em!important}
+
+/* Prüfung 20.11.2026, Prüfpunkt 18: Abstand zwischen Abschnitten auf breiten Bildschirmen (1728/1920) höchstens 150 px je Seite, bei 1440 unverändert */
+:root{--abschnitt:clamp(92px,10.6vw,150px)}

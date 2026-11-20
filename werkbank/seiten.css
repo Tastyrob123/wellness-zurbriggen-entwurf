@@ -154,3 +154,6 @@
 .dateien--2>li:last-child:nth-child(odd){grid-column:1/-1}   /* Raster voll: ungerade Zahl, das letzte Stück über beide Spalten (Prüfpunkt 13, 09.11.2026) */
 /* Nachzug 14.11.2026 (Prüfpunkt 20): am schmalen Handy eine Spalte, die Sätze unter den Stücken laufen über die ganze Breite */
 @media(max-width:440px){.etk{grid-template-columns:minmax(0,1fr)}.etk p{max-width:32ch}}
+
+/* Prüfung 20.11.2026, Prüfpunkt 35: Auftakt der Beigaben-Seiten, Text und Blätter enden auf einer Linie */
+.in:has(>.auslage--pdf){align-items:end}

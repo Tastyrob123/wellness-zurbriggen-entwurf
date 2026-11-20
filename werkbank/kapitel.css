@@ -573,3 +573,6 @@ html.ins-ruhe :is(.stapel .tel,.runter i,.zeile__z,.namenzug div,.wb-band__zug,.
   .ins-r{padding:10px 15px 11px}.ins-r span{font-size:clamp(.9rem,1vw,1.04rem)}}
 @media(min-width:900px) and (max-width:1379px){.ins-leiste{flex-direction:column;gap:14px}.ins-pf{position:static;transform:none}.ins-reiter{max-width:100%;overflow-x:auto;scrollbar-width:none;justify-content:safe center;padding-inline:4px}}
 .ins-r--mb{order:9}
+
+/* Prüfung 20.11.2026, Prüfpunkt 10: Text der Werkzeuge steht mittig neben dem Laptop, keine Leerfläche darunter */
+.ins-texte>.ins-t{display:flex;flex-direction:column;justify-content:center}

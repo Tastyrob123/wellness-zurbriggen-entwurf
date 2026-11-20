@@ -36,3 +36,6 @@
 .wsp-lex dd{overflow-wrap:anywhere}
 @media (max-width:560px){ .wsp-kopf__titel{font-size:calc(28px * var(--titel-mass))} }
 @media (prefers-reduced-motion:reduce){ .wsp-taste{transition:none} }
+
+/* Prüfung 20.11.2026: Knopf «Zum Werkzeug» lesbar (Prüfpunkt 17) */
+.wsp-taste{font-size:13px!important}
